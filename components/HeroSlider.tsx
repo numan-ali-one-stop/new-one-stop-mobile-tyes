@@ -1,51 +1,18 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
-
-const SLIDES = [
-  {
-    image: '/images/mobile-tyre-fitting-service.webp',
-    badge: 'Mobile Tyre Fitting & Emergency Tyre Repair',
-    heading: 'Mobile Tyre Fitting\nNear Me – 24/7 Service',
-    body: 'Need a mobile tyre fitter fast? Our fully equipped mobile tyre fitting vans provide emergency tyre repair, mobile tyre replacement and same day tyre fitting at your home, workplace or roadside location.',
-    listLabel: 'Why Drivers Choose Us',
-    items: [
-      'Mobile tyre fitting at your location',
-      'Emergency tyre repair 24/7',
-      'Same day tyre fitting available',
-      'Home, work & roadside assistance',
-      'Competitive prices & fast response',
-    ],
-  },
-  {
-    image: '/images/professional-mobile-tyre-fitting.webp',
-    badge: 'Emergency Mobile Tyre Service',
-    heading: 'Flat Tyre?\nWe Come To You',
-    body: 'Whether you need mobile tyre repair, emergency tyre replacement, or roadside tyre assistance, our experienced technicians can get you safely back on the road — no waiting for recovery trucks.',
-    listLabel: 'Available For',
-    items: [
-      'Mobile tyre fitting Manchester',
-      'Mobile tyre fitting Stockport',
-      'Mobile tyre fitting Bolton',
-      'Mobile tyre fitting Trafford',
-      'Mobile tyre fitting Rochdale',
-    ],
-  },
-  {
-    image: '/images/home-tyre-fitting.webp',
-    badge: 'Same Day Mobile Tyre Replacement',
-    heading: 'Professional Mobile\nTyre Fitters Near You',
-    body: 'Our mobile tyre fitting service covers emergency call-outs, puncture repairs, tyre replacements and tyre recovery assistance. We bring the tyre shop directly to your location.',
-    listLabel: 'Benefits',
-    items: [
-      'Fast mobile tyre replacement',
-      'Experienced mobile tyre fitters',
-      'Quality tyres available',
-      'Roadside emergency assistance',
-      'Available day & night',
-    ],
-  },
-]
+const HERO = {
+  image: '/images/home-tyre-fitting.webp',
+  badge: 'Same Day Mobile Tyre Replacement',
+  heading: '24/7 Mobile Tyre Service & Repair in Greater Manchester',
+  body: 'Need tyre help fast? Our mobile tyre service comes directly to you across Greater Manchester. We provide tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or a safe roadside location, 24 hours a day, 7 days a week.',
+  listLabel: 'Benefits',
+  items: [
+    '24/7 emergency tyre service',
+    'Fast mobile tyre fitting',
+    'Tyre repair and replacement',
+    'Home, work & roadside service',
+  ],
+}
 
 const WA_SVG = (
   <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -54,83 +21,9 @@ const WA_SVG = (
 )
 
 export default function HeroSlider() {
-  const [current, setCurrent] = useState(0)
-  const [prev, setPrev] = useState<number | null>(null)
-  const [direction, setDirection] = useState<'next' | 'prev'>('next')
-  const [transitioning, setTransitioning] = useState(false)
-  const [contentKey, setContentKey] = useState(0)
-  const paused = useRef(false)
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const touchStartX = useRef<number | null>(null)
-
-  const navigate = useCallback((idx: number, dir: 'next' | 'prev') => {
-    if (transitioning) return
-    setDirection(dir)
-    setPrev(current)
-    setTransitioning(true)
-    setContentKey(k => k + 1)
-    setTimeout(() => {
-      setCurrent(idx)
-      setPrev(null)
-      setTransitioning(false)
-    }, 600)
-  }, [current, transitioning])
-
-  const next = useCallback(() => navigate((current + 1) % SLIDES.length, 'next'), [current, navigate])
-  const goTo = useCallback((i: number) => {
-    if (i === current) return
-    navigate(i, i > current ? 'next' : 'prev')
-  }, [current, navigate])
-
-  // Auto-play
-  useEffect(() => {
-    const tick = () => { if (!paused.current) next() }
-    timerRef.current = setInterval(tick, 5500)
-    return () => { if (timerRef.current) clearInterval(timerRef.current) }
-  }, [next])
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX
-  }
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return
-    const diff = touchStartX.current - e.changedTouches[0].clientX
-    if (Math.abs(diff) > 40) {
-      const n = SLIDES.length
-      diff > 0
-        ? navigate((current + 1) % n, 'next')
-        : navigate((current - 1 + n) % n, 'prev')
-    }
-    touchStartX.current = null
-  }
-
-  const slide = SLIDES[current]
-  const n = SLIDES.length
-
-  const slideInClass = direction === 'next' ? 'slide-in-right' : 'slide-in-left'
-  const slideOutClass = direction === 'next' ? 'slide-out-left' : 'slide-out-right'
-
   return (
-    <section
-      className="relative overflow-hidden"
-      onMouseEnter={() => { paused.current = true }}
-      onMouseLeave={() => { paused.current = false }}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
+    <section className="relative overflow-hidden">
       <style>{`
-        /* Background slide panels — absolutely positioned, animate */
-        .slide-panel { position:absolute; inset:0; will-change:transform; }
-        .slide-in-right  { animation: inRight  0.6s cubic-bezier(0.4,0,0.2,1) forwards; }
-        .slide-out-left  { animation: outLeft  0.6s cubic-bezier(0.4,0,0.2,1) forwards; }
-        .slide-in-left   { animation: inLeft   0.6s cubic-bezier(0.4,0,0.2,1) forwards; }
-        .slide-out-right { animation: outRight 0.6s cubic-bezier(0.4,0,0.2,1) forwards; }
-        @keyframes inRight  { from{transform:translateX(100%)} to{transform:translateX(0)} }
-        @keyframes outLeft  { from{transform:translateX(0)}    to{transform:translateX(-100%)} }
-        @keyframes inLeft   { from{transform:translateX(-100%)} to{transform:translateX(0)} }
-        @keyframes outRight { from{transform:translateX(0)}    to{transform:translateX(100%)} }
-
-        /* Content stagger */
         .hero-badge  { animation: fadeUp 0.5s 0.15s both; }
         .hero-h1     { animation: fadeUp 0.55s 0.25s both; }
         .hero-body   { animation: fadeUp 0.55s 0.35s both; }
@@ -148,36 +41,24 @@ export default function HeroSlider() {
           from { transform:scale(1.0); }
           to   { transform:scale(1.06); }
         }
-
-        /* Progress bar */
-        .progress-bar { animation: progress 5.5s linear forwards; }
-        @keyframes progress { from{width:0} to{width:100%} }
       `}</style>
 
-      {/* ── BACKGROUND PANELS (absolutely positioned, slide in/out) ── */}
-      {prev !== null && transitioning && (
-        <div className={`slide-panel ${slideOutClass}`} key={`out-${prev}`}>
-          <SlideBg image={SLIDES[prev].image} />
-        </div>
-      )}
-      <div
-        className={`slide-panel ${transitioning ? slideInClass : ''}`}
-        key={`bg-${current}`}
-      >
-        <SlideBg image={slide.image} priority={current === 0} />
+      {/* ── BACKGROUND ── */}
+      <div className="absolute inset-0">
+        <SlideBg image={HERO.image} priority />
       </div>
 
-      {/* ── CONTENT (normal document flow — section grows to fit this) ── */}
+      {/* ── CONTENT ── */}
       <div
-        className="relative z-10 flex flex-col justify-center px-5 sm:px-10 lg:px-16 xl:px-24 pt-16 pb-24"
+        className="relative z-10 flex flex-col justify-center px-5 sm:px-10 lg:px-16 xl:px-24 pt-16 pb-16"
         style={{ minHeight: 'clamp(600px, 90svh, 820px)' }}
       >
-        <div className="w-full max-w-2xl" key={contentKey}>
+        <div className="w-full max-w-2xl">
 
             {/* Badge */}
             <span className="hero-badge inline-flex items-center gap-2 bg-[#b70011] text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse" />
-              {slide.badge}
+              {HERO.badge}
             </span>
 
             {/* Heading */}
@@ -185,21 +66,21 @@ export default function HeroSlider() {
               className="hero-h1 text-4xl sm:text-5xl lg:text-6xl xl:text-[68px] text-white font-black leading-[1.05] mb-5"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.03em' }}
             >
-              {slide.heading.split('\n').map((line, i) => (
+              {HERO.heading.split('\n').map((line, i) => (
                 <span key={i} className="block">{line}</span>
               ))}
             </h1>
 
             {/* Body */}
             <p className="hero-body text-white/75 text-base lg:text-lg leading-relaxed mb-6 max-w-xl">
-              {slide.body}
+              {HERO.body}
             </p>
 
             {/* Checklist */}
             <div className="hero-list mb-6">
-              <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">{slide.listLabel}</p>
+              <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">{HERO.listLabel}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
-                {slide.items.map((item) => (
+                {HERO.items.map((item) => (
                   <div key={item} className="flex items-center gap-2.5 text-white/90">
                     <span
                       className="material-symbols-outlined text-green-400 shrink-0"
@@ -254,44 +135,6 @@ export default function HeroSlider() {
 
           </div>
         </div>
-
-      {/* ── BOTTOM BAR: counter + dots + progress ── */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 px-5 sm:px-10 lg:px-16 xl:px-24 pb-4 sm:pb-6 flex items-end justify-between gap-4">
-
-        {/* Slide counter */}
-        <div className="flex items-center gap-3">
-          <span className="text-white font-black text-2xl tabular-nums" style={{ fontFamily: 'var(--font-work-sans)' }}>
-            {String(current + 1).padStart(2, '0')}
-          </span>
-          <span className="text-white/30 text-sm font-bold">/ {String(n).padStart(2, '0')}</span>
-        </div>
-
-        {/* Dots */}
-        <div className="flex items-center gap-2">
-          {SLIDES.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              className="relative overflow-hidden rounded-full transition-all duration-400"
-              style={{
-                width: i === current ? '36px' : '10px',
-                height: '10px',
-                backgroundColor: i === current ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.25)',
-              }}
-            >
-              {i === current && (
-                <span key={contentKey} className="progress-bar absolute inset-y-0 left-0 bg-white rounded-full" />
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Full-width progress line at very bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10 z-20">
-        <div key={contentKey} className="progress-bar h-full bg-[#FF4444]" />
-      </div>
 
     </section>
   )

@@ -1,6 +1,7 @@
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
   title: 'Home Tyre Fitting | Professional Service at Your Door',
@@ -376,7 +377,7 @@ export default function HomeTyreFittingPage() {
           Book Your Home Tyre Fitting
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Get your tyres replaced without arranging a separate garage visit. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your vehicle registration, tyre size and postcode, and we&apos;ll check suitable tyre options and arrange a technician to come to your home. <strong>One Stop Mobile Tyres 24/7</strong> — Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom
+          Get your tyres replaced without arranging a separate garage visit. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your vehicle registration, tyre size and postcode, and we&apos;ll check suitable tyre options and arrange a technician to come to your home. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a

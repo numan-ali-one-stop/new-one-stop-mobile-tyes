@@ -1,9 +1,9 @@
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Manchester | One Stop Mobile Tyres 24/7',
+  title: '24/7 Mobile Tyre Service & Repair | Greater Manchester',
   description:
-    '24/7 mobile tyre fitting across Greater Manchester — fast response at home or roadside.',
+    'Need a tyre service in Greater Manchester? Get 24/7 mobile tyre fitting, tyre repair and emergency tyre replacement across Manchester and surrounding areas.',
   path: '/',
 })
 
@@ -59,98 +59,138 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How fast can you reach me for a mobile tyre fitting in Manchester?',
+      name: 'Do you provide a 24/7 tyre service?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our average response time across Greater Manchester is 20 to 30 minutes, depending on traffic and your exact location. For genuine roadside emergencies, we prioritise dispatch to get a technician to you as quickly as possible.',
+        text: 'Yes. We provide a 24/7 tyre service across Greater Manchester for drivers who need assistance with flat, punctured or damaged tyres, including emergency support day and night.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are you really available 24 hours a day?',
+      name: 'Do you offer emergency tyres 24/7?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Our 24 hour tyre service operates every day of the year, including Christmas Day, New Year's Eve and all Bank Holidays. Whether it's 3pm or 3am, our phone line is answered and a technician is on call.",
+        text: 'Yes. Our emergency tyres 24/7 service is available for urgent tyre problems. We can assess the issue and provide repair or replacement where appropriate and available.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you offer same day tyre fitting at home?',
+      name: 'How quickly can you reach me?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Absolutely. Same day mobile tyre fitting is one of our most requested services — simply call or WhatsApp us your tyre size and postcode, and we'll fit your tyre at home the same day, often within the hour.",
+        text: 'Our typical response time is around 20–30 minutes, although the actual arrival time depends on your location, traffic, road conditions and current demand.',
       },
     },
     {
       '@type': 'Question',
-      name: "What's the difference between emergency tyre fitting and a booked appointment?",
+      name: 'What areas do you cover?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Emergency tyre fitting is for drivers who are stranded right now — a blowout, a flat on the roadside, or an unsafe tyre that cannot wait. A booked same day tyre fitting at home appointment is for less urgent needs, like a slow puncture, where we schedule a convenient time on the same or next day.',
+        text: 'We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan, providing tyre services throughout Greater Manchester.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you stock my tyre size?',
+      name: 'Do you provide tyre services on motorways?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our mobile tyre fitting vans carry a wide range of common tyre sizes ready for immediate mobile tyre replacement. For specialist or less common sizes, we have access to local supplier hubs with instant availability, so there is rarely a long wait.',
+        text: 'Yes. We provide assistance around major routes including the M60, M61, M62, M56, M602, M66, M67 and A627. For your safety, always move to a safe location away from moving traffic where possible.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can you fit tyres on the motorway?',
+      name: 'Can you repair a punctured tyre?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For safety reasons we do not carry out tyre changes on live motorway carriageways or hard shoulders where it is not safe to do so. If you break down on the M60, M61, M62, M56, M602, M66 or M67, we will guide you to the nearest safe location — a service station, slip road or lay-by — and get a technician to you there.',
+        text: 'Our technicians can inspect a punctured tyre and determine whether a safe tyre repair is possible. If the damage is unsuitable for repair, we can recommend replacement.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does emergency mobile tyre fitting cost?',
+      name: 'When does a tyre need to be replaced instead of repaired?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pricing depends on your tyre size, brand choice and time of callout. We always confirm the full price by phone or WhatsApp before any work begins, so there are no surprises — just an honest quote for a professional, same day tyre fitting service.',
+        text: 'A tyre may require replacement when the damage is too severe, located in an unsafe area of the tyre, or when its condition means it cannot be safely repaired.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What payment methods do you accept?',
+      name: 'Do you provide emergency tyre replacement?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We accept all major debit and credit cards, contactless payments, and cash on completion of the job.',
+        text: 'Yes. We provide emergency tyre replacement when a suitable replacement tyre is available. Our technician will assess the damaged tyre and explain the available options.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you fit tyres at my workplace as well as at home?',
+      name: 'Do you provide tyre fitting?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Our mobile car tyre fitting service covers home, work and roadside locations across Greater Manchester, so you do not need to take time off or find your own way to a garage.',
+        text: 'Yes. Our tyre fitting service is available for replacement tyres and can be arranged according to your location and requirements.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Will you reset my TPMS light after fitting a new tyre?',
+      name: 'Can you help if I have a flat tyre?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, every mobile tyre replacement and puncture repair includes a TPMS check and reset where required, so your dashboard warning light is cleared before our technician leaves.',
+        text: 'Yes. If you have a flat tyre, contact us with your location and vehicle details. We can assess the problem and advise whether a repair or replacement is the appropriate solution.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are your technicians qualified and insured?',
+      name: 'How do I book a tyre service?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every technician is fully trained, insured, and carries out puncture repairs to BS AU 159 standard. We are a directly employed, vetted team — not a network of random subcontractors — so you always know the standard of work you are getting.',
+        text: 'Simply contact us by phone and provide your location, vehicle details and tyre requirements. We will confirm the available service and arrange assistance.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What areas do you cover for mobile tyre fitting?',
+      name: 'How much does an emergency tyre service cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan, along with the M60, M61, M62, M56, M602, M66, M67 and A627. If you are searching for a 24 hour tyre service near me anywhere in Greater Manchester, we are likely already covering your area.',
+        text: 'The cost depends on factors such as the tyre required, your location, the type of work needed and the time of assistance. We aim to keep pricing clear and explain the cost before proceeding.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you check my tyre pressure after fitting?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our technicians can check tyre pressures after fitting and, where applicable, inspect the TPMS (Tyre Pressure Monitoring System) to help ensure the system is functioning correctly.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you provide tyre fitting at home or work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Where suitable, our tyre service can be arranged at your home, workplace or another safe location, depending on accessibility and the work required.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you provide 24/7 emergency car recovery and tyre fitting?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We provide 24/7 emergency tyre assistance and tyre fitting for tyre-related problems. If you require car recovery in addition to tyre assistance, contact us with your location and vehicle details so we can confirm what help is available.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is One Stop Tyres 247?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'One Stop Tyres 247 provides professional tyre services across Greater Manchester, helping drivers with tyre repair, tyre fitting, replacement and 24/7 emergency tyre assistance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why choose One Stop Tyres 247?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'One Stop Tyres 247 focuses on fast, reliable and professional tyre service. Our qualified technicians provide clear advice, transparent pricing and practical tyre solutions to help you get safely back on the road.',
       },
     },
   ],
@@ -227,6 +267,9 @@ export default function Home() {
             >
               What Our Customers Say
             </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-base mb-4">
+              Our Tyre Repair Service in Greater Manchester
+            </p>
             {/* Rating badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white border border-slate-200 shadow-sm rounded-full px-5 py-2.5">
               <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-label="Google">
@@ -275,20 +318,22 @@ export default function Home() {
               className="text-2xl sm:text-[32px] font-bold text-[#0f172a] mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              24/7 Mobile Tyre Fitting &amp; Emergency Tyre Replacement Across Greater Manchester
+              Reliable Tyre Service When You Need It
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5">
-              One Stop Mobile Tyres 24/7 has been getting Greater Manchester drivers safely back on the
-              road since our first van hit the streets. Our technicians are fully trained in on-site tyre
-              change at home, at work and at the roadside, carrying premium and budget tyres from Michelin,
-              Continental, Bridgestone, Pirelli and more, ready to fit on arrival.
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-left sm:text-center">
+              When a damaged or flat tyre leaves you stranded, getting help quickly matters. One Stop
+              Mobile Tyres 24/7 provides professional mobile tyre services across Greater Manchester,
+              bringing tyre fitting, tyre repair and replacement directly to your location.
             </p>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              Whether you need a same day mobile tyre fitting appointment for a slow puncture, or genuinely
-              emergency tyre fitting at 3am on the M60, our vans are stocked, our technicians are qualified,
-              and our dispatch team answers the phone around the clock. We don&apos;t outsource to random
-              contractors — every mobile car tyre fitting job is carried out by our own vetted, insured
-              technicians, so you know exactly who is turning up and what standard of work to expect.
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-left sm:text-center">
+              Whether you&apos;re at home, at work or dealing with a roadside tyre problem, our mobile team
+              can assess the issue and provide the right solution where it is safe to do so. We offer 24/7
+              emergency tyre assistance as well as same-day mobile tyre fitting for less urgent
+              requirements.
+            </p>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed text-left sm:text-center">
+              Our aim is simple: provide a fast, professional and convenient tyre service without making
+              you drive to a garage.
             </p>
           </div>
 
@@ -333,11 +378,11 @@ export default function Home() {
               className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              Mobile Tyre Service Manchester — Everything You Need, On-Site
+              Our Tyre Services Across Greater Manchester
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-base">
-              From routine mobile tyre replacement to genuine roadside emergencies, our mobile tyre service
-              covers Manchester and the whole of Greater Manchester with one simple promise: we come to you.
+              From emergency tyre problems to planned tyre fitting, our mobile team provides practical
+              tyre services at your location.
             </p>
           </div>
 
@@ -502,20 +547,22 @@ export default function Home() {
               className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Professional Mobile Tyre Replacement Across Greater Manchester
+              Professional Tyre Services &amp; Replacement Across Greater Manchester
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              When you&apos;re stuck with a damaged tyre, you need two things: speed and a professional you
-              can trust. Our 24/7 mobile tyre fitting service was built around exactly that. We cover
-              Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan, plus the
-              M60, M61, M62, M56, M602, M66, M67 and A627 — so wherever you&apos;re searching for a 24 hour
-              tyre service near me, chances are we&apos;re already close by.
+              When you&apos;re stuck with a flat, punctured or damaged tyre, you need a fast response and a
+              professional you can trust. Our 24/7 tyre service provides emergency assistance across
+              Greater Manchester, helping drivers get back on the road safely.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan,
+              as well as major routes including the M60, M61, M62, M56, M602, M66, M67 and A627.
             </p>
             <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-              Every emergency tyre replacement is carried out by a qualified technician using calibrated
-              torque tools and genuine parts, and every job includes a TPMS check so your dashboard warning
-              lights are cleared before we leave. No hidden fees, no second visit needed — just a fast,
-              professional mobile car tyre fitting service that gets you home safely.
+              Our qualified technicians assess damaged tyres to determine whether a safe tyre repair is
+              possible. If repair is not suitable, we can provide tyre replacement and fitting. Every job
+              is completed professionally, with a TPMS check where applicable, clear pricing and no
+              unnecessary hassle.
             </p>
             <ul className="space-y-4 sm:space-y-5">
               <FeatureItem
@@ -552,9 +599,9 @@ export default function Home() {
             className="text-2xl sm:text-[32px] font-bold mb-10 sm:mb-16"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
           >
-            4 Steps To Get You Back On The Road
+            How Our Modern Tyre Service Works
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12 relative">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-12 relative">
             {[
               { icon: 'tire_repair',    title: 'Confirm Your Tyre Size',           desc: 'Tell us your vehicle and tyre size for an instant match and quote.',                                              rot: 'rotate-3' },
               { icon: 'pin_drop',       title: 'Send Us Your Location',            desc: 'Share your exact location by call or WhatsApp pin for the fastest routing.',                                     rot: '-rotate-3' },
@@ -600,11 +647,11 @@ export default function Home() {
               className="text-2xl sm:text-4xl text-[#0f172a] mb-4 sm:mb-6 leading-tight font-bold"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Get a Non-Urgent Quote
+              Get a Tyre Service Quote
             </h2>
             <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base">
-              For emergency call-outs, please phone us directly. For general queries or to book a
-              fitting at home later this week, fill in the form.
+              Need a tyre service but don&apos;t need emergency assistance? Send us your details and
+              we&apos;ll get back to you with a quote and available fitting options.
             </p>
             <div className="space-y-4 sm:space-y-6">
               <div className="flex items-start gap-3 sm:gap-4">
@@ -653,57 +700,77 @@ export default function Home() {
               className="text-2xl sm:text-[32px] font-bold text-[#0f172a]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              Frequently Asked Questions
+              Frequently Asked Questions About Our Tyre Services
             </h2>
           </div>
           <div className="space-y-3 sm:space-y-4">
             <FaqItem
-              q="How fast can you reach me for a mobile tyre fitting in Manchester?"
-              a="Our average response time across Greater Manchester is 20 to 30 minutes, depending on traffic and your exact location. For genuine roadside emergencies, we prioritise dispatch to get a technician to you as quickly as possible."
+              q="Do you provide a 24/7 tyre service?"
+              a="Yes. We provide a 24/7 tyre service across Greater Manchester for drivers who need assistance with flat, punctured or damaged tyres, including emergency support day and night."
             />
             <FaqItem
-              q="Are you really available 24 hours a day?"
-              a="Yes. Our 24 hour tyre service operates every day of the year, including Christmas Day, New Year's Eve and all Bank Holidays. Whether it's 3pm or 3am, our phone line is answered and a technician is on call."
+              q="Do you offer emergency tyres 24/7?"
+              a="Yes. Our emergency tyres 24/7 service is available for urgent tyre problems. We can assess the issue and provide repair or replacement where appropriate and available."
             />
             <FaqItem
-              q="Do you offer same day tyre fitting at home?"
-              a="Absolutely. Same day mobile tyre fitting is one of our most requested services — simply call or WhatsApp us your tyre size and postcode, and we'll fit your tyre at home the same day, often within the hour."
+              q="How quickly can you reach me?"
+              a="Our typical response time is around 20–30 minutes, although the actual arrival time depends on your location, traffic, road conditions and current demand."
             />
             <FaqItem
-              q="What's the difference between emergency tyre fitting and a booked appointment?"
-              a="Emergency tyre fitting is for drivers who are stranded right now — a blowout, a flat on the roadside, or an unsafe tyre that cannot wait. A booked same day tyre fitting at home appointment is for less urgent needs, like a slow puncture, where we schedule a convenient time on the same or next day."
+              q="What areas do you cover?"
+              a="We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan, providing tyre services throughout Greater Manchester."
             />
             <FaqItem
-              q="Do you stock my tyre size?"
-              a="Our mobile tyre fitting vans carry a wide range of common tyre sizes ready for immediate mobile tyre replacement. For specialist or less common sizes, we have access to local supplier hubs with instant availability, so there is rarely a long wait."
+              q="Do you provide tyre services on motorways?"
+              a="Yes. We provide assistance around major routes including the M60, M61, M62, M56, M602, M66, M67 and A627. For your safety, always move to a safe location away from moving traffic where possible."
             />
             <FaqItem
-              q="Can you fit tyres on the motorway?"
-              a="For safety reasons we do not carry out tyre changes on live motorway carriageways or hard shoulders where it is not safe to do so. If you break down on the M60, M61, M62, M56, M602, M66 or M67, we will guide you to the nearest safe location — a service station, slip road or lay-by — and get a technician to you there."
+              q="Can you repair a punctured tyre?"
+              a="Our technicians can inspect a punctured tyre and determine whether a safe tyre repair is possible. If the damage is unsuitable for repair, we can recommend replacement."
             />
             <FaqItem
-              q="How much does emergency mobile tyre fitting cost?"
-              a="Pricing depends on your tyre size, brand choice and time of callout. We always confirm the full price by phone or WhatsApp before any work begins, so there are no surprises — just an honest quote for a professional, same day tyre fitting service."
+              q="When does a tyre need to be replaced instead of repaired?"
+              a="A tyre may require replacement when the damage is too severe, located in an unsafe area of the tyre, or when its condition means it cannot be safely repaired."
             />
             <FaqItem
-              q="What payment methods do you accept?"
-              a="We accept all major debit and credit cards, contactless payments, and cash on completion of the job."
+              q="Do you provide emergency tyre replacement?"
+              a="Yes. We provide emergency tyre replacement when a suitable replacement tyre is available. Our technician will assess the damaged tyre and explain the available options."
             />
             <FaqItem
-              q="Do you fit tyres at my workplace as well as at home?"
-              a="Yes. Our mobile car tyre fitting service covers home, work and roadside locations across Greater Manchester, so you do not need to take time off or find your own way to a garage."
+              q="Do you provide tyre fitting?"
+              a="Yes. Our tyre fitting service is available for replacement tyres and can be arranged according to your location and requirements."
             />
             <FaqItem
-              q="Will you reset my TPMS light after fitting a new tyre?"
-              a="Yes, every mobile tyre replacement and puncture repair includes a TPMS check and reset where required, so your dashboard warning light is cleared before our technician leaves."
+              q="Can you help if I have a flat tyre?"
+              a="Yes. If you have a flat tyre, contact us with your location and vehicle details. We can assess the problem and advise whether a repair or replacement is the appropriate solution."
             />
             <FaqItem
-              q="Are your technicians qualified and insured?"
-              a="Every technician is fully trained, insured, and carries out puncture repairs to BS AU 159 standard. We are a directly employed, vetted team — not a network of random subcontractors — so you always know the standard of work you are getting."
+              q="How do I book a tyre service?"
+              a="Simply contact us by phone and provide your location, vehicle details and tyre requirements. We will confirm the available service and arrange assistance."
             />
             <FaqItem
-              q="What areas do you cover for mobile tyre fitting?"
-              a="We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan, along with the M60, M61, M62, M56, M602, M66, M67 and A627. If you are searching for a 24 hour tyre service near me anywhere in Greater Manchester, we are likely already covering your area."
+              q="How much does an emergency tyre service cost?"
+              a="The cost depends on factors such as the tyre required, your location, the type of work needed and the time of assistance. We aim to keep pricing clear and explain the cost before proceeding."
+            />
+            <FaqItem
+              q="Can you check my tyre pressure after fitting?"
+              a="Yes. Our technicians can check tyre pressures after fitting and, where applicable, inspect the TPMS (Tyre Pressure Monitoring System) to help ensure the system is functioning correctly."
+            />
+            <FaqItem
+              q="Can you provide tyre fitting at home or work?"
+              a="Yes. Where suitable, our tyre service can be arranged at your home, workplace or another safe location, depending on accessibility and the work required."
+            />
+            <FaqItem
+              q="Do you provide 24/7 emergency car recovery and tyre fitting?"
+              a="We provide 24/7 emergency tyre assistance and tyre fitting for tyre-related problems. If you require car recovery in addition to tyre assistance, contact us with your location and vehicle details so we can confirm what help is available."
+            />
+            <FaqItem
+              q="What is One Stop Tyres 247?"
+              a="One Stop Tyres 247 provides professional tyre services across Greater Manchester, helping drivers with tyre repair, tyre fitting, replacement and 24/7 emergency tyre assistance."
+            />
+            <FaqItem
+              q="Why choose One Stop Tyres 247?"
+              a="One Stop Tyres 247 focuses on fast, reliable and professional tyre service. Our qualified technicians provide clear advice, transparent pricing and practical tyre solutions to help you get safely back on the road."
             />
           </div>
         </div>

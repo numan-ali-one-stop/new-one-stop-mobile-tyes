@@ -2,7 +2,7 @@ import Image from 'next/image'
 import JsonLd from '@/components/JsonLd'
 import { aboutPageSchema, breadcrumbSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
-import { ADDRESS } from '@/lib/constants'
+import { ADDRESS, MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
   title: 'About One Stop Mobile Tyres 24/7 | Mobile Tyre Fitters Manchester',
@@ -105,7 +105,15 @@ export default function AboutPage() {
                   With a focus on speed, reliability, and technical excellence, we have built a reputation
                   as the Greater Manchester authority in mobile tyre fitting. Our technicians are distributed
                   strategically to reach you within 20–30 minutes, regardless of your location. We&apos;re
-                  based at {ADDRESS}.
+                  based at{' '}
+                  <a
+                    href={MAPS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#b70011] font-semibold hover:underline"
+                  >
+                    {ADDRESS}
+                  </a>.
                 </p>
               </div>
               {/* Mission box */}

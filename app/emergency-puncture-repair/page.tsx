@@ -1,6 +1,7 @@
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
   title: 'Emergency Puncture Repair at Your Location',
@@ -377,7 +378,7 @@ export default function EmergencyPunctureRepairPage() {
           Got a Puncture and Need Help?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Avoid continuing to drive if the tyre is flat or appears unsafe. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and details of the puncture. We&apos;ll arrange <strong>emergency mobile puncture repair</strong> assistance and assess whether your tyre can be professionally repaired or requires replacement. <strong>One Stop Mobile Tyres 24/7</strong> — Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom
+          Avoid continuing to drive if the tyre is flat or appears unsafe. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and details of the puncture. We&apos;ll arrange <strong>emergency mobile puncture repair</strong> assistance and assess whether your tyre can be professionally repaired or requires replacement. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a

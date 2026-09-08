@@ -5,6 +5,8 @@ export const PHONE = '07759 708 646'
 export const PHONE_TEL = '+447759708646'
 export const EMAIL = 'info@onestoptyres247.co.uk'
 export const ADDRESS = 'Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom'
+/** Google Business Profile pin for the address above — reused everywhere the address is clickable. */
+export const MAPS_URL = 'https://maps.app.goo.gl/tqGMogzsNNn8EXjH8'
 export const RESPONSE_TIME = '20–30 minutes'
 export const RATING = '5.0'
 export const REVIEW_COUNT = '1,200+'

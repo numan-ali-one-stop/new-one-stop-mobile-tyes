@@ -15,6 +15,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  devIndicators: false,
   compress: true,
   images: {
     // Optimization pipeline is live: next/image resizes and recompresses images

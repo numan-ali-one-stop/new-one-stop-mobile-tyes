@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { ADDRESS, BUSINESS_NAME } from '@/lib/constants'
+import { ADDRESS, BUSINESS_NAME, MAPS_URL } from '@/lib/constants'
 
 export default function Footer() {
   const pathname = usePathname()
@@ -43,7 +43,14 @@ export default function Footer() {
             </li>
             <li className="flex items-start justify-center sm:justify-start gap-3">
               <span className="material-symbols-outlined text-[#FF4444] text-lg">location_on</span>
-              <span className="text-center sm:text-left">{ADDRESS}</span>
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center sm:text-left hover:text-[#FF4444] transition-colors"
+              >
+                {ADDRESS}
+              </a>
             </li>
           </ul>
         </div>

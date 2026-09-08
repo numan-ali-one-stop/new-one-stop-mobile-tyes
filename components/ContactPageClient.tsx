@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ADDRESS } from '@/lib/constants'
+import { ADDRESS, MAPS_URL } from '@/lib/constants'
 
 export default function ContactPageClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(0)
@@ -180,12 +180,15 @@ export default function ContactPageClient() {
                       <p className="text-[#5c403c] mb-1 text-sm font-semibold">
                         Our Address
                       </p>
-                      <p
-                        className="text-[#1c1b1b] text-base lg:text-lg font-semibold"
+                      <a
+                        href={MAPS_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#1c1b1b] text-base lg:text-lg font-semibold hover:text-[#b70011] transition-colors inline-block"
                         style={{ fontFamily: 'Work Sans, sans-serif' }}
                       >
                         {ADDRESS}
-                      </p>
+                      </a>
                     </div>
                   </div>
                 </div>

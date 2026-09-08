@@ -1,6 +1,7 @@
 import JsonLd from '@/components/JsonLd'
 import { AREA_SERVED, breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
   title: 'Tyre Fitting Near Me | Mobile Service That Comes to You',
@@ -422,7 +423,7 @@ export default function TyreFittingNearMePage() {
           Looking for Tyre Fitting Near You?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Send your location, vehicle registration and tyre size to <strong>One Stop Mobile Tyres 24/7</strong> and we&apos;ll check the nearest available technician and suitable tyre options. <strong>One Stop Mobile Tyres 24/7</strong> — Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom — <strong>07759 708 646</strong>
+          Send your location, vehicle registration and tyre size to <strong>One Stop Mobile Tyres 24/7</strong> and we&apos;ll check the nearest available technician and suitable tyre options. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — <strong>07759 708 646</strong>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a

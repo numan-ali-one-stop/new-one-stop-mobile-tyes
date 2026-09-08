@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { BOROUGHS } from '@/lib/locations'
+import { EMAIL, PHONE, PHONE_TEL, MAPS_URL } from '@/lib/constants'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -133,23 +134,28 @@ export default function Header() {
       <div className="hidden md:block bg-[#0f172a] text-white py-2 px-6 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-[12px] font-medium">
           <div className="flex items-center gap-5">
-            <span className="flex items-center gap-1.5">
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-1.5 hover:text-red-400 transition-colors">
               <span className="material-symbols-outlined text-sm">mail</span>
-              info@onestoptyres247.co.uk
-            </span>
-            <span className="flex items-center gap-1.5">
+              {EMAIL}
+            </a>
+            <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-1.5 hover:text-red-400 transition-colors">
               <span className="material-symbols-outlined text-sm">alarm</span>
               24/7 Emergency Service
-            </span>
-            <span className="flex items-center gap-1.5">
+            </a>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-red-400 transition-colors"
+            >
               <span className="material-symbols-outlined text-sm">location_on</span>
               Greater Manchester
-            </span>
+            </a>
           </div>
-          <span className="flex items-center gap-1.5 font-bold text-red-400">
+          <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-1.5 font-bold text-red-400 hover:text-red-300 transition-colors">
             <span className="material-symbols-outlined text-sm">call</span>
-            07759 708 646
-          </span>
+            {PHONE}
+          </a>
         </div>
       </div>
 

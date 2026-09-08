@@ -1,6 +1,7 @@
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
   title: '24 Hour Emergency Tyre Fitting | Day or Night',
@@ -376,7 +377,7 @@ export default function EmergencyTyreFitting24HourPage() {
           Need an Emergency Tyre Fitter Right Now?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          If a flat tyre, blowout or serious tyre damage has stopped your journey, avoid continuing if the vehicle is unsafe. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and tyre size. We&apos;ll check a suitable replacement and arrange the appropriate <strong>emergency tyre fitting</strong> response. <strong>One Stop Mobile Tyres 24/7</strong> — Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom — <strong>07759 708 646</strong>
+          If a flat tyre, blowout or serious tyre damage has stopped your journey, avoid continuing if the vehicle is unsafe. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and tyre size. We&apos;ll check a suitable replacement and arrange the appropriate <strong>emergency tyre fitting</strong> response. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — <strong>07759 708 646</strong>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
