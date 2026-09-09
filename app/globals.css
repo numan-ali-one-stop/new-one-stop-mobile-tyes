@@ -3,6 +3,31 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ─── Material Symbols responsive-visibility fix ───────────────────────────
+   The Google Fonts stylesheet for Material Symbols ships its own unlayered
+   `.material-symbols-outlined { display: inline-block }` rule. Per the CSS
+   cascade-layers spec, unlayered author CSS always wins over ANY @layer
+   rule — including Tailwind's `hidden` / `lg:block` / `md:block` utilities —
+   regardless of specificity or load order. That silently broke every icon
+   that combines a responsive display utility directly on the icon span
+   itself (e.g. the step-arrow icons in "How It Works" sections), leaving
+   them visible at every breakpoint instead of only above lg/md.
+   Fix: declare our own unlayered override with higher specificity (two
+   classes vs Google's one) so it wins regardless of stylesheet load order. */
+.material-symbols-outlined.hidden {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .material-symbols-outlined.md\:block {
+    display: block;
+  }
+}
+@media (min-width: 64rem) {
+  .material-symbols-outlined.lg\:block {
+    display: block;
+  }
+}
+
 /* ─── Brand Token Overrides ─── */
 :root {
   /* Brand colours */
