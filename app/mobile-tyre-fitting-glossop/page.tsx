@@ -159,7 +159,7 @@ export default function GlossopPage() {
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Home Tyre Fitting', desc: 'Same day tyre fitting at your home across Glossop, without the hassle of visiting a garage.', badge: 'AT YOUR DOOR',
                   href: '/home-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'Professional mobile puncture repair across Glossop, carried out on-site where safe and suitable.', badge: 'CERTIFIED REPAIR',
-                  href: '/emergency-puncture-repair' },
+                  href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Glossop.', badge: '24/7 SERVICE',
                   href: '/jump-start' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp', title: 'TPMS Reset', desc: 'Tyre pressure monitoring system reset and sensor checks across Glossop after every fitting or repair.', badge: 'ALL VEHICLES',

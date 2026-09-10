@@ -215,7 +215,7 @@ export default function ChorltoncumHardyPage() {
                   title: 'Mobile Puncture Repair',
                   desc: 'Professional mobile puncture repair across Chorlton-cum-Hardy, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
-                  href: '/emergency-puncture-repair',
+                  href: '/puncture-repair-Greater-manchester',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',

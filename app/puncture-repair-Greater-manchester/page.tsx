@@ -1,22 +1,22 @@
 import JsonLd from '@/components/JsonLd'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
-import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
-  title: 'Emergency Puncture Repair at Your Location',
+  title: 'Tyre Puncture Repair in Greater Manchester | 24/7 Service',
   description:
-    'Emergency mobile and roadside puncture repair across Greater Manchester, with same day and 24-hour assistance available.',
-  path: '/emergency-puncture-repair',
+    'Need a tyre puncture repair in Greater Manchester? Get professional puncture repair for cars, slow punctures and emergency tyre problems at a convenient location.',
+  path: '/puncture-repair-Greater-manchester',
 })
 
 const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Home', item: SITE_URL },
-  { name: 'Emergency Puncture Repair', item: `${SITE_URL}/emergency-puncture-repair` },
+  { name: 'Emergency Puncture Repair', item: `${SITE_URL}/puncture-repair-Greater-manchester` },
 ])
 
 const _serviceSchema = serviceSchema({
-  slug: 'emergency-puncture-repair',
+  slug: 'puncture-repair-Greater-manchester',
   name: 'Emergency Mobile Puncture Repair',
   serviceType: 'Emergency Puncture Repair',
   description:
@@ -24,20 +24,21 @@ const _serviceSchema = serviceSchema({
 })
 
 const faqs = [
-  { q: 'What is emergency puncture repair?', a: 'Emergency puncture repair is a call-out service for drivers dealing with an unexpected punctured or flat tyre. A technician comes to your location, assesses the tyre and repairs it where safe and suitable.' },
-  { q: 'Can every tyre puncture be repaired?', a: 'No. Whether a puncture can be repaired depends on factors including the location and extent of the damage and the overall condition of the tyre. The tyre should be inspected before deciding whether repair is appropriate.' },
-  { q: 'Do you provide mobile puncture repair?', a: 'Yes. Our mobile puncture repair service brings the required inspection and repair equipment to your vehicle, removing the need to drive on a damaged tyre to reach a garage.' },
-  { q: 'Do you offer roadside puncture repair?', a: 'Yes. We provide roadside puncture repair at suitable and safe locations across Greater Manchester. If you are on a motorway or another high-speed road, prioritise reaching a safe location and follow official road-safety guidance.' },
-  { q: 'Can you repair a tyre with a nail or screw in it?', a: 'Possibly. A nail or screw in the tread does not automatically mean the tyre needs replacing. The technician needs to inspect the position of the puncture, damage and tyre condition before confirming whether repair is safe.' },
-  { q: 'Should I remove a nail from my tyre before you arrive?', a: 'Usually, leave the object in place until the tyre has been professionally inspected. Removing it yourself can cause the tyre to lose pressure more quickly.' },
-  { q: 'Can you repair a slow puncture?', a: 'Yes, depending on the cause. Our slow puncture repair service starts by identifying the source of the pressure loss before determining whether the tyre can be safely repaired.' },
-  { q: 'Do you offer 24 hour puncture repair?', a: 'Yes. 24 hour puncture repair assistance is available for urgent tyre problems day and night, subject to technician availability.' },
-  { q: 'Can I arrange same day puncture repair?', a: 'Yes. Same day puncture repair is available subject to your location and technician availability.' },
-  { q: 'What happens if my tyre cannot be repaired?', a: 'If inspection shows that a safe repair is not possible, the technician will explain why and advise on an appropriate replacement tyre rather than attempting an unsuitable repair.' },
-  { q: 'Can a tyre be repaired after being driven while flat?', a: 'Driving on a severely underinflated or flat tyre can cause additional internal or structural damage. The tyre needs to be inspected before a technician can determine whether flat tyre repair remains safe.' },
-  { q: 'How do you decide whether to repair or replace a punctured tyre?', a: 'The decision is based on the puncture position, extent and type of damage, tyre condition and whether a professional repair can be completed safely. Replacement is recommended when the tyre is not suitable for repair.' },
-  { q: 'Can you repair punctures on cars and vans?', a: 'We can assess punctured tyres on many cars, SUVs and light commercial vehicles. Repair depends on the individual tyre, its specification and the damage found during inspection.' },
-  { q: 'What information should I send when I need emergency puncture repair?', a: 'Send your exact location, vehicle registration and a brief description of what happened. If possible, also send your tyre size and a clear photo of the affected tyre.' },
+  { q: 'Can you fix a car tyre puncture?', a: 'Yes. We can inspect a car tyre puncture and determine whether the tyre is suitable for a safe repair.' },
+  { q: 'Do you provide tyre puncture repair?', a: 'Yes. We provide tyre puncture repair for suitable punctures after the tyre has been properly inspected.' },
+  { q: 'Can you repair a slow tyre puncture?', a: 'Yes. If you have a slow tyre puncture, our technician can inspect the tyre to identify the cause and determine whether a repair is appropriate.' },
+  { q: 'Do you provide mobile puncture repair?', a: 'Yes. Our mobile puncture repair service allows us to assess and repair suitable punctures at a convenient location.' },
+  { q: 'Do you provide emergency puncture repair?', a: 'Yes. We provide emergency puncture repair for suitable situations, subject to your location and the condition of the tyre.' },
+  { q: 'How do I know if my tyre can be repaired?', a: 'The tyre needs to be inspected first. The location and size of the damage, along with the overall condition of the tyre, help determine whether a safe repair is possible.' },
+  { q: 'What causes a tyre puncture?', a: 'Punctures can be caused by nails, screws, glass, sharp road debris and other objects that penetrate the tyre.' },
+  { q: 'Can you fix a puncture caused by a nail or screw?', a: 'A puncture caused by a nail or screw may be repairable, but the tyre must be inspected to confirm that the damage is suitable for a safe repair.' },
+  { q: 'How long does tyre puncture repair take?', a: 'The time depends on the type and location of the damage and the condition of the tyre. Once inspected, the technician can give you a better indication of the time required.' },
+  { q: 'Can I drive with a punctured tyre?', a: "Driving on a punctured or significantly underinflated tyre can be unsafe and may cause additional damage. It's best to stop in a safe location and have the tyre assessed." },
+  { q: 'What happens if my tyre cannot be repaired?', a: "If the tyre is not suitable for repair, we'll explain why and discuss the appropriate replacement option based on your vehicle and tyre requirements." },
+  { q: 'Do you repair punctures at the roadside?', a: 'Yes, where the location is safe and suitable for the work, we can provide mobile tyre puncture repair at a roadside location.' },
+  { q: 'Do you cover Greater Manchester?', a: 'Yes. Our Puncture Repair service covers Greater Manchester, including Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan.' },
+  { q: 'Can a slow puncture be repaired?', a: 'A slow tyre puncture may be repairable if the damage is suitable and the tyre remains in good condition. Our technician will inspect it before recommending a repair.' },
+  { q: 'What should I do if I get a puncture while driving?', a: 'Move to a safe location away from traffic where possible, avoid driving on the damaged tyre and contact us with your location and vehicle details for assistance.' },
 ]
 
 const _faqSchema = faqSchema(faqs)
@@ -45,50 +46,83 @@ const _faqSchema = faqSchema(faqs)
 const whyChooseUs = [
   {
     icon: '🚗',
-    title: 'Fast Puncture Assistance',
-    desc: 'A flat tyre can interrupt your journey without warning. Our mobile service is designed to get a technician to your location as quickly as availability and traffic conditions allow.',
+    title: 'Puncture Assessment',
+    desc: 'We inspect the tyre and identify the cause and extent of the damage.',
   },
   {
     icon: '🔧',
-    title: 'Repair Where Safe',
-    desc: "We don't automatically replace every punctured tyre. The damage is assessed first, and repair is carried out when the tyre remains suitable for safe professional repair.",
+    title: 'Safe Repair',
+    desc: 'A puncture is repaired only when the tyre is suitable for safe repair.',
   },
   {
     icon: '📍',
-    title: 'Roadside Puncture Repair',
-    desc: 'If tyre trouble happens during a journey, our roadside puncture repair service can attend a safe and accessible location to inspect the tyre and determine the right solution.',
+    title: 'Convenient Assistance',
+    desc: 'Get help at a suitable location instead of arranging a trip to a tyre centre.',
   },
   {
     icon: '⭐',
-    title: 'Clear Advice Before Any Work',
-    desc: "We explain whether the tyre can be repaired and what happens next. If replacement is required, we'll explain the available options before proceeding.",
+    title: 'Greater Manchester Coverage',
+    desc: 'Our puncture repair service covers locations throughout Greater Manchester.',
+  },
+]
+
+const whyChoosePunctureRepair = [
+  {
+    icon: 'fact_check',
+    title: 'Professional Assessment',
+    desc: 'Every tyre is inspected before we recommend a tyre puncture repair.',
+  },
+  {
+    icon: 'schedule',
+    title: 'Convenient Service',
+    desc: 'Our mobile puncture repair service allows you to get assistance at a suitable location.',
+  },
+  {
+    icon: 'bolt',
+    title: 'Emergency Assistance',
+    desc: "If you're stranded with a puncture, our emergency puncture repair service can provide assistance where appropriate.",
+  },
+  {
+    icon: 'build',
+    title: 'Repair When Suitable',
+    desc: "We don't recommend repairing a tyre when its condition or damage makes repair unsuitable.",
+  },
+  {
+    icon: 'engineering',
+    title: 'Experienced Technicians',
+    desc: 'Our technicians use professional equipment to inspect and work on suitable punctured tyres.',
+  },
+  {
+    icon: 'location_on',
+    title: 'Greater Manchester Service',
+    desc: 'We provide Puncture Repair across Greater Manchester, subject to location and accessibility.',
   },
 ]
 
 const steps = [
   {
     n: '1',
-    title: 'Tell Us What Happened',
-    desc: 'Call or WhatsApp with your location, vehicle registration and details of the tyre problem. If you can see a nail or screw, tell us, but avoid removing it yourself.',
+    title: 'Tell Us About the Puncture',
+    desc: 'Contact us and provide your vehicle details, location and information about the tyre problem.',
   },
   {
     n: '2',
-    title: 'We Arrange Assistance',
-    desc: 'We check your details and arrange a mobile puncture technician with the equipment needed to assess the damaged tyre.',
+    title: 'We Assess the Damage',
+    desc: 'Our technician inspects the tyre to identify the puncture and assess whether the tyre is suitable for repair.',
   },
   {
     n: '3',
-    title: 'Your Tyre Is Inspected',
-    desc: 'The technician examines the tyre and puncture to determine whether a safe repair is possible or whether the tyre needs replacing.',
+    title: 'Repair the Tyre',
+    desc: 'If the damage meets the requirements for a safe repair, the technician carries out the appropriate repair.',
   },
   {
     n: '4',
-    title: 'Repair & Final Checks',
-    desc: "Where suitable, the puncture is professionally repaired and the tyre is checked before the job is completed. If repair is unsafe, we'll explain the replacement options instead.",
+    title: 'Final Safety Check',
+    desc: 'The tyre is checked after the repair before you continue your journey.',
   },
 ]
 
-export default function EmergencyPunctureRepairPage() {
+export default function PunctureRepairGreaterManchesterPage() {
   return (
     <div className="text-[#1c1b1b]" style={{ fontFamily: 'var(--font-inter)' }}>
       <JsonLd data={_breadcrumbSchema} />
@@ -122,23 +156,22 @@ export default function EmergencyPunctureRepairPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Emergency Puncture Repair at Your Location
+              Professional Tyre Puncture Repair in Greater Manchester
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              A sudden puncture can leave your vehicle unsafe to drive, but it does not always mean you need a new tyre. <strong>One Stop Mobile Tyres 24/7</strong> provides <strong>emergency puncture repair</strong> across Greater Manchester, sending a technician to inspect the damaged tyre and determine whether a safe repair is possible.
+              Got a punctured tyre? Our <strong>Puncture Repair</strong> service helps drivers get back on the road without the need for an unnecessary garage visit. We provide professional tyre puncture repair for suitable punctures across Greater Manchester, with experienced technicians assessing the damage before carrying out any repair.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
-              If the tyre meets the requirements for repair, we can carry out a professional puncture repair at your location. If the damage, position of the puncture or condition of the tyre makes repair unsafe, we can advise you on the appropriate replacement option.
+              Whether you&apos;ve picked up a nail, screw or another object in your tyre, we&apos;ll inspect the tyre and determine whether it can be safely repaired. For urgent situations, <strong>emergency puncture repair</strong> is also available, subject to your location and the condition of the tyre.
             </p>
 
             <ul className="space-y-2 mb-8">
               {[
-                'Emergency Mobile Puncture Repair',
-                'Roadside Puncture Repair',
-                'Same Day & 24 Hour Assistance',
-                'Slow & Sudden Puncture Assessment',
-                'Repair Where Safe and Suitable',
+                'Professional Puncture Repair',
+                'Tyre Puncture Repair',
+                'Emergency Puncture Assistance',
+                'Greater Manchester Coverage',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -195,13 +228,16 @@ export default function EmergencyPunctureRepairPage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Professional Mobile Puncture Repair When You Need It
+              Tyre Puncture Repair That Comes to You
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
-              Nails, screws and other sharp objects can cause anything from a slow loss of pressure to a completely flat tyre. Our <strong>mobile puncture repair</strong> service brings the inspection and repair equipment to your vehicle, so the tyre can be properly assessed before deciding what it needs.
+              A puncture can happen without warning and leave you unable to continue your journey. Our <strong>mobile puncture repair</strong> service is designed to provide a convenient solution by bringing professional assistance to a suitable location.
+            </p>
+            <p className="text-slate-600 text-base leading-relaxed mb-4">
+              Our technician will inspect the tyre to identify the cause and location of the puncture and assess its overall condition. If the damage is suitable for repair, we&apos;ll carry out the required work and check the tyre before you continue your journey.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              Our technician checks the puncture location, visible tyre condition and extent of the damage. Where a <strong>professional puncture repair</strong> can be completed safely, we repair the tyre rather than recommending unnecessary replacement.
+              One Stop Tyres 247 provides <strong>mobile tyre puncture repair</strong> across Greater Manchester, helping drivers deal with punctures at home, work or a suitable roadside location.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -217,7 +253,14 @@ export default function EmergencyPunctureRepairPage() {
         </div>
       </section>
 
-      {/* ── 3. HOW IT WORKS ──────────────────────────────────────────── */}
+      {/* ── 3. WHY CHOOSE ────────────────────────────────────────────── */}
+      <WhyChooseGrid
+        heading="Why Choose Our Puncture Repair Service?"
+        intro="When you have a puncture, getting the right solution matters. Our service focuses on properly assessing the tyre before deciding whether a repair is appropriate."
+        items={whyChoosePunctureRepair}
+      />
+
+      {/* ── 4. HOW IT WORKS ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
         <div
           className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
@@ -229,14 +272,17 @@ export default function EmergencyPunctureRepairPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
-              Simple Process
+              How Our Puncture Repair Service Works
             </span>
             <h2
               className="text-2xl sm:text-[32px] font-bold"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              How Emergency Puncture Repair Works
+              How Our Puncture Repair Service Works
             </h2>
+            <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+              Getting help with a punctured tyre is straightforward. We first assess the tyre and then determine the safest and most appropriate solution.
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
             {steps.map((step, idx) => (
@@ -267,7 +313,7 @@ export default function EmergencyPunctureRepairPage() {
         </div>
       </section>
 
-      {/* ── 4. SECOND IMAGE STRIP ────────────────────────────────────── */}
+      {/* ── 5. SECOND IMAGE STRIP ────────────────────────────────────── */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
           <div className="w-full lg:w-1/2">
@@ -284,16 +330,22 @@ export default function EmergencyPunctureRepairPage() {
           </div>
           <div className="w-full lg:w-1/2">
             <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-              Repair First Where Appropriate
+              Fix Car Tyre Puncture
             </span>
             <h2
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Can Your Punctured Tyre Be Safely Repaired?
+              Fix Car Tyre Puncture Safely and Professionally
             </h2>
+            <p className="text-slate-600 text-base leading-relaxed mb-4">
+              A punctured car tyre doesn&apos;t always need to be replaced. In some cases, a suitable puncture can be repaired after a proper inspection. Our technicians assess the damage, tyre condition and location of the puncture before deciding whether a <strong>car tyre puncture repair</strong> is appropriate.
+            </p>
+            <p className="text-slate-600 text-base leading-relaxed mb-4">
+              Common causes include nails, screws, sharp road debris and other objects penetrating the tyre. Continuing to drive on a damaged or underinflated tyre can cause further damage, so getting it checked promptly is important.
+            </p>
             <p className="text-slate-600 text-base leading-relaxed mb-6">
-              Not every flat tyre needs replacing. A puncture in a repairable area may be suitable for <strong>tyre puncture repair</strong>, provided the tyre itself remains in safe condition. The technician will assess factors such as where the puncture is located, the type and extent of damage, and the overall condition of the tyre. Damage to areas that cannot be safely repaired, serious structural damage or a tyre that has been driven while severely underinflated may mean replacement is the safer option. Our approach is simple: <strong>repair when a proper repair is safe and appropriate; recommend replacement when it isn&apos;t.</strong>
+              If the tyre cannot be safely repaired, we can explain the available options, including replacement where appropriate.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -319,24 +371,55 @@ export default function EmergencyPunctureRepairPage() {
         </div>
       </section>
 
-      {/* ── HELPFUL GUIDE ────────────────────────────────────────────── */}
-      <section className="px-4 sm:px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <a
-            href="/guides/how-to-tell-if-your-tyre-can-be-repaired-or-needs-replacing"
-            className="group flex items-center justify-between gap-4 bg-slate-50 border border-slate-100 rounded-2xl p-5 sm:p-6 mb-2 hover:border-[#b70011]/30 hover:shadow-md transition-all"
-          >
-            <div>
-              <span className="text-xs font-bold text-[#b70011] uppercase tracking-widest mb-1 block">Not Sure Whether Your Tyre Is Repairable?</span>
-              <p className="font-bold text-[#0f172a]">How to Tell If Your Tyre Can Be Repaired or Needs Replacing</p>
-              <p className="text-sm text-slate-500">Read our practical guide to puncture location, tyre condition and the factors that determine whether repair or replacement may be appropriate.</p>
-            </div>
-            <span className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all shrink-0">arrow_forward</span>
-          </a>
+      {/* ── 6. SLOW TYRE PUNCTURE REPAIR ─────────────────────────────── */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto text-center mb-10 sm:mb-14">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Don&apos;t Ignore a Slow Leak
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Slow Tyre Puncture Repair
+            </h2>
+            <p className="text-slate-600 text-base leading-relaxed">
+              Not every puncture causes an immediate flat tyre. A slow puncture can gradually reduce your tyre pressure and is easy to overlook until the problem becomes more serious.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {[
+              {
+                icon: 'tire_repair',
+                title: 'Constantly Topping Up?',
+                desc: 'Regularly adding air to the same tyre can point to a puncture, valve problem or another issue worth checking.',
+              },
+              {
+                icon: 'search',
+                title: 'We Find the Cause',
+                desc: "Our technician inspects the tyre to identify the puncture and confirm what's causing the pressure loss.",
+              },
+              {
+                icon: 'build',
+                title: 'Repair or Replace',
+                desc: 'We repair the tyre where suitable, or advise on replacement if the damage makes repair unsafe.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-xl p-5">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm">
+                  <span className="material-symbols-outlined text-[#b70011]" style={{ fontSize: '20px' }}>{item.icon}</span>
+                </div>
+                <h3 className="font-bold text-[#0f172a] text-base mb-1">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ── 5. FAQ ───────────────────────────────────────────────────── */}
+      {/* ── 7. FAQ ───────────────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
@@ -351,9 +434,9 @@ export default function EmergencyPunctureRepairPage() {
             </h2>
           </div>
           <div className="space-y-3 sm:space-y-4">
-            {faqs.map((faq) => (
+            {faqs.map((faq, i) => (
               <details
-                key={faq.q}
+                key={`${faq.q}-${i}`}
                 className="group bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm open:shadow-md transition-all"
               >
                 <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-base sm:text-lg text-[#0f172a] gap-3">
@@ -369,35 +452,32 @@ export default function EmergencyPunctureRepairPage() {
         </div>
       </section>
 
-      {/* ── 6. FINAL CTA ─────────────────────────────────────────────── */}
+      {/* ── 8. FINAL CTA ─────────────────────────────────────────────── */}
       <section className="py-14 sm:py-20 px-4 sm:px-6 bg-[#0f172a] text-white text-center">
         <h2
           className="text-2xl sm:text-3xl font-bold mb-3"
           style={{ fontFamily: 'var(--font-work-sans)' }}
         >
-          Got a Puncture and Need Help?
+          Need a Tyre Puncture Fixed?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Avoid continuing to drive if the tyre is flat or appears unsafe. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and details of the puncture. We&apos;ll arrange <strong>emergency mobile puncture repair</strong> assistance and assess whether your tyre can be professionally repaired or requires replacement. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a>
+          Don&apos;t let a punctured tyre disrupt your day. Contact us for professional tyre puncture repair across Greater Manchester. We&apos;ll assess the damage and provide the safest suitable solution, whether that means repairing the puncture or recommending a replacement.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* TODO: confirm destination — no quote/contact route has been established sitewide yet (same open question as the home-tyre-fitting page's equivalent CTA) */}
           <a
-            href="tel:07759708646"
+            href="#TODO-get-puncture-repair-destination"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-            Call: 07759 708 646
+            Get Puncture Repair
           </a>
           <a
-            href="https://wa.me/447759708646"
-            className="bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-10 py-4 rounded-xl flex items-center gap-2.5 transition-all text-lg sm:text-xl shadow-lg"
+            href="tel:07759708646"
+            className="bg-white/10 border border-white/20 text-white font-black px-10 py-4 rounded-xl flex items-center gap-2.5 hover:bg-white/20 transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <svg className="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            WhatsApp Us
+            Call Now
           </a>
         </div>
       </section>

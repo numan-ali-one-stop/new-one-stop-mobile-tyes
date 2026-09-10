@@ -45,6 +45,8 @@ const nextConfig = {
         destination: '/mobile-tyre-fitting-urmston',
         permanent: true,
       },
+      // Puncture repair page renamed — keep the old URL working and pass on its SEO value.
+      { source: '/emergency-puncture-repair', destination: '/puncture-repair-Greater-manchester', permanent: true },
       // Legacy WordPress URLs — the site migrated from WordPress and these
       // old paths are still indexed/linked externally.
       // TODO(owner): check Google Search Console's "Pages" report for any
@@ -59,13 +61,20 @@ const nextConfig = {
   },
   async headers() {
     return [
-      // Next.js build output — content-hashed filenames, safe to cache forever
-      {
-        source: '/_next/static/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
+      // Next.js build output — content-hashed filenames, safe to cache forever.
+      // Production only: in dev the chunks aren't content-hashed the same way,
+      // and an immutable 1-year cache here makes the browser serve stale JS
+      // after edits instead of picking up HMR updates.
+      ...(process.env.NODE_ENV === 'production'
+        ? [
+            {
+              source: '/_next/static/:path*',
+              headers: [
+                { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+              ],
+            },
+          ]
+        : []),
       // Public images — fingerprinted by filename; 1-year cache
       {
         source: '/images/:path*',

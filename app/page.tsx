@@ -265,11 +265,8 @@ export default function Home() {
               className="text-2xl sm:text-[32px] font-bold text-[#0f172a] mb-4"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              What Our Customers Say
+              What Our Customers Say Our Tyre Repair Service in Greater Manchester
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-base mb-4">
-              Our Tyre Repair Service in Greater Manchester
-            </p>
             {/* Rating badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white border border-slate-200 shadow-sm rounded-full px-5 py-2.5">
               <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-label="Google">
@@ -408,7 +405,7 @@ export default function Home() {
                 title: 'Emergency Puncture Repair',
                 desc: 'Certified, BS AU 159 compliant plug-and-patch puncture repair, fitted on-site.',
                 badge: 'CERTIFIED REPAIR',
-                href: '/emergency-puncture-repair',
+                href: '/puncture-repair-Greater-manchester',
               },
               {
                 img: '/images/tyre-fitting-in-emergency.webp',

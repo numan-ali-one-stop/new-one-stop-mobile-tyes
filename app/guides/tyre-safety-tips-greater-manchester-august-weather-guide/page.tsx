@@ -210,7 +210,7 @@ export default function TyreSafetyAugustWeatherGuide() {
               mobile tyre fitting
             </a>{' '}
             technician can come to your home, workplace, or even the roadside to repair or{' '}
-            <a href="/emergency-puncture-repair" className="text-[#b70011] font-semibold hover:underline">
+            <a href="/puncture-repair-Greater-manchester" className="text-[#b70011] font-semibold hover:underline">
               replace the tyre
             </a>{' '}
             on the spot — so you can get back on the road with as little disruption as possible.

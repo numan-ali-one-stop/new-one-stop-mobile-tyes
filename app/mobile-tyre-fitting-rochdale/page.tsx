@@ -215,7 +215,7 @@ export default function RochdalePage() {
                   title: 'Mobile Puncture Repair',
                   desc: 'If the tyre has suffered a puncture, our technician checks the type and position of the damage before deciding whether repair is suitable. Where it meets the required safety conditions, a professional repair can be carried out.',
                   badge: 'ASSESS FIRST, REPAIR WHERE SAFE',
-                  href: '/emergency-puncture-repair',
+                  href: '/puncture-repair-Greater-manchester',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',

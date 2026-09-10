@@ -6,7 +6,7 @@ const LAST_MODIFIED = '2026-08-05'
 const SERVICE_PAGES = [
   '/mobile-tyre-fitting',
   '/home-tyre-fitting',
-  '/emergency-puncture-repair',
+  '/puncture-repair-Greater-manchester',
   '/jump-start',
   '/tpms-reset',
   '/locking-nut-removal',

@@ -215,7 +215,7 @@ export default function BoltonPage() {
                   title: 'Mobile Puncture Repair',
                   desc: 'Where a puncture falls within a repairable area and the tyre remains structurally safe, our technicians can carry out a professional puncture repair rather than replacing the entire tyre unnecessarily.',
                   badge: 'REPAIR BEFORE REPLACEMENT',
-                  href: '/emergency-puncture-repair',
+                  href: '/puncture-repair-Greater-manchester',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',

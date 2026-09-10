@@ -215,7 +215,7 @@ export default function BuryPage() {
                   title: 'Mobile Puncture Repair',
                   desc: 'Not every puncture requires a new tyre. Where the location and type of damage meet repair standards, our technician can inspect the tyre and carry out a professional repair.',
                   badge: 'REPAIR WHERE SUITABLE',
-                  href: '/emergency-puncture-repair',
+                  href: '/puncture-repair-Greater-manchester',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',

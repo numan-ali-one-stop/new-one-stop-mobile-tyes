@@ -67,7 +67,7 @@ export default function Footer() {
               { label: 'Tyre Fitting Near Me', href: '/tyre-fitting-near-me' },
               { label: 'Mobile Tyre Fitting', href: '/mobile-tyre-fitting' },
               { label: 'Home Tyre Fitting', href: '/home-tyre-fitting' },
-              { label: 'Emergency Puncture Repair', href: '/emergency-puncture-repair' },
+              { label: 'Emergency Puncture Repair', href: '/puncture-repair-Greater-manchester' },
               { label: 'Jump Start', href: '/jump-start' },
               { label: 'Locking Nut Removal', href: '/locking-nut-removal' },
               { label: 'TPMS Reset', href: '/tpms-reset' },

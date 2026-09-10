@@ -28,7 +28,7 @@ const services = [
     btnLabel: 'Learn More',
   },
   {
-    href: '/emergency-puncture-repair',
+    href: '/puncture-repair-Greater-manchester',
     img: '/images/tyres-fitting-anywhere.webp',
     title: 'Emergency Puncture Repair',
     desc: 'Stuck with a flat? Our rapid response team will arrive quickly to repair your puncture and get you back on the road safely.',

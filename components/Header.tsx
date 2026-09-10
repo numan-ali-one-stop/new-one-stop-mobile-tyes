@@ -21,8 +21,8 @@ const serviceLinks = [
     desc: 'Fitted while you work or relax at home',
   },
   {
-    label: 'Emergency Puncture Repair',
-    href: '/emergency-puncture-repair',
+    label: 'Puncture Repair',
+    href: '/puncture-repair-Greater-manchester',
     icon: 'construction',
     desc: 'BS AU 159 compliant plug & patch repair',
   },
