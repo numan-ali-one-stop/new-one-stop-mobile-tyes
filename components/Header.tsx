@@ -27,6 +27,12 @@ const serviceLinks = [
     desc: 'BS AU 159 compliant plug & patch repair',
   },
   {
+    label: 'Roadside Assistance',
+    href: '/roadside-assistance',
+    icon: 'support_agent',
+    desc: '24/7 emergency roadside support across Greater Manchester',
+  },
+  {
     label: 'Jump Start',
     href: '/jump-start',
     icon: 'bolt',
