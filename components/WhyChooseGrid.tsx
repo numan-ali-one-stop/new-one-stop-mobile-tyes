@@ -1,7 +1,5 @@
 /* ─── Shared "Why Choose" grid section — centred heading, CTA row, 6-item icon grid ─── */
 
-import Reveal from '@/components/Reveal'
-
 interface WhyChooseGridItem {
   icon: string
   title: string
@@ -18,7 +16,7 @@ export default function WhyChooseGrid({ heading, intro, items }: WhyChooseGridPr
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
       <div className="max-w-7xl mx-auto">
-        <Reveal className="text-center mb-10 sm:mb-14">
+        <div className="text-center mb-10 sm:mb-14">
           <h2
             className="text-2xl sm:text-[32px] font-bold text-[#0f172a] mb-4 leading-tight"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
@@ -48,23 +46,19 @@ export default function WhyChooseGrid({ heading, intro, items }: WhyChooseGridPr
               WhatsApp Us
             </a>
           </div>
-        </Reveal>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {items.map((item, i) => (
-            <Reveal
-              key={item.title}
-              delay={i * 60}
-              className="flex items-start gap-4 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-            >
-              <div className="w-12 h-12 bg-[#b70011]/10 rounded-full flex items-center justify-center shrink-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-x-8 sm:gap-y-10">
+          {items.map((item) => (
+            <div key={item.title} className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-[#b70011]">{item.icon}</span>
               </div>
               <div>
                 <h3 className="font-bold text-[#0f172a] text-base mb-1">{item.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
-            </Reveal>
+            </div>
           ))}
         </div>
       </div>

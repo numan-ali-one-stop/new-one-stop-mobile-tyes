@@ -23,28 +23,27 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Mobile Tyre Service Manchester | Road Heroes 24/7',
+  title: 'One Stop Mobile Tyres 24/7 | Emergency Mobile Tyre Fitting Manchester',
   description:
-    'Reliable mobile tyre fitting, repair and replacement across Manchester. Road Heroes 24/7 brings professional tyre assistance to your home, workplace or a suitable roadside location, 24/7.',
-  keywords:
-    'Mobile Tyre Service Manchester, Mobile Tyre Fitting Manchester, Emergency Mobile Tyre Fitting Manchester, Mobile Tyre Replacement Manchester, 24 Hour Mobile Tyre Service Manchester',
+    'Stranded with a puncture? Our professional technicians reach you fast at home, work, or roadside across Greater Manchester. 24/7 emergency mobile tyre fitting available now.',
+  keywords: 'mobile tyre fitting, emergency tyre Manchester, puncture repair, 24/7 tyres',
   icons: {
     icon: [{ url: '/icon.webp', type: 'image/webp' }],
     apple: '/icon.webp',
     shortcut: '/icon.webp',
   },
   openGraph: {
-    title: 'Mobile Tyre Service Manchester | Road Heroes 24/7',
+    title: 'One Stop Mobile Tyres 24/7 | Emergency Mobile Tyre Fitting Manchester',
     description:
-      'Reliable mobile tyre fitting, repair and replacement across Manchester. Road Heroes 24/7 brings professional tyre assistance to your home, workplace or a suitable roadside location, 24/7.',
-    url: 'https://roadheroes247.co.uk',
-    siteName: 'Road Heroes 24/7',
+      'Stranded with a puncture? Our professional technicians reach you fast at home, work, or roadside across Greater Manchester. 24/7 emergency mobile tyre fitting available now.',
+    url: 'https://onestoptyres247.co.uk',
+    siteName: 'One Stop Mobile Tyres 24/7',
     images: [
       {
         url: '/og-image.webp',
         width: 1200,
         height: 630,
-        alt: '24/7 Mobile Tyre Service across Manchester — Road Heroes 24/7',
+        alt: '24/7 Mobile Tyre Fitting across Manchester & Greater Manchester — One Stop Mobile Tyres',
         type: 'image/webp',
       },
     ],
@@ -53,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mobile Tyre Service Manchester | Road Heroes 24/7',
+    title: 'One Stop Mobile Tyres 24/7 | Emergency Mobile Tyre Fitting Manchester',
     description:
-      'Reliable mobile tyre fitting, repair and replacement across Manchester. Road Heroes 24/7 brings professional tyre assistance to your home, workplace or a suitable roadside location, 24/7.',
+      'Stranded with a puncture? Our professional technicians reach you fast at home, work, or roadside across Greater Manchester. 24/7 emergency mobile tyre fitting available now.',
     images: ['/og-image.webp'],
   },
 }

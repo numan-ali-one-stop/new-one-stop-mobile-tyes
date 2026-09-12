@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { BUSINESS_NAME } from '@/lib/constants'
 
-const SITE_URL = 'https://roadheroes247.co.uk'
-const OG_IMAGE_ALT = '24/7 Mobile Tyre Service across Manchester & Greater Manchester — Road Heroes 24/7'
+const SITE_URL = 'https://onestoptyres247.co.uk'
+const OG_IMAGE_ALT = '24/7 Mobile Tyre Fitting across Manchester & Greater Manchester — One Stop Mobile Tyres'
 
 export interface BuildMetadataOptions {
   title: string

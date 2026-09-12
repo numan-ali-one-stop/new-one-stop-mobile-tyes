@@ -5,9 +5,9 @@
  * everywhere else references it by @id plus a lightweight NAP block.
  */
 
-import { BUSINESS_NAME, EMAIL } from '@/lib/constants'
+import { BUSINESS_NAME } from '@/lib/constants'
 
-export const SITE_URL = 'https://roadheroes247.co.uk'
+export const SITE_URL = 'https://onestoptyres247.co.uk'
 export const BUSINESS_ID = `${SITE_URL}/#business`
 export const BUSINESS_PHONE = '+447759708646'
 export const BUSINESS_PHONE_DISPLAY = '+44 7759 708646'
@@ -136,7 +136,7 @@ export function localBusinessSchema() {
     name: BUSINESS_NAME,
     url: SITE_URL,
     telephone: BUSINESS_PHONE,
-    email: EMAIL,
+    email: 'info@onestoptyres247.co.uk',
     image: `${SITE_URL}/og-image.webp`,
     logo: `${SITE_URL}/icon.webp`,
     description:
