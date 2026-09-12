@@ -223,7 +223,7 @@ export default function OldhamPage() {
                   title: 'Jump Start',
                   desc: 'Dead battery on top of a flat tyre? We handle both. Our technicians carry jump-start equipment on every callout across Oldham, available around the clock.',
                   badge: '24/7 SERVICE',
-                  href: '/jump-start',
+                  href: '/car-battery-jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',

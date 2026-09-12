@@ -34,7 +34,7 @@ const serviceLinks = [
   },
   {
     label: 'Jump Start',
-    href: '/jump-start',
+    href: '/car-battery-jump-start',
     icon: 'bolt',
     desc: 'Dead battery? Back on the road in minutes',
   },

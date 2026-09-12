@@ -117,6 +117,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NXMX7FVM');`,
           }}
         />
+        {/* Google Tag Manager (Ads) */}
+        <Script
+          id="gtm-head-ads"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKQKPB8S');`,
+          }}
+        />
       </head>
       <body className="antialiased overflow-x-hidden pb-[60px] sm:pb-0">
         <JsonLd data={localBusinessSchema()} />
@@ -124,6 +136,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NXMX7FVM"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* Google Tag Manager (Ads) noscript */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NKQKPB8S"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}

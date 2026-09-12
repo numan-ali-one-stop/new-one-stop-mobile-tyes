@@ -222,7 +222,7 @@ export default function BoltonPage() {
                   title: 'Jump Start',
                   desc: 'Battery problems can leave you stranded just as quickly as tyre damage. Our mobile technicians also provide jump-start assistance throughout Bolton when your vehicle needs help getting started.',
                   badge: 'HELP WHEN YOUR CAR WILL NOT START',
-                  href: '/jump-start',
+                  href: '/car-battery-jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',

@@ -222,7 +222,7 @@ export default function RochdalePage() {
                   title: 'Jump Start',
                   desc: 'Tyres are not the only reason a car becomes stranded. Our technicians can also provide jump-start assistance across Rochdale when a flat battery prevents the vehicle from starting.',
                   badge: 'WHEN THE BATTERY STOPS THE JOURNEY',
-                  href: '/jump-start',
+                  href: '/car-battery-jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',

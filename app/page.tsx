@@ -433,7 +433,7 @@ export default function Home() {
                 title: 'Jump Start',
                 desc: "Flat battery as well as a flat tyre? We'll get your car started again in minutes.",
                 badge: '24/7 SERVICE',
-                href: '/jump-start',
+                href: '/car-battery-jump-start',
               },
               {
                 img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',

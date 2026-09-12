@@ -222,7 +222,7 @@ export default function CheethamHillPage() {
                   title: 'Jump Start',
                   desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Cheetham Hill.',
                   badge: '24/7 SERVICE',
-                  href: '/jump-start',
+                  href: '/car-battery-jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',

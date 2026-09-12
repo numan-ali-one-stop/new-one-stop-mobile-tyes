@@ -222,7 +222,7 @@ export default function BuryPage() {
                   title: 'Jump Start',
                   desc: 'A flat battery can leave you stuck just as easily as tyre damage. Our mobile technicians can provide jump-start assistance alongside our roadside tyre services across Bury.',
                   badge: 'AVAILABLE DAY OR NIGHT',
-                  href: '/jump-start',
+                  href: '/car-battery-jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',

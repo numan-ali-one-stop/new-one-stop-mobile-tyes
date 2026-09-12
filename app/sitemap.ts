@@ -8,7 +8,7 @@ const SERVICE_PAGES = [
   '/home-tyre-fitting',
   '/puncture-repair-Greater-manchester',
   '/roadside-assistance',
-  '/jump-start',
+  '/car-battery-jump-start',
   '/tpms-reset',
   '/locking-nut-removal',
   '/24-hour-emergency-tyre-fitting',

@@ -1,22 +1,22 @@
 import JsonLd from '@/components/JsonLd'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
-import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
-  title: 'Mobile Jump Start Service | 24/7 Battery Assistance',
+  title: 'Car Battery Jump Start Service | Greater Manchester',
   description:
-    'Professional mobile jump start service across Greater Manchester for cars, SUVs, vans and light commercial vehicles, available 24/7.',
-  path: '/jump-start',
+    "Need a car battery jump start in Greater Manchester? 24/7 jump start service for flat batteries & vehicles that won't start — call 07759 708 646",
+  path: '/car-battery-jump-start',
 })
 
 const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Home', item: SITE_URL },
-  { name: 'Jump Start', item: `${SITE_URL}/jump-start` },
+  { name: 'Jump Start', item: `${SITE_URL}/car-battery-jump-start` },
 ])
 
 const _serviceSchema = serviceSchema({
-  slug: 'jump-start',
+  slug: 'car-battery-jump-start',
   name: 'Jump Start Service',
   serviceType: 'Battery Jump Start',
   description:
@@ -25,94 +25,124 @@ const _serviceSchema = serviceSchema({
 
 const faqs = [
   {
-    q: 'Can you jump start a modern car safely?',
-    a: 'Yes, in many cases. Modern vehicles can contain sensitive electronic systems, so correct equipment and connection procedures are important. Our technicians use professional jump-start equipment and follow appropriate procedures for the vehicle.',
+    q: 'Can you jump start my car?',
+    a: 'Yes. We provide a professional **jump start service** for vehicles with a suitable flat or discharged battery.',
+  },
+  {
+    q: 'Do you provide car battery jump starts?',
+    a: 'Yes. Our **car battery jump starter** service is available for drivers whose vehicles would not start because of a battery issue.',
+  },
+  {
+    q: 'What is a battery jump start?',
+    a: 'A battery jump start uses suitable equipment to provide enough electrical power to start a vehicle when its battery does not have sufficient charge.',
+  },
+  {
+    q: 'Can you help with a flat battery?',
+    a: 'Yes. If your car has a **flat battery**, we can assess the situation and determine whether a jump start is suitable.',
+  },
+  {
+    q: 'Do you provide 24/7 jump start service?',
+    a: 'Yes. Our jump start assistance is available 24/7 for suitable battery-related emergencies.',
+  },
+  {
+    q: "How does a car battery jump starter work?",
+    a: 'A suitable jump starter provides temporary electrical power to help the vehicles battery start the engine.',
+  },
+  {
+    q: 'Can you jump start an automatic car?',
+    a: 'Yes. Automatic vehicles can generally be jump started when the battery is discharged, provided the vehicle and battery are suitable for the procedure.',
   },
   {
     q: 'What causes a car battery to go flat?',
-    a: 'Common causes include leaving electrical equipment switched on, cold weather, repeated short journeys, an ageing battery or leaving a vehicle unused for a long period. Repeated battery failure can also indicate a charging or electrical problem that needs further investigation.',
+    a: 'Common causes include leaving lights or electrical systems switched on, prolonged periods without driving and an ageing or faulty battery.',
   },
   {
-    q: 'Do you provide emergency jump start assistance?',
-    a: 'Yes. Our emergency jump start service is available when a flat or dead battery prevents your vehicle from starting, subject to technician availability.',
+    q: 'How long does a battery jump start take?',
+    a: 'The actual jump start is usually quick, but the total time depends on the vehicle, battery condition and circumstances at the location.',
   },
   {
-    q: 'Is your jump start service available 24 hours?',
-    a: 'Yes. We provide 24 hour jump start service assistance across Greater Manchester, including nights, weekends and bank holidays.',
+    q: 'Can you jump start my car at home?',
+    a: 'Yes, where the location is suitable and accessible. You can contact us with your location and battery problem.',
   },
   {
-    q: 'Can you jump start cars and vans?',
-    a: 'We provide car battery jump start assistance for many cars, SUVs, vans and light commercial vehicles. Tell us your vehicle registration when calling so we can check the appropriate assistance.',
+    q: "Can you provide a jump start at the roadside?",
+    a: 'Yes. We provide roadside **battery jump start** assistance across Greater Manchester.',
   },
   {
-    q: "What happens if my car still won't start after a jump start?",
-    a: 'A flat battery is not always the only reason an engine fails to start. If a professional jump-start attempt does not work, the vehicle may have another battery, starter, charging, electrical or mechanical issue that requires further diagnosis.',
+    q: 'Will a jump start fix my flat battery?',
+    a: 'A jump start can start the vehicle, but it does not necessarily repair a faulty or ageing battery. If the battery cannot hold charge, further action may be required.',
   },
   {
-    q: 'Why does my battery keep going flat?',
-    a: 'A battery that repeatedly loses charge could be ageing or unable to retain sufficient charge. Other possibilities include a charging-system problem or an electrical drain. A jump start may get the engine running but will not repair the underlying fault.',
+    q: 'Can you help if my car would not start?',
+    a: 'Yes. If you believe the problem is related to a flat or discharged battery, our jump start car service can assess the situation and provide suitable assistance.',
   },
   {
-    q: 'Can you check my battery after starting the vehicle?',
-    a: 'Yes. We can perform a basic battery condition check after the vehicle starts. If there are signs of a weak battery or another problem, further testing or replacement may be recommended.',
+    q: 'Do you provide jump start services across Greater Manchester?',
+    a: 'Yes. We provide battery assistance across Greater Manchester, including Manchester and surrounding areas.',
   },
   {
-    q: 'Can you replace the battery if it has failed?',
-    a: 'Battery replacement may be available depending on your vehicle and battery availability. Tell us your registration so the appropriate battery specification can be checked.',
-  },
-  {
-    q: 'What information should I provide when calling?',
-    a: 'Send your exact location and vehicle registration and explain what happens when you try to start the car. For example, tell us whether the engine turns slowly, you hear clicking, or there appears to be no electrical power.',
+    q: 'Can I drive immediately after a jump start?',
+    a: 'If the vehicle starts successfully, the appropriate next step depends on the battery and vehicle condition. If you are unsure, our technician can advise you based on the situation.',
   },
 ]
 
-const whyChooseUs = [
+const whyChooseCarBatteryJumpStart = [
   {
-    icon: '🚗',
-    title: 'Assistance at Your Location',
-    desc: 'Our mobile car jump start service can attend suitable locations across Greater Manchester, including residential areas, workplaces, car parks and roadside locations.',
+    icon: 'engineering',
+    title: 'Professional Assistance',
+    desc: 'Your vehicle and battery are assessed before the jump start.',
   },
   {
-    icon: '⚡',
-    title: 'Fast Response',
-    desc: 'When a dead battery leaves you unable to start your vehicle, we aim to arrange the nearest suitable technician as quickly as possible.',
+    icon: 'schedule',
+    title: '24/7 Battery Support',
+    desc: 'Assistance is available when unexpected battery problems occur.',
   },
   {
-    icon: '🔋',
-    title: 'Professional Jump-Start Equipment',
-    desc: 'Our technicians use professional equipment designed for vehicle jump-start assistance, with correct connection procedures particularly important on modern vehicles with sensitive electrical systems.',
+    icon: 'directions_car',
+    title: 'Convenient Service',
+    desc: "Get help at your location when your car won't start.",
   },
   {
-    icon: '✅',
-    title: 'Battery Condition Check',
-    desc: 'After the vehicle starts, we can check the battery condition for signs of weakness. A battery that repeatedly loses charge may need replacement or further investigation.',
+    icon: 'bolt',
+    title: 'Suitable Equipment',
+    desc: 'A professional battery jump starter is used to assist with starting the vehicle.',
+  },
+  {
+    icon: 'battery_alert',
+    title: 'Flat Battery Assistance',
+    desc: 'Practical support when a discharged battery leaves you stranded.',
+  },
+  {
+    icon: 'location_on',
+    title: 'Greater Manchester Coverage',
+    desc: 'Service available across Manchester and surrounding areas.',
   },
 ]
 
 const steps = [
   {
     n: '1',
-    title: 'Call or WhatsApp Us',
-    desc: 'Tell us your location, vehicle registration and what happens when you try to start the vehicle.',
+    title: 'Contact Us',
+    desc: 'Tell us your location and explain that your vehicle has a flat or discharged battery.',
   },
   {
     n: '2',
-    title: 'Share Your Location',
-    desc: 'Send your exact address or WhatsApp location pin so we can identify where assistance is required.',
+    title: 'We Assess the Situation',
+    desc: 'Our technician checks the vehicle and battery condition to determine whether a jump start is suitable.',
   },
   {
     n: '3',
-    title: 'Technician Attends',
-    desc: 'A technician arrives with professional jump-start equipment, checks the situation and connects the equipment correctly to your vehicle.',
+    title: 'Battery Jump Start',
+    desc: 'Suitable equipment is connected correctly to provide the required assistance to start your vehicle.',
   },
   {
     n: '4',
-    title: 'Vehicle Started & Battery Checked',
-    desc: 'Once the engine starts, we can check the battery condition and advise whether there are signs that the battery may need further attention or replacement.',
+    title: 'Get Back on the Road',
+    desc: 'Once the vehicle starts, we will provide basic guidance based on the situation and battery condition.',
   },
 ]
 
-const _faqSchema = faqSchema(faqs)
+const _faqSchema = faqSchema(faqs.map((faq) => ({ q: faq.q, a: faq.a.replace(/\*\*/g, '') })))
 
 export default function JumpStartPage() {
   return (
@@ -149,23 +179,18 @@ export default function JumpStartPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Mobile Jump Start Service – Fast Help for a Flat Battery
+              24/7 Car Battery Jump Start Service in Greater Manchester
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              Car won&apos;t start because of a flat battery? <strong>One Stop Mobile Tyres 24/7</strong> provides a professional <strong>mobile jump start service</strong> across Greater Manchester, bringing suitable jump-start equipment directly to your vehicle.
-            </p>
-            <p className="text-slate-400 text-base leading-relaxed mb-8">
-              Our technicians can assist with cars, SUVs, vans and many light commercial vehicles. Once the engine is running, we can check the battery condition and advise you if there are signs that further battery or charging-system attention may be needed.
+              Got a <strong>flat battery</strong> and unable to start your car? Our professional <strong>jump start service</strong> provides convenient roadside assistance across Greater Manchester, helping you get your vehicle started and back on the road.
             </p>
 
             <ul className="space-y-2 mb-8">
               {[
-                'Fast Mobile Car Jump Start',
-                '24/7 Flat Battery Assistance',
-                'Professional Jump-Start Equipment',
-                'Cars, SUVs & Vans Covered',
-                'Battery Condition Check',
+                'Professional Car Battery Jump Start',
+                '24/7 Battery Assistance',
+                'Flat Battery Support',
                 'Greater Manchester Coverage',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
@@ -223,29 +248,47 @@ export default function JumpStartPage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Professional Car Jump Start Service at Your Location
+              Professional Car Battery Jump Start Service Across Greater Manchester
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
-              A battery can lose enough charge to prevent your engine from starting after cold weather, short journeys, lights being left on, long periods without driving or simply because the battery is reaching the end of its useful life. Our <strong>car jump start service</strong> brings professional equipment to your vehicle so you don&apos;t have to rely on another motorist or attempt the job yourself. The technician assesses the situation, connects the equipment correctly and attempts to start the vehicle safely.
+              A flat or discharged car battery can leave you stranded at home, at work or on the roadside. Our car battery jump starter service provides practical assistance when your vehicle won&apos;t start because of a battery problem.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              Once the engine starts, we can check the battery condition and let you know if the problem appears likely to return.
+              One Stop Tyres 247 provides professional battery jump start assistance across Greater Manchester. Our technician assesses the battery and vehicle before carrying out a suitable jump start.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {whyChooseUs.map((item) => (
-                <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-xl p-4">
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <h3 className="font-bold text-[#0f172a] text-base mb-1">{item.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="tel:07759708646"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 07759 708 646
+              </a>
+              <a
+                href="https://wa.me/447759708646"
+                className="bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-8 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-base sm:text-lg shadow-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <svg className="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                WhatsApp Us
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 3. HOW IT WORKS ──────────────────────────────────────────── */}
+      {/* ── 3. WHY CHOOSE ────────────────────────────────────────────── */}
+      <WhyChooseGrid
+        heading="Why Choose Our Car Battery Jump Start Service?"
+        intro="Choosing the right car battery jump start service means getting fast, professional support when your vehicle won't start. Our team is available across Greater Manchester to help with unexpected battery problems."
+        items={whyChooseCarBatteryJumpStart}
+      />
+
+      {/* ── 4. HOW IT WORKS ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
         <div
           className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
@@ -263,7 +306,7 @@ export default function JumpStartPage() {
               className="text-2xl sm:text-[32px] font-bold"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              How Our Mobile Jump Start Service Works
+              How Our Jump Start Service Works
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
@@ -295,7 +338,59 @@ export default function JumpStartPage() {
         </div>
       </section>
 
-      {/* ── 4. SECOND IMAGE STRIP ────────────────────────────────────── */}
+      {/* ── 5. EMERGENCY BATTERY JUMP START ──────────────────────────── */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="w-14 h-14 bg-[#b70011]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <span className="material-symbols-outlined text-[#b70011] text-3xl">battery_alert</span>
+          </div>
+          <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+            Emergency Battery Jump Start
+          </span>
+          <h2
+            className="text-2xl sm:text-[32px] font-bold text-[#0f172a] mb-6 leading-tight"
+            style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+          >
+            Emergency Battery Jump Start When Your Car Won&apos;t Start
+          </h2>
+          <p className="text-slate-600 text-base leading-relaxed mb-4">
+            A flat battery can happen unexpectedly, whether you&apos;ve left your lights on, the vehicle has been unused for some time, or the battery has lost its charge.
+          </p>
+          <p className="text-slate-600 text-base leading-relaxed mb-8">
+            Whether you&apos;re at home, at work or stuck on the roadside, our technician can attend with professional jump start equipment to get you moving again — day or night, across Greater Manchester.
+          </p>
+
+          <div className="flex items-start gap-4 text-left bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm mb-8">
+            <span className="material-symbols-outlined text-[#FF4444] text-2xl flex-shrink-0 mt-0.5">info</span>
+            <p className="text-slate-600 text-base leading-relaxed">
+              Have your exact location and vehicle registration ready when you contact us — it helps us dispatch the nearest available technician as quickly as possible.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="tel:07759708646"
+              className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/20 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+              Call: 07759 708 646
+            </a>
+            <a
+              href="https://wa.me/447759708646"
+              className="bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-8 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-base sm:text-lg shadow-lg"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              <svg className="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. SECOND IMAGE STRIP ────────────────────────────────────── */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
           <div className="w-full lg:w-1/2">
@@ -318,10 +413,16 @@ export default function JumpStartPage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Dead Battery? Get 24-Hour Jump Start Assistance
+              Reliable Car Battery Jump Starter Assistance
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-6">
-              Battery problems do not always happen during normal garage hours. Your car might refuse to start before work, after an evening journey or when you return to a vehicle that has been parked for several days. Our <strong>24 hour jump start service</strong> is available across Greater Manchester for drivers who need help getting their vehicle started. Whether you need <strong>roadside jump start</strong> assistance or your vehicle simply will not start where it is parked, send us your location and vehicle details so we can arrange help. A successful jump start gets the engine running, but it does not necessarily fix the reason the battery went flat. If the problem happens repeatedly, the battery, charging system or vehicle electrics may require further diagnosis.
+              Our <strong>automatic car battery jump starter</strong> and <strong>auto battery jump starter</strong> service is designed to help drivers dealing with a vehicle that won&apos;t start because of a flat or discharged battery.
+            </p>
+            <p className="text-slate-600 text-base leading-relaxed mb-6">
+             A jump start can provide enough power to start the engine when the battery has insufficient charge. However, not every battery problem can be resolved with a jump start.
+            </p>
+            <p className="text-slate-600 text-base leading-relaxed mb-6">
+              Our technician checks the situation first and determines whether a <strong>jump start car service</strong> is appropriate. If the battery appears damaged, faulty or unable to hold charge, we&apos;ll explain what further action may be required.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -347,7 +448,7 @@ export default function JumpStartPage() {
         </div>
       </section>
 
-      {/* ── 5. FAQ ───────────────────────────────────────────────────── */}
+      {/* ── 7. FAQ ───────────────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
@@ -373,23 +474,27 @@ export default function JumpStartPage() {
                     expand_more
                   </span>
                 </summary>
-                <p className="mt-3 sm:mt-4 text-slate-600 leading-relaxed text-base">{faq.a}</p>
+                <p className="mt-3 sm:mt-4 text-slate-600 leading-relaxed text-base">
+                  {faq.a.split(/\*\*(.+?)\*\*/g).map((part, i) =>
+                    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+                  )}
+                </p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 6. FINAL CTA ─────────────────────────────────────────────── */}
+      {/* ── 8. FINAL CTA ─────────────────────────────────────────────── */}
       <section className="py-14 sm:py-20 px-4 sm:px-6 bg-[#0f172a] text-white text-center">
         <h2
           className="text-2xl sm:text-3xl font-bold mb-3"
           style={{ fontFamily: 'var(--font-work-sans)' }}
         >
-          Need a Jump Start Right Now?
+          Need a Car Battery Jump Start?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          If a flat battery has left your vehicle unable to start, call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location and vehicle registration. We&apos;ll arrange <strong>flat battery assistance</strong> and send a technician with professional jump-start equipment to help get your vehicle running again. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a>
+          Don&apos;t stay stranded with a flat battery. Get professional <strong>jump start service</strong> across Greater Manchester and receive practical assistance when your car won&apos;t start.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
