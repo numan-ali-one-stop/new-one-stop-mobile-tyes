@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { ADDRESS, BUSINESS_NAME, MAPS_URL } from '@/lib/constants'
+import { ADDRESS, BUSINESS_NAME, EMAIL, MAPS_URL } from '@/lib/constants'
 
 export default function Footer() {
   const pathname = usePathname()
@@ -12,11 +12,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16 mb-10 sm:mb-16 lg:mb-20">
         {/* Brand */}
         <div className="space-y-6 sm:space-y-8 sm:col-span-2 lg:col-span-1">
-          <a href="#" aria-label="One Stop Mobile Tyres 24/7 - Home" className="flex justify-center sm:justify-start">
+          <a href="#" aria-label="Road Heroes 24/7 - Home" className="flex justify-center sm:justify-start">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One-Stop%20Loog-airanko-Qpv1QvladNLpRhg8X3Hs6SzyydzFMq.webp"
-              alt="One Stop Mobile Tyres 24/7"
+              alt="Road Heroes 24/7"
               className="h-16 sm:h-20 w-auto"
               width={200}
               height={80}
@@ -37,8 +37,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-3">
               <span className="material-symbols-outlined text-[#FF4444] text-lg">mail</span>
-              <a href="mailto:info@onestoptyres247.co.uk" className="hover:text-[#FF4444] transition-colors break-all text-xs sm:text-sm">
-                info@onestoptyres247.co.uk
+              <a href={`mailto:${EMAIL}`} className="hover:text-[#FF4444] transition-colors break-all text-xs sm:text-sm">
+                {EMAIL}
               </a>
             </li>
             <li className="flex items-start justify-center sm:justify-start gap-3">
@@ -137,7 +137,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto pt-6 sm:pt-8 border-t border-white/5 flex flex-col gap-4">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-slate-500 text-[11px] sm:text-xs text-center sm:text-left">
-            © 2026 One Stop Mobile Tyres 24/7. High-Urgency Emergency Roadside Assistance UK. All Rights
+            © 2026 {BUSINESS_NAME}. High-Urgency Emergency Roadside Assistance UK. All Rights
             Reserved.
           </p>
           {isContactPage && (

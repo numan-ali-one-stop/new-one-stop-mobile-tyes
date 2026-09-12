@@ -2,15 +2,16 @@
 
 const HERO = {
   image: '/images/home-tyre-fitting.webp',
-  badge: 'Same Day Mobile Tyre Replacement',
-  heading: '24/7 Mobile Tyre Service & Repair in Greater Manchester',
-  body: 'Need tyre help fast? Our mobile tyre service comes directly to you across Greater Manchester. We provide tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or a safe roadside location, 24 hours a day, 7 days a week.',
-  listLabel: 'Benefits',
+  badge: '24/7 Mobile Tyre Assistance',
+  heading: 'Mobile Tyre Service Manchester | Road Heroes 24/7',
+  body: 'Reliable mobile tyre fitting, repair and replacement across Manchester. We bring professional tyre assistance to your home, workplace or a suitable roadside location. Road Heroes 24/7 makes tyre fitting simple, convenient and accessible when you need it.',
+  listLabel: 'Our Services',
   items: [
-    '24/7 emergency tyre service',
-    'Fast mobile tyre fitting',
-    'Tyre repair and replacement',
-    'Home, work & roadside service',
+    'Mobile Tyre Service Manchester',
+    'Mobile Tyre Fitting Manchester',
+    'Emergency Mobile Tyre Fitting Manchester',
+    'Mobile Tyre Replacement Manchester',
+    '24 Hour Mobile Tyre Service Manchester',
   ],
 }
 
@@ -63,12 +64,15 @@ export default function HeroSlider() {
 
             {/* Heading */}
             <h1
-              className="hero-h1 text-4xl sm:text-5xl lg:text-6xl xl:text-[68px] text-white font-black leading-[1.05] mb-5"
+              className="hero-h1 text-white font-black leading-[1.05] mb-5"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.03em' }}
             >
-              {HERO.heading.split('\n').map((line, i) => (
-                <span key={i} className="block">{line}</span>
-              ))}
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-[64px]">
+                Mobile Tyre Service Manchester
+              </span>
+              <span className="block text-xl sm:text-2xl lg:text-3xl text-[#FF4444] mt-2 sm:mt-3">
+                | Road Heroes 24/7
+              </span>
             </h1>
 
             {/* Body */}
@@ -114,18 +118,19 @@ export default function HeroSlider() {
             </a>
 
             {/* CTAs */}
-            <div className="hero-ctas flex flex-col sm:flex-row gap-3">
+            <div className="hero-ctas flex flex-col md:flex-row gap-3">
               <a
                 href="tel:07759708646"
-                className="bg-[#FF4444] hover:bg-red-700 text-white font-black px-7 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-base shadow-2xl shadow-red-900/40 hover:scale-105"
+                className="w-full md:w-auto bg-[#FF4444] hover:bg-red-700 text-white font-black px-7 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-sm sm:text-base shadow-2xl shadow-red-900/40 hover:scale-105 text-center"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                CALL NOW
+                <span className="material-symbols-outlined text-xl shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span className="sm:hidden">Call Now</span>
+                <span className="hidden sm:inline">Get Mobile Tyre Assistance Today</span>
               </a>
               <a
                 href="https://wa.me/447759708646"
-                className="bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-7 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-base shadow-lg shadow-green-900/30 hover:scale-105"
+                className="w-full md:w-auto bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-7 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-sm sm:text-base shadow-lg shadow-green-900/30 hover:scale-105"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 {WA_SVG}

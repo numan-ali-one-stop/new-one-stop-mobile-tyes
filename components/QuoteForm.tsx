@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { BUSINESS_NAME } from '@/lib/constants'
 
 export default function QuoteForm() {
   const [name, setName] = useState('')
@@ -13,7 +14,7 @@ export default function QuoteForm() {
     e.preventDefault()
 
     const text =
-      `*New Quote Request — One Stop Mobile Tyres 24/7*%0A` +
+      `*New Quote Request — ${BUSINESS_NAME}*%0A` +
       `%0A*Name:* ${encodeURIComponent(name)}` +
       `%0A*Phone:* ${encodeURIComponent(phone)}` +
       `%0A*Vehicle Reg:* ${encodeURIComponent(reg)}` +

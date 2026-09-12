@@ -181,11 +181,11 @@ export default function Header() {
                 phone_in_talk
               </span>
             </a>
-            <a href="/" className="hidden lg:block shrink-0" aria-label="One Stop Mobile Tyres 24/7 - Home">
+            <a href="/" className="hidden lg:block shrink-0" aria-label="Road Heroes 24/7 - Home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One-Stop%20Loog-airanko-Qpv1QvladNLpRhg8X3Hs6SzyydzFMq.webp"
-                alt="One Stop Mobile Tyres 24/7"
+                alt="Road Heroes 24/7"
                 className="h-16 w-auto"
                 width={200}
                 height={64}
@@ -200,12 +200,12 @@ export default function Header() {
           <a
             href="/"
             className="lg:hidden absolute left-1/2 -translate-x-1/2 shrink-0"
-            aria-label="One Stop Mobile Tyres 24/7 - Home"
+            aria-label="Road Heroes 24/7 - Home"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One-Stop%20Loog-airanko-Qpv1QvladNLpRhg8X3Hs6SzyydzFMq.webp"
-              alt="One Stop Mobile Tyres 24/7"
+              alt="Road Heroes 24/7"
               className="h-14 w-auto"
               width={200}
               height={56}
@@ -565,7 +565,7 @@ export default function Header() {
             <div className="flex items-center justify-between mb-5">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-0.5">Navigation</p>
-                <p className="text-white font-bold text-base leading-tight">One Stop Mobile Tyres</p>
+                <p className="text-white font-bold text-base leading-tight">Road Heroes 24/7</p>
               </div>
               <button
                 onClick={() => setMobileOpen(false)}
@@ -824,14 +824,14 @@ export default function Header() {
 
           {/* Drawer Footer */}
           <div className="shrink-0 border-t border-slate-100 px-5 py-4 space-y-3">
-            <a href="mailto:info@onestoptyres247.co.uk" className="flex items-center gap-3 group">
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 group">
               <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-[16px] text-slate-500">mail</span>
               </div>
               <div className="min-w-0">
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Email</p>
                 <p className="text-xs font-medium text-slate-700 truncate group-hover:text-[#b70011] transition-colors">
-                  info@onestoptyres247.co.uk
+                  {EMAIL}
                 </p>
               </div>
             </a>

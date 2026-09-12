@@ -35,8 +35,8 @@ const nextConfig = {
       // www → non-www (permanent 301)
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'www.onestoptyres247.co.uk' }],
-        destination: 'https://onestoptyres247.co.uk/:path*',
+        has: [{ type: 'host', value: 'www.roadheroes247.co.uk' }],
+        destination: 'https://roadheroes247.co.uk/:path*',
         permanent: true,
       },
       // Urmston & Stretford split into two dedicated town pages
@@ -118,7 +118,7 @@ const nextConfig = {
       {
         source: '/api/(.*)',
         headers: [
-          { key: 'Access-Control-Allow-Origin',  value: 'https://onestoptyres247.co.uk' },
+          { key: 'Access-Control-Allow-Origin',  value: 'https://roadheroes247.co.uk' },
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type' },
         ],
