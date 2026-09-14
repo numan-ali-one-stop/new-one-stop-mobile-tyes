@@ -53,7 +53,7 @@ export default function AboutPage() {
             >
               Reliable 24/7 mobile tyre fitting and roadside assistance service across Greater Manchester.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <a
                 href="tel:07759708646"
                 className="flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 rounded-lg uppercase text-white hover:opacity-90 active:scale-95 transition-all text-base sm:text-xl font-bold"
@@ -65,6 +65,18 @@ export default function AboutPage() {
               >
                 <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 rounded-lg uppercase text-white hover:opacity-90 active:scale-95 transition-all text-base sm:text-xl font-bold"
+                style={{
+                  background: '#dc2626',
+                  fontFamily: 'Work Sans, sans-serif',
+                  letterSpacing: '0.02em',
+                }}
+              >
+                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -296,22 +308,40 @@ export default function AboutPage() {
               Our team is available 24/7 to assist you anywhere across Greater Manchester. Professional help is just
               a phone call away.
             </p>
-            <a
-              href="tel:07759708646"
-              className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-white text-[#b70011] px-6 sm:px-12 py-4 sm:py-5 rounded-lg uppercase shadow-xl hover:bg-slate-100 active:scale-95 transition-all text-sm sm:text-xl font-bold"
-              style={{
-                fontFamily: 'Work Sans, sans-serif',
-                letterSpacing: '0.02em',
-              }}
-            >
-              <span
-                className="material-symbols-outlined text-xl sm:text-2xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+              <a
+                href="tel:07759708646"
+                className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-white text-[#b70011] px-6 sm:px-12 py-4 sm:py-5 rounded-lg uppercase shadow-xl hover:bg-slate-100 active:scale-95 transition-all text-sm sm:text-xl font-bold"
+                style={{
+                  fontFamily: 'Work Sans, sans-serif',
+                  letterSpacing: '0.02em',
+                }}
               >
-                phone_enabled
-              </span>
-              07759 708 646
-            </a>
+                <span
+                  className="material-symbols-outlined text-xl sm:text-2xl"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  phone_enabled
+                </span>
+                07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-white text-[#b70011] px-6 sm:px-12 py-4 sm:py-5 rounded-lg uppercase shadow-xl hover:bg-slate-100 active:scale-95 transition-all text-sm sm:text-xl font-bold"
+                style={{
+                  fontFamily: 'Work Sans, sans-serif',
+                  letterSpacing: '0.02em',
+                }}
+              >
+                <span
+                  className="material-symbols-outlined text-xl sm:text-2xl"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  phone_enabled
+                </span>
+                0161 399 5851
+              </a>
+            </div>
           </div>
         </section>
 

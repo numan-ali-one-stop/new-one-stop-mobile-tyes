@@ -311,7 +311,7 @@ export default function EmergencyTyreFitting24HourPage() {
             <p className="text-slate-600 text-base leading-relaxed mb-6">
               Tyre problems do not follow normal opening hours. A blowout after a late shift, a flat tyre before an early journey or unexpected damage during the weekend can all leave you unable to continue. Our <strong>24/7 tyre fitting</strong> service provides urgent tyre assistance across Greater Manchester when you need professional help outside normal garage hours. Send us your location, vehicle registration and tyre size and we&apos;ll check the appropriate tyre and arrange an available technician.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -319,6 +319,14 @@ export default function EmergencyTyreFitting24HourPage() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -377,9 +385,9 @@ export default function EmergencyTyreFitting24HourPage() {
           Need an Emergency Tyre Fitter Right Now?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          If a flat tyre, blowout or serious tyre damage has stopped your journey, avoid continuing if the vehicle is unsafe. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and tyre size. We&apos;ll check a suitable replacement and arrange the appropriate <strong>emergency tyre fitting</strong> response. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — <strong>07759 708 646</strong>
+          If a flat tyre, blowout or serious tyre damage has stopped your journey, avoid continuing if the vehicle is unsafe. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and tyre size. We&apos;ll check a suitable replacement and arrange the appropriate <strong>emergency tyre fitting</strong> response. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — <strong>07759 708 646 / 0161 399 5851</strong>
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a
             href="tel:07759708646"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
@@ -387,6 +395,14 @@ export default function EmergencyTyreFitting24HourPage() {
           >
             <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 07759 708 646
+          </a>
+          <a
+            href="tel:01613995851"
+            className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            Call: 0161 399 5851
           </a>
           <a
             href="https://wa.me/447759708646"

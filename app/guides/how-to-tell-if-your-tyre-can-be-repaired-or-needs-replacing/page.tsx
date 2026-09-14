@@ -134,7 +134,7 @@ export default function TyreRepairOrReplaceGuide() {
               If you&apos;re not confident checking it yourself, our technicians can inspect
               your tyre at your home, work or roadside location and give you an honest answer
               — repair where it&apos;s safe, replace where it isn&apos;t. Call{' '}
-              <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' '}
+              <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' / '}<a href="tel:01613995851" className="text-[#b70011] font-semibold hover:underline">0161 399 5851</a>{' '}
               any time, day or night.
             </p>
           </div>
@@ -332,7 +332,7 @@ export default function TyreRepairOrReplaceGuide() {
               we&apos;ll tell you honestly whether it&apos;s a repair or a replacement job,
               and get a technician to you either way.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
@@ -340,6 +340,14 @@ export default function TyreRepairOrReplaceGuide() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"

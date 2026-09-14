@@ -3,6 +3,8 @@
 export const BUSINESS_NAME = 'One Stop Mobile Tyres 24/7'
 export const PHONE = '07759 708 646'
 export const PHONE_TEL = '+447759708646'
+export const PHONE_2 = '0161 399 5851'
+export const PHONE_2_TEL = '01613995851'
 export const EMAIL = 'info@onestoptyres247.co.uk'
 export const ADDRESS = 'Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom'
 /** Google Business Profile pin for the address above — reused everywhere the address is clickable. */

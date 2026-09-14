@@ -197,15 +197,26 @@ export default function ServiceAreaPage() {
             We cover all 10 Greater Manchester boroughs and 8 major motorways — wherever you
             are, we&apos;ll come to you, 24 hours a day, 7 days a week.
           </p>
-          <a
-            href="tel:07759708646"
-            className="inline-flex items-center gap-2 bg-primary text-white font-call-to-action text-base lg:text-call-to-action px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg uppercase"
-          >
-            <span className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-              phone_in_talk
-            </span>
-            07759 708 646
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <a
+              href="tel:07759708646"
+              className="inline-flex items-center gap-2 bg-primary text-white font-call-to-action text-base lg:text-call-to-action px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg uppercase"
+            >
+              <span className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                phone_in_talk
+              </span>
+              07759 708 646
+            </a>
+            <a
+              href="tel:01613995851"
+              className="inline-flex items-center gap-2 bg-primary text-white font-call-to-action text-base lg:text-call-to-action px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg uppercase"
+            >
+              <span className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                phone_in_talk
+              </span>
+              0161 399 5851
+            </a>
+          </div>
         </div>
       </section>
 
@@ -365,7 +376,7 @@ export default function ServiceAreaPage() {
                 Our dispatch team can confirm coverage for your exact postcode and give you an
                 estimated arrival time in under 60 seconds.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                 <a
                   href="tel:07759708646"
                   className="flex items-center justify-center gap-2 bg-primary text-white font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-primary/90 transition-all shadow-md"
@@ -374,6 +385,15 @@ export default function ServiceAreaPage() {
                     phone_in_talk
                   </span>
                   Call 07759 708 646
+                </a>
+                <a
+                  href="tel:01613995851"
+                  className="flex items-center justify-center gap-2 bg-primary text-white font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-primary/90 transition-all shadow-md"
+                >
+                  <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
+                    phone_in_talk
+                  </span>
+                  Call 0161 399 5851
                 </a>
                 <a
                   href="mailto:info@onestoptyres247.co.uk"
@@ -406,17 +426,27 @@ export default function ServiceAreaPage() {
               <p className="font-body-lg text-base lg:text-body-lg text-white/90">
                 Call immediately — our team is standing by 24/7 across Greater Manchester.
               </p>
-              <div className="mt-4 sm:mt-5 flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
+              <div className="mt-4 sm:mt-5 flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4">
                 <span className="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1">07759 708 646</span>
+                <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1 opacity-60">/</span>
+                <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1">0161 399 5851</span>
               </div>
             </div>
-            <a
-              className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[180px] lg:min-w-[200px] shrink-0"
-              href="tel:07759708646"
-            >
-              07759 708 646
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
+              <a
+                className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[180px] lg:min-w-[200px] shrink-0"
+                href="tel:07759708646"
+              >
+                07759 708 646
+              </a>
+              <a
+                className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[180px] lg:min-w-[200px] shrink-0"
+                href="tel:01613995851"
+              >
+                0161 399 5851
+              </a>
+            </div>
           </div>
         </div>
       </section>

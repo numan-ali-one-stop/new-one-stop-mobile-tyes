@@ -257,7 +257,7 @@ export default function JumpStartPage() {
               One Stop Tyres 247 provides professional battery jump start assistance across Greater Manchester. Our technician assesses the battery and vehicle before carrying out a suitable jump start.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -265,6 +265,14 @@ export default function JumpStartPage() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -367,7 +375,7 @@ export default function JumpStartPage() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
             <a
               href="tel:07759708646"
               className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/20 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -375,6 +383,14 @@ export default function JumpStartPage() {
             >
               <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
               Call: 07759 708 646
+            </a>
+            <a
+              href="tel:01613995851"
+              className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/20 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+              Call: 0161 399 5851
             </a>
             <a
               href="https://wa.me/447759708646"
@@ -424,7 +440,7 @@ export default function JumpStartPage() {
             <p className="text-slate-600 text-base leading-relaxed mb-6">
               Our technician checks the situation first and determines whether a <strong>jump start car service</strong> is appropriate. If the battery appears damaged, faulty or unable to hold charge, we&apos;ll explain what further action may be required.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -432,6 +448,14 @@ export default function JumpStartPage() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -496,7 +520,7 @@ export default function JumpStartPage() {
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
           Don&apos;t stay stranded with a flat battery. Get professional <strong>jump start service</strong> across Greater Manchester and receive practical assistance when your car won&apos;t start.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a
             href="tel:07759708646"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
@@ -504,6 +528,14 @@ export default function JumpStartPage() {
           >
             <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 07759 708 646
+          </a>
+          <a
+            href="tel:01613995851"
+            className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            Call: 0161 399 5851
           </a>
           <a
             href="https://wa.me/447759708646"

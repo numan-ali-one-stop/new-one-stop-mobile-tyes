@@ -242,15 +242,23 @@ export default function ServicesPage() {
               <p className="font-body-lg text-base lg:text-body-lg text-white/90">Speak directly to a technician for an instant quote and arrival time.</p>
               <div className="mt-4 sm:mt-6 flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
                 <span className="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl">call</span>
-                <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1">07759 708 646</span>
+                <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1">07759 708 646 / 0161 399 5851</span>
               </div>
             </div>
-            <a
-              className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 lg:px-xl py-3 sm:py-4 lg:py-md rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[200px] lg:min-w-[240px]"
-              href="tel:07759708646"
-            >
-              07759 708 646
-            </a>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
+              <a
+                className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 lg:px-xl py-3 sm:py-4 lg:py-md rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[200px] lg:min-w-[240px]"
+                href="tel:07759708646"
+              >
+                07759 708 646
+              </a>
+              <a
+                className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 lg:px-xl py-3 sm:py-4 lg:py-md rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[200px] lg:min-w-[240px]"
+                href="tel:01613995851"
+              >
+                0161 399 5851
+              </a>
+            </div>
           </div>
         </div>
       </section>

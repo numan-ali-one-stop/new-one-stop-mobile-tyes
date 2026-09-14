@@ -161,7 +161,7 @@ export default function TyreFittingNearMePage() {
               ))}
             </ul>
 
-            <div className="hidden sm:flex flex-row gap-3">
+            <div className="hidden sm:flex flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -169,6 +169,14 @@ export default function TyreFittingNearMePage() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -309,7 +317,7 @@ export default function TyreFittingNearMePage() {
             <p className="text-slate-600 text-base leading-relaxed mb-6">
               A tyre does not always fail near a garage. It may be worn, damaged or completely flat when you are at work, parked locally or already on a journey. Our <strong>mobile tyre replacement near me</strong> service brings the replacement tyre to your location, helping you avoid driving farther on an unsafe tyre. We supply premium, mid-range and budget tyre options for many cars, SUVs and vans. Send us your registration or tyre size and location so we can check the right option before dispatch.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -317,6 +325,14 @@ export default function TyreFittingNearMePage() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -423,9 +439,9 @@ export default function TyreFittingNearMePage() {
           Looking for Tyre Fitting Near You?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Send your location, vehicle registration and tyre size to <strong>One Stop Mobile Tyres 24/7</strong> and we&apos;ll check the nearest available technician and suitable tyre options. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — <strong>07759 708 646</strong>
+          Send your location, vehicle registration and tyre size to <strong>One Stop Mobile Tyres 24/7</strong> and we&apos;ll check the nearest available technician and suitable tyre options. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — <strong>07759 708 646 / 0161 399 5851</strong>
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a
             href="tel:07759708646"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
@@ -433,6 +449,14 @@ export default function TyreFittingNearMePage() {
           >
             <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 07759 708 646
+          </a>
+          <a
+            href="tel:01613995851"
+            className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            Call: 0161 399 5851
           </a>
           <a
             href="https://wa.me/447759708646"

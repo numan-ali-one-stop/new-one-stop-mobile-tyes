@@ -39,14 +39,24 @@ export default function NotFound() {
             Check Our Coverage Area
           </a>
         </div>
-        <a
-          href="tel:07759708646"
-          className="inline-flex items-center gap-2.5 bg-[#FF4444] hover:bg-red-700 text-[#121212] hover:text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
-          style={{ fontFamily: 'var(--font-work-sans)' }}
-        >
-          <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-          Emergency? Call 07759 708 646
-        </a>
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
+          <a
+            href="tel:07759708646"
+            className="inline-flex items-center gap-2.5 bg-[#FF4444] hover:bg-red-700 text-[#121212] hover:text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            Emergency? Call 07759 708 646
+          </a>
+          <a
+            href="tel:01613995851"
+            className="inline-flex items-center gap-2.5 bg-[#FF4444] hover:bg-red-700 text-[#121212] hover:text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            Emergency? Call 0161 399 5851
+          </a>
+        </div>
       </div>
     </section>
   )

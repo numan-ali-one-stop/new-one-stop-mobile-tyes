@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { BOROUGHS } from '@/lib/locations'
-import { EMAIL, PHONE, PHONE_TEL, MAPS_URL } from '@/lib/constants'
+import { EMAIL, PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL, MAPS_URL } from '@/lib/constants'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -158,10 +158,17 @@ export default function Header() {
               Greater Manchester
             </a>
           </div>
-          <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-1.5 font-bold text-red-400 hover:text-red-300 transition-colors">
-            <span className="material-symbols-outlined text-sm">call</span>
-            {PHONE}
-          </a>
+          <div className="flex items-center gap-3">
+            <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-1.5 font-bold text-red-400 hover:text-red-300 transition-colors">
+              <span className="material-symbols-outlined text-sm">call</span>
+              {PHONE}
+            </a>
+            <span className="text-white/20">|</span>
+            <a href={`tel:${PHONE_2_TEL}`} className="flex items-center gap-1.5 font-bold text-red-400 hover:text-red-300 transition-colors">
+              <span className="material-symbols-outlined text-sm">call</span>
+              {PHONE_2}
+            </a>
+          </div>
         </div>
       </div>
 
@@ -170,10 +177,20 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 lg:h-20 relative flex items-center justify-between gap-4 lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-8">
 
           {/* LEFT — Mobile call button | Desktop logo */}
-          <div className="flex items-center lg:justify-self-start">
+          <div className="flex items-center gap-1.5 lg:justify-self-start">
             <a
-              href="tel:07759708646"
-              aria-label="Call 07759 708 646"
+              href={`tel:${PHONE_TEL}`}
+              aria-label={`Call ${PHONE}`}
+              className="lg:hidden flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-3 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                phone_in_talk
+              </span>
+            </a>
+            <a
+              href={`tel:${PHONE_2_TEL}`}
+              aria-label={`Call ${PHONE_2}`}
               className="lg:hidden flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-3 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
@@ -315,7 +332,7 @@ export default function Header() {
                   </div>
 
                   {/* Footer bar */}
-                  <div className="flex items-center justify-between gap-4 px-5 py-3 bg-slate-50 border-t border-slate-100">
+                  <div className="flex items-center justify-between flex-wrap gap-y-2 gap-x-4 px-5 py-3 bg-slate-50 border-t border-slate-100">
                     <div className="flex items-center gap-2 min-w-0">
                       <span className="material-symbols-outlined text-[18px] text-[#b70011] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                         bolt
@@ -324,15 +341,26 @@ export default function Header() {
                         <span className="font-bold text-slate-800">20–30 min response</span> across Greater Manchester
                       </p>
                     </div>
-                    <a
-                      href="tel:07759708646"
-                      className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap shrink-0"
-                    >
-                      <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                        phone_in_talk
-                      </span>
-                      07759 708 646
-                    </a>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <a
+                        href={`tel:${PHONE_TEL}`}
+                        className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
+                      >
+                        <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          phone_in_talk
+                        </span>
+                        {PHONE}
+                      </a>
+                      <a
+                        href={`tel:${PHONE_2_TEL}`}
+                        className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
+                      >
+                        <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          phone_in_talk
+                        </span>
+                        {PHONE_2}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -518,15 +546,35 @@ export default function Header() {
           {/* RIGHT — Mobile: Hamburger | Desktop: Call button */}
           <div className="flex items-center gap-2 lg:justify-self-end">
             <a
-              href="tel:07759708646"
-              aria-label="Call 07759 708 646"
+              href={`tel:${PHONE_TEL}`}
+              aria-label={`Call ${PHONE}`}
               className="hidden lg:flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
               <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
-              07759 708 646
+              {PHONE}
+            </a>
+            <a
+              href={`tel:${PHONE_2_TEL}`}
+              aria-label={`Call ${PHONE_2}`}
+              className="hidden lg:flex xl:hidden items-center justify-center bg-[#b70011] hover:bg-red-700 text-white w-9 h-9 rounded-lg transition-all active:scale-95 shadow-md shadow-red-200"
+            >
+              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                phone_in_talk
+              </span>
+            </a>
+            <a
+              href={`tel:${PHONE_2_TEL}`}
+              aria-label={`Call ${PHONE_2}`}
+              className="hidden xl:flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                phone_in_talk
+              </span>
+              {PHONE_2}
             </a>
 
             {/* Hamburger — mobile only */}
@@ -575,21 +623,38 @@ export default function Header() {
                 <span className="material-symbols-outlined text-white text-[20px]">close</span>
               </button>
             </div>
-            <a
-              href="tel:07759708646"
-              className="flex items-center gap-3 bg-[#b70011] hover:bg-red-700 transition-colors rounded-xl px-4 py-3 active:scale-[0.98]"
-            >
-              <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  phone_in_talk
-                </span>
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-white/70 text-[10px] font-semibold uppercase tracking-wider">Emergency Call</p>
-                <p className="text-white font-bold text-base">07759 708 646</p>
-              </div>
-              <span className="material-symbols-outlined text-white/50 text-[18px]">arrow_forward</span>
-            </a>
+            <div className="space-y-2">
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="flex items-center gap-3 bg-[#b70011] hover:bg-red-700 transition-colors rounded-xl px-4 py-3 active:scale-[0.98]"
+              >
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                    phone_in_talk
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-white/70 text-[10px] font-semibold uppercase tracking-wider">Emergency Call</p>
+                  <p className="text-white font-bold text-base">{PHONE}</p>
+                </div>
+                <span className="material-symbols-outlined text-white/50 text-[18px]">arrow_forward</span>
+              </a>
+              <a
+                href={`tel:${PHONE_2_TEL}`}
+                className="flex items-center gap-3 bg-[#b70011] hover:bg-red-700 transition-colors rounded-xl px-4 py-3 active:scale-[0.98]"
+              >
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                    phone_in_talk
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-white/70 text-[10px] font-semibold uppercase tracking-wider">Emergency Call</p>
+                  <p className="text-white font-bold text-base">{PHONE_2}</p>
+                </div>
+                <span className="material-symbols-outlined text-white/50 text-[18px]">arrow_forward</span>
+              </a>
+            </div>
           </div>
 
           {/* Scrollable Nav */}

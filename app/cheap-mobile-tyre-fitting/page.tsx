@@ -157,7 +157,7 @@ export default function CheapMobileTyreFittingPage() {
               ))}
             </ul>
 
-            <div className="hidden sm:flex flex-row gap-3">
+            <div className="hidden sm:flex flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -165,6 +165,14 @@ export default function CheapMobileTyreFittingPage() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -305,7 +313,7 @@ export default function CheapMobileTyreFittingPage() {
             <p className="text-slate-600 text-base leading-relaxed mb-6">
               Our <strong>budget mobile tyre fitting</strong> service combines competitive tyre prices with the convenience of professional fitting at your location. You can compare different tyre options without travelling between garages looking for a better price. Whether you need a single replacement tyre or several new tyres, we&apos;ll help you choose an option that matches your vehicle, driving needs and budget.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
@@ -313,6 +321,14 @@ export default function CheapMobileTyreFittingPage() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -429,7 +445,7 @@ export default function CheapMobileTyreFittingPage() {
           Call or WhatsApp us for a competitive quote and we&apos;ll send a technician directly to
           your location.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a
             href="tel:07759708646"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
@@ -437,6 +453,14 @@ export default function CheapMobileTyreFittingPage() {
           >
             <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             07759 708 646
+          </a>
+          <a
+            href="tel:01613995851"
+            className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            0161 399 5851
           </a>
           <a
             href="https://wa.me/447759708646"

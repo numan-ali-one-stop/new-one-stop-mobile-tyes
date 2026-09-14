@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { ADDRESS, BUSINESS_NAME, MAPS_URL } from '@/lib/constants'
+import { ADDRESS, BUSINESS_NAME, MAPS_URL, PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
 
 export default function Footer() {
   const pathname = usePathname()
@@ -30,10 +30,16 @@ export default function Footer() {
           </p>
           <ul className="space-y-3 sm:space-y-4 text-slate-400 text-sm font-medium">
             <li className="flex items-center justify-center sm:justify-start gap-3">
-              <span className="material-symbols-outlined text-[#FF4444] text-lg">call</span>
-              <a href="tel:07759708646" className="text-white font-bold hover:text-[#FF4444] transition-colors">
-                07759 708 646
-              </a>
+              <span className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">call</span>
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-1">
+                <a href={`tel:${PHONE_TEL}`} className="text-white font-bold hover:text-[#FF4444] transition-colors">
+                  {PHONE}
+                </a>
+                <span className="text-slate-600 hidden sm:inline">/</span>
+                <a href={`tel:${PHONE_2_TEL}`} className="text-white font-bold hover:text-[#FF4444] transition-colors">
+                  {PHONE_2}
+                </a>
+              </div>
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-3">
               <span className="material-symbols-outlined text-[#FF4444] text-lg">mail</span>

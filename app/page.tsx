@@ -221,7 +221,12 @@ const organizationSchema = {
       closes: '23:59',
     },
   },
-  sameAs: ['https://maps.app.goo.gl/tqGMogzsNNn8EXjH8'],
+  sameAs: [
+    'https://maps.app.goo.gl/tqGMogzsNNn8EXjH8',
+    'https://www.facebook.com/onestoptyres247',
+    'https://www.instagram.com/onestoptyres247/',
+    'https://www.tiktok.com/@onestoptyres247',
+  ],
 }
 
 const websiteSchema = {
@@ -241,6 +246,43 @@ const websiteSchema = {
   },
 }
 
+const servicesBreadcrumbSchema = {
+  '@context': 'https://schema.org/',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Professional Mobile Tyre Fitting in Greater Manchester',
+      item: 'https://onestoptyres247.co.uk/mobile-tyre-fitting',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Home Tyre Fitting in Greater Manchester',
+      item: 'https://onestoptyres247.co.uk/home-tyre-fitting',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Professional Tyre Puncture Repair in Greater Manchester',
+      item: 'https://onestoptyres247.co.uk/puncture-repair-Greater-manchester',
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: '24/7 Roadside Assistance in Greater Manchester',
+      item: 'https://onestoptyres247.co.uk/roadside-assistance',
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      name: '24/7 Car Battery Jump Start Service in Greater Manchester',
+      item: 'https://onestoptyres247.co.uk/car-battery-jump-start',
+    },
+  ],
+}
+
 /* ─── Page ──────────────────────────────────────────────── */
 export default function Home() {
   return (
@@ -248,6 +290,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesBreadcrumbSchema) }} />
 
       {/* ── 1. HERO ───────────────────────────────────────── */}
       <HeroSlider />
@@ -497,13 +540,22 @@ export default function Home() {
                 Speak directly to a technician for an instant quote and arrival time.
               </p>
             </div>
-            <a
-              href="tel:07759708646"
-              className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
-              style={{ fontFamily: 'var(--font-work-sans)' }}
-            >
-              07759 708 646
-            </a>
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
+              <a
+                href="tel:07759708646"
+                className="bg-[#FF4444] text-[#121212] font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                0161 399 5851
+              </a>
+            </div>
           </div>
         </div>
       </section>

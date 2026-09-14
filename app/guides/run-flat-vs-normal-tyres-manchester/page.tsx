@@ -135,7 +135,7 @@ export default function RunFlatVsNormalGuide() {
             <p className="text-slate-600 leading-relaxed">
               Not sure which type your car has, or want a straight answer on cost before you
               commit? Call{' '}
-              <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' '}
+              <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' / '}<a href="tel:01613995851" className="text-[#b70011] font-semibold hover:underline">0161 399 5851</a>{' '}
               — we&apos;ll check your sidewalls, confirm the right option, and fit at your home,
               work or roadside anywhere in Greater Manchester.
             </p>
@@ -302,7 +302,7 @@ export default function RunFlatVsNormalGuide() {
               currently have, talk through your options, and give you a straight quote — no
               obligation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
@@ -310,6 +310,14 @@ export default function RunFlatVsNormalGuide() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"

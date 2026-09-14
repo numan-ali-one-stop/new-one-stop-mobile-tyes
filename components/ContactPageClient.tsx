@@ -38,7 +38,7 @@ export default function ContactPageClient() {
     },
     {
       q: 'What is the best way to contact you?',
-      a: 'For emergencies, always call us directly on 07759 708 646 for immediate dispatch. For general quotes or bookings, you can use our contact form or email us at info@onestoptyres247.co.uk.',
+      a: 'For emergencies, always call us directly on 07759 708 646 or 0161 399 5851 for immediate dispatch. For general quotes or bookings, you can use our contact form or email us at info@onestoptyres247.co.uk.',
     },
   ]
 
@@ -111,12 +111,21 @@ export default function ContactPageClient() {
                       <p className="text-[#5c403c] mb-1 text-sm font-semibold">
                         Emergency Phone
                       </p>
-                      <p
-                        className="text-[#b70011] text-lg sm:text-xl lg:text-2xl font-semibold break-all"
-                        style={{ fontFamily: 'Work Sans, sans-serif' }}
-                      >
-                        07759 708 646
-                      </p>
+                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                        <p
+                          className="text-[#b70011] text-lg sm:text-xl lg:text-2xl font-semibold break-all"
+                          style={{ fontFamily: 'Work Sans, sans-serif' }}
+                        >
+                          07759 708 646
+                        </p>
+                        <span className="text-[#5c403c]">/</span>
+                        <p
+                          className="text-[#b70011] text-lg sm:text-xl lg:text-2xl font-semibold break-all"
+                          style={{ fontFamily: 'Work Sans, sans-serif' }}
+                        >
+                          0161 399 5851
+                        </p>
+                      </div>
                       <p className="text-xs sm:text-sm text-[#5c403c]">Available 24/7 for urgent calls</p>
                     </div>
                   </div>
@@ -347,22 +356,40 @@ export default function ContactPageClient() {
                 minutes.
               </p>
             </div>
-            <a
-              href="tel:07759708646"
-              className="flex items-center gap-2 sm:gap-3 bg-[#dc2626] text-white px-6 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl hover:bg-[#93000b] transition-colors whitespace-nowrap text-base sm:text-xl font-bold shrink-0"
-              style={{
-                fontFamily: 'Work Sans, sans-serif',
-                letterSpacing: '0.02em',
-              }}
-            >
-              <span
-                className="material-symbols-outlined text-xl sm:text-2xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4">
+              <a
+                href="tel:07759708646"
+                className="flex items-center gap-2 sm:gap-3 bg-[#dc2626] text-white px-6 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl hover:bg-[#93000b] transition-colors whitespace-nowrap text-base sm:text-xl font-bold shrink-0"
+                style={{
+                  fontFamily: 'Work Sans, sans-serif',
+                  letterSpacing: '0.02em',
+                }}
               >
-                phone_in_talk
-              </span>
-              07759 708 646
-            </a>
+                <span
+                  className="material-symbols-outlined text-xl sm:text-2xl"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  phone_in_talk
+                </span>
+                07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="flex items-center gap-2 sm:gap-3 bg-[#dc2626] text-white px-6 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl hover:bg-[#93000b] transition-colors whitespace-nowrap text-base sm:text-xl font-bold shrink-0"
+                style={{
+                  fontFamily: 'Work Sans, sans-serif',
+                  letterSpacing: '0.02em',
+                }}
+              >
+                <span
+                  className="material-symbols-outlined text-xl sm:text-2xl"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  phone_in_talk
+                </span>
+                0161 399 5851
+              </a>
+            </div>
           </div>
         </section>
 

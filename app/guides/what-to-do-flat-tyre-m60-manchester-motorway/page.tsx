@@ -145,7 +145,7 @@ export default function FlatTyreMotorwayGuide() {
             <p className="text-slate-600 leading-relaxed">
               Once you&apos;re somewhere safe, our 24/7 mobile technicians can come to you and
               repair or replace the tyre on the spot. Call{' '}
-              <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' '}
+              <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' / '}<a href="tel:01613995851" className="text-[#b70011] font-semibold hover:underline">0161 399 5851</a>{' '}
               — we prioritise motorway call-outs across Greater Manchester, day and night.
             </p>
           </div>
@@ -365,7 +365,7 @@ export default function FlatTyreMotorwayGuide() {
               junction number — we&apos;ll confirm the best meeting point and dispatch the
               nearest technician straight away.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:07759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
@@ -373,6 +373,14 @@ export default function FlatTyreMotorwayGuide() {
               >
                 <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
+              </a>
+              <a
+                href="tel:01613995851"
+                className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
+                style={{ fontFamily: 'var(--font-work-sans)' }}
+              >
+                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
