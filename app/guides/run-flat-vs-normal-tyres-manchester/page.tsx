@@ -284,7 +284,7 @@ export default function RunFlatVsNormalGuide() {
             Run-flats typically cost more than a normal tyre of the same brand and size, mainly
             because of the reinforced sidewall construction and lower demand meaning less stock
             is held locally. If budget is the main driver behind switching, our{' '}
-            <a href="/cheap-mobile-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">
+            <a href="/mobile-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">
               cheap mobile tyre fitting service
             </a>{' '}
             covers budget, mid-range and premium options at competitive prices — we&apos;ll give

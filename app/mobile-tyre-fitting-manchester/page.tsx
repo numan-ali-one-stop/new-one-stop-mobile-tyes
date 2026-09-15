@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
 const _serviceSchema = serviceSchema({
@@ -16,19 +16,29 @@ const _serviceSchema = serviceSchema({
   areaServed: { '@type': 'City', name: 'Manchester' },
 })
 
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-manchester')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-manchester')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-manchester',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Manchester',
+})
+
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Manchester | 24/7 Emergency | One Stop Tyres',
+  title: 'Mobile Tyre Fitting Manchester | 24 Hour Service',
   description:
-    'Mobile tyre fitting in Manchester — professional technicians, fast response, available 24/7.',
+    'Need mobile tyre fitting in Manchester? Get professional 24-hour tyre fitting at home, work or a suitable location across Manchester.',
   path: '/mobile-tyre-fitting-manchester',
 })
 
 function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
   return (
     <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <span className="material-symbols-outlined text-[#b70011] bg-[#b70011]/10 p-2 rounded-lg font-bold">
-        {icon}
-      </span>
+      <div className="w-10 h-10 bg-[#b70011]/10 rounded-full flex items-center justify-center shrink-0">
+        <span className="material-symbols-outlined text-[#b70011]">
+          {icon}
+        </span>
+      </div>
       <div>
         <span className="font-bold text-[#0f172a] block">{title}</span>
         <p className="text-sm text-slate-500">{desc}</p>
@@ -37,10 +47,46 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
   )
 }
 
+const whyChooseManchester = [
+  {
+    icon: 'directions_car',
+    title: 'Convenient Service',
+    desc: 'Get your tyres fitted at a suitable location in Manchester.',
+  },
+  {
+    icon: 'schedule',
+    title: '24-Hour Availability',
+    desc: 'Our mobile fitting service is available around the clock for suitable appointments.',
+  },
+  {
+    icon: 'engineering',
+    title: 'Professional Tyre Fitting',
+    desc: 'Your tyres are fitted carefully using suitable equipment.',
+  },
+  {
+    icon: 'garage',
+    title: 'No Unnecessary Garage Visit',
+    desc: 'Save time by having your tyres fitted at your location.',
+  },
+  {
+    icon: 'pin_drop',
+    title: 'Flexible Locations',
+    desc: 'We can provide fitting at home, work or another suitable location.',
+  },
+  {
+    icon: 'location_on',
+    title: 'Manchester Coverage',
+    desc: 'Local service for drivers throughout Manchester and surrounding areas.',
+  },
+]
+
 export default function ManchesterPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
       <JsonLd data={_serviceSchema} />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -65,22 +111,20 @@ export default function ManchesterPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Replacement Manchester
+              Manchester Mobile Tyre Fitting Service
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre replaced in Manchester? One Stop Mobile Tyres 24/7 brings professional tyre replacement directly to your location. Whether you are at home, at work or safely parked roadside, our mobile team can supply and fit the right replacement tyre without the need to visit a garage.
+              Need a tyre fitted at your home, workplace or roadside location? Our Manchester mobile tyre fitting service provides convenient tyre fitting across Manchester, helping you get back on the road without the need to visit a garage.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Same-Day Mobile Tyre Replacement',
-                'Tyre Replacement At Home, Work Or Roadside',
-                'Premium, Mid-Range & Budget Tyre Options',
-                'Manchester & Surrounding Areas Covered',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                'Professional Mobile Tyre Fitting',
+                '24 Hour Tyre Fitting',
+                'Home, Workplace & Roadside Service',
+                'Manchester Coverage',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span
@@ -93,20 +137,20 @@ export default function ManchesterPage() {
             </div>
 
             {/* Google Rating Badge */}
-            <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
+            <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex flex-wrap items-center gap-2 sm:gap-2.5 max-w-full bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
               <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
-              <div className="flex text-yellow-400 gap-px">
+              <div className="flex text-yellow-400 gap-px shrink-0">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <span key={i} className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 ))}
               </div>
-              <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Manchester &amp; Greater Manchester</span>
+              <span className="font-bold text-sm shrink-0">5.0</span>
+              <span className="text-white/60 text-xs font-medium hidden sm:inline">Rated By Drivers Across Manchester &amp; Greater Manchester</span>
             </a>
 
             {/* CTAs */}
@@ -220,17 +264,45 @@ export default function ManchesterPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: 'Professional mobile puncture repair across Manchester, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Manchester, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
+                {
+                  img: '/images/tyre-fitting-in-emergency.webp',
+                  title: '24 Hour Emergency Tyre Fitting',
+                  desc: 'Genuine 24/7 emergency tyre replacement across Manchester, day or night, 365 days a year.',
+                  badge: 'DAY & NIGHT',
+                  href: '/mobile-tyre-fitting',
+                },
+                {
+                  img: '/images/tyres-fitting-anywhere.webp',
+                  title: 'Cheap Mobile Tyre Fitting',
+                  desc: 'Budget, mid-range and premium tyre options across Manchester, all professionally fitted at competitive prices.',
+                  badge: 'BEST PRICES',
+                  href: '/mobile-tyre-fitting',
+                },
+                {
+                  img: '/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp',
+                  title: 'Tyre Fitting Near Me',
+                  desc: 'Search no further — our mobile technicians reach almost anywhere across Manchester fast.',
+                  badge: 'NEAR YOU',
+                  href: '/mobile-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
                   title: 'Jump Start',
                   desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Manchester.',
                   badge: '24/7 SERVICE',
-                  href: '/car-battery-jump-start',
+                  href: '/jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
@@ -308,7 +380,7 @@ export default function ManchesterPage() {
           </div>
         </section>
 
-        {/* ── 4. EXPERT SECTION ─────────────────────────────── */}
+        {/* ── 4. MOBILE TYRE FITTING IN MANCHESTER ─────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
             <div className="w-full lg:w-1/2 relative pb-8 sm:pb-10">
@@ -334,55 +406,177 @@ export default function ManchesterPage() {
             </div>
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-                The Best Choice
+                Mobile Tyre Fitting in Manchester
               </span>
               <h2
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Replacement Across Manchester
+                Professional Mobile Tyre Fitting in Manchester
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                Replacing a tyre is not simply about putting a new tyre on the wheel. The replacement needs to be suitable for your vehicle, correctly fitted and checked before you drive away.
-                <br /><br />
-                One Stop Mobile Tyres 24/7 provides mobile tyre replacement throughout Manchester and surrounding areas. Our technicians come to your location with the equipment needed to remove the damaged tyre, fit the replacement and check the wheel before completing the job.
-                <br /><br />
-                Whether you need one replacement tyre or several tyres replaced, we can discuss the available options with you before the work starts.
+              <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+                Getting a tyre replaced or fitted doesn&apos;t always mean taking your car to a garage. Our <strong>mobile tyre fitting in Manchester</strong> service brings professional tyre fitting directly to your location.
               </p>
+              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides convenient tyre fitting for drivers across Manchester. Whether you need a replacement tyre at home, at work or at a suitable roadside location, our technician can assess your requirements and carry out the fitting where conditions are safe and suitable.
+              </p>
+              <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
-                  icon="bolt"
-                  title="Mobile Tyre Replacement"
-                  desc="Get replacement tyres fitted at your home, workplace or a suitable roadside location."
+                  icon="directions_car"
+                  title="Convenient Tyre Fitting"
+                  desc="Have your tyres fitted at a suitable location instead of arranging a garage visit."
+                />
+                <FeatureItem
+                  icon="location_on"
+                  title="Manchester-Wide Service"
+                  desc="Our mobile tyre fitting service covers Manchester and surrounding areas."
                 />
                 <FeatureItem
                   icon="engineering"
-                  title="Same-Day Tyre Replacement"
-                  desc="A practical option when you need a replacement tyre without making a separate trip to a tyre centre."
+                  title="Professional Fitting"
+                  desc="Tyres are fitted using appropriate equipment and professional procedures."
                 />
                 <FeatureItem
-                  icon="sell"
-                  title="Emergency Tyre Replacement"
-                  desc="For damaged or unsafe tyres, our mobile team can provide replacement assistance when you are unable to continue safely."
+                  icon="schedule"
+                  title="24-Hour Availability"
+                  desc="Our 24 hour mobile tyre fitting Manchester service provides assistance when you need tyre fitting outside normal garage hours."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY MANCHESTER DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs
-          city="Manchester"
-          image="/images/tyre-fitting-at-home.webp"
-          responseTitle="Convenient Mobile Service"
-          responseDesc="There is no need to drive to a garage with a damaged or worn tyre. We bring the replacement tyre and fitting service to you."
-          callOutTitle="Upfront Pricing"
-          callOutDesc="We discuss the tyre option and price before work begins, helping you understand what you are paying for without unexpected call-out charges."
-          certifiedTitle="Professional Technicians"
-          certifiedDesc="Our fitters are IMI certified and insured, with experience working on a wide range of vehicles, including family cars and prestige electric vehicles."
+        {/* ── 5. WHY CHOOSE ─────────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Manchester Mobile Tyre Fitting Service?"
+          intro=""
+          items={whyChooseManchester}
         />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Our Mobile Tyre Fitting Service Works in Manchester
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Us',
+                  desc: 'Provide your vehicle details, tyre requirements and Manchester location.',
+                },
+                {
+                  n: '2',
+                  title: 'Choose Your Tyres',
+                  desc: 'Tell us which tyres you need or provide your vehicle registration or existing tyre size so we can confirm the appropriate option.',
+                },
+                {
+                  n: '3',
+                  title: 'We Come to You',
+                  desc: 'Our technician travels to your agreed location in Manchester at the arranged time.',
+                },
+                {
+                  n: '4',
+                  title: 'Professional Tyre Fitting',
+                  desc: 'The tyre is fitted and checked to ensure the vehicle is ready for safe use.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 3 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE FITTING ACROSS MANCHESTER ─────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Mobile Tyre Fitting Across Manchester
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Fitting Manchester UK
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our <strong>mobile tyre fitting Manchester UK</strong> service is designed for drivers who want professional tyre fitting without making a trip to a tyre garage.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Whether you&apos;re at home, at your workplace or in another suitable location, we can arrange tyre fitting based on your requirements and location.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our service is suitable for drivers who need a replacement tyre, have discovered a damaged tyre or simply prefer the convenience of having their tyres fitted where they are.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              From central Manchester to surrounding areas, our technicians provide a practical alternative to traditional garage-based tyre fitting.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. 24 HOUR MOBILE TYRE FITTING ───────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              24 Hour Mobile Tyre Fitting
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              24 Hour Mobile Tyre Fitting in Manchester
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Tyre problems don&apos;t always happen during normal working hours. Our <strong>24 hour mobile tyre fitting Manchester</strong> service provides convenient tyre fitting assistance when you need it.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If you have a damaged tyre or need a replacement outside standard garage hours, contact us with your location and vehicle details. We&apos;ll assess your requirements and arrange suitable mobile tyre fitting where possible.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our service is particularly useful when visiting a garage is inconvenient or you&apos;re unable to drive your vehicle safely to a tyre centre.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -391,64 +585,94 @@ export default function ManchesterPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-manchester"
           city="Manchester"
           faqs={[
             {
-              q: 'Do you provide mobile tyre replacement in Manchester?',
-              a: 'Yes. We supply and fit replacement tyres at suitable locations across Manchester, including homes, workplaces and safe roadside locations.',
+              q: 'Do you provide mobile tyre fitting in Manchester?',
+              a: 'Yes. We provide mobile tyre fitting in Manchester and surrounding areas, subject to location and service requirements.',
             },
             {
-              q: 'Can you replace just one tyre?',
-              a: 'Yes, where a suitable replacement is available and it is appropriate for the vehicle. Our technician can assess the tyre and discuss the available replacement option with you.',
+              q: 'What is Manchester mobile tyre fitting?',
+              a: 'It is a tyre fitting service where a technician comes to your chosen location in Manchester rather than requiring you to visit a traditional tyre garage.',
             },
             {
-              q: 'How long does mobile tyre replacement take?',
-              a: 'The fitting time depends on the vehicle, tyre and number of tyres being replaced. A single tyre replacement typically takes around 20–30 minutes once the technician arrives.',
+              q: 'Do you offer mobile tyre fitting in Manchester UK?',
+              a: 'Yes. Our service provides mobile tyre fitting for drivers across Manchester and nearby areas.',
             },
             {
-              q: 'Can I have my tyres replaced at home?',
-              a: 'Yes. Home tyre replacement is one of the main benefits of our mobile service. You can arrange for your replacement tyres to be fitted while your vehicle is parked at home.',
+              q: 'Do you provide 24-hour mobile tyre fitting in Manchester?',
+              a: 'Yes. Our 24 hour mobile tyre fitting Manchester service is available for suitable tyre fitting requirements.',
             },
             {
-              q: 'What tyre brands are available?',
-              a: 'We offer major brands including Michelin, Continental, Bridgestone and Pirelli, along with mid-range and budget options. Availability can depend on your tyre size and current stock.',
+              q: 'Can you fit tyres at my home in Manchester?',
+              a: 'Yes, tyre fitting can be arranged at home where there is a suitable and safe area for the work.',
             },
             {
-              q: 'Can you replace a tyre at the roadside?',
-              a: 'Yes, provided the vehicle is in a suitable and safe location for our technician to work. If you are on a motorway or another unsafe location, our team can advise you on the safest next step.',
+              q: 'Can you fit tyres at my workplace?',
+              a: 'Yes. We can arrange tyre fitting at your workplace if there is a safe and accessible area for the technician to work.',
+            },
+            {
+              q: 'Do I need to take my car to a garage?',
+              a: 'No. The main benefit of our mobile service is that the technician comes to your agreed location, so a garage visit may not be necessary.',
+            },
+            {
+              q: 'How do I book mobile tyre fitting in Manchester?',
+              a: 'Contact us with your vehicle registration or tyre size, your location and the number or type of tyres you require.',
+            },
+            {
+              q: 'How long does mobile tyre fitting take?',
+              a: "The time depends on the number of tyres being fitted, the vehicle and the work required. We'll provide an estimated timeframe when arranging your appointment.",
+            },
+            {
+              q: 'Can you fit a replacement tyre at the roadside?',
+              a: 'Yes, where the location is safe and suitable for tyre fitting.',
+            },
+            {
+              q: 'Do you cover all areas of Manchester?',
+              a: 'We provide service across Manchester and surrounding areas. Availability can depend on your exact location.',
+            },
+            {
+              q: 'Can you provide mobile tyre fitting at night?',
+              a: 'Yes. Our service is available 24 hours for suitable tyre fitting requirements.',
+            },
+            {
+              q: 'What information do I need to book?',
+              a: "Usually, you'll need your vehicle registration or tyre size, your location and details of the tyres you need.",
+            },
+            {
+              q: 'Is mobile tyre fitting more convenient than visiting a garage?',
+              a: 'For many drivers, yes. You can arrange fitting at a suitable location without making a separate journey to a tyre centre.',
+            },
+            {
+              q: 'Can you fit tyres if my car cannot be driven?',
+              a: "If the vehicle cannot be safely driven to a garage, mobile fitting may be a suitable option. We'll assess your location and requirements before confirming the service.",
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Replacement in Manchester?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t let a damaged or worn tyre disrupt your day. Call One Stop Mobile Tyres 24/7 for mobile tyre replacement across Manchester and get a quote for a suitable replacement tyre.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Manchester?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Get professional tyre fitting at a convenient location with One Stop Tyres 247. Whether you need a tyre fitted during the day or require 24 hour mobile tyre fitting Manchester, contact us to arrange a suitable service.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
+              {/* TODO: confirm destination — no quote/booking route has been established sitewide yet (same open question as the Home Tyre Fitting, Puncture Repair and Roadside Assistance pages' equivalent CTA) */}
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="#TODO-book-mobile-tyre-fitting-destination"
               >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
+                <span className="material-symbols-outlined text-xl sm:text-2xl">calendar_month</span>
+                Book Mobile Tyre Fitting
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="https://wa.me/447759708646"
+                href="tel:07759708646"
               >
-                <span className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
-                WhatsApp Us
+                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                Call Now
               </a>
             </div>
           </div>

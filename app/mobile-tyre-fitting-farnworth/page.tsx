@@ -25,9 +25,9 @@ export const metadata = {
 function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
   return (
     <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <span className="material-symbols-outlined text-[#b70011] bg-[#b70011]/10 p-2 rounded-lg font-bold">
-        {icon}
-      </span>
+      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
+        <span className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
+      </div>
       <div>
         <span className="font-bold text-[#0f172a] block">{title}</span>
         <p className="text-sm text-slate-500">{desc}</p>
@@ -167,7 +167,7 @@ export default function FarnworthPage() {
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'If your tyre has picked up a nail, screw or other puncture, we first assess whether the damage is safe to repair. Where suitable, the repair can be completed without replacing an otherwise usable tyre.', badge: 'DEALING WITH PUNCTURES PROPERLY',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'If your journey has stopped because the battery is flat rather than the tyre, our mobile technicians can also provide jump-start support across Farnworth.', badge: 'BATTERY PROBLEM AS WELL?',
-                  href: '/car-battery-jump-start' },
+                  href: '/jump-start' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp', title: 'TPMS Reset', desc: 'A tyre pressure warning can remain after fitting or repair work. Where required, we can check and reset the TPMS so the vehicle can continue monitoring tyre pressures correctly.', badge: 'CLEARING TYRE PRESSURE WARNINGS',
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'A missing key or damaged locking wheel nut can prevent normal tyre removal. Our technicians carry specialist tools to deal with troublesome locking nuts and access the wheel safely.', badge: 'REMOVING DIFFICULT LOCKING NUTS',

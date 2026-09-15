@@ -42,13 +42,13 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-3">
-              <span className="material-symbols-outlined text-[#FF4444] text-lg">mail</span>
+              <span className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">mail</span>
               <a href="mailto:info@onestoptyres247.co.uk" className="hover:text-[#FF4444] transition-colors break-all text-xs sm:text-sm">
                 info@onestoptyres247.co.uk
               </a>
             </li>
             <li className="flex items-start justify-center sm:justify-start gap-3">
-              <span className="material-symbols-outlined text-[#FF4444] text-lg">location_on</span>
+              <span className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">location_on</span>
               <a
                 href={MAPS_URL}
                 target="_blank"
@@ -68,14 +68,11 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-slate-400 text-sm font-medium">
             {[
-              { label: '24 Hour Emergency Tyre Fitting', href: '/24-hour-emergency-tyre-fitting' },
-              { label: 'Cheap Mobile Tyre Fitting', href: '/cheap-mobile-tyre-fitting' },
-              { label: 'Tyre Fitting Near Me', href: '/tyre-fitting-near-me' },
               { label: 'Mobile Tyre Fitting', href: '/mobile-tyre-fitting' },
               { label: 'Home Tyre Fitting', href: '/home-tyre-fitting' },
               { label: 'Emergency Puncture Repair', href: '/puncture-repair-Greater-manchester' },
               { label: 'Roadside Assistance', href: '/roadside-assistance' },
-              { label: 'Jump Start', href: '/car-battery-jump-start' },
+              { label: 'Jump Start', href: '/jump-start' },
               { label: 'Locking Nut Removal', href: '/locking-nut-removal' },
               { label: 'TPMS Reset', href: '/tpms-reset' },
             ].map((item) => (

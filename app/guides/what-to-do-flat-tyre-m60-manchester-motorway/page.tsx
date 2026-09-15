@@ -285,7 +285,7 @@ export default function FlatTyreMotorwayGuide() {
               <span className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">schedule</span>
               <span className="text-slate-600 leading-relaxed">
                 It&apos;s a genuine{' '}
-                <a href="/24-hour-emergency-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">
+                <a href="/mobile-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">
                   24 hour emergency service
                 </a>{' '}
                 — a 3am blowout on the M62 gets the same response as a 3pm one.

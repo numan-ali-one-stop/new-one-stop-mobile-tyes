@@ -34,7 +34,7 @@ const serviceLinks = [
   },
   {
     label: 'Jump Start',
-    href: '/car-battery-jump-start',
+    href: '/jump-start',
     icon: 'bolt',
     desc: 'Dead battery? Back on the road in minutes',
   },
@@ -49,24 +49,6 @@ const serviceLinks = [
     href: '/locking-nut-removal',
     icon: 'lock_open',
     desc: 'Damage-free removal with specialist tools',
-  },
-  {
-    label: '24 Hour Emergency Tyre Fitting',
-    href: '/24-hour-emergency-tyre-fitting',
-    icon: 'emergency',
-    desc: 'Immediate tyre help day or night, 365 days',
-  },
-  {
-    label: 'Cheap Mobile Tyre Fitting',
-    href: '/cheap-mobile-tyre-fitting',
-    icon: 'savings',
-    desc: 'Budget, mid-range & premium tyres at great prices',
-  },
-  {
-    label: 'Tyre Fitting Near Me',
-    href: '/tyre-fitting-near-me',
-    icon: 'location_on',
-    desc: 'We come to your home, work or roadside location',
   },
 ]
 

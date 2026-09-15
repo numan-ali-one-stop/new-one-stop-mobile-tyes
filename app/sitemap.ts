@@ -8,12 +8,9 @@ const SERVICE_PAGES = [
   '/home-tyre-fitting',
   '/puncture-repair-Greater-manchester',
   '/roadside-assistance',
-  '/car-battery-jump-start',
+  '/jump-start',
   '/tpms-reset',
   '/locking-nut-removal',
-  '/24-hour-emergency-tyre-fitting',
-  '/cheap-mobile-tyre-fitting',
-  '/tyre-fitting-near-me',
 ]
 
 const CITY_PAGES = [
@@ -31,6 +28,14 @@ const TOWN_PAGES = [
   'bramhall', 'bredbury', 'cheadle', 'gatley', 'hazel-grove', 'heaton-chapel', 'heaton-mersey',
   'heaton-moor', 'heaton-norris', 'marple-bridge', 'mellor', 'reddish', 'romiley',
   'swinton', 'cadishead', 'greengate', 'pendlebury', 'pendleton', 'walkden', 'worsley',
+  'ramsbottom', 'tottington', 'whitefield',
+  'blackrod', 'kearsley', 'little-lever', 'south-turton',
+  'littleborough', 'milnrow', 'newhey', 'wardle',
+  'audenshaw', 'broadbottom', 'denton', 'droylsden', 'dukinfield', 'hattersley',
+  'hollingworth', 'longdendale', 'mossley', 'mottram-in-longdendale', 'stalybridge',
+  'bowdon', 'hale', 'old-trafford', 'timperley',
+  'abram', 'ashton-in-makerfield', 'aspull', 'astley', 'bryn', 'golborne', 'higher-end',
+  'hindley', 'ince-in-makerfield', 'orrell', 'shevington', 'standish', 'tyldesley', 'winstanley',
 ]
 
 const ROAD_PAGES = ['m60', 'm61', 'm62', 'm56', 'm66', 'm67', 'm602', 'a627']

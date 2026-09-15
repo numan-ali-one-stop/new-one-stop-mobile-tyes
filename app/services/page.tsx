@@ -36,7 +36,15 @@ const services = [
     btnLabel: 'Book Now',
   },
   {
-    href: '/car-battery-jump-start',
+    href: '/roadside-assistance',
+    img: '/images/professional-mobile-tyre-fitting.webp',
+    title: 'Roadside Assistance',
+    desc: 'Emergency roadside support for tyre and vehicle problems, wherever you get stranded across Greater Manchester.',
+    badge: '24/7 Support',
+    btnLabel: 'Get Help Now',
+  },
+  {
+    href: '/jump-start',
     img: '/images/professional-mobile-tyre-fitting.webp',
     title: 'Jump Start',
     desc: 'Flat battery? Our technicians carry professional jumpstart equipment to revive your vehicle quickly and diagnose any issues.',
@@ -58,30 +66,6 @@ const services = [
     desc: "Lost your key? We use specialized equipment to safely remove locking wheel nuts without damaging your precious alloy wheels.",
     badge: 'Damage Free',
     btnLabel: 'Learn More',
-  },
-  {
-    href: '/24-hour-emergency-tyre-fitting',
-    img: '/images/tyre-fitting-in-emergency.webp',
-    title: '24 Hour Emergency Tyre Fitting',
-    desc: 'Round-the-clock emergency tyre fitting wherever you are stranded — roadside, car park or driveway. We respond day and night.',
-    badge: '24/7',
-    btnLabel: 'Get Help Now',
-  },
-  {
-    href: '/cheap-mobile-tyre-fitting',
-    img: '/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp',
-    title: 'Cheap Mobile Tyre Fitting',
-    desc: 'Quality tyres at affordable prices. Budget, mid-range and premium options fitted at your home, workplace or roadside.',
-    badge: 'Best Value',
-    btnLabel: 'Get a Quote',
-  },
-  {
-    href: '/tyre-fitting-near-me',
-    img: '/images/tyre-fitting-at-home.webp',
-    title: 'Tyre Fitting Near Me',
-    desc: 'We come to your home, workplace or roadside. Fast local tyre fitting without the garage wait.',
-    badge: 'Local Service',
-    btnLabel: 'Book Now',
   },
 ]
 

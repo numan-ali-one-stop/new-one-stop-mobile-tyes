@@ -165,6 +165,64 @@ export interface ItemListEntry {
   url: string
 }
 
+const BUSINESS_LOGO_URL =
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One-Stop%20Loog-airanko-Qpv1QvladNLpRhg8X3Hs6SzyydzFMq.webp'
+
+/** Organization entity for a specific landing page (Google Ads / rich-results requirement). */
+export function pageOrganizationSchema(slug: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: BUSINESS_NAME,
+    url: `${SITE_URL}/${slug}`,
+    logo: BUSINESS_LOGO_URL,
+  }
+}
+
+/** WebSite entity for a specific landing page, with a schema-valid SearchAction target. */
+export function pageWebsiteSchema(slug: string) {
+  const url = `${SITE_URL}/${slug}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: BUSINESS_NAME,
+    url,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+}
+
+export interface AutomotiveBusinessSchemaOptions {
+  slug: string
+  /** Page hero image — falls back to the shared logo if not given. */
+  image?: string
+  addressLocality: string
+}
+
+/** AutomotiveBusiness entity for a specific city/service landing page. */
+export function automotiveBusinessSchema({ slug, image, addressLocality }: AutomotiveBusinessSchemaOptions) {
+  const url = `${SITE_URL}/${slug}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AutomotiveBusiness',
+    name: BUSINESS_NAME,
+    image: image ?? BUSINESS_LOGO_URL,
+    url,
+    telephone: BUSINESS_PHONE,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality,
+      addressCountry: 'GB',
+    },
+  }
+}
+
 export function itemListSchema(items: ItemListEntry[]) {
   return {
     '@context': 'https://schema.org',

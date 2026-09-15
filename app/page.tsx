@@ -25,9 +25,9 @@ function FeatureItem({
 }) {
   return (
     <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <span className="material-symbols-outlined text-[#b70011] bg-[#b70011]/10 p-2 rounded-lg font-bold">
-        {icon}
-      </span>
+      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
+        <span className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
+      </div>
       <div>
         <span className="font-bold text-[#0f172a] block">{title}</span>
         <p className="text-sm text-slate-500">{desc}</p>
@@ -278,7 +278,7 @@ const servicesBreadcrumbSchema = {
       '@type': 'ListItem',
       position: 5,
       name: '24/7 Car Battery Jump Start Service in Greater Manchester',
-      item: 'https://onestoptyres247.co.uk/car-battery-jump-start',
+      item: 'https://onestoptyres247.co.uk/jump-start',
     },
   ],
 }
@@ -451,32 +451,18 @@ export default function Home() {
                 href: '/puncture-repair-Greater-manchester',
               },
               {
-                img: '/images/tyre-fitting-in-emergency.webp',
-                title: '24 Hour Emergency Tyre Fitting',
-                desc: 'Genuine 24/7 emergency tyre replacement, day or night, 365 days a year.',
-                badge: 'DAY & NIGHT',
-                href: '/24-hour-emergency-tyre-fitting',
-              },
-              {
-                img: '/images/tyres-fitting-anywhere.webp',
-                title: 'Cheap Mobile Tyre Fitting',
-                desc: 'Budget, mid-range and premium tyre options, all professionally fitted at competitive prices.',
-                badge: 'BEST PRICES',
-                href: '/cheap-mobile-tyre-fitting',
-              },
-              {
-                img: '/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp',
-                title: 'Tyre Fitting Near Me',
-                desc: 'Search no further — our mobile technicians reach almost anywhere in Greater Manchester fast.',
-                badge: 'NEAR YOU',
-                href: '/tyre-fitting-near-me',
+                img: '/images/professional-mobile-tyre-fitting.webp',
+                title: 'Roadside Assistance',
+                desc: 'Emergency roadside support for tyre and vehicle problems, wherever you get stranded.',
+                badge: '24/7 SUPPORT',
+                href: '/roadside-assistance',
               },
               {
                 img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
                 title: 'Jump Start',
                 desc: "Flat battery as well as a flat tyre? We'll get your car started again in minutes.",
                 badge: '24/7 SERVICE',
-                href: '/car-battery-jump-start',
+                href: '/jump-start',
               },
               {
                 img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',

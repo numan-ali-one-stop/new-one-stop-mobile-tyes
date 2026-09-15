@@ -47,6 +47,12 @@ const nextConfig = {
       },
       // Puncture repair page renamed — keep the old URL working and pass on its SEO value.
       { source: '/emergency-puncture-repair', destination: '/puncture-repair-Greater-manchester', permanent: true },
+      // Jump start page renamed — keep the old URL working and pass on its SEO value.
+      { source: '/car-battery-jump-start', destination: '/jump-start', permanent: true },
+      // These three pages were consolidated into /mobile-tyre-fitting — keep old URLs working.
+      { source: '/24-hour-emergency-tyre-fitting', destination: '/mobile-tyre-fitting', permanent: true },
+      { source: '/cheap-mobile-tyre-fitting', destination: '/mobile-tyre-fitting', permanent: true },
+      { source: '/tyre-fitting-near-me', destination: '/mobile-tyre-fitting', permanent: true },
       // Legacy WordPress URLs — the site migrated from WordPress and these
       // old paths are still indexed/linked externally.
       // TODO(owner): check Google Search Console's "Pages" report for any

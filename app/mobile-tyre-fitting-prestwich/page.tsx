@@ -25,9 +25,9 @@ export const metadata = {
 function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
   return (
     <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <span className="material-symbols-outlined text-[#b70011] bg-[#b70011]/10 p-2 rounded-lg font-bold">
-        {icon}
-      </span>
+      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
+        <span className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
+      </div>
       <div>
         <span className="font-bold text-[#0f172a] block">{title}</span>
         <p className="text-sm text-slate-500">{desc}</p>
@@ -167,7 +167,7 @@ export default function PrestwichPage() {
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'Some punctures can be repaired safely rather than requiring a new tyre. Our technicians inspect the damaged area first and carry out an appropriate repair where the tyre meets the required safety conditions.', badge: 'SAVE THE TYRE WHERE POSSIBLE',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'A flat battery can stop your journey just as quickly as damaged tyres. Our mobile team can provide jump-start assistance across Prestwich when your vehicle has enough battery-related trouble to leave you unable to continue.', badge: 'BATTERY SUPPORT ON THE ROAD',
-                  href: '/car-battery-jump-start' },
+                  href: '/jump-start' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp', title: 'TPMS Reset', desc: 'If your tyre pressure warning remains active after tyre work, our technicians can check and reset the TPMS where required, helping the vehicle continue monitoring tyre pressures correctly.', badge: 'PRESSURE SYSTEM SUPPORT',
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'Lost the locking wheel nut key or dealing with a damaged locking nut? Specialist tools allow our technicians to remove difficult wheel nuts and gain access to the tyre for fitting or repair.', badge: 'HELP WITH STUBBORN LOCKING NUTS',

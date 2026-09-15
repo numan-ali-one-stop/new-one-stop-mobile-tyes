@@ -230,6 +230,12 @@ export default function ServicePage({
                 badge: 'CERTIFIED REPAIR',
               },
               {
+                img: '/images/professional-mobile-tyre-fitting.webp',
+                title: 'Roadside Assistance',
+                desc: 'Emergency roadside support for tyre and vehicle problems, wherever you get stranded.',
+                badge: '24/7 SUPPORT',
+              },
+              {
                 img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
                 title: 'JumpStart',
                 desc: 'Fast battery jump-start service to get your vehicle running again without delay.',

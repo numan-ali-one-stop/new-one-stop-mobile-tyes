@@ -7,16 +7,16 @@ export const metadata = buildMetadata({
   title: 'Car Battery Jump Start Service | Greater Manchester',
   description:
     "Need a car battery jump start in Greater Manchester? 24/7 jump start service for flat batteries & vehicles that won't start — call 07759 708 646",
-  path: '/car-battery-jump-start',
+  path: '/jump-start',
 })
 
 const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Home', item: SITE_URL },
-  { name: 'Jump Start', item: `${SITE_URL}/car-battery-jump-start` },
+  { name: 'Jump Start', item: `${SITE_URL}/jump-start` },
 ])
 
 const _serviceSchema = serviceSchema({
-  slug: 'car-battery-jump-start',
+  slug: 'jump-start',
   name: 'Jump Start Service',
   serviceType: 'Battery Jump Start',
   description:

@@ -27,9 +27,9 @@ export const metadata = buildMetadata({
 function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
   return (
     <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <span className="material-symbols-outlined text-[#b70011] bg-[#b70011]/10 p-2 rounded-lg font-bold">
-        {icon}
-      </span>
+      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
+        <span className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
+      </div>
       <div>
         <span className="font-bold text-[#0f172a] block">{title}</span>
         <p className="text-sm text-slate-500">{desc}</p>
@@ -231,7 +231,7 @@ export default function OldhamPage() {
                   title: 'Jump Start',
                   desc: 'Dead battery on top of a flat tyre? We handle both. Our technicians carry jump-start equipment on every callout across Oldham, available around the clock.',
                   badge: '24/7 SERVICE',
-                  href: '/car-battery-jump-start',
+                  href: '/jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
