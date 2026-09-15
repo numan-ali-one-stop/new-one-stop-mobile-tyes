@@ -1,6 +1,6 @@
 'use client'
 
-import { PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
+import { PHONE_TEL } from '@/lib/constants'
 
 const HERO = {
   image: '/images/home-tyre-fitting.webp',
@@ -132,18 +132,6 @@ export default function HeroSlider() {
               >
                 {WA_SVG}
                 WHATSAPP US
-              </a>
-            </div>
-
-            {/* Both numbers, in line and responsive */}
-            <div className="hero-ctas flex flex-wrap items-center gap-x-3 gap-y-1 text-white/70 text-sm">
-              <span>Call us:</span>
-              <a href={`tel:${PHONE_TEL}`} className="font-bold text-white hover:text-[#FF4444] transition-colors">
-                {PHONE}
-              </a>
-              <span className="text-white/30">/</span>
-              <a href={`tel:${PHONE_2_TEL}`} className="font-bold text-white hover:text-[#FF4444] transition-colors">
-                {PHONE_2}
               </a>
             </div>
 

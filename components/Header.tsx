@@ -188,16 +188,6 @@ export default function Header() {
                 phone_in_talk
               </span>
             </a>
-            <a
-              href={`tel:${PHONE_2_TEL}`}
-              aria-label={`Call ${PHONE_2}`}
-              className="lg:hidden flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-3 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
-              style={{ fontFamily: 'var(--font-work-sans)' }}
-            >
-              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                phone_in_talk
-              </span>
-            </a>
             <a href="/" className="hidden lg:block shrink-0" aria-label="One Stop Mobile Tyres 24/7 - Home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
