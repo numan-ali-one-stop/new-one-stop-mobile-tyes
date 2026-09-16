@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16 mb-10 sm:mb-16 lg:mb-20">
         {/* Brand */}
         <div className="space-y-6 sm:space-y-8 sm:col-span-2 lg:col-span-1">
-          <a href="#" aria-label="One Stop Mobile Tyres 24/7 - Home" className="flex justify-center sm:justify-start">
+          <a href="/" aria-label="One Stop Mobile Tyres 24/7 - Home" className="flex justify-center sm:justify-start">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One-Stop%20Loog-airanko-Qpv1QvladNLpRhg8X3Hs6SzyydzFMq.webp"

@@ -472,9 +472,8 @@ export default function PunctureRepairGreaterManchesterPage() {
           Don&apos;t let a punctured tyre disrupt your day. Contact us for professional tyre puncture repair across Greater Manchester. We&apos;ll assess the damage and provide the safest suitable solution, whether that means repairing the puncture or recommending a replacement.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {/* TODO: confirm destination — no quote/contact route has been established sitewide yet (same open question as the home-tyre-fitting page's equivalent CTA) */}
           <a
-            href="#TODO-get-puncture-repair-destination"
+            href="/contact"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >

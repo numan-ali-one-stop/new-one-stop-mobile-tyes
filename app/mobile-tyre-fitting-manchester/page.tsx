@@ -277,27 +277,6 @@ export default function ManchesterPage() {
                   href: '/roadside-assistance',
                 },
                 {
-                  img: '/images/tyre-fitting-in-emergency.webp',
-                  title: '24 Hour Emergency Tyre Fitting',
-                  desc: 'Genuine 24/7 emergency tyre replacement across Manchester, day or night, 365 days a year.',
-                  badge: 'DAY & NIGHT',
-                  href: '/mobile-tyre-fitting',
-                },
-                {
-                  img: '/images/tyres-fitting-anywhere.webp',
-                  title: 'Cheap Mobile Tyre Fitting',
-                  desc: 'Budget, mid-range and premium tyre options across Manchester, all professionally fitted at competitive prices.',
-                  badge: 'BEST PRICES',
-                  href: '/mobile-tyre-fitting',
-                },
-                {
-                  img: '/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp',
-                  title: 'Tyre Fitting Near Me',
-                  desc: 'Search no further — our mobile technicians reach almost anywhere across Manchester fast.',
-                  badge: 'NEAR YOU',
-                  href: '/mobile-tyre-fitting',
-                },
-                {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
                   title: 'Jump Start',
                   desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Manchester.',
@@ -659,10 +638,9 @@ export default function ManchesterPage() {
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Manchester?</h2>
             <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Get professional tyre fitting at a convenient location with One Stop Tyres 247. Whether you need a tyre fitted during the day or require 24 hour mobile tyre fitting Manchester, contact us to arrange a suitable service.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
-              {/* TODO: confirm destination — no quote/booking route has been established sitewide yet (same open question as the Home Tyre Fitting, Puncture Repair and Roadside Assistance pages' equivalent CTA) */}
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="#TODO-book-mobile-tyre-fitting-destination"
+                href="/contact"
               >
                 <span className="material-symbols-outlined text-xl sm:text-2xl">calendar_month</span>
                 Book Mobile Tyre Fitting

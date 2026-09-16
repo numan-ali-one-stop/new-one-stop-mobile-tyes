@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
 const _serviceSchema = serviceSchema({
@@ -16,10 +16,18 @@ const _serviceSchema = serviceSchema({
   areaServed: { '@type': 'City', name: 'Blackley' },
 })
 
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-blackley')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-blackley')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-blackley',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Blackley',
+})
+
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting in Blackley | One Stop Mobile Tyres 24/7',
+  title: 'Mobile Tyre Fitting Blackley | 24/7 Tyre Replacement',
   description:
-    'Need mobile tyre fitting in Blackley? Fast replacement and reliable roadside assistance.',
+    'Need mobile tyre fitting in Blackley? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-blackley',
 })
 
@@ -37,10 +45,46 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
   )
 }
 
+const whyChooseBlackley = [
+  {
+    icon: 'schedule',
+    title: '24/7 Tyre Assistance',
+    desc: 'Get professional tyre support when you need it.',
+  },
+  {
+    icon: 'tire_repair',
+    title: 'Tyre Replacement',
+    desc: 'Replace damaged, unsafe or unsuitable tyres at your location.',
+  },
+  {
+    icon: 'directions_car',
+    title: 'Convenient Mobile Service',
+    desc: 'No need to arrange a separate trip to a tyre centre.',
+  },
+  {
+    icon: 'engineering',
+    title: 'Professional Fitting',
+    desc: 'Tyres are fitted using suitable equipment and professional procedures.',
+  },
+  {
+    icon: 'home_repair_service',
+    title: 'Home & Workplace Fitting',
+    desc: 'Arrange tyre fitting where there is a safe and suitable working area.',
+  },
+  {
+    icon: 'location_on',
+    title: 'Local Blackley Coverage',
+    desc: 'Service available across Blackley and nearby areas.',
+  },
+]
+
 export default function BlackleyPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
       <JsonLd data={_serviceSchema} />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -69,18 +113,17 @@ export default function BlackleyPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Blackley. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Need a tyre fitted or replaced in Blackley? Our <strong>mobile tyre fitting Blackley</strong> service brings professional tyre fitting directly to your home, workplace or suitable roadside location. We also provide emergency tyre replacement when a damaged or unsafe tyre needs replacing.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering Blackley &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Home, Workplace & Roadside Fitting',
+                'Mobile Puncture Repair',
+                'Blackley & Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span
@@ -340,39 +383,144 @@ export default function BlackleyPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Blackley
+                Professional Mobile Tyre Fitting in Blackley
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Blackley, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Blackley and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Blackley.
-                If you&apos;re searching for mobile tyre fitting near me in Blackley, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+                A damaged, punctured or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Blackley</strong> service allows you to have your tyres fitted or replaced at a convenient location.
               </p>
+              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre fitting across Blackley, including home, workplace and suitable roadside locations. Whether you need one tyre replaced or several tyres fitted, our technicians can assess your requirements and carry out the work where it is safe and suitable.
+              </p>
+              <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
+                  icon="tire_repair"
+                  title="Mobile Tyre Fitting"
+                  desc="Get tyres fitted at your chosen location without making an unnecessary garage visit."
+                />
+                <FeatureItem
                   icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
                   title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
+                  desc="If your tyre is damaged beyond safe repair, we can provide a replacement where suitable."
                 />
                 <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
+                  icon="location_on"
+                  title="Convenient Local Service"
+                  desc="Our technicians come to you across Blackley and surrounding areas."
+                />
+                <FeatureItem
+                  icon="schedule"
+                  title="24/7 Availability"
+                  desc="Get mobile tyre assistance during the day, at night or when an unexpected tyre problem occurs."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY BOLTON DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Blackley" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. WHY CHOOSE ─────────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service in Blackley?"
+          intro=""
+          items={whyChooseBlackley}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Our Mobile Tyre Fitting Service Works in Blackley
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Us',
+                  desc: 'Tell us your Blackley location, vehicle details and the tyre service you require.',
+                },
+                {
+                  n: '2',
+                  title: 'We Confirm Your Tyre Requirements',
+                  desc: 'Provide your vehicle registration or tyre size so we can identify a suitable replacement tyre where required.',
+                },
+                {
+                  n: '3',
+                  title: 'We Come to You',
+                  desc: 'Our technician travels to your home, workplace or another suitable location.',
+                },
+                {
+                  n: '4',
+                  title: 'Tyre Fitting or Replacement',
+                  desc: 'We remove the existing tyre where required, fit the replacement and carry out the necessary checks before completing the service.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 3 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. EMERGENCY MOBILE TYRE FITTING & REPLACEMENT ───── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Emergency Mobile Tyre Fitting &amp; Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Emergency Mobile Tyre Fitting and Tyre Replacement in Blackley
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A sudden puncture, blowout or damaged tyre can leave you stranded. Our <strong>emergency mobile tyre fitting Blackley</strong> service provides practical assistance when you cannot safely continue your journey.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If the tyre is suitable for repair, we can assess the damage and carry out a puncture repair where appropriate. If the tyre cannot be safely repaired, we can provide emergency tyre replacement with a suitable replacement tyre, subject to availability.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our service can be arranged at your home, workplace or a safe roadside location in Blackley.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -381,31 +529,75 @@ export default function BlackleyPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 9. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-blackley"
           city="Blackley"
           faqs={[
             {
-              q: 'How quickly can you reach me in Blackley?',
-              a: 'Our mobile units are strategically positioned across north Manchester, meaning we can typically reach Blackley and the surrounding M9 postcode area, including Charlestown and Victoria Avenue, within 20-30 minutes.',
+              q: 'Do you provide mobile tyre fitting in Blackley?',
+              a: 'Yes. We provide mobile tyre fitting Blackley services across Blackley and surrounding areas.',
             },
             {
-              q: 'What areas around Blackley do you cover?',
-              a: 'Yes. We cover Blackley and the surrounding M9 postcode area, along with Rochdale Road, Victoria Avenue and the routes connecting Blackley to Queens Park and Harpurhey.',
+              q: 'Can you replace my tyre at my location?',
+              a: 'Yes. We can provide mobile tyre replacement at your home, workplace or a suitable roadside location.',
             },
             {
-              q: 'Do you fit tyres for electric vehicles in Blackley?',
-              a: 'Yes. We carry the correct jacking equipment and reinforced XL-rated tyres for electric and hybrid vehicles, and our technicians are trained specifically in EV tyre fitting.',
+              q: 'Do you provide emergency tyre replacement in Blackley?',
+              a: 'Yes. Emergency tyre replacement is available when a damaged or unsafe tyre needs to be replaced and a suitable replacement is available.',
             },
             {
-              q: 'Can you fit tyres at my workplace in Blackley or nearby Harpurhey?',
-              a: "Absolutely. We regularly visit business premises across Blackley and neighbouring Harpurhey, fitting your tyres on-site so you don't lose time off work.",
+              q: 'Can you repair a punctured tyre instead of replacing it?',
+              a: 'Where the damage is safe and suitable for repair, a puncture may be repaired. If the tyre cannot be safely repaired, replacement will be recommended.',
+            },
+            {
+              q: 'Can you fit tyres at my home in Blackley?',
+              a: 'Yes. We can fit or replace tyres at your home where there is a safe and suitable area for the work.',
+            },
+            {
+              q: 'Can you fit tyres at my workplace?',
+              a: 'Yes. Workplace tyre fitting is possible where the location provides a safe and accessible area for our technician.',
+            },
+            {
+              q: 'Do you provide 24/7 mobile tyre fitting in Blackley?',
+              a: 'Yes. Our mobile tyre service is available 24/7 for suitable tyre fitting and replacement requirements.',
+            },
+            {
+              q: 'Can you help if I have a flat tyre?',
+              a: 'Yes. We can assess your flat tyre and determine whether a repair or tyre replacement is the safest solution.',
+            },
+            {
+              q: 'Can you replace a tyre after a blowout?',
+              a: 'Yes. If your tyre has suffered a blowout and cannot be safely repaired, we can provide replacement assistance where a suitable tyre is available.',
+            },
+            {
+              q: 'How long does mobile tyre fitting take?',
+              a: "The time depends on the number of tyres, vehicle and work required. We'll provide an estimated timeframe based on your requirements.",
+            },
+            {
+              q: 'What information do I need to book tyre replacement?',
+              a: 'Your vehicle registration or tyre size, your location in Blackley and the number of tyres you need are normally enough to get started.',
+            },
+            {
+              q: 'Can you replace just one tyre?',
+              a: 'Yes, where a suitable replacement is available. Our technician can assess the vehicle and advise on the appropriate option.',
+            },
+            {
+              q: 'Do you cover areas around Blackley?',
+              a: 'Yes. We provide service across Blackley and surrounding North Manchester areas, including nearby locations such as Harpurhey and Charlestown.',
+            },
+            {
+              q: "Can you provide mobile tyre fitting near me in Blackley?",
+              a: "Yes. If you're located in Blackley, contact us with your exact location and tyre requirements so we can assess the appropriate service.",
+            },
+            {
+              q: 'Can you replace a tyre at the roadside?',
+              a: 'Yes, provided the roadside location is safe and suitable for our technician to carry out the work.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 10. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Blackley Right Now?</h2>

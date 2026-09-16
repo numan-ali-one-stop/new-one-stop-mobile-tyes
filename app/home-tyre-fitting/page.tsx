@@ -576,17 +576,15 @@ export default function HomeTyreFittingPage() {
           Need new tyres without visiting a garage? Book our Home Tyre Fitting service and have your tyres fitted at a convenient location at home. We provide professional home tyre replacement across Greater Manchester, helping you save time and avoid unnecessary travel.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {/* TODO: confirm destination — see chat for the quote-form / booking-route question */}
           <a
-            href="#TODO-get-a-quote-destination"
+            href="/contact"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
             Get a Quote
           </a>
-          {/* TODO: confirm destination — see chat for the quote-form / booking-route question */}
           <a
-            href="#TODO-book-tyre-fitting-destination"
+            href="/contact"
             className="bg-white/10 border border-white/20 text-white font-black px-10 py-4 rounded-xl flex items-center gap-2.5 hover:bg-white/20 transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >

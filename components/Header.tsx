@@ -60,7 +60,7 @@ const motorwayLinks = [
   { label: 'M56', href: '/mobile-tyre-fitting-m56', icon: 'route' },
   { label: 'M66', href: '/mobile-tyre-fitting-m66', icon: 'route' },
   { label: 'M67', href: '/mobile-tyre-fitting-m67', icon: 'route' },
-  { label: 'A627', href: '/mobile-tyre-fitting-a627', icon: 'route' },
+  { label: 'A627(M)', href: '/mobile-tyre-fitting-a627', icon: 'route' },
 ]
 
 // ─── Component ───────────────────────────────────────────────────────────────
