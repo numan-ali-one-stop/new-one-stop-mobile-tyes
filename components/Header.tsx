@@ -53,14 +53,17 @@ const serviceLinks = [
 ]
 
 const motorwayLinks = [
+  { label: 'M6', href: '/mobile-tyre-fitting-m6', icon: 'route' },
   { label: 'M60', href: '/mobile-tyre-fitting-m60', icon: 'route' },
   { label: 'M602', href: '/mobile-tyre-fitting-m602', icon: 'route' },
   { label: 'M61', href: '/mobile-tyre-fitting-m61', icon: 'route' },
-  { label: 'M62', href: '/mobile-tyre-fitting-m62', icon: 'route' },
   { label: 'M56', href: '/mobile-tyre-fitting-m56', icon: 'route' },
+  { label: 'M62', href: '/mobile-tyre-fitting-m62', icon: 'route' },
   { label: 'M66', href: '/mobile-tyre-fitting-m66', icon: 'route' },
-  { label: 'M67', href: '/mobile-tyre-fitting-m67', icon: 'route' },
   { label: 'A627(M)', href: '/mobile-tyre-fitting-a627', icon: 'route' },
+  { label: 'M67', href: '/mobile-tyre-fitting-m67', icon: 'route' },
+  { label: 'A57(M)', href: '/mobile-tyre-fitting-a57', icon: 'route' },
+  { label: 'Wilmslow Road', href: '/mobile-tyre-fitting-wilmslow-road', icon: 'route' },
 ]
 
 // ─── Component ───────────────────────────────────────────────────────────────
@@ -481,7 +484,7 @@ export default function Header() {
                         location_on
                       </span>
                       <p className="text-[12px] text-slate-600 leading-tight">
-                        <span className="font-bold text-slate-800">9 boroughs, 27 towns &amp; 8 motorways</span> covered 24/7
+                        <span className="font-bold text-slate-800">10 boroughs, 230+ towns &amp; 11 routes</span> covered 24/7
                       </p>
                     </div>
                     <a

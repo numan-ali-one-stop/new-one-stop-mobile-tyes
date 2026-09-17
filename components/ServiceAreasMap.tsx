@@ -1,14 +1,17 @@
 import { BOROUGHS } from '@/lib/locations'
 
 const ROAD_PAGES = [
+  { name: 'M6', slug: 'm6' },
   { name: 'M60', slug: 'm60' },
-  { name: 'M61', slug: 'm61' },
-  { name: 'M62', slug: 'm62' },
-  { name: 'M56', slug: 'm56' },
-  { name: 'M66', slug: 'm66' },
-  { name: 'M67', slug: 'm67' },
   { name: 'M602', slug: 'm602' },
-  { name: 'A627', slug: 'a627' },
+  { name: 'M61', slug: 'm61' },
+  { name: 'M56', slug: 'm56' },
+  { name: 'M62', slug: 'm62' },
+  { name: 'M66', slug: 'm66' },
+  { name: 'A627(M)', slug: 'a627' },
+  { name: 'M67', slug: 'm67' },
+  { name: 'A57(M)', slug: 'a57' },
+  { name: 'Wilmslow Road', slug: 'wilmslow-road' },
 ]
 
 export default function ServiceAreasMap() {

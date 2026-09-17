@@ -6,7 +6,7 @@ import { BOROUGHS } from '@/lib/locations'
 export const metadata = buildMetadata({
   title: 'Service Area | Mobile Tyre Fitting Coverage',
   description:
-    'Full coverage map: all 10 Greater Manchester boroughs plus 8 motorways, covered 24/7 always.',
+    'Full coverage map: all 10 Greater Manchester boroughs plus 11 motorways and major roads, covered 24/7 always.',
   path: '/service-area',
 })
 
@@ -97,40 +97,16 @@ const boroughAreas = [
 // ── Motorway / road cards ─────────────────────────────────────────────────────
 const motorwayAreas = [
   {
+    name: 'M6 Motorway',
+    href: '/mobile-tyre-fitting-m6',
+    junctions: 'J23 – J27 (GM stretch)',
+    desc: 'Coverage of the M6 as it passes Wigan and the western fringe of Greater Manchester.',
+  },
+  {
     name: 'M60 Orbital',
     href: '/mobile-tyre-fitting-m60',
     junctions: 'J1 – J27 (full ring)',
     desc: 'Complete coverage of the Greater Manchester orbital motorway — all 27 junctions, 24/7.',
-  },
-  {
-    name: 'M61 Motorway',
-    href: '/mobile-tyre-fitting-m61',
-    junctions: 'J1 – J9',
-    desc: 'Manchester to Preston corridor covered from J1 Worsley through to J9 at Clayton Brook.',
-  },
-  {
-    name: 'M62 Motorway',
-    href: '/mobile-tyre-fitting-m62',
-    junctions: 'J12 – J21 (GM stretch)',
-    desc: 'Trans-Pennine motorway serviced across the Greater Manchester section including Eccles and Birch.',
-  },
-  {
-    name: 'M56 Motorway',
-    href: '/mobile-tyre-fitting-m56',
-    junctions: 'J1 – J6 (GM stretch)',
-    desc: 'Manchester Airport corridor covered on the Greater Manchester stretch of the M56, from the Cheshire border to the A34 interchange.',
-  },
-  {
-    name: 'M66 Motorway',
-    href: '/mobile-tyre-fitting-m66',
-    junctions: 'J1 – J5',
-    desc: 'Manchester to Ramsbottom — emergency tyre cover on the M66 north–south corridor.',
-  },
-  {
-    name: 'M67 Motorway',
-    href: '/mobile-tyre-fitting-m67',
-    junctions: 'J1 – J4',
-    desc: 'Hyde bypass and Tameside connector fully covered from Denton interchange to Mottram.',
   },
   {
     name: 'M602 Motorway',
@@ -139,10 +115,52 @@ const motorwayAreas = [
     desc: 'Salford inner relief route — fast response on the M602 between Eccles and Regent Road.',
   },
   {
+    name: 'M61 Motorway',
+    href: '/mobile-tyre-fitting-m61',
+    junctions: 'J1 – J9',
+    desc: 'Manchester to Preston corridor covered from J1 Worsley through to J9 at Clayton Brook.',
+  },
+  {
+    name: 'M56 Motorway',
+    href: '/mobile-tyre-fitting-m56',
+    junctions: 'J1 – J6 (GM stretch)',
+    desc: 'Manchester Airport corridor covered on the Greater Manchester stretch of the M56, from the Cheshire border to the A34 interchange.',
+  },
+  {
+    name: 'M62 Motorway',
+    href: '/mobile-tyre-fitting-m62',
+    junctions: 'J12 – J21 (GM stretch)',
+    desc: 'Trans-Pennine motorway serviced across the Greater Manchester section including Eccles and Birch.',
+  },
+  {
+    name: 'M66 Motorway',
+    href: '/mobile-tyre-fitting-m66',
+    junctions: 'J1 – J5',
+    desc: 'Manchester to Ramsbottom — emergency tyre cover on the M66 north–south corridor.',
+  },
+  {
     name: 'A627(M)',
     href: '/mobile-tyre-fitting-a627',
     junctions: 'Oldham – Chadderton',
     desc: 'A627(M) spur road and approaches covered — connecting Oldham town centre to the M60.',
+  },
+  {
+    name: 'M67 Motorway',
+    href: '/mobile-tyre-fitting-m67',
+    junctions: 'J1 – J4',
+    desc: 'Hyde bypass and Tameside connector fully covered from Denton interchange to Mottram.',
+  },
+  {
+    name: 'A57(M)',
+    href: '/mobile-tyre-fitting-a57',
+    junctions: 'Mancunian Way spur',
+    desc: 'The A57(M) Mancunian Way through Manchester city centre, linking Chester Road to Ardwick.',
+  },
+  {
+    name: 'Wilmslow Road',
+    href: '/mobile-tyre-fitting-wilmslow-road',
+    junctions: 'Rusholme – Didsbury',
+    desc: 'The A34 corridor along Wilmslow Road through Rusholme, Fallowfield, Withington and Didsbury.',
   },
 ]
 
@@ -151,7 +169,7 @@ const trustBadges = [
   { icon: 'schedule', label: '24/7 Emergency', sub: 'Always on call' },
   { icon: 'bolt', label: '20–30 Min', sub: 'Average arrival' },
   { icon: 'public', label: '10 Boroughs', sub: 'Greater Manchester' },
-  { icon: 'route', label: '8 Motorways', sub: 'Full roadside cover' },
+  { icon: 'route', label: '11 Routes', sub: 'Full roadside cover' },
 ]
 
 
@@ -165,7 +183,7 @@ const _serviceSchema = serviceSchema({
   name: 'Mobile Tyre Fitting Coverage — Greater Manchester',
   serviceType: 'Mobile Tyre Fitting',
   description:
-    'Mobile tyre fitting and roadside assistance across all 10 Greater Manchester boroughs and the M60, M61, M62, M56, M66, M67, M602 and A627 motorways.',
+    'Mobile tyre fitting and roadside assistance across all 10 Greater Manchester boroughs and the M6, M60, M602, M61, M56, M62, M66, A627(M), M67, A57(M) and Wilmslow Road.',
   areaServed: { '@type': 'AdministrativeArea', name: 'Greater Manchester' },
 })
 
@@ -194,7 +212,7 @@ export default function ServiceAreaPage() {
             Our Service Area
           </h1>
           <p className="font-body-lg text-base lg:text-body-lg text-white/90 max-w-2xl mx-auto mb-6 sm:mb-8 text-pretty leading-relaxed">
-            We cover all 10 Greater Manchester boroughs and 8 major motorways — wherever you
+            We cover all 10 Greater Manchester boroughs and 11 major roads and motorways — wherever you
             are, we&apos;ll come to you, 24 hours a day, 7 days a week.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">

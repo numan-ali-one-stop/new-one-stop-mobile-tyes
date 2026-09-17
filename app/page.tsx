@@ -94,7 +94,7 @@ const faqSchema = {
       name: 'Do you provide tyre services on motorways?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. We provide assistance around major routes including the M60, M61, M62, M56, M602, M66, M67 and A627. For your safety, always move to a safe location away from moving traffic where possible.',
+        text: 'Yes. We provide assistance around major routes including the M6, M60, M602, M61, M56, M62, M66, A627(M), M67, A57(M) and Wilmslow Road. For your safety, always move to a safe location away from moving traffic where possible.',
       },
     },
     {
@@ -591,7 +591,7 @@ export default function Home() {
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan,
-              as well as major routes including the M60, M61, M62, M56, M602, M66, M67 and A627.
+              as well as major routes including the M6, M60, M602, M61, M56, M62, M66, A627(M), M67, A57(M) and Wilmslow Road.
             </p>
             <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
               Our qualified technicians assess damaged tyres to determine whether a safe tyre repair is
@@ -757,7 +757,7 @@ export default function Home() {
             />
             <FaqItem
               q="Do you provide tyre services on motorways?"
-              a="Yes. We provide assistance around major routes including the M60, M61, M62, M56, M602, M66, M67 and A627. For your safety, always move to a safe location away from moving traffic where possible."
+              a="Yes. We provide assistance around major routes including the M6, M60, M602, M61, M56, M62, M66, A627(M), M67, A57(M) and Wilmslow Road. For your safety, always move to a safe location away from moving traffic where possible."
             />
             <FaqItem
               q="Can you repair a punctured tyre?"

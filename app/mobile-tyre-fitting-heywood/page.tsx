@@ -164,7 +164,7 @@ export default function HeywoodPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Mobile Tyre Replacement', desc: 'If the tyre has suffered a blowout, serious sidewall damage or excessive wear, our mobile tyre replacement service allows an appropriate tyre to be supplied and fitted without another journey.', badge: "REPLACEMENT FOR TYRES THAT CAN'T CONTINUE",
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'A puncture can sometimes be repaired rather than replaced. Our technician assesses the location and extent of the damage first and carries out a professional repair where the tyre meets the required safety standards.', badge: "REPAIR WHEN IT'S SAFE TO DO SO",
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'A puncture can sometimes be repaired rather than replaced. Our technician assesses the location and extent of the damage first and carries out a professional repair where the tyre meets the required safety standards.', badge: "REPAIR WHEN IT'S SAFE TO DO SO",
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'If the battery has failed rather than the tyre, our mobile technicians can also provide jump-start assistance across Heywood and surrounding areas.', badge: 'SUPPORT FOR A FLAT BATTERY',
                   href: '/jump-start' },
@@ -172,6 +172,13 @@ export default function HeywoodPage() {
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'A lost key or damaged locking wheel nut can stop normal tyre work. Our technicians use specialist removal tools to gain access to the wheel while taking care around the fitting.', badge: "WHEN A LOCKING NUT WON'T COME OFF",
                   href: '/locking-nut-removal' },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Heywood, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">

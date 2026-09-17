@@ -263,7 +263,7 @@ export default function BlackleyPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: 'Professional mobile puncture repair across Blackley, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -288,6 +288,13 @@ export default function BlackleyPage() {
                   desc: 'Specialist, damage-free locking wheel nut removal across Blackley using professional tools.',
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Blackley, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a

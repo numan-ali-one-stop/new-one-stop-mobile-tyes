@@ -164,7 +164,7 @@ export default function MiddletonPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Mobile Tyre Replacement', desc: 'If a tyre has suffered severe damage, a blowout or excessive wear, our mobile tyre replacement service allows the replacement tyre to be supplied and fitted where your vehicle is safely parked.', badge: "REPLACEMENT FOR DAMAGED OR WORN TYRES",
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'Some punctures can be professionally repaired rather than requiring a new tyre. Our technician first checks the location and extent of the damage and carries out a repair only where it meets the required safety conditions.', badge: "REPAIR WHEN THE DAMAGE IS SUITABLE",
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'Some punctures can be professionally repaired rather than requiring a new tyre. Our technician first checks the location and extent of the damage and carries out a repair only where it meets the required safety conditions.', badge: "REPAIR WHEN THE DAMAGE IS SUITABLE",
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'If battery trouble has stopped the vehicle instead, our mobile technicians can also provide jump-start support across Middleton and surrounding areas.', badge: 'HELP WHEN YOUR BATTERY IS FLAT',
                   href: '/jump-start' },
@@ -172,6 +172,13 @@ export default function MiddletonPage() {
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'A damaged locking nut or missing key can stop tyre work from going ahead. Our technicians use specialist removal tools to access the wheel and continue the required work safely.', badge: "SPECIALIST LOCKING NUT REMOVAL",
                   href: '/locking-nut-removal' },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Middleton, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">

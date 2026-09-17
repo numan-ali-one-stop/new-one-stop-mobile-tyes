@@ -221,7 +221,7 @@ export default function OldhamPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: 'Where the damage qualifies under British Standard BS AU 159, we carry out a professional plug-and-patch repair on-site — saving you the cost of a full replacement.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -246,6 +246,13 @@ export default function OldhamPage() {
                   desc: 'Lost your locking wheel nut key? Our specialists use professional-grade tools to remove locking nuts without causing any damage to your alloys or wheel studs.',
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Oldham, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a

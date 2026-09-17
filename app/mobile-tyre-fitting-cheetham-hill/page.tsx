@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
 const _serviceSchema = serviceSchema({
@@ -16,10 +16,18 @@ const _serviceSchema = serviceSchema({
   areaServed: { '@type': 'City', name: 'Cheetham Hill' },
 })
 
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-cheetham-hill')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-cheetham-hill')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-cheetham-hill',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Cheetham Hill',
+})
+
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Cheetham Hill | One Stop Mobile Tyres 24/7',
+  title: 'Mobile Tyre Fitting Cheetham Hill | 24/7 Replacement',
   description:
-    'Need mobile tyre fitting in Cheetham Hill? Fast, reliable same day mobile tyre service.',
+    'Need mobile tyre fitting in Cheetham Hill? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-cheetham-hill',
 })
 
@@ -37,10 +45,46 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
   )
 }
 
+const whyChooseCheethamHill = [
+  {
+    icon: 'schedule',
+    title: '24/7 Tyre Assistance',
+    desc: 'Get professional support when you need tyre fitting or replacement.',
+  },
+  {
+    icon: 'tire_repair',
+    title: 'Mobile Tyre Replacement',
+    desc: 'Have damaged or unsafe tyres replaced at a suitable location.',
+  },
+  {
+    icon: 'directions_car',
+    title: 'Convenient Service',
+    desc: 'Avoid the hassle of driving to a traditional tyre centre.',
+  },
+  {
+    icon: 'engineering',
+    title: 'Professional Fitting',
+    desc: 'Tyres are fitted using appropriate equipment and procedures.',
+  },
+  {
+    icon: 'home_repair_service',
+    title: 'Home & Workplace Fitting',
+    desc: 'Arrange tyre fitting where there is a safe and accessible working area.',
+  },
+  {
+    icon: 'location_on',
+    title: 'Local Cheetham Hill Coverage',
+    desc: 'Service available across Cheetham Hill and surrounding areas.',
+  },
+]
+
 export default function CheethamHillPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
       <JsonLd data={_serviceSchema} />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -69,18 +113,17 @@ export default function CheethamHillPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Cheetham Hill. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Need a tyre fitted or replaced in Cheetham Hill? Our <strong>mobile tyre fitting Cheetham Hill</strong> service brings professional tyre fitting directly to your home, workplace or a suitable roadside location. We also provide emergency tyre replacement when a damaged or unsafe tyre cannot be repaired.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering Cheetham Hill &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Home, Workplace & Roadside Fitting',
+                'Mobile Puncture Repair',
+                'Cheetham Hill & Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span
@@ -220,7 +263,7 @@ export default function CheethamHillPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: 'Professional mobile puncture repair across Cheetham Hill, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -245,6 +288,13 @@ export default function CheethamHillPage() {
                   desc: 'Specialist, damage-free locking wheel nut removal across Cheetham Hill using professional tools.',
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Cheetham Hill, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a
@@ -340,39 +390,168 @@ export default function CheethamHillPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Cheetham Hill
+                Professional Mobile Tyre Fitting in Cheetham Hill
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Cheetham Hill, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Cheetham Hill and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Cheetham Hill.
-                If you&apos;re searching for mobile tyre fitting near me in Cheetham Hill, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+                A punctured, damaged or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Cheetham Hill</strong> service allows you to have your tyres fitted or replaced at a convenient location.
               </p>
+              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides professional mobile tyre fitting across Cheetham Hill and nearby areas. Whether you&apos;re at home, at work, in a suitable car park or stranded at the roadside, our technician can assess your tyre requirements and carry out fitting or replacement where conditions are safe and suitable.
+              </p>
+              <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
+                  icon="tire_repair"
+                  title="Mobile Tyre Fitting"
+                  desc="Get your tyres fitted at a convenient location without making an unnecessary garage visit."
+                />
+                <FeatureItem
                   icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
+                  title="Tyre Replacement"
+                  desc="If a tyre is damaged beyond safe repair, we can provide a suitable replacement where available."
                 />
                 <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
+                  icon="location_on"
+                  title="Convenient Local Service"
+                  desc="Our technician comes directly to your location in Cheetham Hill."
                 />
                 <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
+                  icon="schedule"
+                  title="24/7 Tyre Assistance"
+                  desc="Get professional tyre fitting and replacement support when you need it."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY BOLTON DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Cheetham Hill" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. WHY CHOOSE ─────────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service in Cheetham Hill?"
+          intro=""
+          items={whyChooseCheethamHill}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Our Mobile Tyre Fitting Service Works in Cheetham Hill
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Us',
+                  desc: 'Tell us your location in Cheetham Hill, vehicle details and the tyre service you need.',
+                },
+                {
+                  n: '2',
+                  title: 'Confirm Your Tyre Requirements',
+                  desc: 'Provide your vehicle registration or tyre size so we can identify the appropriate tyre where replacement is required.',
+                },
+                {
+                  n: '3',
+                  title: 'We Come to You',
+                  desc: 'Our technician travels to your home, workplace or another suitable location.',
+                },
+                {
+                  n: '4',
+                  title: 'Fit or Replace Your Tyre',
+                  desc: 'We remove the existing tyre where required, fit the replacement and carry out the necessary checks before completing the service.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 3 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ACROSS CHEETHAM HILL ──── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Mobile Tyre Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Replacement Across Cheetham Hill
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Not every damaged tyre can be repaired safely. Our <strong>mobile tyre replacement Cheetham Hill</strong> service provides a convenient option when you need a new tyre fitted without driving to a garage.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can replace tyres that are severely damaged, worn beyond safe limits or punctured in a way that makes repair unsuitable. Our technician assesses the tyre first and determines whether tyre repair or replacement is appropriate.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Cheetham Hill, subject to tyre availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING & REPLACEMENT ───── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Emergency Mobile Tyre Fitting &amp; Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Cheetham Hill
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A sudden puncture, blowout or damaged tyre can leave you unable to continue your journey. Our <strong>emergency mobile tyre fitting Cheetham Hill</strong> service provides practical assistance when you need a tyre fitted or replaced at your location.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If the tyre can be safely repaired, our technician can assess the damage and provide puncture repair where appropriate. If repair isn&apos;t suitable, we can arrange emergency tyre replacement with a suitable tyre, subject to availability.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our mobile service can be provided at home, work or a safe roadside location in Cheetham Hill.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -381,56 +560,93 @@ export default function CheethamHillPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-cheetham-hill"
           city="Cheetham Hill"
           faqs={[
             {
-              q: 'How quickly can you reach me in Cheetham Hill?',
-              a: 'Our mobile units are strategically positioned across north Manchester, meaning we can typically reach Cheetham Hill and the surrounding M8 postcode area, including Cheetham Hill Road, within 20-30 minutes.',
+              q: 'Do you provide mobile tyre fitting in Cheetham Hill?',
+              a: 'Yes. We provide mobile tyre fitting in Cheetham Hill for drivers who need tyres fitted or replaced at a convenient location.',
             },
             {
-              q: 'What areas around Cheetham Hill do you cover?',
-              a: 'Yes. We cover Cheetham Hill and the surrounding M8 postcode area, along with Cheetham Hill Road (A665) and the routes connecting to Crumpsall and Broughton.',
+              q: 'Can you replace my tyre in Cheetham Hill?',
+              a: 'Yes. We provide mobile tyre replacement for damaged, worn or unsafe tyres where a suitable replacement is available.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Cheetham Hill?',
-              a: "In many cases, yes. Provided the puncture falls within the legal repair zone, we'll carry out a BS AU 159-compliant repair rather than sell you a tyre you don't need.",
+              q: 'Do you provide emergency tyre replacement?',
+              a: 'Yes. If your tyre cannot be safely repaired, we can provide emergency replacement assistance subject to tyre availability.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Cheetham Hill Road?',
-              a: "Yes. We regularly attend businesses along Cheetham Hill Road and the surrounding industrial units, fitting your tyres on-site so you don't need to leave work.",
+              q: 'Can you repair a punctured tyre instead of replacing it?',
+              a: 'Yes. Our technician assesses the puncture first. If the damage is suitable for repair, a puncture repair may be possible. Otherwise, tyre replacement may be recommended.',
+            },
+            {
+              q: 'Can you fit tyres at my home in Cheetham Hill?',
+              a: 'Yes. We can provide home tyre fitting where there is a safe and suitable area for the technician to work.',
+            },
+            {
+              q: 'Can you fit tyres at my workplace?',
+              a: 'Yes. Mobile tyre fitting can be arranged at your workplace if there is a safe and accessible location for the work.',
+            },
+            {
+              q: 'Do you provide 24/7 mobile tyre fitting in Cheetham Hill?',
+              a: 'Yes. Our mobile tyre service is available 24/7 for suitable tyre fitting and replacement requirements.',
+            },
+            {
+              q: 'Can you help if I have a flat tyre?',
+              a: 'Yes. We can assess your flat tyre and determine whether it requires a puncture repair or tyre replacement.',
+            },
+            {
+              q: 'Can you replace a tyre after a blowout?',
+              a: 'Yes. If the tyre has suffered a blowout and cannot be safely repaired, we can provide replacement assistance where a suitable tyre is available.',
+            },
+            {
+              q: 'How long does mobile tyre fitting take?',
+              a: "The time depends on the number of tyres, vehicle and work required. We'll provide an estimated timeframe when arranging your appointment.",
+            },
+            {
+              q: 'What information do I need to book a replacement tyre?',
+              a: 'Your vehicle registration or tyre size, your Cheetham Hill location and the number of tyres required are normally enough to get started.',
+            },
+            {
+              q: 'Can you replace just one tyre?',
+              a: "Yes, where a suitable replacement is available. Our technician can assess the vehicle and advise you based on the tyre's condition and requirements.",
+            },
+            {
+              q: "Do you provide tyre fitting near me in Cheetham Hill?",
+              a: "Yes. If you're in Cheetham Hill, contact us with your location and tyre requirements so we can assess the appropriate service.",
+            },
+            {
+              q: 'Can you provide mobile tyre fitting at the roadside?',
+              a: 'Yes, provided the location is safe and suitable for our technician to carry out the work.',
+            },
+            {
+              q: 'Do you cover areas near Cheetham Hill?',
+              a: 'Yes. We provide service in Cheetham Hill and surrounding North Manchester areas, including nearby locations such as Crumpsall, Harpurhey, Blackley and Collyhurst.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Cheetham Hill Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Cheetham Hill line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Cheetham Hill?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a new tyre fitted, a damaged tyre replaced or a puncture assessed, our mobile service brings professional tyre assistance directly to you. With One Stop Tyres 247, you can arrange tyre fitting or replacement at home, work or a suitable roadside location across Cheetham Hill.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="/contact"
               >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
+                <span className="material-symbols-outlined text-xl sm:text-2xl">calendar_month</span>
+                Book Mobile Tyre Fitting
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="https://wa.me/447759708646"
+                href="tel:07759708646"
               >
-                <span className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
-                WhatsApp Us
+                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                Call Now
               </a>
             </div>
           </div>

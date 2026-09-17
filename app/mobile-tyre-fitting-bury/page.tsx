@@ -220,7 +220,7 @@ export default function BuryPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: 'Not every puncture requires a new tyre. Where the location and type of damage meet repair standards, our technician can inspect the tyre and carry out a professional repair.',
                   badge: 'REPAIR WHERE SUITABLE',
                   href: '/puncture-repair-Greater-manchester',
@@ -245,6 +245,13 @@ export default function BuryPage() {
                   desc: 'Missing or damaged locking wheel nut key? Our technicians use specialist equipment to help remove locking wheel nuts while reducing the risk of damage to the wheel.',
                   badge: 'SPECIALIST REMOVAL',
                   href: '/locking-nut-removal',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Bury, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a

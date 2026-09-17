@@ -164,7 +164,7 @@ export default function HorwichPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Mobile Tyre Replacement', desc: 'If impact damage, a split sidewall or excessive wear means the tyre cannot remain in use, our mobile tyre replacement service brings an appropriate replacement directly to you.', badge: 'A NEW TYRE WITHOUT AN EXTRA JOURNEY',
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'Not every puncture means replacing the entire tyre. Our technician checks the location and extent of the damage first and carries out a professional repair where it meets the required safety conditions.', badge: 'REPAIR WHEN THE TYRE ALLOWS IT',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'Not every puncture means replacing the entire tyre. Our technician checks the location and extent of the damage first and carries out a professional repair where it meets the required safety conditions.', badge: 'REPAIR WHEN THE TYRE ALLOWS IT',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'If a battery problem rather than a tyre has stopped your journey, our mobile technicians can also provide jump-start assistance across Horwich and nearby areas.', badge: 'SUPPORT FOR A FLAT BATTERY',
                   href: '/jump-start' },
@@ -172,6 +172,13 @@ export default function HorwichPage() {
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'Lost your locking wheel nut key or dealing with a damaged nut? Our technicians use specialist equipment to remove difficult locking wheel nuts and allow the required tyre work to continue.', badge: "ACCESS WHEN A LOCKING NUT WON'T MOVE",
                   href: '/locking-nut-removal' },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Horwich, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">

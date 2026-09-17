@@ -65,11 +65,11 @@ export default function IrlamOThHeightPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Hall i&apos; th&apos; Wood
+              24/7 Mobile Tyre Fitting Irlam o&apos; th&apos; Height
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Hall i&apos; th&apos; Wood. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Irlam o&apos; th&apos; Height. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
             </p>
 
             {/* Trust bullets */}
@@ -106,7 +106,7 @@ export default function IrlamOThHeightPage() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Hall i&apos; th&apos; Wood &amp; Greater Manchester</span>
+              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Irlam o&apos; th&apos; Height &amp; Greater Manchester</span>
             </a>
 
             {/* CTAs */}
@@ -196,10 +196,10 @@ export default function IrlamOThHeightPage() {
                 className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Hall i&apos; th&apos; Wood
+                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Irlam o&apos; th&apos; Height
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Hall i&apos; th&apos; Wood. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                Mobile tyre fitting, emergency tyre replacement and puncture repair across Irlam o&apos; th&apos; Height. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -220,7 +220,7 @@ export default function IrlamOThHeightPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: "Professional mobile puncture repair across Irlam o' th' Height, carried out on-site where safe and suitable.",
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -245,6 +245,13 @@ export default function IrlamOThHeightPage() {
                   desc: "Specialist, damage-free locking wheel nut removal across Irlam o' th' Height using professional tools.",
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: "Emergency roadside support for tyre and vehicle problems across Irlam o' th' Height, wherever you get stranded.",
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a
@@ -340,13 +347,13 @@ export default function IrlamOThHeightPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Hall i&apos; th&apos; Wood
+                Expert Mobile Tyre Fitting Service Across Irlam o&apos; th&apos; Height
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Hall i&apos; th&apos; Wood, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Hall i&apos; th&apos; Wood and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Hall i&apos; th&apos; Wood.
-                If you&apos;re searching for mobile tyre fitting near me in Hall i&apos; th&apos; Wood, our fast response team is available day and night.
+                One Stop Tyres provides 24/7 mobile tyre fitting in Irlam o&apos; th&apos; Height, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
+                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Irlam o&apos; th&apos; Height and surrounding areas.
+                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Irlam o&apos; th&apos; Height.
+                If you&apos;re searching for mobile tyre fitting near me in Irlam o&apos; th&apos; Height, our fast response team is available day and night.
               </p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
@@ -408,8 +415,8 @@ export default function IrlamOThHeightPage() {
         {/* ── 8. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Hall i&apos; th&apos; Wood Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Hall i&apos; th&apos; Wood line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Irlam o&apos; th&apos; Height Right Now?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Irlam o&apos; th&apos; Height line and get a technician dispatched in minutes.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

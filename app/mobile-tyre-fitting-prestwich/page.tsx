@@ -164,7 +164,7 @@ export default function PrestwichPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Mobile Tyre Replacement', desc: 'When a tyre is no longer suitable for continued use, our mobile tyre replacement service allows you to have a suitable replacement supplied and fitted on-site. We offer tyre choices for different vehicles and budgets.', badge: 'REPLACEMENT WITHOUT THE GARAGE TRIP',
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'Some punctures can be repaired safely rather than requiring a new tyre. Our technicians inspect the damaged area first and carry out an appropriate repair where the tyre meets the required safety conditions.', badge: 'SAVE THE TYRE WHERE POSSIBLE',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'Some punctures can be repaired safely rather than requiring a new tyre. Our technicians inspect the damaged area first and carry out an appropriate repair where the tyre meets the required safety conditions.', badge: 'SAVE THE TYRE WHERE POSSIBLE',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'A flat battery can stop your journey just as quickly as damaged tyres. Our mobile team can provide jump-start assistance across Prestwich when your vehicle has enough battery-related trouble to leave you unable to continue.', badge: 'BATTERY SUPPORT ON THE ROAD',
                   href: '/jump-start' },
@@ -172,6 +172,13 @@ export default function PrestwichPage() {
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'Lost the locking wheel nut key or dealing with a damaged locking nut? Specialist tools allow our technicians to remove difficult wheel nuts and gain access to the tyre for fitting or repair.', badge: 'HELP WITH STUBBORN LOCKING NUTS',
                   href: '/locking-nut-removal' },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Prestwich, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">

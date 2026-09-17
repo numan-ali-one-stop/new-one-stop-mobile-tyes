@@ -62,7 +62,9 @@ const TOWN_PAGES = [
   'moston', 'openshaw', 'whalley-range',
 ]
 
-const ROAD_PAGES = ['m60', 'm61', 'm62', 'm56', 'm66', 'm67', 'm602', 'a627']
+const ROAD_PAGES = [
+  'm6', 'm60', 'm602', 'm61', 'm56', 'm62', 'm66', 'a627', 'm67', 'a57', 'wilmslow-road',
+]
 
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.
 const NATIONAL_CITY_PAGES = [

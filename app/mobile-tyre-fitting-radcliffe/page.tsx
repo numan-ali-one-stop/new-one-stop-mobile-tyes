@@ -164,7 +164,7 @@ export default function RadcliffePage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Mobile Tyre Replacement', desc: 'Cuts, blowouts, sidewall damage and heavy wear can make replacement the safest option. Our mobile tyre replacement service allows the required tyre to be supplied and installed without taking the vehicle to a garage.', badge: "WHEN A TYRE CAN'T CONTINUE",
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'A puncture does not always mean buying a new tyre. We inspect the position and condition of the damage first and carry out a professional repair where the tyre is suitable.', badge: 'CHECK FIRST, REPAIR WHERE SAFE',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'A puncture does not always mean buying a new tyre. We inspect the position and condition of the damage first and carry out a professional repair where the tyre is suitable.', badge: 'CHECK FIRST, REPAIR WHERE SAFE',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'If battery trouble leaves the vehicle unable to start, our technicians can also provide mobile jump-start assistance across Radcliffe as part of our roadside support.', badge: 'HELP WHEN THE BATTERY LETS YOU DOWN',
                   href: '/jump-start' },
@@ -172,6 +172,13 @@ export default function RadcliffePage() {
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'A lost or damaged locking wheel nut key can prevent normal tyre work. Our technicians use specialist removal equipment to gain access while taking care around the wheel and fittings.', badge: 'ACCESS WHEN THE KEY IS MISSING',
                   href: '/locking-nut-removal' },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Radcliffe, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">

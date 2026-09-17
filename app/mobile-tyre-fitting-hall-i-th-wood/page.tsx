@@ -220,7 +220,7 @@ export default function HallInThWoodPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: "Professional mobile puncture repair across Hall i' th' Wood, carried out on-site where safe and suitable.",
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -245,6 +245,13 @@ export default function HallInThWoodPage() {
                   desc: "Specialist, damage-free locking wheel nut removal across Hall i' th' Wood using professional tools.",
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: "Emergency roadside support for tyre and vehicle problems across Hall i' th' Wood, wherever you get stranded.",
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a

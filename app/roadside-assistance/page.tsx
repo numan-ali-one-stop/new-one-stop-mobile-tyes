@@ -417,7 +417,7 @@ export default function RoadsideAssistancePage() {
           </div>
 
           <p className="text-slate-600 text-base leading-relaxed max-w-2xl mx-auto text-center">
-            Assistance is also available around major routes including the M60, M61, M62, M56, M602, M66, M67 and A627, subject to location and service requirements.
+            Assistance is also available around major routes including the M6, M60, M602, M61, M56, M62, M66, A627(M), M67, A57(M) and Wilmslow Road, subject to location and service requirements.
           </p>
         </div>
       </section>

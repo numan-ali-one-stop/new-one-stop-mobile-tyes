@@ -164,7 +164,7 @@ export default function WesthoughtonPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Mobile Tyre Replacement', desc: 'If a tyre has suffered a blowout, sidewall damage or heavy wear, our mobile tyre replacement service allows a suitable tyre to be supplied and fitted without a separate trip to a garage.', badge: 'WHEN A TYRE NEEDS REPLACING',
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'A puncture does not always mean replacing the tyre. Our technician first checks the position and extent of the damage and repairs the tyre where it meets the required safety standards.', badge: 'REPAIR WHERE THE DAMAGE ALLOWS',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'A puncture does not always mean replacing the tyre. Our technician first checks the position and extent of the damage and repairs the tyre where it meets the required safety standards.', badge: 'REPAIR WHERE THE DAMAGE ALLOWS',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'If battery trouble is what has stopped your journey, our mobile technicians can also provide jump-start assistance across Westhoughton and nearby areas.', badge: 'SUPPORT FOR A FLAT BATTERY',
                   href: '/jump-start' },
@@ -172,6 +172,13 @@ export default function WesthoughtonPage() {
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'A missing key or damaged locking wheel nut can prevent normal tyre work. Our technicians use specialist removal tools to gain access to the wheel while taking care around the fitting.', badge: "HELP WITH LOCKING WHEEL NUTS",
                   href: '/locking-nut-removal' },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Westhoughton, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">

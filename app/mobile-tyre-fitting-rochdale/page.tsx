@@ -220,7 +220,7 @@ export default function RochdalePage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Emergency Puncture Repair',
                   desc: 'If the tyre has suffered a puncture, our technician checks the type and position of the damage before deciding whether repair is suitable. Where it meets the required safety conditions, a professional repair can be carried out.',
                   badge: 'ASSESS FIRST, REPAIR WHERE SAFE',
                   href: '/puncture-repair-Greater-manchester',
@@ -245,6 +245,13 @@ export default function RochdalePage() {
                   desc: 'A lost key, rounded nut or damaged locking wheel nut can prevent normal tyre removal. Our mobile technicians carry specialist equipment to help remove difficult locking nuts and continue the required wheel work.',
                   badge: 'SPECIALIST LOCKING NUT SUPPORT',
                   href: '/locking-nut-removal',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Rochdale, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a

@@ -164,7 +164,7 @@ export default function FarnworthPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Mobile Tyre Replacement', desc: 'Some tyres are too badly worn, split or damaged to remain in use. Our mobile tyre replacement service allows a suitable tyre to be supplied and fitted where your vehicle is safely parked.', badge: "WHEN REPAIR ISN'T AN OPTION",
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'If your tyre has picked up a nail, screw or other puncture, we first assess whether the damage is safe to repair. Where suitable, the repair can be completed without replacing an otherwise usable tyre.', badge: 'DEALING WITH PUNCTURES PROPERLY',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'If your tyre has picked up a nail, screw or other puncture, we first assess whether the damage is safe to repair. Where suitable, the repair can be completed without replacing an otherwise usable tyre.', badge: 'DEALING WITH PUNCTURES PROPERLY',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'If your journey has stopped because the battery is flat rather than the tyre, our mobile technicians can also provide jump-start support across Farnworth.', badge: 'BATTERY PROBLEM AS WELL?',
                   href: '/jump-start' },
@@ -172,6 +172,13 @@ export default function FarnworthPage() {
                   href: '/tpms-reset' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'A missing key or damaged locking wheel nut can prevent normal tyre removal. Our technicians carry specialist tools to deal with troublesome locking nuts and access the wheel safely.', badge: 'REMOVING DIFFICULT LOCKING NUTS',
                   href: '/locking-nut-removal' },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Assistance',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Farnworth, wherever you get stranded.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">
