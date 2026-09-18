@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
 const _serviceSchema = serviceSchema({
@@ -16,10 +16,18 @@ const _serviceSchema = serviceSchema({
   areaServed: { '@type': 'City', name: 'Didsbury' },
 })
 
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-didsbury')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-didsbury')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-didsbury',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Didsbury',
+})
+
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting in Didsbury | One Stop Mobile Tyres 24/7',
+  title: 'Mobile Tyre Fitting Didsbury | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Didsbury — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Didsbury? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-didsbury',
 })
 
@@ -37,10 +45,46 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
   )
 }
 
+const whyChooseDidsbury = [
+  {
+    icon: 'schedule',
+    title: '24/7 Tyre Assistance',
+    desc: 'Get professional support when you need tyre fitting or replacement.',
+  },
+  {
+    icon: 'tire_repair',
+    title: 'Mobile Tyre Replacement',
+    desc: 'Have damaged or unsafe tyres replaced at a suitable location.',
+  },
+  {
+    icon: 'directions_car',
+    title: 'Convenient Service',
+    desc: 'Avoid the hassle of driving to a traditional tyre centre.',
+  },
+  {
+    icon: 'engineering',
+    title: 'Professional Fitting',
+    desc: 'Tyres are fitted using appropriate equipment and procedures.',
+  },
+  {
+    icon: 'home_repair_service',
+    title: 'Home & Workplace Fitting',
+    desc: 'Arrange tyre fitting where there is a safe and accessible working area.',
+  },
+  {
+    icon: 'location_on',
+    title: 'Local Didsbury Coverage',
+    desc: 'Service available across Didsbury and nearby areas.',
+  },
+]
+
 export default function DidsburyPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
       <JsonLd data={_serviceSchema} />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -69,18 +113,17 @@ export default function DidsburyPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Didsbury. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Need a tyre fitted or replaced in Didsbury? Our <strong>mobile tyre fitting Didsbury</strong> service brings professional tyre fitting directly to your home, workplace or a suitable roadside location. We also provide emergency tyre replacement when a damaged or unsafe tyre cannot be repaired.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering Didsbury &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Home, Workplace & Roadside Fitting',
+                'Mobile Puncture Repair',
+                'Didsbury & Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span
@@ -347,39 +390,168 @@ export default function DidsburyPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Didsbury
+                Professional Mobile Tyre Fitting in Didsbury
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Didsbury, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Didsbury and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Didsbury.
-                If you&apos;re searching for mobile tyre fitting near me in Didsbury, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+                A punctured, damaged or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Didsbury</strong> service allows you to have your tyres fitted or replaced at a convenient location.
               </p>
+              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides professional mobile tyre fitting across Didsbury and nearby areas. Whether you&apos;re at home, at work, parked in a suitable location or dealing with a tyre problem at the roadside, our technician can assess your requirements and carry out fitting or replacement where conditions are safe and suitable.
+              </p>
+              <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
+                  icon="tire_repair"
+                  title="Mobile Tyre Fitting"
+                  desc="Get your tyres fitted at a convenient location without making an unnecessary garage visit."
+                />
+                <FeatureItem
                   icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
+                  title="Tyre Replacement"
+                  desc="If your tyre is damaged beyond safe repair, we can provide a suitable replacement where available."
                 />
                 <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
+                  icon="location_on"
+                  title="Convenient Local Service"
+                  desc="Our technician comes directly to your location in Didsbury."
                 />
                 <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
+                  icon="schedule"
+                  title="24/7 Tyre Assistance"
+                  desc="Get professional tyre fitting and replacement support when you need it."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY BOLTON DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Didsbury" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. WHY CHOOSE ─────────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service in Didsbury?"
+          intro=""
+          items={whyChooseDidsbury}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Our Mobile Tyre Fitting Service Works in Didsbury
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Us',
+                  desc: 'Tell us your location in Didsbury, vehicle details and the tyre service you require.',
+                },
+                {
+                  n: '2',
+                  title: 'Confirm Your Tyre Requirements',
+                  desc: 'Provide your vehicle registration or tyre size so we can identify the appropriate tyre where replacement is required.',
+                },
+                {
+                  n: '3',
+                  title: 'We Come to You',
+                  desc: 'Our technician travels to your home, workplace or another suitable location.',
+                },
+                {
+                  n: '4',
+                  title: 'Fit or Replace Your Tyre',
+                  desc: 'We remove the existing tyre where required, fit the replacement and carry out the necessary checks before completing the service.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 3 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ACROSS DIDSBURY ────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Mobile Tyre Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Replacement Across Didsbury
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Not every damaged tyre can be repaired safely. Our <strong>mobile tyre replacement Didsbury</strong> service provides a convenient option when you need a new tyre fitted without driving to a garage.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can replace tyres that are severely damaged, worn beyond safe limits or punctured in a way that makes repair unsuitable. Our technician assesses the tyre first and determines whether tyre repair or replacement is the appropriate option.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Whether you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Didsbury, subject to tyre availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING & REPLACEMENT ───── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Emergency Mobile Tyre Fitting &amp; Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Didsbury
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A sudden puncture, blowout or damaged tyre can leave you unable to continue your journey. Our <strong>emergency mobile tyre fitting Didsbury</strong> service provides practical assistance when you need a tyre fitted or replaced at your location.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If the tyre can be safely repaired, our technician can assess the damage and provide puncture repair where appropriate. If repair isn&apos;t suitable, we can provide emergency tyre replacement with a suitable tyre, subject to availability.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our mobile service can be provided at home, work or a safe roadside location in Didsbury.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -388,56 +560,94 @@ export default function DidsburyPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-didsbury"
           city="Didsbury"
           faqs={[
             {
-              q: 'How quickly can you reach me in Didsbury?',
-              a: 'Our mobile units are strategically positioned across south Manchester, meaning we can typically reach Didsbury and the surrounding M20 postcode area, including Wilmslow Road and Parrs Wood, within 20-30 minutes.',
+              q: 'Do you provide mobile tyre fitting in Didsbury?',
+              a: 'Yes. We provide mobile tyre fitting in Didsbury for drivers who need tyres fitted or replaced at a convenient location.',
             },
             {
-              q: 'What areas around Didsbury do you cover?',
-              a: 'Yes. We cover Didsbury and the surrounding M20 postcode area, along with Wilmslow Road, School Lane and the routes connecting to East Didsbury and Withington.',
+              q: 'Can you replace my tyre in Didsbury?',
+              a: 'Yes. We provide mobile tyre replacement for damaged, worn or unsafe tyres where a suitable replacement is available.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Didsbury?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'Do you provide emergency tyre replacement?',
+              a: 'Yes. If your tyre cannot be safely repaired, we can provide emergency replacement assistance, subject to tyre availability.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Parrs Wood or East Didsbury?',
-              a: 'Yes. We regularly attend offices and business premises around Parrs Wood and East Didsbury, fitting your tyres while you work.',
+              q: 'Can you repair a punctured tyre instead of replacing it?',
+              a: 'Yes. Our technician assesses the puncture first. If the damage is suitable for repair, a puncture repair may be possible. Otherwise, tyre replacement may be recommended.',
+            },
+            {
+              q: 'Can you fit tyres at my home in Didsbury?',
+              a: 'Yes. We can provide home tyre fitting where there is a safe and suitable area for the technician to work.',
+            },
+            {
+              q: 'Can you fit tyres at my workplace?',
+              a: 'Yes. Mobile tyre fitting can be arranged at your workplace if there is a safe and accessible location for the work.',
+            },
+            {
+              q: 'Do you provide 24/7 mobile tyre fitting in Didsbury?',
+              a: 'Yes. Our mobile tyre service is available 24/7 for suitable tyre fitting and replacement requirements.',
+            },
+            {
+              q: 'Can you help if I have a flat tyre?',
+              a: 'Yes. We can assess your flat tyre and determine whether it requires a puncture repair or tyre replacement.',
+            },
+            {
+              q: 'Can you replace a tyre after a blowout?',
+              a: 'Yes. If the tyre has suffered a blowout and cannot be safely repaired, we can provide replacement assistance where a suitable tyre is available.',
+            },
+            {
+              q: 'How long does mobile tyre fitting take?',
+              a: "The time depends on the number of tyres, vehicle and work required. We'll provide an estimated timeframe when arranging your appointment.",
+            },
+            {
+              q: 'What information do I need to book a replacement tyre?',
+              a: 'Your vehicle registration or tyre size, your Didsbury location and the number of tyres required are normally enough to get started.',
+            },
+            {
+              q: 'Can you replace just one tyre?',
+              a: "Yes, where a suitable replacement is available. Our technician can assess the vehicle and advise you based on the tyre's condition and requirements.",
+            },
+            {
+              q: 'Do you provide tyre fitting near me in Didsbury?',
+              a: "Yes. If you're in Didsbury, contact us with your location and tyre requirements so we can assess the appropriate service.",
+            },
+            {
+              q: 'Can you provide mobile tyre fitting at the roadside?',
+              a: 'Yes, provided the location is safe and suitable for our technician to carry out the work.',
+            },
+            {
+              q: 'Do you cover areas around Didsbury?',
+              a: 'Yes. We provide service across Didsbury and surrounding South Manchester areas, including East Didsbury, West Didsbury, Withington, Burnage, Northenden and Chorlton.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Didsbury Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Didsbury line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Didsbury?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a new tyre fitted, a damaged tyre replaced or a puncture assessed, our mobile service brings professional tyre assistance directly to you. With One Stop Tyres 247, you can arrange tyre fitting or replacement at home, work or a suitable roadside location across Didsbury.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
+              {/* TODO: confirm destination — no quote/booking route has been established sitewide yet (same open question as the Home Tyre Fitting, Puncture Repair, Roadside Assistance, Manchester, Cheetham Hill and Chorlton Cum Hardy pages' equivalent CTA) */}
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="#TODO-book-mobile-tyre-fitting-destination"
               >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
+                <span className="material-symbols-outlined text-xl sm:text-2xl">calendar_month</span>
+                Book Mobile Tyre Fitting
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="https://wa.me/447759708646"
+                href="tel:07759708646"
               >
-                <span className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
-                WhatsApp Us
+                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                Call Now
               </a>
             </div>
           </div>
