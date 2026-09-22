@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
 const _serviceSchema = serviceSchema({
@@ -16,10 +16,18 @@ const _serviceSchema = serviceSchema({
   areaServed: { '@type': 'City', name: 'Newton Heath' },
 })
 
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-newton-heath')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-newton-heath')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-newton-heath',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Newton Heath',
+})
+
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Newton Heath | One Stop Mobile Tyres 24/7',
+  title: 'Mobile Tyre Fitting Newton Heath | 24/7 Tyre Replacement',
   description:
-    'Book mobile tyre fitting in Newton Heath — trusted technicians, reliable roadside support.',
+    'Need mobile tyre fitting in Newton Heath? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-newton-heath',
 })
 
@@ -41,6 +49,9 @@ export default function NewtonHeathPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
       <JsonLd data={_serviceSchema} />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -69,18 +80,16 @@ export default function NewtonHeathPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Newton Heath. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Get professional mobile tyre fitting in Newton Heath at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering Newton Heath &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Work & Roadside Service',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span
@@ -347,39 +356,204 @@ export default function NewtonHeathPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Newton Heath
+                Professional Mobile Tyre Fitting in Newton Heath
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Newton Heath, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Newton Heath and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Newton Heath.
-                If you&apos;re searching for mobile tyre fitting near me in Newton Heath, our fast response team is available day and night.
+                When you need mobile tyre fitting in Newton Heath, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, our mobile service provides a convenient solution.
+                We provide professional tyre fitting and replacement across Newton Heath and surrounding areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
               </p>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
+                Our Key Services
+              </span>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
+                  icon="tire_repair"
+                  title="Mobile Tyre Fitting Newton Heath"
+                  desc="Professional tyre fitting at your home, workplace or suitable roadside location."
+                />
+                <FeatureItem
                   icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
+                  title="Mobile Tyre Replacement Newton Heath"
+                  desc="Replacement of damaged or unsafe tyres where repair is not suitable."
                 />
                 <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
+                  icon="build"
+                  title="Mobile Puncture Repair Newton Heath"
+                  desc="Puncture repair where the tyre is suitable and the damage can be safely repaired."
                 />
                 <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
+                  icon="schedule"
+                  title="24/7 Emergency Tyre Assistance"
+                  desc="Help with punctures, damaged tyres and unexpected tyre problems."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY BOLTON DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Newton Heath" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            {
+              icon: 'engineering',
+              title: 'Experienced Mobile Tyre Fitters',
+              desc: 'Our technicians provide professional tyre fitting and replacement at a location that is convenient for you.',
+            },
+            {
+              icon: 'location_on',
+              title: 'Convenient Local Service',
+              desc: 'Avoid travelling to a garage. We come to your home, workplace or a suitable roadside location in Newton Heath.',
+            },
+            {
+              icon: 'tire_repair',
+              title: 'Professional Tyre Replacement',
+              desc: 'If your tyre cannot be safely repaired, we can provide a suitable replacement and fit it at your location.',
+            },
+            {
+              icon: 'schedule',
+              title: '24/7 Emergency Assistance',
+              desc: 'Our service is available day and night for unexpected tyre problems and emergency situations.',
+            },
+            {
+              icon: 'build',
+              title: 'Repair When Suitable',
+              desc: 'We assess the tyre before recommending replacement. Where a safe repair is possible, we can carry out a puncture repair.',
+            },
+            {
+              icon: 'pin_drop',
+              title: 'Service Across Newton Heath',
+              desc: 'We cover Newton Heath and surrounding areas, providing convenient tyre assistance for local drivers.',
+            },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Newton Heath Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Us',
+                  desc: 'Tell us your location, vehicle details and the tyre service you need.',
+                },
+                {
+                  n: '2',
+                  title: 'Get a Quote',
+                  desc: 'We confirm the required service and provide pricing before proceeding.',
+                },
+                {
+                  n: '3',
+                  title: 'We Come To You',
+                  desc: 'Our tyre fitter travels to your home, workplace or a suitable roadside location in Newton Heath.',
+                },
+                {
+                  n: '4',
+                  title: 'Tyre Fitting or Replacement',
+                  desc: 'We inspect the tyre and either repair it where suitable or fit a replacement tyre.',
+                },
+                {
+                  n: '5',
+                  title: 'Safety Checks',
+                  desc: 'After fitting, the tyre is checked to make sure the vehicle is ready to return to the road.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 4 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ACROSS NEWTON HEATH ────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Mobile Tyre Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Replacement Across Newton Heath
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A damaged, worn or unsafe tyre may need to be replaced rather than repaired. Our <strong>mobile tyre replacement Newton Heath</strong> service allows you to have a replacement tyre fitted without visiting a garage.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can provide tyre replacement in Newton Heath at home, work or a suitable roadside location. If you are dealing with a puncture, blowout or damaged tyre, we assess the condition first and recommend the appropriate solution.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our service makes tyre replacement straightforward and convenient for drivers across Newton Heath.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING & REPLACEMENT ───── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Emergency Mobile Tyre Fitting &amp; Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Newton Heath
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Tyre problems can happen at any time. If you experience a puncture, blowout or damaged tyre, our <strong>emergency tyre fitting Newton Heath</strong> service provides assistance 24/7.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can attend suitable locations around Newton Heath, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover nearby areas including Miles Platting, Moston, Failsworth, Clayton and surrounding parts of Manchester.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -388,35 +562,79 @@ export default function NewtonHeathPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-newton-heath"
           city="Newton Heath"
           faqs={[
             {
+              q: 'Do you provide mobile tyre fitting in Newton Heath?',
+              a: 'Yes. We provide 24/7 mobile tyre fitting across Newton Heath at homes, workplaces and suitable roadside locations.',
+            },
+            {
+              q: 'Can you replace a tyre at my home in Newton Heath?',
+              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+            },
+            {
+              q: 'Do you offer emergency tyre fitting in Newton Heath?',
+              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+            },
+            {
+              q: 'Can you repair a punctured tyre in Newton Heath?',
+              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+            },
+            {
+              q: 'Can you fit a tyre at my workplace?',
+              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Newton Heath.',
+            },
+            {
+              q: 'Do you provide roadside tyre fitting?',
+              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+            },
+            {
               q: 'How quickly can you reach me in Newton Heath?',
-              a: 'Our mobile units are strategically positioned across north Manchester, meaning we can typically reach Newton Heath and the surrounding M40 postcode area, including Oldham Road and Dean Lane, within 20-30 minutes.',
+              a: 'Response time depends on your exact location, traffic and technician availability. We aim to provide a fast response across Newton Heath.',
             },
             {
-              q: 'What areas around Newton Heath do you cover?',
-              a: 'Yes. We cover Newton Heath and the surrounding M40 postcode area, along with Oldham Road, Dean Lane and the routes connecting to Moston and Failsworth.',
+              q: 'Do you provide 24/7 mobile tyre fitting?',
+              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
             },
             {
-              q: 'Do you fit tyres for electric vehicles in Newton Heath?',
-              a: 'Yes. We carry reinforced XL-rated and run-flat tyre stock and use the correct jacking points for electric and hybrid vehicles, so Newton Heath EV owners are fully covered.',
+              q: 'Can you replace a damaged tyre instead of repairing it?',
+              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Oldham Road?',
-              a: 'Yes. We regularly attend business premises along Oldham Road and the surrounding industrial estates, fitting your tyres on-site.',
+              q: 'Do you provide mobile tyre fitting near me in Newton Heath?',
+              a: 'Yes. If you are located in or around Newton Heath, you can contact us for mobile tyre fitting at your location.',
+            },
+            {
+              q: 'Can you help with a flat tyre in Newton Heath?',
+              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
+            },
+            {
+              q: 'Can you fit tyres at night in Newton Heath?',
+              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
+            },
+            {
+              q: 'Do you provide mobile puncture repair in Newton Heath?',
+              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
+            },
+            {
+              q: 'Can you fit tyres at home without visiting a garage?',
+              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
+            },
+            {
+              q: 'What areas near Newton Heath do you cover?',
+              a: 'We cover Newton Heath and surrounding areas including Miles Platting, Moston, Failsworth and Clayton. Contact us with your exact location to confirm service availability.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Newton Heath Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Newton Heath line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Newton Heath?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance at the roadside, One Stop Tyres 247 can come to you. Contact us today for 24/7 mobile tyre fitting in Newton Heath, tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
