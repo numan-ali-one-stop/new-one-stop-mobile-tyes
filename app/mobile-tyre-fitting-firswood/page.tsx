@@ -1,25 +1,34 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-firswood',
-  name: 'Mobile Tyre Fitting Firswood',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Firswood' },
+  alternateName: '24/7 Mobile Tyre Fitting Firswood',
+  areaServed: 'Firswood',
+  description:
+    'Need mobile tyre fitting in Firswood? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-firswood')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-firswood')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-firswood',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Firswood',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Firswood | One Stop Mobile Tyres 24/7',
+  title: 'Mobile Tyre Fitting Firswood | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Firswood — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Firswood? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-firswood',
 })
 
@@ -40,7 +49,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function FirswoodPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -69,18 +81,17 @@ export default function FirswoodPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Firswood. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Firswood at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering Firswood &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Work & Roadside Service',
+                'Firswood & Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span
@@ -347,39 +358,210 @@ export default function FirswoodPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Firswood
+                Professional Mobile Tyre Fitting in Firswood
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Firswood, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Firswood and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Firswood.
-                If you&apos;re searching for mobile tyre fitting near me in Firswood, our fast response team is available day and night.
+                When you need mobile tyre fitting in Firswood, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, our mobile technicians can help.
+                We provide tyre fitting, replacement and puncture repair across Firswood and surrounding areas, including Chorlton Road, the M16 postcode area and routes towards Old Trafford.
               </p>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
+                Our Key Services
+              </span>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
+                  icon="tire_repair"
+                  title="Mobile Tyre Fitting Firswood"
+                  desc="Professional tyre fitting at your home, workplace or a suitable roadside location without visiting a garage."
+                />
+                <FeatureItem
                   icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
+                  title="Mobile Tyre Replacement Firswood"
+                  desc="Replacement tyres for worn, damaged or unsafe tyres, fitted at your location."
                 />
                 <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
+                  icon="build"
+                  title="Mobile Puncture Repair Firswood"
+                  desc="On-site puncture repair where the tyre is suitable and the damage can be safely repaired."
                 />
                 <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
+                  icon="schedule"
+                  title="24/7 Emergency Tyre Assistance"
+                  desc="Day and night assistance for unexpected punctures, tyre damage and emergency replacement."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY FIRSWOOD DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Firswood" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            {
+              icon: 'engineering',
+              title: 'Professional Mobile Tyre Fitters',
+              desc: 'Our technicians bring specialist equipment to fit and replace tyres at your location.',
+            },
+            {
+              icon: 'home_repair_service',
+              title: 'Convenient Home and Workplace Service',
+              desc: 'Arrange tyre fitting at home or work without travelling to a garage or interrupting your day.',
+            },
+            {
+              icon: 'schedule',
+              title: '24/7 Emergency Assistance',
+              desc: 'Get assistance with unexpected tyre problems at any time, including evenings, weekends and bank holidays.',
+            },
+            {
+              icon: 'tire_repair',
+              title: 'Suitable Replacement Tyres',
+              desc: 'We offer budget, mid-range and premium tyre options, subject to your vehicle requirements and stock availability.',
+            },
+            {
+              icon: 'build',
+              title: 'Repair Where Possible',
+              desc: 'We inspect damaged tyres and carry out puncture repairs where safe and suitable, helping you avoid unnecessary replacement.',
+            },
+            {
+              icon: 'pin_drop',
+              title: 'Local Firswood Coverage',
+              desc: 'Our mobile service covers Firswood and nearby areas, including Chorlton Road, Old Trafford, Stretford and Whalley Range.',
+            },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Firswood Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Us',
+                  desc: 'Call with your location, vehicle registration, tyre size if known and the service you need.',
+                },
+                {
+                  n: '2',
+                  title: 'Get a Quote',
+                  desc: 'We check suitable tyre options and confirm pricing and availability before arranging your fitting.',
+                },
+                {
+                  n: '3',
+                  title: 'We Come to You',
+                  desc: 'A mobile tyre fitter travels to your home, workplace or a suitable roadside location in Firswood.',
+                },
+                {
+                  n: '4',
+                  title: 'Tyre Fitting or Replacement',
+                  desc: 'We assess the tyre, carry out a repair where appropriate or professionally fit your replacement tyre.',
+                },
+                {
+                  n: '5',
+                  title: 'Final Safety Checks',
+                  desc: 'We complete the necessary fitting, balancing and tyre-pressure checks before finishing the job.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 4 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ACROSS FIRSWOOD ────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Mobile Tyre Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Replacement Across Firswood
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If your tyre is worn, damaged or unsuitable for repair, our <strong>mobile tyre replacement Firswood</strong> service allows you to have a replacement tyre fitted without visiting a garage.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We supply and fit suitable tyres for cars, SUVs and vans, with options for different vehicle requirements and budgets.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Whether you need a single tyre replaced at home, new tyres fitted at work or assistance with a damaged tyre, our mobile technicians bring the necessary equipment directly to you.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We provide tyre replacement in Firswood and nearby areas, including Old Trafford, Stretford, Whalley Range and Chorlton-cum-Hardy.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING & REPLACEMENT ───── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Emergency Mobile Tyre Fitting &amp; Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Firswood
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A flat tyre or blowout can leave you stranded at any time. Our <strong>emergency mobile tyre fitting in Firswood</strong> service is available 24/7 to help you get back on the road.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We attend suitable locations around Firswood, including residential streets, workplaces and safe roadside areas near Chorlton Road and routes towards Old Trafford and Stretford.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Depending on the condition of your tyre, our technicians can carry out a safe puncture repair or provide an emergency tyre replacement.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -388,35 +570,79 @@ export default function FirswoodPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-firswood"
           city="Firswood"
           faqs={[
             {
+              q: 'Do you provide mobile tyre fitting in Firswood?',
+              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Firswood.',
+            },
+            {
+              q: 'Can you replace a tyre at my home in Firswood?',
+              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+            },
+            {
+              q: 'Do you offer emergency tyre fitting in Firswood?',
+              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+            },
+            {
+              q: 'Can you repair a punctured tyre in Firswood?',
+              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+            },
+            {
+              q: 'Can you fit tyres at my workplace near Chorlton Road?',
+              a: 'Yes. We can attend suitable workplace locations around Chorlton Road, Old Trafford and surrounding areas.',
+            },
+            {
+              q: 'Do you provide roadside tyre fitting?',
+              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+            },
+            {
               q: 'How quickly can you reach me in Firswood?',
-              a: 'Our mobile units are based close by in Manchester, meaning we can typically reach Firswood and the surrounding M16 postcode area, including Chorlton Road, within 20-30 minutes.',
+              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
             },
             {
-              q: 'What areas around Firswood do you cover?',
-              a: 'Yes. We cover Firswood and the surrounding M16 postcode area, along with Chorlton Road and the routes connecting to Old Trafford and Stretford.',
+              q: 'Do you provide mobile tyre fitting at night?',
+              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Firswood?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'Can you replace a tyre that cannot be repaired?',
+              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Chorlton Road or Old Trafford?',
-              a: 'Yes. We regularly attend offices and business premises around Chorlton Road and Old Trafford, fitting your tyres while you work.',
+              q: 'Do you provide mobile tyre fitting near me in Firswood?',
+              a: 'Yes. We cover Firswood and surrounding M16 locations. Contact us with your postcode to confirm availability.',
+            },
+            {
+              q: 'Can you help if my car has a flat tyre?',
+              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
+            },
+            {
+              q: 'Do you offer different tyre brands and prices?',
+              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
+            },
+            {
+              q: 'Do you provide mobile puncture repair in Firswood?',
+              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
+            },
+            {
+              q: 'Can you fit more than one tyre during a visit?',
+              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
+            },
+            {
+              q: 'Which areas near Firswood do you cover?',
+              a: 'We cover Firswood and nearby areas, including Old Trafford, Stretford, Whalley Range and Chorlton-cum-Hardy. Contact us to confirm coverage for your exact location.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Firswood Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Firswood line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Firswood?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance at the roadside, One Stop Tyres 247 can come to you. Contact us today for 24/7 mobile tyre fitting in Firswood, tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

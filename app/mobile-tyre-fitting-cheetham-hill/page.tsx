@@ -6,14 +6,15 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-cheetham-hill',
-  name: 'Mobile Tyre Fitting in Cheetham Hill',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Cheetham Hill' },
+  alternateName: '24/7 Mobile Tyre Fitting Cheetham Hill',
+  areaServed: 'Cheetham Hill',
+  description:
+    'Need mobile tyre fitting in Cheetham Hill? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-cheetham-hill')
@@ -81,7 +82,7 @@ const whyChooseCheethamHill = [
 export default function CheethamHillPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
       <JsonLd data={_organizationSchema} />
       <JsonLd data={_websiteSchema} />
       <JsonLd data={_automotiveBusinessSchema} />

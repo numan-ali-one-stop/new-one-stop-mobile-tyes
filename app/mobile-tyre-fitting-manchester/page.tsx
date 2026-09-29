@@ -6,14 +6,15 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-manchester',
-  name: 'Mobile Tyre Fitting in Manchester',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Manchester' },
+  alternateName: 'Manchester Mobile Tyre Fitting Service',
+  areaServed: 'Manchester',
+  description:
+    'Need mobile tyre fitting in Manchester? Get professional 24-hour tyre fitting at home, work or a suitable location across Manchester.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-manchester')
@@ -83,7 +84,7 @@ const whyChooseManchester = [
 export default function ManchesterPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
       <JsonLd data={_organizationSchema} />
       <JsonLd data={_websiteSchema} />
       <JsonLd data={_automotiveBusinessSchema} />

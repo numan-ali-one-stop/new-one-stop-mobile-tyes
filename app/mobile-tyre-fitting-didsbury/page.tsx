@@ -6,14 +6,15 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-didsbury',
-  name: 'Mobile Tyre Fitting in Didsbury',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Didsbury' },
+  alternateName: '24/7 Mobile Tyre Fitting Didsbury',
+  areaServed: 'Didsbury',
+  description:
+    'Need mobile tyre fitting in Didsbury? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-didsbury')
@@ -81,7 +82,7 @@ const whyChooseDidsbury = [
 export default function DidsburyPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
       <JsonLd data={_organizationSchema} />
       <JsonLd data={_websiteSchema} />
       <JsonLd data={_automotiveBusinessSchema} />

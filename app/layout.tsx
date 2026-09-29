@@ -129,6 +129,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NKQKPB8S');`,
           }}
         />
+        {/* Google tag (gtag.js) — Google Ads */}
+        <Script
+          id="gads-gtag-js"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10825208776"
+        />
+        <Script
+          id="gads-gtag-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `gtag('js', new Date());
+gtag('config', 'AW-10825208776');`,
+          }}
+        />
+        {/* Google Ads — phone call conversion (website call tracking) */}
+        <Script
+          id="gads-phone-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `gtag('config', 'AW-10825208776/xuU4CMay5YYdEMin7qko', {
+  'phone_conversion_number': '+44 7759 708646'
+});`,
+          }}
+        />
       </head>
       <body className="antialiased overflow-x-hidden pb-[60px] sm:pb-0">
         <JsonLd data={localBusinessSchema()} />

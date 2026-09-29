@@ -105,6 +105,32 @@ export function serviceSchema({ slug, name, description, serviceType, areaServed
   }
 }
 
+export interface PageServiceSchemaOptions {
+  slug: string
+  alternateName: string
+  areaServed: string
+  description: string
+}
+
+/**
+ * Service entity in the exact shape the "schemantra" tool generates — used in place of
+ * {@link serviceSchema} on pages where the SEO team supplies this markup directly, so each
+ * page carries exactly one Service entity instead of two conflicting ones under the same @id.
+ */
+export function pageServiceSchema({ slug, alternateName, areaServed, description }: PageServiceSchemaOptions) {
+  const url = `${SITE_URL}/${slug}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    additionalType: url,
+    alternateName,
+    areaServed,
+    category: 'Tyre Fitting',
+    description,
+  }
+}
+
 export interface ArticleSchemaOptions {
   /** URL slug including any parent path, e.g. "guides/how-to-tell-if-your-tyre-can-be-repaired-or-needs-replacing" */
   slug: string

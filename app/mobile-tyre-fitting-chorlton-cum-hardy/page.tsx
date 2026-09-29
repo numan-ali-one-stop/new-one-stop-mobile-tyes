@@ -6,14 +6,15 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-chorlton-cum-hardy',
-  name: 'Mobile Tyre Fitting in Chorlton-cum-Hardy',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Chorlton-cum-Hardy' },
+  alternateName: '24/7 Mobile Tyre Fitting Chorlton Cum Hardy',
+  areaServed: 'Chorlton Cum Hardy',
+  description:
+    'Need mobile tyre fitting in Chorlton Cum Hardy? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-chorlton-cum-hardy')
@@ -81,7 +82,7 @@ const whyChooseChorltonCumHardy = [
 export default function ChorltoncumHardyPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
       <JsonLd data={_organizationSchema} />
       <JsonLd data={_websiteSchema} />
       <JsonLd data={_automotiveBusinessSchema} />
