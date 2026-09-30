@@ -319,8 +319,8 @@ export default function MobileTyreFittingPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/tyre-fitting-in-emergency.webp"
-              alt="Professional mobile tyre replacement"
+              src="/images/mobile-tyre-fitting-for-cars-suvs-and-vans-at-your-location.jpg"
+              alt="Mobile tyre fitting for cars, SUVs and vans at your location"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}

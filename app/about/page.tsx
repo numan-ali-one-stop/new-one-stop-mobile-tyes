@@ -26,8 +26,8 @@ export default function AboutPage() {
         {/* 1. HERO */}
         <section className="relative overflow-hidden py-16 sm:py-24 px-4 sm:px-6 text-center text-white">
           <Image
-            src="/images/mobile-tyre-fitting-manchester.webp"
-            alt="Mobile tyre fitting technician at work in Greater Manchester"
+            src="/images/professional-mobile-tyre-services-you-can-rely-on-across-greater-manchester.jpg"
+            alt="Professional mobile tyre services you can rely on across Greater Manchester"
             fill
             priority
             sizes="100vw"
@@ -152,8 +152,8 @@ export default function AboutPage() {
             <div className="relative pb-6 lg:pb-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/professional-mobile-tyre-fitting.webp"
-                alt="Mobile service technician"
+                src="/images/meet-the-team-providing-reliable-mobile-tyre-services-across-greater-manchester.jpg"
+                alt="Meet the team providing reliable mobile tyre services across Greater Manchester"
                 className="rounded-xl shadow-xl w-full object-cover h-[300px] sm:h-[400px] lg:h-[500px]"
                 width={800}
                 height={600}

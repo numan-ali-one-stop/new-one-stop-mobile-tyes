@@ -296,8 +296,8 @@ export default function HomeTyreFittingPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/professional-mobile-tyre-fitting.webp"
-              alt="Mobile tyre fitting technician at a home"
+              src="/images/professional-home-tyre-fitting-that-comes-directly-to-your-location.jpg"
+              alt="Professional home tyre fitting that comes directly to your location"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -405,8 +405,8 @@ export default function HomeTyreFittingPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mobile-tyre-fitting-service.webp"
-              alt="Home tyre fitting service at your driveway"
+              src="/images/convenient-home-tyre-replacement-for-cars-carried-out-by-professional-mobile-tyre-fitters.jpg"
+              alt="Convenient home tyre replacement for cars, carried out by professional mobile tyre fitters"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}

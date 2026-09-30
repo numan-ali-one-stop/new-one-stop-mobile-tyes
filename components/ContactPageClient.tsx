@@ -52,8 +52,8 @@ export default function ContactPageClient() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="w-full h-full object-cover"
-              src="/images/mobile-tyre-fitting-manchester.webp"
-              alt="One Stop Mobile Tyres 24/7 mobile tyre fitting technician in Greater Manchester"
+              src="/images/get-in-touch-for-fast-and-reliable-mobile-tyre-assistance-across-greater-manchester.jpg"
+              alt="Get in touch for fast and reliable mobile tyre assistance across Greater Manchester"
               width={1920}
               height={600}
               loading="eager"

@@ -133,8 +133,8 @@ export default function PunctureRepairGreaterManchesterPage() {
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/tyres-fitting-anywhere.webp"
-          alt="Emergency mobile puncture repair service"
+          src="/images/fast-and-professional-mobile-tyre-puncture-repair-across-greater-manchester.jpg"
+          alt="Fast and professional mobile tyre puncture repair across Greater Manchester"
           className="absolute inset-0 w-full h-full object-cover object-center"
           width={1600}
           height={900}
@@ -210,8 +210,8 @@ export default function PunctureRepairGreaterManchesterPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-              alt="Fast mobile puncture repairs"
+              src="/images/mobile-tyre-puncture-repair-that-comes-directly-to-you-when-you-need-help.jpg"
+              alt="Mobile tyre puncture repair that comes directly to you when you need help"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -319,8 +319,8 @@ export default function PunctureRepairGreaterManchesterPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/tyre-fitting-in-emergency.webp"
-              alt="Emergency puncture repair at roadside"
+              src="/images/safe-and-professional-car-tyre-puncture-repair-at-your-location.jpg"
+              alt="Safe and professional car tyre puncture repair at your location"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}

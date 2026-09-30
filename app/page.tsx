@@ -554,8 +554,8 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="relative z-10 rounded-2xl sm:rounded-3xl shadow-2xl border-4 sm:border-8 border-slate-50 w-full object-cover"
-              src="/images/mobile-tyre-fitting-manchester.webp"
-              alt="Mobile tyre fitting technician in Manchester"
+              src="/images/professional-tyre-services-and-replacement-across-greater-manchester.jpg"
+              alt="Professional tyre services and replacement across Greater Manchester"
               width={800}
               height={600}
               loading="lazy"
