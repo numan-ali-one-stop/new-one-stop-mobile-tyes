@@ -30,7 +30,7 @@ export default function Footer() {
           </p>
           <ul className="space-y-3 sm:space-y-4 text-slate-400 text-sm font-medium">
             <li className="flex items-center justify-center sm:justify-start gap-3">
-              <span className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">call</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">call</span>
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-1">
                 <a href={`tel:${PHONE_TEL}`} className="text-white font-bold hover:text-[#FF4444] transition-colors">
                   {PHONE}
@@ -42,13 +42,13 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-3">
-              <span className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">mail</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">mail</span>
               <a href="mailto:info@onestoptyres247.co.uk" className="hover:text-[#FF4444] transition-colors break-all text-xs sm:text-sm">
                 info@onestoptyres247.co.uk
               </a>
             </li>
             <li className="flex items-start justify-center sm:justify-start gap-3">
-              <span className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">location_on</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">location_on</span>
               <a
                 href={MAPS_URL}
                 target="_blank"
@@ -130,7 +130,7 @@ export default function Footer() {
             ))}
           </ul>
           <div className="flex items-start justify-center sm:justify-start gap-3 text-slate-400 text-sm">
-            <span className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">schedule</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">schedule</span>
             <span>Open 24/7 — Emergency Callouts Every Day of the Year</span>
           </div>
         </div>

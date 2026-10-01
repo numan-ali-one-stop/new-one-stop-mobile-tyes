@@ -126,11 +126,11 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-[12px] font-medium">
           <div className="flex items-center gap-5">
             <a href={`mailto:${EMAIL}`} className="flex items-center gap-1.5 hover:text-red-400 transition-colors">
-              <span className="material-symbols-outlined text-sm">mail</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">mail</span>
               {EMAIL}
             </a>
             <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-1.5 hover:text-red-400 transition-colors">
-              <span className="material-symbols-outlined text-sm">alarm</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">alarm</span>
               24/7 Emergency Service
             </a>
             <a
@@ -139,18 +139,18 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-red-400 transition-colors"
             >
-              <span className="material-symbols-outlined text-sm">location_on</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">location_on</span>
               Greater Manchester
             </a>
           </div>
           <div className="flex items-center gap-3">
             <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-1.5 font-bold text-red-400 hover:text-red-300 transition-colors">
-              <span className="material-symbols-outlined text-sm">call</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">call</span>
               {PHONE}
             </a>
             <span className="text-white/20">|</span>
             <a href={`tel:${PHONE_2_TEL}`} className="flex items-center gap-1.5 font-bold text-red-400 hover:text-red-300 transition-colors">
-              <span className="material-symbols-outlined text-sm">call</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">call</span>
               {PHONE_2}
             </a>
           </div>
@@ -169,7 +169,7 @@ export default function Header() {
               className="lg:hidden flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-3 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
             </a>
@@ -244,7 +244,7 @@ export default function Header() {
                 aria-expanded={openMenu === 'services'}
               >
                 Services
-                <span
+                <span aria-hidden="true" data-nosnippet
                   className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${openMenu === 'services' ? 'rotate-180' : ''}`}
                 >
                   expand_more
@@ -285,7 +285,7 @@ export default function Header() {
                               ? 'bg-[#b70011]/10'
                               : 'bg-slate-100 group-hover:bg-[#b70011]/10'
                           }`}>
-                            <span className={`material-symbols-outlined text-[18px] transition-colors ${
+                            <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${
                               isActive(link.href)
                                 ? 'text-[#b70011]'
                                 : 'text-slate-500 group-hover:text-[#b70011]'
@@ -309,7 +309,7 @@ export default function Header() {
                   {/* Footer bar */}
                   <div className="flex items-center justify-between flex-wrap gap-y-2 gap-x-4 px-5 py-3 bg-slate-50 border-t border-slate-100">
                     <div className="flex items-center gap-2 min-w-0">
-                      <span className="material-symbols-outlined text-[18px] text-[#b70011] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
+                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px] text-[#b70011] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                         bolt
                       </span>
                       <p className="text-[12px] text-slate-600 leading-tight">
@@ -321,7 +321,7 @@ export default function Header() {
                         href={`tel:${PHONE_TEL}`}
                         className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
                       >
-                        <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                           phone_in_talk
                         </span>
                         {PHONE}
@@ -330,7 +330,7 @@ export default function Header() {
                         href={`tel:${PHONE_2_TEL}`}
                         className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
                       >
-                        <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                           phone_in_talk
                         </span>
                         {PHONE_2}
@@ -357,7 +357,7 @@ export default function Header() {
                 aria-expanded={openMenu === 'areas'}
               >
                 Service Area
-                <span
+                <span aria-hidden="true" data-nosnippet
                   className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${openMenu === 'areas' ? 'rotate-180' : ''}`}
                 >
                   expand_more
@@ -397,7 +397,7 @@ export default function Header() {
                             >
                               {href ? (
                                 <a href={href} className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
-                                  <span className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${
+                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${
                                     active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'
                                   }`} style={{ fontVariationSettings: "'FILL' 1" }}>
                                     location_on
@@ -406,7 +406,7 @@ export default function Header() {
                                 </a>
                               ) : (
                                 <span className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
-                                  <span className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
+                                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
                                     location_on
                                   </span>
                                   <span className="font-semibold text-sm">{borough.name}</span>
@@ -420,7 +420,7 @@ export default function Header() {
                                   aria-expanded={expanded}
                                   className="p-2 mr-1.5 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
                                 >
-                                  <span className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
                                     expand_more
                                   </span>
                                 </button>
@@ -468,7 +468,7 @@ export default function Header() {
                               : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
                           }`}
                         >
-                          <span className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                             route
                           </span>
                           {link.label}
@@ -480,7 +480,7 @@ export default function Header() {
                   {/* Footer bar */}
                   <div className="flex items-center justify-between gap-4 px-5 py-3 bg-slate-50 border-t border-slate-100">
                     <div className="flex items-center gap-2 min-w-0">
-                      <span className="material-symbols-outlined text-[18px] text-[#b70011] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
+                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px] text-[#b70011] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                         location_on
                       </span>
                       <p className="text-[12px] text-slate-600 leading-tight">
@@ -491,7 +491,7 @@ export default function Header() {
                       href="/service-area"
                       className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap shrink-0"
                     >
-                      <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                         map
                       </span>
                       Coverage Map
@@ -526,7 +526,7 @@ export default function Header() {
               className="hidden lg:flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
               {PHONE}
@@ -536,7 +536,7 @@ export default function Header() {
               aria-label={`Call ${PHONE_2}`}
               className="hidden lg:flex xl:hidden items-center justify-center bg-[#b70011] hover:bg-red-700 text-white w-9 h-9 rounded-lg transition-all active:scale-95 shadow-md shadow-red-200"
             >
-              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
             </a>
@@ -546,7 +546,7 @@ export default function Header() {
               className="hidden xl:flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
               {PHONE_2}
@@ -595,7 +595,7 @@ export default function Header() {
                 aria-label="Close menu"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors shrink-0"
               >
-                <span className="material-symbols-outlined text-white text-[20px]">close</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white text-[20px]">close</span>
               </button>
             </div>
             <div className="space-y-2">
@@ -604,7 +604,7 @@ export default function Header() {
                 className="flex items-center gap-3 bg-[#b70011] hover:bg-red-700 transition-colors rounded-xl px-4 py-3 active:scale-[0.98]"
               >
                 <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                     phone_in_talk
                   </span>
                 </div>
@@ -612,14 +612,14 @@ export default function Header() {
                   <p className="text-white/70 text-[10px] font-semibold uppercase tracking-wider">Emergency Call</p>
                   <p className="text-white font-bold text-base">{PHONE}</p>
                 </div>
-                <span className="material-symbols-outlined text-white/50 text-[18px]">arrow_forward</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white/50 text-[18px]">arrow_forward</span>
               </a>
               <a
                 href={`tel:${PHONE_2_TEL}`}
                 className="flex items-center gap-3 bg-[#b70011] hover:bg-red-700 transition-colors rounded-xl px-4 py-3 active:scale-[0.98]"
               >
                 <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                     phone_in_talk
                   </span>
                 </div>
@@ -627,7 +627,7 @@ export default function Header() {
                   <p className="text-white/70 text-[10px] font-semibold uppercase tracking-wider">Emergency Call</p>
                   <p className="text-white font-bold text-base">{PHONE_2}</p>
                 </div>
-                <span className="material-symbols-outlined text-white/50 text-[18px]">arrow_forward</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white/50 text-[18px]">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -644,10 +644,10 @@ export default function Header() {
               className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
             >
               <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>home</span>
+                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>home</span>
               </div>
               <span className="font-semibold text-sm flex-1">Home</span>
-              {isActive('/') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
+              {isActive('/') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
             </a>
 
             <a
@@ -656,10 +656,10 @@ export default function Header() {
               className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/about') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
             >
               <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/about') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/about') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>info</span>
+                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/about') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>info</span>
               </div>
               <span className="font-semibold text-sm flex-1">About Us</span>
-              {isActive('/about') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
+              {isActive('/about') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
             </a>
 
             {/* ── Services Accordion ─────────────────────────────────────── */}
@@ -671,10 +671,10 @@ export default function Header() {
                 }`}
               >
                 <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isServicesActive ? 'bg-[#b70011]/10' : 'bg-slate-100'}`}>
-                  <span className={`material-symbols-outlined text-[18px] transition-colors ${isServicesActive ? 'text-[#b70011]' : 'text-slate-500'}`}>build</span>
+                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isServicesActive ? 'text-[#b70011]' : 'text-slate-500'}`}>build</span>
                 </div>
                 <span className="font-semibold text-sm flex-1 text-left">Services</span>
-                <span className={`material-symbols-outlined text-[18px] transition-transform duration-200 ${servicesOpen ? 'rotate-180 text-[#b70011]' : 'text-slate-400'}`}>
+                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-transform duration-200 ${servicesOpen ? 'rotate-180 text-[#b70011]' : 'text-slate-400'}`}>
                   expand_more
                 </span>
               </button>
@@ -687,7 +687,7 @@ export default function Header() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-[#b70011] transition-colors mb-1"
                   >
-                    <span className="material-symbols-outlined text-[14px]">grid_view</span>
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[14px]">grid_view</span>
                     All Services
                   </a>
                   {serviceLinks.map((link) => (
@@ -700,7 +700,7 @@ export default function Header() {
                       }`}
                     >
                       <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive(link.href) ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                        <span className={`material-symbols-outlined text-[15px] transition-colors ${isActive(link.href) ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
+                        <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] transition-colors ${isActive(link.href) ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
                           {link.icon}
                         </span>
                       </div>
@@ -721,10 +721,10 @@ export default function Header() {
                 }`}
               >
                 <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isAreasActive ? 'bg-[#b70011]/10' : 'bg-slate-100'}`}>
-                  <span className={`material-symbols-outlined text-[18px] transition-colors ${isAreasActive ? 'text-[#b70011]' : 'text-slate-500'}`}>map</span>
+                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isAreasActive ? 'text-[#b70011]' : 'text-slate-500'}`}>map</span>
                 </div>
                 <span className="font-semibold text-sm flex-1 text-left">Service Area</span>
-                <span className={`material-symbols-outlined text-[18px] transition-transform duration-200 ${areasOpen ? 'rotate-180 text-[#b70011]' : 'text-slate-400'}`}>
+                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-transform duration-200 ${areasOpen ? 'rotate-180 text-[#b70011]' : 'text-slate-400'}`}>
                   expand_more
                 </span>
               </button>
@@ -736,7 +736,7 @@ export default function Header() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-[#b70011] transition-colors mb-1"
                   >
-                    <span className="material-symbols-outlined text-[14px]">map</span>
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[14px]">map</span>
                     Full Coverage Map
                   </a>
 
@@ -760,14 +760,14 @@ export default function Header() {
                               onClick={() => setMobileOpen(false)}
                               className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0"
                             >
-                              <span className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
+                              <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
                                 location_on
                               </span>
                               <span className="font-semibold text-sm">{borough.name}</span>
                             </a>
                           ) : (
                             <span className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0">
-                              <span className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
+                              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
                                 location_on
                               </span>
                               <span className="font-semibold text-sm">{borough.name}</span>
@@ -781,7 +781,7 @@ export default function Header() {
                               aria-expanded={expanded}
                               className="p-2 mr-1 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
                             >
-                              <span className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+                              <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
                                 expand_more
                               </span>
                             </button>
@@ -826,7 +826,7 @@ export default function Header() {
                             : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
                         }`}
                       >
-                        <span className="material-symbols-outlined text-[12px]" style={{ fontVariationSettings: "'FILL' 1" }}>route</span>
+                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[12px]" style={{ fontVariationSettings: "'FILL' 1" }}>route</span>
                         {link.label}
                       </a>
                     ))}
@@ -842,10 +842,10 @@ export default function Header() {
               className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/guides') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
             >
               <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/guides') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/guides') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>menu_book</span>
+                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/guides') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>menu_book</span>
               </div>
               <span className="font-semibold text-sm flex-1">Guides</span>
-              {isActive('/guides') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
+              {isActive('/guides') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
             </a>
 
             {/* Contact */}
@@ -855,10 +855,10 @@ export default function Header() {
               className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/contact') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
             >
               <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/contact') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/contact') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>contact_support</span>
+                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/contact') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>contact_support</span>
               </div>
               <span className="font-semibold text-sm flex-1">Contact</span>
-              {isActive('/contact') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
+              {isActive('/contact') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
             </a>
           </nav>
 
@@ -866,7 +866,7 @@ export default function Header() {
           <div className="shrink-0 border-t border-slate-100 px-5 py-4 space-y-3">
             <a href="mailto:info@onestoptyres247.co.uk" className="flex items-center gap-3 group">
               <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[16px] text-slate-500">mail</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-500">mail</span>
               </div>
               <div className="min-w-0">
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Email</p>
@@ -877,7 +877,7 @@ export default function Header() {
             </a>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[16px] text-slate-500">schedule</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-500">schedule</span>
               </div>
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Availability</p>

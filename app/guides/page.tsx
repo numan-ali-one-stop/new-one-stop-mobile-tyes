@@ -92,7 +92,7 @@ export default function GuidesIndexPage() {
               <p className="text-slate-600 leading-relaxed mb-3">{g.desc}</p>
               <span className="inline-flex items-center gap-1.5 text-[#b70011] font-bold text-sm">
                 Read guide
-                <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </span>
             </a>
           ))}

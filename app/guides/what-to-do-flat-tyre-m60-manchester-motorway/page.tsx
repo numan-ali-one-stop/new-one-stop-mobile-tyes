@@ -57,7 +57,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
     <details className="group bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm open:shadow-md transition-all">
       <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-base sm:text-lg text-[#0f172a] gap-3">
         {q}
-        <span className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
+        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
           expand_more
         </span>
       </summary>
@@ -172,15 +172,15 @@ export default function FlatTyreMotorwayGuide() {
           </p>
           <ul className="space-y-3 mb-6">
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">Grip the wheel firmly with both hands and keep the car straight.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">Ease off the accelerator and let the car slow down on its own — brake only gently once speed has dropped.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">Put your hazard lights on and start moving towards the left-hand lane when it&apos;s clear.</span>
             </li>
           </ul>
@@ -261,7 +261,7 @@ export default function FlatTyreMotorwayGuide() {
           </p>
           <ul className="space-y-3 mb-6">
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">build</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">build</span>
               <span className="text-slate-600 leading-relaxed">
                 If the damage is a small tread puncture, a proper BS AU 159 repair may be
                 possible — see our{' '}
@@ -271,7 +271,7 @@ export default function FlatTyreMotorwayGuide() {
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">tire_repair</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">tire_repair</span>
               <span className="text-slate-600 leading-relaxed">
                 Our{' '}
                 <a href="/mobile-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">
@@ -282,7 +282,7 @@ export default function FlatTyreMotorwayGuide() {
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">schedule</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">schedule</span>
               <span className="text-slate-600 leading-relaxed">
                 It&apos;s a genuine{' '}
                 <a href="/mobile-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">
@@ -316,7 +316,7 @@ export default function FlatTyreMotorwayGuide() {
               { t: 'M66 / M67 / M602 / A627(M)', d: 'These are short commuter routes — the next exit is never more than a few minutes away, and each leads quickly to town-centre car parks or fuel stations where we can work safely.' },
             ].map((item) => (
               <li key={item.t} className="flex items-start gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <span className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">route</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">route</span>
                 <div>
                   <p className="font-bold text-[#0f172a]">{item.t}</p>
                   <p className="text-slate-500 text-sm leading-relaxed">{item.d}</p>
@@ -338,15 +338,15 @@ export default function FlatTyreMotorwayGuide() {
           </p>
           <ul className="space-y-3 mb-6">
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">Check pressures when the tyres are cold — underinflation is the biggest cause of high-speed blowouts.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">Look for bulges, cuts and embedded nails or screws — and check tread with the 20p test.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">
                 Don&apos;t ignore a TPMS warning light — it usually means a slow puncture. Our{' '}
                 <a href="/tpms-reset" className="text-[#b70011] font-semibold hover:underline">TPMS reset service</a>{' '}
@@ -371,7 +371,7 @@ export default function FlatTyreMotorwayGuide() {
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
               </a>
               <a
@@ -379,7 +379,7 @@ export default function FlatTyreMotorwayGuide() {
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 0161 399 5851
               </a>
               <a
@@ -443,7 +443,7 @@ export default function FlatTyreMotorwayGuide() {
                   <p className="font-bold text-[#0f172a]">{m.name}</p>
                   <p className="text-sm text-slate-500">{m.detail}</p>
                 </div>
-                <span className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">arrow_forward</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">arrow_forward</span>
               </a>
             ))}
           </div>

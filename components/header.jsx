@@ -30,20 +30,20 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-[12px] font-medium">
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-sm">mail</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">mail</span>
               info@onestoptyres247.co.uk
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-sm">alarm</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">alarm</span>
               24/7 Emergency Service
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-sm">location_on</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">location_on</span>
               Greater Manchester
             </span>
           </div>
           <span className="flex items-center gap-1.5 font-bold text-red-400">
-            <span className="material-symbols-outlined text-sm">call</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">call</span>
             07759 708 646
           </span>
         </div>
@@ -110,7 +110,7 @@ export default function Header() {
               className="hidden lg:flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span
+              <span aria-hidden="true" data-nosnippet
                 className="material-symbols-outlined text-[18px]"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
@@ -165,7 +165,7 @@ export default function Header() {
               aria-label="Close menu"
               className="w-9 h-9 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors"
             >
-              <span className="material-symbols-outlined text-slate-600 text-[20px]">close</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 text-[20px]">close</span>
             </button>
           </div>
 
@@ -183,7 +183,7 @@ export default function Header() {
                 }`}
               >
                 {link.label}
-                <span
+                <span aria-hidden="true" data-nosnippet
                   className={`material-symbols-outlined text-[18px] ${link.label === 'Home' ? 'text-white/70' : 'text-slate-400'}`}
                 >
                   chevron_right
@@ -201,13 +201,13 @@ export default function Header() {
               className="flex items-center gap-3 px-5 py-3 hover:bg-white/5 transition-colors"
             >
               <div className="w-9 h-9 rounded-full bg-[#b70011] flex items-center justify-center shrink-0 shadow-md shadow-red-900/40">
-                <span className="material-symbols-outlined text-[17px] text-white" style={{ fontVariationSettings: "'FILL' 1" }}>phone_in_talk</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[17px] text-white" style={{ fontVariationSettings: "'FILL' 1" }}>phone_in_talk</span>
               </div>
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40">Call Now</p>
                 <p className="text-sm font-bold text-white">07759 708 646</p>
               </div>
-              <span className="material-symbols-outlined text-white/30 text-[18px] ml-auto">chevron_right</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white/30 text-[18px] ml-auto">chevron_right</span>
             </a>
 
             <div className="mx-5 h-px bg-white/10" />
@@ -217,20 +217,20 @@ export default function Header() {
               className="flex items-center gap-3 px-5 py-3 hover:bg-white/5 transition-colors"
             >
               <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[17px] text-white/70">mail</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[17px] text-white/70">mail</span>
               </div>
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40">Email</p>
                 <p className="text-sm font-medium text-white">info@onestoptyres247.co.uk</p>
               </div>
-              <span className="material-symbols-outlined text-white/30 text-[18px] ml-auto">chevron_right</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white/30 text-[18px] ml-auto">chevron_right</span>
             </a>
 
             <div className="mx-5 h-px bg-white/10" />
 
             <div className="flex items-center gap-3 px-5 py-3 pb-5">
               <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[17px] text-white/70">schedule</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[17px] text-white/70">schedule</span>
               </div>
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40">Hours</p>

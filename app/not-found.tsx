@@ -45,7 +45,7 @@ export default function NotFound() {
             className="inline-flex items-center gap-2.5 bg-[#FF4444] hover:bg-red-700 text-[#121212] hover:text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Emergency? Call 07759 708 646
           </a>
           <a
@@ -53,7 +53,7 @@ export default function NotFound() {
             className="inline-flex items-center gap-2.5 bg-[#FF4444] hover:bg-red-700 text-[#121212] hover:text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Emergency? Call 0161 399 5851
           </a>
         </div>

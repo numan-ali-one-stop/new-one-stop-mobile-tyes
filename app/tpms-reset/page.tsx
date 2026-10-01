@@ -113,8 +113,8 @@ export default function TpmsResetPage() {
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/mobile-tyre-fitting-service.webp"
-          alt="TPMS reset service"
+          src="/images/professional-mobile-tpms-reset-and-sensor-services-at-your-location.jpg"
+          alt="Professional mobile TPMS reset and sensor services at your location"
           className="absolute inset-0 w-full h-full object-cover object-center"
           width={1600}
           height={900}
@@ -168,7 +168,7 @@ export default function TpmsResetPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call Now
               </a>
               <a
@@ -192,8 +192,8 @@ export default function TpmsResetPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/professional-mobile-tyre-fitting.webp"
-              alt="TPMS sensor reset and diagnostic service"
+              src="/images/professional-tpms-reset-and-sensor-services-carried-out-at-your-location.jpg"
+              alt="Professional TPMS reset and sensor services carried out at your location"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -272,7 +272,7 @@ export default function TpmsResetPage() {
                 </h3>
                 <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
                 {idx < 3 && (
-                  <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                  <span aria-hidden="true" data-nosnippet className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
                     trending_flat
                   </span>
                 )}
@@ -316,7 +316,7 @@ export default function TpmsResetPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
               </a>
               <a
@@ -324,7 +324,7 @@ export default function TpmsResetPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 0161 399 5851
               </a>
               <a
@@ -364,7 +364,7 @@ export default function TpmsResetPage() {
               >
                 <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-base sm:text-lg text-[#0f172a] gap-3">
                   {faq.q}
-                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
                     expand_more
                   </span>
                 </summary>
@@ -392,7 +392,7 @@ export default function TpmsResetPage() {
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 07759 708 646
           </a>
           <a
@@ -400,7 +400,7 @@ export default function TpmsResetPage() {
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 0161 399 5851
           </a>
           <a

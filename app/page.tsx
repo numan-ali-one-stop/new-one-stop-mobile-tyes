@@ -26,7 +26,7 @@ function FeatureItem({
   return (
     <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
       <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
+        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
       </div>
       <div>
         <span className="font-bold text-[#0f172a] block">{title}</span>
@@ -42,7 +42,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
     <details className="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 open:shadow-md transition-all">
       <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-lg text-[#0f172a] gap-3">
         {q}
-        <span className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0">
+        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0">
           expand_more
         </span>
       </summary>
@@ -320,7 +320,7 @@ export default function Home() {
               </svg>
               <div className="flex text-yellow-400 gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span aria-hidden="true" data-nosnippet key={i} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 ))}
               </div>
               <span className="text-sm font-bold text-[#0f172a]">5 / 5</span>
@@ -340,7 +340,7 @@ export default function Home() {
               className="inline-flex items-center gap-1.5 text-[#b70011] font-bold text-sm hover:underline"
             >
               View all Google reviews
-              <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px]">open_in_new</span>
             </a>
           </div>
 
@@ -509,7 +509,7 @@ export default function Home() {
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed mb-3">{card.desc}</p>
                   <div className="flex items-center justify-end">
-                    <span className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
                       arrow_forward
                     </span>
                   </div>
@@ -565,7 +565,7 @@ export default function Home() {
             <div className="absolute bottom-2 right-2 sm:-bottom-2 sm:-right-2 bg-white p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-2xl z-20 max-w-[165px] sm:max-w-[195px] border border-slate-100">
               <div className="flex text-yellow-400 gap-0.5 mb-1.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="material-symbols-outlined" style={{ fontSize: '16px', fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span aria-hidden="true" data-nosnippet key={i} className="material-symbols-outlined" style={{ fontSize: '16px', fontVariationSettings: "'FILL' 1" }}>star</span>
                 ))}
               </div>
               <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
@@ -647,7 +647,7 @@ export default function Home() {
                 <div
                   className={`w-14 h-14 sm:w-20 sm:h-20 bg-[#FF4444] rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-8 shadow-xl ${step.rot}`}
                 >
-                  <span
+                  <span aria-hidden="true" data-nosnippet
                     className="material-symbols-outlined text-white text-[28px] sm:text-[36px]"
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >{step.icon}</span>
@@ -660,7 +660,7 @@ export default function Home() {
                 </h3>
                 <p className="text-slate-400 text-xs sm:text-sm">{step.desc}</p>
                 {idx < 3 && (
-                  <span className="hidden md:block absolute top-10 -right-6 text-[#FF4444] material-symbols-outlined text-3xl">
+                  <span aria-hidden="true" data-nosnippet className="hidden md:block absolute top-10 -right-6 text-[#FF4444] material-symbols-outlined text-3xl">
                     trending_flat
                   </span>
                 )}
@@ -691,7 +691,7 @@ export default function Home() {
             <div className="space-y-4 sm:space-y-6">
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[#b70011]">location_on</span>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">location_on</span>
                 </div>
                 <div>
                   <p className="font-bold text-[#0f172a] text-base">Service Area</p>
@@ -702,7 +702,7 @@ export default function Home() {
               </div>
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[#b70011]">schedule</span>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">schedule</span>
                 </div>
                 <div>
                   <p className="font-bold text-[#0f172a] text-base">Hours</p>

@@ -155,8 +155,8 @@ export default function JumpStartPage() {
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/professional-mobile-tyre-fitting.webp"
-          alt="One Stop Mobile Tyres 24/7 mobile technician assisting a vehicle"
+          src="/images/fast-and-reliable-mobile-car-battery-jump-start-assistance-across-greater-manchester.jpg"
+          alt="Fast and reliable mobile car battery jump start assistance across Greater Manchester"
           className="absolute inset-0 w-full h-full object-cover object-center"
           width={1600}
           height={900}
@@ -206,7 +206,7 @@ export default function JumpStartPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call Now
               </a>
               <a
@@ -230,8 +230,8 @@ export default function JumpStartPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-              alt="Mobile technician attending a vehicle callout"
+              src="/images/professional-car-battery-jump-start-service-at-your-location.jpg"
+              alt="Professional car battery jump start service at your location"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -263,7 +263,7 @@ export default function JumpStartPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
               </a>
               <a
@@ -271,7 +271,7 @@ export default function JumpStartPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 0161 399 5851
               </a>
               <a
@@ -336,7 +336,7 @@ export default function JumpStartPage() {
                 </h3>
                 <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
                 {idx < 3 && (
-                  <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                  <span aria-hidden="true" data-nosnippet className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
                     trending_flat
                   </span>
                 )}
@@ -350,7 +350,7 @@ export default function JumpStartPage() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
         <div className="max-w-3xl mx-auto text-center">
           <div className="w-14 h-14 bg-[#b70011]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <span className="material-symbols-outlined text-[#b70011] text-3xl">battery_alert</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] text-3xl">battery_alert</span>
           </div>
           <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
             Emergency Battery Jump Start
@@ -369,7 +369,7 @@ export default function JumpStartPage() {
           </p>
 
           <div className="flex items-start gap-4 text-left bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm mb-8">
-            <span className="material-symbols-outlined text-[#FF4444] text-2xl flex-shrink-0 mt-0.5">info</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-2xl flex-shrink-0 mt-0.5">info</span>
             <p className="text-slate-600 text-base leading-relaxed">
               Have your exact location and vehicle registration ready when you contact us — it helps us dispatch the nearest available technician as quickly as possible.
             </p>
@@ -381,7 +381,7 @@ export default function JumpStartPage() {
               className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/20 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
               Call: 07759 708 646
             </a>
             <a
@@ -389,7 +389,7 @@ export default function JumpStartPage() {
               className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/20 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
               Call: 0161 399 5851
             </a>
             <a
@@ -412,8 +412,8 @@ export default function JumpStartPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mobile-tyre-fitting-service.webp"
-              alt="One Stop Mobile Tyres 24/7 mobile technician on a callout"
+              src="/images/reliable-car-battery-jump-starter-assistance-when-your-vehicle-will-not-start.jpg"
+              alt="Reliable car battery jump starter assistance when your vehicle will not start"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -446,7 +446,7 @@ export default function JumpStartPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
               </a>
               <a
@@ -454,7 +454,7 @@ export default function JumpStartPage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 0161 399 5851
               </a>
               <a
@@ -494,7 +494,7 @@ export default function JumpStartPage() {
               >
                 <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-base sm:text-lg text-[#0f172a] gap-3">
                   {faq.q}
-                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
                     expand_more
                   </span>
                 </summary>
@@ -526,7 +526,7 @@ export default function JumpStartPage() {
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 07759 708 646
           </a>
           <a
@@ -534,7 +534,7 @@ export default function JumpStartPage() {
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 0161 399 5851
           </a>
           <a

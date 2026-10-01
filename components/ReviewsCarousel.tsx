@@ -127,7 +127,7 @@ export default function ReviewsCarousel({ offset = 0 }: { offset?: number }) {
             <div className="flex items-center justify-between">
               <div className="flex text-yellow-400 gap-0.5">
                 {Array.from({ length: 5 }).map((_, j) => (
-                  <span
+                  <span aria-hidden="true" data-nosnippet
                     key={j}
                     className="material-symbols-outlined text-[16px]"
                     style={{ fontVariationSettings: "'FILL' 1" }}

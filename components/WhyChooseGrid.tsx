@@ -34,7 +34,7 @@ export default function WhyChooseGrid({ heading, intro, items }: WhyChooseGridPr
               className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
               {PHONE}
             </a>
             <a
@@ -42,7 +42,7 @@ export default function WhyChooseGrid({ heading, intro, items }: WhyChooseGridPr
               className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
               {PHONE_2}
             </a>
             <a
@@ -62,7 +62,7 @@ export default function WhyChooseGrid({ heading, intro, items }: WhyChooseGridPr
           {items.map((item) => (
             <div key={item.title} className="flex items-start gap-4">
               <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[#b70011]">{item.icon}</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">{item.icon}</span>
               </div>
               <div>
                 <h3 className="font-bold text-[#0f172a] text-base mb-1">{item.title}</h3>

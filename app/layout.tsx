@@ -197,7 +197,7 @@ gtag('config', 'AW-10825208776');`,
             aria-label="Call us now"
             className="w-16 h-16 bg-[#FF4444] hover:bg-red-700 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all hover:scale-110 active:scale-95"
           >
-            <span
+            <span aria-hidden="true" data-nosnippet
               className="material-symbols-outlined text-white text-[32px]"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
@@ -214,7 +214,7 @@ gtag('config', 'AW-10825208776');`,
             className="flex-1 bg-[#FF4444] flex items-center justify-center gap-2.5 py-4 text-white font-black text-base active:brightness-90 transition-all"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span
+            <span aria-hidden="true" data-nosnippet
               className="material-symbols-outlined text-[22px]"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >

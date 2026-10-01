@@ -33,7 +33,7 @@ export default function NearbyAreas({ currentSlug }: NearbyAreasProps) {
               className="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-[#b70011] hover:text-white text-[#0f172a] font-semibold text-sm px-4 py-2.5 rounded-full border border-slate-200 hover:border-[#b70011] transition-colors"
             >
               Mobile Tyre Fitting {area.name}
-              <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
           ))}
         </div>

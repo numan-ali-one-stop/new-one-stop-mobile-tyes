@@ -43,7 +43,7 @@ function BulletList({ items }: { items: string[] }) {
     <ul className="space-y-3">
       {items.map((item) => (
         <li key={item} className="flex items-start gap-3">
-          <span
+          <span aria-hidden="true" data-nosnippet
             className="material-symbols-outlined text-[#b70011] text-[18px] mt-0.5 shrink-0"
             style={{ fontVariationSettings: "'FILL' 1" }}
           >
@@ -139,7 +139,7 @@ export default function ServicePage({
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span
+                <span aria-hidden="true" data-nosnippet
                   className="material-symbols-outlined text-xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
@@ -152,7 +152,7 @@ export default function ServicePage({
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span
+                <span aria-hidden="true" data-nosnippet
                   className="material-symbols-outlined text-xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
@@ -172,11 +172,11 @@ export default function ServicePage({
 
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/70">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[#FF4444] text-[18px]">verified</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-[18px]">verified</span>
                 <span className="text-sm font-medium">Fully Insured</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[#FF4444] text-[18px]">payments</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-[18px]">payments</span>
                 <span className="text-sm font-medium">Card / Cash Accepted</span>
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function ServicePage({
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed mb-3">{card.desc}</p>
                   <div className="flex items-center justify-end">
-                    <span className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
                       arrow_forward
                     </span>
                   </div>
@@ -444,7 +444,7 @@ export default function ServicePage({
               className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-lg shadow-red-900/30 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span
+              <span aria-hidden="true" data-nosnippet
                 className="material-symbols-outlined text-xl"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
@@ -457,7 +457,7 @@ export default function ServicePage({
               className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-lg shadow-red-900/30 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span
+              <span aria-hidden="true" data-nosnippet
                 className="material-symbols-outlined text-xl"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >

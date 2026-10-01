@@ -52,7 +52,7 @@ export default function ServiceAreasMap() {
             {BOROUGHS.map((borough) => (
               <div key={borough.name} className="px-4 py-3">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="material-symbols-outlined text-[#FF4444] shrink-0" style={{ fontSize: '15px' }}>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] shrink-0" style={{ fontSize: '15px' }}>
                     location_on
                   </span>
                   {borough.slug ? (
@@ -84,7 +84,7 @@ export default function ServiceAreasMap() {
 
           <div className="px-4 py-3 border-t border-white/[0.06] bg-white/[0.02]">
             <div className="flex items-center gap-2 mb-1">
-              <span className="material-symbols-outlined text-[#FF4444] shrink-0" style={{ fontSize: '15px' }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] shrink-0" style={{ fontSize: '15px' }}>
                 directions
               </span>
               <span className="text-white font-bold text-sm">Motorways</span>
@@ -106,7 +106,7 @@ export default function ServiceAreasMap() {
           href="/service-area"
           className="mt-6 inline-flex items-center gap-2 bg-[#FF4444] text-[#121212] text-sm font-bold px-5 py-3 rounded-xl hover:bg-red-700 hover:text-white transition-colors self-start"
         >
-          <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>map</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined" style={{ fontSize: '16px' }}>map</span>
           View Full Service Area
         </a>
       </div>

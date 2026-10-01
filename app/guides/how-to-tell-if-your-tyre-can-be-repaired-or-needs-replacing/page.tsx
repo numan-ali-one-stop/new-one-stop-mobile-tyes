@@ -57,7 +57,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
     <details className="group bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm open:shadow-md transition-all">
       <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-base sm:text-lg text-[#0f172a] gap-3">
         {q}
-        <span className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
+        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
           expand_more
         </span>
       </summary>
@@ -259,7 +259,7 @@ export default function TyreRepairOrReplaceGuide() {
               { t: 'The tyre is over 6-10 years old', d: 'Rubber degrades with age even with good tread remaining — check the date code on the sidewall.' },
             ].map((item) => (
               <li key={item.t} className="flex items-start gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <span className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">cancel</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] mt-0.5 flex-shrink-0">cancel</span>
                 <div>
                   <p className="font-bold text-[#0f172a]">{item.t}</p>
                   <p className="text-slate-500 text-sm leading-relaxed">{item.d}</p>
@@ -338,7 +338,7 @@ export default function TyreRepairOrReplaceGuide() {
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
               </a>
               <a
@@ -346,7 +346,7 @@ export default function TyreRepairOrReplaceGuide() {
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 0161 399 5851
               </a>
               <a
@@ -405,7 +405,7 @@ export default function TyreRepairOrReplaceGuide() {
                 <p className="font-bold text-[#0f172a]">Emergency Puncture Repair</p>
                 <p className="text-sm text-slate-500">BS AU 159 compliant repairs, on-site, 24/7.</p>
               </div>
-              <span className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">arrow_forward</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a
               href="/mobile-tyre-fitting"
@@ -415,7 +415,7 @@ export default function TyreRepairOrReplaceGuide() {
                 <p className="font-bold text-[#0f172a]">Mobile Tyre Fitting</p>
                 <p className="text-sm text-slate-500">Replacement tyres fitted at your location, 24/7.</p>
               </div>
-              <span className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">arrow_forward</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
           </div>
         </div>

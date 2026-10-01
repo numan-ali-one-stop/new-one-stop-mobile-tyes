@@ -27,7 +27,7 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
   return (
     <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
       <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
+        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
       </div>
       <div>
         <span className="font-bold text-[#0f172a] block">{title}</span>
@@ -83,7 +83,7 @@ export default function LevenshulmePage() {
                 'Fully Insured Professional Tyre Technicians',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
-                  <span
+                  <span aria-hidden="true" data-nosnippet
                     className="material-symbols-outlined text-green-400 shrink-0"
                     style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
                   >check_circle</span>
@@ -102,7 +102,7 @@ export default function LevenshulmePage() {
               </svg>
               <div className="flex text-yellow-400 gap-px">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span aria-hidden="true" data-nosnippet key={i} className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
@@ -116,7 +116,7 @@ export default function LevenshulmePage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
               </a>
               <a
@@ -124,7 +124,7 @@ export default function LevenshulmePage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 0161 399 5851
               </a>
               <a
@@ -163,7 +163,7 @@ export default function LevenshulmePage() {
                 </svg>
                 <div className="flex text-yellow-400 gap-0.5">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                    <span aria-hidden="true" data-nosnippet key={i} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                   ))}
                 </div>
                 <span className="text-sm font-bold text-[#0f172a]">5 / 5</span>
@@ -179,7 +179,7 @@ export default function LevenshulmePage() {
                 className="inline-flex items-center gap-1.5 text-[#b70011] font-bold text-sm hover:underline"
               >
                 View all Google reviews
-                <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px]">open_in_new</span>
               </a>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function LevenshulmePage() {
                     </h3>
                     <p className="text-slate-600 text-base leading-relaxed mb-3">{card.desc}</p>
                     <div className="flex items-center justify-end">
-                      <span className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
+                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
                         arrow_forward
                       </span>
                     </div>
@@ -332,7 +332,7 @@ export default function LevenshulmePage() {
               <div className="absolute bottom-2 right-2 sm:-bottom-2 sm:-right-2 bg-white p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-2xl z-20 max-w-[165px] sm:max-w-[195px] border border-slate-100">
                 <div className="flex text-yellow-400 gap-0.5 mb-1.5">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i} className="material-symbols-outlined" style={{ fontSize: '16px', fontVariationSettings: "'FILL' 1" }}>star</span>
+                    <span aria-hidden="true" data-nosnippet key={i} className="material-symbols-outlined" style={{ fontSize: '16px', fontVariationSettings: "'FILL' 1" }}>star</span>
                   ))}
                 </div>
                 <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
@@ -422,21 +422,21 @@ export default function LevenshulmePage() {
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
                 href="tel:07759708646"
               >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
                 href="tel:01613995851"
               >
-                <span className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
                 href="https://wa.me/447759708646"
               >
-                <span className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
                 WhatsApp Us
               </a>
             </div>

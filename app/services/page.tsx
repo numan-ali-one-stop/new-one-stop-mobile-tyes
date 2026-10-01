@@ -171,7 +171,7 @@ export default function ServicesPage() {
               <div className="space-y-5 sm:space-y-6">
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-primary/10 p-2.5 sm:p-3 rounded-lg shrink-0">
-                    <span className="material-symbols-outlined text-primary text-xl sm:text-2xl">speed</span>
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-primary text-xl sm:text-2xl">speed</span>
                   </div>
                   <div>
                     <h4 className="font-label-bold text-sm sm:text-label-bold text-secondary sm:text-lg mb-1">Ultra-Fast Response</h4>
@@ -180,7 +180,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-primary/10 p-2.5 sm:p-3 rounded-lg shrink-0">
-                    <span className="material-symbols-outlined text-primary text-xl sm:text-2xl">schedule</span>
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-primary text-xl sm:text-2xl">schedule</span>
                   </div>
                   <div>
                     <h4 className="font-label-bold text-sm sm:text-label-bold text-secondary sm:text-lg mb-1">True 24/7 Availability</h4>
@@ -189,7 +189,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-primary/10 p-2.5 sm:p-3 rounded-lg shrink-0">
-                    <span className="material-symbols-outlined text-primary text-xl sm:text-2xl">construction</span>
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-primary text-xl sm:text-2xl">construction</span>
                   </div>
                   <div>
                     <h4 className="font-label-bold text-sm sm:text-label-bold text-secondary sm:text-lg mb-1">Certified Technicians</h4>
@@ -218,14 +218,14 @@ export default function ServicesPage() {
       <section className="px-4 sm:px-5 mb-12 sm:mb-16 lg:mb-xl">
         <div className="max-w-7xl mx-auto bg-primary rounded-2xl overflow-hidden shadow-2xl relative">
           <div className="absolute top-0 right-0 p-4 sm:p-8 opacity-10 pointer-events-none">
-            <span className="material-symbols-outlined text-[100px] sm:text-[150px] lg:text-[200px]">tire_repair</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[100px] sm:text-[150px] lg:text-[200px]">tire_repair</span>
           </div>
           <div className="p-6 sm:p-lg lg:p-xl flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-md relative z-10">
             <div className="text-white text-center sm:text-left">
               <h2 className="font-h1 text-2xl sm:text-3xl lg:text-h1 mb-2">Need Help Immediately?</h2>
               <p className="font-body-lg text-base lg:text-body-lg text-white/90">Speak directly to a technician for an instant quote and arrival time.</p>
               <div className="mt-4 sm:mt-6 flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
-                <span className="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl">call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl">call</span>
                 <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1">07759 708 646 / 0161 399 5851</span>
               </div>
             </div>
@@ -250,19 +250,19 @@ export default function ServicesPage() {
       {/* Mobile bottom nav */}
       <nav className="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 sm:px-4 py-2 bg-white border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,45,98,0.05)] rounded-t-2xl">
         <a className="flex flex-col items-center justify-center text-gray-500 py-1 px-2" href="/">
-          <span className="material-symbols-outlined text-xl">home</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">home</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Home</span>
         </a>
         <a className="flex flex-col items-center justify-center bg-red-50 text-red-600 rounded-xl px-2 sm:px-3 py-1.5" href="/services">
-          <span className="material-symbols-outlined text-xl">tire_repair</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">tire_repair</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Services</span>
         </a>
         <a className="flex flex-col items-center justify-center text-gray-500 py-1 px-2" href="tel:07759708646">
-          <span className="material-symbols-outlined text-xl">emergency</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">emergency</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Emergency</span>
         </a>
         <a className="flex flex-col items-center justify-center text-gray-500 py-1 px-2" href="/contact">
-          <span className="material-symbols-outlined text-xl">person</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">person</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Account</span>
         </a>
       </nav>

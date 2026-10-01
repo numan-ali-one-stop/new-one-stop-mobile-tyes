@@ -57,7 +57,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
     <details className="group bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm open:shadow-md transition-all">
       <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-base sm:text-lg text-[#0f172a] gap-3">
         {q}
-        <span className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
+        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
           expand_more
         </span>
       </summary>
@@ -238,7 +238,7 @@ export default function RunFlatVsNormalGuide() {
           </p>
           <ul className="space-y-3 mb-6">
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">
                 <strong>Replace the full set, not just one or two.</strong> Mixing run-flat and
                 normal tyres on the same car — or even the same axle — creates uneven handling
@@ -246,7 +246,7 @@ export default function RunFlatVsNormalGuide() {
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">
                 <strong>Sort out your puncture safety net.</strong> Without run-flats, a flat
                 tyre means stopping. Consider a space-saver spare if there&apos;s room for one,
@@ -259,7 +259,7 @@ export default function RunFlatVsNormalGuide() {
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-600 mt-0.5 flex-shrink-0">check_circle</span>
               <span className="text-slate-600 leading-relaxed">
                 <strong>Check your TPMS setup.</strong> Some systems are calibrated around
                 run-flat sidewall behaviour; we include a check with every fitting so your
@@ -308,7 +308,7 @@ export default function RunFlatVsNormalGuide() {
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
               </a>
               <a
@@ -316,7 +316,7 @@ export default function RunFlatVsNormalGuide() {
                 className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 0161 399 5851
               </a>
               <a

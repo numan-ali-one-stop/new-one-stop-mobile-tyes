@@ -100,7 +100,7 @@ export default function ContactPageClient() {
                   {/* Phone */}
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="bg-[#ffdad6] p-2.5 sm:p-3 rounded-lg text-[#b70011] shrink-0">
-                      <span
+                      <span aria-hidden="true" data-nosnippet
                         className="material-symbols-outlined text-xl sm:text-2xl"
                         style={{ fontVariationSettings: "'FILL' 1" }}
                       >
@@ -132,7 +132,7 @@ export default function ContactPageClient() {
                   {/* Email */}
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="bg-[#c8e6ff] p-2.5 sm:p-3 rounded-lg text-[#005f88] shrink-0">
-                      <span
+                      <span aria-hidden="true" data-nosnippet
                         className="material-symbols-outlined text-xl sm:text-2xl"
                         style={{ fontVariationSettings: "'FILL' 1" }}
                       >
@@ -155,7 +155,7 @@ export default function ContactPageClient() {
                   {/* Coverage */}
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="bg-[#d7e2ff] p-2.5 sm:p-3 rounded-lg text-[#3e5e95] shrink-0">
-                      <span
+                      <span aria-hidden="true" data-nosnippet
                         className="material-symbols-outlined text-xl sm:text-2xl"
                         style={{ fontVariationSettings: "'FILL' 1" }}
                       >
@@ -178,7 +178,7 @@ export default function ContactPageClient() {
                   {/* Address */}
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="bg-[#ffdad6] p-2.5 sm:p-3 rounded-lg text-[#b70011] shrink-0">
-                      <span
+                      <span aria-hidden="true" data-nosnippet
                         className="material-symbols-outlined text-xl sm:text-2xl"
                         style={{ fontVariationSettings: "'FILL' 1" }}
                       >
@@ -205,7 +205,7 @@ export default function ContactPageClient() {
                 {/* 24/7 note */}
                 <div className="mt-8 sm:mt-12 p-4 sm:p-6 bg-[#f6f3f2] rounded-lg" style={{ borderLeft: '4px solid #b70011' }}>
                   <h3 className="text-[#b70011] mb-2 flex items-center gap-2 text-sm font-semibold">
-                    <span className="material-symbols-outlined text-sm">schedule</span>
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">schedule</span>
                     24/7 EMERGENCY ASSISTANCE
                   </h3>
                   <p className="text-xs sm:text-sm text-[#1c1b1b]">
@@ -365,7 +365,7 @@ export default function ContactPageClient() {
                   letterSpacing: '0.02em',
                 }}
               >
-                <span
+                <span aria-hidden="true" data-nosnippet
                   className="material-symbols-outlined text-xl sm:text-2xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
@@ -381,7 +381,7 @@ export default function ContactPageClient() {
                   letterSpacing: '0.02em',
                 }}
               >
-                <span
+                <span aria-hidden="true" data-nosnippet
                   className="material-symbols-outlined text-xl sm:text-2xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
@@ -420,7 +420,7 @@ export default function ContactPageClient() {
                 style={{ boxShadow: '0px 4px 20px rgba(0,45,98,0.05)' }}
               >
                 <div className="text-[#b70011] mb-3 sm:mb-4">
-                  <span className="material-symbols-outlined text-3xl sm:text-4xl">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-3xl sm:text-4xl">
                     {item.icon}
                   </span>
                 </div>
@@ -463,7 +463,7 @@ export default function ContactPageClient() {
                     aria-expanded={openFaq === i}
                   >
                     <span className="text-[#1c1b1b]">{faq.q}</span>
-                    <span
+                    <span aria-hidden="true" data-nosnippet
                       className="material-symbols-outlined shrink-0 transition-transform text-xl sm:text-2xl"
                       style={{ transform: openFaq === i ? 'rotate(180deg)' : 'rotate(0deg)' }}
                     >

@@ -145,8 +145,8 @@ export default function RoadsideAssistancePage() {
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/professional-mobile-tyre-fitting.webp"
-          alt="Roadside assistance service"
+          src="/images/24-7-professional-roadside-assistance-across-greater-manchester.jpg"
+          alt="24/7 professional roadside assistance across Greater Manchester"
           className="absolute inset-0 w-full h-full object-cover object-center"
           width={1600}
           height={900}
@@ -195,7 +195,7 @@ export default function RoadsideAssistancePage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call Now
               </a>
               <a
@@ -219,8 +219,8 @@ export default function RoadsideAssistancePage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-              alt="Roadside assistance technician"
+              src="/images/professional-roadside-assistance-wherever-you-need-help-across-greater-manchester.jpg"
+              alt="Professional roadside assistance wherever you need help across Greater Manchester"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -306,7 +306,7 @@ export default function RoadsideAssistancePage() {
                 </h3>
                 <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
                 {idx < steps.length - 1 && (
-                  <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                  <span aria-hidden="true" data-nosnippet className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
                     trending_flat
                   </span>
                 )}
@@ -322,8 +322,8 @@ export default function RoadsideAssistancePage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/tyre-fitting-in-emergency.webp"
-              alt="Emergency roadside assistance"
+              src="/images/emergency-roadside-assistance-when-you-need-fast-help-on-the-road.jpg"
+              alt="Emergency roadside assistance when you need fast help on the road"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -357,7 +357,7 @@ export default function RoadsideAssistancePage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
               </a>
               <a
@@ -365,7 +365,7 @@ export default function RoadsideAssistancePage() {
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 0161 399 5851
               </a>
               <a
@@ -411,7 +411,7 @@ export default function RoadsideAssistancePage() {
                 className="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-[#b70011] hover:text-white text-[#0f172a] font-semibold text-sm px-4 py-2.5 rounded-full border border-slate-200 hover:border-[#b70011] transition-colors"
               >
                 {area.name}
-                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px]">arrow_forward</span>
               </a>
             ))}
           </div>
@@ -444,7 +444,7 @@ export default function RoadsideAssistancePage() {
               >
                 <summary className="list-none flex justify-between items-center cursor-pointer font-bold text-base sm:text-lg text-[#0f172a] gap-3">
                   {faq.q}
-                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined group-open:rotate-180 transition-transform text-[#b70011] flex-shrink-0 text-xl sm:text-2xl">
                     expand_more
                   </span>
                 </summary>

@@ -220,7 +220,7 @@ export default function ServiceAreaPage() {
               href="tel:07759708646"
               className="inline-flex items-center gap-2 bg-primary text-white font-call-to-action text-base lg:text-call-to-action px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg uppercase"
             >
-              <span className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
               07759 708 646
@@ -229,7 +229,7 @@ export default function ServiceAreaPage() {
               href="tel:01613995851"
               className="inline-flex items-center gap-2 bg-primary text-white font-call-to-action text-base lg:text-call-to-action px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg uppercase"
             >
-              <span className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
               0161 399 5851
@@ -247,7 +247,7 @@ export default function ServiceAreaPage() {
               className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl bg-surface-container-low"
             >
               <div className="bg-primary/10 p-2 sm:p-2.5 rounded-lg shrink-0">
-                <span className="material-symbols-outlined text-primary text-lg sm:text-xl">{b.icon}</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-primary text-lg sm:text-xl">{b.icon}</span>
               </div>
               <div className="min-w-0">
                 <p className="font-label-bold text-xs sm:text-label-bold text-secondary leading-tight truncate">{b.label}</p>
@@ -282,7 +282,7 @@ export default function ServiceAreaPage() {
                 <div className="h-1.5 bg-primary" />
                 <a href={area.href} className="flex items-center gap-4 px-5 pt-5 pb-3">
                   <div className="bg-primary p-3.5 rounded-2xl shrink-0 shadow-md shadow-primary/30">
-                    <span className="material-symbols-outlined text-white text-[28px]">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white text-[28px]">
                       {area.icon}
                     </span>
                   </div>
@@ -323,7 +323,7 @@ export default function ServiceAreaPage() {
                   className="mt-auto bg-primary hover:bg-[#dc2626] text-white px-5 py-3.5 flex items-center justify-between font-bold text-sm uppercase tracking-wide transition-colors"
                 >
                   View {area.name} Coverage
-                  <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
                     arrow_forward
                   </span>
                 </a>
@@ -358,12 +358,12 @@ export default function ServiceAreaPage() {
                   <span className="bg-secondary text-white font-black text-base px-3 py-1 rounded-lg tracking-wide">
                     {road.name}
                   </span>
-                  <span className="material-symbols-outlined text-primary group-hover:translate-x-0.5 transition-transform">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-primary group-hover:translate-x-0.5 transition-transform">
                     arrow_forward
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-on-surface-variant font-semibold">
-                  <span className="material-symbols-outlined text-sm text-primary">route</span>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm text-primary">route</span>
                   {road.junctions}
                 </div>
                 <p className="text-sm text-on-surface-variant leading-relaxed flex-1">{road.desc}</p>
@@ -381,7 +381,7 @@ export default function ServiceAreaPage() {
         <div className="max-w-4xl mx-auto bg-white rounded-2xl sm:rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
           <div className="flex flex-col md:flex-row">
             <div className="bg-secondary p-6 sm:p-8 md:p-10 flex flex-col justify-center md:w-2/5 shrink-0">
-              <span className="material-symbols-outlined text-white/30 text-[50px] sm:text-[80px] mb-3 sm:mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white/30 text-[50px] sm:text-[80px] mb-3 sm:mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>
                 help
               </span>
               <h3 className="font-h2 text-xl sm:text-2xl text-white mb-2 text-balance">Not sure if we cover your area?</h3>
@@ -399,7 +399,7 @@ export default function ServiceAreaPage() {
                   href="tel:07759708646"
                   className="flex items-center justify-center gap-2 bg-primary text-white font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-primary/90 transition-all shadow-md"
                 >
-                  <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
                     phone_in_talk
                   </span>
                   Call 07759 708 646
@@ -408,7 +408,7 @@ export default function ServiceAreaPage() {
                   href="tel:01613995851"
                   className="flex items-center justify-center gap-2 bg-primary text-white font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-primary/90 transition-all shadow-md"
                 >
-                  <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
                     phone_in_talk
                   </span>
                   Call 0161 399 5851
@@ -417,12 +417,12 @@ export default function ServiceAreaPage() {
                   href="mailto:info@onestoptyres247.co.uk"
                   className="flex items-center justify-center gap-2 border-2 border-secondary text-secondary font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-secondary hover:text-white transition-all"
                 >
-                  <span className="material-symbols-outlined text-lg">mail</span>
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg">mail</span>
                   Email Us
                 </a>
               </div>
               <p className="text-xs text-on-surface-variant flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-sm text-green-500" style={{ fontVariationSettings: "'FILL' 1" }}>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm text-green-500" style={{ fontVariationSettings: "'FILL' 1" }}>
                   check_circle
                 </span>
                 Typical response: 20–30 minutes anywhere in Greater Manchester
@@ -436,7 +436,7 @@ export default function ServiceAreaPage() {
       <section className="px-4 sm:px-5 mb-12 sm:mb-16 lg:mb-xl">
         <div className="max-w-7xl mx-auto bg-primary rounded-2xl overflow-hidden shadow-2xl relative">
           <div className="absolute top-0 right-0 p-4 sm:p-8 opacity-10 pointer-events-none">
-            <span className="material-symbols-outlined text-[100px] sm:text-[150px] lg:text-[200px]">tire_repair</span>
+            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[100px] sm:text-[150px] lg:text-[200px]">tire_repair</span>
           </div>
           <div className="p-6 sm:p-8 lg:px-14 lg:py-12 flex flex-col sm:flex-row justify-between items-center gap-5 sm:gap-6 relative z-10">
             <div className="text-white text-center sm:text-left">
@@ -445,7 +445,7 @@ export default function ServiceAreaPage() {
                 Call immediately — our team is standing by 24/7 across Greater Manchester.
               </p>
               <div className="mt-4 sm:mt-5 flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4">
-                <span className="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1">07759 708 646</span>
                 <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1 opacity-60">/</span>
                 <span className="text-xl sm:text-2xl lg:text-4xl font-black font-h1">0161 399 5851</span>
@@ -472,19 +472,19 @@ export default function ServiceAreaPage() {
       {/* Mobile bottom nav */}
       <nav className="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 sm:px-4 py-2 bg-white border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,45,98,0.05)] rounded-t-2xl">
         <a className="flex flex-col items-center justify-center text-gray-500 py-1 px-2" href="/">
-          <span className="material-symbols-outlined text-xl">home</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">home</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Home</span>
         </a>
         <a className="flex flex-col items-center justify-center text-gray-500 py-1 px-2" href="/services">
-          <span className="material-symbols-outlined text-xl">tire_repair</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">tire_repair</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Services</span>
         </a>
         <a className="flex flex-col items-center justify-center text-gray-500 py-1 px-2" href="tel:07759708646">
-          <span className="material-symbols-outlined text-xl">emergency</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">emergency</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Emergency</span>
         </a>
         <a className="flex flex-col items-center justify-center bg-red-50 text-red-600 rounded-xl px-2 sm:px-3 py-1.5" href="/service-area">
-          <span className="material-symbols-outlined text-xl">map</span>
+          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl">map</span>
           <span className="text-[9px] sm:text-[10px] font-semibold font-h3">Area</span>
         </a>
       </nav>

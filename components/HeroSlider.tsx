@@ -84,7 +84,7 @@ export default function HeroSlider() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
                 {HERO.items.map((item) => (
                   <div key={item} className="flex items-center gap-2.5 text-white/90">
-                    <span
+                    <span aria-hidden="true" data-nosnippet
                       className="material-symbols-outlined text-green-400 shrink-0"
                       style={{ fontSize: '18px', fontVariationSettings: "'FILL' 1" }}
                     >check_circle</span>
@@ -108,7 +108,7 @@ export default function HeroSlider() {
               </svg>
               <div className="flex text-yellow-400 gap-px">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span aria-hidden="true" data-nosnippet key={i} className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
@@ -122,7 +122,7 @@ export default function HeroSlider() {
                 className="bg-[#FF4444] hover:bg-red-700 text-white font-black px-7 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-base shadow-2xl shadow-red-900/40 hover:scale-105"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 CALL NOW
               </a>
               <a
