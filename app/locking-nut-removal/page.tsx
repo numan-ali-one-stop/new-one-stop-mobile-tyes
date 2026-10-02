@@ -125,8 +125,8 @@ export default function LockingNutRemovalPage() {
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/professional-mobile-tyre-fitting.webp"
-          alt="One Stop Mobile Tyres 24/7 mobile technician assisting a vehicle"
+          src="/images/professional-mobile-locking-wheel-nut-removal-across-greater-manchester.jpg"
+          alt="Professional mobile locking wheel nut removal across Greater Manchester"
           className="absolute inset-0 w-full h-full object-cover object-center"
           width={1600}
           height={900}
@@ -213,8 +213,8 @@ export default function LockingNutRemovalPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-              alt="Mobile technician attending a vehicle callout"
+              src="/images/professional-locking-wheel-nut-removal-carried-out-at-your-location.jpg"
+              alt="Professional locking wheel nut removal carried out at your location"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
@@ -309,8 +309,8 @@ export default function LockingNutRemovalPage() {
           <div className="w-full lg:w-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mobile-tyre-fitting-service.webp"
-              alt="One Stop Mobile Tyres 24/7 mobile technician on a callout"
+              src="/images/fast-assistance-for-lost-or-damaged-locking-wheel-nut-keys-at-your-location.jpg"
+              alt="Fast assistance for lost or damaged locking wheel nut keys at your location"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}
