@@ -147,7 +147,7 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
     <div className="absolute inset-0 bg-[#0f172a]">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="kb w-full h-full object-cover object-center"
+        className="kb w-full h-full object-cover object-[80%_center] lg:object-center"
         src={image}
         alt=""
         aria-hidden="true"
