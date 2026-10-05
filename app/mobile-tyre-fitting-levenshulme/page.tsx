@@ -6,14 +6,13 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageSchemaGraph } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _schemaGraph = pageSchemaGraph({
   slug: 'mobile-tyre-fitting-levenshulme',
-  name: 'Mobile Tyre Fitting Levenshulme',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Levenshulme' },
+  city: 'Levenshulme',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
 })
 
 export const metadata = buildMetadata({
@@ -40,7 +39,7 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function LevenshulmePage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_schemaGraph} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}

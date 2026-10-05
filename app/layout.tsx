@@ -4,8 +4,6 @@ import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import JsonLd from '@/components/JsonLd'
-import { localBusinessSchema } from '@/lib/schema'
 import CookieConsentBanner from '@/components/CookieConsentBanner'
 
 const workSans = Work_Sans({
@@ -155,7 +153,6 @@ gtag('config', 'AW-10825208776');`,
         />
       </head>
       <body className="antialiased overflow-x-hidden pb-[60px] sm:pb-0">
-        <JsonLd data={localBusinessSchema()} />
         {/* Google Tag Manager noscript */}
         <noscript>
           <iframe

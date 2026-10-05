@@ -6,14 +6,16 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageSchemaGraph } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _schemaGraph = pageSchemaGraph({
   slug: 'mobile-tyre-fitting-mancunian-way-area',
-  name: 'Mobile Tyre Fitting Mancunian Way area',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Mancunian Way area' },
+  city: 'Mancunian Way Area',
+  addressLocality: 'Manchester',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  description:
+    'Need mobile tyre fitting near Mancunian Way? Get 24/7 emergency tyre replacement and puncture repair at safe locations around Manchester city centre.',
 })
 
 export const metadata = buildMetadata({
@@ -40,7 +42,7 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function MancunianWayAreaPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_schemaGraph} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
