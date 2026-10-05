@@ -35,7 +35,7 @@ export default function TermsPage() {
         >
           Terms &amp; Conditions
         </h1>
-        <p className="text-slate-400 text-base">Last updated: 21 June 2026</p>
+        <p className="text-slate-400 text-base">Last updated: 21 June 2025</p>
       </div>
 
       {/* Content */}
@@ -47,9 +47,8 @@ export default function TermsPage() {
 
         <Section title="1. About Us">
           <p>
-            One Stop Mobile Tyres 24/7 (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;,
-            &quot;the Company&quot;) provides mobile tyre fitting, puncture repair, jump start, TPMS
-            reset, and locking wheel nut removal services across Greater Manchester, UK.
+            One Stop Mobile Tyres 24/7 provides mobile tyre fitting, puncture repair, jump start,
+            TPMS reset, and locking wheel nut removal services across Greater Manchester, UK.
           </p>
           <p>
             <strong>Contact:</strong>{' '}
@@ -67,7 +66,7 @@ export default function TermsPage() {
 
         <Section title="2. Services">
           <p>
-            We offer the following services (each a &quot;Service&quot;):
+            We offer the following services:
           </p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Mobile tyre fitting and replacement</li>
@@ -119,9 +118,7 @@ export default function TermsPage() {
             fee may apply.
           </p>
           <p>
-            We reserve the right to cancel or reschedule any appointment due to unforeseen
-            circumstances, including but not limited to severe weather, technical failure, or staff
-            shortage. We will provide as much notice as possible in such cases.
+            Any deposits that are made the deposit is non refundable at the time of booking.
           </p>
         </Section>
 
@@ -147,31 +144,18 @@ export default function TermsPage() {
         </Section>
 
         <Section title="7. Warranties & Guarantees">
-          <p>
-            New tyres are supplied with the manufacturer&apos;s standard warranty. Our workmanship
-            is guaranteed for 30 days from the date of fitting under normal use.
-          </p>
-          <p>
-            Puncture repairs are carried out in accordance with British Standard BS AU 159. We will
-            only carry out a puncture repair where it is safe and within industry guidelines to do
-            so. Where a tyre cannot be safely repaired, we will advise replacement.
-          </p>
+          <p>24 hour workmanship guarantee.</p>
         </Section>
 
-        <Section title="8. Limitation of Liability">
+        <Section title="8. Damages">
           <p>
-            We accept liability for death or personal injury caused by our negligence, and for
-            fraudulent misrepresentation. Nothing in these Terms limits or excludes our liability in
-            such cases.
-          </p>
-          <p>
-            Subject to the above, our total liability to you for any loss or damage arising under or
-            in connection with the Service shall not exceed the total price paid for the specific
-            Service giving rise to the claim.
-          </p>
-          <p>
-            We are not liable for indirect or consequential losses including loss of profits, loss of
-            earnings, or damage to third-party property unless caused by our negligence.
+            One Stop Mobile Tyres Ltd takes reasonable care when removing and fitting tyres. We
+            cannot accept liability for pre-existing damage, including scratches, scuffs, corrosion,
+            cracks or damage to alloy wheels, rims, wheel trims or rim protectors. Any claim that
+            damage was caused during our service should be supported by clear evidence showing the
+            condition of the affected area immediately before and after the work was carried out.
+            This does not affect your statutory rights or exclude liability where damage is proven
+            to have been caused by our negligence.
           </p>
         </Section>
 
