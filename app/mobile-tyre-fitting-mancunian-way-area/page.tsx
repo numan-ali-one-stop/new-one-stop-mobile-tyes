@@ -1,27 +1,34 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { pageSchemaGraph } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _schemaGraph = pageSchemaGraph({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-mancunian-way-area',
-  city: 'Mancunian Way Area',
-  addressLocality: 'Manchester',
-  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  alternateName: '24/7 Mobile Tyre Fitting Mancunian Way Area',
+  areaServed: 'Mancunian Way Area',
   description:
     'Need mobile tyre fitting near Mancunian Way? Get 24/7 emergency tyre replacement and puncture repair at safe locations around Manchester city centre.',
 })
 
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-mancunian-way-area')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-mancunian-way-area')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-mancunian-way-area',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Manchester',
+})
+
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Mancunian Way area | One Stop Mobile Tyres 24/7',
+  title: 'Mobile Tyre Fitting Mancunian Way | 24/7 Tyres',
   description:
-    'Professional mobile tyre fitting in Mancunian Way area — emergency replacement, dependable service.',
+    'Need mobile tyre fitting near Mancunian Way? Get 24/7 emergency tyre replacement and puncture repair at safe locations around Manchester city centre.',
   path: '/mobile-tyre-fitting-mancunian-way-area',
 })
 
@@ -42,7 +49,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function MancunianWayAreaPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_schemaGraph} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -67,22 +77,21 @@ export default function MancunianWayAreaPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Mancunian Way area
+              24/7 Mobile Tyre Fitting Mancunian Way Area
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Mancunian Way area. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Need urgent tyre assistance near Mancunian Way? Get professional mobile tyre fitting in the Mancunian Way area, with 24/7 emergency tyre replacement and puncture repair at suitable locations around Manchester city centre.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering Mancunian Way area &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Work & Safe Roadside Service',
+                'Mancunian Way & Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -349,39 +358,218 @@ export default function MancunianWayAreaPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Mancunian Way area
+                Professional Mobile Tyre Fitting in the Mancunian Way Area
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Mancunian Way area, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Mancunian Way area and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Mancunian Way area.
-                If you&apos;re searching for mobile tyre fitting near me in Mancunian Way area, our fast response team is available day and night.
+                When you need mobile tyre fitting near Mancunian Way, One Stop Tyres 247 provides professional tyre fitting and replacement at your location. Whether you discover a flat tyre before work, experience tyre damage while travelling or need an emergency replacement, our mobile technicians can help.
+                We cover locations around the A57(M) corridor, including Hulme, Ardwick, Castlefield and Manchester city centre. Our service is available 24/7 for planned tyre fitting and unexpected tyre emergencies.
               </p>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
+                Our Key Services
+              </span>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
+                  icon="tire_repair"
+                  title="Mobile Tyre Fitting Mancunian Way"
+                  desc="Professional tyre fitting at your home, workplace or another safe and accessible location near Mancunian Way."
+                />
+                <FeatureItem
                   icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
+                  title="Mobile Tyre Replacement"
+                  desc="Replacement of worn, damaged or unsafe tyres without the need to visit a garage."
                 />
                 <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
+                  icon="build"
                   title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
+                  desc="On-site puncture repairs where the tyre is suitable and the damage can be safely repaired."
+                />
+                <FeatureItem
+                  icon="schedule"
+                  title="24/7 Emergency Tyre Assistance"
+                  desc="Day and night assistance for flat tyres, blowouts and unexpected tyre problems around the Mancunian Way area."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY MANCUNIAN WAY AREA DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Mancunian Way area" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            {
+              icon: 'engineering',
+              title: 'Professional Mobile Tyre Fitters',
+              desc: 'Our technicians carry specialist equipment for fitting and replacing tyres at suitable locations.',
+            },
+            {
+              icon: 'home_repair_service',
+              title: 'Convenient Home and Workplace Service',
+              desc: 'Arrange tyre fitting at your home, office or workplace near Manchester city centre without travelling to a garage.',
+            },
+            {
+              icon: 'schedule',
+              title: '24/7 Emergency Assistance',
+              desc: 'Get help with unexpected tyre problems during the day, overnight, at weekends and on bank holidays.',
+            },
+            {
+              icon: 'tire_repair',
+              title: 'Replacement Tyre Options',
+              desc: 'We offer budget, mid-range and premium tyres, subject to your vehicle requirements and stock availability.',
+            },
+            {
+              icon: 'build',
+              title: 'Repair Where Possible',
+              desc: 'We inspect damaged tyres and carry out puncture repairs where safe and suitable, avoiding unnecessary replacement.',
+            },
+            {
+              icon: 'pin_drop',
+              title: 'Coverage Around Mancunian Way',
+              desc: 'Our service covers accessible locations around the A57(M), including routes towards Hulme, Ardwick, Castlefield and Manchester city centre.',
+            },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in the Mancunian Way Area Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Us',
+                  desc: 'Tell us your exact location, vehicle registration, tyre size if known and the problem you are experiencing.',
+                },
+                {
+                  n: '2',
+                  title: 'Get a Quote',
+                  desc: 'We check suitable tyre options and confirm pricing and availability before arranging assistance.',
+                },
+                {
+                  n: '3',
+                  title: 'We Come to You',
+                  desc: 'A mobile tyre fitter travels to your home, workplace or another safe and accessible location near Mancunian Way.',
+                },
+                {
+                  n: '4',
+                  title: 'Tyre Fitting or Replacement',
+                  desc: 'We inspect the tyre, carry out a repair where appropriate or fit a suitable replacement.',
+                },
+                {
+                  n: '5',
+                  title: 'Final Safety Checks',
+                  desc: 'We complete the necessary fitting, balancing and tyre-pressure checks before finishing the job.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 4 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ACROSS MANCUNIAN WAY ──── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Mobile Tyre Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Replacement Across the Mancunian Way Area
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If your tyre is worn, damaged or unsuitable for repair, our <strong>mobile tyre replacement near Mancunian Way</strong> service allows you to have a suitable replacement fitted without visiting a garage.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We supply and fit tyres for cars, SUVs and vans, with options for different vehicle requirements and budgets.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Whether you need a single tyre replaced at work, new tyres fitted at home or assistance after a puncture, our mobile technicians bring the necessary equipment directly to an accessible location.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We provide tyre replacement around Mancunian Way and nearby areas, including Hulme, Ardwick, Castlefield and Manchester city centre.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING & REPLACEMENT ───── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Emergency Mobile Tyre Fitting &amp; Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement Near Mancunian Way
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A flat tyre or blowout near Mancunian Way can disrupt your journey. Our <strong>emergency mobile tyre fitting near Mancunian Way</strong> service is available 24/7 to assist drivers experiencing unexpected tyre problems.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We attend suitable locations around the A57(M) corridor, including accessible streets, residential areas, workplaces and safe locations near connecting roads.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Depending on your tyre&apos;s condition, our technicians can carry out a puncture repair or provide an emergency tyre replacement.
+            </p>
+            <div className="bg-white border-l-4 border-[#b70011] rounded-lg p-5 sm:p-6 mb-4 text-left">
+              <p className="text-[#b70011] font-bold uppercase tracking-widest text-xs mb-2">
+                Important Roadside Safety Information
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base">
+                If your vehicle breaks down on Mancunian Way itself, follow motorway safety guidance and contact an appropriate recovery or emergency service if you cannot reach a safe location. Tyre fitting must only take place where it is safe and permitted.
+              </p>
+            </div>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -390,35 +578,79 @@ export default function MancunianWayAreaPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-mancunian-way-area"
           city="Mancunian Way area"
           faqs={[
             {
-              q: 'How quickly can you reach me near the Mancunian Way?',
-              a: 'Our mobile units are based close by in Manchester, meaning we can typically reach the Mancunian Way area and the surrounding M1 and M15 postcode areas, including the A57(M) corridor, within 20-30 minutes.',
+              q: 'Do you provide mobile tyre fitting near Mancunian Way?',
+              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations around Mancunian Way and Manchester city centre.',
             },
             {
-              q: 'What areas around the Mancunian Way do you cover?',
-              a: 'Yes. We cover the Mancunian Way area and the surrounding M1 and M15 postcode areas, along with the A57(M) corridor and the routes connecting to Manchester city centre and Hulme.',
+              q: 'Can you replace a tyre near the A57(M)?',
+              a: 'Yes. We can supply and fit replacement tyres at safe, accessible locations near the A57(M).',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre near the Mancunian Way?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'Do you offer emergency tyre fitting near Mancunian Way?',
+              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
             },
             {
-              q: 'Can you fit tyres at my workplace near the Mancunian Way or Hulme?',
-              a: 'Yes. We regularly attend offices and business premises around the Mancunian Way corridor and Hulme, fitting your tyres while you work.',
+              q: 'Can you repair a punctured tyre?',
+              a: 'Yes. We inspect the tyre and carry out a puncture repair where the damage meets the relevant safety requirements.',
+            },
+            {
+              q: 'Can you fit tyres at my workplace near Mancunian Way?',
+              a: 'Yes. We can attend suitable workplace locations around Hulme, Ardwick, Castlefield and Manchester city centre.',
+            },
+            {
+              q: 'Can you replace my tyre on Mancunian Way itself?',
+              a: 'Tyre fitting must take place at a safe and permitted location. If your vehicle breaks down on the motorway, follow motorway safety guidance and arrange appropriate recovery if necessary.',
+            },
+            {
+              q: 'How quickly can you reach the Mancunian Way area?',
+              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on your location, traffic, technician availability and safe access.',
+            },
+            {
+              q: 'Do you provide mobile tyre fitting at night?',
+              a: 'Yes. Our service is available 24/7, including overnight, weekends and bank holidays.',
+            },
+            {
+              q: 'Can you replace a tyre that cannot be repaired?',
+              a: 'Yes. If your tyre is damaged or unsuitable for repair, we can supply and fit an appropriate replacement.',
+            },
+            {
+              q: 'Do you provide mobile tyre fitting near Manchester city centre?',
+              a: 'Yes. We cover suitable locations around Manchester city centre and the Mancunian Way corridor.',
+            },
+            {
+              q: 'Can you help if I have a flat tyre near Mancunian Way?',
+              a: 'Yes. Contact us with your exact location. We can assess your tyre and arrange repair or replacement at a safe, accessible location.',
+            },
+            {
+              q: 'Do you offer different tyre brands and prices?',
+              a: 'Yes. Budget, mid-range and premium tyre options are available, depending on your tyre size and current stock.',
+            },
+            {
+              q: 'Do you provide mobile puncture repair near the A57(M)?',
+              a: 'Yes. We provide puncture repair at suitable locations near the A57(M), provided the tyre can be safely repaired.',
+            },
+            {
+              q: 'Can you fit more than one tyre during a visit?',
+              a: 'Yes. We can replace one tyre, a pair or a complete set, subject to your vehicle requirements and tyre availability.',
+            },
+            {
+              q: 'Which areas around Mancunian Way do you cover?',
+              a: 'We cover accessible locations around Mancunian Way, including Hulme, Ardwick, Castlefield, Manchester city centre and surrounding areas. Contact us with your exact location to confirm availability.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Mancunian Way area Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Mancunian Way area line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting Near Mancunian Way?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance near the A57(M), One Stop Tyres 247 can come to a safe, accessible location. Contact us today for 24/7 mobile tyre fitting near Mancunian Way, emergency tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

@@ -6,13 +6,23 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { pageSchemaGraph } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _schemaGraph = pageSchemaGraph({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-ladybarn',
-  city: 'Ladybarn',
+  alternateName: '24/7 Mobile Tyre Fitting Ladybarn',
+  areaServed: 'Ladybarn',
+  description:
+    'Need mobile tyre fitting in Ladybarn? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-ladybarn')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-ladybarn')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-ladybarn',
   image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Ladybarn',
 })
 
 export const metadata = buildMetadata({
@@ -39,7 +49,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function LadybarnPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_schemaGraph} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
