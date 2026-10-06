@@ -26,7 +26,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Mancunian Way | 24/7 Tyres',
+  title: 'Mobile Tyre Fitting Mancunian Way | 24/7 Tyre Replacement',
   description:
     'Need mobile tyre fitting near Mancunian Way? Get 24/7 emergency tyre replacement and puncture repair at safe locations around Manchester city centre.',
   path: '/mobile-tyre-fitting-mancunian-way-area',

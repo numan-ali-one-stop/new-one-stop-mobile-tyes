@@ -3,7 +3,7 @@
 import { PHONE_TEL } from '@/lib/constants'
 
 const HERO = {
-  image: '/images/IMG_2100.jpeg',
+  image: '/images/IMG_2098.jpeg',
   badge: 'Same Day Mobile Tyre Replacement',
   heading: '24/7 Mobile Tyre Service & Repair in Greater Manchester',
   body: 'Need tyre help fast? Our mobile tyre service comes directly to you across Greater Manchester. We provide tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or a safe roadside location, 24 hours a day, 7 days a week.',
@@ -144,10 +144,19 @@ export default function HeroSlider() {
 
 function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
   return (
-    <div className="absolute inset-0 bg-[#0f172a]">
+    <div className="absolute inset-0 bg-[#0f172a] overflow-hidden">
+      {/* Blurred copy fills the background so the main photo isn't zoomed */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="kb w-full h-full object-cover object-[80%_center] lg:object-center"
+        className="absolute inset-0 w-full h-full object-cover blur-xl scale-110"
+        src={image}
+        alt=""
+        aria-hidden="true"
+        decoding="async"
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        className="kb absolute inset-x-0 top-[calc(50%-37.5vw)] w-full aspect-[4/3] object-cover [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
         src={image}
         alt=""
         aria-hidden="true"
@@ -156,8 +165,10 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
         decoding="async"
         {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })}
       />
-      {/* Gradient: strong left for text, fades right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172a]/80 to-[#0f172a]/30" />
+      {/* Mobile: even dark overlay so the text stays readable over the photo */}
+      <div className="absolute inset-0 bg-[#0f172a]/60 lg:hidden" />
+      {/* Desktop gradient: strong left for text, fades right */}
+      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172a]/85 to-[#0f172a]/35" />
       {/* Bottom fade for controls readability */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0f172a]/70 to-transparent" />
     </div>
