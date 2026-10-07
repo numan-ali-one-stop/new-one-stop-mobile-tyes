@@ -1,44 +1,42 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-m6',
-  name: 'Mobile Tyre Fitting on the M6',
-  serviceType: 'Emergency Roadside Tyre Fitting',
-  areaServed: { '@type': 'Place', name: 'M6' },
+  alternateName: '24/7 Mobile Tyre Fitting M6',
+  areaServed: 'M6 Motorway, Greater Manchester',
+  description:
+    'Need mobile tyre fitting on the M6? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M6.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-m6')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-m6')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-m6',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Wigan',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting M6 | 24/7 Motorway Tyre Assistance',
+  title: 'Mobile Tyre Fitting M6 | 24/7 Tyre Replacement',
   description:
-    'Emergency mobile tyre fitting on the M6 — fast replacement, reliable roadside assistance.',
+    'Need mobile tyre fitting on the M6? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M6.',
   path: '/mobile-tyre-fitting-m6',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function M6Page() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -67,18 +65,18 @@ export default function M6Page() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement &amp; Mobile Puncture Repair for the M6. Get to a safe place — a services, slip road or lay-by — and we&apos;ll reach you within 20–30 minutes.
+              If you have a flat, damaged or unsafe tyre on the M6, getting professional help quickly can get you safely back on the road. We provide 24/7 mobile tyre fitting on the M6, including emergency tyre replacement and puncture repair where it is safe and suitable to carry out.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering the M6 & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'M6 Motorway & Surrounding Areas',
+                '20–30 Minute Typical Response',
+                'Professional & Fully Insured Technicians',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -88,6 +86,17 @@ export default function M6Page() {
                   <span className="text-base font-semibold leading-snug">{item}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Motorway safety notice */}
+            <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 mb-6">
+              <span aria-hidden="true" data-nosnippet
+                className="material-symbols-outlined text-[#FF4444] shrink-0"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >warning</span>
+              <p className="text-white/80 text-sm leading-relaxed">
+                <strong className="text-white">Motorway safety:</strong> If you break down on the M6, move to a safe location away from moving traffic where possible and follow the relevant motorway safety procedures. We will advise you on the safest location for assistance.
+              </p>
             </div>
 
             {/* Google Rating Badge */}
@@ -345,39 +354,238 @@ export default function M6Page() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service On the M6
+                Professional Mobile Tyre Fitting on the M6
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting on the M6, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your location on the M6 and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout the M6.
-                If you&apos;re searching for mobile tyre fitting near me on the M6, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides professional mobile tyre fitting and emergency tyre assistance for drivers travelling along the M6. Our service covers the Greater Manchester section of the motorway, including the M6 around Wigan and Junctions 23 to 27.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
+              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
+                Whether you have a puncture, damaged tyre, flat tyre or need an emergency replacement, our mobile team can come to a suitable and accessible location to assess the problem.
+              </p>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
+                Our M6 Services Include
+              </span>
+              <ul className="space-y-3 mb-6">
+                {[
+                  'Mobile Tyre Fitting M6',
+                  'Emergency Tyre Replacement M6',
+                  'Mobile Puncture Repair M6',
+                  '24/7 Emergency Tyre Assistance',
+                  'Roadside Tyre Fitting',
+                  'Tyre Pressure & TPMS Checks',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-[#0f172a]">
+                    <span aria-hidden="true" data-nosnippet
+                      className="material-symbols-outlined text-[#b70011] shrink-0"
+                      style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
+                    >check_circle</span>
+                    <span className="text-base font-semibold leading-snug">{item}</span>
+                  </li>
+                ))}
               </ul>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Where a tyre is unsafe or cannot be repaired, we can provide a suitable replacement based on your vehicle, tyre size and availability.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY M6 DRIVERS CHOOSE US ──────────────────── */}
-        <WhyChooseUs city="M6" image="/images/mobile-tyre-fitting-manchester.webp" locationType="road" />
+        {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our M6 Mobile Tyre Service?"
+          intro=""
+          items={[
+            {
+              icon: 'schedule',
+              title: '24/7 Emergency Assistance',
+              desc: 'Tyre problems can happen at any time. Our service operates 24 hours a day, 7 days a week, helping drivers who need urgent tyre assistance on the M6.',
+            },
+            {
+              icon: 'speed',
+              title: 'Fast Local Response',
+              desc: 'Our typical response time is around 20–30 minutes, although actual arrival times depend on traffic, your exact location, road conditions and technician availability.',
+            },
+            {
+              icon: 'engineering',
+              title: 'Professional Tyre Technicians',
+              desc: 'Our technicians use professional mobile equipment to fit and replace tyres efficiently while checking the installation before you continue your journey.',
+            },
+            {
+              icon: 'build',
+              title: 'Replacement or Repair',
+              desc: 'A puncture may be repairable in some situations, but damaged or unsafe tyres may require replacement. We assess the tyre before deciding on the appropriate service.',
+            },
+            {
+              icon: 'sell',
+              title: 'Clear Upfront Pricing',
+              desc: 'We aim to provide clear pricing before work begins, helping you understand the expected cost of the tyre and fitting service.',
+            },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ──────────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-3 block">
+                Simple Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting on the M6 Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6 relative">
+              {[
+                {
+                  n: '1',
+                  title: 'Contact Our Team',
+                  desc: 'Call us and explain the tyre problem. Tell us which direction you are travelling and provide your nearest M6 junction, motorway marker, services location or GPS/What3Words location where possible.',
+                },
+                {
+                  n: '2',
+                  title: 'Find a Safe Location',
+                  desc: 'For your safety, do not attempt to arrange tyre work in an unsafe live-traffic position. Follow motorway breakdown guidance and move to a safe place where possible.',
+                },
+                {
+                  n: '3',
+                  title: 'We Locate You',
+                  desc: 'Once we have your location, our technician will be dispatched to the nearest suitable and accessible point.',
+                },
+                {
+                  n: '4',
+                  title: 'Tyre Inspection',
+                  desc: 'The technician will inspect the tyre and wheel to determine whether a puncture repair is appropriate or whether the tyre needs replacing.',
+                },
+                {
+                  n: '5',
+                  title: 'Fitting and Final Checks',
+                  desc: 'If a replacement is required, the suitable tyre will be fitted using professional equipment. The technician will then check the fitting and tyre pressure before completing the job.',
+                },
+              ].map((step, idx) => (
+                <div key={step.n} className="relative text-center lg:text-left">
+                  <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
+                    <span
+                      className="text-white font-black text-xl"
+                      style={{ fontFamily: 'var(--font-work-sans)' }}
+                    >
+                      {step.n}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-work-sans)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
+                  {idx < 4 && (
+                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
+                      trending_flat
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ON THE M6 ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Mobile Tyre Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Replacement on the M6
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A damaged or blown tyre can make continuing your journey unsafe. Our <strong>mobile tyre replacement M6</strong> service allows drivers to have a suitable replacement fitted without arranging a separate trip to a tyre shop.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can help with emergency tyre replacement for issues including:
+            </p>
+            <ul className="text-left max-w-md mx-auto space-y-3 mb-6">
+              {[
+                'Punctured or damaged tyres',
+                'Flat tyres',
+                'Sidewall damage',
+                'Unsafe or worn tyres',
+                'Tyre blowouts',
+                'Tyres that cannot be safely repaired',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-[#0f172a]">
+                  <span aria-hidden="true" data-nosnippet
+                    className="material-symbols-outlined text-[#b70011] shrink-0"
+                    style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
+                  >check_circle</span>
+                  <span className="text-base font-semibold leading-snug">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Tyre options depend on your vehicle, tyre size, specification, stock and availability. Where possible, we can offer different options to suit your requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING & REPLACEMENT ───── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Emergency Mobile Tyre Fitting &amp; Replacement
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement on the M6
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A tyre emergency on the M6 can be stressful, particularly at night or during busy traffic conditions. Our <strong>24/7 emergency mobile tyre fitting</strong> service is designed to provide assistance when you need it most.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We cover the M6 through the Greater Manchester area, including the section around Wigan and Junctions 23–27.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If you have a flat or damaged tyre:
+            </p>
+            <ul className="text-left max-w-md mx-auto space-y-3 mb-6">
+              {[
+                'Follow motorway breakdown and safety procedures.',
+                'Move to a safe place away from traffic where possible.',
+                'Contact our team and provide your exact location.',
+                'Share your motorway marker, junction, services or GPS location.',
+                'Wait in a safe location while assistance is arranged.',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-[#0f172a]">
+                  <span aria-hidden="true" data-nosnippet
+                    className="material-symbols-outlined text-[#b70011] shrink-0"
+                    style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
+                  >check_circle</span>
+                  <span className="text-base font-semibold leading-snug">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our arrival estimate is subject to traffic, your location and technician availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── HELPFUL GUIDE ─────────────────────────────────── */}
@@ -397,35 +605,79 @@ export default function M6Page() {
           </div>
         </section>
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-m6"
           city="M6"
           faqs={[
             {
-              q: 'Do you cover the M6 through the Greater Manchester area?',
-              a: 'Yes, we provide 24/7 coverage along the M6 as it passes Wigan and the western fringe of Greater Manchester, including Junctions 23 to 27 and the interchange with the M61 and M62.',
+              q: 'Do you provide mobile tyre fitting on the M6?',
+              a: 'Yes. We provide 24/7 mobile tyre fitting on the M6, including emergency tyre replacement and puncture repair where safe and suitable.',
             },
             {
-              q: 'How do I tell you my location on the motorway?',
-              a: 'You can use the blue driver location signs (markers) every 500m, or simply send us your What3Words or GPS location via WhatsApp.',
+              q: 'Which part of the M6 do you cover?',
+              a: 'Our M6 coverage includes the Greater Manchester/Wigan section, particularly Junctions 23 to 27.',
             },
             {
-              q: 'Is it safe to change a tyre on the M6?',
-              a: 'Our technicians use specialist high-visibility vans and safety equipment. We always advise you to wait behind the crash barrier while we work.',
+              q: 'Can you replace a flat tyre on the M6?',
+              a: 'Yes. If your tyre is damaged or unsafe to continue with, we can provide a suitable mobile tyre replacement subject to tyre size, specification and availability.',
             },
             {
-              q: 'What is your average arrival time on the M6?',
-              a: 'Our average arrival time on the M6 around Wigan and Leigh is 20-30 minutes. Our Greater Manchester dispatch gives us quick access to Junctions 23 to 27.',
+              q: 'Can you repair a puncture on the M6?',
+              a: 'A puncture may be repairable if the damage and location are suitable. Repairs are only carried out where the tyre can be safely repaired and the working location is suitable.',
+            },
+            {
+              q: 'How quickly can you reach me on the M6?',
+              a: 'The typical response time is around 20–30 minutes, but this can vary depending on traffic, your exact location, road conditions and technician availability.',
+            },
+            {
+              q: 'Can you fit tyres at night on the M6?',
+              a: 'Yes. Our emergency tyre service operates 24/7, including nights, weekends and bank holidays.',
+            },
+            {
+              q: 'What should I do if I get a flat tyre on the M6?',
+              a: 'Follow the relevant motorway breakdown safety procedures and move to a safe location away from moving traffic where possible. Contact us once you are in a safe position and provide your exact location.',
+            },
+            {
+              q: 'Can you come to my exact location on the M6?',
+              a: 'We can attend a suitable and accessible location. Your motorway marker, junction number, nearby services or GPS/What3Words location can help us identify where you are.',
+            },
+            {
+              q: 'Do you provide emergency tyre replacement on the M6?',
+              a: 'Yes. We provide 24/7 emergency tyre replacement for drivers who cannot safely continue because of a damaged or unsafe tyre.',
+            },
+            {
+              q: 'Can you help if I have a tyre blowout?',
+              a: 'Yes. Contact us from a safe location and provide your exact M6 location. We can assess the tyre and arrange a replacement where suitable.',
+            },
+            {
+              q: 'Can you replace a tyre if I am travelling towards Manchester?',
+              a: 'Yes. We cover the relevant M6 section within the Greater Manchester service area. Your exact location will determine technician availability and arrival time.',
+            },
+            {
+              q: 'Can you help if I am travelling towards Wigan?',
+              a: 'Yes. The M6 around Wigan is within the stated M6 coverage area, including Junctions 23–27.',
+            },
+            {
+              q: 'Do you offer different tyre options?',
+              a: 'Tyre options depend on your vehicle, tyre size, specification, stock and availability. Where available, different tyre options can be discussed before fitting.',
+            },
+            {
+              q: 'Can you fit a tyre if my vehicle has a TPMS?',
+              a: 'Yes. Tyre pressure can be checked after fitting, and TPMS-related checks can be carried out where required.',
+            },
+            {
+              q: 'Do you provide roadside tyre assistance 24/7?',
+              a: 'Yes. Our mobile tyre service operates 24/7 for emergency tyre fitting, replacement and suitable puncture repair across the covered M6 section.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted on the M6 Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait on the hard shoulder. Call our dedicated M6 line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting on the M6?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you have a puncture, flat tyre, blowout or damaged tyre, One Stop Tyres 247 can provide 24/7 mobile tyre assistance at a suitable location. Contact us for 24/7 mobile tyre fitting on the M6, emergency tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
