@@ -1,44 +1,42 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-m61',
-  name: 'Mobile Tyre Fitting on the M61',
-  serviceType: 'Emergency Roadside Tyre Fitting',
-  areaServed: { '@type': 'Place', name: 'M61' },
+  alternateName: '24/7 Mobile Tyre Fitting M61',
+  areaServed: 'M61 Motorway',
+  description:
+    'Need mobile tyre fitting on the M61? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M61.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-m61')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-m61')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-m61',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Bolton',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting M61 | 24/7 Motorway Tyre Assistance',
+  title: 'Mobile Tyre Fitting M61 | 24/7 Tyre Replacement',
   description:
-    'Stranded on the M61? Our team provides emergency tyre replacement and roadside assistance.',
+    'Need mobile tyre fitting on the M61? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M61.',
   path: '/mobile-tyre-fitting-m61',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function M61Page() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -67,18 +65,18 @@ export default function M61Page() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement &amp; Mobile Puncture Repair for the M61. Get to a safe place — a services, slip road or lay-by — and we&apos;ll reach you within 20–30 minutes.
+              If you have a flat, punctured or damaged tyre while travelling on the M61, getting professional assistance quickly can help you get back on the road safely. We provide 24/7 mobile tyre fitting on the M61, including emergency tyre replacement and puncture repair where safe and suitable.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering the M61 & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'M61 Motorway & Surrounding Areas',
+                '20–30 Minute Typical Response',
+                'Professional Mobile Tyre Technicians',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -88,6 +86,14 @@ export default function M61Page() {
                   <span className="text-base font-semibold leading-snug">{item}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Motorway safety notice */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 mb-6 flex items-start gap-3">
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-yellow-400 shrink-0" style={{ fontSize: '22px' }}>warning</span>
+              <p className="text-white/85 text-sm leading-relaxed">
+                <span className="font-bold text-white">Motorway safety:</span> If you break down on the M61, follow motorway breakdown procedures and move to a safe location away from moving traffic where possible. Do not attempt tyre repairs from an unsafe position on the carriageway.
+              </p>
             </div>
 
             {/* Google Rating Badge */}
@@ -345,24 +351,163 @@ export default function M61Page() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service On the M61
+                Professional Mobile Tyre Fitting on the M61
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting on the M61, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre. Our mobile tyre experts come directly to your location on the M61 and surrounding areas. We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout the M61. If you&apos;re searching for mobile tyre fitting near me on the M61, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides professional mobile tyre fitting and emergency tyre assistance for drivers travelling along the M61. Our coverage extends from Junction 1 at the M60 interchange through to Junction 8 at the Chorley/M6 connection, including areas around Bolton and Rivington Services.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem icon="bolt" title="24/7 Mobile Tyre Fitting" desc="Tyres fitted at your home, workplace or roadside location." />
-                <FeatureItem icon="engineering" title="Emergency Tyre Replacement" desc="Fast replacement of damaged or unsafe tyres across Greater Manchester." />
-                <FeatureItem icon="sell" title="Mobile Puncture Repair" desc="Professional puncture repairs where safe and suitable." />
+              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
+                Whether you have a puncture, flat tyre, blowout or damaged tyre, our mobile team can attend a suitable and accessible location to assess the problem.
+              </p>
+              <p className="font-bold text-[#0f172a] mb-3">Our M61 services include:</p>
+              <ul className="space-y-3 mb-6 sm:mb-8">
+                {[
+                  'Mobile Tyre Fitting M61',
+                  'Emergency Tyre Replacement M61',
+                  'Mobile Puncture Repair M61',
+                  '24/7 Emergency Tyre Assistance',
+                  'Roadside Tyre Fitting',
+                  'Tyre Pressure & TPMS Checks',
+                  'Emergency Jump Start',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                    <span className="font-semibold">{item}</span>
+                  </li>
+                ))}
               </ul>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                If your tyre cannot be safely repaired, we can arrange a suitable replacement based on your vehicle, tyre size and availability.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
-        <WhyChooseUs city="M61" image="/images/tyre-fitting-at-home.webp" locationType="road" />
+        <WhyChooseGrid
+          heading="Why Choose Our M61 Mobile Tyre Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Assistance', desc: 'Tyre problems can happen at any time. Our mobile tyre service operates 24 hours a day, 7 days a week, including nights, weekends and bank holidays.' },
+            { icon: 'speed', title: 'Fast Local Response', desc: 'Our typical response time is around 20–30 minutes, although actual arrival times depend on traffic, your exact location, road conditions and technician availability.' },
+            { icon: 'engineering', title: 'Professional Mobile Technicians', desc: 'Our technicians use professional mobile equipment for tyre fitting, replacement and suitable puncture repairs.' },
+            { icon: 'build', title: 'Repair or Replacement', desc: 'We inspect the tyre before carrying out work. Where a puncture is safely repairable, a repair may be possible. If the tyre is damaged or unsafe, replacement may be required.' },
+            { icon: 'tire_repair', title: 'Premium and Budget Tyre Options', desc: 'Depending on your vehicle, tyre size and availability, we can provide suitable tyre options, including premium and budget choices.' },
+            { icon: 'sell', title: 'Clear Upfront Pricing', desc: 'We aim to provide clear pricing before work begins, so you understand the expected cost before the work is carried out.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting on the M61 Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call us and explain your tyre problem. Tell us your direction of travel and provide your nearest M61 junction, motorway marker, service area or nearby location.' },
+                { title: 'Move to a Safe Location', desc: 'Follow motorway safety guidance and move away from live traffic where possible. Do not put yourself or other road users at unnecessary risk.' },
+                { title: 'Share Your Location', desc: 'Provide your exact location using a junction number, motorway marker, nearby landmark, service area or GPS/What3Words location.' },
+                { title: 'Tyre Inspection', desc: 'Our technician will assess the tyre and determine whether it can be safely repaired or needs replacement.' },
+                { title: 'Fitting and Final Checks', desc: 'Where replacement is required, the suitable tyre is fitted using professional equipment. Tyre pressure and the fitting are then checked before you continue your journey.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement on the M61
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              A damaged or blown tyre can make it unsafe to continue driving. Our mobile tyre replacement M61 service helps drivers who need a replacement without having to arrange a separate journey to a tyre shop.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We can assist with problems including:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Punctured or damaged tyres',
+                'Flat tyres',
+                'Sidewall damage',
+                'Unsafe or worn tyres',
+                'Tyre blowouts',
+                'Tyres that cannot be safely repaired',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Available tyre options depend on your vehicle, tyre size, specification, stock and availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement on the M61
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A tyre emergency on the M61 can be stressful because of traffic and the motorway environment. Our 24/7 emergency mobile tyre fitting service is available for drivers experiencing tyre problems along the M61.
+            </p>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              The route connects the M60 near Bolton with the M6 near Chorley, providing an important link between Greater Manchester and Lancashire. The M61 also connects with the A666 around Bolton at Junction 3 and the A6 at Junction 4. Our service covers the M61 from Junction 1 through Junction 8, including locations around Bolton and Rivington Services.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">If you have a tyre emergency:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Follow the appropriate motorway breakdown procedure.',
+                'Move to a safe location away from moving traffic where possible.',
+                'Contact our team.',
+                'Provide your M61 junction or motorway marker.',
+                'Share your GPS/What3Words location if available.',
+                'Wait in a safe position while assistance is arranged.',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Arrival times depend on traffic, your exact location, road conditions and technician availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── HELPFUL GUIDE ─────────────────────────────────── */}
@@ -382,23 +527,34 @@ export default function M61Page() {
           </div>
         </section>
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-m61"
           city="M61"
           faqs={[
-            { q: 'Which junctions of the M61 do you cover?', a: 'We cover the entire length of the M61, from Junction 1 (M60 Interchange) right through to Junction 8 (Chorley/M6). This includes common hotspots like the Rivington Services.' },
-            { q: 'Can you fix a tyre on the hard shoulder?', a: 'Yes, our vans are equipped with high-visibility Chapter 8 lighting and our technicians are trained in motorway safety protocols. We can safely replace your tyre while you wait in a safe area.' },
-            { q: 'What is your average arrival time to Bolton M61?', a: 'Because our main depot is located in the Bolton area, we typically reach M61 Junction 4, 5, and 6 within 30 minutes of your call.' },
-            { q: 'Do you provide a live tracking link?', a: 'Yes, after we dispatch our technician to your M61 location, you will receive a GPS tracking link so you can monitor their arrival in real time.' },
+            { q: 'Do you provide mobile tyre fitting on the M61?', a: 'Yes. We provide 24/7 mobile tyre fitting on the M61, including emergency tyre replacement and suitable puncture repair.' },
+            { q: 'Which M61 junctions do you cover?', a: 'We cover the M61 from Junction 1 at the M60 interchange through to Junction 8 at the Chorley/M6 connection.' },
+            { q: 'Can you replace a flat tyre on the M61?', a: 'Yes. If your tyre is damaged or unsafe to continue with, we can provide a suitable mobile tyre replacement subject to tyre size, specification and availability.' },
+            { q: 'Can you repair a puncture on the M61?', a: 'A puncture may be repairable where the damage is suitable and the working location is safe. If the tyre cannot be safely repaired, replacement may be required.' },
+            { q: 'How quickly can you reach me on the M61?', a: 'The typical response time is around 20–30 minutes, although actual arrival times depend on traffic, your exact location, road conditions and technician availability.' },
+            { q: 'Can you provide tyre fitting at night?', a: 'Yes. Our emergency mobile tyre service operates 24/7, including overnight.' },
+            { q: 'What should I do if I get a flat tyre on the M61?', a: 'Follow motorway breakdown safety procedures and move to a safe location away from traffic where possible. Contact us once you are in a safe position and provide your exact location.' },
+            { q: 'Can you come to my exact location on the M61?', a: 'We can attend a suitable and accessible location. Your junction number, motorway marker, nearby landmark, service area or GPS location will help us locate you.' },
+            { q: 'Do you provide emergency tyre replacement on the M61?', a: 'Yes. We provide 24/7 emergency tyre replacement when a suitable replacement tyre is available.' },
+            { q: 'Can you help with a tyre blowout?', a: 'Yes. Contact us from a safe location and provide your exact M61 location. We can assess the situation and arrange a replacement where suitable.' },
+            { q: 'Do you cover the M61 around Bolton?', a: 'Yes. The M61 connects with the Bolton area, including Junctions 3–6, and this section is within our motorway coverage.' },
+            { q: 'Can you help near Rivington Services?', a: 'Yes. Rivington Services is specifically included within the M61 coverage area.' },
+            { q: 'Can you replace an unsafe tyre instead of repairing it?', a: 'Yes. If the tyre damage or condition means it cannot be safely repaired, we can provide a suitable replacement subject to availability.' },
+            { q: 'Can you check tyre pressure after fitting?', a: 'Yes. Our technicians can check tyre pressure after fitting and carry out TPMS checks where applicable.' },
+            { q: 'Do you provide 24/7 roadside tyre assistance on the M61?', a: 'Yes. We provide 24/7 emergency tyre assistance, including mobile tyre fitting, replacement and suitable puncture repair along the covered M61 route.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted on the M61 Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait on the hard shoulder. Call our dedicated M61 line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting on the M61?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you have a puncture, flat tyre, blowout or damaged tyre, One Stop Tyres 247 can provide 24/7 mobile tyre assistance at a suitable location. Contact us for 24/7 mobile tyre fitting on the M61, emergency tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:07759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
