@@ -1,44 +1,42 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-m66',
-  name: 'Mobile Tyre Fitting on the M66',
-  serviceType: 'Emergency Roadside Tyre Fitting',
-  areaServed: { '@type': 'Place', name: 'M66' },
+  alternateName: '24/7 Mobile Tyre Fitting M66',
+  areaServed: 'M66 Motorway, Greater Manchester',
+  description:
+    'Need mobile tyre fitting on the M66? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M66.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-m66')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-m66')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-m66',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Bury',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting M66 | 24/7 Motorway Tyre Assistance',
+  title: 'Mobile Tyre Fitting M66 | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting on the M66 — trusted roadside tyre assistance, 24/7 ready.',
+    'Need mobile tyre fitting on the M66? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M66.',
   path: '/mobile-tyre-fitting-m66',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function M66Page() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -67,18 +65,18 @@ export default function M66Page() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement &amp; Mobile Puncture Repair for the M66. Get to a safe place — a services, slip road or lay-by — and we&apos;ll reach you within 20–30 minutes.
+              If you have a flat, damaged or unsafe tyre on the M66, get to a safe location such as a suitable services area, slip road or lay-by where possible. One Stop Tyres 247 provides 24/7 mobile tyre fitting, emergency tyre replacement and puncture repair across the M66 and surrounding areas.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
+                '24/7 Emergency Tyre Assistance',
+                'Mobile Tyre Fitting at Home, Work or Roadside',
                 'Emergency Tyre Replacement & Puncture Repair',
-                'Covering the M66 & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                'M66 & Surrounding Areas Covered',
+                'Premium and Budget Tyre Options',
+                'Professional, Fully Insured Technicians',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -345,24 +343,132 @@ export default function M66Page() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service On the M66
+                Professional Mobile Tyre Fitting on the M66
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting on the M66, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre. Our mobile tyre experts come directly to your location on the M66 and surrounding areas. We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout the M66. If you&apos;re searching for mobile tyre fitting near me on the M66, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A damaged tyre can leave you stranded when you least expect it. Our mobile tyre service comes directly to your location, helping drivers deal with punctures, blowouts and damaged tyres without needing to arrange a trip to a garage.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem icon="bolt" title="24/7 Mobile Tyre Fitting" desc="Tyres fitted at your home, workplace or roadside location." />
-                <FeatureItem icon="engineering" title="Emergency Tyre Replacement" desc="Fast replacement of damaged or unsafe tyres across Greater Manchester." />
-                <FeatureItem icon="sell" title="Mobile Puncture Repair" desc="Professional puncture repairs where safe and suitable." />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                We provide mobile tyre fitting across the M66, including assistance around Summerseat and Ramsbottom, Bury, Pilsworth, Heywood and Simister Island. The service is available 24/7 for drivers who need a replacement tyre or suitable puncture repair.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Where it is safe and appropriate, our technicians can carry out the work at your location and help get you back on the road as quickly as possible.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
-        <WhyChooseUs city="M66" image="/images/tyre-fitting-at-home.webp" locationType="road" />
+        <WhyChooseGrid
+          heading="Why Choose Our M66 Mobile Tyre Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Assistance', desc: 'Tyre problems can happen at any time. Our emergency mobile service operates day and night across the M66.' },
+            { icon: 'speed', title: 'Fast Local Response', desc: 'Our technicians are strategically positioned around Greater Manchester to provide a fast response to M66 callouts.' },
+            { icon: 'engineering', title: 'Professional Mobile Technicians', desc: 'Our tyre fitters are trained, insured and equipped to work with a wide range of vehicles, from everyday cars to premium and electric vehicles.' },
+            { icon: 'build', title: 'Repair or Replacement', desc: 'If your tyre is suitable for repair, we can provide a mobile puncture repair where safe and appropriate. If the tyre is damaged beyond repair, we can supply and fit a suitable replacement.' },
+            { icon: 'tire_repair', title: 'Premium and Budget Tyres', desc: 'We offer a range of tyre options to suit different vehicles and budgets, including premium and budget choices.' },
+            { icon: 'sell', title: 'Clear Upfront Pricing', desc: 'You can discuss your requirements and receive pricing before the work begins, helping you understand the cost before the technician arrives.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting on the M66 Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Call Our Team', desc: 'Tell us where you are on or around the M66 and explain the tyre problem you are experiencing.' },
+                { title: 'Share Your Location', desc: 'Provide your location, junction or nearest safe landmark so the technician can identify where assistance is required.' },
+                { title: 'Get a Quote', desc: 'We will discuss the available repair or replacement options and provide an upfront price.' },
+                { title: 'Technician Travels to You', desc: 'A mobile tyre technician is dispatched to your location with the equipment needed for the job.' },
+                { title: 'Tyre Repair or Replacement', desc: 'Where it is safe and suitable, the technician will repair the puncture or replace the damaged tyre before checking the vehicle is ready to continue.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement on the M66
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A damaged or unsafe tyre should not be driven on unnecessarily. Our mobile tyre replacement service helps drivers who need a replacement without arranging recovery to a traditional tyre centre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can supply and fit suitable tyres for different vehicle types, with premium and budget options available. Our service covers the M66 and surrounding areas, including locations around Bury, Heywood, Ramsbottom and Simister Island.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you are unsure whether your tyre can be repaired or needs replacing, our technician can assess the tyre and explain the available option.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement on the M66
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              The M66 connects areas around Bury and Greater Manchester and includes several busy junctions. Our 24/7 emergency service covers the M66, including:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Junction 1 – Summerseat / Ramsbottom',
+                'Junction 2 – Bury Town Centre',
+                'Junction 3 – Pilsworth / Heywood',
+                'Junction 4 – Simister Island / M60 / M62 interchange',
+                'A663',
+                'A56 Edenfield Bypass',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem, prioritise your safety first. Move to a safe location where possible and avoid attempting a repair in a dangerous live-traffic position.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              For motorway emergencies, follow the appropriate breakdown and road-safety procedures and only wait where it is safe to do so.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── HELPFUL GUIDE ─────────────────────────────────── */}
@@ -382,23 +488,34 @@ export default function M66Page() {
           </div>
         </section>
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-m66"
           city="M66"
           faqs={[
-            { q: 'What is your average arrival time on the M66?', a: 'Our average arrival time is 35 minutes due to our Bury-based fleet, which is strategically positioned for fastest response across all M66 junctions.' },
-            { q: 'Do you cover all M66 junctions?', a: 'Yes, we cover all junctions: J1 Summerseat/Ramsbottom, J2 Bury Town Centre, J3 Pilsworth/Heywood, and J4 Simister Island (M60/M62 interchange). We also cover the A663 and A56 Edenfield Bypass.' },
-            { q: 'Can you remove locking wheel nuts on the M66?', a: 'Yes, we carry specialist extraction tools for all makes and models. We can safely remove locking wheel nuts without damaging your alloys, even at the roadside.' },
-            { q: 'Do you repair punctures or only replace tyres on the M66?', a: "We do both. If your tyre is repairable under BS AU 159 standards, we'll fix it on-site including a pressure monitoring sensor reset and high-speed balancing — saving you the cost of a new tyre." },
+            { q: 'Do you provide mobile tyre fitting on the M66?', a: 'Yes. We provide 24/7 mobile tyre fitting, emergency tyre replacement and suitable puncture repair across the M66 and surrounding areas.' },
+            { q: 'Do you cover all M66 junctions?', a: 'Yes. The service covers M66 Junctions 1 to 4, including Summerseat/Ramsbottom, Bury, Pilsworth/Heywood and Simister Island.' },
+            { q: 'Can you replace a blown tyre on the M66?', a: 'Yes. If your tyre has suffered a blowout or is unsafe to continue using, we can provide an emergency replacement where suitable.' },
+            { q: 'Can you repair a puncture on the M66?', a: 'Yes. Punctures can be repaired where the tyre is suitable and the location is safe for the technician to work.' },
+            { q: 'Do you offer 24/7 tyre replacement on the M66?', a: 'Yes. Emergency tyre replacement is available 24 hours a day, 7 days a week.' },
+            { q: 'Can you fit a tyre at home near the M66?', a: 'Yes. Mobile tyre fitting is available at home, at work or at another suitable location around the M66.' },
+            { q: 'What should I do if I get a flat tyre on the M66?', a: 'Prioritise your safety and move to a safe location if possible. Avoid standing near moving traffic and contact a suitable breakdown or emergency tyre service for assistance.' },
+            { q: 'Can you help with a flat battery as well as a flat tyre?', a: 'Yes. Mobile jump-start assistance is also available if you have a flat battery alongside your tyre problem.' },
+            { q: 'Do you remove locking wheel nuts?', a: 'Yes. Specialist tools are available for locking wheel nut removal on suitable vehicles.' },
+            { q: 'Do you offer TPMS checks?', a: 'Yes. TPMS checks and resets can be carried out after tyre fitting or repair where required.' },
+            { q: 'What tyre brands do you supply?', a: 'A range of premium and budget tyres is available. The suitable option depends on your vehicle and tyre requirements.' },
+            { q: 'Do you cover Bury and Heywood?', a: 'Yes. The M66 service covers areas around Bury and Heywood, including locations close to the motorway.' },
+            { q: 'Do you cover Ramsbottom and Summerseat?', a: 'Yes. M66 Junction 1 around Summerseat and Ramsbottom is included in the stated service coverage.' },
+            { q: 'Do you cover Simister Island?', a: 'Yes. Assistance is available around M66 Junction 4 at Simister Island, including the M60/M62 interchange.' },
+            { q: 'How quickly can a technician reach me?', a: 'Response time depends on your exact location, traffic, road conditions and technician availability. The service is positioned for fast emergency response across the M66 and Greater Manchester.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted on the M66 Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait on the hard shoulder. Call our dedicated M66 line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting on the M66?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need an emergency tyre replacement, puncture repair or mobile tyre fitting, One Stop Tyres 247 can come to a suitable location on or around the M66. Contact us for 24/7 mobile tyre fitting on the M66, emergency tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:07759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
