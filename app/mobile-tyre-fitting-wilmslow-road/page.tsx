@@ -1,23 +1,32 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-wilmslow-road',
-  name: 'Mobile Tyre Fitting on Wilmslow Road',
-  serviceType: 'Emergency Roadside Tyre Fitting',
-  areaServed: { '@type': 'Place', name: 'Wilmslow Road' },
+  alternateName: '24/7 Mobile Tyre Fitting Wilmslow Road',
+  areaServed: 'Wilmslow Road, Greater Manchester',
+  description:
+    '24/7 mobile tyre fitting, emergency tyre replacement and puncture repair on Wilmslow Road and surrounding areas.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-wilmslow-road')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-wilmslow-road')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-wilmslow-road',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Manchester',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Wilmslow Road | 24/7 Roadside Tyre Assistance',
+  title: 'Mobile Tyre Fitting Wilmslow Road | 24/7 Tyre Replacement',
   description:
-    'Emergency mobile tyre fitting on Wilmslow Road — fast replacement, reliable roadside assistance.',
+    'Need mobile tyre fitting on Wilmslow Road? Get 24/7 tyre replacement, puncture repair and roadside assistance across Rusholme, Fallowfield and Didsbury.',
   path: '/mobile-tyre-fitting-wilmslow-road',
 })
 
@@ -38,7 +47,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function WilmslowRoadPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -67,7 +79,7 @@ export default function WilmslowRoadPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement &amp; Mobile Puncture Repair for Wilmslow Road. Pull into a nearby side street or car park if you can, and we&apos;ll reach you within 20–30 minutes.
+              Emergency Tyre Replacement &amp; Mobile Puncture Repair on Wilmslow Road. If you have a flat or damaged tyre, move to a safe location such as a side street or car park where possible, and our mobile tyre team can come to you 24/7.
             </p>
 
             {/* Trust bullets */}
@@ -197,7 +209,7 @@ export default function WilmslowRoadPage() {
                 24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair On Wilmslow Road
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Wilmslow Road. We come to your location on Wilmslow Road and surrounding areas 24/7 with fast response times and professional service.
+                Need help with a flat, punctured or damaged tyre? We provide mobile tyre fitting, emergency tyre replacement and puncture repair on Wilmslow Road and surrounding areas. Our mobile team comes directly to your location, whether you are at home, work or safely parked near the road. We provide 24/7 assistance with professional equipment and a range of premium and budget tyre options.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -348,10 +360,7 @@ export default function WilmslowRoadPage() {
                 Expert Mobile Tyre Fitting Service On Wilmslow Road
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting on Wilmslow Road, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your location on Wilmslow Road and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Wilmslow Road.
-                If you&apos;re searching for mobile tyre fitting near me on Wilmslow Road, our fast response team is available day and night.
+                One Stop Tyres provides 24/7 mobile tyre fitting on Wilmslow Road for drivers dealing with punctures, blowouts or damaged tyres. Our mobile technicians come directly to your location and can supply and fit premium or budget tyres depending on availability and your requirements. Where a puncture is safe and suitable to repair, we can complete the repair at your location. If the tyre cannot safely be repaired, we can provide a replacement. Whether you&apos;re at home, at work or stranded at a safe roadside location, our team is available day and night.
               </p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
@@ -367,17 +376,93 @@ export default function WilmslowRoadPage() {
                 <FeatureItem
                   icon="sell"
                   title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
+                  desc="Professional puncture repairs where the tyre is safe and suitable."
                 />
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY WILMSLOW ROAD DRIVERS CHOOSE US ──────────────────── */}
-        <WhyChooseUs city="Wilmslow Road" image="/images/mobile-tyre-fitting-manchester.webp" locationType="road" />
+        {/* ── 5. WHY WILMSLOW ROAD DRIVERS CHOOSE US ────────── */}
+        <WhyChooseGrid
+          heading="Why Drivers Choose Us on Wilmslow Road"
+          intro=""
+          items={[
+            { icon: 'bolt', title: 'Fast Emergency Response', desc: 'Our mobile tyre team aims to reach customers within 20–30 minutes, although actual arrival times can vary depending on traffic, road conditions, location and demand.' },
+            { icon: 'sell', title: 'No Hidden Call-Out Fees', desc: 'We provide pricing information before carrying out the work, helping you understand the expected cost before the technician arrives.' },
+            { icon: 'engineering', title: 'Fully Certified Technicians', desc: 'Our technicians are trained and insured to work on a wide range of vehicles, from everyday cars to modern electric vehicles.' },
+            { icon: 'tire_repair', title: 'Premium & Budget Tyre Options', desc: 'We can supply and fit a range of tyre options depending on your vehicle, tyre size, availability and requirements.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. COVERAGE AREA ──────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Fitting Across Wilmslow Road
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              Our Wilmslow Road service covers key areas along the A34, including:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Rusholme',
+                'Fallowfield',
+                'Withington',
+                'Didsbury',
+                'Cheadle',
+                'Surrounding Greater Manchester areas',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              The existing page identifies Wilmslow Road as the A34 and specifically mentions coverage through Rusholme, Fallowfield, Withington and Didsbury towards Cheadle and Wilmslow.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 7. EMERGENCY TYRE ASSISTANCE ──────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Need Emergency Tyre Assistance on Wilmslow Road?
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              If you suffer a puncture or tyre failure while driving, put your safety first.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">Where possible:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Move your vehicle to a safe location.',
+                'Avoid stopping in an unsafe or obstructed position.',
+                'Turn on your hazard lights.',
+                'Stay in a safe place while waiting for assistance.',
+                'Share your exact location with our technician.',
+                'Use a nearby landmark, junction, What3Words location or GPS position to help us find you.',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you are in an unsafe position, follow the appropriate UK roadside safety guidance before arranging tyre assistance.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── HELPFUL GUIDE ─────────────────────────────────── */}
@@ -397,35 +482,34 @@ export default function WilmslowRoadPage() {
           </div>
         </section>
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 9. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-wilmslow-road"
           city="Wilmslow Road"
           faqs={[
-            {
-              q: 'Do you cover the whole length of Wilmslow Road?',
-              a: 'Yes, we provide 24/7 coverage along Wilmslow Road (the A34) through Rusholme, Fallowfield, Withington and Didsbury, down towards Cheadle and Wilmslow.',
-            },
-            {
-              q: 'How do I tell you my exact location on a busy road?',
-              a: 'Just send us the nearest junction, shop or landmark, or share your What3Words or GPS location via WhatsApp — we’ll find you quickly.',
-            },
-            {
-              q: 'Is it safe to change a tyre on Wilmslow Road?',
-              a: 'Our technicians use specialist high-visibility vans and safety equipment, and where possible we move you to a nearby side street or car park before fitting.',
-            },
-            {
-              q: 'What is your average arrival time on Wilmslow Road?',
-              a: 'Our average arrival time along Wilmslow Road, from Rusholme down to Didsbury, is 20-30 minutes thanks to our central Greater Manchester dispatch.',
-            },
+            { q: 'Do you provide mobile tyre fitting on Wilmslow Road?', a: 'Yes. We provide 24/7 mobile tyre fitting on Wilmslow Road and surrounding areas, including Rusholme, Fallowfield, Withington and Didsbury.' },
+            { q: 'Do you offer emergency tyre replacement on Wilmslow Road?', a: 'Yes. We provide emergency tyre replacement when a damaged or punctured tyre cannot safely be repaired.' },
+            { q: 'Can you repair a puncture on Wilmslow Road?', a: 'Yes. We provide mobile puncture repair where the tyre is safe and suitable to repair. If the damage makes the tyre unsafe, replacement may be required.' },
+            { q: 'How quickly can you reach Wilmslow Road?', a: 'Our typical response time is around 20–30 minutes, although the actual arrival time depends on traffic, your exact location, road conditions and current demand.' },
+            { q: 'Do you cover Rusholme and Fallowfield?', a: 'Yes. Our Wilmslow Road coverage includes Rusholme and Fallowfield, as well as Withington, Didsbury and surrounding areas.' },
+            { q: 'Can you come to my home or workplace near Wilmslow Road?', a: 'Yes. Our mobile service can come to your home, workplace or another suitable location where the vehicle can be safely accessed.' },
+            { q: "What if I don't know my exact location?", a: 'Send us the nearest junction, shop, business or landmark. You can also share your GPS location or What3Words location through WhatsApp.' },
+            { q: 'Can you fit premium tyres?', a: 'Yes. Premium and budget tyre options are available depending on the required tyre size, vehicle and stock availability.' },
+            { q: 'Do you provide tyre assistance at night?', a: 'Yes. Our emergency mobile tyre service operates 24/7, including nights, weekends and bank holidays.' },
+            { q: 'Can you help with a flat battery as well?', a: 'Yes. Mobile jump-start assistance is available if your vehicle has a flat battery alongside a tyre problem.' },
+            { q: 'Do you check TPMS after fitting a tyre?', a: 'Where applicable, our technicians can check and reset the tyre pressure monitoring system after tyre fitting or repair.' },
+            { q: 'Can you remove locking wheel nuts?', a: 'Yes. Specialist equipment can be used to remove locking wheel nuts when required for tyre replacement or repair.' },
+            { q: 'Do you cover Didsbury from Wilmslow Road?', a: "Yes. Didsbury is part of our Wilmslow Road service coverage, subject to the technician's location and current demand." },
+            { q: 'Is roadside tyre fitting available 24/7?', a: 'Yes. Emergency roadside tyre assistance is available 24 hours a day, 7 days a week.' },
+            { q: 'How do I book a mobile tyre fitting?', a: 'Call 07759 708 646 or 0161 399 5851 for an instant quote and to provide your location.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 10. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted on Wilmslow Road Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait at the roadside. Call our dedicated Wilmslow Road line and get a technician dispatched in minutes.</p>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t stay stranded longer than necessary. Call One Stop Tyres 24/7 for emergency mobile tyre fitting, tyre replacement or puncture repair on Wilmslow Road. Available 24/7 across Greater Manchester.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

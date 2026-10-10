@@ -1,44 +1,42 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-m67',
-  name: 'Mobile Tyre Fitting on the M67',
-  serviceType: 'Emergency Roadside Tyre Fitting',
-  areaServed: { '@type': 'Place', name: 'M67' },
+  alternateName: '24/7 Mobile Tyre Fitting M67',
+  areaServed: 'M67 Motorway, Greater Manchester',
+  description:
+    'Need mobile tyre fitting on the M67? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M67.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-m67')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-m67')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-m67',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Denton',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting M67 | 24/7 Motorway Tyre Assistance',
+  title: 'Mobile Tyre Fitting M67 | 24/7 Tyre Replacement',
   description:
-    'Mobile tyre fitting on the M67 — fast emergency replacement from experienced technicians.',
+    'Need mobile tyre fitting on the M67? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the M67.',
   path: '/mobile-tyre-fitting-m67',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function M67Page() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -67,18 +65,18 @@ export default function M67Page() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement &amp; Mobile Puncture Repair for the M67. Get to a safe place — a services, slip road or lay-by — and we&apos;ll reach you within 20–30 minutes.
+              If you experience a flat, punctured or damaged tyre on the M67, get to a safe location such as a suitable services area, slip road or lay-by where possible. One Stop Tyres 247 provides 24/7 mobile tyre fitting, emergency tyre replacement and puncture repair across the M67 and surrounding areas.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
+                '24/7 Emergency Tyre Assistance',
+                'Mobile Tyre Fitting at Home, Work or Roadside',
                 'Emergency Tyre Replacement & Puncture Repair',
-                'Covering the M67 & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                'M67 & Surrounding Areas Covered',
+                'Premium and Budget Tyre Options',
+                'Professional, Fully Insured Technicians',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -345,24 +343,135 @@ export default function M67Page() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service On the M67
+                Professional Mobile Tyre Fitting on the M67
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting on the M67, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre. Our mobile tyre experts come directly to your location on the M67 and surrounding areas. We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout the M67. If you&apos;re searching for mobile tyre fitting near me on the M67, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A damaged tyre can leave you stranded without warning. Our mobile tyre service comes directly to your location, helping drivers deal with punctures, blowouts and damaged tyres without needing to arrange a trip to a traditional tyre centre.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem icon="bolt" title="24/7 Mobile Tyre Fitting" desc="Tyres fitted at your home, workplace or roadside location." />
-                <FeatureItem icon="engineering" title="Emergency Tyre Replacement" desc="Fast replacement of damaged or unsafe tyres across Greater Manchester." />
-                <FeatureItem icon="sell" title="Mobile Puncture Repair" desc="Professional puncture repairs where safe and suitable." />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                We provide mobile tyre fitting across the M67, from the M60 interchange at Denton (J1) through to the end of the motorway at Hattersley and Mottram (J4). We also cover surrounding areas including Hyde, Denton, Hattersley, Mottram and Stalybridge.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Where it is safe and suitable, our technicians can assess the tyre and carry out a repair or replacement at your location. The service operates 24/7 for drivers who need assistance day or night.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
-        <WhyChooseUs city="M67" image="/images/tyres-fitting-anywhere.webp" locationType="road" />
+        <WhyChooseGrid
+          heading="Why Choose Our M67 Mobile Tyre Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Assistance', desc: 'Tyre problems can happen at any time. Our emergency mobile service operates 24 hours a day, 7 days a week across the M67.' },
+            { icon: 'speed', title: 'Fast Local Response', desc: 'Our technicians are strategically positioned across Greater Manchester to provide a fast response to M67 callouts. The current page advertises a typical response of around 20–30 minutes, depending on your exact location and traffic conditions.' },
+            { icon: 'engineering', title: 'Professional Mobile Technicians', desc: 'Our fitters are trained and insured and equipped to work with a wide range of vehicles, including family cars and electric vehicles.' },
+            { icon: 'build', title: 'Repair or Replacement', desc: 'If your tyre is suitable for repair, we can provide a mobile puncture repair where safe and appropriate. If the damage is beyond repair, we can supply and fit a suitable replacement.' },
+            { icon: 'tire_repair', title: 'Premium and Budget Tyres', desc: 'We offer premium and budget tyre options to suit different vehicles and requirements.' },
+            { icon: 'sell', title: 'Clear Upfront Pricing', desc: 'We provide transparent pricing before the work begins, helping you understand the cost before the technician arrives.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting on the M67 Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Call Our Team', desc: 'Contact us and explain the tyre problem you are experiencing.' },
+                { title: 'Share Your Location', desc: 'Provide your location on or around the M67, including the nearest junction, landmark or safe stopping point where possible.' },
+                { title: 'Get a Quote', desc: 'We will discuss the available repair or replacement options and provide an upfront price.' },
+                { title: 'Technician Travels to You', desc: 'A mobile tyre technician is dispatched to your location with the necessary equipment.' },
+                { title: 'Tyre Repair or Replacement', desc: 'Where it is safe and suitable, the technician will repair the puncture or replace the damaged tyre before checking that the vehicle is ready to continue.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement on the M67
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A damaged or unsafe tyre should not be driven on unnecessarily. Our mobile tyre replacement service helps drivers who need a suitable replacement without arranging a separate journey to a tyre centre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We supply and fit a range of premium and budget tyres for different vehicle types. If your tyre cannot be safely repaired, our technician can assess the damage and provide a suitable replacement.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our M67 coverage extends from Denton and Hyde through Hattersley and Mottram, with assistance also available in surrounding Tameside areas.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement on the M67
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              The M67 connects the M60 at Denton with areas around Hyde, Hattersley and Mottram. Our 24/7 emergency tyre service covers the full M67, including:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Junction 1 – M60 / Denton',
+                'Junction 2 – Hyde area',
+                'Junction 3 – Hattersley',
+                'Junction 4 – Hattersley / Mottram',
+                'Denton',
+                'Hyde',
+                'Hattersley',
+                'Mottram',
+                'Stalybridge',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem on the motorway, prioritise your safety first. Move to a safe location where possible and follow the appropriate motorway breakdown procedures.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Do not attempt a tyre repair from an unsafe position in live traffic. Assistance will be provided where it is safe and suitable for the technician to work.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── HELPFUL GUIDE ─────────────────────────────────── */}
@@ -382,23 +491,34 @@ export default function M67Page() {
           </div>
         </section>
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-m67"
           city="M67"
           faqs={[
-            { q: 'How quickly can you get to the M67?', a: 'Our units are based near Denton and Hyde, allowing us to typically reach any point on the M67 within 30 to 60 minutes, depending on traffic conditions.' },
-            { q: 'Do you cover all junctions of the M67?', a: 'Yes, we cover the full length from the M60 interchange at Denton (J1) through to the end of the motorway at Hattersley/Mottram (J4).' },
-            { q: 'Can you change a tyre at the roadside safely?', a: 'Absolutely. Our technicians are trained in motorway safety protocols and our vans are equipped with high-visibility lighting and safety equipment to ensure a secure work area.' },
-            { q: 'Do you cover the surrounding Tameside areas?', a: 'Yes, in addition to the M67 motorway itself, we cover the surrounding Tameside areas including Hyde, Denton, Hattersley, Mottram, and Stalybridge.' },
+            { q: 'Do you provide mobile tyre fitting on the M67?', a: 'Yes. We provide 24/7 mobile tyre fitting, emergency tyre replacement and suitable puncture repair across the M67 and surrounding areas.' },
+            { q: 'Do you cover the full M67?', a: 'Yes. The service covers the full M67 from the M60 interchange at Denton (J1) through to the end of the motorway at Hattersley/Mottram (J4).' },
+            { q: 'How quickly can you reach me on the M67?', a: 'The page advertises a typical response time of around 20–30 minutes, although the actual arrival time depends on traffic, weather and your exact location.' },
+            { q: 'Can you replace a blown tyre on the M67?', a: 'Yes. If your tyre has suffered a blowout or is unsafe to continue using, we can provide an emergency replacement where suitable.' },
+            { q: 'Can you repair a puncture on the M67?', a: 'Yes. Mobile puncture repair is available where the tyre is suitable for repair and the location is safe and appropriate for the technician to work.' },
+            { q: 'Do you offer 24/7 tyre replacement on the M67?', a: 'Yes. Emergency tyre replacement is available 24 hours a day, 7 days a week.' },
+            { q: 'Can you fit a tyre at home near the M67?', a: 'Yes. Mobile tyre fitting is available at home, at work or at another suitable location around the M67.' },
+            { q: 'Do you cover Denton and Hyde?', a: 'Yes. The M67 service covers Denton and Hyde as well as other surrounding Tameside areas.' },
+            { q: 'Do you cover Hattersley and Mottram?', a: 'Yes. Both Hattersley and Mottram are included in the M67 coverage area.' },
+            { q: 'Do you cover Stalybridge?', a: 'Yes. The surrounding Tameside service area includes Stalybridge.' },
+            { q: 'Do you offer mobile jump-start assistance?', a: 'Yes. Mobile jump-start assistance is available 24/7 if you have a flat battery alongside your tyre problem.' },
+            { q: 'Can you reset TPMS after fitting a tyre?', a: 'Yes. TPMS checks and resets are available following tyre fitting or repair where required.' },
+            { q: 'Do you remove locking wheel nuts?', a: 'Yes. Specialist tools are available for locking wheel nut removal on suitable vehicles.' },
+            { q: 'What tyre brands do you supply?', a: 'We offer premium and budget tyre options. The suitable tyre depends on your vehicle, tyre size and requirements.' },
+            { q: 'Can you repair a tyre on the roadside?', a: 'Yes, where the tyre is suitable for repair and the location is safe and appropriate. Safety is assessed before work begins.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted on the M67 Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait on the hard shoulder. Call our dedicated M67 line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting on the M67?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need an emergency tyre replacement, puncture repair or mobile tyre fitting, One Stop Tyres 247 can come to a suitable location on or around the M67. Contact us for 24/7 mobile tyre fitting on the M67, emergency tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:07759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>

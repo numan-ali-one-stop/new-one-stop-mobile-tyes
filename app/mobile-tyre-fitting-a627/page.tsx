@@ -1,44 +1,42 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-a627',
-  name: 'Mobile Tyre Fitting on the A627',
-  serviceType: 'Emergency Roadside Tyre Fitting',
-  areaServed: { '@type': 'Place', name: 'A627' },
+  alternateName: '24/7 Mobile Tyre Fitting A627',
+  areaServed: 'A627, Greater Manchester',
+  description:
+    'Need mobile tyre fitting on the A627? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the A627.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-a627')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-a627')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-a627',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Oldham',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting A627 | 24/7 Roadside Tyre Assistance',
+  title: 'Mobile Tyre Fitting A627 | 24/7 Tyre Replacement',
   description:
-    'Mobile tyre fitting on the A627 — emergency replacement, quick response for drivers today.',
+    'Need mobile tyre fitting on the A627? Get 24/7 emergency tyre replacement, puncture repair and roadside tyre assistance across the A627.',
   path: '/mobile-tyre-fitting-a627',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function A627Page() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -67,18 +65,18 @@ export default function A627Page() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement &amp; Mobile Puncture Repair for the A627. Get to a safe place — a services, slip road or lay-by — and we&apos;ll reach you within 20–30 minutes.
+              If you experience a flat, punctured or damaged tyre on the A627, get to a safe location such as a suitable services area, slip road or lay-by where possible. One Stop Tyres 247 provides 24/7 mobile tyre fitting, emergency tyre replacement and puncture repair across the A627 and surrounding areas.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
+                '24/7 Emergency Tyre Assistance',
+                'Mobile Tyre Fitting at Home, Work or Roadside',
                 'Emergency Tyre Replacement & Puncture Repair',
-                'Covering the A627 & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                'A627 & Surrounding Areas Covered',
+                'Premium and Budget Tyre Options',
+                'Professional, Fully Insured Technicians',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -345,24 +343,131 @@ export default function A627Page() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service On the A627
+                Professional Mobile Tyre Fitting on the A627
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting on the A627, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre. Our mobile tyre experts come directly to your location on the A627 and surrounding areas. We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout the A627. If you&apos;re searching for mobile tyre fitting near me on the A627, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A tyre problem can leave you stranded without warning. Our mobile tyre service comes directly to your location, helping drivers deal with punctures, blowouts and damaged tyres without needing to arrange a trip to a traditional tyre centre.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem icon="bolt" title="24/7 Mobile Tyre Fitting" desc="Tyres fitted at your home, workplace or roadside location." />
-                <FeatureItem icon="engineering" title="Emergency Tyre Replacement" desc="Fast replacement of damaged or unsafe tyres across Greater Manchester." />
-                <FeatureItem icon="sell" title="Mobile Puncture Repair" desc="Professional puncture repairs where safe and suitable." />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                We provide mobile tyre fitting across the A627 and surrounding areas, including links towards the M62 and locations around Oldham and Rochdale.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Where it is safe and suitable, our technicians can assess the tyre and carry out a repair or replacement at your location. The service operates 24/7 for drivers who need assistance day or night.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
-        <WhyChooseUs city="A627" image="/images/mobile-tyre-fitting-manchester.webp" locationType="road" />
+        <WhyChooseGrid
+          heading="Why Choose Our A627 Mobile Tyre Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Assistance', desc: 'Tyre problems can happen at any time. Our mobile service operates 24 hours a day, 7 days a week across the A627.' },
+            { icon: 'speed', title: 'Fast Local Response', desc: 'Our technicians are positioned across Greater Manchester to provide a fast response to emergency A627 callouts, with an average response time of around 20–30 minutes depending on traffic and your exact location.' },
+            { icon: 'engineering', title: 'Professional Mobile Technicians', desc: 'Our fitters are trained, insured and equipped to work with a wide range of vehicles, including family cars, premium vehicles and electric vehicles.' },
+            { icon: 'build', title: 'Repair or Replacement', desc: 'If your tyre is suitable for repair, we can provide a mobile puncture repair where safe and appropriate. If the damage is beyond repair, we can supply and fit a suitable replacement.' },
+            { icon: 'tire_repair', title: 'Premium and Budget Tyres', desc: 'We offer a range of premium and budget tyre options to suit different vehicles and requirements.' },
+            { icon: 'sell', title: 'Clear Upfront Pricing', desc: 'We provide transparent pricing before the work begins, helping you understand the cost before the technician arrives.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting on the A627 Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Call Our Team', desc: 'Contact us and explain the tyre problem you are experiencing.' },
+                { title: 'Share Your Location', desc: 'Provide your location on or around the A627, including the nearest junction, landmark or safe stopping point where possible.' },
+                { title: 'Get a Quote', desc: 'We will discuss the available repair or replacement options and provide an upfront price.' },
+                { title: 'Technician Travels to You', desc: 'A mobile tyre technician is dispatched to your location with the necessary equipment.' },
+                { title: 'Tyre Repair or Replacement', desc: 'Where it is safe and suitable, the technician will repair the puncture or replace the damaged tyre before checking that the vehicle is ready to continue.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement on the A627
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A damaged or unsafe tyre should not be driven on unnecessarily. Our mobile tyre replacement service helps drivers who need a suitable replacement without arranging a separate journey to a tyre centre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We supply and fit a range of premium and budget tyres for different vehicle types. If your tyre cannot be safely repaired, our technician can assess the damage and provide a suitable replacement.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Our A627 coverage also extends to surrounding Oldham and Rochdale areas and links towards the M62.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement on the A627
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              The A627 provides important connections around Greater Manchester and links with the M62. Our 24/7 emergency tyre service covers the A627 and surrounding areas, including:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'A627 corridor',
+                'Links towards the M62',
+                'Oldham and surrounding areas',
+                'Rochdale and surrounding areas',
+                'Nearby home, workplace and roadside locations',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem on a high-speed road, prioritise your safety first. Move to a safe location where possible and follow appropriate roadside or motorway breakdown procedures.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Do not attempt a tyre repair from an unsafe position in live traffic. Assistance will be provided where it is safe and suitable for the technician to work.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── HELPFUL GUIDE ─────────────────────────────────── */}
@@ -382,23 +487,34 @@ export default function A627Page() {
           </div>
         </section>
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-a627"
           city="A627"
           faqs={[
-            { q: 'How fast can you reach me on the A627?', a: 'Our average response time for the A627 corridor is 20-30 minutes, depending on traffic conditions and your exact mileage.' },
-            { q: 'Do you stock tyres for commercial vans?', a: 'Yes, we carry a wide range of commercial-rated tyres suitable for all popular van makes and models.' },
-            { q: 'Can you fix a tyre on the A627 shoulder?', a: 'Yes, our technicians are trained to work safely on high-speed roads. We use amber light protection and follow all roadside safety protocols.' },
-            { q: 'Do you cover the areas around the A627?', a: 'Yes, we cover the entire length of the A627, including all links to the M62 and surrounding Oldham and Rochdale areas.' },
+            { q: 'Do you provide mobile tyre fitting on the A627?', a: 'Yes. We provide 24/7 mobile tyre fitting, emergency tyre replacement and suitable puncture repair across the A627 and surrounding areas.' },
+            { q: 'How quickly can you reach me on the A627?', a: 'The average response time for the A627 corridor is around 20–30 minutes, depending on traffic conditions and your exact location.' },
+            { q: 'Do you cover the entire A627?', a: 'Yes. The current service covers the entire A627, including links towards the M62 and surrounding Oldham and Rochdale areas.' },
+            { q: 'Can you replace a blown tyre on the A627?', a: 'Yes. If your tyre has suffered a blowout or is unsafe to continue using, we can provide an emergency replacement where suitable.' },
+            { q: 'Can you repair a puncture on the A627?', a: 'Yes. Mobile puncture repair is available where the tyre is suitable for repair and the location is safe and appropriate for the technician to work.' },
+            { q: 'Do you offer 24/7 tyre replacement on the A627?', a: 'Yes. Emergency tyre replacement is available 24 hours a day, 7 days a week.' },
+            { q: 'Can you fit a tyre at home near the A627?', a: 'Yes. Mobile tyre fitting is available at home, at work or at another suitable location around the A627.' },
+            { q: 'Do you cover Oldham and Rochdale?', a: 'Yes. The A627 service covers surrounding areas of Oldham and Rochdale as well as the A627 corridor.' },
+            { q: 'Do you supply tyres for commercial vans?', a: 'Yes. We carry a range of commercial-rated tyres suitable for popular van makes and models.' },
+            { q: 'Do you offer mobile jump-start assistance?', a: 'Yes. If your vehicle has a flat battery as well as a tyre problem, our mobile jump-start service is available 24/7.' },
+            { q: 'Can you reset TPMS after fitting a tyre?', a: 'Yes. TPMS checks and resets can be carried out where required following tyre fitting or repair.' },
+            { q: 'Do you remove locking wheel nuts?', a: 'Yes. Specialist tools can be used for locking wheel nut removal on suitable vehicles.' },
+            { q: 'What tyre brands do you supply?', a: 'We supply a range of premium and budget tyres. The suitable option depends on your vehicle, tyre size and requirements.' },
+            { q: 'Can you help if I have a tyre problem near the M62?', a: 'Yes. The A627 service includes links towards the M62, so assistance is available around relevant connecting areas.' },
+            { q: 'Can you repair a tyre on the roadside?', a: 'Yes, where the tyre is suitable for repair and the location is safe and appropriate. Safety is assessed before work begins.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted on the A627 Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait on the hard shoulder. Call our dedicated A627 line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting on the A627?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need an emergency tyre replacement, puncture repair or mobile tyre fitting, One Stop Tyres 247 can come to a suitable location on or around the A627. Contact us for 24/7 mobile tyre fitting on the A627, emergency tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:07759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
