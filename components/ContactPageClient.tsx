@@ -26,7 +26,7 @@ export default function ContactPageClient() {
   const faqs = [
     {
       q: 'What is your average response time?',
-      a: 'We aim to reach most locations across Greater Manchester within 20 to 30 minutes. Our dispatch system identifies the nearest technician to your location to ensure the fastest possible arrival.',
+      a: 'In most of the areas we cover, we aim to reach you within 20 to 30 minutes. Our dispatch system identifies the nearest technician to your location to ensure the fastest possible arrival.',
     },
     {
       q: 'Do you really operate 24 hours a day?',
@@ -34,7 +34,7 @@ export default function ContactPageClient() {
     },
     {
       q: 'Which areas do you cover?',
-      a: "We provide coverage across Greater Manchester and surrounding areas, we can dispatch a mobile technician to assist you.",
+      a: "Our service is available in a growing number of towns and cities. Call us with your location and we will confirm whether we can dispatch a mobile technician to assist you.",
     },
     {
       q: 'What is the best way to contact you?',
@@ -60,7 +60,7 @@ export default function ContactPageClient() {
               decoding="async"
             />
           </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-left">
             <h1
               className="text-white mb-4 sm:mb-6 uppercase tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-bold"
               style={{ fontFamily: 'Work Sans, sans-serif' }}
@@ -68,11 +68,11 @@ export default function ContactPageClient() {
               Contact Us
             </h1>
             <p
-              className="text-white/90 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed"
+              className="text-white/90 max-w-2xl text-base sm:text-lg leading-relaxed"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Get in touch with our team for fast and reliable roadside assistance across Greater
-              Manchester. We operate round the clock to keep you moving.
+              Get in touch with our team for fast and reliable roadside assistance, wherever
+              the road takes you. We operate round the clock to keep you moving.
             </p>
           </div>
         </section>
@@ -170,7 +170,7 @@ export default function ContactPageClient() {
                         className="text-[#1c1b1b] text-lg sm:text-xl lg:text-2xl font-semibold"
                         style={{ fontFamily: 'Work Sans, sans-serif' }}
                       >
-                        Greater Manchester
+                        Growing UK Coverage
                       </p>
                       <p className="text-xs sm:text-sm text-[#5c403c]">Strategic locations for 20-30m response</p>
                     </div>
@@ -410,7 +410,7 @@ export default function ContactPageClient() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               { icon: 'emergency_home', title: '24/7 Support', desc: 'Around the clock emergency support, 365 days a year.' },
-              { icon: 'speed', title: 'Fast Response', desc: 'Rapid Greater Manchester coverage with 20-30 min arrival times.' },
+              { icon: 'speed', title: 'Fast Response', desc: 'Rapid local response with 20-30 min arrival times.' },
               { icon: 'engineering', title: 'Professional', desc: 'Expert technicians equipped with modern diagnostic tools.' },
               { icon: 'verified', title: 'Reliable', desc: 'Consistent, high-quality service you can trust every time.' },
             ].map((item) => (

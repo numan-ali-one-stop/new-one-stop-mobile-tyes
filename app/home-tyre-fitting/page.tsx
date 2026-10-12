@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: 'Do you provide tyre replacement at home?',
-    a: 'Yes. We provide tyre replacement at home across Greater Manchester, subject to tyre availability and suitable access at your property.',
+    a: 'Yes. We provide tyre replacement at home across our service areas, subject to tyre availability and suitable access at your property.',
   },
   {
     q: 'How does home tyre fitting work?',
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     q: 'Where do you provide Home Tyre Fitting?',
-    a: 'We provide Home Tyre Fitting in Greater Manchester, including Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan.',
+    a: 'Our Home Tyre Fitting service covers a growing number of towns and cities. Call us with your location and we will confirm availability straight away.',
   },
   {
     q: 'Why choose tyre fitting at home instead of visiting a garage?',
@@ -125,8 +125,8 @@ const whyChooseUs = [
   },
   {
     icon: '🚐',
-    title: 'Greater Manchester Coverage',
-    desc: 'We provide home tyre services across Greater Manchester and surrounding areas.',
+    title: 'Local Coverage',
+    desc: 'We provide home tyre services across our service areas.',
   },
 ]
 
@@ -158,8 +158,8 @@ const whyChooseHomeFitting = [
   },
   {
     icon: 'location_on',
-    title: 'Greater Manchester Service',
-    desc: 'We provide our Home Tyre Fitting service across Greater Manchester, subject to location and accessibility.',
+    title: 'Local Service',
+    desc: 'We provide our Home Tyre Fitting service across our service areas, subject to location and accessibility.',
   },
 ]
 
@@ -242,14 +242,14 @@ export default function HomeTyreFittingPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Home Tyre Fitting in Greater Manchester
+              Home Tyre Fitting Near You
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
               Need new tyres without leaving home? Our <strong>Home Tyre Fitting</strong> service brings professional tyre fitting directly to your driveway. Whether your tyres are worn, damaged or simply due for replacement, our experienced technicians can fit your new tyres at a convenient time.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
-              Our <strong>car tyre fitting at home</strong> service is available across Greater Manchester, helping you avoid the time and inconvenience of visiting a garage. From a single tyre to a complete set, we make tyre replacement at home simple and convenient.
+              Our <strong>car tyre fitting at home</strong> service is available across our service areas, helping you avoid the time and inconvenience of visiting a garage. From a single tyre to a complete set, we make tyre replacement at home simple and convenient.
             </p>
 
             <ul className="space-y-2 mb-8">
@@ -257,7 +257,7 @@ export default function HomeTyreFittingPage() {
                 'Professional Home Tyre Fitting',
                 'Tyre Replacement at Home',
                 'Convenient Driveway Fitting',
-                'Greater Manchester Coverage',
+                'Local Coverage',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -320,7 +320,7 @@ export default function HomeTyreFittingPage() {
               Our <strong>Home Tyre Fitting</strong> service makes it easier to replace your tyres without arranging a trip to a garage. Our technicians come directly to your home with the required equipment, allowing your car tyre to be fitted at home at a suitable time.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
-              Whether you need <strong>home tyre replacement</strong>{' '}because of worn tyres or simply want the convenience of having your tyres fitted while you&apos;re at home, we can arrange a suitable appointment across Greater Manchester.
+              Whether you need <strong>home tyre replacement</strong>{' '}because of worn tyres or simply want the convenience of having your tyres fitted while you&apos;re at home, we can arrange a suitable appointment across our service areas.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
               You don&apos;t need to wait around at a tyre centre. With our tyre fitting service at home, you can continue with your day while our technician carries out the required work at your property.
@@ -573,7 +573,7 @@ export default function HomeTyreFittingPage() {
           Need Tyre Fitting at Home?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Need new tyres without visiting a garage? Book our Home Tyre Fitting service and have your tyres fitted at a convenient location at home. We provide professional home tyre replacement across Greater Manchester, helping you save time and avoid unnecessary travel.
+          Need new tyres without visiting a garage? Book our Home Tyre Fitting service and have your tyres fitted at a convenient location at home. We provide professional home tyre replacement across our service areas, helping you save time and avoid unnecessary travel.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a

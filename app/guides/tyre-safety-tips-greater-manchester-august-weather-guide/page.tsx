@@ -112,7 +112,7 @@ export default function TyreSafetyAugustWeatherGuide() {
             className="text-3xl sm:text-4xl lg:text-5xl text-white font-black mb-3 leading-[1.1]"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
           >
-            Why Greater Manchester Drivers Should Check Their Tyres Before Travelling This August
+            Why Drivers Should Check Their Tyres Before Travelling This August
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             Changeable August weather is on the way — here&apos;s how to check your tyres before
@@ -224,7 +224,7 @@ export default function TyreSafetyAugustWeatherGuide() {
             The Bottom Line
           </h2>
           <p className="text-slate-600 leading-relaxed">
-            With changeable weather on the way across Greater Manchester this August, now&apos;s a
+            With changeable weather on the way this August, now&apos;s a
             good time to give your tyres a once-over. A quick check today could save you a
             stressful breakdown tomorrow.
           </p>
@@ -232,12 +232,12 @@ export default function TyreSafetyAugustWeatherGuide() {
           {/* CTA */}
           <div className="bg-[#0f172a] rounded-2xl p-6 sm:p-8 my-10">
             <h3 className="text-white font-bold text-lg sm:text-xl mb-2" style={{ fontFamily: 'var(--font-work-sans)' }}>
-              Need Mobile Tyre Fitting in Greater Manchester?
+              Need Mobile Tyre Fitting?
             </h3>
             <p className="text-slate-400 mb-5 leading-relaxed">
               Tyre problems don&apos;t always happen at home. Whether you&apos;re at work, parked
               outside your house or stranded at the roadside, One Stop Mobile Tyres 24/7 provides
-              professional mobile tyre fitting across Greater Manchester. Instead of arranging
+              professional mobile tyre fitting at your location. Instead of arranging
               recovery to a garage, our experienced technicians come directly to your location,
               helping you get back on the road quickly and safely.
             </p>

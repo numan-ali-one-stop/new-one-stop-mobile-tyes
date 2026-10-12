@@ -26,15 +26,15 @@ const _serviceSchema = serviceSchema({
 const faqs = [
   { q: 'What does roadside assistance include?', a: 'Roadside assistance provides practical help when your vehicle develops a problem that prevents you from continuing your journey safely.' },
   { q: 'Do you provide 24/7 roadside assistance?', a: 'Yes. Our roadside assistance service is available 24/7 for drivers who need emergency support.' },
-  { q: 'Do you provide emergency roadside assistance?', a: 'Yes. We provide an emergency roadside assistance service for suitable roadside problems across Greater Manchester.' },
+  { q: 'Do you provide emergency roadside assistance?', a: 'Yes. We provide an emergency roadside assistance service for suitable roadside problems across our service areas.' },
   { q: 'What types of problems can roadside assistance help with?', a: 'This depends on the situation. We can assess common tyre-related and suitable roadside problems and advise you on the safest solution.' },
   { q: 'Can you help with a flat tyre?', a: 'Yes. We can assess a flat or damaged tyre and determine whether repair, replacement or other suitable assistance is required.' },
   { q: 'Do you provide roadside assistance for tyre problems?', a: 'Yes. Tyre-related roadside problems are one of the situations our technicians can assess and assist with where suitable.' },
   { q: 'Can you provide roadside assistance at night?', a: 'Yes. Our roadside assistance services are available 24/7, including during evenings and overnight.' },
   { q: 'How quickly can roadside assistance arrive?', a: "Arrival time depends on your location, traffic and current demand. We'll provide an estimated arrival time when you contact us." },
-  { q: 'Do you provide roadside assistance across Greater Manchester?', a: 'Yes. We provide roadside assistance across Greater Manchester, including Manchester and surrounding areas.' },
+  { q: 'Is roadside assistance available in my area?', a: 'Our roadside assistance covers a growing number of towns and cities. Call us with your location and we will confirm availability straight away.' },
   { q: 'Can you help if my car has broken down?', a: "We can assess your situation and determine what roadside assistance is suitable based on the vehicle's condition and the problem you're experiencing." },
-  { q: 'Can you provide roadside assistance on motorways?', a: 'We can assist in suitable locations around major Greater Manchester routes. For motorway incidents, your safety should always come first and you should follow the relevant motorway safety procedures.' },
+  { q: 'Can you provide roadside assistance on motorways?', a: 'We can assist in suitable locations along major routes and motorways. For motorway incidents, your safety should always come first and you should follow the relevant motorway safety procedures.' },
   { q: 'Do I need to provide my location when booking?', a: 'Yes. Your current location helps us determine where assistance is required and provide an appropriate response.' },
   { q: 'Can roadside assistance fix my vehicle at the roadside?', a: 'If the problem can be safely resolved at the roadside, our technician will provide suitable assistance. More serious problems may require further repair.' },
   { q: 'Is roadside assistance available for emergencies?', a: 'Yes. Emergency roadside support is available 24/7 for suitable situations.' },
@@ -61,8 +61,8 @@ const whyChooseUs = [
   },
   {
     icon: '⭐',
-    title: 'Greater Manchester Coverage',
-    desc: 'Roadside assistance is available across Manchester and surrounding areas.',
+    title: 'Local Coverage',
+    desc: 'Roadside assistance is available across our service areas.',
   },
 ]
 
@@ -94,8 +94,8 @@ const whyChooseRoadsideAssistance = [
   },
   {
     icon: 'location_on',
-    title: 'Greater Manchester Service',
-    desc: 'Coverage across Manchester and surrounding areas.',
+    title: 'Local Service',
+    desc: 'Coverage across our service areas.',
   },
 ]
 
@@ -168,11 +168,11 @@ export default function RoadsideAssistancePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Roadside Assistance in Greater Manchester
+              24/7 Roadside Assistance Near You
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
-              When your vehicle breaks down or you face an unexpected problem on the road, our <strong>roadside assistance</strong> service provides professional help at a convenient location across Greater Manchester. We provide <strong>emergency roadside assistance</strong> service for drivers who need reliable support to get back on the road safely.
+              When your vehicle breaks down or you face an unexpected problem on the road, our <strong>roadside assistance</strong> service provides professional help at a convenient location across our service areas. We provide <strong>emergency roadside assistance</strong> service for drivers who need reliable support to get back on the road safely.
             </p>
 
             <ul className="space-y-2 mb-8">
@@ -180,7 +180,7 @@ export default function RoadsideAssistancePage() {
                 '24/7 Roadside Assistance',
                 'Emergency Roadside Support',
                 'Professional Breakdown Assistance',
-                'Greater Manchester Coverage',
+                'Local Coverage',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -237,13 +237,13 @@ export default function RoadsideAssistancePage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Professional Roadside Assistance Across Greater Manchester
+              Professional Roadside Assistance Near You
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
               A vehicle breakdown can happen at any time, whether you&apos;re travelling to work, heading home or driving on a major route. Our <strong>roadside assistance</strong> services are designed to provide practical help when you need it most.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              One Stop Tyres 247 provides <strong>roadside support</strong> across Greater Manchester, helping drivers deal with common vehicle and tyre-related problems. Our technicians assess the situation and provide the most suitable assistance based on the condition of your vehicle.
+              One Stop Tyres 247 provides <strong>roadside support</strong> across our service areas, helping drivers deal with common vehicle and tyre-related problems. Our technicians assess the situation and provide the most suitable assistance based on the condition of your vehicle.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -262,7 +262,7 @@ export default function RoadsideAssistancePage() {
       {/* ── 3. WHY CHOOSE ────────────────────────────────────────────── */}
       <WhyChooseGrid
         heading="Why Choose Our Roadside Assistance Service?"
-        intro="Choosing the right roadside assistance service means getting fast, professional support when you need it most. Our team is available across Greater Manchester to help with unexpected vehicle and tyre problems."
+        intro="Choosing the right roadside assistance service means getting fast, professional support when you need it most. Our team is available across our service areas to help with unexpected vehicle and tyre problems."
         items={whyChooseRoadsideAssistance}
       />
 
@@ -394,10 +394,10 @@ export default function RoadsideAssistancePage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Roadside Assistance Across Greater Manchester
+              Roadside Assistance Across Our Service Areas
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
-              Our roadside assistance services are available across Greater Manchester, helping drivers who experience unexpected problems while travelling.
+              Our roadside assistance services are available across our service areas, helping drivers who experience unexpected problems while travelling.
             </p>
           </div>
 
@@ -464,7 +464,7 @@ export default function RoadsideAssistancePage() {
           Need Emergency Roadside Assistance?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Don&apos;t stay stranded when you need help. Our roadside assistance service provides professional support across Greater Manchester, helping you deal with unexpected vehicle and tyre problems.
+          Don&apos;t stay stranded when you need help. Our roadside assistance service provides professional support across our service areas, helping you deal with unexpected vehicle and tyre problems.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a

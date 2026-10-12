@@ -5,8 +5,8 @@ import { PHONE_TEL } from '@/lib/constants'
 const HERO = {
   image: '/images/IMG_2098.jpeg',
   badge: 'Same Day Mobile Tyre Replacement',
-  heading: '24/7 Mobile Tyre Service & Repair in Greater Manchester',
-  body: 'Need tyre help fast? Our mobile tyre service comes directly to you across Greater Manchester. We provide tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or a safe roadside location, 24 hours a day, 7 days a week.',
+  heading: '24/7 Mobile Tyre Service & Repair Near You',
+  body: 'Need tyre help fast? Our mobile tyre service comes directly to you, wherever you are. We provide tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or a safe roadside location, 24 hours a day, 7 days a week.',
   listLabel: 'Benefits',
   items: [
     '24/7 emergency tyre service',
@@ -112,7 +112,7 @@ export default function HeroSlider() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/50 text-xs">Rated By Drivers Across Greater Manchester</span>
+              <span className="text-white/50 text-xs">Rated By Local Drivers</span>
             </a>
 
             {/* CTAs */}

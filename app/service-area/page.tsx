@@ -100,13 +100,13 @@ const motorwayAreas = [
     name: 'M6 Motorway',
     href: '/mobile-tyre-fitting-m6',
     junctions: 'J23 – J27 (GM stretch)',
-    desc: 'Coverage of the M6 as it passes Wigan and the western fringe of Greater Manchester.',
+    desc: 'Emergency tyre cover along our section of the M6, 24/7.',
   },
   {
     name: 'M60 Orbital',
     href: '/mobile-tyre-fitting-m60',
     junctions: 'J1 – J27 (full ring)',
-    desc: 'Complete coverage of the Greater Manchester orbital motorway — all 27 junctions, 24/7.',
+    desc: 'Complete coverage of the orbital ring road — all 27 junctions, 24/7.',
   },
   {
     name: 'M602 Motorway',
@@ -124,13 +124,13 @@ const motorwayAreas = [
     name: 'M56 Motorway',
     href: '/mobile-tyre-fitting-m56',
     junctions: 'J1 – J6 (GM stretch)',
-    desc: 'Manchester Airport corridor covered on the Greater Manchester stretch of the M56, from the Cheshire border to the A34 interchange.',
+    desc: 'Manchester Airport corridor covered along our stretch of the M56, from the Cheshire border to the A34 interchange.',
   },
   {
     name: 'M62 Motorway',
     href: '/mobile-tyre-fitting-m62',
     junctions: 'J12 – J21 (GM stretch)',
-    desc: 'Trans-Pennine motorway serviced across the Greater Manchester section including Eccles and Birch.',
+    desc: 'Trans-Pennine motorway serviced along our section, including Birch Services.',
   },
   {
     name: 'M66 Motorway',
@@ -168,7 +168,7 @@ const motorwayAreas = [
 const trustBadges = [
   { icon: 'schedule', label: '24/7 Emergency', sub: 'Always on call' },
   { icon: 'bolt', label: '20–30 Min', sub: 'Average arrival' },
-  { icon: 'public', label: '10 Boroughs', sub: 'Greater Manchester' },
+  { icon: 'public', label: '10 Boroughs', sub: 'Fully covered' },
   { icon: 'route', label: '11 Routes', sub: 'Full roadside cover' },
 ]
 
@@ -193,7 +193,7 @@ export default function ServiceAreaPage() {
       <JsonLd data={_breadcrumbSchema} />
       <JsonLd data={_serviceSchema} />
       {/* ── Hero ── */}
-      <section className="relative min-h-[400px] sm:min-h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden py-16 sm:py-20">
+      <section className="relative min-h-[400px] sm:min-h-[450px] lg:h-[500px] flex items-center overflow-hidden py-16 sm:py-20">
         <div className="absolute inset-0 bg-secondary/85 z-10" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -204,18 +204,18 @@ export default function ServiceAreaPage() {
           height={500}
           loading="eager"
         />
-        <div className="relative z-20 text-center px-4 sm:px-5 max-w-3xl mx-auto">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left">
           <span className="inline-block bg-primary/20 border border-primary/40 text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-4 sm:mb-5">
-            Greater Manchester
+            Our Coverage
           </span>
-          <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-5 text-balance leading-tight">
+          <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-5 text-balance leading-tight max-w-3xl">
             Our Service Area
           </h1>
-          <p className="font-body-lg text-base lg:text-body-lg text-white/90 max-w-2xl mx-auto mb-6 sm:mb-8 text-pretty leading-relaxed">
-            We cover all 10 Greater Manchester boroughs and 11 major roads and motorways — wherever you
+          <p className="font-body-lg text-base lg:text-body-lg text-white/90 max-w-2xl mb-6 sm:mb-8 text-pretty leading-relaxed">
+            We cover a growing number of towns, cities and major roads — wherever you
             are, we&apos;ll come to you, 24 hours a day, 7 days a week.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <div className="flex flex-wrap items-center justify-start gap-3 sm:gap-4">
             <a
               href="tel:07759708646"
               className="inline-flex items-center gap-2 bg-primary text-white font-call-to-action text-base lg:text-call-to-action px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg uppercase"
@@ -266,7 +266,7 @@ export default function ServiceAreaPage() {
           </h2>
           <div className="w-16 sm:w-20 h-1 bg-primary mx-auto rounded-full mb-3 sm:mb-4" />
           <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant max-w-xl mx-auto text-pretty">
-            All 10 Greater Manchester boroughs, each with full coverage of the borough and every
+            Every area we serve gets full coverage, including each
             surrounding town and village.
           </p>
         </div>
@@ -343,7 +343,7 @@ export default function ServiceAreaPage() {
             <div className="w-16 sm:w-20 h-1 bg-primary mx-auto rounded-full mb-3 sm:mb-4" />
             <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant max-w-xl mx-auto text-pretty">
               Broken down on a motorway? Our rapid response team covers every major road
-              in and around Greater Manchester, 24/7.
+              in the areas we serve, 24/7.
             </p>
           </div>
 
@@ -425,7 +425,7 @@ export default function ServiceAreaPage() {
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm text-green-500" style={{ fontVariationSettings: "'FILL' 1" }}>
                   check_circle
                 </span>
-                Typical response: 20–30 minutes anywhere in Greater Manchester
+                Typical response: 20–30 minutes in the areas we cover
               </p>
             </div>
           </div>
@@ -442,7 +442,7 @@ export default function ServiceAreaPage() {
             <div className="text-white text-center sm:text-left">
               <h2 className="font-h1 text-2xl sm:text-3xl lg:text-h1 mb-2 text-balance">Broken Down Right Now?</h2>
               <p className="font-body-lg text-base lg:text-body-lg text-white/90">
-                Call immediately — our team is standing by 24/7 across Greater Manchester.
+                Call immediately — our team is standing by 24/7 across our service areas.
               </p>
               <div className="mt-4 sm:mt-5 flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>

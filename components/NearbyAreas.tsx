@@ -39,7 +39,7 @@ export default function NearbyAreas({ currentSlug }: NearbyAreasProps) {
         </div>
         <div className="text-center mt-6">
           <a href="/service-area" className="text-[#b70011] font-bold text-sm hover:underline">
-            View full Greater Manchester coverage map
+            View our full coverage map
           </a>
         </div>
       </div>

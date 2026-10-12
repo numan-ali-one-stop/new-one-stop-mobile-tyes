@@ -44,11 +44,11 @@ const faqs = [
   },
   {
     q: 'How long does it take a mobile fitter to reach the M60?',
-    a: 'Our technicians are based around Greater Manchester, so we typically reach locations on or just off the M60 within 20–30 minutes, depending on traffic and which junction you are near. We prioritise motorway breakdowns because we know how exposed you are while waiting.',
+    a: 'Our technicians are positioned close to the motorway network, so we typically reach locations on or just off the M60 within 20–30 minutes, depending on traffic and which junction you are near. We prioritise motorway breakdowns because we know how exposed you are while waiting.',
   },
   {
-    q: 'Do you cover all the Manchester motorways?',
-    a: 'Yes — we cover the full M60 ring road plus the M62, M56, M61, M602, M66, M67 and the A627(M), 24 hours a day. Each route has its own coverage page with junction-by-junction details.',
+    q: 'Which motorways do you cover?',
+    a: 'We cover the full M60 ring road plus the M62, M56, M61, M602, M66, M67 and the A627(M), 24 hours a day. Each route has its own coverage page with junction-by-junction details.',
   },
 ]
 
@@ -112,7 +112,7 @@ export default function FlatTyreMotorwayGuide() {
             className="text-3xl sm:text-4xl lg:text-5xl text-white font-black mb-3 leading-[1.1]"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
           >
-            What to Do If You Get a Flat Tyre on the M60 (or Any Manchester Motorway)
+            What to Do If You Get a Flat Tyre on the M60 (or Any Motorway)
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             The exact steps to take, in order — where to stop, who to call, and how to get
@@ -146,7 +146,7 @@ export default function FlatTyreMotorwayGuide() {
               Once you&apos;re somewhere safe, our 24/7 mobile technicians can come to you and
               repair or replace the tyre on the spot. Call{' '}
               <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' / '}<a href="tel:01613995851" className="text-[#b70011] font-semibold hover:underline">0161 399 5851</a>{' '}
-              — we prioritise motorway call-outs across Greater Manchester, day and night.
+              — we prioritise motorway call-outs, day and night.
             </p>
           </div>
 
@@ -297,7 +297,7 @@ export default function FlatTyreMotorwayGuide() {
             change a tyre on a live hard shoulder</strong>. If that&apos;s where you are,
             we&apos;ll talk you through reaching the nearest safe stopping point — there&apos;s
             almost always a service area or slip road within a couple of junctions on the
-            Manchester network — and meet you there.
+            motorway network — and meet you there.
           </p>
 
           {/* Local knowledge */}
@@ -305,14 +305,14 @@ export default function FlatTyreMotorwayGuide() {
             className="text-2xl sm:text-3xl font-bold text-[#0f172a] mt-10 mb-4"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            Know Your Road: Safe Stopping Points Around Manchester
+            Know Your Road: Safe Stopping Points on Your Route
           </h2>
           <ul className="space-y-4 mb-6">
             {[
-              { t: 'M60 ring road', d: 'No motorway services on the orbital itself, but exits come every mile or two — junctions 1 (Stockport), 12 (Eccles interchange) and 18 (Simister Island) all have fuel stations and retail parks within minutes of the slip road.' },
-              { t: 'M62', d: 'Birch Services (between J18 and J19) is the obvious safe haven on the Greater Manchester stretch — we attend it regularly.' },
-              { t: 'M56', d: 'Manchester Airport sits between J5 and J6; the terminal approach roads, drop-off areas and business parks all make safe meeting points.' },
-              { t: 'M61', d: 'Rivington Services (northbound between J6 and J8) — or drop off at J6 for the Middlebrook retail park at Horwich.' },
+              { t: 'M60 ring road', d: 'No motorway services on the orbital itself, but exits come every mile or two — junctions 1, 12 and 18 all have fuel stations and retail parks within minutes of the slip road.' },
+              { t: 'M62', d: 'Birch Services (between J18 and J19) is the obvious safe haven on this stretch — we attend it regularly.' },
+              { t: 'M56', d: 'The airport sits between J5 and J6; the terminal approach roads, drop-off areas and business parks all make safe meeting points.' },
+              { t: 'M61', d: 'Rivington Services (northbound between J6 and J8) — or drop off at J6 for the Middlebrook retail park.' },
               { t: 'M66 / M67 / M602 / A627(M)', d: 'These are short commuter routes — the next exit is never more than a few minutes away, and each leads quickly to town-centre car parks or fuel stations where we can work safely.' },
             ].map((item) => (
               <li key={item.t} className="flex items-start gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
@@ -358,7 +358,7 @@ export default function FlatTyreMotorwayGuide() {
           {/* CTA */}
           <div className="bg-[#0f172a] rounded-2xl p-6 sm:p-8 my-10">
             <h3 className="text-white font-bold text-lg sm:text-xl mb-2" style={{ fontFamily: 'var(--font-work-sans)' }}>
-              Stranded on a Manchester motorway right now?
+              Stranded on the motorway right now?
             </h3>
             <p className="text-slate-400 mb-5 leading-relaxed">
               Get somewhere safe first, then call us. Tell us your motorway and nearest
@@ -430,7 +430,7 @@ export default function FlatTyreMotorwayGuide() {
             Our Motorway Coverage Pages
           </h2>
           <p className="text-slate-600 mb-6 leading-relaxed">
-            Junction-by-junction details for every motorway we cover around Greater Manchester:
+            Junction-by-junction details for every motorway we cover:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {motorwayLinks.map((m) => (

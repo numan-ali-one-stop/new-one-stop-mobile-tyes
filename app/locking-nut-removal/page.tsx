@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: 'How quickly can you reach me?',
-    a: 'Response time depends on your location, traffic and technician availability. We aim to arrange assistance as quickly as possible across Greater Manchester.',
+    a: 'Response time depends on your location, traffic and technician availability. We aim to arrange assistance as quickly as possible across our service areas.',
   },
 ]
 
@@ -153,7 +153,7 @@ export default function LockingNutRemovalPage() {
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              Lost your locking wheel nut key, damaged the key or found that the locking nut will not move? <strong>One Stop Mobile Tyres 24/7</strong> provides professional <strong>locking wheel nut removal</strong> across Greater Manchester, using specialist extraction equipment at your location.
+              Lost your locking wheel nut key, damaged the key or found that the locking nut will not move? <strong>One Stop Mobile Tyres 24/7</strong> provides professional <strong>locking wheel nut removal</strong> across our service areas, using specialist extraction equipment at your location.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
               We can assist with lost keys, worn locking nuts, rounded heads and seized fittings. Our technicians assess the wheel and nut first, then use the most appropriate removal method to gain access while taking care around the alloy wheel.
@@ -165,7 +165,7 @@ export default function LockingNutRemovalPage() {
                 'Lost or Damaged Locking Nut Key Assistance',
                 'Rounded & Seized Locking Nut Removal',
                 'Specialist Extraction Equipment',
-                '24/7 Greater Manchester Coverage',
+                '24/7 Local Coverage',
                 'Clear Pricing Before Work Begins',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
@@ -329,7 +329,7 @@ export default function LockingNutRemovalPage() {
               Lost or Damaged Your Locking Wheel Nut Key?
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-6">
-              A missing or damaged locking key can become a serious problem when you need to remove the wheel urgently. It may prevent a tyre replacement, puncture repair, brake job or other work from being completed. <strong>One Stop Mobile Tyres 24/7</strong> provides <strong>emergency locking nut removal</strong> across Greater Manchester for lost keys, damaged locking nuts, rounded heads and seized fittings. Send us your vehicle registration, location and, if possible, a clear photo of the locking wheel nut. This can help us understand the problem before the technician travels.
+              A missing or damaged locking key can become a serious problem when you need to remove the wheel urgently. It may prevent a tyre replacement, puncture repair, brake job or other work from being completed. <strong>One Stop Mobile Tyres 24/7</strong> provides <strong>emergency locking nut removal</strong> across our service areas for lost keys, damaged locking nuts, rounded heads and seized fittings. Send us your vehicle registration, location and, if possible, a clear photo of the locking wheel nut. This can help us understand the problem before the technician travels.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a

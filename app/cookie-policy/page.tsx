@@ -66,14 +66,16 @@ export default function CookiePolicyPage() {
     <main className="bg-white min-h-screen">
       <JsonLd data={_breadcrumbSchema} />
       {/* Hero */}
-      <div className="bg-[#0f172a] py-14 sm:py-20 px-4 sm:px-6 text-white text-center">
-        <h1
-          className="text-3xl sm:text-4xl font-bold mb-3"
-          style={{ fontFamily: 'var(--font-work-sans)' }}
-        >
-          Cookie Policy
-        </h1>
-        <p className="text-slate-400 text-base">Last updated: 21 June 2026</p>
+      <div className="bg-[#0f172a] py-14 sm:py-20 px-4 sm:px-6 text-white text-left">
+        <div className="max-w-7xl mx-auto">
+          <h1
+            className="text-3xl sm:text-4xl font-bold mb-3"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            Cookie Policy
+          </h1>
+          <p className="text-slate-400 text-base">Last updated: 21 June 2026</p>
+        </div>
       </div>
 
       {/* Content */}

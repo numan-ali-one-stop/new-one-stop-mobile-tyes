@@ -88,7 +88,7 @@ export default function ServicePage({
 }: ServicePageProps) {
   const defaultWhyChooseUs = whyChooseUs ?? [
     '24/7 availability — we never close',
-    'Fast Greater Manchester response time',
+    'Fast local response times',
     'Transparent, upfront pricing with no hidden fees',
     'Experienced, certified technicians',
     'Fully equipped mobile vans',
@@ -119,7 +119,7 @@ export default function ServicePage({
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
               </span>
-              Available 24/7 Across Greater Manchester
+              Available 24/7 Near You
             </div>
 
             <h1
@@ -206,7 +206,7 @@ export default function ServicePage({
               Professional Roadside Assistance
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-base">
-              Comprehensive mobile vehicle support available every day of the year across Greater Manchester.
+              Comprehensive mobile vehicle support available every day of the year across our service areas.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -436,7 +436,7 @@ export default function ServicePage({
             Need Immediate Assistance?
           </h2>
           <p className="text-slate-400 mb-8 leading-relaxed">
-            Call now and our team will reach you quickly anywhere across Greater Manchester.
+            Call now and our team will reach you quickly anywhere in our service areas.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <a

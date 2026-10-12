@@ -30,7 +30,7 @@ const serviceLinks = [
     label: 'Roadside Assistance',
     href: '/roadside-assistance',
     icon: 'support_agent',
-    desc: '24/7 emergency roadside support across Greater Manchester',
+    desc: '24/7 emergency roadside support wherever you are',
   },
   {
     label: 'Jump Start',
@@ -140,7 +140,7 @@ export default function Header() {
               className="flex items-center gap-1.5 hover:text-red-400 transition-colors"
             >
               <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm">location_on</span>
-              Greater Manchester
+              Our Service Areas
             </a>
           </div>
           <div className="flex items-center gap-3">
@@ -313,7 +313,7 @@ export default function Header() {
                         bolt
                       </span>
                       <p className="text-[12px] text-slate-600 leading-tight">
-                        <span className="font-bold text-slate-800">20–30 min response</span> across Greater Manchester
+                        <span className="font-bold text-slate-800">20–30 min response</span> in areas we cover
                       </p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
@@ -881,7 +881,7 @@ export default function Header() {
               </div>
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Availability</p>
-                <p className="text-xs font-medium text-slate-700">24/7 Emergency — Greater Manchester</p>
+                <p className="text-xs font-medium text-slate-700">24/7 Emergency Callouts</p>
               </div>
             </div>
           </div>

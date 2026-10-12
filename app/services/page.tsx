@@ -39,7 +39,7 @@ const services = [
     href: '/roadside-assistance',
     img: '/images/professional-mobile-tyre-fitting.webp',
     title: 'Roadside Assistance',
-    desc: 'Emergency roadside support for tyre and vehicle problems, wherever you get stranded across Greater Manchester.',
+    desc: 'Emergency roadside support for tyre and vehicle problems, wherever you get stranded.',
     badge: '24/7 Support',
     btnLabel: 'Get Help Now',
   },
@@ -85,7 +85,7 @@ export default function ServicesPage() {
       <JsonLd data={_breadcrumbSchema} />
       <JsonLd data={_itemListSchema} />
       {/* Hero Section */}
-      <section className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[614px] flex items-center justify-center overflow-hidden py-16 sm:py-20">
+      <section className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[614px] flex items-center overflow-hidden py-16 sm:py-20">
         <div className="absolute inset-0 bg-secondary/80 mix-blend-multiply z-10" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -96,12 +96,12 @@ export default function ServicesPage() {
           height={614}
           loading="eager"
         />
-        <div className="relative z-20 text-center px-4 sm:px-5 max-w-4xl mx-auto">
-          <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-6 leading-tight">Our Expert Mobile Services</h1>
-          <p className="font-body-lg text-base lg:text-body-lg text-white/90 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left">
+          <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-6 leading-tight max-w-3xl">Our Expert Mobile Services</h1>
+          <p className="font-body-lg text-base lg:text-body-lg text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
             Professional 24/7 roadside assistance, wherever you are. We bring the garage to you, anywhere, anytime.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start">
             <a
               className="bg-primary text-on-primary font-call-to-action text-base lg:text-call-to-action px-4 sm:px-lg py-3 sm:py-sm rounded-lg hover:bg-primary/90 transition-all shadow-lg uppercase text-center"
               href="tel:07759708646"

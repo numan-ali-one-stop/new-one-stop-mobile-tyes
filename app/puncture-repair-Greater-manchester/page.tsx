@@ -36,7 +36,7 @@ const faqs = [
   { q: 'Can I drive with a punctured tyre?', a: "Driving on a punctured or significantly underinflated tyre can be unsafe and may cause additional damage. It's best to stop in a safe location and have the tyre assessed." },
   { q: 'What happens if my tyre cannot be repaired?', a: "If the tyre is not suitable for repair, we'll explain why and discuss the appropriate replacement option based on your vehicle and tyre requirements." },
   { q: 'Do you repair punctures at the roadside?', a: 'Yes, where the location is safe and suitable for the work, we can provide mobile tyre puncture repair at a roadside location.' },
-  { q: 'Do you cover Greater Manchester?', a: 'Yes. Our Puncture Repair service covers Greater Manchester, including Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan.' },
+  { q: 'Which areas do you cover?', a: 'Our Puncture Repair service covers a growing number of towns and cities. Call us with your location and we will confirm availability straight away.' },
   { q: 'Can a slow puncture be repaired?', a: 'A slow tyre puncture may be repairable if the damage is suitable and the tyre remains in good condition. Our technician will inspect it before recommending a repair.' },
   { q: 'What should I do if I get a puncture while driving?', a: 'Move to a safe location away from traffic where possible, avoid driving on the damaged tyre and contact us with your location and vehicle details for assistance.' },
 ]
@@ -61,8 +61,8 @@ const whyChooseUs = [
   },
   {
     icon: '⭐',
-    title: 'Greater Manchester Coverage',
-    desc: 'Our puncture repair service covers locations throughout Greater Manchester.',
+    title: 'Local Coverage',
+    desc: 'Our puncture repair service covers locations throughout our service areas.',
   },
 ]
 
@@ -94,8 +94,8 @@ const whyChoosePunctureRepair = [
   },
   {
     icon: 'location_on',
-    title: 'Greater Manchester Service',
-    desc: 'We provide Puncture Repair across Greater Manchester, subject to location and accessibility.',
+    title: 'Local Service',
+    desc: 'We provide Puncture Repair across our service areas, subject to location and accessibility.',
   },
 ]
 
@@ -156,11 +156,11 @@ export default function PunctureRepairGreaterManchesterPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Professional Tyre Puncture Repair in Greater Manchester
+              Professional Tyre Puncture Repair Near You
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              Got a punctured tyre? Our <strong>Puncture Repair</strong> service helps drivers get back on the road without the need for an unnecessary garage visit. We provide professional tyre puncture repair for suitable punctures across Greater Manchester, with experienced technicians assessing the damage before carrying out any repair.
+              Got a punctured tyre? Our <strong>Puncture Repair</strong> service helps drivers get back on the road without the need for an unnecessary garage visit. We provide professional tyre puncture repair for suitable punctures across our service areas, with experienced technicians assessing the damage before carrying out any repair.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
               Whether you&apos;ve picked up a nail, screw or another object in your tyre, we&apos;ll inspect the tyre and determine whether it can be safely repaired. For urgent situations, <strong>emergency puncture repair</strong> is also available, subject to your location and the condition of the tyre.
@@ -171,7 +171,7 @@ export default function PunctureRepairGreaterManchesterPage() {
                 'Professional Puncture Repair',
                 'Tyre Puncture Repair',
                 'Emergency Puncture Assistance',
-                'Greater Manchester Coverage',
+                'Local Coverage',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -237,7 +237,7 @@ export default function PunctureRepairGreaterManchesterPage() {
               Our technician will inspect the tyre to identify the cause and location of the puncture and assess its overall condition. If the damage is suitable for repair, we&apos;ll carry out the required work and check the tyre before you continue your journey.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              One Stop Tyres 247 provides <strong>mobile tyre puncture repair</strong> across Greater Manchester, helping drivers deal with punctures at home, work or a suitable roadside location.
+              One Stop Tyres 247 provides <strong>mobile tyre puncture repair</strong> across our service areas, helping drivers deal with punctures at home, work or a suitable roadside location.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -469,7 +469,7 @@ export default function PunctureRepairGreaterManchesterPage() {
           Need a Tyre Puncture Fixed?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Don&apos;t let a punctured tyre disrupt your day. Contact us for professional tyre puncture repair across Greater Manchester. We&apos;ll assess the damage and provide the safest suitable solution, whether that means repairing the puncture or recommending a replacement.
+          Don&apos;t let a punctured tyre disrupt your day. Contact us for professional tyre puncture repair across our service areas. We&apos;ll assess the damage and provide the safest suitable solution, whether that means repairing the puncture or recommending a replacement.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a

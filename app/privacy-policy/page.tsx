@@ -28,14 +28,16 @@ export default function PrivacyPolicyPage() {
     <main className="bg-white min-h-screen">
       <JsonLd data={_breadcrumbSchema} />
       {/* Hero */}
-      <div className="bg-[#0f172a] py-14 sm:py-20 px-4 sm:px-6 text-white text-center">
-        <h1
-          className="text-3xl sm:text-4xl font-bold mb-3"
-          style={{ fontFamily: 'var(--font-work-sans)' }}
-        >
-          Privacy Policy
-        </h1>
-        <p className="text-slate-400 text-base">Last updated: 21 June 2026</p>
+      <div className="bg-[#0f172a] py-14 sm:py-20 px-4 sm:px-6 text-white text-left">
+        <div className="max-w-7xl mx-auto">
+          <h1
+            className="text-3xl sm:text-4xl font-bold mb-3"
+            style={{ fontFamily: 'var(--font-work-sans)' }}
+          >
+            Privacy Policy
+          </h1>
+          <p className="text-slate-400 text-base">Last updated: 21 June 2026</p>
+        </div>
       </div>
 
       {/* Content */}
@@ -43,7 +45,7 @@ export default function PrivacyPolicyPage() {
         <Section title="1. Who We Are">
           <p>
             One Stop Mobile Tyres 24/7 (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is a mobile
-            tyre fitting and roadside assistance service operating across Greater Manchester, UK.
+            tyre fitting and roadside assistance service operating in the United Kingdom.
           </p>
           <p>
             <strong>Contact:</strong>{' '}

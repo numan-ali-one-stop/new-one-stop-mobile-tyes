@@ -140,7 +140,7 @@ export default function TpmsResetPage() {
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              TPMS warning light staying on after checking your tyre pressures or having tyre work completed? <strong>One Stop Mobile Tyres 24/7</strong> provides professional <strong>TPMS reset, diagnostics and sensor services</strong> across Greater Manchester, bringing diagnostic equipment directly to your vehicle.
+              TPMS warning light staying on after checking your tyre pressures or having tyre work completed? <strong>One Stop Mobile Tyres 24/7</strong> provides professional <strong>TPMS reset, diagnostics and sensor services</strong> across our service areas, bringing diagnostic equipment directly to your vehicle.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
               Whether your system needs a <strong>TPMS reset</strong>, sensor relearn, sensor programming or replacement of a faulty pressure sensor, our technicians can diagnose the issue and recommend the correct solution before any parts are replaced.
@@ -153,7 +153,7 @@ export default function TpmsResetPage() {
                 'TPMS Sensor Programming',
                 'Faulty Sensor Replacement Available',
                 'TPMS Warning Light Diagnosis',
-                '24/7 Greater Manchester Coverage',
+                '24/7 Local Coverage',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -308,7 +308,7 @@ export default function TpmsResetPage() {
               TPMS Warning Light Still On?
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-6">
-              A TPMS warning should not simply be cleared without understanding why it appeared. Start by checking your tyre pressures. If the warning remains, a sensor fault, failed relearn or another TPMS issue may need professional attention. <strong>One Stop Mobile Tyres 24/7</strong> provides <strong>mobile TPMS diagnostics and reset services</strong> across Greater Manchester. Send us your vehicle registration and location and we&apos;ll arrange the appropriate assistance.
+              A TPMS warning should not simply be cleared without understanding why it appeared. Start by checking your tyre pressures. If the warning remains, a sensor fault, failed relearn or another TPMS issue may need professional attention. <strong>One Stop Mobile Tyres 24/7</strong> provides <strong>mobile TPMS diagnostics and reset services</strong> across our service areas. Send us your vehicle registration and location and we&apos;ll arrange the appropriate assistance.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a

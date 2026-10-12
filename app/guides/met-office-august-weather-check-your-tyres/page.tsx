@@ -103,7 +103,7 @@ export default function MetOfficeAugustWeatherGuide() {
             className="text-3xl sm:text-4xl lg:text-5xl text-white font-black mb-3 leading-[1.1]"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
           >
-            Met Office Forecast: Mixed August Weather Means Greater Manchester Drivers Should Check Their Tyres Now
+            Met Office Forecast: Mixed August Weather Means Drivers Should Check Their Tyres Now
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             Sunshine, showers and rising temperatures all in the same month — why changeable
@@ -135,8 +135,8 @@ export default function MetOfficeAugustWeatherGuide() {
             </p>
             <p className="text-slate-600 leading-relaxed">
               If your tyres need attention before you travel, our mobile technicians can fit or
-              repair them at your home, workplace or the roadside anywhere across Greater
-              Manchester. Call{' '}
+              repair them at your home, workplace or the roadside, wherever
+              you are. Call{' '}
               <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' / '}<a href="tel:01613995851" className="text-[#b70011] font-semibold hover:underline">0161 399 5851</a>{' '}
               or{' '}
               <a href="https://wa.me/447759708646" className="text-[#b70011] font-semibold hover:underline">WhatsApp us</a>.
@@ -150,7 +150,7 @@ export default function MetOfficeAugustWeatherGuide() {
             through early August, with warmer weather also possible later in the month.
           </p>
           <p className="text-slate-600 leading-relaxed mb-6">
-            For motorists across Greater Manchester, changing weather is more than just an
+            For motorists, changing weather is more than just an
             inconvenience. Wet roads after long dry spells can become slippery, while warmer
             temperatures increase tyre pressure and accelerate tyre wear. These conditions make a
             simple tyre inspection one of the smartest things you can do before setting off.
@@ -311,10 +311,10 @@ export default function MetOfficeAugustWeatherGuide() {
             className="text-2xl sm:text-3xl font-bold text-[#0f172a] mt-10 mb-4"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            Planning a Journey From Greater Manchester?
+            Planning a Journey This Month?
           </h2>
           <p className="text-slate-600 leading-relaxed mb-4">
-            If you&apos;re travelling from Greater Manchester this month, don&apos;t leave tyre
+            If you&apos;re planning a trip this month, don&apos;t leave tyre
             safety until the last minute. A quick inspection today could help you avoid:
           </p>
           <ul className="space-y-3 mb-6">
@@ -328,12 +328,12 @@ export default function MetOfficeAugustWeatherGuide() {
           {/* CTA */}
           <div className="bg-[#0f172a] rounded-2xl p-6 sm:p-8 my-10">
             <h3 className="text-white font-bold text-lg sm:text-xl mb-2" style={{ fontFamily: 'var(--font-work-sans)' }}>
-              Need Mobile Tyre Fitting in Greater Manchester?
+              Need Mobile Tyre Fitting?
             </h3>
             <p className="text-slate-400 mb-5 leading-relaxed">
               Tyre problems don&apos;t always happen at home. Whether you&apos;re at work, parked
               outside your house or stranded at the roadside, One Stop Mobile Tyres 24/7 provides
-              professional mobile tyre fitting across Greater Manchester. Instead of arranging
+              professional mobile tyre fitting at your location. Instead of arranging
               recovery to a garage, our experienced technicians come directly to your location,
               helping you get back on the road quickly and safely.
             </p>

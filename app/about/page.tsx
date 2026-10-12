@@ -48,7 +48,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Reliable 24/7 mobile tyre fitting and roadside assistance service across Greater Manchester.
+              Reliable 24/7 mobile tyre fitting and roadside assistance service you can count on, day or night.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
@@ -99,7 +99,7 @@ export default function AboutPage() {
               <div className="absolute bottom-2 right-2 sm:-bottom-2 sm:-right-2 bg-[#b70011] text-white p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-2xl z-20">
                 <span className="block text-3xl sm:text-4xl font-black leading-none">24/7</span>
                 <span className="block uppercase text-[11px] font-semibold tracking-wide">
-                  Greater Manchester Coverage
+                  Round-the-Clock Coverage
                 </span>
               </div>
             </div>
@@ -111,13 +111,13 @@ export default function AboutPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                A Premier Mobile Tyre Service Across Greater Manchester
+                A Premier Mobile Tyre Service You Can Rely On
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-                One Stop Mobile Tyres 24/7 is a premier provider of emergency roadside services, specialised in high-urgency mobile tyre solutions. Our fleet operates round-the-clock across Greater Manchester, ensuring that no driver is ever left stranded for long.
+                One Stop Mobile Tyres 24/7 is a premier provider of emergency roadside services, specialised in high-urgency mobile tyre solutions. Our fleet operates round-the-clock across our service areas, ensuring that no driver is ever left stranded for long.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                With a focus on speed, reliability and technical excellence, we have built a reputation as the Greater Manchester authority in mobile tyre fitting. Our technicians are distributed strategically to reach you within 20–30 minutes, regardless of your location. We&apos;re based at{' '}
+                With a focus on speed, reliability and technical excellence, we have built a reputation as a trusted name in mobile tyre fitting. Our technicians are distributed strategically to reach you within 20–30 minutes, regardless of your location. We&apos;re based at{' '}
                 <a
                   href={MAPS_URL}
                   target="_blank"
@@ -162,7 +162,7 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
-                { icon: 'tire_repair', title: 'Mobile tyre fitting', desc: 'We bring the tyre shop to you, anywhere in Greater Manchester, at any time of day.' },
+                { icon: 'tire_repair', title: 'Mobile tyre fitting', desc: 'We bring the tyre shop to you, at home, at work or at the roadside, at any time of day.' },
                 { icon: 'build', title: 'Emergency puncture repair', desc: 'Swift repairs to get you moving without needing a full tyre replacement.' },
                 { icon: 'bolt', title: 'Jump start services', desc: 'Flat battery? Our technicians carry professional grade boosters for all vehicles.' },
                 { icon: 'settings_input_component', title: 'TPMS reset', desc: 'Electronic sensor calibration to ensure your safety monitoring is accurate.' },
@@ -205,7 +205,7 @@ export default function AboutPage() {
               <ul className="space-y-5 sm:space-y-6">
                 {[
                   { title: '24/7 Availability', desc: 'Day or night, rain or shine, we are always on call.' },
-                  { title: 'Fast Response Across Greater Manchester', desc: 'Average arrival time of 20-30 minutes across Greater Manchester.' },
+                  { title: 'Fast Response When You Need It', desc: 'Average arrival time of 20-30 minutes in the areas we cover.' },
                   { title: 'Transparent Pricing', desc: 'No hidden fees. Upfront quotes provided before we dispatch.' },
                   { title: 'Experienced Technicians', desc: 'Fully certified experts with years of roadside experience.' },
                 ].map((item) => (
@@ -269,7 +269,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Immediate Help?</h2>
             <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">
-              Our team is available 24/7 to assist you anywhere across Greater Manchester. Professional help is just a phone call away.
+              Our team is available 24/7 to assist you anywhere in our service areas. Professional help is just a phone call away.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a

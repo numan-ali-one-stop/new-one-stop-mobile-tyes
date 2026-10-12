@@ -156,11 +156,11 @@ export default function MobileTyreFittingPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Professional Mobile Tyre Fitting in Greater Manchester
+              Professional Mobile Tyre Fitting Near You
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              Need new tyres without visiting a garage? Our <strong>mobile tyre fitting</strong> service brings professional tyre fitting directly to your location across Greater Manchester. Our experienced mobile tyre fitters can replace tyres at your home, workplace or another suitable location, helping you save time and avoid unnecessary disruption.
+              Need new tyres without visiting a garage? Our <strong>mobile tyre fitting</strong> service brings professional tyre fitting directly to your location across our service areas. Our experienced mobile tyre fitters can replace tyres at your home, workplace or another suitable location, helping you save time and avoid unnecessary disruption.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
               From planned <strong>mobile tyre replacement</strong> to emergency mobile tyre fitting, we provide a convenient tyre fitting solution when you need it. Our technicians can also assess tyre problems and provide mobile tyre repair where a safe repair is possible.
@@ -228,16 +228,16 @@ export default function MobileTyreFittingPage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Mobile Tyre Fitters That Come to You in Greater Manchester
+              Mobile Tyre Fitters That Come to You
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
-              Our <strong>mobile car tyre fitters</strong>{' '}bring the equipment and expertise needed to fit replacement tyres at a location that works for you. Serving customers across Greater Manchester, our tyre fitting mobile service means you don&apos;t need to take time out to visit a tyre centre.
+              Our <strong>mobile car tyre fitters</strong>{' '}bring the equipment and expertise needed to fit replacement tyres at a location that works for you. Serving customers across our service areas, our tyre fitting mobile service means you don&apos;t need to take time out to visit a tyre centre.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
               We can help with different tyre requirements, from replacing worn tyres to dealing with an unexpected tyre problem. Before fitting, our technician checks the tyre requirements and ensures the replacement is suitable for your vehicle.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              Whether you need a single tyre replaced or a complete set, our <strong>mobile tyre fitters</strong> provide a straightforward and professional service across Greater Manchester.
+              Whether you need a single tyre replaced or a complete set, our <strong>mobile tyre fitters</strong> provide a straightforward and professional service across our service areas.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -255,7 +255,7 @@ export default function MobileTyreFittingPage() {
 
       {/* ── 3. WHY CHOOSE ────────────────────────────────────────────── */}
       <WhyChooseGrid
-        heading="Why Choose Our Mobile Tyre Fitting Service in Greater Manchester?"
+        heading="Why Choose Our Mobile Tyre Fitting Service?"
         intro="Choosing the right tyre fitter means getting professional service, clear communication and a solution that suits your vehicle. Our mobile tyre fitting service is designed to make tyre replacement simple and convenient, with experienced mobile tyre fitters coming to a suitable location."
         items={whyChooseMobileFitting}
       />

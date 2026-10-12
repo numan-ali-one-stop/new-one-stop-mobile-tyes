@@ -25,8 +25,8 @@ export default function Footer() {
             />
           </a>
           <p className="text-slate-400 text-base leading-relaxed text-center sm:text-left">
-            {BUSINESS_NAME} — the premier 24/7 emergency roadside assistance partner across
-            Greater Manchester. Rapid response, professional service, and transparent pricing.
+            {BUSINESS_NAME} — the premier 24/7 emergency roadside assistance partner, wherever
+            the road takes you. Rapid response, professional service, and transparent pricing.
           </p>
           <ul className="space-y-3 sm:space-y-4 text-slate-400 text-sm font-medium">
             <li className="flex items-center justify-center sm:justify-start gap-3">

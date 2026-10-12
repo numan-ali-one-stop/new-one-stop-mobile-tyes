@@ -18,7 +18,7 @@ const _breadcrumbSchema = breadcrumbSchema([
 
 const _articleSchema = articleSchema({
   slug: SLUG,
-  headline: 'Run-Flat vs Normal Tyres: What Manchester Drivers Need to Know Before Replacing Theirs',
+  headline: 'Run-Flat vs Normal Tyres: What Drivers Need to Know Before Replacing Theirs',
   description:
     'A plain-English comparison of run-flat and normal tyres — how they differ, whether you can mix them, what a replacement costs, and how to tell which type your car currently has.',
   image: `${SITE_URL}/images/mobile-tyre-fitting-service.webp`,
@@ -101,7 +101,7 @@ export default function RunFlatVsNormalGuide() {
             className="text-3xl sm:text-4xl lg:text-5xl text-white font-black mb-3 leading-[1.1]"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
           >
-            Run-Flat vs Normal Tyres: What Manchester Drivers Need to Know Before Replacing Theirs
+            Run-Flat vs Normal Tyres: What Drivers Need to Know Before Replacing Theirs
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             The real difference, whether you can mix them, and what it costs to switch —
@@ -137,7 +137,7 @@ export default function RunFlatVsNormalGuide() {
               commit? Call{' '}
               <a href="tel:07759708646" className="text-[#b70011] font-semibold hover:underline">07759 708 646</a>{' / '}<a href="tel:01613995851" className="text-[#b70011] font-semibold hover:underline">0161 399 5851</a>{' '}
               — we&apos;ll check your sidewalls, confirm the right option, and fit at your home,
-              work or roadside anywhere in Greater Manchester.
+              work or roadside wherever you need us.
             </p>
           </div>
 

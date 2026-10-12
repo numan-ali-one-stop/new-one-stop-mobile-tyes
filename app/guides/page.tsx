@@ -15,28 +15,28 @@ const _breadcrumbSchema = breadcrumbSchema([
 
 const guides = [
   {
-    title: 'Tyre Safety Tips for Greater Manchester Drivers: August Weather Guide',
+    title: 'Tyre Safety Tips for Drivers: August Weather Guide',
     desc: "Changeable August weather is on the way — how to check your tyres before travelling and avoid a breakdown on wet or dry roads.",
     href: '/guides/tyre-safety-tips-greater-manchester-august-weather-guide',
     readTime: '5 min read',
     published: '5 August 2026',
   },
   {
-    title: 'Met Office Forecast: Mixed August Weather Means Greater Manchester Drivers Should Check Their Tyres Now',
+    title: 'Met Office Forecast: Mixed August Weather Means Drivers Should Check Their Tyres Now',
     desc: 'Sunshine, showers and rising temperatures all in the same month — why changeable weather makes this the right time for a tyre check.',
     href: '/guides/met-office-august-weather-check-your-tyres',
     readTime: '6 min read',
     published: '4 August 2026',
   },
   {
-    title: 'Run-Flat vs Normal Tyres: What Manchester Drivers Need to Know Before Replacing Theirs',
+    title: 'Run-Flat vs Normal Tyres: What Drivers Need to Know Before Replacing Theirs',
     desc: 'The real difference between run-flat and normal tyres, whether you can mix them, and what it costs to switch — explained without the jargon.',
     href: '/guides/run-flat-vs-normal-tyres-manchester',
     readTime: '7 min read',
     published: '23 July 2026',
   },
   {
-    title: 'What to Do If You Get a Flat Tyre on the M60 (or Any Manchester Motorway)',
+    title: 'What to Do If You Get a Flat Tyre on the M60 (or Any Motorway)',
     desc: 'A step-by-step safety guide for motorway punctures and blowouts — where to stop, who to call, and how to get moving again without a tow truck.',
     href: '/guides/what-to-do-flat-tyre-m60-manchester-motorway',
     readTime: '9 min read',
@@ -56,7 +56,8 @@ export default function GuidesIndexPage() {
     <div className="text-[#1c1b1b]" style={{ fontFamily: 'var(--font-inter)' }}>
       <JsonLd data={_breadcrumbSchema} />
 
-      <section className="bg-[#0f172a] py-14 sm:py-20 px-5 sm:px-8 text-center">
+      <section className="bg-[#0f172a] py-14 sm:py-20 px-5 sm:px-8 text-left">
+        <div className="max-w-7xl mx-auto">
         <span className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 font-bold px-3.5 py-1.5 rounded-full mb-4 text-[11px] uppercase tracking-widest border border-red-600/30">
           Tyre Guides &amp; Advice
         </span>
@@ -66,10 +67,11 @@ export default function GuidesIndexPage() {
         >
           Tyre Guides &amp; Advice
         </h1>
-        <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
           Straightforward, expert advice to help you make the right call about your tyres —
           written by the technicians who fit them.
         </p>
+        </div>
       </section>
 
       <section className="py-12 sm:py-16 px-5 sm:px-8 bg-white">

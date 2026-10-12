@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "Can you provide a jump start at the roadside?",
-    a: 'Yes. We provide roadside **battery jump start** assistance across Greater Manchester.',
+    a: 'Yes. We provide roadside **battery jump start** assistance across our service areas.',
   },
   {
     q: 'Will a jump start fix my flat battery?',
@@ -77,8 +77,8 @@ const faqs = [
     a: 'Yes. If you believe the problem is related to a flat or discharged battery, our jump start car service can assess the situation and provide suitable assistance.',
   },
   {
-    q: 'Do you provide jump start services across Greater Manchester?',
-    a: 'Yes. We provide battery assistance across Greater Manchester, including Manchester and surrounding areas.',
+    q: 'Is the jump start service available in my area?',
+    a: 'Our battery assistance covers a growing number of towns and cities. Call us with your location and we will confirm availability straight away.',
   },
   {
     q: 'Can I drive immediately after a jump start?',
@@ -114,8 +114,8 @@ const whyChooseCarBatteryJumpStart = [
   },
   {
     icon: 'location_on',
-    title: 'Greater Manchester Coverage',
-    desc: 'Service available across Manchester and surrounding areas.',
+    title: 'Local Coverage',
+    desc: 'Available across all of our service areas.',
   },
 ]
 
@@ -179,11 +179,11 @@ export default function JumpStartPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Car Battery Jump Start Service in Greater Manchester
+              24/7 Car Battery Jump Start Service Near You
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              Got a <strong>flat battery</strong> and unable to start your car? Our professional <strong>jump start service</strong> provides convenient roadside assistance across Greater Manchester, helping you get your vehicle started and back on the road.
+              Got a <strong>flat battery</strong> and unable to start your car? Our professional <strong>jump start service</strong> provides convenient roadside assistance across our service areas, helping you get your vehicle started and back on the road.
             </p>
 
             <ul className="space-y-2 mb-8">
@@ -191,7 +191,7 @@ export default function JumpStartPage() {
                 'Professional Car Battery Jump Start',
                 '24/7 Battery Assistance',
                 'Flat Battery Support',
-                'Greater Manchester Coverage',
+                'Local Coverage',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -248,13 +248,13 @@ export default function JumpStartPage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Professional Car Battery Jump Start Service Across Greater Manchester
+              Professional Car Battery Jump Start Service Near You
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
               A flat or discharged car battery can leave you stranded at home, at work or on the roadside. Our car battery jump starter service provides practical assistance when your vehicle won&apos;t start because of a battery problem.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              One Stop Tyres 247 provides professional battery jump start assistance across Greater Manchester. Our technician assesses the battery and vehicle before carrying out a suitable jump start.
+              One Stop Tyres 247 provides professional battery jump start assistance across our service areas. Our technician assesses the battery and vehicle before carrying out a suitable jump start.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
@@ -292,7 +292,7 @@ export default function JumpStartPage() {
       {/* ── 3. WHY CHOOSE ────────────────────────────────────────────── */}
       <WhyChooseGrid
         heading="Why Choose Our Car Battery Jump Start Service?"
-        intro="Choosing the right car battery jump start service means getting fast, professional support when your vehicle won't start. Our team is available across Greater Manchester to help with unexpected battery problems."
+        intro="Choosing the right car battery jump start service means getting fast, professional support when your vehicle won't start. Our team is available across our service areas to help with unexpected battery problems."
         items={whyChooseCarBatteryJumpStart}
       />
 
@@ -365,7 +365,7 @@ export default function JumpStartPage() {
             A flat battery can happen unexpectedly, whether you&apos;ve left your lights on, the vehicle has been unused for some time, or the battery has lost its charge.
           </p>
           <p className="text-slate-600 text-base leading-relaxed mb-8">
-            Whether you&apos;re at home, at work or stuck on the roadside, our technician can attend with professional jump start equipment to get you moving again — day or night, across Greater Manchester.
+            Whether you&apos;re at home, at work or stuck on the roadside, our technician can attend with professional jump start equipment to get you moving again — day or night, across our service areas.
           </p>
 
           <div className="flex items-start gap-4 text-left bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm mb-8">
@@ -518,7 +518,7 @@ export default function JumpStartPage() {
           Need a Car Battery Jump Start?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          Don&apos;t stay stranded with a flat battery. Get professional <strong>jump start service</strong> across Greater Manchester and receive practical assistance when your car won&apos;t start.
+          Don&apos;t stay stranded with a flat battery. Get professional <strong>jump start service</strong> across our service areas and receive practical assistance when your car won&apos;t start.
         </p>
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a

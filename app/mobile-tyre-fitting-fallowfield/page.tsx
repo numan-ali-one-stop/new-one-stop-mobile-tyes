@@ -635,10 +635,9 @@ export default function FallowfieldPage() {
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Fallowfield?</h2>
             <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a new tyre fitted, a damaged tyre replaced or a puncture assessed, our mobile service brings professional tyre assistance directly to you. With One Stop Tyres 247, you can arrange tyre fitting or replacement at home, work or a suitable roadside location across Fallowfield.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
-              {/* TODO: confirm destination — no quote/booking route has been established sitewide yet (same open question as the Home Tyre Fitting, Puncture Repair, Roadside Assistance, Manchester, Cheetham Hill, Chorlton Cum Hardy and Didsbury pages' equivalent CTA) */}
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="#TODO-book-mobile-tyre-fitting-destination"
+                href="/contact"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">calendar_month</span>
                 Book Mobile Tyre Fitting

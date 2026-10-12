@@ -39,10 +39,10 @@ export default function ServiceAreasMap() {
           className="text-white text-2xl sm:text-3xl font-black mb-2 leading-tight text-balance"
           style={{ fontFamily: 'var(--font-work-sans)' }}
         >
-          Mobile Tyre Fitting Manchester &amp; Greater Manchester — Full Coverage
+          Mobile Tyre Fitting — Our Coverage Areas
         </h2>
         <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-          Every Greater Manchester borough, town and motorway we cover, 24/7. Broken down on a
+          Every town and motorway we currently cover, 24/7. Broken down on a
           motorway hard shoulder or stuck on your driveway at home — our nearest available
           technician is dispatched straight to your GPS location.
         </p>

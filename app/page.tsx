@@ -308,7 +308,7 @@ export default function Home() {
               className="text-2xl sm:text-[32px] font-bold text-[#0f172a] mb-4"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              What Our Customers Say Our Tyre Repair Service in Greater Manchester
+              What Our Customers Say About Our Tyre Repair Service
             </h2>
             {/* Rating badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white border border-slate-200 shadow-sm rounded-full px-5 py-2.5">
@@ -362,7 +362,7 @@ export default function Home() {
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-left sm:text-center">
               When a damaged or flat tyre leaves you stranded, getting help quickly matters. One Stop
-              Mobile Tyres 24/7 provides professional mobile tyre services across Greater Manchester,
+              Mobile Tyres 24/7 provides professional mobile tyre services across our service areas,
               bringing tyre fitting, tyre repair and replacement directly to your location.
             </p>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-left sm:text-center">
@@ -383,7 +383,7 @@ export default function Home() {
               {
                 emoji: '⚡',
                 title: 'Experience',
-                desc: 'Over 1,100 completed callouts and a 5.0 Google rating from Greater Manchester drivers.',
+                desc: 'Over 1,100 completed callouts and a 5.0 Google rating from local drivers.',
               },
               {
                 emoji: '🛡️',
@@ -418,7 +418,7 @@ export default function Home() {
               className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
             >
-              Our Tyre Services Across Greater Manchester
+              Our Tyre Services Near You
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-base">
               From emergency tyre problems to planned tyre fitting, our mobile team provides practical
@@ -582,16 +582,16 @@ export default function Home() {
               className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Professional Tyre Services &amp; Replacement Across Greater Manchester
+              Professional Tyre Services &amp; Replacement Near You
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               When you&apos;re stuck with a flat, punctured or damaged tyre, you need a fast response and a
-              professional you can trust. Our 24/7 tyre service provides emergency assistance across
-              Greater Manchester, helping drivers get back on the road safely.
+              professional you can trust. Our 24/7 tyre service provides emergency assistance
+              wherever you are, helping drivers get back on the road safely.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan,
-              as well as major routes including the M6, M60, M602, M61, M56, M62, M66, A627(M), M67, A57(M) and Wilmslow Road.
+              We cover a growing number of towns and cities,
+              as well as major motorways and A-roads — and we are adding new areas all the time.
             </p>
             <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
               Our qualified technicians assess damaged tyres to determine whether a safe tyre repair is
@@ -608,7 +608,7 @@ export default function Home() {
               <FeatureItem
                 icon="engineering"
                 title="Emergency Tyre Replacement"
-                desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
+                desc="Fast replacement of damaged or unsafe tyres, wherever you are."
               />
               <FeatureItem
                 icon="sell"
@@ -696,7 +696,7 @@ export default function Home() {
                 <div>
                   <p className="font-bold text-[#0f172a] text-base">Service Area</p>
                   <p className="text-sm text-slate-500">
-                    Coverage across Greater Manchester and surrounding areas.
+                    Coverage in a growing number of towns and cities.
                   </p>
                 </div>
               </div>
@@ -741,7 +741,7 @@ export default function Home() {
           <div className="space-y-3 sm:space-y-4">
             <FaqItem
               q="Do you provide a 24/7 tyre service?"
-              a="Yes. We provide a 24/7 tyre service across Greater Manchester for drivers who need assistance with flat, punctured or damaged tyres, including emergency support day and night."
+              a="Yes. We provide a 24/7 tyre service across our service areas for drivers who need assistance with flat, punctured or damaged tyres, including emergency support day and night."
             />
             <FaqItem
               q="Do you offer emergency tyres 24/7?"
@@ -753,7 +753,7 @@ export default function Home() {
             />
             <FaqItem
               q="What areas do you cover?"
-              a="We cover Manchester, Bolton, Bury, Oldham, Rochdale, Stockport, Tameside, Trafford and Wigan, providing tyre services throughout Greater Manchester."
+              a="We cover a growing number of towns and cities, and we are expanding into new areas all the time. Call us with your location and we will confirm availability straight away."
             />
             <FaqItem
               q="Do you provide tyre services on motorways?"
@@ -801,7 +801,7 @@ export default function Home() {
             />
             <FaqItem
               q="What is One Stop Tyres 247?"
-              a="One Stop Tyres 247 provides professional tyre services across Greater Manchester, helping drivers with tyre repair, tyre fitting, replacement and 24/7 emergency tyre assistance."
+              a="One Stop Tyres 247 provides professional tyre services across our service areas, helping drivers with tyre repair, tyre fitting, replacement and 24/7 emergency tyre assistance."
             />
             <FaqItem
               q="Why choose One Stop Tyres 247?"
