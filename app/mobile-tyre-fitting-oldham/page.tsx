@@ -6,6 +6,7 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import LocalAreaInfo from '@/components/LocalAreaInfo'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -14,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Oldham',
   areaServed: 'Oldham',
   description:
-    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    '24/7 mobile tyre fitting in Oldham. Emergency tyre replacement and puncture repair at your home, work or roadside across OL1–OL9. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-oldham')
@@ -26,9 +27,9 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Oldham | 24/7 Tyre Replacement',
+  title: 'Mobile Tyre Fitting Oldham | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    '24/7 mobile tyre fitting in Oldham. Emergency tyre replacement and puncture repair at your home, work or roadside across OL1–OL9. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-oldham',
 })
 
@@ -62,6 +63,7 @@ export default function OldhamPage() {
             alt="Mobile tyre fitting technician at work in Greater Manchester"
             fill
             priority
+            quality={60}
             sizes="100vw"
             className="object-cover object-center"
           />
@@ -87,9 +89,9 @@ export default function OldhamPage() {
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
+                'Mobile Puncture Repair',
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
-                'Mobile Puncture Repair',
                 'Home, Work & Roadside Service',
                 'Oldham & Surrounding Areas',
               ].map((item) => (
@@ -123,20 +125,12 @@ export default function OldhamPage() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -309,18 +303,11 @@ export default function OldhamPage() {
                 </p>
               </div>
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                0161 399 5851
               </a>
             </div>
           </div>
@@ -347,7 +334,7 @@ export default function OldhamPage() {
                   ))}
                 </div>
                 <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
-                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">1,200+ Customer Reviews</div>
+                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
             <div className="w-full lg:w-1/2">
@@ -550,7 +537,7 @@ export default function OldhamPage() {
               A flat tyre or blowout can leave you stranded at any time. Our <strong>emergency mobile tyre fitting in Oldham</strong> service is available 24/7 to help you get back on the road.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We attend suitable locations across Oldham, including residential areas, workplaces, car parks and safe roadside locations. The service covers OL1–OL9 and surrounding areas, with the existing site advertising an average 20–30 minute response across Oldham, subject to location and conditions.
+              We attend suitable locations across Oldham, including residential areas, workplaces, car parks and safe roadside locations. The service covers OL1–OL9 and surrounding areas. Our average response time across Oldham is around 20–30 minutes, subject to location and conditions.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               Depending on the condition of your tyre, our technicians can carry out a suitable puncture repair or provide an emergency tyre replacement.
@@ -569,6 +556,9 @@ export default function OldhamPage() {
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
+
+        {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
+        <LocalAreaInfo currentSlug="oldham" />
 
         {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
@@ -601,7 +591,7 @@ export default function OldhamPage() {
             },
             {
               q: 'How quickly can you reach me in Oldham?',
-              a: 'The existing Oldham service page advertises an average response of around 20–30 minutes across OL1–OL9. Actual arrival time depends on your exact location, traffic and technician availability.',
+              a: 'Our average response time across Oldham (OL1–OL9) is around 20–30 minutes. Actual arrival time depends on your exact location, traffic and technician availability.',
             },
             {
               q: 'Do you provide 24-hour mobile tyre fitting in Oldham?',
@@ -646,17 +636,10 @@ export default function OldhamPage() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="tel:+447759708646"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
