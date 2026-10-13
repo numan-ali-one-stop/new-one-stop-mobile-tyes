@@ -123,11 +123,14 @@ export function pageServiceSchema({ slug, alternateName, areaServed, description
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${url}#service`,
-    additionalType: url,
+    name: alternateName,
+    serviceType: 'Mobile Tyre Fitting',
     alternateName,
-    areaServed,
+    areaServed: { '@type': 'Place', name: areaServed },
     category: 'Tyre Fitting',
     description,
+    provider: BUSINESS_PROVIDER,
+    url,
   }
 }
 
@@ -153,7 +156,7 @@ export const AREA_SERVED = [
   { '@type': 'City', name: 'Wigan' },
 ] as const
 
-/** Full LocalBusiness entity — injected once, site-wide, via the root layout. */
+/** Full LocalBusiness entity (a service-area business based in Oldham) — injected once, site-wide, via the root layout. */
 export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',
@@ -166,7 +169,7 @@ export function localBusinessSchema() {
     image: `${SITE_URL}/og-image.webp`,
     logo: `${SITE_URL}/icon.webp`,
     description:
-      '24/7 emergency mobile tyre fitting across Greater Manchester. Professional technicians reach you at home, work, or roadside within 20–30 minutes.',
+      '24/7 emergency mobile tyre fitting across Greater Manchester. Professional technicians come to you at home, work or the roadside, typically within 20–30 minutes.',
     address: BUSINESS_PROVIDER.address,
     geo: {
       '@type': 'GeoCoordinates',
@@ -175,13 +178,6 @@ export function localBusinessSchema() {
     },
     areaServed: AREA_SERVED,
     openingHoursSpecification: OPENING_HOURS_SPEC,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      reviewCount: '1200',
-    },
     hasMap: 'https://maps.app.goo.gl/tqGMogzsNNn8EXjH8',
   }
 }
@@ -199,28 +195,23 @@ export function pageOrganizationSchema(slug: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
     name: BUSINESS_NAME,
-    url: `${SITE_URL}/${slug}`,
+    url: SITE_URL,
     logo: BUSINESS_LOGO_URL,
+    telephone: BUSINESS_PHONE,
+    mainEntityOfPage: `${SITE_URL}/${slug}`,
   }
 }
 
-/** WebSite entity for a specific landing page, with a schema-valid SearchAction target. */
-export function pageWebsiteSchema(slug: string) {
-  const url = `${SITE_URL}/${slug}`
+/** WebSite entity. The site has no search page, so no SearchAction is declared. */
+export function pageWebsiteSchema(_slug?: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
     name: BUSINESS_NAME,
-    url,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
+    url: SITE_URL,
   }
 }
 
@@ -231,21 +222,24 @@ export interface AutomotiveBusinessSchemaOptions {
   addressLocality: string
 }
 
-/** AutomotiveBusiness entity for a specific city/service landing page. */
+/**
+ * The business as seen from a city/service landing page. It is the same entity as the site-wide
+ * LocalBusiness (same @id and real Oldham address) — the page's area goes in `areaServed`, never in
+ * the address, because this is a service-area business with no premises in each town.
+ */
 export function automotiveBusinessSchema({ slug, image, addressLocality }: AutomotiveBusinessSchemaOptions) {
-  const url = `${SITE_URL}/${slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'AutomotiveBusiness',
+    '@id': BUSINESS_ID,
     name: BUSINESS_NAME,
     image: image ?? BUSINESS_LOGO_URL,
-    url,
+    url: SITE_URL,
+    mainEntityOfPage: `${SITE_URL}/${slug}`,
     telephone: BUSINESS_PHONE,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality,
-      addressCountry: 'GB',
-    },
+    address: BUSINESS_PROVIDER.address,
+    areaServed: { '@type': 'Place', name: addressLocality },
+    openingHoursSpecification: OPENING_HOURS_SPEC,
   }
 }
 

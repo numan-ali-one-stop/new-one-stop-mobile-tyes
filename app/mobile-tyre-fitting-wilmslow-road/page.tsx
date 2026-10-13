@@ -4,6 +4,7 @@ import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import LocalAreaInfo from '@/components/LocalAreaInfo'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -24,7 +25,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Wilmslow Road | 24/7 Tyre Replacement',
+  title: 'Mobile Tyre Fitting Wilmslow Road | 24/7 Emergency & Puncture Repair',
   description:
     'Need mobile tyre fitting on Wilmslow Road? Get 24/7 tyre replacement, puncture repair and roadside assistance across Rusholme, Fallowfield and Didsbury.',
   path: '/mobile-tyre-fitting-wilmslow-road',
@@ -60,6 +61,7 @@ export default function WilmslowRoadPage() {
             alt="Mobile tyre fitting technician at work in Greater Manchester"
             fill
             priority
+            quality={60}
             sizes="100vw"
             className="object-cover object-center"
           />
@@ -85,9 +87,9 @@ export default function WilmslowRoadPage() {
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
                 'Emergency Tyre Replacement & Puncture Repair',
+                'Typically 20–30 Minute Response',
+                'Mobile Tyre Fitting At Home, Work Or Roadside',
                 'Covering Wilmslow Road & Surrounding Areas 24/7',
                 'Card, Cash & Contactless Payments Accepted',
                 'Fully Insured Professional Tyre Technicians',
@@ -122,20 +124,12 @@ export default function WilmslowRoadPage() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -308,18 +302,11 @@ export default function WilmslowRoadPage() {
                 </p>
               </div>
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                0161 399 5851
               </a>
             </div>
           </div>
@@ -346,7 +333,7 @@ export default function WilmslowRoadPage() {
                   ))}
                 </div>
                 <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
-                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">1,200+ Customer Reviews</div>
+                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
             <div className="w-full lg:w-1/2">
@@ -482,6 +469,9 @@ export default function WilmslowRoadPage() {
           </div>
         </section>
 
+        {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
+        <LocalAreaInfo currentSlug="wilmslow-road" />
+
         {/* ── 9. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-wilmslow-road"
@@ -501,7 +491,7 @@ export default function WilmslowRoadPage() {
             { q: 'Can you remove locking wheel nuts?', a: 'Yes. Specialist equipment can be used to remove locking wheel nuts when required for tyre replacement or repair.' },
             { q: 'Do you cover Didsbury from Wilmslow Road?', a: "Yes. Didsbury is part of our Wilmslow Road service coverage, subject to the technician's location and current demand." },
             { q: 'Is roadside tyre fitting available 24/7?', a: 'Yes. Emergency roadside tyre assistance is available 24 hours a day, 7 days a week.' },
-            { q: 'How do I book a mobile tyre fitting?', a: 'Call 07759 708 646 or 0161 399 5851 for an instant quote and to provide your location.' },
+            { q: 'How do I book a mobile tyre fitting?', a: 'Call 07759 708 646 for an instant quote and to provide your location.' },
           ]}
         />
 
@@ -513,17 +503,10 @@ export default function WilmslowRoadPage() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="tel:+447759708646"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

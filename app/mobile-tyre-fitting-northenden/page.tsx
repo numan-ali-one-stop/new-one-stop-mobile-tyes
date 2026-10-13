@@ -6,6 +6,7 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import LocalAreaInfo from '@/components/LocalAreaInfo'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -26,7 +27,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Northenden | 24/7 Tyre Replacement',
+  title: 'Mobile Tyre Fitting Northenden | 24/7 Emergency & Puncture Repair',
   description:
     'Need mobile tyre fitting in Northenden? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-northenden',
@@ -62,6 +63,7 @@ export default function NorthendenPage() {
             alt="Mobile tyre fitting technician at work in Greater Manchester"
             fill
             priority
+            quality={60}
             sizes="100vw"
             className="object-cover object-center"
           />
@@ -81,15 +83,15 @@ export default function NorthendenPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Northenden at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Picked up a puncture on the M60 or M56, or found a flat on your drive in Northenden? Our technicians come to you 24/7 and fit or repair the tyre on the spot.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
+                'Mobile Puncture Repair',
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
-                'Mobile Puncture Repair',
                 'Home, Work & Roadside Service',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
@@ -122,20 +124,12 @@ export default function NorthendenPage() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -209,7 +203,7 @@ export default function NorthendenPage() {
                 24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Northenden
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Northenden. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                Northenden sits right beside M60 Junction 5 and M56 Junction 1, so we help as many motorway drivers here as local residents. We fit, replace and repair tyres day and night.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -308,18 +302,11 @@ export default function NorthendenPage() {
                 </p>
               </div>
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                0161 399 5851
               </a>
             </div>
           </div>
@@ -346,7 +333,7 @@ export default function NorthendenPage() {
                   ))}
                 </div>
                 <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
-                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">1,200+ Customer Reviews</div>
+                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
             <div className="w-full lg:w-1/2">
@@ -360,8 +347,8 @@ export default function NorthendenPage() {
                 Professional Mobile Tyre Fitting in Northenden
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Northenden, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, our mobile service provides a convenient solution.
-                We provide professional tyre fitting and replacement across Northenden and surrounding areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
+                If you get tyre trouble on the M60 or M56, leaving at the Northenden junctions and stopping somewhere safe is often the quickest way to get help. We meet drivers in car parks and side streets here every week.
+                Closer to home, we fit tyres on driveways across Northenden village, the streets off Palatine Road and the homes near Wythenshawe Park. Budget, mid-range and premium tyres are all available.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -425,7 +412,7 @@ export default function NorthendenPage() {
             {
               icon: 'pin_drop',
               title: 'Service Across Northenden',
-              desc: 'We cover Northenden and surrounding areas, providing convenient tyre assistance for local drivers.',
+              desc: 'We cover all of Northenden, from Palatine Road and the River Mersey to Sharston and the edge of Wythenshawe Park.',
             },
           ]}
         />
@@ -519,13 +506,13 @@ export default function NorthendenPage() {
               Mobile Tyre Replacement Across Northenden
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              A damaged, worn or unsafe tyre may need to be replaced rather than repaired. Our <strong>mobile tyre replacement Northenden</strong> service allows you to have a replacement tyre fitted without visiting a garage.
+              Motorway debris often causes damage that cannot be repaired, such as sidewall cuts. Our <strong>mobile tyre replacement Northenden</strong> service brings a new tyre to you and fits it there and then.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We can provide tyre replacement in Northenden at home, work or a suitable roadside location. If you are dealing with a puncture, blowout or damaged tyre, we assess the condition first and recommend the appropriate solution.
+              Give us your registration or tyre size and we will bring the right tyre to your home, workplace or a safe stopping point in Northenden.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Our service makes tyre replacement straightforward and convenient for drivers across Northenden.
+              That means no tow, no garage queue and no driving on a damaged tyre.
             </p>
           </div>
         </section>
@@ -543,13 +530,13 @@ export default function NorthendenPage() {
               Emergency Mobile Tyre Fitting and Replacement in Northenden
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              Tyre problems can happen at any time. If you experience a puncture, blowout or damaged tyre, our <strong>emergency tyre fitting Northenden</strong> service provides assistance 24/7.
+              A blowout at motorway speed is frightening. Our <strong>emergency tyre fitting Northenden</strong> service runs 24 hours a day for drivers on the M60, M56 and Princess Parkway.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We can attend suitable locations around Northenden, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
+              Never try to change a tyre on the hard shoulder. If you can, leave at the next junction and stop somewhere safe, then call us and we will come to you.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including Wythenshawe, Baguley, West Didsbury, Sale and surrounding parts of south Manchester.
+              We also cover nearby Wythenshawe, Baguley, Didsbury, Gatley and Sale.
             </p>
           </div>
         </section>
@@ -563,6 +550,9 @@ export default function NorthendenPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
+        {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
+        <LocalAreaInfo currentSlug="northenden" />
+
         {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-northenden"
@@ -570,31 +560,31 @@ export default function NorthendenPage() {
           faqs={[
             {
               q: 'Do you provide mobile tyre fitting in Northenden?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Northenden at homes, workplaces and suitable roadside locations.',
+              a: 'Yes. We fit tyres across Northenden at homes, workplaces and safe stopping points near the M60 and M56, 24 hours a day.',
             },
             {
               q: 'Can you replace a tyre at my home in Northenden?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              a: 'Yes. Many homes in Northenden have driveways, which are ideal for fitting tyres without you having to go anywhere.',
             },
             {
               q: 'Do you offer emergency tyre fitting in Northenden?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              a: 'Yes. Our emergency service runs 24/7 for Northenden residents and for anyone who has left the M60 or M56 nearby with tyre damage.',
             },
             {
               q: 'Can you repair a punctured tyre in Northenden?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              a: 'Yes. If the puncture is in the central tread and the tyre has not been driven on flat, we can usually repair it on the spot.',
             },
             {
               q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Northenden.',
+              a: 'Yes. We fit tyres in office and business park car parks around Northenden and Sharston, with permission from the site.',
             },
             {
               q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              a: 'Yes, but never on the motorway hard shoulder. Leave at the next junction if you can and we will meet you somewhere safe.',
             },
             {
               q: 'How quickly can you reach me in Northenden?',
-              a: 'Response time depends on your exact location, traffic and technician availability. We aim to provide a fast response across Northenden.',
+              a: 'Northenden is right next to the motorway network, so we can usually get to you quickly. Arrival times depend on motorway and Princess Parkway traffic, and we will give you an estimate when you call.',
             },
             {
               q: 'Do you provide 24/7 mobile tyre fitting?',
@@ -606,15 +596,15 @@ export default function NorthendenPage() {
             },
             {
               q: 'Do you provide mobile tyre fitting near me in Northenden?',
-              a: 'Yes. If you are located in or around Northenden, you can contact us for mobile tyre fitting at your location.',
+              a: 'Yes. Whether you are on Palatine Road, near Wythenshawe Park or just off the M60, call us with your location and we will come to you.',
             },
             {
               q: 'Can you help with a flat tyre in Northenden?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
+              a: 'Yes. Whether the flat happened on your drive or after leaving the motorway, we will come to you and repair or replace the tyre.',
             },
             {
               q: 'Can you fit tyres at night in Northenden?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
+              a: 'Yes. We regularly help drivers late at night on the M60 and M56, as well as Northenden residents with early starts.',
             },
             {
               q: 'Do you provide mobile puncture repair in Northenden?',
@@ -626,7 +616,7 @@ export default function NorthendenPage() {
             },
             {
               q: 'What areas near Northenden do you cover?',
-              a: 'We cover Northenden and surrounding areas including Wythenshawe, Baguley, West Didsbury and Sale. Contact us with your exact location to confirm service availability.',
+              a: 'We cover all of Northenden (M22) plus Wythenshawe, Baguley, Didsbury, Gatley and Sale. Call us with your exact location to confirm.',
             },
           ]}
         />
@@ -635,21 +625,14 @@ export default function NorthendenPage() {
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Northenden?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance at the roadside, One Stop Tyres 247 can come to you. Contact us today for 24/7 mobile tyre fitting in Northenden, tyre replacement and puncture repair. Call now for a quote and availability.</p>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Tyre trouble in Northenden or on the nearby motorways? Call One Stop Tyres 247 and we will meet you somewhere safe with the right tyre for your car.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="tel:+447759708646"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

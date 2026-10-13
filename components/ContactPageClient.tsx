@@ -38,7 +38,7 @@ export default function ContactPageClient() {
     },
     {
       q: 'What is the best way to contact you?',
-      a: 'For emergencies, always call us directly on 07759 708 646 or 0161 399 5851 for immediate dispatch. For general quotes or bookings, you can use our contact form or email us at info@onestoptyres247.co.uk.',
+      a: 'For emergencies, always call us directly on 07759 708 646 for immediate dispatch. For general quotes or bookings, you can use our contact form or email us at info@onestoptyres247.co.uk.',
     },
   ]
 
@@ -118,13 +118,6 @@ export default function ContactPageClient() {
                         >
                           07759 708 646
                         </p>
-                        <span className="text-[#5c403c]">/</span>
-                        <p
-                          className="text-[#b70011] text-lg sm:text-xl lg:text-2xl font-semibold break-all"
-                          style={{ fontFamily: 'Work Sans, sans-serif' }}
-                        >
-                          0161 399 5851
-                        </p>
                       </div>
                       <p className="text-xs sm:text-sm text-[#5c403c]">Available 24/7 for urgent calls</p>
                     </div>
@@ -172,7 +165,7 @@ export default function ContactPageClient() {
                       >
                         Growing UK Coverage
                       </p>
-                      <p className="text-xs sm:text-sm text-[#5c403c]">Strategic locations for 20-30m response</p>
+                      <p className="text-xs sm:text-sm text-[#5c403c]">Typically 20-30 min response</p>
                     </div>
                   </div>
                   {/* Address */}
@@ -358,7 +351,7 @@ export default function ContactPageClient() {
             </div>
             <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="flex items-center gap-2 sm:gap-3 bg-[#dc2626] text-white px-6 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl hover:bg-[#93000b] transition-colors whitespace-nowrap text-base sm:text-xl font-bold shrink-0"
                 style={{
                   fontFamily: 'Work Sans, sans-serif',
@@ -372,22 +365,6 @@ export default function ContactPageClient() {
                   phone_in_talk
                 </span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="flex items-center gap-2 sm:gap-3 bg-[#dc2626] text-white px-6 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl hover:bg-[#93000b] transition-colors whitespace-nowrap text-base sm:text-xl font-bold shrink-0"
-                style={{
-                  fontFamily: 'Work Sans, sans-serif',
-                  letterSpacing: '0.02em',
-                }}
-              >
-                <span aria-hidden="true" data-nosnippet
-                  className="material-symbols-outlined text-xl sm:text-2xl"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  phone_in_talk
-                </span>
-                0161 399 5851
               </a>
             </div>
           </div>
@@ -410,7 +387,7 @@ export default function ContactPageClient() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               { icon: 'emergency_home', title: '24/7 Support', desc: 'Around the clock emergency support, 365 days a year.' },
-              { icon: 'speed', title: 'Fast Response', desc: 'Rapid local response with 20-30 min arrival times.' },
+              { icon: 'speed', title: 'Fast Response', desc: 'Rapid local response, typically arriving within 20-30 minutes.' },
               { icon: 'engineering', title: 'Professional', desc: 'Expert technicians equipped with modern diagnostic tools.' },
               { icon: 'verified', title: 'Reliable', desc: 'Consistent, high-quality service you can trust every time.' },
             ].map((item) => (

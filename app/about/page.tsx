@@ -53,20 +53,12 @@ export default function AboutPage() {
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -117,7 +109,7 @@ export default function AboutPage() {
                 One Stop Mobile Tyres 24/7 is a premier provider of emergency roadside services, specialised in high-urgency mobile tyre solutions. Our fleet operates round-the-clock across our service areas, ensuring that no driver is ever left stranded for long.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                With a focus on speed, reliability and technical excellence, we have built a reputation as a trusted name in mobile tyre fitting. Our technicians are distributed strategically to reach you within 20–30 minutes, regardless of your location. We&apos;re based at{' '}
+                With a focus on speed, reliability and technical excellence, we have built a reputation as a trusted name in mobile tyre fitting. Our technicians are positioned so that, in most of the areas we cover, we can typically reach you within 20–30 minutes. We&apos;re based at{' '}
                 <a
                   href={MAPS_URL}
                   target="_blank"
@@ -274,17 +266,10 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="tel:+447759708646"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
               </a>
             </div>
           </div>

@@ -54,7 +54,7 @@ export default function BrandCarousel() {
   return (
     <section className="py-12 sm:py-16 bg-white border-y border-slate-100 overflow-hidden">
       <p className="text-center text-slate-400 font-bold uppercase tracking-widest text-xs mb-8 sm:mb-10 px-4">
-        Authorised Dealer of All Premium Tyre Brands
+        We Supply &amp; Fit All Major Tyre Brands
       </p>
 
       {/* Marquee track */}

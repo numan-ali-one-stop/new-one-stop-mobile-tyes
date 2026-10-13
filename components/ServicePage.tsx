@@ -1,5 +1,5 @@
 import BrandCarousel from '@/components/BrandCarousel'
-import { PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
+import { PHONE, PHONE_TEL } from '@/lib/constants'
 
 /* ── Shared WhatsApp SVG ─────────────────────────────────── */
 function WhatsAppIcon() {
@@ -148,19 +148,6 @@ export default function ServicePage({
                 {PHONE}
               </a>
               <a
-                href={`tel:${PHONE_2_TEL}`}
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet
-                  className="material-symbols-outlined text-xl"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  call
-                </span>
-                {PHONE_2}
-              </a>
-              <a
                 href="https://wa.me/447759708646"
                 className="bg-white/10 border border-white/20 text-white font-black px-8 py-4 rounded-xl flex items-center justify-center gap-2.5 hover:bg-white/20 transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
@@ -214,7 +201,7 @@ export default function ServicePage({
               {
                 img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
                 title: 'Mobile Tyre Fitting',
-                desc: 'Emergency replacement at your location within 20-30 minutes.',
+                desc: 'Emergency replacement at your location, typically within 20-30 minutes.',
                 badge: 'FAST RESPONSE',
               },
               {
@@ -305,13 +292,6 @@ export default function ServicePage({
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 {PHONE}
-              </a>
-              <a
-                href={`tel:${PHONE_2_TEL}`}
-                className="bg-[#FF4444] text-[#121212] font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                {PHONE_2}
               </a>
             </div>
           </div>
@@ -451,19 +431,6 @@ export default function ServicePage({
                 call
               </span>
               {PHONE}
-            </a>
-            <a
-              href={`tel:${PHONE_2_TEL}`}
-              className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-lg shadow-red-900/30 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-              style={{ fontFamily: 'var(--font-work-sans)' }}
-            >
-              <span aria-hidden="true" data-nosnippet
-                className="material-symbols-outlined text-xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                call
-              </span>
-              {PHONE_2}
             </a>
             <a
               href="https://wa.me/447759708646"

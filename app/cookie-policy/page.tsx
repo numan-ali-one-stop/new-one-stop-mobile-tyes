@@ -228,10 +228,8 @@ export default function CookiePolicyPage() {
               info@onestoptyres247.co.uk
             </a>{' '}
             or by phone on{' '}
-            <a href="tel:07759708646" className="text-[#b70011] hover:underline">
+            <a href="tel:+447759708646" className="text-[#b70011] hover:underline">
               07759 708 646
-            </a>{' / '}<a href="tel:01613995851" className="text-[#b70011] hover:underline">
-              0161 399 5851
             </a>
             .
           </p>

@@ -31,15 +31,18 @@ export default function Footer() {
           <ul className="space-y-3 sm:space-y-4 text-slate-400 text-sm font-medium">
             <li className="flex items-center justify-center sm:justify-start gap-3">
               <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">call</span>
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-1">
-                <a href={`tel:${PHONE_TEL}`} className="text-white font-bold hover:text-[#FF4444] transition-colors">
-                  {PHONE}
-                </a>
-                <span className="text-slate-600 hidden sm:inline">/</span>
+              <a href={`tel:${PHONE_TEL}`} className="text-white font-bold hover:text-[#FF4444] transition-colors">
+                {PHONE}
+              </a>
+            </li>
+            <li className="flex items-center justify-center sm:justify-start gap-3">
+              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">apartment</span>
+              <span>
+                Head Office:{' '}
                 <a href={`tel:${PHONE_2_TEL}`} className="text-white font-bold hover:text-[#FF4444] transition-colors">
                   {PHONE_2}
                 </a>
-              </div>
+              </span>
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-3">
               <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">mail</span>

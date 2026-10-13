@@ -4,9 +4,9 @@ import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/sche
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Greater Manchester | 24/7 Service',
+  title: '24/7 Emergency Mobile Tyre Fitting Greater Manchester',
   description:
-    'Need mobile tyre fitting in Greater Manchester? Get professional mobile tyre replacement, repair and emergency tyre fitting at your location.',
+    'Flat tyre or puncture in Greater Manchester? 24/7 emergency mobile tyre fitting, puncture repair and tyre replacement at the roadside, home or work.',
   path: '/mobile-tyre-fitting',
 })
 
@@ -20,15 +20,18 @@ const _serviceSchema = serviceSchema({
   name: 'Mobile Tyre Fitting',
   serviceType: 'Mobile Tyre Fitting',
   description:
-    'Professional mobile tyre fitting across Greater Manchester. We supply and fit premium, mid-range and budget tyres for cars, SUVs, vans and light commercial vehicles at your location.',
+    '24/7 emergency and planned mobile tyre fitting across Greater Manchester, including flat tyre and puncture call-outs. We supply and fit premium, mid-range and budget tyres for cars, SUVs, vans and light commercial vehicles at your location.',
 })
 
 const faqs = [
+  { q: 'Do you offer 24/7 emergency mobile tyre fitting?', a: 'Yes. Our emergency mobile tyre fitting service runs 24 hours a day, 7 days a week. If a flat, punctured or damaged tyre stops you from continuing your journey, call us and we will send a mobile tyre fitter to you.' },
+  { q: 'I have a flat tyre. Can you come to me?', a: 'Yes. Tell us where you are and what has happened, and our technician will come to your location with the tools and replacement tyres needed. Where it is safe, we can repair or replace the tyre at the roadside, at home or at work.' },
+  { q: 'Can you repair a puncture at the roadside?', a: 'Often, yes. If the puncture is in the central tread area and the tyre is otherwise undamaged, we can carry out a safe puncture repair on the spot. If the damage is in the sidewall or shoulder, or the tyre has been driven on flat, we will recommend a replacement instead.' },
+  { q: 'How quickly can you reach me in an emergency?', a: 'In most of the areas we cover, we aim to reach you within 20 to 30 minutes. The exact arrival time depends on your location, traffic and technician availability, and we will give you an estimate when you call.' },
   { q: 'What is mobile tyre fitting?', a: 'Mobile tyre fitting is a service where a tyre fitter comes to your location to replace and fit tyres on your vehicle, rather than requiring you to visit a tyre centre.' },
   { q: 'Where can mobile tyres be fitted?', a: 'Tyres can usually be fitted at a suitable location such as your home, workplace or another accessible and safe location.' },
   { q: 'How does mobile tyre fitting work?', a: 'You provide your vehicle or tyre details and location. A mobile tyre fitter then brings the required tyres and equipment to complete the fitting at your chosen location.' },
   { q: 'Do you provide mobile tyre replacement?', a: 'Yes. Our mobile tyre replacement service allows you to have worn or damaged tyres replaced without travelling to a tyre centre.' },
-  { q: 'Can you provide emergency mobile tyre fitting?', a: 'Yes. Emergency mobile tyre fitting is available for urgent situations where you need a replacement tyre and cannot continue your journey safely.' },
   { q: 'Do you provide mobile tyre repair?', a: 'Yes. We can inspect a damaged or punctured tyre and determine whether a safe mobile tyre repair is possible. If the tyre cannot be safely repaired, replacement may be recommended.' },
   { q: 'Can you fit tyres to cars, SUVs and vans?', a: 'Yes. Our mobile car tyre fitters can provide tyre fitting for a range of cars, SUVs and vans, subject to tyre availability and vehicle requirements.' },
   { q: 'How long does mobile tyre fitting take?', a: 'The time required depends on the number of tyres being fitted, the vehicle and the work involved. Once we know your requirements, we can give you a better estimate.' },
@@ -45,9 +48,9 @@ const _faqSchema = faqSchema(faqs)
 
 const whyChooseUs = [
   {
-    icon: '🚐',
-    title: 'Convenient Fitting',
-    desc: 'Get your tyres fitted at a suitable location without visiting a garage.',
+    icon: '🚨',
+    title: '24/7 Emergency Call-Outs',
+    desc: 'Flat tyre or puncture at any hour? We come to you day or night, so you are not left stranded.',
   },
   {
     icon: '⚡',
@@ -149,29 +152,29 @@ export default function MobileTyreFittingPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
               </span>
-              Professional Mobile Tyre Service
+              24/7 Emergency Mobile Tyre Service
             </div>
 
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Professional Mobile Tyre Fitting Near You
+              24/7 Emergency Mobile Tyre Fitting &amp; Puncture Repair
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-              Need new tyres without visiting a garage? Our <strong>mobile tyre fitting</strong> service brings professional tyre fitting directly to your location across our service areas. Our experienced mobile tyre fitters can replace tyres at your home, workplace or another suitable location, helping you save time and avoid unnecessary disruption.
+              Flat tyre, puncture or blowout? Our <strong>emergency mobile tyre fitting</strong> service comes to you 24/7, whether you are at the roadside, at home or at work. Our experienced mobile tyre fitters repair punctures where it is safe to do so, replace damaged tyres on the spot and get you back on the road without a trip to the garage.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
-              From planned <strong>mobile tyre replacement</strong> to emergency mobile tyre fitting, we provide a convenient tyre fitting solution when you need it. Our technicians can also assess tyre problems and provide mobile tyre repair where a safe repair is possible.
+              As well as emergency call-outs, we offer planned <strong>mobile tyre replacement</strong> at a time that suits you. Every tyre is checked before we start, so you get an honest answer on whether a repair is safe or a replacement is needed.
             </p>
 
             <ul className="space-y-2 mb-8">
               {[
-                'Professional mobile tyre fitting',
+                '24/7 emergency tyre call-outs',
+                'Flat tyre and puncture repair',
+                'Mobile tyre replacement on the spot',
                 'Experienced mobile tyre fitters',
-                'Mobile tyre replacement',
-                'Emergency tyre fitting available',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -182,7 +185,7 @@ export default function MobileTyreFittingPage() {
 
             <div className="hidden sm:flex flex-row gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
@@ -349,20 +352,12 @@ export default function MobileTyreFittingPage() {
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -443,20 +438,12 @@ export default function MobileTyreFittingPage() {
         </p>
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a
-            href="tel:07759708646"
+            href="tel:+447759708646"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
             <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             07759 708 646
-          </a>
-          <a
-            href="tel:01613995851"
-            className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
-            style={{ fontFamily: 'var(--font-work-sans)' }}
-          >
-            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-            0161 399 5851
           </a>
           <a
             href="https://wa.me/447759708646"

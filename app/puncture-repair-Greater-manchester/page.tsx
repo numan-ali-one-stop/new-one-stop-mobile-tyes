@@ -4,7 +4,7 @@ import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/sche
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
-  title: 'Tyre Puncture Repair in Greater Manchester | 24/7 Service',
+  title: 'Emergency Puncture Repair Greater Manchester | 24/7 Mobile',
   description:
     'Need a tyre puncture repair in Greater Manchester? Get professional puncture repair for cars, slow punctures and emergency tyre problems at a convenient location.',
   path: '/puncture-repair-Greater-manchester',
@@ -156,7 +156,7 @@ export default function PunctureRepairGreaterManchesterPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Professional Tyre Puncture Repair Near You
+              24/7 Emergency Puncture Repair Near You
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
@@ -182,7 +182,7 @@ export default function PunctureRepairGreaterManchesterPage() {
 
             <div className="hidden sm:flex flex-row gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
@@ -349,20 +349,12 @@ export default function PunctureRepairGreaterManchesterPage() {
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -480,7 +472,7 @@ export default function PunctureRepairGreaterManchesterPage() {
             Get Puncture Repair
           </a>
           <a
-            href="tel:07759708646"
+            href="tel:+447759708646"
             className="bg-white/10 border border-white/20 text-white font-black px-10 py-4 rounded-xl flex items-center gap-2.5 hover:bg-white/20 transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >

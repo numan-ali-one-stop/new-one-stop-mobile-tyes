@@ -1,11 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Review = {
   initials: string
   name: string
-  when: string
   review: string
 }
 
@@ -13,49 +12,42 @@ const REVIEWS: Review[] = [
   {
     initials: 'LN',
     name: 'Lucy Norris',
-    when: 'a week ago',
     review:
       'Called this evening needing an emergency replacement tyre, and Adam couldn’t have been more helpful. He quickly sourced a tyre for me, even though it’s not one that’s widely stocked and had everything sorted in no time. From the initial call to being back on the road, it took just over an hour.\n\nGreat service, thanks Adam.',
   },
   {
     initials: 'NR',
     name: 'Nathan Reid',
-    when: '3 weeks ago',
     review:
       'Nomz was wonderful! Great experience, fast, friendly, and does exactly as you’d expect. Thanks for getting me back on the road!',
   },
   {
     initials: 'PM',
     name: 'paul madden',
-    when: 'a month ago',
     review:
       'quick response when really needed and friendly staff when spoke to on phone and when fitter came to do tyre',
   },
   {
     initials: 'T',
     name: 'Tez',
-    when: '2 months ago',
     review:
       'Excellent service amazing response and back as fast as we could expect at 3 am highly recommend',
   },
   {
     initials: 'AH',
     name: 'Arzu Hussain',
-    when: '2 months ago',
     review:
       'What a superstar !!!! Came out to the rescue and got me back on road !!! Highly recommend . Great service',
   },
   {
     initials: 'KD',
     name: 'Kayleigh Davidson',
-    when: '2 months ago',
     review:
       "Called out for an emergency fix as the car wasn't drivable. I was kept updated with an ETA and the service was swift when he did arrive. The fitter was polite and friendly. Would definitely use again.",
   },
   {
     initials: 'IM',
     name: 'Ibrahim Mahmood',
-    when: '2 months ago',
     review: 'Came out within 20 mins , 4am . Absolute amazing service',
   },
 ]
@@ -89,13 +81,17 @@ export default function ReviewsCarousel({ offset = 0 }: { offset?: number }) {
   // touch press-and-hold across all browsers (some Tailwind arbitrary variants
   // don't reliably toggle `animation-play-state` on every engine).
   const [paused, setPaused] = useState(false)
+  // The duplicate copy for the seamless loop is added only after hydration, so the
+  // server-rendered HTML contains each review once.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
 
   const rotated = offset % REVIEWS.length === 0
     ? REVIEWS
     : [...REVIEWS.slice(offset % REVIEWS.length), ...REVIEWS.slice(0, offset % REVIEWS.length)]
   // Duplicate the list once. Combined with translateX(-50%) in the keyframes,
   // this produces a seamless infinite loop.
-  const LOOP = [...rotated, ...rotated]
+  const LOOP = mounted ? [...rotated, ...rotated] : rotated
 
   return (
     <div
@@ -114,7 +110,7 @@ export default function ReviewsCarousel({ offset = 0 }: { offset?: number }) {
 
       {/* Marquee track: animates by default, pauses on hover or touch hold. */}
       <div
-        className="flex w-max gap-4 sm:gap-6 animate-marquee motion-reduce:[animation-play-state:paused]"
+        className={`flex w-max gap-4 sm:gap-6 motion-reduce:[animation-play-state:paused] ${mounted ? 'animate-marquee' : ''}`}
         style={{ animationPlayState: paused ? 'paused' : 'running' }}
       >
         {LOOP.map((r, i) => (
@@ -151,7 +147,7 @@ export default function ReviewsCarousel({ offset = 0 }: { offset?: number }) {
               </div>
               <div>
                 <p className="text-sm font-bold text-[#0f172a]">{r.name}</p>
-                <p className="text-xs text-slate-400">{r.when}</p>
+                <p className="text-xs text-slate-400">Google review</p>
               </div>
             </div>
           </div>

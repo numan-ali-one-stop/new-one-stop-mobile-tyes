@@ -6,6 +6,7 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import LocalAreaInfo from '@/components/LocalAreaInfo'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -26,7 +27,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Moss Side | 24/7 Tyre Replacement',
+  title: 'Mobile Tyre Fitting Moss Side | 24/7 Emergency & Puncture Repair',
   description:
     'Need mobile tyre fitting in Moss Side? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-moss-side',
@@ -62,6 +63,7 @@ export default function MossSidePage() {
             alt="Mobile tyre fitting technician at work in Greater Manchester"
             fill
             priority
+            quality={60}
             sizes="100vw"
             className="object-cover object-center"
           />
@@ -81,15 +83,15 @@ export default function MossSidePage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Moss Side at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Need a tyre fixed in Moss Side? Our technicians come to your street, your workplace or a safe spot near Alexandra Park or Princess Road, any time of day or night.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
+                'Mobile Puncture Repair',
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
-                'Mobile Puncture Repair',
                 'Home, Work & Roadside Service',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
@@ -122,20 +124,12 @@ export default function MossSidePage() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -209,7 +203,7 @@ export default function MossSidePage() {
                 24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Moss Side
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Moss Side. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                We fit new tyres, replace damaged ones and repair punctures across Moss Side, working kerbside on terraced streets where getting to a garage is a hassle.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -308,18 +302,11 @@ export default function MossSidePage() {
                 </p>
               </div>
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                0161 399 5851
               </a>
             </div>
           </div>
@@ -346,7 +333,7 @@ export default function MossSidePage() {
                   ))}
                 </div>
                 <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
-                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">1,200+ Customer Reviews</div>
+                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
             <div className="w-full lg:w-1/2">
@@ -360,8 +347,8 @@ export default function MossSidePage() {
                 Professional Mobile Tyre Fitting in Moss Side
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Moss Side, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, our mobile service provides a convenient solution.
-                We provide professional tyre fitting and replacement across Moss Side and surrounding areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
+                Moss Side has lots of terraced housing with on-street parking, so we are used to working kerbside safely and quickly. Whether your car is outside your house on Claremont Road or parked near Moss Lane East, we bring everything to you.
+                Our customers in Moss Side range from families and shift workers to students living near Princess Road. We supply budget, mid-range and premium tyres and give you the price before we start.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -425,7 +412,7 @@ export default function MossSidePage() {
             {
               icon: 'pin_drop',
               title: 'Service Across Moss Side',
-              desc: 'We cover Moss Side and surrounding areas, providing convenient tyre assistance for local drivers.',
+              desc: 'We cover the whole of Moss Side, from Alexandra Park and Moss Lane East to Princess Road and the old Maine Road area.',
             },
           ]}
         />
@@ -519,13 +506,13 @@ export default function MossSidePage() {
               Mobile Tyre Replacement Across Moss Side
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              A damaged, worn or unsafe tyre may need to be replaced rather than repaired. Our <strong>mobile tyre replacement Moss Side</strong> service allows you to have a replacement tyre fitted without visiting a garage.
+              Some tyres simply cannot be repaired safely, for example if the damage is in the sidewall. Our <strong>mobile tyre replacement Moss Side</strong> service fits a new tyre at your door instead.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We can provide tyre replacement in Moss Side at home, work or a suitable roadside location. If you are dealing with a puncture, blowout or damaged tyre, we assess the condition first and recommend the appropriate solution.
+              Give us your registration or tyre size and we will bring a suitable replacement to your home in Moss Side. Most jobs take well under an hour once we arrive.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Our service makes tyre replacement straightforward and convenient for drivers across Moss Side.
+              It is a simple way to get a new tyre in Moss Side without losing half a day to a garage visit.
             </p>
           </div>
         </section>
@@ -543,13 +530,13 @@ export default function MossSidePage() {
               Emergency Mobile Tyre Fitting and Replacement in Moss Side
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              Tyre problems can happen at any time. If you experience a puncture, blowout or damaged tyre, our <strong>emergency tyre fitting Moss Side</strong> service provides assistance 24/7.
+              Busy roads like Princess Road see plenty of debris and potholes. If you get a puncture or blowout, our <strong>emergency tyre fitting Moss Side</strong> service is available around the clock.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We can attend suitable locations around Moss Side, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
+              If it is safe, move off the main road into a side street before calling. We will come to you, check the tyre and repair it where possible or fit a replacement.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including Hulme, Rusholme, Fallowfield, Whalley Range and surrounding parts of Manchester.
+              We also cover nearby Hulme, Rusholme, Fallowfield and Whalley Range.
             </p>
           </div>
         </section>
@@ -563,6 +550,9 @@ export default function MossSidePage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
+        {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
+        <LocalAreaInfo currentSlug="moss-side" />
+
         {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-moss-side"
@@ -570,31 +560,31 @@ export default function MossSidePage() {
           faqs={[
             {
               q: 'Do you provide mobile tyre fitting in Moss Side?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Moss Side at homes, workplaces and suitable roadside locations.',
+              a: 'Yes. We fit tyres across Moss Side, including on-street parking outside your home, 24 hours a day.',
             },
             {
               q: 'Can you replace a tyre at my home in Moss Side?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              a: 'Yes. Most homes in Moss Side have on-street parking, and we are used to fitting tyres safely at the kerbside outside your house.',
             },
             {
               q: 'Do you offer emergency tyre fitting in Moss Side?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              a: 'Yes. Our emergency service runs 24/7, so whether you are on Princess Road or outside your home in Moss Side, call us and we will come to you.',
             },
             {
               q: 'Can you repair a punctured tyre in Moss Side?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              a: 'Yes. If the puncture is in the central part of the tread and the tyre is otherwise sound, we can repair it at the kerbside.',
             },
             {
               q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Moss Side.',
+              a: 'Yes. We can fit tyres in staff car parks around Moss Side and the nearby hospitals and universities, with permission from the site.',
             },
             {
               q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              a: 'Yes, where it is safe. If you are on a busy road such as Princess Road, please move to a side street first if you can.',
             },
             {
               q: 'How quickly can you reach me in Moss Side?',
-              a: 'Response time depends on your exact location, traffic and technician availability. We aim to provide a fast response across Moss Side.',
+              a: 'Moss Side is only a short drive from the city centre, so we can usually reach you quickly. Arrival times depend on traffic on Princess Road, and we will give you an estimate when you call.',
             },
             {
               q: 'Do you provide 24/7 mobile tyre fitting?',
@@ -606,15 +596,15 @@ export default function MossSidePage() {
             },
             {
               q: 'Do you provide mobile tyre fitting near me in Moss Side?',
-              a: 'Yes. If you are located in or around Moss Side, you can contact us for mobile tyre fitting at your location.',
+              a: 'Yes. Whether you are near Alexandra Park, Moss Lane East or Princess Road, call us and we will come to you.',
             },
             {
               q: 'Can you help with a flat tyre in Moss Side?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
+              a: 'Yes. We will come to your car, check whether the tyre can be repaired, and fit a replacement if it cannot.',
             },
             {
               q: 'Can you fit tyres at night in Moss Side?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
+              a: 'Yes. We work through the night, which helps if you find a flat late in the evening or before an early shift.',
             },
             {
               q: 'Do you provide mobile puncture repair in Moss Side?',
@@ -626,7 +616,7 @@ export default function MossSidePage() {
             },
             {
               q: 'What areas near Moss Side do you cover?',
-              a: 'We cover Moss Side and surrounding areas including Hulme, Rusholme, Fallowfield and Whalley Range. Contact us with your exact location to confirm service availability.',
+              a: 'We cover all of Moss Side (M14 and M16) plus Hulme, Rusholme, Fallowfield and Whalley Range. Call us with your exact location to confirm.',
             },
           ]}
         />
@@ -635,21 +625,14 @@ export default function MossSidePage() {
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Moss Side?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance at the roadside, One Stop Tyres 247 can come to you. Contact us today for 24/7 mobile tyre fitting in Moss Side, tyre replacement and puncture repair. Call now for a quote and availability.</p>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Got a flat tyre in Moss Side? Call One Stop Tyres 247 and we will come to your street with the right tyre and get you back on the road.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="tel:+447759708646"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

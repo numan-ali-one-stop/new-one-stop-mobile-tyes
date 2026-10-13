@@ -177,20 +177,12 @@ export default function LockingNutRemovalPage() {
 
             <div className="hidden sm:flex flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -333,20 +325,12 @@ export default function LockingNutRemovalPage() {
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 Call: 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                Call: 0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -405,24 +389,16 @@ export default function LockingNutRemovalPage() {
           Need a Locking Wheel Nut Removed?
         </h2>
         <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-          If a lost key, rounded nut or seized locking wheel nut is stopping your tyre or wheel work, avoid forcing it with unsuitable tools. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and details of the problem. We will arrange a <strong>specialist mobile locking nut removal service</strong> at your location. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — 07759 708 646 / 0161 399 5851
+          If a lost key, rounded nut or seized locking wheel nut is stopping your tyre or wheel work, avoid forcing it with unsuitable tools. Call or WhatsApp <strong>One Stop Mobile Tyres 24/7</strong> with your location, vehicle registration and details of the problem. We will arrange a <strong>specialist mobile locking nut removal service</strong> at your location. <strong>One Stop Mobile Tyres 24/7</strong> — <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom</a> — 07759 708 646
         </p>
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a
-            href="tel:07759708646"
+            href="tel:+447759708646"
             className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
             <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Call: 07759 708 646
-          </a>
-          <a
-            href="tel:01613995851"
-            className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
-            style={{ fontFamily: 'var(--font-work-sans)' }}
-          >
-            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-            Call: 0161 399 5851
           </a>
           <a
             href="https://wa.me/447759708646"

@@ -89,7 +89,7 @@ export default function WhyChooseUs({
             <FeatureItem
               icon="speed"
               title={responseTitle}
-              desc={responseDesc ?? "Strategically based to reach you within 20-30 minutes — at home, work, or roadside."}
+              desc={responseDesc ?? "Strategically based to typically reach you within 20-30 minutes — at home, work, or roadside."}
               bg="bg-[#ffdad6]"
               iconColor="text-[#410002]"
             />

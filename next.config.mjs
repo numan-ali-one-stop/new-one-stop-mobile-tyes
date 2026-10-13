@@ -22,6 +22,11 @@ const nextConfig = {
     // from the remote hosts below on the fly, matching each usage's actual
     // display size instead of shipping the original full-resolution file.
     formats: ['image/avif', 'image/webp'],
+    // Cap responsive widths at 1920 — the default list goes up to 3840, which full-width
+    // heroes request on high-DPR screens even though no source image is that large.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    // Next 16 only serves listed qualities; 60 is used for heroes under dark overlays.
+    qualities: [60, 75],
     remotePatterns: [
       { protocol: 'https', hostname: 'hebbkx1anhila5yf.public.blob.vercel-storage.com' },
       { protocol: 'https', hostname: 'ss5vlswhqmiddtca.public.blob.vercel-storage.com' },

@@ -42,43 +42,24 @@ export default function ServiceAreasMap() {
           Mobile Tyre Fitting — Our Coverage Areas
         </h2>
         <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-          Every town and motorway we currently cover, 24/7. Broken down on a
-          motorway hard shoulder or stuck on your driveway at home — our nearest available
-          technician is dispatched straight to your GPS location.
+          Broken down on a motorway hard shoulder or stuck on your driveway at home? Our nearest
+          available technician is dispatched straight to your location, 24/7. See every town we
+          cover on the full service area page.
         </p>
 
         <div className="rounded-xl border border-white/10 bg-white/[0.02] overflow-hidden">
-          <div className="divide-y divide-white/[0.06]">
-            {BOROUGHS.map((borough) => (
-              <div key={borough.name} className="px-4 py-3">
-                <div className="flex items-center gap-2 mb-1">
-                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] shrink-0" style={{ fontSize: '15px' }}>
-                    location_on
-                  </span>
-                  {borough.slug ? (
-                    <a
-                      href={`/mobile-tyre-fitting-${borough.slug}`}
-                      className="text-white font-bold text-sm hover:text-[#FF4444] transition-colors"
-                    >
-                      {borough.name}
-                    </a>
-                  ) : (
-                    <span className="text-white font-bold text-sm">{borough.name}</span>
-                  )}
-                </div>
-                {borough.towns.length > 0 && (
-                  <p className="text-xs text-slate-400 leading-relaxed pl-[23px]">
-                    {borough.towns.map((town, i) => (
-                      <span key={town.slug}>
-                        <a href={`/mobile-tyre-fitting-${town.slug}`} className="hover:text-[#FF4444] transition-colors">
-                          {town.name}
-                        </a>
-                        {i < borough.towns.length - 1 && <span className="text-slate-600"> · </span>}
-                      </span>
-                    ))}
-                  </p>
-                )}
-              </div>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 px-4 py-4">
+            {BOROUGHS.filter((b) => b.slug).map((borough) => (
+              <a
+                key={borough.name}
+                href={`/mobile-tyre-fitting-${borough.slug}`}
+                className="flex items-center gap-2 text-white font-bold text-sm hover:text-[#FF4444] transition-colors"
+              >
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] shrink-0" style={{ fontSize: '15px' }}>
+                  location_on
+                </span>
+                {borough.name}
+              </a>
             ))}
           </div>
 

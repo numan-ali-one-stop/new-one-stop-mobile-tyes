@@ -5,6 +5,8 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CookieConsentBanner from '@/components/CookieConsentBanner'
+import JsonLd from '@/components/JsonLd'
+import { localBusinessSchema } from '@/lib/schema'
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -127,32 +129,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NKQKPB8S');`,
           }}
         />
-        {/* Google tag (gtag.js) — Google Ads */}
-        <Script
-          id="gads-gtag-js"
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10825208776"
-        />
-        <Script
-          id="gads-gtag-config"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `gtag('js', new Date());
-gtag('config', 'AW-10825208776');`,
-          }}
-        />
-        {/* Google Ads — phone call conversion (website call tracking) */}
-        <Script
-          id="gads-phone-conversion"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `gtag('config', 'AW-10825208776/xuU4CMay5YYdEMin7qko', {
-  'phone_conversion_number': '+44 7759 708646'
-});`,
-          }}
-        />
+        {/* Google Ads (AW-10825208776), its call conversion and click conversions are all
+            fired from GTM-NKQKPB8S — do not hard-code gtag.js here or they double-fire. */}
       </head>
       <body className="antialiased overflow-x-hidden pb-[60px] sm:pb-0">
+        {/* The business entity (LocalBusiness / AutoRepair) — once per page, every page. */}
+        <JsonLd data={localBusinessSchema()} />
         {/* Google Tag Manager noscript */}
         <noscript>
           <iframe
@@ -190,7 +172,7 @@ gtag('config', 'AW-10825208776');`,
             </svg>
           </a>
           <a
-            href="tel:07759708646"
+            href="tel:+447759708646"
             aria-label="Call us now"
             className="w-16 h-16 bg-[#FF4444] hover:bg-red-700 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all hover:scale-110 active:scale-95"
           >
@@ -206,7 +188,7 @@ gtag('config', 'AW-10825208776');`,
         {/* Mobile bottom CTA bar — full width, mobile only */}
         <div className="sm:hidden fixed bottom-0 left-0 right-0 z-[60] flex">
           <a
-            href="tel:07759708646"
+            href="tel:+447759708646"
             aria-label="Call us now"
             className="flex-1 bg-[#FF4444] flex items-center justify-center gap-2.5 py-4 text-white font-black text-base active:brightness-90 transition-all"
             style={{ fontFamily: 'var(--font-work-sans)' }}

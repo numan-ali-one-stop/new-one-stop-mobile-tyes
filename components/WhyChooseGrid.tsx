@@ -1,6 +1,6 @@
 /* ─── Shared "Why Choose" grid section — centred heading, CTA row, 6-item icon grid ─── */
 
-import { PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
+import { PHONE, PHONE_TEL } from '@/lib/constants'
 
 interface WhyChooseGridItem {
   icon: string
@@ -36,14 +36,6 @@ export default function WhyChooseGrid({ heading, intro, items }: WhyChooseGridPr
             >
               <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
               {PHONE}
-            </a>
-            <a
-              href={`tel:${PHONE_2_TEL}`}
-              className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-              style={{ fontFamily: 'var(--font-work-sans)' }}
-            >
-              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-              {PHONE_2}
             </a>
             <a
               href="https://wa.me/447759708646"

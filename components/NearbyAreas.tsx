@@ -1,15 +1,15 @@
-import { findBorough, nearbyAreas } from '@/lib/locations'
+import { closestAreas } from '@/lib/local-areas'
 
 interface NearbyAreasProps {
   /** The current page's location slug, e.g. "bury" or "prestwich" (no "mobile-tyre-fitting-" prefix). */
   currentSlug: string
 }
 
+/** 4–6 links to the areas closest to this page, nearest first. */
 export default function NearbyAreas({ currentSlug }: NearbyAreasProps) {
-  const borough = findBorough(currentSlug)
-  const others = nearbyAreas(currentSlug)
+  const others = closestAreas(currentSlug)
 
-  if (!borough || others.length === 0) return null
+  if (others.length === 0) return null
 
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 bg-white border-t border-slate-100">
@@ -22,7 +22,7 @@ export default function NearbyAreas({ currentSlug }: NearbyAreasProps) {
             className="text-2xl sm:text-[32px] font-bold text-[#0f172a]"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
           >
-            Nearby Areas in {borough.name}
+            Nearby Areas
           </h2>
         </div>
         <div className="flex flex-wrap justify-center gap-3">

@@ -1,7 +1,7 @@
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
-  title: '24/7 Mobile Tyre Service & Repair | Greater Manchester',
+  title: '24/7 Emergency Tyre Fitting & Puncture Repair | Greater Manchester',
   description:
     'Need a tyre service in Greater Manchester? Get 24/7 mobile tyre fitting, tyre repair and emergency tyre replacement across Manchester and surrounding areas.',
   path: '/',
@@ -528,18 +528,11 @@ export default function Home() {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                0161 399 5851
               </a>
             </div>
           </div>
@@ -569,7 +562,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
-              <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">1,200+ Customer Reviews</div>
+              <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
             </div>
           </div>
 

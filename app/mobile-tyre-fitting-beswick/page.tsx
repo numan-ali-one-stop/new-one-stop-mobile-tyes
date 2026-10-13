@@ -6,6 +6,7 @@ import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import LocalAreaInfo from '@/components/LocalAreaInfo'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -26,7 +27,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Beswick | 24/7 Tyre Replacement',
+  title: 'Mobile Tyre Fitting Beswick | 24/7 Emergency & Puncture Repair',
   description:
     'Need mobile tyre fitting in Beswick? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-beswick',
@@ -75,7 +76,7 @@ const whyChooseBeswick = [
   {
     icon: 'location_on',
     title: 'Service Across Beswick',
-    desc: 'We cover Beswick and surrounding areas, providing convenient tyre assistance for local drivers.',
+    desc: 'We cover all of Beswick, from Alan Turing Way and Ashton New Road to Grey Mare Lane and the Ashton Canal.',
   },
 ]
 
@@ -95,6 +96,7 @@ export default function BeswickPage() {
             alt="Mobile tyre fitting technician at work in Greater Manchester"
             fill
             priority
+            quality={60}
             sizes="100vw"
             className="object-cover object-center"
           />
@@ -114,15 +116,15 @@ export default function BeswickPage() {
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Beswick at your home, workplace or a safe roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need help.
+              Flat tyre after a match at the Etihad or outside your home in Beswick? Our mobile tyre fitters come to you 24/7 with replacement tyres and puncture repair kit.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
+                'Mobile Puncture Repair',
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
-                'Mobile Puncture Repair',
                 'Home, Work & Roadside Service',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
@@ -155,20 +157,12 @@ export default function BeswickPage() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                0161 399 5851
               </a>
               <a
                 href="https://wa.me/447759708646"
@@ -242,7 +236,7 @@ export default function BeswickPage() {
                 24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Beswick
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Beswick. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                We fit, replace and repair tyres across Beswick and the Etihad Campus, from the new-build estates to event car parks.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -341,18 +335,11 @@ export default function BeswickPage() {
                 </p>
               </div>
               <a
-                href="tel:07759708646"
+                href="tel:+447759708646"
                 className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
-              </a>
-              <a
-                href="tel:01613995851"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-work-sans)' }}
-              >
-                0161 399 5851
               </a>
             </div>
           </div>
@@ -379,7 +366,7 @@ export default function BeswickPage() {
                   ))}
                 </div>
                 <div className="text-[#0f172a] font-black text-2xl sm:text-3xl leading-none mb-1">5.0 / 5.0</div>
-                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">1,200+ Customer Reviews</div>
+                <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
             <div className="w-full lg:w-1/2">
@@ -393,10 +380,10 @@ export default function BeswickPage() {
                 Professional Mobile Tyre Fitting in Beswick
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-                When you need <strong>mobile tyre fitting in Beswick</strong>, One Stop Tyres 247 comes directly to you. Whether you have a damaged tyre at home, a puncture at work or a tyre emergency on the roadside, our mobile tyre service provides a convenient solution.
+                Beswick has changed a lot, with new homes around the Etihad Campus and Alan Turing Way. On match and event days, traffic builds up quickly, so we often meet customers in car parks or on quieter side streets.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                We provide professional tyre fitting and replacement across Beswick and nearby areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
+                We help residents, stadium visitors and people working at the sports venues around Sportcity. We supply budget, mid-range and premium tyres and agree the price before we start.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Our Key Services</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -521,13 +508,13 @@ export default function BeswickPage() {
               Mobile Tyre Replacement Across Beswick
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              A damaged, worn or unsafe tyre may need to be replaced rather than repaired. Our <strong>mobile tyre replacement Beswick</strong> service allows you to have a replacement tyre fitted without visiting a garage.
+              If a tyre is damaged in the sidewall or worn below the legal limit, it will need replacing. Our <strong>mobile tyre replacement Beswick</strong> service brings the new tyre to you.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We can provide tyre replacement in Beswick at home, work or a suitable roadside location. If you are dealing with a puncture, blowout or damaged tyre, we assess the condition first and recommend the appropriate solution.
+              Let us know your tyre size or registration and we will bring a suitable tyre to your home, workplace or car park in Beswick and fit it on the spot.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Our service is designed to make tyre replacement straightforward and convenient for drivers across Beswick.
+              It is a much easier option than queueing at a tyre centre, especially on a busy event day.
             </p>
           </div>
         </section>
@@ -545,13 +532,13 @@ export default function BeswickPage() {
               Emergency Mobile Tyre Fitting and Replacement in Beswick
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              Tyre problems can happen at any time. If you experience a puncture, blowout or damaged tyre, our <strong>emergency tyre fitting Beswick</strong> service provides assistance 24/7.
+              Returning to a flat tyre after a game or concert is a common call for us. Our <strong>emergency tyre fitting Beswick</strong> service runs 24/7, including late-night finishes.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              We can attend suitable locations around Beswick, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
+              Tell us exactly where you are parked and we will come to you, check the tyre and either repair the puncture or fit a replacement.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby parts of east Manchester, making it easier to get professional tyre assistance when you need it.
+              We also cover nearby Clayton, Openshaw, Ancoats and Miles Platting.
             </p>
           </div>
         </section>
@@ -565,6 +552,9 @@ export default function BeswickPage() {
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
+        {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
+        <LocalAreaInfo currentSlug="beswick" />
+
         {/* ── 10. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-beswick"
@@ -572,31 +562,31 @@ export default function BeswickPage() {
           faqs={[
             {
               q: 'Do you provide mobile tyre fitting in Beswick?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Beswick at homes, workplaces and suitable roadside locations.',
+              a: 'Yes. We fit tyres across Beswick at homes, workplaces and car parks around the Etihad Campus, 24 hours a day.',
             },
             {
               q: 'Can you replace a tyre at my home in Beswick?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              a: 'Yes. We fit tyres outside homes across Beswick, including the newer estates around the Etihad Campus.',
             },
             {
               q: 'Do you offer emergency tyre fitting in Beswick?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              a: 'Yes. Our emergency service runs 24/7, including late at night after matches and concerts at the Etihad.',
             },
             {
               q: 'Can you repair a punctured tyre in Beswick?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              a: 'Yes. If the damage is in the central tread area and the tyre is otherwise sound, we can repair the puncture where your car is parked.',
             },
             {
               q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Beswick.',
+              a: 'Yes. We can fit tyres in staff car parks around the Etihad Campus and nearby business units, with permission from the site.',
             },
             {
               q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              a: 'Yes, where it is safe. On busy roads like Alan Turing Way or Ashton New Road, please move to a side street first if you can.',
             },
             {
               q: 'How quickly can you reach me in Beswick?',
-              a: 'Response time depends on your exact location, traffic and technician availability. We aim to provide a fast response across Beswick.',
+              a: 'Beswick is close to the city centre, so we can usually reach you quickly. On match and event days, traffic around the Etihad can add time, and we will give you an honest estimate when you call.',
             },
             {
               q: 'Do you provide 24/7 mobile tyre fitting?',
@@ -608,15 +598,15 @@ export default function BeswickPage() {
             },
             {
               q: 'Do you provide mobile tyre fitting near me in Beswick?',
-              a: 'Yes. If you are located in or around Beswick, you can contact us for mobile tyre fitting at your location.',
+              a: 'Yes. Whether you are near the Etihad Campus, Alan Turing Way or Grey Mare Lane, call us and we will come to you.',
             },
             {
               q: 'Can you help with a flat tyre in Beswick?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
+              a: 'Yes. Tell us exactly where you are parked and we will bring the equipment and a replacement tyre in case a repair is not possible.',
             },
             {
               q: 'Can you fit tyres at night in Beswick?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
+              a: 'Yes. Late-night event finishes are a common time for flat tyres, and our technicians work through the night.',
             },
             {
               q: 'Do you provide mobile puncture repair in Beswick?',
@@ -628,7 +618,7 @@ export default function BeswickPage() {
             },
             {
               q: 'What areas near Beswick do you cover?',
-              a: 'We cover Beswick and surrounding parts of east Manchester. Contact us with your exact location to confirm service availability.',
+              a: 'We cover all of Beswick (M11) plus Clayton, Openshaw, Ancoats and Miles Platting. Call us with your exact location to confirm.',
             },
           ]}
         />
@@ -637,21 +627,14 @@ export default function BeswickPage() {
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Beswick?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance at the roadside, One Stop Tyres 247 can come to you. Contact us today for 24/7 mobile tyre fitting in Beswick, tyre replacement and puncture repair. Call now for a quote and availability.</p>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Flat tyre in Beswick or at the Etihad Campus? Call One Stop Tyres 247 and we will come to you with the right tyre and get you on your way.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:07759708646"
+                href="tel:+447759708646"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
-                href="tel:01613995851"
-              >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
