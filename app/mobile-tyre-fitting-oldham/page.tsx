@@ -15,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Oldham',
   areaServed: 'Oldham',
   description:
-    '24/7 mobile tyre fitting in Oldham. Emergency tyre replacement and puncture repair at your home, work or roadside across OL1–OL9. Call 07759 708 646.',
+    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting and puncture repair across Oldham. We cover Oldham and the surrounding OL1–OL9 areas.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-oldham')
@@ -29,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Oldham | 24/7 Emergency & Puncture Repair',
   description:
-    '24/7 mobile tyre fitting in Oldham. Emergency tyre replacement and puncture repair at your home, work or roadside across OL1–OL9. Call 07759 708 646.',
+    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting and puncture repair across Oldham. We cover Oldham and the surrounding OL1–OL9 areas.',
   path: '/mobile-tyre-fitting-oldham',
 })
 
