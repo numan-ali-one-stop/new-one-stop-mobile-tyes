@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/schema'
+import { areaSitemapPriority } from '@/lib/area-audit'
 
 const LAST_MODIFIED = '2026-08-05'
 
@@ -112,7 +113,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,
       lastModified: LAST_MODIFIED,
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      // Core-tier pages from the Area Audit sheet (lib/area-audit.ts) get a higher priority.
+      priority: areaSitemapPriority(slug, 0.7),
     })),
     ...ROAD_PAGES.map((slug) => ({
       url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,

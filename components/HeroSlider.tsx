@@ -1,6 +1,7 @@
 'use client'
 
 import { PHONE_TEL } from '@/lib/constants'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 
 const HERO = {
   image: '/images/IMG_2098.jpeg',
@@ -135,6 +136,7 @@ export default function HeroSlider() {
               </a>
             </div>
 
+            <QuickQuoteForm variant="hero" />
           </div>
         </div>
 

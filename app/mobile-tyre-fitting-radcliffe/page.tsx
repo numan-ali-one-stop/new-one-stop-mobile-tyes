@@ -7,6 +7,7 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { serviceSchema } from '@/lib/schema'
 
 const _serviceSchema = serviceSchema({
@@ -109,6 +110,8 @@ export default function RadcliffePage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Radcliffe" />
           </div>
         </section>
 
@@ -230,7 +233,7 @@ export default function RadcliffePage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">The Best Choice</span>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Mobile Tyre Fitting for Radcliffe&apos;s Everyday Roads
               </h2>
@@ -293,6 +296,9 @@ export default function RadcliffePage() {
           { q: 'Do trusted mobile tyre fitters cover Radcliffe overnight?', a: 'Yes. Our trusted mobile tyre fitters provide scheduled and emergency support across Radcliffe around the clock, subject to technician and tyre availability.' },
           { q: 'Can you arrange fast tyre support if I am already stranded?', a: 'Yes. If you cannot continue safely, tell us your exact position and the problem with the tyre. We can check available technicians and arrange the most suitable fast mobile tyre fitting or replacement response.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Radcliffe" />
 
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

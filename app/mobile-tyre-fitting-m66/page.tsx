@@ -4,6 +4,7 @@ import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -127,6 +128,8 @@ export default function M66Page() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="M66" />
           </div>
         </section>
 
@@ -323,7 +326,7 @@ export default function M66Page() {
             </div>
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-                The Best Choice
+                What You Can Expect
               </span>
               <h2
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
@@ -496,6 +499,9 @@ export default function M66Page() {
             { q: 'How quickly can a technician reach me?', a: 'Response time depends on your exact location, traffic, road conditions and technician availability. The service is positioned for fast emergency response across the M66 and Greater Manchester.' },
           ]}
         />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="M66" heading="Get a Tyre Quote on the M66" />
 
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

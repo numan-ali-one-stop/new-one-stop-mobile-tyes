@@ -1,5 +1,15 @@
 import { BOROUGHS, nearbyAreas, type LocationArea } from '@/lib/locations'
-import type { LocalArea } from './types'
+import type { LocalArea, LocalDetail } from './types'
+import { DETAILS_BURY_BOLTON } from './details-bury-bolton'
+import { DETAILS_MANCHESTER } from './details-manchester'
+import { DETAILS_OLDHAM_ROCHDALE } from './details-oldham-rochdale'
+import { DETAILS_SALFORD_STOCKPORT } from './details-salford-stockport'
+import { DETAILS_TAMESIDE_TRAFFORD } from './details-tameside-trafford'
+import { DETAILS_WIGAN_NATIONAL } from './details-wigan-national'
+import { EXTRA_1 } from './extra-1'
+import { EXTRA_2 } from './extra-2'
+import { EXTRA_3 } from './extra-3'
+import { EXTRA_4 } from './extra-4'
 import { BURY_BOLTON } from './bury-bolton'
 import { MANCHESTER } from './manchester'
 import { OLDHAM_ROCHDALE } from './oldham-rochdale'
@@ -7,7 +17,7 @@ import { SALFORD_STOCKPORT } from './salford-stockport'
 import { TAMESIDE_TRAFFORD } from './tameside-trafford'
 import { WIGAN_NATIONAL } from './wigan-national'
 
-export type { LocalArea }
+export type { LocalArea, LocalDetail }
 
 /** Local detail for each area page, keyed by location slug. Motorway pages have their own junction content. */
 export const LOCAL_AREAS: Record<string, LocalArea> = {
@@ -18,6 +28,19 @@ export const LOCAL_AREAS: Record<string, LocalArea> = {
   ...TAMESIDE_TRAFFORD,
   ...WIGAN_NATIONAL,
 }
+
+/** Extra local copy (common call-outs, parking/access) for each area page, keyed by location slug. */
+export const LOCAL_DETAILS: Record<string, LocalDetail> = {
+  ...DETAILS_BURY_BOLTON,
+  ...DETAILS_MANCHESTER,
+  ...DETAILS_OLDHAM_ROCHDALE,
+  ...DETAILS_SALFORD_STOCKPORT,
+  ...DETAILS_TAMESIDE_TRAFFORD,
+  ...DETAILS_WIGAN_NATIONAL,
+}
+
+/** "Before we arrive" — practical, area-specific advice for each area page, keyed by location slug. */
+export const LOCAL_EXTRA: Record<string, string> = { ...EXTRA_1, ...EXTRA_2, ...EXTRA_3, ...EXTRA_4 }
 
 const normalise = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '')
 

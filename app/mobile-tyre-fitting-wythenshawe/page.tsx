@@ -7,6 +7,7 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -120,6 +121,8 @@ export default function WythenshawePage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Wythenshawe" />
           </div>
         </section>
 
@@ -241,7 +244,7 @@ export default function WythenshawePage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">The Best Choice</span>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Professional Mobile Tyre Fitting in Wythenshawe
               </h2>
@@ -455,6 +458,9 @@ export default function WythenshawePage() {
           { q: 'Can you fit tyres at home without visiting a garage?', a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.' },
           { q: 'What areas near Wythenshawe do you cover?', a: 'We cover Wythenshawe and surrounding areas including Baguley, Northenden, Benchill, Sharston, Newall Green and Woodhouse Park. Contact us with your exact location to confirm service availability.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Wythenshawe" />
 
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

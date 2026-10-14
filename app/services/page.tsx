@@ -192,7 +192,7 @@ export default function ServicesPage() {
                     <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-primary text-xl sm:text-2xl">construction</span>
                   </div>
                   <div>
-                    <h4 className="font-label-bold text-sm sm:text-label-bold text-secondary sm:text-lg mb-1">Certified Technicians</h4>
+                    <h4 className="font-label-bold text-sm sm:text-label-bold text-secondary sm:text-lg mb-1">Trained Technicians</h4>
                     <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant">Our team is fully insured and highly experienced with all makes and models.</p>
                   </div>
                 </div>

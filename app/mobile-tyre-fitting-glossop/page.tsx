@@ -5,6 +5,7 @@ import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { serviceSchema } from '@/lib/schema'
 
 const _serviceSchema = serviceSchema({
@@ -107,6 +108,8 @@ export default function GlossopPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Glossop" />
           </div>
         </section>
 
@@ -228,7 +231,7 @@ export default function GlossopPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">The Best Choice</span>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Expert Mobile Tyre Fitting Service Across Glossop
               </h2>
@@ -264,6 +267,9 @@ export default function GlossopPage() {
           { q: 'Do you cover Hadfield, Padfield and Tintwistle as well?', a: 'Yes, we cover the whole of Glossop and the surrounding Longdendale villages including Hadfield, Padfield, Tintwistle and Charlesworth, with 24/7 availability.' },
           { q: 'Can you fit tyres near Glossop Market or the town centre?', a: 'Absolutely. We regularly attend Glossop town centre, including car parks near Glossop Market and Norfolk Square, fitting tyres wherever it is safe to park.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Glossop" />
 
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

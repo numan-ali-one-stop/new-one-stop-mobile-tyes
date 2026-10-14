@@ -7,6 +7,7 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { serviceSchema } from '@/lib/schema'
 
 const _serviceSchema = serviceSchema({
@@ -109,6 +110,8 @@ export default function PrestwichPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Prestwich" />
           </div>
         </section>
 
@@ -300,6 +303,9 @@ export default function PrestwichPage() {
           { q: 'Do you have trusted mobile tyre fitters covering Prestwich?', a: 'Yes. Our trusted mobile tyre fitters serve Prestwich as part of our Greater Manchester coverage, assisting with scheduled fitting, same-day requirements and emergency tyre problems.' },
           { q: 'Can I have a tyre fitted on my drive in Prestwich?', a: 'Where there is enough safe working space around the vehicle, having a tyre fitted on your drive can be possible. Tell us about the parking position when booking so we can confirm whether the technician can work there safely.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Prestwich" />
 
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

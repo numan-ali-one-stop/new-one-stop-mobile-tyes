@@ -2,10 +2,17 @@ import type { LocalArea } from './types'
 
 export const MANCHESTER: Record<string, LocalArea> = {
   manchester: {
-    pc: ['M1', 'M2', 'M3', 'M4', 'M8', 'M9', 'M11–M16', 'M18–M23', 'M40'],
-    roads: ['Mancunian Way (A57(M))', 'Princess Parkway (A5103)', 'Oxford Road (A34)', 'Great Ancoats Street', 'M60 ring road'],
+    pc: ['M1–M16', 'M18–M23', 'M40'],
+    roads: [
+      'Mancunian Way (A57(M))', 'Princess Parkway (A5103)', 'Oxford Road (A34)', 'Deansgate (A56)',
+      'Great Ancoats Street (A665)', 'Trinity Way (A6042)', 'M60 ring road',
+    ],
     near: ['Salford', 'Ancoats', 'Hulme', 'Ardwick', 'Cheetham Hill'],
-    note: "From city-centre car parks and apartment blocks to the suburbs inside the M60, we bring mobile tyre fitting to wherever your car is parked, whether that's a multi-storey, a driveway or a safe roadside spot.",
+    landmarks: [
+      'Manchester Piccadilly station', 'Manchester Victoria station', 'Deansgate & Spinningfields', 'Northern Quarter',
+      'Manchester Arndale', "St Peter’s Square", 'Castlefield', 'Oxford Road & the universities',
+    ],
+    note: "From the multi-storeys around Piccadilly and the Arndale to apartment blocks in Spinningfields, Castlefield and the Northern Quarter, we fit tyres wherever your car is parked in the city centre (M1–M4) and right across the M-postcode suburbs inside the M60.",
   },
   blackley: {
     pc: ['M9'],
@@ -23,12 +30,19 @@ export const MANCHESTER: Record<string, LocalArea> = {
     pc: ['M21'],
     roads: ['Barlow Moor Road (A5145)', 'Wilbraham Road (A6010)', 'Mauldeth Road West', 'Princess Parkway'],
     near: ['Whalley Range', 'Firswood', 'Stretford', 'Didsbury', 'Withington'],
+    landmarks: [
+      'Chorlton Green', 'Beech Road', 'Chorlton Water Park', 'Chorlton Ees', 'Chorlton Park', 'Chorlton Metrolink',
+    ],
     note: "Chorlton's terraced streets often have limited parking, so we fit tyres kerbside outside your home. That covers Beech Road, Chorlton Green and the roads around the Metrolink stops.",
   },
   didsbury: {
     pc: ['M20'],
-    roads: ['Wilmslow Road (B5093)', 'Kingsway (A34)', 'Palatine Road (B5167)', 'School Lane'],
+    roads: ['Wilmslow Road (B5093)', 'Burton Road', 'Kingsway (A34)', 'Palatine Road (B5167)', 'School Lane'],
     near: ['Withington', 'Burnage', 'Northenden', 'Heaton Mersey', 'Fallowfield'],
+    landmarks: [
+      'Didsbury Village', 'West Didsbury & Burton Road', 'East Didsbury & Parrs Wood', 'Fletcher Moss Gardens',
+      'Didsbury Village Metrolink', 'East Didsbury station',
+    ],
     note: "We cover Didsbury Village, West and East Didsbury, and drivers on Kingsway heading for the M60, fitting tyres at homes, offices and the station car parks.",
   },
   beswick: {

@@ -26,7 +26,7 @@ export default function ContactPageClient() {
   const faqs = [
     {
       q: 'What is your average response time?',
-      a: 'In most of the areas we cover, we aim to reach you within 20 to 30 minutes. Our dispatch system identifies the nearest technician to your location to ensure the fastest possible arrival.',
+      a: 'In most of the areas we cover, we aim to reach you within 20 to 30 minutes. Our dispatch system identifies the nearest technician to your location so we can reach you as quickly as possible.',
     },
     {
       q: 'Do you really operate 24 hours a day?',

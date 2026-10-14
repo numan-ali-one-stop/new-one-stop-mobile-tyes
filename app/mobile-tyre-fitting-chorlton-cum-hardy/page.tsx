@@ -2,20 +2,20 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-chorlton-cum-hardy',
-  alternateName: '24/7 Mobile Tyre Fitting Chorlton Cum Hardy',
-  areaServed: 'Chorlton Cum Hardy',
+  alternateName: '24/7 Mobile Tyre Fitting Chorlton-cum-Hardy',
+  areaServed: 'Chorlton-cum-Hardy',
   description:
-    'Need mobile tyre fitting in Chorlton Cum Hardy? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Chorlton-cum-Hardy (M21)? 24/7 mobile tyre fitting and puncture repair on Barlow Moor Road and Wilbraham Road. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-chorlton-cum-hardy')
@@ -29,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Chorlton-cum-Hardy | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Chorlton Cum Hardy? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Chorlton-cum-Hardy (M21)? 24/7 mobile tyre fitting and puncture repair on Barlow Moor Road and Wilbraham Road. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-chorlton-cum-hardy',
 })
 
@@ -75,7 +75,7 @@ const whyChooseChorltonCumHardy = [
   },
   {
     icon: 'location_on',
-    title: 'Local Chorlton Cum Hardy Coverage',
+    title: 'Local Chorlton-cum-Hardy Coverage',
     desc: 'Service available across the area and nearby locations.',
   },
 ]
@@ -112,11 +112,12 @@ export default function ChorltoncumHardyPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Chorlton Cum Hardy
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Chorlton-cum-Hardy
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced in Chorlton Cum Hardy? Our <strong>mobile tyre fitting Chorlton Cum Hardy</strong> service brings professional tyre fitting directly to your home, workplace or a suitable roadside location. We also provide emergency tyre replacement when a damaged or unsafe tyre cannot be repaired.
+              Flat tyre on Barlow Moor Road or a puncture outside your house near Beech Road? We come to you 24/7 across Chorlton-cum-Hardy and the M21 postcode, from Chorlton Green and the shops on Wilbraham Road to Chorltonville and the streets by Chorlton Water Park. We repair punctures where it is safe and fit replacement tyres at the kerb, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-whalley-range" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Whalley Range</a> and <a href="/mobile-tyre-fitting-didsbury" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Didsbury</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -126,7 +127,7 @@ export default function ChorltoncumHardyPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Workplace & Roadside Fitting',
-                'Chorlton Cum Hardy & Surrounding Areas',
+                'M21: All of Chorlton-cum-Hardy',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -152,7 +153,7 @@ export default function ChorltoncumHardyPage() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Chorlton Cum Hardy &amp; Greater Manchester</span>
+              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Chorlton-cum-Hardy &amp; Greater Manchester</span>
             </a>
 
             {/* CTAs */}
@@ -176,6 +177,8 @@ export default function ChorltoncumHardyPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Chorlton-cum-Hardy" />
           </div>
         </section>
 
@@ -372,19 +375,19 @@ export default function ChorltoncumHardyPage() {
             </div>
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-                The Best Choice
+                What You Can Expect
               </span>
               <h2
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Chorlton Cum Hardy
+                Professional Mobile Tyre Fitting in Chorlton-cum-Hardy
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-                A punctured, damaged or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Chorlton Cum Hardy</strong> service allows you to have your tyres fitted or replaced at a convenient location.
+                A punctured, damaged or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Chorlton-cum-Hardy</strong> service allows you to have your tyres fitted or replaced at a convenient location.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres 247 provides professional mobile tyre fitting across Chorlton Cum Hardy and nearby areas. Whether you&apos;re at home, at work, parked in a suitable location or dealing with a tyre problem at the roadside, our technician can assess your requirements and carry out fitting or replacement where conditions are safe and suitable.
+                One Stop Tyres 247 provides professional mobile tyre fitting across Chorlton-cum-Hardy and nearby areas. Whether you&apos;re at home, at work, parked in a suitable location or dealing with a tyre problem at the roadside, our technician can assess your requirements and carry out fitting or replacement where conditions are safe and suitable.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -401,7 +404,7 @@ export default function ChorltoncumHardyPage() {
                 <FeatureItem
                   icon="location_on"
                   title="Convenient Local Service"
-                  desc="Our technician comes directly to your location in Chorlton Cum Hardy."
+                  desc="Our technician comes directly to your location in Chorlton-cum-Hardy."
                 />
                 <FeatureItem
                   icon="schedule"
@@ -415,7 +418,7 @@ export default function ChorltoncumHardyPage() {
 
         {/* ── 5. WHY CHOOSE ─────────────────────────────────── */}
         <WhyChooseGrid
-          heading="Why Choose Our Mobile Tyre Fitting Service in Chorlton Cum Hardy?"
+          heading="Why Choose Our Mobile Tyre Fitting Service in Chorlton-cum-Hardy?"
           intro=""
           items={whyChooseChorltonCumHardy}
         />
@@ -438,7 +441,7 @@ export default function ChorltoncumHardyPage() {
                 className="text-2xl sm:text-[32px] font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                How Our Mobile Tyre Fitting Service Works in Chorlton Cum Hardy
+                How Our Mobile Tyre Fitting Service Works in Chorlton-cum-Hardy
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
@@ -491,7 +494,7 @@ export default function ChorltoncumHardyPage() {
           </div>
         </section>
 
-        {/* ── 7. MOBILE TYRE REPLACEMENT ACROSS CHORLTON CUM HARDY ── */}
+        {/* ── 7. MOBILE TYRE REPLACEMENT ACROSS CHORLTON-CUM-HARDY ── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
@@ -501,16 +504,16 @@ export default function ChorltoncumHardyPage() {
               className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Mobile Tyre Replacement Across Chorlton Cum Hardy
+              Mobile Tyre Replacement Across Chorlton-cum-Hardy
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              Not every damaged tyre can be repaired safely. Our <strong>mobile tyre replacement Chorlton Cum Hardy</strong> service provides a convenient option when you need a new tyre fitted without driving to a garage.
+              Not every damaged tyre can be repaired safely. Our <strong>mobile tyre replacement Chorlton-cum-Hardy</strong> service provides a convenient option when you need a new tyre fitted without driving to a garage.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               We can replace tyres that are severely damaged, worn beyond safe limits or punctured in a way that makes repair unsuitable. Our technician assesses the tyre first and determines whether tyre repair or replacement is the appropriate option.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Whether you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Chorlton Cum Hardy, subject to tyre availability.
+              Whether you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Chorlton-cum-Hardy, subject to tyre availability.
             </p>
           </div>
         </section>
@@ -525,25 +528,24 @@ export default function ChorltoncumHardyPage() {
               className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Emergency Mobile Tyre Fitting and Replacement in Chorlton Cum Hardy
+              Emergency Mobile Tyre Fitting and Replacement in Chorlton-cum-Hardy
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              A sudden puncture, blowout or damaged tyre can leave you unable to continue your journey. Our <strong>emergency mobile tyre fitting Chorlton Cum Hardy</strong> service provides practical assistance when you need a tyre fitted or replaced at your location.
+              A sudden puncture, blowout or damaged tyre can leave you unable to continue your journey. Our <strong>emergency mobile tyre fitting Chorlton-cum-Hardy</strong> service provides practical assistance when you need a tyre fitted or replaced at your location.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               If the tyre can be safely repaired, our technician can assess the damage and provide puncture repair where appropriate. If repair isn&apos;t suitable, we can provide emergency tyre replacement with a suitable tyre, subject to availability.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Our mobile service can be provided at home, work or a safe roadside location in Chorlton Cum Hardy.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-whalley-range" className="text-[#b70011] font-semibold hover:underline">Whalley Range</a> and <a href="/mobile-tyre-fitting-firswood" className="text-[#b70011] font-semibold hover:underline">Firswood</a> to the north,{' '}
+              <a href="/mobile-tyre-fitting-stretford" className="text-[#b70011] font-semibold hover:underline">Stretford</a> and <a href="/mobile-tyre-fitting-old-trafford" className="text-[#b70011] font-semibold hover:underline">Old Trafford</a> to the west,{' '}
+              <a href="/mobile-tyre-fitting-didsbury" className="text-[#b70011] font-semibold hover:underline">Didsbury</a> and <a href="/mobile-tyre-fitting-withington" className="text-[#b70011] font-semibold hover:underline">Withington</a> to the east, and <a href="/mobile-tyre-fitting-sale" className="text-[#b70011] font-semibold hover:underline">Sale</a> across the Mersey.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="chorlton-cum-hardy" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -554,76 +556,59 @@ export default function ChorltoncumHardyPage() {
         {/* ── 10. FAQ ────────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-chorlton-cum-hardy"
-          city="Chorlton Cum Hardy"
+          city="Chorlton-cum-Hardy"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Chorlton Cum Hardy?',
-              a: 'Yes. We provide mobile tyre fitting in Chorlton Cum Hardy for drivers who need tyres fitted or replaced at a convenient location.',
+              q: 'Do you cover all of Chorlton-cum-Hardy?',
+              a: 'Yes. We cover the whole M21 postcode, including Chorlton Green, Beech Road, Chorltonville and the streets around Chorlton Park and Chorlton Water Park.',
             },
             {
-              q: 'Can you replace my tyre in Chorlton Cum Hardy?',
-              a: 'Yes. We provide mobile tyre replacement for damaged, worn or unsafe tyres where a suitable replacement is available.',
+              q: 'My street has no driveway. Can you still fit the tyre?',
+              a: 'Yes. Most Chorlton streets are terraced with on-street parking, so we fit tyres safely at the kerb outside your house and keep the road clear.',
             },
             {
-              q: 'Do you provide emergency tyre replacement?',
-              a: 'Yes. If your tyre cannot be safely repaired, we can provide emergency replacement assistance, subject to tyre availability.',
+              q: 'I have a flat on Barlow Moor Road or Wilbraham Road. What should I do?',
+              a: 'Both roads are busy, so turn into the nearest side street if the tyre allows. Send us a map pin and we will come to you there.',
             },
             {
-              q: 'Can you repair a punctured tyre instead of replacing it?',
-              a: 'Yes. Our technician assesses the puncture first. If the damage is suitable for repair, a puncture repair may be possible. Otherwise, tyre replacement may be recommended.',
+              q: 'Can you come to the Chorlton Metrolink stop or the Water Park car park?',
+              a: 'Yes. Tell us where you are parked near Chorlton Metrolink, or which part of the Chorlton Water Park car park you are in.',
             },
             {
-              q: 'Can you fit tyres at my home in Chorlton Cum Hardy?',
-              a: 'Yes. We can provide home tyre fitting where there is a safe and suitable area for the technician to work.',
+              q: 'Parking is tight near Beech Road and Chorlton Green. Is that a problem?',
+              a: 'No. We bring a compact setup and keep the job quick. If there is no safe space where the car is, we can suggest a better spot nearby.',
             },
             {
-              q: 'Can you fit tyres at my workplace?',
-              a: 'Yes. Mobile tyre fitting can be arranged at your workplace if there is a safe and accessible location for the work.',
+              q: 'Do you help drivers on Princess Parkway near Chorlton?',
+              a: 'Yes. If you get a flat on Princess Parkway, leave at the next turn-off and stop on a residential street, then call us with your location.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre service is available 24/7 for suitable tyre fitting and replacement requirements.',
+              q: 'How quickly can you reach me in Chorlton-cum-Hardy?',
+              a: 'It depends on traffic on Barlow Moor Road, Wilbraham Road and Princess Parkway. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Can you help if I have a flat tyre?',
-              a: 'Yes. We can assess your flat tyre and determine whether it requires a puncture repair or tyre replacement.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre after a blowout?',
-              a: 'Yes. If the tyre has suffered a blowout and cannot be safely repaired, we can provide replacement assistance where a suitable tyre is available.',
+              q: 'Do you fit tyres at night in Chorlton?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late in the evening or before an early start.',
             },
             {
-              q: 'How long does mobile tyre fitting take?',
-              a: "The time depends on the number of tyres, vehicle and work required. We'll provide an estimated timeframe when arranging your appointment.",
-            },
-            {
-              q: 'What information do I need to book a replacement tyre?',
-              a: 'Your vehicle registration or tyre size, your Chorlton Cum Hardy location and the number of tyres required are normally enough to get started.',
-            },
-            {
-              q: 'Can you replace just one tyre?',
-              a: "Yes, where a suitable replacement is available. Our technician can assess the vehicle and advise you based on the tyre's condition and requirements.",
-            },
-            {
-              q: 'Do you provide tyre fitting near me in Chorlton Cum Hardy?',
-              a: "Yes. If you're in Chorlton Cum Hardy, contact us with your location and tyre requirements so we can assess the appropriate service.",
-            },
-            {
-              q: 'Can you provide mobile tyre fitting at the roadside?',
-              a: 'Yes, provided the location is safe and suitable for our technician to carry out the work.',
-            },
-            {
-              q: 'Do you cover areas around Chorlton Cum Hardy?',
-              a: 'Yes. We provide service across Chorlton Cum Hardy and surrounding South Manchester areas, including nearby locations such as Chorlton, Whalley Range, West Didsbury and Sale.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M21 postcode.',
             },
           ]}
         />
 
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Chorlton-cum-Hardy" />
+
         {/* ── 11. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Chorlton Cum Hardy?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a new tyre fitted, a damaged tyre replaced or a puncture assessed, our mobile service brings professional tyre assistance directly to you. With One Stop Tyres 247, you can arrange tyre fitting or replacement at home, work or a suitable roadside location across Chorlton Cum Hardy.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Chorlton-cum-Hardy?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a new tyre fitted, a damaged tyre replaced or a puncture assessed, our mobile service brings professional tyre assistance directly to you. With One Stop Tyres 247, you can arrange tyre fitting or replacement at home, work or a suitable roadside location across Chorlton-cum-Hardy.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

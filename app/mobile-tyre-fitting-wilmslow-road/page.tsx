@@ -5,6 +5,7 @@ import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -142,6 +143,8 @@ export default function WilmslowRoadPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Wilmslow Road" />
           </div>
         </section>
 
@@ -338,7 +341,7 @@ export default function WilmslowRoadPage() {
             </div>
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-                The Best Choice
+                What You Can Expect
               </span>
               <h2
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
@@ -377,7 +380,7 @@ export default function WilmslowRoadPage() {
           items={[
             { icon: 'bolt', title: 'Fast Emergency Response', desc: 'Our mobile tyre team aims to reach customers within 20–30 minutes, although actual arrival times can vary depending on traffic, road conditions, location and demand.' },
             { icon: 'sell', title: 'No Hidden Call-Out Fees', desc: 'We provide pricing information before carrying out the work, helping you understand the expected cost before the technician arrives.' },
-            { icon: 'engineering', title: 'Fully Certified Technicians', desc: 'Our technicians are trained and insured to work on a wide range of vehicles, from everyday cars to modern electric vehicles.' },
+            { icon: 'engineering', title: 'Trained, Insured Technicians', desc: 'Our technicians are trained and insured to work on a wide range of vehicles, from everyday cars to modern electric vehicles.' },
             { icon: 'tire_repair', title: 'Premium & Budget Tyre Options', desc: 'We can supply and fit a range of tyre options depending on your vehicle, tyre size, availability and requirements.' },
           ]}
         />
@@ -456,7 +459,7 @@ export default function WilmslowRoadPage() {
         <section className="py-8 px-4 sm:px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <a
-              href="/guides/what-to-do-flat-tyre-wilmslow-road-manchester-motorway"
+              href="/guides/what-to-do-flat-tyre-m60-manchester-motorway"
               className="group flex items-center justify-between gap-4 bg-slate-50 border border-slate-100 rounded-2xl p-5 sm:p-6 hover:border-[#b70011]/30 hover:shadow-md transition-all"
             >
               <div>
@@ -494,6 +497,9 @@ export default function WilmslowRoadPage() {
             { q: 'How do I book a mobile tyre fitting?', a: 'Call 07759 708 646 for an instant quote and to provide your location.' },
           ]}
         />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Wilmslow Road" />
 
         {/* ── 10. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

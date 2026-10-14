@@ -7,6 +7,7 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { serviceSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -110,6 +111,8 @@ export default function WiganPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Wigan" />
           </div>
         </section>
 
@@ -231,7 +234,7 @@ export default function WiganPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">The Best Choice</span>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Expert Mobile Tyre Fitting Service Across Wigan
               </h2>
@@ -273,6 +276,9 @@ export default function WiganPage() {
           { q: 'Can you fit tyres on the M6 near Wigan?', a: 'Absolutely. Our vehicles are equipped with high-intensity safety lighting to perform safe roadside changes on high-speed roads and motorways, including the M6 junctions 25-27.' },
           { q: 'Do you cover Standish, Hindley, and Leigh?', a: 'Yes. We cover the entire Wigan borough including Standish, Hindley, Leigh, Orrell, Ashton-in-Makerfield, and all surrounding areas with 24/7 availability.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Wigan" />
 
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

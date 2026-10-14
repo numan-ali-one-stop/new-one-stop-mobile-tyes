@@ -7,6 +7,7 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { serviceSchema } from '@/lib/schema'
 
 const _serviceSchema = serviceSchema({
@@ -109,6 +110,8 @@ export default function MarplePage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Marple" />
           </div>
         </section>
 
@@ -230,7 +233,7 @@ export default function MarplePage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">The Best Choice</span>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Expert Mobile Tyre Fitting Service Across Marple
               </h2>
@@ -272,6 +275,9 @@ export default function MarplePage() {
           { q: 'Can you help if I break down near the M60 close to Marple?', a: 'Yes. Our vehicles carry high-intensity safety lighting to carry out safe roadside tyre changes on the approach roads to the M60 near Stockport and Marple.' },
           { q: 'Can you fit tyres near Marple Market or the town centre?', a: 'Absolutely. We regularly attend Marple town centre, including car parks near Marple Memorial Park and the town centre shops, fitting tyres wherever it is safe to park.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Marple" />
 
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

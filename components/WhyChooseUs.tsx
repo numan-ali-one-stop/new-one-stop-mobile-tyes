@@ -56,7 +56,7 @@ export default function WhyChooseUs({
 }: WhyChooseUsProps) {
   const imgSrc = image ?? "/images/mobile-tyre-fitting-service.webp"
   const heading = headingOverride ?? (locationType === 'road' ? `Why Drivers Choose Us on the ${city}?` : `Why ${city} Drivers Choose Us?`)
-  const responseTitle = responseTitleOverride ?? (locationType === 'road' ? `Fastest Response on the ${city}` : `Fastest Response in ${city}`)
+  const responseTitle = responseTitleOverride ?? (locationType === 'road' ? `Fast Response on the ${city}` : `Fast Response in ${city}`)
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20 border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -77,7 +77,7 @@ export default function WhyChooseUs({
         {/* Content */}
         <div className="order-1 lg:order-2">
           <span className="text-[#b70011] font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 sm:mb-3 block">
-            The Best Choice
+            What You Can Expect
           </span>
           <h2
             className="text-xl sm:text-2xl lg:text-4xl font-bold text-[#0f172a] mb-4 sm:mb-6 leading-tight"
@@ -102,8 +102,8 @@ export default function WhyChooseUs({
             />
             <FeatureItem
               icon="verified_user"
-              title={certifiedTitle ?? "Fully Certified Technicians"}
-              desc={certifiedDesc ?? "All our fitters are IMI certified and insured to work on everything from family hatchbacks to prestige electric vehicles."}
+              title={certifiedTitle ?? "Trained, Insured Technicians"}
+              desc={certifiedDesc ?? "Our fitters are trained and insured to work on everything from family hatchbacks to prestige electric vehicles."}
               bg="bg-[#d7e2ff]"
               iconColor="text-[#001b3f]"
             />

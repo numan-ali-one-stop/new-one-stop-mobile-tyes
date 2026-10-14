@@ -1,4 +1,4 @@
-import { LOCAL_AREAS, areaName } from '@/lib/local-areas'
+import { LOCAL_AREAS, LOCAL_DETAILS, LOCAL_EXTRA, areaName } from '@/lib/local-areas'
 
 interface LocalAreaInfoProps {
   /** The current page's location slug, e.g. "fallowfield" (no "mobile-tyre-fitting-" prefix). */
@@ -8,8 +8,17 @@ interface LocalAreaInfoProps {
 /** Area-specific postcodes, roads and copy. Neighbouring-area links live in <NearbyAreas />. */
 export default function LocalAreaInfo({ currentSlug }: LocalAreaInfoProps) {
   const area = LOCAL_AREAS[currentSlug]
+  const detail = LOCAL_DETAILS[currentSlug]
+  const extra = LOCAL_EXTRA[currentSlug]
   const name = areaName(currentSlug)
   if (!area || !name) return null
+
+  const list = (items: string[]) =>
+    items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items[0] ?? ''
+  const coverage =
+    `We cover ${name} and the ${list(area.pc)} postcode ${area.pc.length > 1 ? 'areas' : 'area'}, ` +
+    `including ${list(area.roads.slice(0, 3))}. From here our technicians also travel on to ${list(area.near.slice(0, 4))}. ` +
+    `Call or WhatsApp us with your location (a map pin is quickest) and we will give you an arrival estimate before we set off.`
 
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#f8fafc] border-t border-slate-100">
@@ -25,9 +34,24 @@ export default function LocalAreaInfo({ currentSlug }: LocalAreaInfoProps) {
             Mobile Tyre Fitting Around {name}
           </h2>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">{area.note}</p>
+          {detail && (
+            <>
+              <h3 className="font-bold text-[#0f172a] text-lg mt-6 mb-2">Common call-outs in {name}</h3>
+              <p className="text-slate-600 text-base leading-relaxed">{detail.scenarios}</p>
+              <h3 className="font-bold text-[#0f172a] text-lg mt-6 mb-2">Parking and access</h3>
+              <p className="text-slate-600 text-base leading-relaxed">{detail.parking}</p>
+            </>
+          )}
+          {extra && (
+            <>
+              <h3 className="font-bold text-[#0f172a] text-lg mt-6 mb-2">Before we arrive</h3>
+              <p className="text-slate-600 text-base leading-relaxed">{extra}</p>
+            </>
+          )}
+          <p className="text-slate-600 text-base leading-relaxed mt-6">{coverage}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className={`grid grid-cols-1 gap-4 sm:gap-6 ${area.landmarks?.length ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
           <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
               <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">markunread_mailbox</span>
@@ -63,6 +87,23 @@ export default function LocalAreaInfo({ currentSlug }: LocalAreaInfoProps) {
               ))}
             </ul>
           </div>
+
+          {area.landmarks && area.landmarks.length > 0 && (
+            <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">location_city</span>
+                <h3 className="font-bold text-[#0f172a]">Local landmarks we cover</h3>
+              </div>
+              <ul className="space-y-2">
+                {area.landmarks.map((place) => (
+                  <li key={place} className="flex items-start gap-2 text-slate-600 text-sm sm:text-base">
+                    <span className="text-[#b70011] mt-0.5">•</span>
+                    {place}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </section>

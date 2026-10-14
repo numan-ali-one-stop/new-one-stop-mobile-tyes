@@ -1,11 +1,18 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { BOROUGHS, findBorough } from '@/lib/locations'
 
 type Review = {
   initials: string
   name: string
   review: string
+  /**
+   * The reviewer's town or borough — fill in ONLY when it is known to be true (e.g. stated in the
+   * review or confirmed from the job record). Shown on the card, and used to put local reviews first.
+   */
+  area?: string
 }
 
 const REVIEWS: Review[] = [
@@ -86,9 +93,21 @@ export default function ReviewsCarousel({ offset = 0 }: { offset?: number }) {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
 
-  const rotated = offset % REVIEWS.length === 0
-    ? REVIEWS
-    : [...REVIEWS.slice(offset % REVIEWS.length), ...REVIEWS.slice(0, offset % REVIEWS.length)]
+  // Rotate by region: every page in the same borough shares an order, and each borough
+  // starts from a different review. Pages outside the boroughs fall back to `offset`.
+  const pathname = usePathname() ?? ''
+  const slug = pathname.startsWith('/mobile-tyre-fitting-') ? pathname.slice('/mobile-tyre-fitting-'.length) : ''
+  const borough = slug ? findBorough(slug) : undefined
+  const regionIndex = borough ? BOROUGHS.indexOf(borough) : -1
+  const start = (regionIndex >= 0 ? regionIndex : offset) % REVIEWS.length
+  const ordered = start === 0 ? REVIEWS : [...REVIEWS.slice(start), ...REVIEWS.slice(0, start)]
+
+  // Reviews tagged with this page's borough (or one of its towns) come first.
+  const localNames = borough
+    ? new Set([borough.name, ...borough.towns.map((t) => t.name)].map((n) => n.toLowerCase()))
+    : null
+  const isLocal = (r: Review) => !!(localNames && r.area && localNames.has(r.area.toLowerCase()))
+  const rotated = localNames ? [...ordered.filter(isLocal), ...ordered.filter((r) => !isLocal(r))] : ordered
   // Duplicate the list once. Combined with translateX(-50%) in the keyframes,
   // this produces a seamless infinite loop.
   const LOOP = mounted ? [...rotated, ...rotated] : rotated
@@ -147,7 +166,7 @@ export default function ReviewsCarousel({ offset = 0 }: { offset?: number }) {
               </div>
               <div>
                 <p className="text-sm font-bold text-[#0f172a]">{r.name}</p>
-                <p className="text-xs text-slate-400">Google review</p>
+                <p className="text-xs text-slate-400">Google review{r.area ? ` · ${r.area}` : ''}</p>
               </div>
             </div>
           </div>

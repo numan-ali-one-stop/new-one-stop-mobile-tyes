@@ -4,6 +4,7 @@ import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -127,6 +128,8 @@ export default function A57Page() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="A57(M)" />
           </div>
         </section>
 
@@ -323,7 +326,7 @@ export default function A57Page() {
             </div>
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-                The Best Choice
+                What You Can Expect
               </span>
               <h2
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
@@ -463,7 +466,7 @@ export default function A57Page() {
         <section className="py-8 px-4 sm:px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <a
-              href="/guides/what-to-do-flat-tyre-a57-manchester-motorway"
+              href="/guides/what-to-do-flat-tyre-m60-manchester-motorway"
               className="group flex items-center justify-between gap-4 bg-slate-50 border border-slate-100 rounded-2xl p-5 sm:p-6 hover:border-[#b70011]/30 hover:shadow-md transition-all"
             >
               <div>
@@ -498,6 +501,9 @@ export default function A57Page() {
             { q: 'Is it safe to change a tyre on the A57?', a: 'Safety depends on the exact location. If you have a motorway or high-speed-road breakdown, move to a safe place where possible and follow the appropriate roadside procedures. Our technicians use professional equipment and advise drivers to remain behind the crash barrier where applicable.' },
           ]}
         />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="A57(M)" heading="Get a Tyre Quote on the A57(M)" />
 
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

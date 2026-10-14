@@ -2,11 +2,11 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -15,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Didsbury',
   areaServed: 'Didsbury',
   description:
-    'Need mobile tyre fitting in Didsbury? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Didsbury (M20)? 24/7 mobile tyre fitting and puncture repair on Wilmslow Road, Burton Road and Didsbury Village. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-didsbury')
@@ -29,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Didsbury | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Didsbury? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Didsbury (M20)? 24/7 mobile tyre fitting and puncture repair on Wilmslow Road, Burton Road and Didsbury Village. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-didsbury',
 })
 
@@ -112,11 +112,12 @@ export default function DidsburyPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Didsbury
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Didsbury
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced in Didsbury? Our <strong>mobile tyre fitting Didsbury</strong> service brings professional tyre fitting directly to your home, workplace or a suitable roadside location. We also provide emergency tyre replacement when a damaged or unsafe tyre cannot be repaired.
+              Flat tyre on Wilmslow Road or a puncture outside your house off Burton Road? We come to you 24/7 across the M20 postcode, from Didsbury Village and West Didsbury to East Didsbury and Parrs Wood, including Kingsway and Palatine Road. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-withington" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Withington</a> and <a href="/mobile-tyre-fitting-burnage" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Burnage</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -126,7 +127,7 @@ export default function DidsburyPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Workplace & Roadside Fitting',
-                'Didsbury & Surrounding Areas',
+                'M20: Village, West &amp; East Didsbury',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -176,6 +177,8 @@ export default function DidsburyPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Didsbury" />
           </div>
         </section>
 
@@ -372,7 +375,7 @@ export default function DidsburyPage() {
             </div>
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-                The Best Choice
+                What You Can Expect
               </span>
               <h2
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
@@ -534,16 +537,15 @@ export default function DidsburyPage() {
               If the tyre can be safely repaired, our technician can assess the damage and provide puncture repair where appropriate. If repair isn&apos;t suitable, we can provide emergency tyre replacement with a suitable tyre, subject to availability.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Our mobile service can be provided at home, work or a safe roadside location in Didsbury.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-withington" className="text-[#b70011] font-semibold hover:underline">Withington</a> and <a href="/mobile-tyre-fitting-fallowfield" className="text-[#b70011] font-semibold hover:underline">Fallowfield</a> to the north along Wilmslow Road,{' '}
+              <a href="/mobile-tyre-fitting-burnage" className="text-[#b70011] font-semibold hover:underline">Burnage</a> to the east, <a href="/mobile-tyre-fitting-chorlton-cum-hardy" className="text-[#b70011] font-semibold hover:underline">Chorlton-cum-Hardy</a> to the west,{' '}
+              <a href="/mobile-tyre-fitting-northenden" className="text-[#b70011] font-semibold hover:underline">Northenden</a> across the Mersey, and <a href="/mobile-tyre-fitting-heaton-mersey" className="text-[#b70011] font-semibold hover:underline">Heaton Mersey</a> and <a href="/mobile-tyre-fitting-cheadle" className="text-[#b70011] font-semibold hover:underline">Cheadle</a> towards Stockport.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="didsbury" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -557,67 +559,54 @@ export default function DidsburyPage() {
           city="Didsbury"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Didsbury?',
-              a: 'Yes. We provide mobile tyre fitting in Didsbury for drivers who need tyres fitted or replaced at a convenient location.',
+              q: 'Do you cover Didsbury Village, West Didsbury and East Didsbury?',
+              a: 'Yes. We cover the whole M20 postcode, including Didsbury Village, West Didsbury around Burton Road, East Didsbury and Parrs Wood.',
             },
             {
-              q: 'Can you replace my tyre in Didsbury?',
-              a: 'Yes. We provide mobile tyre replacement for damaged, worn or unsafe tyres where a suitable replacement is available.',
+              q: 'Can you fit a tyre on Burton Road or in West Didsbury?',
+              a: 'Yes. Burton Road gets busy with diners and shoppers, so tell us exactly where you are parked. On the side streets we fit at the kerb or on your drive.',
             },
             {
-              q: 'Do you provide emergency tyre replacement?',
-              a: 'Yes. If your tyre cannot be safely repaired, we can provide emergency replacement assistance, subject to tyre availability.',
+              q: 'I have a puncture on Wilmslow Road. What should I do?',
+              a: 'Wilmslow Road has bus lanes and heavy traffic, so turn into the nearest side street if the tyre allows. Send us a map pin and we will come to you there.',
             },
             {
-              q: 'Can you repair a punctured tyre instead of replacing it?',
-              a: 'Yes. Our technician assesses the puncture first. If the damage is suitable for repair, a puncture repair may be possible. Otherwise, tyre replacement may be recommended.',
+              q: 'Can you come to the Metrolink car parks in Didsbury?',
+              a: 'Yes. If you are parked near the Didsbury Village or East Didsbury Metrolink stops, tell us roughly where and we can fit the tyre while you are at work.',
             },
             {
-              q: 'Can you fit tyres at my home in Didsbury?',
-              a: 'Yes. We can provide home tyre fitting where there is a safe and suitable area for the technician to work.',
+              q: 'Do you help drivers on Kingsway heading for the M60?',
+              a: 'Yes. If you get a flat on Kingsway, turn off into a residential road rather than continuing towards the motorway, and call us with your location.',
             },
             {
-              q: 'Can you fit tyres at my workplace?',
-              a: 'Yes. Mobile tyre fitting can be arranged at your workplace if there is a safe and accessible location for the work.',
+              q: 'Can you fit tyres at offices on Palatine Road or at Parrs Wood?',
+              a: 'Yes. We fit tyres in office and retail car parks, as long as we have permission to work there. Tell us the building or car park name.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting in Didsbury?',
-              a: 'Yes. Our mobile tyre service is available 24/7 for suitable tyre fitting and replacement requirements.',
+              q: 'Can you fit tyres on my driveway in Didsbury?',
+              a: 'Yes. Many Didsbury homes have driveways, which are ideal for mobile fitting. If your drive is shared or gated, let us know when you call.',
             },
             {
-              q: 'Can you help if I have a flat tyre?',
-              a: 'Yes. We can assess your flat tyre and determine whether it requires a puncture repair or tyre replacement.',
+              q: 'How quickly can you reach me in Didsbury?',
+              a: 'It depends on traffic on Wilmslow Road, Kingsway and Palatine Road. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Can you replace a tyre after a blowout?',
-              a: 'Yes. If the tyre has suffered a blowout and cannot be safely repaired, we can provide replacement assistance where a suitable tyre is available.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How long does mobile tyre fitting take?',
-              a: "The time depends on the number of tyres, vehicle and work required. We'll provide an estimated timeframe when arranging your appointment.",
+              q: 'Do you fit tyres at night in Didsbury?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat after an evening out in the village or before an early start.',
             },
             {
-              q: 'What information do I need to book a replacement tyre?',
-              a: 'Your vehicle registration or tyre size, your Didsbury location and the number of tyres required are normally enough to get started.',
-            },
-            {
-              q: 'Can you replace just one tyre?',
-              a: "Yes, where a suitable replacement is available. Our technician can assess the vehicle and advise you based on the tyre's condition and requirements.",
-            },
-            {
-              q: 'Do you provide tyre fitting near me in Didsbury?',
-              a: "Yes. If you're in Didsbury, contact us with your location and tyre requirements so we can assess the appropriate service.",
-            },
-            {
-              q: 'Can you provide mobile tyre fitting at the roadside?',
-              a: 'Yes, provided the location is safe and suitable for our technician to carry out the work.',
-            },
-            {
-              q: 'Do you cover areas around Didsbury?',
-              a: 'Yes. We provide service across Didsbury and surrounding South Manchester areas, including East Didsbury, West Didsbury, Withington, Burnage, Northenden and Chorlton.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M20 postcode.',
             },
           ]}
         />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Didsbury" />
 
         {/* ── 11. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

@@ -7,6 +7,7 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { serviceSchema } from '@/lib/schema'
 
 const _serviceSchema = serviceSchema({
@@ -109,6 +110,8 @@ export default function StretfordPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Stretford" />
           </div>
         </section>
 
@@ -230,7 +233,7 @@ export default function StretfordPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">The Best Choice</span>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Expert Mobile Tyre Fitting Service Across Stretford
               </h2>
@@ -272,6 +275,9 @@ export default function StretfordPage() {
           { q: 'Do you cover Old Trafford, Gorse Hill and the Trafford Centre area as well?', a: 'Yes, we cover the whole of Stretford and the surrounding areas including Old Trafford, Gorse Hill and the Trafford Centre, with 24/7 availability.' },
           { q: 'Can you fit tyres near Stretford Mall or Old Trafford?', a: 'Absolutely. We regularly attend Stretford, including car parks near Stretford Mall and Old Trafford, fitting tyres wherever it is safe to park.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Stretford" />
 
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

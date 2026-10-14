@@ -7,6 +7,7 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { serviceSchema } from '@/lib/schema'
 
 const _serviceSchema = serviceSchema({
@@ -109,6 +110,8 @@ export default function MiddletonPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Middleton" />
           </div>
         </section>
 
@@ -230,7 +233,7 @@ export default function MiddletonPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">The Best Choice</span>
+              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Mobile Tyre Fitting for Middleton&apos;s Manchester Connections
               </h2>
@@ -297,6 +300,9 @@ export default function MiddletonPage() {
           { q: 'Are trusted mobile tyre fitters available overnight?', a: 'Yes. Our trusted mobile tyre fitters provide emergency support across Middleton overnight as well as during the day, subject to availability.' },
           { q: 'Can you arrange emergency tyre replacement if I am already stranded?', a: 'Yes. Send us your exact location, vehicle registration and tyre size. We can check suitable stock and arrange the most appropriate emergency tyre replacement response.' },
         ]} />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Middleton" />
 
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

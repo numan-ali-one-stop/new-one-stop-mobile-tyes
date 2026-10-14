@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   title: 'One Stop Mobile Tyres 24/7 | Emergency Mobile Tyre Fitting Manchester',
   description:
     'Stranded with a puncture? Our professional technicians reach you fast at home, work, or roadside across Greater Manchester. 24/7 emergency mobile tyre fitting available now.',
-  keywords: 'mobile tyre fitting, emergency tyre Manchester, puncture repair, 24/7 tyres',
   icons: {
     icon: [{ url: '/icon.webp', type: 'image/webp' }],
     apple: '/icon.webp',

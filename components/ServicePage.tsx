@@ -343,7 +343,7 @@ export default function ServicePage({
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Why Choose Us */}
           <div>
-            <SectionHeading label="The Best Choice" title="Why Choose One Stop Mobile Tyres 24/7" />
+            <SectionHeading label="What You Can Expect" title="Why Choose One Stop Mobile Tyres 24/7" />
             <BulletList items={defaultWhyChooseUs} />
           </div>
 

@@ -4,6 +4,7 @@ import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -135,6 +136,8 @@ export default function M56Page() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="M56" />
           </div>
         </section>
 
@@ -331,7 +334,7 @@ export default function M56Page() {
             </div>
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-                The Best Choice
+                What You Can Expect
               </span>
               <h2
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
@@ -377,7 +380,7 @@ export default function M56Page() {
           items={[
             { icon: 'bolt', title: '24/7 Emergency Assistance', desc: 'Tyre problems can happen at any time. Our mobile tyre service operates 24 hours a day, 7 days a week, including nights, weekends and bank holidays.' },
             { icon: 'speed', title: 'Fast Local Response', desc: 'The current M56 service states an average response time of around 20–30 minutes, although actual arrival times depend on traffic, your exact location, road conditions and technician availability.' },
-            { icon: 'engineering', title: 'Professional Mobile Technicians', desc: 'Our technicians use professional mobile equipment for tyre fitting, replacement and suitable puncture repairs. The service also states that technicians are IMI certified and insured.' },
+            { icon: 'engineering', title: 'Professional Mobile Technicians', desc: 'Our technicians use professional mobile equipment for tyre fitting, replacement and suitable puncture repairs. Our technicians are trained and insured.' },
             { icon: 'build', title: 'Repair or Replacement', desc: 'We inspect the tyre before carrying out work. Where a puncture is safely repairable, a repair may be possible. If the tyre is damaged or unsafe, replacement may be required.' },
             { icon: 'tire_repair', title: 'Premium and Budget Tyre Options', desc: 'Depending on your vehicle, tyre size and availability, suitable premium and budget tyre options are available.' },
             { icon: 'sell', title: 'Clear Upfront Pricing', desc: 'The current M56 page states that pricing is provided upfront, with no hidden call-out fees.' },
@@ -548,6 +551,9 @@ export default function M56Page() {
             { q: 'Do you provide 24/7 roadside tyre assistance on the M56?', a: 'Yes. We provide 24/7 emergency tyre assistance, including mobile tyre fitting, replacement and suitable puncture repair along the covered M56 route.' },
           ]}
         />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="M56" heading="Get a Tyre Quote on the M56" />
 
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

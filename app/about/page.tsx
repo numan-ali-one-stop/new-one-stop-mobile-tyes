@@ -7,7 +7,7 @@ import { ADDRESS, MAPS_URL } from '@/lib/constants'
 export const metadata = buildMetadata({
   title: 'About One Stop Mobile Tyres 24/7 | Mobile Tyre Fitters Manchester',
   description:
-    'Meet One Stop Mobile Tyres 24/7 — insured, IMI-trained mobile tyre fitters across Manchester.',
+    'Meet One Stop Mobile Tyres 24/7 — insured, experienced mobile tyre fitters across Manchester.',
   path: '/about',
 })
 
@@ -103,10 +103,10 @@ export default function AboutPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                A Premier Mobile Tyre Service You Can Rely On
+                A Mobile Tyre Service You Can Rely On
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-                One Stop Mobile Tyres 24/7 is a premier provider of emergency roadside services, specialised in high-urgency mobile tyre solutions. Our fleet operates round-the-clock across our service areas, ensuring that no driver is ever left stranded for long.
+                One Stop Mobile Tyres 24/7 is a provider of 24/7 emergency roadside services, specialised in high-urgency mobile tyre solutions. Our fleet operates round-the-clock across our service areas, ensuring that no driver is ever left stranded for long.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                 With a focus on speed, reliability and technical excellence, we have built a reputation as a trusted name in mobile tyre fitting. Our technicians are positioned so that, in most of the areas we cover, we can typically reach you within 20–30 minutes. We&apos;re based at{' '}
@@ -199,7 +199,7 @@ export default function AboutPage() {
                   { title: '24/7 Availability', desc: 'Day or night, rain or shine, we are always on call.' },
                   { title: 'Fast Response When You Need It', desc: 'Average arrival time of 20-30 minutes in the areas we cover.' },
                   { title: 'Transparent Pricing', desc: 'No hidden fees. Upfront quotes provided before we dispatch.' },
-                  { title: 'Experienced Technicians', desc: 'Fully certified experts with years of roadside experience.' },
+                  { title: 'Experienced Technicians', desc: 'Trained, insured technicians with hands-on roadside experience.' },
                 ].map((item) => (
                   <li key={item.title} className="flex items-start gap-3 sm:gap-4">
                     <span aria-hidden="true" data-nosnippet

@@ -1,5 +1,6 @@
 import JsonLd from '@/components/JsonLd'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -203,6 +204,8 @@ export default function MobileTyreFittingPage() {
                 WhatsApp Us
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" />
           </div>
         </div>
       </section>
@@ -424,6 +427,9 @@ export default function MobileTyreFittingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+      <QuickQuoteForm heading="Get a Mobile Tyre Fitting Quote" />
 
       {/* ── 7. FINAL CTA ─────────────────────────────────────────────── */}
       <section className="py-14 sm:py-20 px-4 sm:px-6 bg-[#0f172a] text-white text-center">

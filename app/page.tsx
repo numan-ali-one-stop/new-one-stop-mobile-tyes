@@ -383,7 +383,7 @@ export default function Home() {
               {
                 emoji: '⚡',
                 title: 'Experience',
-                desc: 'Over 1,100 completed callouts and a 5.0 Google rating from local drivers.',
+                desc: 'A 5.0 Google rating from local drivers who have used our service.',
               },
               {
                 emoji: '🛡️',
@@ -569,7 +569,7 @@ export default function Home() {
           {/* Content col */}
           <div className="w-full lg:w-1/2">
             <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
-              The Best Choice
+              What You Can Expect
             </span>
             <h2
               className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
@@ -633,7 +633,7 @@ export default function Home() {
             {[
               { icon: 'tire_repair',    title: 'Confirm Your Tyre Size',           desc: 'Tell us your vehicle and tyre size for an instant match and quote.',                                              rot: 'rotate-3' },
               { icon: 'pin_drop',       title: 'Send Us Your Location',            desc: 'Share your exact location by call or WhatsApp pin for the fastest routing.',                                     rot: '-rotate-3' },
-              { icon: 'local_car_wash', title: 'Choose Branded or Economy Tyres', desc: 'Premium brands or budget options — every tyre is quality guaranteed.',                                           rot: 'rotate-3' },
+              { icon: 'local_car_wash', title: 'Choose Branded or Economy Tyres', desc: 'Premium brands or budget options — every tyre is checked before it is fitted.',                                           rot: 'rotate-3' },
               { icon: 'directions_car', title: 'Get Back On The Road',             desc: 'Our technician completes the mobile tyre replacement on-site. Pay securely and drive away.',                    rot: '-rotate-3' },
             ].map((step, idx) => (
               <div key={step.icon} className="relative">

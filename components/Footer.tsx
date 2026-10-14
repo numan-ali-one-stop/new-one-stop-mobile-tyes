@@ -25,7 +25,7 @@ export default function Footer() {
             />
           </a>
           <p className="text-slate-400 text-base leading-relaxed text-center sm:text-left">
-            {BUSINESS_NAME} — the premier 24/7 emergency roadside assistance partner, wherever
+            {BUSINESS_NAME} — your 24/7 emergency roadside assistance partner, wherever
             the road takes you. Rapid response, professional service, and transparent pricing.
           </p>
           <ul className="space-y-3 sm:space-y-4 text-slate-400 text-sm font-medium">

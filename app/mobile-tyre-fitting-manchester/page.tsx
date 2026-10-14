@@ -2,11 +2,11 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
+import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 
@@ -15,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: 'Manchester Mobile Tyre Fitting Service',
   areaServed: 'Manchester',
   description:
-    'Need mobile tyre fitting in Manchester? Get professional 24-hour tyre fitting at home, work or a suitable location across Manchester.',
+    'Flat tyre or puncture in Manchester? 24/7 mobile tyre fitting and puncture repair across the city centre and M1–M16 postcodes. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-manchester')
@@ -29,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Manchester | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Manchester? Get professional 24-hour tyre fitting at home, work or a suitable location across Manchester.',
+    'Flat tyre or puncture in Manchester? 24/7 mobile tyre fitting and puncture repair across the city centre and M1–M16 postcodes. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-manchester',
 })
 
@@ -114,11 +114,14 @@ export default function ManchesterPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Manchester Mobile Tyre Fitting Service
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Manchester
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted at your home, workplace or roadside location? Our Manchester mobile tyre fitting service provides convenient tyre fitting across Manchester, helping you get back on the road without the need to visit a garage.
+              Flat tyre in a city-centre car park or a puncture on the Mancunian Way? We come to you 24/7 across Manchester&apos;s M1–M16 postcodes, from Piccadilly, Deansgate and the Northern Quarter to homes in{' '}
+              <a href="/mobile-tyre-fitting-didsbury" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Didsbury</a>,{' '}
+              <a href="/mobile-tyre-fitting-chorlton-cum-hardy" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Chorlton</a> and{' '}
+              <a href="/mobile-tyre-fitting-cheetham-hill" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Cheetham Hill</a>, and anywhere along Princess Parkway, Oxford Road and the M60. We repair punctures where it is safe and fit replacement tyres on the spot, so there is no need to drive to a garage.
             </p>
 
             {/* Trust bullets */}
@@ -128,7 +131,7 @@ export default function ManchesterPage() {
                 'Professional Mobile Tyre Fitting',
                 '24 Hour Tyre Fitting',
                 'Home, Workplace & Roadside Service',
-                'Manchester Coverage',
+                'City Centre & M1–M16 Coverage',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -178,6 +181,8 @@ export default function ManchesterPage() {
                 WHATSAPP
               </a>
             </div>
+
+            <QuickQuoteForm variant="hero" area="Manchester" />
           </div>
         </section>
 
@@ -398,7 +403,7 @@ export default function ManchesterPage() {
                 <FeatureItem
                   icon="location_on"
                   title="Manchester-Wide Service"
-                  desc="Our mobile tyre fitting service covers Manchester and surrounding areas."
+                  desc="From the city centre (M1–M4) to Didsbury, Chorlton, Cheetham Hill and Wythenshawe, everywhere inside the M60."
                 />
                 <FeatureItem
                   icon="engineering"
@@ -503,10 +508,10 @@ export default function ManchesterPage() {
               className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Mobile Tyre Fitting Manchester UK
+              Tyre Fitting Without the Trip to a Garage
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              Our <strong>mobile tyre fitting Manchester UK</strong> service is designed for drivers who want professional tyre fitting without making a trip to a tyre garage.
+              Our <strong>mobile tyre fitting service in Manchester</strong> is designed for drivers who want professional tyre fitting without making a trip to a tyre garage.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               Whether you&apos;re at home, at your workplace or in another suitable location, we can arrange tyre fitting based on your requirements and location.
@@ -515,7 +520,13 @@ export default function ManchesterPage() {
               Our service is suitable for drivers who need a replacement tyre, have discovered a damaged tyre or simply prefer the convenience of having their tyres fitted where they are.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              From central Manchester to surrounding areas, our technicians provide a practical alternative to traditional garage-based tyre fitting.
+              We cover every part of the city: <a href="/mobile-tyre-fitting-ancoats" className="text-[#b70011] font-semibold hover:underline">Ancoats</a> and <a href="/mobile-tyre-fitting-ardwick" className="text-[#b70011] font-semibold hover:underline">Ardwick</a> on the edge of the centre,{' '}
+              <a href="/mobile-tyre-fitting-hulme" className="text-[#b70011] font-semibold hover:underline">Hulme</a> and <a href="/mobile-tyre-fitting-moss-side" className="text-[#b70011] font-semibold hover:underline">Moss Side</a> to the south,{' '}
+              <a href="/mobile-tyre-fitting-fallowfield" className="text-[#b70011] font-semibold hover:underline">Fallowfield</a>, <a href="/mobile-tyre-fitting-withington" className="text-[#b70011] font-semibold hover:underline">Withington</a> and <a href="/mobile-tyre-fitting-didsbury" className="text-[#b70011] font-semibold hover:underline">Didsbury</a> along Wilmslow Road,{' '}
+              <a href="/mobile-tyre-fitting-chorlton-cum-hardy" className="text-[#b70011] font-semibold hover:underline">Chorlton-cum-Hardy</a> and <a href="/mobile-tyre-fitting-whalley-range" className="text-[#b70011] font-semibold hover:underline">Whalley Range</a> to the south-west,{' '}
+              <a href="/mobile-tyre-fitting-cheetham-hill" className="text-[#b70011] font-semibold hover:underline">Cheetham Hill</a>, <a href="/mobile-tyre-fitting-blackley" className="text-[#b70011] font-semibold hover:underline">Blackley</a> and <a href="/mobile-tyre-fitting-harpurhey" className="text-[#b70011] font-semibold hover:underline">Harpurhey</a> to the north,{' '}
+              <a href="/mobile-tyre-fitting-gorton" className="text-[#b70011] font-semibold hover:underline">Gorton</a>, <a href="/mobile-tyre-fitting-levenshulme" className="text-[#b70011] font-semibold hover:underline">Levenshulme</a> and <a href="/mobile-tyre-fitting-longsight" className="text-[#b70011] font-semibold hover:underline">Longsight</a> to the east, and{' '}
+              <a href="/mobile-tyre-fitting-wythenshawe" className="text-[#b70011] font-semibold hover:underline">Wythenshawe</a> and <a href="/mobile-tyre-fitting-northenden" className="text-[#b70011] font-semibold hover:underline">Northenden</a> near the airport.
             </p>
           </div>
         </section>
@@ -547,9 +558,6 @@ export default function ManchesterPage() {
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="manchester" />
-
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
 
@@ -562,67 +570,58 @@ export default function ManchesterPage() {
           city="Manchester"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Manchester?',
-              a: 'Yes. We provide mobile tyre fitting in Manchester and surrounding areas, subject to location and service requirements.',
+              q: 'Can you fit a tyre in a city-centre multi-storey car park?',
+              a: 'Yes. We regularly work in multi-storeys around Piccadilly, the Arndale and Deansgate. Tell us the car park name, level and bay, and check the height limit so we can plan access.',
             },
             {
-              q: 'What is Manchester mobile tyre fitting?',
-              a: 'It is a tyre fitting service where a technician comes to your chosen location in Manchester rather than requiring you to visit a traditional tyre garage.',
+              q: 'I have a flat on the Mancunian Way. What should I do?',
+              a: 'Do not stop on the Mancunian Way, as there is no hard shoulder. Leave at the next exit, stop in a side street or car park, then call us with a map pin and we will come to you.',
             },
             {
-              q: 'Do you offer mobile tyre fitting in Manchester UK?',
-              a: 'Yes. Our service provides mobile tyre fitting for drivers across Manchester and nearby areas.',
+              q: 'Which Manchester postcodes do you cover?',
+              a: 'We cover the M1 to M16 postcodes, including the city centre (M1 to M4), plus M18 to M23 and M40, which takes in Wythenshawe, Didsbury, Gorton and Newton Heath.',
             },
             {
-              q: 'Do you provide 24-hour mobile tyre fitting in Manchester?',
-              a: 'Yes. Our 24 hour mobile tyre fitting Manchester service is available for suitable tyre fitting requirements.',
+              q: 'Can you come to my apartment block\'s underground car park?',
+              a: 'Yes. Many of our city-centre jobs are in residents\' car parks in Spinningfields, Ancoats, Castlefield and Hulme. Let us know how to get in, or meet us at the gate.',
             },
             {
-              q: 'Can you fit tyres at my home in Manchester?',
-              a: 'Yes, tyre fitting can be arranged at home where there is a suitable and safe area for the work.',
+              q: 'Do you work in the bus lanes on Oxford Road or Wilmslow Road?',
+              a: 'No. For safety we never work in a bus lane. Turn into the nearest side street and we will meet you there to repair or replace the tyre.',
             },
             {
-              q: 'Can you fit tyres at my workplace?',
-              a: 'Yes. We can arrange tyre fitting at your workplace if there is a safe and accessible area for the technician to work.',
+              q: 'Do you cover the car parks at Manchester Airport?',
+              a: 'Yes. Tell us which car park, level and bay you are in. Some airport car parks have barriers or height limits, so we plan our access before we set off.',
             },
             {
-              q: 'Do I need to take my car to a garage?',
-              a: 'No. The main benefit of our mobile service is that the technician comes to your agreed location, so a garage visit may not be necessary.',
+              q: 'Can you help on match days near the Etihad Campus?',
+              a: 'Yes. Traffic around the Etihad builds up quickly on match and event days, so tell us exactly where you are parked and we will give you an honest arrival estimate.',
             },
             {
-              q: 'How do I book mobile tyre fitting in Manchester?',
-              a: 'Contact us with your vehicle registration or tyre size, your location and the number or type of tyres you require.',
+              q: 'How quickly can you reach me in Manchester?',
+              a: 'It depends on your location, the time of day and traffic on roads like Princess Parkway and the Mancunian Way. In most of the city we typically reach you within 20 to 30 minutes, and we give you an estimate when you call.',
             },
             {
-              q: 'How long does mobile tyre fitting take?',
-              a: "The time depends on the number of tyres being fitted, the vehicle and the work required. We'll provide an estimated timeframe when arranging your appointment.",
+              q: 'Do you fit tyres at night in the city centre?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat after a late shift, a night out or an early-morning start.',
             },
             {
-              q: 'Can you fit a replacement tyre at the roadside?',
-              a: 'Yes, where the location is safe and suitable for tyre fitting.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot. Sidewall damage means the tyre needs replacing.',
             },
             {
-              q: 'Do you cover all areas of Manchester?',
-              a: 'We provide service across Manchester and surrounding areas. Availability can depend on your exact location.',
+              q: 'Do you also cover Didsbury, Chorlton and the other suburbs?',
+              a: 'Yes. We cover every district of the city, from Didsbury, Chorlton and Withington in the south to Cheetham Hill, Blackley and Harpurhey in the north.',
             },
             {
-              q: 'Can you provide mobile tyre fitting at night?',
-              a: 'Yes. Our service is available 24 hours for suitable tyre fitting requirements.',
-            },
-            {
-              q: 'What information do I need to book?',
-              a: "Usually, you'll need your vehicle registration or tyre size, your location and details of the tyres you need.",
-            },
-            {
-              q: 'Is mobile tyre fitting more convenient than visiting a garage?',
-              a: 'For many drivers, yes. You can arrange fitting at a suitable location without making a separate journey to a tyre centre.',
-            },
-            {
-              q: 'Can you fit tyres if my car cannot be driven?',
-              a: "If the vehicle cannot be safely driven to a garage, mobile fitting may be a suitable option. We'll assess your location and requirements before confirming the service.",
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your postcode, and a map pin if you are on the road.',
             },
           ]}
         />
+
+        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
+        <QuickQuoteForm area="Manchester" />
 
         {/* ── 11. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
