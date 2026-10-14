@@ -73,6 +73,7 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [areasOpen, setAreasOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<'services' | 'areas' | null>(null)
+  const [expandedBoroughs, setExpandedBoroughs] = useState<Set<string>>(new Set())
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
@@ -83,6 +84,14 @@ export default function Header() {
     return pathname === href || pathname.startsWith(href + '/')
   }
 
+  function toggleBorough(name: string) {
+    setExpandedBoroughs((prev) => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name)
+      else next.add(name)
+      return next
+    })
+  }
 
   const isServicesActive =
     isActive('/services') || serviceLinks.some((l) => isActive(l.href))
@@ -358,12 +367,13 @@ export default function Header() {
                   <div className="p-5">
                     {/* Cities */}
                     <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-1">
-                      City Areas
+                      City Areas — click to see towns
                     </p>
                     <div className="max-h-[320px] overflow-y-auto pr-1 mb-4">
                       {BOROUGHS.map((borough) => {
                         const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
                         const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
+                        const expanded = expandedBoroughs.has(borough.name)
                         return (
                           <div key={borough.name} className="mb-0.5">
                             <div
@@ -388,7 +398,39 @@ export default function Header() {
                                   <span className="font-semibold text-sm">{borough.name}</span>
                                 </span>
                               )}
+                              {borough.towns.length > 0 && (
+                                <button
+                                  type="button"
+                                  onClick={() => toggleBorough(borough.name)}
+                                  aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
+                                  aria-expanded={expanded}
+                                  className="p-2 mr-1.5 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
+                                >
+                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+                                    expand_more
+                                  </span>
+                                </button>
+                              )}
                             </div>
+                            {borough.towns.length > 0 && (
+                              <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
+                                  {borough.towns.map((town) => (
+                                    <a
+                                      key={town.slug}
+                                      href={`/mobile-tyre-fitting-${town.slug}`}
+                                      className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
+                                        isActive(`/mobile-tyre-fitting-${town.slug}`)
+                                          ? 'bg-[#b70011] border-[#b70011] text-white'
+                                          : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
+                                      }`}
+                                    >
+                                      {town.name}
+                                    </a>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
                           </div>
                         )
                       })}
@@ -650,11 +692,12 @@ export default function Header() {
                   </a>
 
                   <p className="px-3 pt-1 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                    City Areas
+                    City Areas — tap to see towns
                   </p>
                   {BOROUGHS.map((borough) => {
                     const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
                     const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
+                    const expanded = expandedBoroughs.has(borough.name)
                     return (
                       <div key={borough.name} className="mb-0.5">
                         <div
@@ -681,7 +724,40 @@ export default function Header() {
                               <span className="font-semibold text-sm">{borough.name}</span>
                             </span>
                           )}
+                          {borough.towns.length > 0 && (
+                            <button
+                              type="button"
+                              onClick={() => toggleBorough(borough.name)}
+                              aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
+                              aria-expanded={expanded}
+                              className="p-2 mr-1 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
+                            >
+                              <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+                                expand_more
+                              </span>
+                            </button>
+                          )}
                         </div>
+                        {borough.towns.length > 0 && (
+                          <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                            <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
+                              {borough.towns.map((town) => (
+                                <a
+                                  key={town.slug}
+                                  href={`/mobile-tyre-fitting-${town.slug}`}
+                                  onClick={() => setMobileOpen(false)}
+                                  className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
+                                    isActive(`/mobile-tyre-fitting-${town.slug}`)
+                                      ? 'bg-[#b70011] border-[#b70011] text-white'
+                                      : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
+                                  }`}
+                                >
+                                  {town.name}
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )
                   })}
