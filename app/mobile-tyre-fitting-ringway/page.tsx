@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Ringway',
   areaServed: 'Ringway',
   description:
-    'Need mobile tyre fitting in Ringway? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre at Manchester Airport? 24/7 mobile tyre fitting and puncture repair in Ringway (M90), on Ringway Road and near M56 Junction 5. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-ringway')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Ringway | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Ringway? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre at Manchester Airport? 24/7 mobile tyre fitting and puncture repair in Ringway (M90), on Ringway Road and near M56 Junction 5. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-ringway',
 })
 
@@ -80,11 +79,12 @@ export default function RingwayPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Ringway
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Ringway
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Ringway at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Came back from a flight to a flat tyre, or picked up a puncture on the way to the airport? We come to you 24/7 across Ringway and the M90 postcode, including Manchester Airport car parks, Ringway Road and the roads around M56 Junction 5. Tell us which car park, level and bay you are in, and we will confirm access before we set off. We also reach nearby{' '}
+              <a href="/mobile-tyre-fitting-wythenshawe" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Wythenshawe</a> and <a href="/mobile-tyre-fitting-heald-green" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Heald Green</a> quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function RingwayPage() {
               We can attend suitable locations around Ringway, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas around Manchester Airport and Altrincham, as well as surrounding parts of south Manchester.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-wythenshawe" className="text-[#b70011] font-semibold hover:underline">Wythenshawe</a> and <a href="/mobile-tyre-fitting-baguley" className="text-[#b70011] font-semibold hover:underline">Baguley</a> to the north, <a href="/mobile-tyre-fitting-heald-green" className="text-[#b70011] font-semibold hover:underline">Heald Green</a> and <a href="/mobile-tyre-fitting-gatley" className="text-[#b70011] font-semibold hover:underline">Gatley</a> to the east,{' '}
+              and <a href="/mobile-tyre-fitting-hale" className="text-[#b70011] font-semibold hover:underline">Hale</a> and <a href="/mobile-tyre-fitting-altrincham" className="text-[#b70011] font-semibold hover:underline">Altrincham</a> to the west.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="ringway" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function RingwayPage() {
           city="Ringway"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Ringway?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Ringway at homes, workplaces and suitable roadside locations.',
+              q: 'Can you work in the Manchester Airport car parks?',
+              a: 'We can attend most public car parks at Manchester Airport. Some barrier, secure or meet-and-greet car parks have their own access rules, so tell us which car park you are in and we will confirm what is possible before we set off. We cannot work in airside or restricted areas.',
             },
             {
-              q: 'Can you replace a tyre at my home in Ringway?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              q: 'I have just landed to a flat tyre. Can you meet me at the car?',
+              a: 'Yes. Call us with the car park name, level and bay, and we will give you an arrival estimate. Some car parks need us to arrange access, which can add a little time.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Ringway?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              q: 'I have tyre damage near M56 Junction 5. What should I do?',
+              a: 'Do not stop on the hard shoulder or slip road if you can avoid it. Leave the motorway, stop somewhere safe away from the traffic, and call us with your location.',
             },
             {
-              q: 'Can you repair a punctured tyre in Ringway?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              q: 'Do you cover Ringway Road and the business parks around the airport?',
+              a: 'Yes. We attend Ringway Road, the hotels and the office and business parks around the airport, as long as we have permission to work on the site.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Ringway.',
+              q: 'Can you fit a tyre before my flight?',
+              a: 'Yes, if there is time. Call us as early as you can. If you are short of time, it may be better to leave the car safely parked and call us when you land.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              q: 'Do you help airport staff?',
+              a: 'Yes. If you work at the airport and find a flat after a shift, tell us which staff car park you are in and we will come to you.',
+            },
+            {
+              q: 'Do you fit tyres at night at the airport?',
+              a: 'Yes. We work 24 hours a day, which suits late arrivals and early departures.',
             },
             {
               q: 'How quickly can you reach me in Ringway?',
-              a: 'Response time depends on your exact location, traffic and technician availability. Our existing Ringway service states a typical emergency response of 20–30 minutes, subject to conditions.',
+              a: 'It depends on traffic on the M56 and around the airport, plus any car park access checks. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Ringway?',
-              a: 'Yes. If you are located in or around Ringway, you can contact us for mobile tyre fitting at your location.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Ringway?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
-            },
-            {
-              q: 'Can you fit tyres at night in Ringway?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Ringway?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Ringway do you cover?',
-              a: 'We cover Ringway and surrounding areas, including areas around Manchester Airport and Altrincham. Contact us with your exact location to confirm service availability.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M90 postcode.',
             },
           ]}
         />

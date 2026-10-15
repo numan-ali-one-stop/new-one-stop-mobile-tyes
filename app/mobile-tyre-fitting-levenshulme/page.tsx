@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Levenshulme',
   areaServed: 'Levenshulme',
   description:
-    'Need mobile tyre fitting in Levenshulme? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Levenshulme (M19)? 24/7 mobile tyre fitting and puncture repair on Stockport Road and around Levenshulme station. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-levenshulme')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Levenshulme | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Levenshulme? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Levenshulme (M19)? 24/7 mobile tyre fitting and puncture repair on Stockport Road and around Levenshulme station. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-levenshulme',
 })
 
@@ -80,11 +79,12 @@ export default function LevenshulmePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Levenshulme
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Levenshulme
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Levenshulme at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on Stockport Road or a puncture at Levenshulme station? We come to you 24/7 across Levenshulme and the M19 postcode, from the A6 shops and the market to the terraced streets either side, including Barlow Road and Chapel Street. We fit tyres at the kerb where it is safe, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-longsight" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Longsight</a> and <a href="/mobile-tyre-fitting-burnage" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Burnage</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function LevenshulmePage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Levenshulme & Surrounding Areas',
+                'M19: Stockport Road &amp; Levenshulme Station',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function LevenshulmePage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-longsight" className="text-[#b70011] font-semibold hover:underline">Longsight</a> to the north along the A6, <a href="/mobile-tyre-fitting-gorton" className="text-[#b70011] font-semibold hover:underline">Gorton</a> to the north-east,{' '}
+              <a href="/mobile-tyre-fitting-burnage" className="text-[#b70011] font-semibold hover:underline">Burnage</a> and <a href="/mobile-tyre-fitting-ladybarn" className="text-[#b70011] font-semibold hover:underline">Ladybarn</a> to the west, and <a href="/mobile-tyre-fitting-heaton-chapel" className="text-[#b70011] font-semibold hover:underline">Heaton Chapel</a> and <a href="/mobile-tyre-fitting-reddish" className="text-[#b70011] font-semibold hover:underline">Reddish</a> across the border into Stockport.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="levenshulme" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function LevenshulmePage() {
           city="Levenshulme"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Levenshulme?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Levenshulme.',
+              q: 'Can you come to Levenshulme station car park?',
+              a: 'Yes. Tell us roughly where in the station car park you are and we can fit the tyre while you are at work.',
             },
             {
-              q: 'Can you replace a tyre at my home in Levenshulme?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'I have a flat on Stockport Road. What should I do?',
+              a: 'Stockport Road (A6) has bus lanes and heavy traffic, so turn into a side street such as one off Barlow Road or Chapel Street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Levenshulme?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'Do you cover all of Levenshulme (M19)?',
+              a: 'Yes. We cover the whole of Levenshulme, including Barlow Road, Chapel Street, Matthews Lane and the streets around Highfield Country Park.',
             },
             {
-              q: 'Can you repair a punctured tyre in Levenshulme?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'My street is terraced with tight parking. Can you still work?',
+              a: 'Yes. Kerbside fitting on terraced streets is normal for us. If there is no safe space beside the car, we will suggest a better spot nearby.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Stockport Road?',
-              a: 'Yes. We can attend suitable workplace locations around Stockport Road, Barlow Road and surrounding areas.',
+              q: 'Can you help if I am parked near Levenshulme Market?',
+              a: 'Yes. Tell us which side of Stockport Road you are parked on and roughly where, and we will find you.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'Do you also cover Heaton Chapel and Reddish?',
+              a: 'Yes. We cover the neighbouring Stockport areas too, including Heaton Chapel and Reddish just across the border.',
             },
             {
               q: 'How quickly can you reach me in Levenshulme?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
+              a: 'It depends on traffic on the A6 and around Longsight. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
+              q: 'Do you fit tyres at night in Levenshulme?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late in the evening or before an early start.',
             },
             {
-              q: 'Do you provide mobile tyre fitting near me in Levenshulme?',
-              a: 'Yes. We cover Levenshulme and surrounding M19 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Levenshulme?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Levenshulme do you cover?',
-              a: 'We cover Levenshulme and nearby areas, including Burnage, Longsight, Gorton, Fallowfield and Heaton Chapel. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M19 postcode.',
             },
           ]}
         />

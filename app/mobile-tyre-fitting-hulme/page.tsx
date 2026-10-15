@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Hulme',
   areaServed: 'Hulme',
   description:
-    'Need mobile tyre fitting in Hulme? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Hulme (M15)? 24/7 mobile tyre fitting and puncture repair on Princess Road, Stretford Road and in apartment car parks. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-hulme')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Hulme | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Hulme? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Hulme (M15)? 24/7 mobile tyre fitting and puncture repair on Princess Road, Stretford Road and in apartment car parks. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-hulme',
 })
 
@@ -80,11 +79,12 @@ export default function HulmePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Hulme
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Hulme
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Flat tyre outside your flat, at the university or on Princess Road? Our mobile tyre fitters come to you anywhere in Hulme, 24/7, with replacement tyres and puncture repair kit on board.
+              Flat tyre outside your flat, at the university or on Princess Road? We come to you 24/7 across Hulme and the M15 postcode, from Stretford Road and the Hulme Arch to Birley Fields and the apartment car parks near the Mancunian Way. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-moss-side" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Moss Side</a> and <a href="/mobile-tyre-fitting-old-trafford" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Old Trafford</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function HulmePage() {
               If you are on Princess Road or another busy route, pull into a side street or car park if it is safe to do so and call us. We will meet you there and either repair the puncture or fit a replacement tyre.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover Moss Side, Old Trafford, Whalley Range and the city centre, all within a few minutes of Hulme.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-manchester" className="text-[#b70011] font-semibold hover:underline">Manchester city centre</a> and <a href="/mobile-tyre-fitting-ardwick" className="text-[#b70011] font-semibold hover:underline">Ardwick</a> to the north-east, <a href="/mobile-tyre-fitting-moss-side" className="text-[#b70011] font-semibold hover:underline">Moss Side</a> to the south,{' '}
+              <a href="/mobile-tyre-fitting-old-trafford" className="text-[#b70011] font-semibold hover:underline">Old Trafford</a> and <a href="/mobile-tyre-fitting-firswood" className="text-[#b70011] font-semibold hover:underline">Firswood</a> to the west, and <a href="/mobile-tyre-fitting-whalley-range" className="text-[#b70011] font-semibold hover:underline">Whalley Range</a> to the south-west.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="hulme" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function HulmePage() {
           city="Hulme"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Hulme?',
-              a: 'Yes. We fit tyres across Hulme every day, including apartment car parks, university car parks and residential streets, 24 hours a day.',
+              q: 'I have a flat on Princess Road. What should I do?',
+              a: 'Princess Road is a busy dual carriageway, so turn into a quieter street off it if the tyre allows. Send us a map pin and we will come to you.',
             },
             {
-              q: 'Can you replace a tyre at my home in Hulme?',
-              a: 'Yes. We fit tyres outside houses and apartment blocks across Hulme. If you live in a gated development, just tell us how to get into the car park.',
+              q: 'Do you cover Stretford Road?',
+              a: 'Yes. We regularly help drivers on Stretford Road and the streets around it. Stop somewhere safe away from the buses and call us.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Hulme?',
-              a: 'Yes. Call us any time, day or night, and we will send a technician to you anywhere in Hulme or just off the Mancunian Way.',
+              q: 'Can you fit a tyre in my apartment block\'s car park?',
+              a: 'Yes. Many Hulme blocks have secure or residents-only car parks. Tell us how to get in, or meet us at the gate.',
             },
             {
-              q: 'Can you repair a punctured tyre in Hulme?',
-              a: 'Yes. Nails and screws from building sites are a common cause of punctures around Hulme. If the damage is in the central tread, we can usually repair it on the spot.',
+              q: 'Do you cover the university car parks at Birley Fields?',
+              a: 'Yes. Tell us which car park you are in and roughly where, and we will come to you while you are on campus.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We regularly fit tyres in university, hospital and office car parks around Hulme, as long as we have permission to work there.',
+              q: 'Do you cover all of Hulme (M15)?',
+              a: 'Yes. We cover the whole of Hulme, from the Hulme Arch and Stretford Road to the Mancunian Way and Chester Road.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes, if it is safe. On Princess Road and other busy routes we will ask you to move to a side street or car park first, if you can do so safely.',
+              q: 'I got a flat on the Mancunian Way. What should I do?',
+              a: 'There is no hard shoulder on the Mancunian Way, so leave at the next exit and stop in a side street in Hulme, then call us.',
+            },
+            {
+              q: 'Do you fit tyres at night in Hulme?',
+              a: 'Yes. We work 24 hours a day, which helps students, hospital and university staff and anyone with a late finish.',
             },
             {
               q: 'How quickly can you reach me in Hulme?',
-              a: 'Hulme is close to the city centre, so we can usually get to you quickly. Exact arrival times depend on traffic on Princess Road and the Mancunian Way, and we will give you an estimate when you call.',
+              a: 'It depends on traffic on Princess Road, Stretford Road and the Mancunian Way. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Hulme?',
-              a: 'Yes. Whether you are near Hulme Park, Birley Fields or Stretford Road, call us with your location and we will come to you.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Hulme?',
-              a: 'Yes. Tell us where the car is and whether the tyre is completely flat, and we will bring a replacement in case it cannot be repaired.',
-            },
-            {
-              q: 'Can you fit tyres at night in Hulme?',
-              a: 'Yes. Many of our Hulme call-outs are late at night or early in the morning, when tyre centres are closed.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Hulme?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Hulme do you cover?',
-              a: 'We cover all of Hulme (M15) plus nearby Moss Side, Old Trafford, Whalley Range and the city centre. Call us with your exact location to confirm.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M15 postcode.',
             },
           ]}
         />

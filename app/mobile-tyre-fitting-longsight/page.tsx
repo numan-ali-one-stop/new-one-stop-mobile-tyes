@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Longsight',
   areaServed: 'Longsight',
   description:
-    'Need mobile tyre fitting in Longsight? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Longsight (M12/M13)? 24/7 mobile tyre fitting and puncture repair on Stockport Road, Plymouth Grove and nearby. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-longsight')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Longsight | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Longsight? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Longsight (M12/M13)? 24/7 mobile tyre fitting and puncture repair on Stockport Road, Plymouth Grove and nearby. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-longsight',
 })
 
@@ -80,11 +79,12 @@ export default function LongsightPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Longsight
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Longsight
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Longsight at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on Stockport Road or a puncture on Plymouth Grove? We come to you 24/7 across Longsight and the M12 and M13 postcodes, from the A6 shopping strip and Longsight Market to the streets around Crowcroft Park and Belle Vue, including Dickenson Road and Kirkmanshulme Lane. We fit tyres at the kerb where it is safe, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-levenshulme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Levenshulme</a> and <a href="/mobile-tyre-fitting-gorton" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Gorton</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function LongsightPage() {
               We can attend suitable locations around Longsight, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including Levenshulme, Gorton, Ardwick, Fallowfield, Openshaw and surrounding parts of east and south Manchester. Longsight coverage also includes the M12 area, Stockport Road and Beresford Road.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-ardwick" className="text-[#b70011] font-semibold hover:underline">Ardwick</a> to the north, <a href="/mobile-tyre-fitting-gorton" className="text-[#b70011] font-semibold hover:underline">Gorton</a> and <a href="/mobile-tyre-fitting-openshaw" className="text-[#b70011] font-semibold hover:underline">Openshaw</a> to the east,{' '}
+              <a href="/mobile-tyre-fitting-levenshulme" className="text-[#b70011] font-semibold hover:underline">Levenshulme</a> to the south along the A6, and <a href="/mobile-tyre-fitting-rusholme" className="text-[#b70011] font-semibold hover:underline">Rusholme</a> and <a href="/mobile-tyre-fitting-fallowfield" className="text-[#b70011] font-semibold hover:underline">Fallowfield</a> to the west.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="longsight" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function LongsightPage() {
           city="Longsight"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Longsight?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Longsight at homes, workplaces and suitable roadside locations.',
+              q: 'I have a flat on Stockport Road. What should I do?',
+              a: 'Stockport Road (A6) has bus lanes and heavy traffic, so turn into a side street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you replace a tyre at my home in Longsight?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              q: 'Do you cover Plymouth Grove?',
+              a: 'Yes. We regularly fit tyres on Plymouth Grove and the streets off it. Stop somewhere safe away from the traffic and call us.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Longsight?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              q: 'Do you cover all of Longsight (M12 and M13)?',
+              a: 'Yes. We cover the whole of Longsight, including Dickenson Road, Kirkmanshulme Lane and the streets around Crowcroft Park.',
             },
             {
-              q: 'Can you repair a punctured tyre in Longsight?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              q: 'Can you help if I am parked near Longsight Market?',
+              a: 'Yes. Tell us where you are parked near the market or on Dickenson Road, and we will find you.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Longsight.',
+              q: 'My street is terraced with tight parking. Can you still work?',
+              a: 'Yes. Many Longsight streets have on-street parking only, and kerbside fitting is normal for us.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              q: 'Do you cover Belle Vue?',
+              a: 'Yes. Tell us where you are parked around Belle Vue or Kirkmanshulme Lane, and we will come to you.',
+            },
+            {
+              q: 'Do you fit tyres at night in Longsight?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late in the evening or before an early start.',
             },
             {
               q: 'How quickly can you reach me in Longsight?',
-              a: 'Response time depends on your exact location, traffic and technician availability. The existing Longsight service states a typical emergency response of 20–30 minutes, subject to conditions.',
+              a: 'It depends on traffic on Stockport Road and Plymouth Grove. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Longsight?',
-              a: 'Yes. If you are located in or around Longsight, you can contact us for mobile tyre fitting at your location.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Longsight?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
-            },
-            {
-              q: 'Can you fit tyres at night in Longsight?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Longsight?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Longsight do you cover?',
-              a: 'We cover Longsight and surrounding areas including Levenshulme, Gorton, Ardwick, Fallowfield and Openshaw. Contact us with your exact location to confirm service availability.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M12 or M13 postcode.',
             },
           ]}
         />

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Withington',
   areaServed: 'Withington',
   description:
-    'Need mobile tyre fitting in Withington? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Withington (M20)? 24/7 mobile tyre fitting and puncture repair on Wilmslow Road and around the Withington hospitals. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-withington')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Withington | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Withington? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Withington (M20)? 24/7 mobile tyre fitting and puncture repair on Wilmslow Road and around the Withington hospitals. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-withington',
 })
 
@@ -80,11 +79,12 @@ export default function WithingtonPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Withington
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Withington
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Withington at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre in a hospital car park or a puncture on Wilmslow Road? We come to you 24/7 across Withington and the M20 postcode, from the village and Burton Road to The Christie and Withington Community Hospital on Nell Lane, including Mauldeth Road and Palatine Road. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-didsbury" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Didsbury</a> and <a href="/mobile-tyre-fitting-fallowfield" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Fallowfield</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function WithingtonPage() {
               We can attend suitable locations around Withington, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including Fallowfield, Didsbury, West Didsbury, Burnage and surrounding parts of south Manchester.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-fallowfield" className="text-[#b70011] font-semibold hover:underline">Fallowfield</a> and <a href="/mobile-tyre-fitting-ladybarn" className="text-[#b70011] font-semibold hover:underline">Ladybarn</a> to the north, <a href="/mobile-tyre-fitting-didsbury" className="text-[#b70011] font-semibold hover:underline">Didsbury</a> to the south,{' '}
+              <a href="/mobile-tyre-fitting-burnage" className="text-[#b70011] font-semibold hover:underline">Burnage</a> to the east, and <a href="/mobile-tyre-fitting-chorlton-cum-hardy" className="text-[#b70011] font-semibold hover:underline">Chorlton-cum-Hardy</a> and <a href="/mobile-tyre-fitting-whalley-range" className="text-[#b70011] font-semibold hover:underline">Whalley Range</a> to the west.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="withington" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function WithingtonPage() {
           city="Withington"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Withington?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Withington at homes, workplaces and suitable roadside locations.',
+              q: 'Can you help in the car parks at The Christie or Withington Community Hospital?',
+              a: 'Yes. Hospital car parks are busy, so tell us which car park you are in and roughly where, and we will come to you.',
             },
             {
-              q: 'Can you replace a tyre at my home in Withington?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              q: 'Do you cover all of Withington (M20)?',
+              a: 'Yes. We cover Withington village, Burton Road, Old Moat and the streets around Nell Lane and Mauldeth Road.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Withington?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              q: 'I have a puncture on Wilmslow Road. What should I do?',
+              a: 'Wilmslow Road has bus lanes and heavy traffic, so turn into the nearest side street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you repair a punctured tyre in Withington?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              q: 'Can you help hospital staff after a late shift?',
+              a: 'Yes. We work through the night, so if you finish a shift at The Christie or Withington Community Hospital to a flat tyre, call us and we will come to you.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Withington.',
+              q: 'Do you cover Burton Road?',
+              a: 'Yes. Burton Road gets busy in the evenings, so tell us exactly where you are parked and we will fit the tyre there or on a nearby side street.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              q: 'My street is terraced with no driveway. Can you still fit the tyre?',
+              a: 'Yes. We fit tyres safely at the kerb outside your house and keep the road and pavement clear.',
             },
             {
               q: 'How quickly can you reach me in Withington?',
-              a: 'Response time depends on your exact location, traffic and technician availability. We aim to provide a fast response across Withington.',
+              a: 'It depends on traffic on Wilmslow Road and around the hospitals. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
+              q: 'Do you fit tyres at night in Withington?',
+              a: 'Yes. We work 24 hours a day, which helps hospital staff and anyone who finds a flat late at night.',
             },
             {
-              q: 'Do you provide mobile tyre fitting near me in Withington?',
-              a: 'Yes. If you are located in or around Withington, you can contact us for mobile tyre fitting at your location.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Withington?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
-            },
-            {
-              q: 'Can you fit tyres at night in Withington?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Withington?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Withington do you cover?',
-              a: 'We cover Withington and surrounding areas including Fallowfield, Didsbury, West Didsbury and Burnage. Contact us with your exact location to confirm service availability.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M20 postcode.',
             },
           ]}
         />

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Ancoats',
   areaServed: 'Ancoats',
   description:
-    'Need mobile tyre fitting in Ancoats? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Ancoats (M4)? 24/7 mobile tyre fitting and puncture repair on Great Ancoats Street, in the Northern Quarter and city-centre car parks. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-ancoats')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Ancoats | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Ancoats? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Ancoats (M4)? 24/7 mobile tyre fitting and puncture repair on Great Ancoats Street, in the Northern Quarter and city-centre car parks. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-ancoats',
 })
 
@@ -80,11 +79,12 @@ export default function AncoatsPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Ancoats
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Ancoats
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Ancoats at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre in an apartment car park or a puncture on Great Ancoats Street? We come to you 24/7 across Ancoats and the M4 postcode, from New Islington and Cutting Room Square to the Northern Quarter and the city-centre car parks nearby, including Oldham Road and Pollard Street. We repair punctures where it is safe and fit replacement tyres where your car is parked, and we cover the rest of{' '}
+              <a href="/mobile-tyre-fitting-manchester" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Manchester city centre</a> too.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function AncoatsPage() {
               We can attend suitable locations around Ancoats, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including New Islington, Miles Platting, Beswick, Ardwick and Manchester city centre. The local Ancoats area includes the M4 postcode area, Great Ancoats Street and Cutting Room Square.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-manchester" className="text-[#b70011] font-semibold hover:underline">Manchester city centre</a> and the Northern Quarter to the west, <a href="/mobile-tyre-fitting-miles-platting" className="text-[#b70011] font-semibold hover:underline">Miles Platting</a> and <a href="/mobile-tyre-fitting-collyhurst" className="text-[#b70011] font-semibold hover:underline">Collyhurst</a> to the north,{' '}
+              <a href="/mobile-tyre-fitting-beswick" className="text-[#b70011] font-semibold hover:underline">Beswick</a> to the east, and <a href="/mobile-tyre-fitting-ardwick" className="text-[#b70011] font-semibold hover:underline">Ardwick</a> to the south.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="ancoats" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function AncoatsPage() {
           city="Ancoats"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Ancoats?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Ancoats at homes, workplaces and suitable roadside locations.',
+              q: 'Can you fit a tyre in my apartment block\'s underground car park?',
+              a: 'Yes. Many Ancoats and New Islington blocks have gated or underground car parks. Tell us how to get in, check any height limit, or meet us at the gate.',
             },
             {
-              q: 'Can you replace a tyre at my home in Ancoats?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              q: 'Do you cover the Northern Quarter?',
+              a: 'Yes. Northern Quarter streets are tight and parking is mostly pay and display, so tell us exactly where you are parked and we will work quickly and safely.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Ancoats?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              q: 'I have a flat on Great Ancoats Street. What should I do?',
+              a: 'Great Ancoats Street is busy, so turn into a side street such as Pollard Street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you repair a punctured tyre in Ancoats?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              q: 'Can you come to a city-centre multi-storey car park?',
+              a: 'Yes. Tell us the car park name, level and bay, and check the height limit so we can plan access.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Ancoats.',
+              q: 'Do you cover the rest of Manchester city centre?',
+              a: 'Yes. As well as Ancoats, we cover the whole city centre, from the Northern Quarter and Piccadilly to Deansgate and Spinningfields.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              q: 'Do you cover all of Ancoats (M4)?',
+              a: 'Yes. We cover Ancoats, New Islington, Cutting Room Square and the streets along Oldham Road and the Rochdale Canal.',
+            },
+            {
+              q: 'Do you fit tyres at night in Ancoats?',
+              a: 'Yes. We work 24 hours a day, which helps if you come back to a flat tyre late in the evening.',
             },
             {
               q: 'How quickly can you reach me in Ancoats?',
-              a: 'Response time depends on your exact location, traffic and technician availability. The existing Ancoats service states a typical emergency response of 20–30 minutes, subject to conditions.',
+              a: 'It depends on traffic on Great Ancoats Street and around the city centre. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Ancoats?',
-              a: 'Yes. If you are located in or around Ancoats, you can contact us for mobile tyre fitting at your location.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Ancoats?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
-            },
-            {
-              q: 'Can you fit tyres at night in Ancoats?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Ancoats?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Ancoats do you cover?',
-              a: 'We cover Ancoats and surrounding areas including New Islington, Miles Platting, Beswick and Ardwick. Contact us with your exact location to confirm service availability.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M4 postcode.',
             },
           ]}
         />

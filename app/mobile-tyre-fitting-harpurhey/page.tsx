@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Harpurhey',
   areaServed: 'Harpurhey',
   description:
-    'Need mobile tyre fitting in Harpurhey? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Harpurhey (M9)? 24/7 mobile tyre fitting and puncture repair on Rochdale Road, near the market and Moston Lane. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-harpurhey')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Harpurhey | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Harpurhey? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Harpurhey (M9)? 24/7 mobile tyre fitting and puncture repair on Rochdale Road, near the market and Moston Lane. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-harpurhey',
 })
 
@@ -80,11 +79,12 @@ export default function HarpurheyPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Harpurhey
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Harpurhey
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Harpurhey at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre near the market or a puncture on Rochdale Road? We come to you 24/7 across Harpurhey and the M9 postcode, from the shops and market on Rochdale Road to Queens Park and the streets towards Moston Lane. We repair punctures where it is safe and fit replacement tyres at the kerb, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-blackley" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Blackley</a> and <a href="/mobile-tyre-fitting-collyhurst" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Collyhurst</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function HarpurheyPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Harpurhey & Surrounding Areas',
+                'M9: Rochdale Road &amp; Harpurhey Market',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function HarpurheyPage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-blackley" className="text-[#b70011] font-semibold hover:underline">Blackley</a> to the north, <a href="/mobile-tyre-fitting-moston" className="text-[#b70011] font-semibold hover:underline">Moston</a> to the east, <a href="/mobile-tyre-fitting-newton-heath" className="text-[#b70011] font-semibold hover:underline">Newton Heath</a> to the south-east,{' '}
+              and <a href="/mobile-tyre-fitting-collyhurst" className="text-[#b70011] font-semibold hover:underline">Collyhurst</a> and <a href="/mobile-tyre-fitting-cheetham-hill" className="text-[#b70011] font-semibold hover:underline">Cheetham Hill</a> to the south-west.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="harpurhey" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function HarpurheyPage() {
           city="Harpurhey"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Harpurhey?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Harpurhey.',
+              q: 'I have a flat on Rochdale Road. What should I do?',
+              a: 'Rochdale Road (A664) is busy, so turn into a side street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you replace a tyre at my home in Harpurhey?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'Can you help if I am parked at Harpurhey Market?',
+              a: 'Yes. Tell us which part of the market car park you are in, and we will fit the tyre while you shop.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Harpurhey?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'Can you come to Queens Park?',
+              a: 'Yes. Tell us which entrance you parked near, and we can wait until you are back at the car.',
             },
             {
-              q: 'Can you repair a punctured tyre in Harpurhey?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'My street has no driveway. Can you still fit the tyre?',
+              a: 'Yes. Most Harpurhey streets have on-street parking, and we fit tyres safely at the kerb outside your house.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Rochdale Road?',
-              a: 'Yes. We can attend suitable workplace locations around Rochdale Road, Moston and surrounding areas.',
+              q: 'Do you cover all of Harpurhey (M9)?',
+              a: 'Yes. We cover the whole of Harpurhey, from Rochdale Road and the market to Queens Park and the streets towards Moston Lane.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'Do you also cover Blackley and Moston?',
+              a: 'Yes. We cover the neighbouring areas too, including Blackley, Moston, Collyhurst and Cheetham Hill.',
+            },
+            {
+              q: 'Do you fit tyres at night in Harpurhey?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late at night or before an early start.',
             },
             {
               q: 'How quickly can you reach me in Harpurhey?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
+              a: 'It depends on traffic on Rochdale Road and Moston Lane. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Harpurhey?',
-              a: 'Yes. We cover Harpurhey and surrounding M9 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Harpurhey?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Harpurhey do you cover?',
-              a: 'We cover Harpurhey and nearby areas, including Moston, Collyhurst, Blackley, Cheetham Hill and Miles Platting. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M9 postcode.',
             },
           ]}
         />

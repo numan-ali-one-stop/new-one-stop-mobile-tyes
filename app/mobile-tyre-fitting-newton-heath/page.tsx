@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Newton Heath',
   areaServed: 'Newton Heath',
   description:
-    'Need mobile tyre fitting in Newton Heath? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Newton Heath (M40)? 24/7 mobile tyre fitting and puncture repair on Oldham Road and near the Metrolink stop. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-newton-heath')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Newton Heath | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Newton Heath? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Newton Heath (M40)? 24/7 mobile tyre fitting and puncture repair on Oldham Road and near the Metrolink stop. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-newton-heath',
 })
 
@@ -80,11 +79,12 @@ export default function NewtonHeathPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Newton Heath
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Newton Heath
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Puncture on Oldham Road or a flat outside your house in Newton Heath? Our mobile tyre fitters come to you 24/7 with replacement tyres and repair kit on board.
+              Puncture on Oldham Road or a flat outside your house in Newton Heath? We come to you 24/7 across the M40 postcode, from the A62 and the Newton Heath and Moston Metrolink stop to Briscoe Lane, Culcheth Lane and the homes near Brookdale Park. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-miles-platting" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Miles Platting</a> and <a href="/mobile-tyre-fitting-failsworth" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Failsworth</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function NewtonHeathPage() {
               If you can do so safely, pull into a side street or car park off the A62 and call us. We will come to you and repair the puncture or fit a replacement tyre.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby Miles Platting, Moston, Failsworth and Clayton.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-miles-platting" className="text-[#b70011] font-semibold hover:underline">Miles Platting</a> and <a href="/mobile-tyre-fitting-ancoats" className="text-[#b70011] font-semibold hover:underline">Ancoats</a> towards the city, <a href="/mobile-tyre-fitting-moston" className="text-[#b70011] font-semibold hover:underline">Moston</a> to the north,{' '}
+              <a href="/mobile-tyre-fitting-failsworth" className="text-[#b70011] font-semibold hover:underline">Failsworth</a> to the east, and <a href="/mobile-tyre-fitting-clayton" className="text-[#b70011] font-semibold hover:underline">Clayton</a> to the south.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="newton-heath" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function NewtonHeathPage() {
           city="Newton Heath"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Newton Heath?',
-              a: 'Yes. We fit tyres across Newton Heath at homes, workplaces and safe spots off Oldham Road, 24 hours a day.',
+              q: 'I have a flat on Oldham Road. What should I do?',
+              a: 'Oldham Road (A62) is busy, especially at rush hour, so turn into a side street if the tyre allows. Send us a map pin and we will come to you there.',
             },
             {
-              q: 'Can you replace a tyre at my home in Newton Heath?',
-              a: 'Yes. We fit tyres on driveways and outside terraced houses across Newton Heath, so you do not need to drive anywhere.',
+              q: 'Can you come to the Newton Heath and Moston Metrolink stop?',
+              a: 'Yes. Tell us roughly where you are parked near the Metrolink stop and we can fit the tyre while you are at work.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Newton Heath?',
-              a: 'Yes. Our emergency service runs 24/7, including for drivers stuck on Oldham Road or near M60 Junction 22.',
+              q: 'Do you cover all of Newton Heath (M40)?',
+              a: 'Yes. We cover the whole of Newton Heath, including Briscoe Lane, Culcheth Lane, Old Church Street and the streets near Brookdale Park.',
             },
             {
-              q: 'Can you repair a punctured tyre in Newton Heath?',
-              a: 'Yes. If the damage is in the repairable area of the tread, we can repair the puncture at your home or a safe spot nearby.',
+              q: 'Can you come to Brookdale Park?',
+              a: 'Yes. Tell us which entrance you parked near, and we can wait until you are back at the car.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We fit tyres at business units and workplace car parks in and around Newton Heath, with permission from the site.',
+              q: 'My street is terraced with tight parking. Can you still work?',
+              a: 'Yes. Many of the streets off Oldham Road are terraced with tight parking, and kerbside fitting is normal for us. If there is no safe space beside the car, we will suggest a better spot nearby.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes, when it is safe. On the A62 Oldham Road we will ask you to pull into a side street or car park first, if you can.',
+              q: 'Do you also cover Miles Platting and Failsworth?',
+              a: 'Yes. We cover the neighbouring areas too, including Miles Platting, Moston, Failsworth and Clayton.',
+            },
+            {
+              q: 'Do you fit tyres at night in Newton Heath?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late at night or before an early start.',
             },
             {
               q: 'How quickly can you reach me in Newton Heath?',
-              a: 'Newton Heath is close to the M60 and the city centre, so we can usually get to you quickly. Arrival times depend on traffic on Oldham Road, and we will give you an estimate when you call.',
+              a: 'It depends on traffic on Oldham Road and the roads to the M60. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Newton Heath?',
-              a: 'Yes. Whether you are near the Metrolink stop, Brookdale Park or Briscoe Lane, call us and we will come to you.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Newton Heath?',
-              a: 'Yes. Let us know where you are and the size of your tyre, and we will bring a replacement in case a repair is not possible.',
-            },
-            {
-              q: 'Can you fit tyres at night in Newton Heath?',
-              a: 'Yes. Whether you are coming home late or setting off early, our technicians work through the night in Newton Heath.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Newton Heath?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Newton Heath do you cover?',
-              a: 'We cover all of Newton Heath (M40) plus Miles Platting, Moston, Failsworth and Clayton. Call us with your exact location to confirm.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M40 postcode.',
             },
           ]}
         />

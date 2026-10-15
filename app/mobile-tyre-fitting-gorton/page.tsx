@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Gorton',
   areaServed: 'Gorton',
   description:
-    'Need mobile tyre fitting in Gorton? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Gorton (M18)? 24/7 mobile tyre fitting and puncture repair on Hyde Road, near Belle Vue and Gorton Monastery. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-gorton')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Gorton | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Gorton? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Gorton (M18)? 24/7 mobile tyre fitting and puncture repair on Hyde Road, near Belle Vue and Gorton Monastery. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-gorton',
 })
 
@@ -80,11 +79,12 @@ export default function GortonPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Gorton
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Gorton
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Gorton at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on Hyde Road or a puncture outside your house near Gorton Monastery? We come to you 24/7 across Gorton and the M18 postcode, from Belle Vue and Gorton station to Abbey Hey and the streets around Debdale Park, including Gorton Lane and Mount Road. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-openshaw" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Openshaw</a> and <a href="/mobile-tyre-fitting-levenshulme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Levenshulme</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function GortonPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Gorton & Surrounding Areas',
+                'M18: Hyde Road, Belle Vue &amp; Abbey Hey',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function GortonPage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-openshaw" className="text-[#b70011] font-semibold hover:underline">Openshaw</a> and <a href="/mobile-tyre-fitting-clayton" className="text-[#b70011] font-semibold hover:underline">Clayton</a> to the north, <a href="/mobile-tyre-fitting-longsight" className="text-[#b70011] font-semibold hover:underline">Longsight</a> and <a href="/mobile-tyre-fitting-levenshulme" className="text-[#b70011] font-semibold hover:underline">Levenshulme</a> to the west,{' '}
+              <a href="/mobile-tyre-fitting-denton" className="text-[#b70011] font-semibold hover:underline">Denton</a> beyond Debdale Park, and <a href="/mobile-tyre-fitting-reddish" className="text-[#b70011] font-semibold hover:underline">Reddish</a> to the south.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="gorton" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function GortonPage() {
           city="Gorton"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Gorton?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Gorton.',
+              q: 'I have a flat on Hyde Road. What should I do?',
+              a: 'Hyde Road (A57) is busy, so turn into a side street if the tyre allows. Send us a map pin and we will come to you there.',
             },
             {
-              q: 'Can you replace a tyre at my home in Gorton?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'Do you cover all of Gorton (M18)?',
+              a: 'Yes. We cover the whole of Gorton, including Abbey Hey, Belle Vue, West Gorton and the streets around Gorton Lane and Mount Road.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Gorton?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'Can you come to Gorton station or Belle Vue?',
+              a: 'Yes. Tell us where you are parked at Gorton station or around Belle Vue, and we will fit the tyre there.',
             },
             {
-              q: 'Can you repair a punctured tyre in Gorton?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'Can you help if I am parked at Debdale Park?',
+              a: 'Yes. Tell us which car park you used at Debdale Park, and we can wait until you are back at the car.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Gorton Market?',
-              a: 'Yes. We can attend suitable workplace locations around Gorton Market, Hyde Road and surrounding areas.',
+              q: 'Can you come to Gorton Monastery?',
+              a: 'Yes. If you are visiting Gorton Monastery or an event there, tell us where you parked and we will find you.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'My street is terraced with no driveway. Can you still fit the tyre?',
+              a: 'Yes. Most Gorton streets have on-street parking, and we fit tyres safely at the kerb outside your house.',
+            },
+            {
+              q: 'Do you help drivers heading for the M60 or M67?',
+              a: 'Yes. If you get a flat near Denton on the way to the M60 or M67, stop in a side street rather than continuing, and call us with your location.',
             },
             {
               q: 'How quickly can you reach me in Gorton?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
+              a: 'It depends on traffic on Hyde Road and around Belle Vue. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Gorton?',
-              a: 'Yes. We cover Gorton and surrounding M18 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Gorton?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Gorton do you cover?',
-              a: 'We cover Gorton and nearby areas, including Abbey Hey, West Gorton, Openshaw, Longsight and Ardwick. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M18 postcode.',
             },
           ]}
         />

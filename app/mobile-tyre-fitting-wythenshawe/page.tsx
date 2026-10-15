@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Wythenshawe',
   areaServed: 'Wythenshawe',
   description:
-    'Need mobile tyre fitting in Wythenshawe? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Wythenshawe (M22/M23)? 24/7 mobile tyre fitting and puncture repair near Wythenshawe Hospital, Princess Parkway and the M56. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-wythenshawe')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Wythenshawe | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Wythenshawe? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Wythenshawe (M22/M23)? 24/7 mobile tyre fitting and puncture repair near Wythenshawe Hospital, Princess Parkway and the M56. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-wythenshawe',
 })
 
@@ -76,10 +75,11 @@ export default function WythenshawePage() {
           />
           <div className="relative z-10 max-w-2xl py-20">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>
-              24/7 Mobile Tyre Fitting Wythenshawe
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Wythenshawe
             </h1>
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Wythenshawe at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Finished a night shift at Wythenshawe Hospital or the airport to find a flat tyre? We come to you 24/7 across the M22 and M23 postcodes, from the hospital car parks and the Civic Centre to homes in Benchill, Sharston and Woodhouse Park, and drivers on Princess Parkway and the M56. We repair punctures where it is safe and fit replacement tyres on the spot, and we cover neighbouring{' '}
+              <a href="/mobile-tyre-fitting-baguley" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Baguley</a> and <a href="/mobile-tyre-fitting-northenden" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Northenden</a> too.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
@@ -422,16 +422,14 @@ export default function WythenshawePage() {
               We can attend suitable locations around Wythenshawe, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including Baguley, Northenden, Benchill, Sharston, Newall Green, Woodhouse Park, Peel Hall and areas around Manchester Airport. Local Wythenshawe searches also commonly include the M22 and M23 postcode areas.
+              Next door, we also cover <a href="/mobile-tyre-fitting-northenden" className="text-[#b70011] font-semibold hover:underline">Northenden</a> by the M60 and the River Mersey, <a href="/mobile-tyre-fitting-baguley" className="text-[#b70011] font-semibold hover:underline">Baguley</a> on the Metrolink airport line,{' '}
+              <a href="/mobile-tyre-fitting-ringway" className="text-[#b70011] font-semibold hover:underline">Ringway</a> and the airport car parks, and <a href="/mobile-tyre-fitting-timperley" className="text-[#b70011] font-semibold hover:underline">Timperley</a>, <a href="/mobile-tyre-fitting-sale" className="text-[#b70011] font-semibold hover:underline">Sale</a> and <a href="/mobile-tyre-fitting-gatley" className="text-[#b70011] font-semibold hover:underline">Gatley</a> just beyond the M56.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="wythenshawe" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -442,22 +440,51 @@ export default function WythenshawePage() {
         {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-wythenshawe" city="Wythenshawe" faqs={[
-          { q: 'Do you provide mobile tyre fitting in Wythenshawe?', a: 'Yes. We provide 24/7 mobile tyre fitting across Wythenshawe at homes, workplaces and suitable roadside locations.' },
-          { q: 'Can you replace a tyre at my home in Wythenshawe?', a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.' },
-          { q: 'Do you offer emergency tyre fitting in Wythenshawe?', a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.' },
-          { q: 'Can you repair a punctured tyre in Wythenshawe?', a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.' },
-          { q: 'Can you fit a tyre at my workplace?', a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Wythenshawe.' },
-          { q: 'Do you provide roadside tyre fitting?', a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.' },
-          { q: 'How quickly can you reach me in Wythenshawe?', a: 'Response time depends on your exact location, traffic and technician availability. We aim to provide a fast response across Wythenshawe.' },
-          { q: 'Do you provide 24/7 mobile tyre fitting?', a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.' },
-          { q: 'Can you replace a damaged tyre instead of repairing it?', a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.' },
-          { q: 'Do you provide mobile tyre fitting near me in Wythenshawe?', a: 'Yes. If you are located in or around Wythenshawe, you can contact us for mobile tyre fitting at your location.' },
-          { q: 'Can you help with a flat tyre in Wythenshawe?', a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.' },
-          { q: 'Can you fit tyres at night in Wythenshawe?', a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.' },
-          { q: 'Do you provide mobile puncture repair in Wythenshawe?', a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.' },
-          { q: 'Can you fit tyres at home without visiting a garage?', a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.' },
-          { q: 'What areas near Wythenshawe do you cover?', a: 'We cover Wythenshawe and surrounding areas including Baguley, Northenden, Benchill, Sharston, Newall Green and Woodhouse Park. Contact us with your exact location to confirm service availability.' },
-        ]} />
+            {
+              q: 'Can you help when I finish a night shift at Wythenshawe Hospital?',
+              a: 'Yes. We work through the night, so if you come off a shift to a flat tyre, tell us which hospital car park you are in and roughly where, and we will come to you.',
+            },
+            {
+              q: 'Do you cover all of Wythenshawe (M22 and M23)?',
+              a: 'Yes. We cover Benchill, Sharston, Woodhouse Park, Newall Green, Peel Hall, Northern Moor and the Civic Centre, plus the roads around Wythenshawe Park.',
+            },
+            {
+              q: 'I have a flat on Princess Parkway. What should I do?',
+              a: 'Princess Parkway is a fast dual carriageway, so do not stop on it if you can avoid it. Leave at the next turn-off, stop on a residential road and call us with a map pin.',
+            },
+            {
+              q: 'I have tyre damage on the M56. What should I do?',
+              a: 'Never try to change a tyre on the hard shoulder. Leave the M56 at the next junction, stop somewhere safe away from the traffic, and call us with your location.',
+            },
+            {
+              q: 'Do you help shift workers at Manchester Airport?',
+              a: 'Yes. Many airport staff live in Wythenshawe. Tell us whether you are at home or in an airport car park, and which level and bay, and we will plan our access.',
+            },
+            {
+              q: 'Can you fit a tyre before my early shift?',
+              a: 'Yes. We work 24 hours a day, so you can call us late at night or in the early hours and we will aim to get you moving before your shift starts.',
+            },
+            {
+              q: 'Can you come to the Civic Centre or Wythenshawe Park?',
+              a: 'Yes. Tell us which car park you are in at the Civic Centre or Wythenshawe Park, and we will meet you there.',
+            },
+            {
+              q: 'Can you fit tyres on my driveway in Wythenshawe?',
+              a: 'Yes. Most Wythenshawe estates have wide roads and driveways, which make mobile fitting straightforward.',
+            },
+            {
+              q: 'How quickly can you reach me in Wythenshawe?',
+              a: 'Honestly, it depends on the time of day and traffic on Princess Parkway and the M56. We typically reach you within 20 to 30 minutes and always give you an estimate when you call.',
+            },
+            {
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
+            },
+            {
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M22 or M23 postcode.',
+            },
+          ]} />
 
         {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
         <QuickQuoteForm area="Wythenshawe" />

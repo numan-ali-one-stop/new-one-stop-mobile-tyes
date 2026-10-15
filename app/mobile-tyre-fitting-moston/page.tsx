@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Moston',
   areaServed: 'Moston',
   description:
-    'Need mobile tyre fitting in Moston? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Moston (M40)? 24/7 mobile tyre fitting and puncture repair on Moston Lane, Lightbowne Road and nearby streets. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-moston')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Moston | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Moston? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Moston (M40)? 24/7 mobile tyre fitting and puncture repair on Moston Lane, Lightbowne Road and nearby streets. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-moston',
 })
 
@@ -80,11 +79,12 @@ export default function MostonPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Moston
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Moston
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Moston at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre outside your house on Moston Lane or a puncture on Lightbowne Road? We come to you 24/7 across Moston and the M40 postcode, from the Moston Lane shops to the streets around Broadhurst Park and the edge of Boggart Hole Clough, with quick access from the M60. We repair punctures where it is safe and fit replacement tyres at the kerb, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-newton-heath" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Newton Heath</a> and <a href="/mobile-tyre-fitting-failsworth" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Failsworth</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function MostonPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Moston & Surrounding Areas',
+                'M40: Moston Lane &amp; Lightbowne Road',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function MostonPage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-harpurhey" className="text-[#b70011] font-semibold hover:underline">Harpurhey</a> and <a href="/mobile-tyre-fitting-blackley" className="text-[#b70011] font-semibold hover:underline">Blackley</a> to the west, <a href="/mobile-tyre-fitting-newton-heath" className="text-[#b70011] font-semibold hover:underline">Newton Heath</a> to the south,{' '}
+              <a href="/mobile-tyre-fitting-failsworth" className="text-[#b70011] font-semibold hover:underline">Failsworth</a> to the east, and <a href="/mobile-tyre-fitting-chadderton" className="text-[#b70011] font-semibold hover:underline">Chadderton</a> beyond the M60.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="moston" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function MostonPage() {
           city="Moston"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Moston?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Moston.',
+              q: 'Do you cover Moston Lane and Lightbowne Road?',
+              a: 'Yes. We regularly fit tyres on Moston Lane, Lightbowne Road and the long residential streets off them.',
             },
             {
-              q: 'Can you replace a tyre at my home in Moston?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'Do you cover all of Moston (M40)?',
+              a: 'Yes. We cover the whole of Moston, from the Moston Lane shops to the streets near Broadhurst Park and the edge of Boggart Hole Clough.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Moston?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'Can you help on match days at Broadhurst Park?',
+              a: 'Yes. Streets around Broadhurst Park get busy on match days, so tell us exactly where you are parked and we will give you an honest arrival estimate.',
             },
             {
-              q: 'Can you repair a punctured tyre in Moston?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'My street has no driveway. Can you still fit the tyre?',
+              a: 'Yes. Many Moston homes have on-street parking, and we fit tyres safely at the kerb outside your house.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Moston Lane?',
-              a: 'Yes. We can attend suitable workplace locations around Moston Lane, Harpurhey and surrounding areas.',
+              q: 'I have just come off the M60. Can you help?',
+              a: 'Yes. Stop on a quiet residential street rather than continuing on a damaged tyre, and call us with your location.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'Can you fit a tyre before work on Moston Lane?',
+              a: 'Yes. We work 24 hours a day, so call us early and we will aim to get you moving before you need to leave.',
+            },
+            {
+              q: 'Do you also cover Newton Heath and Failsworth?',
+              a: 'Yes. We cover the neighbouring areas too, including Newton Heath, Failsworth, Harpurhey and Blackley.',
             },
             {
               q: 'How quickly can you reach me in Moston?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
+              a: 'It depends on traffic on Moston Lane and the roads to the M60. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Moston?',
-              a: 'Yes. We cover Moston and surrounding M40 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Moston?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Moston do you cover?',
-              a: 'We cover Moston and nearby areas, including Harpurhey, Blackley, Newton Heath, Failsworth and Collyhurst. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M40 postcode.',
             },
           ]}
         />

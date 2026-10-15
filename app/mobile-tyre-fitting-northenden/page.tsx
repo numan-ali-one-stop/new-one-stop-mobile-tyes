@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Northenden',
   areaServed: 'Northenden',
   description:
-    'Need mobile tyre fitting in Northenden? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Northenden (M22)? 24/7 mobile tyre fitting and puncture repair on Palatine Road, Princess Parkway and near the M60 and M56. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-northenden')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Northenden | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Northenden? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre in Northenden (M22)? 24/7 mobile tyre fitting and puncture repair on Palatine Road, Princess Parkway and near the M60 and M56. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-northenden',
 })
 
@@ -80,11 +79,12 @@ export default function NorthendenPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Northenden
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Northenden
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Picked up a puncture on the M60 or M56, or found a flat on your drive in Northenden? Our technicians come to you 24/7 and fit or repair the tyre on the spot.
+              Picked up a puncture on the M60 or M56, or found a flat on your drive? We come to you 24/7 across Northenden and the M22 postcode, from the village on Palatine Road to Sharston and the homes by Wythenshawe Park, and drivers coming off Princess Parkway. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-didsbury" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Didsbury</a> and <a href="/mobile-tyre-fitting-wythenshawe" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Wythenshawe</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function NorthendenPage() {
               Never try to change a tyre on the hard shoulder. If you can, leave at the next junction and stop somewhere safe, then call us and we will come to you.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby Wythenshawe, Baguley, Didsbury, Gatley and Sale.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-didsbury" className="text-[#b70011] font-semibold hover:underline">Didsbury</a> across the River Mersey, <a href="/mobile-tyre-fitting-wythenshawe" className="text-[#b70011] font-semibold hover:underline">Wythenshawe</a> and <a href="/mobile-tyre-fitting-baguley" className="text-[#b70011] font-semibold hover:underline">Baguley</a> to the south,{' '}
+              <a href="/mobile-tyre-fitting-gatley" className="text-[#b70011] font-semibold hover:underline">Gatley</a> and <a href="/mobile-tyre-fitting-cheadle" className="text-[#b70011] font-semibold hover:underline">Cheadle</a> to the east, and <a href="/mobile-tyre-fitting-sale" className="text-[#b70011] font-semibold hover:underline">Sale</a> to the west.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="northenden" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function NorthendenPage() {
           city="Northenden"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Northenden?',
-              a: 'Yes. We fit tyres across Northenden at homes, workplaces and safe stopping points near the M60 and M56, 24 hours a day.',
+              q: 'Do you cover Palatine Road and Northenden village?',
+              a: 'Yes. We regularly fit tyres on Palatine Road, in the village and on the residential streets either side.',
             },
             {
-              q: 'Can you replace a tyre at my home in Northenden?',
-              a: 'Yes. Many homes in Northenden have driveways, which are ideal for fitting tyres without you having to go anywhere.',
+              q: 'I have a flat on Princess Parkway. What should I do?',
+              a: 'Princess Parkway is fast, so leave at the next turn-off and stop on a residential road in Northenden, then call us with a map pin.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Northenden?',
-              a: 'Yes. Our emergency service runs 24/7 for Northenden residents and for anyone who has left the M60 or M56 nearby with tyre damage.',
+              q: 'I have tyre damage on the M60 or M56. Can you help?',
+              a: 'Yes. Never stop on the hard shoulder or slip road if you can avoid it. Leave at Junction 5 of the M60 or Junction 1 of the M56, stop somewhere safe in Northenden and call us.',
             },
             {
-              q: 'Can you repair a punctured tyre in Northenden?',
-              a: 'Yes. If the puncture is in the central tread and the tyre has not been driven on flat, we can usually repair it on the spot.',
+              q: 'Do you cover all of Northenden (M22)?',
+              a: 'Yes. We cover the whole of Northenden, including the village, Sharston and the streets around Wythenshawe Park and Kenworthy Woods.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We fit tyres in office and business park car parks around Northenden and Sharston, with permission from the site.',
+              q: 'Can you come to Wythenshawe Park?',
+              a: 'Yes. Tell us which car park or entrance you used, and we can wait until you are back at the car.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes, but never on the motorway hard shoulder. Leave at the next junction if you can and we will meet you somewhere safe.',
+              q: 'Can you fit tyres on my driveway in Northenden?',
+              a: 'Yes. Many Northenden homes have driveways, which are ideal for mobile fitting.',
+            },
+            {
+              q: 'Do you fit tyres at night in Northenden?',
+              a: 'Yes. We work 24 hours a day, which helps drivers coming off the motorway late at night and residents with early starts.',
             },
             {
               q: 'How quickly can you reach me in Northenden?',
-              a: 'Northenden is right next to the motorway network, so we can usually get to you quickly. Arrival times depend on motorway and Princess Parkway traffic, and we will give you an estimate when you call.',
+              a: 'It depends on traffic on Palatine Road, Princess Parkway and the M60. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Northenden?',
-              a: 'Yes. Whether you are on Palatine Road, near Wythenshawe Park or just off the M60, call us with your location and we will come to you.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Northenden?',
-              a: 'Yes. Whether the flat happened on your drive or after leaving the motorway, we will come to you and repair or replace the tyre.',
-            },
-            {
-              q: 'Can you fit tyres at night in Northenden?',
-              a: 'Yes. We regularly help drivers late at night on the M60 and M56, as well as Northenden residents with early starts.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Northenden?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Northenden do you cover?',
-              a: 'We cover all of Northenden (M22) plus Wythenshawe, Baguley, Didsbury, Gatley and Sale. Call us with your exact location to confirm.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M22 postcode.',
             },
           ]}
         />

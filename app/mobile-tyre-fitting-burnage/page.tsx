@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Burnage',
   areaServed: 'Burnage',
   description:
-    'Need mobile tyre fitting in Burnage? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Burnage (M19)? 24/7 mobile tyre fitting and puncture repair on Burnage Lane, Kingsway and nearby streets. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-burnage')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Burnage | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Burnage? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Burnage (M19)? 24/7 mobile tyre fitting and puncture repair on Burnage Lane, Kingsway and nearby streets. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-burnage',
 })
 
@@ -80,11 +79,12 @@ export default function BurnagePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Burnage
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Burnage
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Burnage at your home, workplace or a suitable roadside location. Our technicians provide 24/7 tyre fitting, emergency tyre replacement and puncture repair.
+              Flat tyre on your drive off Burnage Lane or a puncture on Kingsway? We come to you 24/7 across Burnage and the M19 postcode, from the garden-village streets around Burnage station to Mauldeth Road and Fog Lane Park. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-levenshulme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Levenshulme</a> and <a href="/mobile-tyre-fitting-didsbury" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Didsbury</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function BurnagePage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Burnage & Surrounding Areas',
+                'M19: Burnage Lane &amp; Kingsway',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function BurnagePage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-levenshulme" className="text-[#b70011] font-semibold hover:underline">Levenshulme</a> to the north, <a href="/mobile-tyre-fitting-heaton-chapel" className="text-[#b70011] font-semibold hover:underline">Heaton Chapel</a> and <a href="/mobile-tyre-fitting-heaton-moor" className="text-[#b70011] font-semibold hover:underline">Heaton Moor</a> to the east,{' '}
+              <a href="/mobile-tyre-fitting-didsbury" className="text-[#b70011] font-semibold hover:underline">Didsbury</a> and <a href="/mobile-tyre-fitting-withington" className="text-[#b70011] font-semibold hover:underline">Withington</a> to the south-west, and <a href="/mobile-tyre-fitting-ladybarn" className="text-[#b70011] font-semibold hover:underline">Ladybarn</a> to the west.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="burnage" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function BurnagePage() {
           city="Burnage"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Burnage?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Burnage.',
+              q: 'I have a flat on Kingsway. What should I do?',
+              a: 'Kingsway (A34) is a fast dual carriageway, so turn off into a residential street in Burnage before stopping, then call us with a map pin.',
             },
             {
-              q: 'Can you replace a tyre at my home in Burnage?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'Do you cover Burnage Lane?',
+              a: 'Yes. We regularly fit tyres on Burnage Lane and the garden-village streets off it.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Burnage?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'Can you fit tyres on my driveway in Burnage?',
+              a: 'Yes. Many Burnage homes have driveways or quiet streets outside, which are ideal for mobile fitting.',
             },
             {
-              q: 'Can you repair a punctured tyre in Burnage?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'Can you come to Burnage station?',
+              a: 'Yes. Tell us roughly where you are parked near Burnage station and we can fit the tyre while you are at work.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Burnage Lane?',
-              a: 'Yes. We can attend suitable workplace locations around Burnage Lane, Kingsway and surrounding areas.',
+              q: 'Can you help if I am parked at Fog Lane Park?',
+              a: 'Yes. Tell us which entrance you parked near, and we can wait until you are back at the car.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'Do you cover all of Burnage (M19)?',
+              a: 'Yes. We cover the whole of Burnage, including Burnage Lane, Mauldeth Road, Fog Lane and the streets near Kingsway.',
+            },
+            {
+              q: 'Do you fit tyres at night in Burnage?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late at night or before an early start.',
             },
             {
               q: 'How quickly can you reach me in Burnage?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your location and technician availability.',
+              a: 'It depends on traffic on Kingsway and Burnage Lane. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Burnage?',
-              a: 'Yes. We cover Burnage and surrounding M19 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Burnage?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Burnage do you cover?',
-              a: 'We cover Burnage and nearby areas, including Levenshulme, Heaton Chapel, Ladybarn, Withington and Didsbury. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M19 postcode.',
             },
           ]}
         />

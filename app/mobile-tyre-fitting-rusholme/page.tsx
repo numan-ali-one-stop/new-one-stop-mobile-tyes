@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Rusholme',
   areaServed: 'Rusholme',
   description:
-    'Need mobile tyre fitting in Rusholme? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Rusholme (M14)? 24/7 mobile tyre fitting and puncture repair on Wilmslow Road, Oxford Road and the Curry Mile. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-rusholme')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Rusholme | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Rusholme? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Rusholme (M14)? 24/7 mobile tyre fitting and puncture repair on Wilmslow Road, Oxford Road and the Curry Mile. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-rusholme',
 })
 
@@ -80,11 +79,12 @@ export default function RusholmePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Rusholme
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Rusholme
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Rusholme at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on the Curry Mile or a puncture on Oxford Road? We come to you 24/7 across Rusholme and the M14 postcode, from Wilmslow Road and Dickenson Road to the streets around Victoria Park and Platt Fields Park. We fit tyres safely at the kerb, even where on-street parking is tight, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-fallowfield" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Fallowfield</a> and <a href="/mobile-tyre-fitting-longsight" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Longsight</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function RusholmePage() {
               We can attend suitable locations around Rusholme, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including Fallowfield, Victoria Park, Longsight, Moss Side and surrounding parts of south Manchester. The existing Rusholme service also identifies the M14 area, Wilmslow Road and Anson Road within its local coverage.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-moss-side" className="text-[#b70011] font-semibold hover:underline">Moss Side</a> and <a href="/mobile-tyre-fitting-hulme" className="text-[#b70011] font-semibold hover:underline">Hulme</a> to the west, <a href="/mobile-tyre-fitting-ardwick" className="text-[#b70011] font-semibold hover:underline">Ardwick</a> to the north along Oxford Road,{' '}
+              <a href="/mobile-tyre-fitting-longsight" className="text-[#b70011] font-semibold hover:underline">Longsight</a> to the east, and <a href="/mobile-tyre-fitting-fallowfield" className="text-[#b70011] font-semibold hover:underline">Fallowfield</a> and <a href="/mobile-tyre-fitting-ladybarn" className="text-[#b70011] font-semibold hover:underline">Ladybarn</a> to the south.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="rusholme" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function RusholmePage() {
           city="Rusholme"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Rusholme?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Rusholme at homes, workplaces and suitable roadside locations.',
+              q: 'My car is parked on a tight street with on-street parking. Can you still fit the tyre?',
+              a: 'Yes. Most Rusholme streets have on-street parking only, so kerbside fitting is normal for us. We set up safely beside the car, keep the pavement clear and finish quickly. If there is no safe space, we will suggest a better spot nearby.',
             },
             {
-              q: 'Can you replace a tyre at my home in Rusholme?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              q: 'I have a puncture on the Curry Mile. What should I do?',
+              a: 'Wilmslow Road through Rusholme has bus lanes and heavy traffic, so turn into a side street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Rusholme?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              q: 'Do you cover Oxford Road?',
+              a: 'Yes. If you get a flat on Oxford Road, move off the main road into a side street if you can, and we will come to you there.',
             },
             {
-              q: 'Can you repair a punctured tyre in Rusholme?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              q: 'Do you cover all of Rusholme (M14)?',
+              a: 'Yes. We cover the whole of Rusholme, including Wilmslow Road, Dickenson Road, Victoria Park and the streets towards Platt Fields Park.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Rusholme.',
+              q: 'Can you come to Platt Fields Park or Victoria Park?',
+              a: 'Yes. Tell us where you are parked and we will find you. In Victoria Park, let us know if you are on a private road.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              q: 'Can you help hospital staff near Oxford Road?',
+              a: 'Yes. We work 24 hours a day, so if you finish a late shift to a flat tyre, tell us where you are parked and we will come to you.',
+            },
+            {
+              q: 'Can you fit tyres at night after the restaurants close?',
+              a: 'Yes. We work through the night, which helps if you come back to a flat tyre late in the evening.',
             },
             {
               q: 'How quickly can you reach me in Rusholme?',
-              a: 'Response time depends on your exact location, traffic and technician availability. Our existing Rusholme service states a typical emergency response of 20–30 minutes, subject to conditions.',
+              a: 'It depends on traffic on Wilmslow Road and Oxford Road. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Rusholme?',
-              a: 'Yes. If you are located in or around Rusholme, you can contact us for mobile tyre fitting at your location.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Rusholme?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
-            },
-            {
-              q: 'Can you fit tyres at night in Rusholme?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Rusholme?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Rusholme do you cover?',
-              a: 'We cover Rusholme and surrounding areas including Fallowfield, Victoria Park, Longsight and Moss Side. Contact us with your exact location to confirm service availability.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M14 postcode.',
             },
           ]}
         />

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Blackley',
   areaServed: 'Blackley',
   description:
-    'Need mobile tyre fitting in Blackley? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Blackley (M9)? 24/7 mobile tyre fitting and puncture repair on Rochdale Road, Victoria Avenue and near the M60. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-blackley')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Blackley | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Blackley? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Blackley (M9)? 24/7 mobile tyre fitting and puncture repair on Rochdale Road, Victoria Avenue and near the M60. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-blackley',
 })
 
@@ -113,11 +112,12 @@ export default function BlackleyPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Blackley
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Blackley
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced in Blackley? Our <strong>mobile tyre fitting Blackley</strong> service brings professional tyre fitting directly to your home, workplace or suitable roadside location. We also provide emergency tyre replacement when a damaged or unsafe tyre needs replacing.
+              Flat tyre on Rochdale Road or a puncture on Victoria Avenue? We come to you 24/7 across Blackley and the M9 postcode, from Higher Blackley and Charlestown to the homes around Boggart Hole Clough and the edge of Heaton Park, and drivers leaving the M60 at Junction 19. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-harpurhey" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Harpurhey</a> and <a href="/mobile-tyre-fitting-moston" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Moston</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -127,7 +127,7 @@ export default function BlackleyPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Workplace & Roadside Fitting',
-                'Blackley & Surrounding Areas',
+                'M9: All of Blackley',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -513,16 +513,14 @@ export default function BlackleyPage() {
               If the tyre is suitable for repair, we can assess the damage and carry out a puncture repair where appropriate. If the tyre cannot be safely repaired, we can provide emergency tyre replacement with a suitable replacement tyre, subject to availability.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Our service can be arranged at your home, workplace or a safe roadside location in Blackley.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-harpurhey" className="text-[#b70011] font-semibold hover:underline">Harpurhey</a> and <a href="/mobile-tyre-fitting-cheetham-hill" className="text-[#b70011] font-semibold hover:underline">Cheetham Hill</a> to the south, <a href="/mobile-tyre-fitting-moston" className="text-[#b70011] font-semibold hover:underline">Moston</a> to the east,{' '}
+              <a href="/mobile-tyre-fitting-middleton" className="text-[#b70011] font-semibold hover:underline">Middleton</a> to the north, and <a href="/mobile-tyre-fitting-prestwich" className="text-[#b70011] font-semibold hover:underline">Prestwich</a> beyond Heaton Park.
             </p>
           </div>
         </section>
 
         {/* ── 8. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="blackley" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -536,64 +534,44 @@ export default function BlackleyPage() {
           city="Blackley"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Blackley?',
-              a: 'Yes. We provide mobile tyre fitting Blackley services across Blackley and surrounding areas.',
+              q: 'I have a flat on Rochdale Road. What should I do?',
+              a: 'Rochdale Road (A664) is a busy route into the city, so turn into a side street if the tyre allows. Send us a map pin and we will come to you there.',
             },
             {
-              q: 'Can you replace my tyre at my location?',
-              a: 'Yes. We can provide mobile tyre replacement at your home, workplace or a suitable roadside location.',
+              q: 'Do you cover Victoria Avenue?',
+              a: 'Yes. We regularly help drivers on Victoria Avenue and the residential streets off it. Stop somewhere safe away from the traffic and call us.',
             },
             {
-              q: 'Do you provide emergency tyre replacement in Blackley?',
-              a: 'Yes. Emergency tyre replacement is available when a damaged or unsafe tyre needs to be replaced and a suitable replacement is available.',
+              q: 'Do you cover all of Blackley (M9)?',
+              a: 'Yes. We cover Higher Blackley, Charlestown, the streets around Boggart Hole Clough and the area towards Crumpsall.',
             },
             {
-              q: 'Can you repair a punctured tyre instead of replacing it?',
-              a: 'Where the damage is safe and suitable for repair, a puncture may be repaired. If the tyre cannot be safely repaired, replacement will be recommended.',
+              q: 'I have tyre damage after leaving the M60 at Junction 19. Can you help?',
+              a: 'Yes. Stop on a residential road rather than the slip road, keep everyone away from the traffic side of the car, and call us with your location.',
             },
             {
-              q: 'Can you fit tyres at my home in Blackley?',
-              a: 'Yes. We can fit or replace tyres at your home where there is a safe and suitable area for the work.',
+              q: 'Can you come to Boggart Hole Clough or Heaton Park?',
+              a: 'Yes. Tell us which entrance or car park you used, and we can wait until you are back at the car.',
             },
             {
-              q: 'Can you fit tyres at my workplace?',
-              a: 'Yes. Workplace tyre fitting is possible where the location provides a safe and accessible area for our technician.',
+              q: 'Can you fit tyres on my driveway in Blackley?',
+              a: 'Yes. Many Blackley homes have driveways or quiet streets outside, which are ideal for mobile fitting.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting in Blackley?',
-              a: 'Yes. Our mobile tyre service is available 24/7 for suitable tyre fitting and replacement requirements.',
+              q: 'Is there a separate Blackley phone number?',
+              a: 'No. We use one number for all areas: 07759 708 646. Calls go to the same team, who send the nearest available technician to you.',
             },
             {
-              q: 'Can you help if I have a flat tyre?',
-              a: 'Yes. We can assess your flat tyre and determine whether a repair or tyre replacement is the safest solution.',
+              q: 'How quickly can you reach me in Blackley?',
+              a: 'It depends on traffic on Rochdale Road, Victoria Avenue and the M60. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Can you replace a tyre after a blowout?',
-              a: 'Yes. If your tyre has suffered a blowout and cannot be safely repaired, we can provide replacement assistance where a suitable tyre is available.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How long does mobile tyre fitting take?',
-              a: "The time depends on the number of tyres, vehicle and work required. We'll provide an estimated timeframe based on your requirements.",
-            },
-            {
-              q: 'What information do I need to book tyre replacement?',
-              a: 'Your vehicle registration or tyre size, your location in Blackley and the number of tyres you need are normally enough to get started.',
-            },
-            {
-              q: 'Can you replace just one tyre?',
-              a: 'Yes, where a suitable replacement is available. Our technician can assess the vehicle and advise on the appropriate option.',
-            },
-            {
-              q: 'Do you cover areas around Blackley?',
-              a: 'Yes. We provide service across Blackley and surrounding North Manchester areas, including nearby locations such as Harpurhey and Charlestown.',
-            },
-            {
-              q: "Can you provide mobile tyre fitting near me in Blackley?",
-              a: "Yes. If you're located in Blackley, contact us with your exact location and tyre requirements so we can assess the appropriate service.",
-            },
-            {
-              q: 'Can you replace a tyre at the roadside?',
-              a: 'Yes, provided the roadside location is safe and suitable for our technician to carry out the work.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M9 postcode.',
             },
           ]}
         />
@@ -605,7 +583,7 @@ export default function BlackleyPage() {
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Blackley Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Blackley line and get a technician dispatched in minutes.</p>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call 07759 708 646 and we will send the nearest available technician to you in Blackley.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

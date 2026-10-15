@@ -413,7 +413,7 @@ export default function WilmslowRoadPage() {
               ))}
             </ul>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              The existing page identifies Wilmslow Road as the A34 and specifically mentions coverage through Rusholme, Fallowfield, Withington and Didsbury towards Cheadle and Wilmslow.
+              Wilmslow Road runs south from Rusholme through Fallowfield, Withington and Didsbury, and we cover the whole corridor towards Cheadle and Wilmslow.
             </p>
           </div>
         </section>

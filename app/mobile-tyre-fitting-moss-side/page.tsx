@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Moss Side',
   areaServed: 'Moss Side',
   description:
-    'Need mobile tyre fitting in Moss Side? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Moss Side (M14/M16)? 24/7 mobile tyre fitting and puncture repair on Princess Road and around Alexandra Park. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-moss-side')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Moss Side | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Moss Side? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Moss Side (M14/M16)? 24/7 mobile tyre fitting and puncture repair on Princess Road and around Alexandra Park. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-moss-side',
 })
 
@@ -80,11 +79,12 @@ export default function MossSidePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Moss Side
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Moss Side
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fixed in Moss Side? Our technicians come to your street, your workplace or a safe spot near Alexandra Park or Princess Road, any time of day or night.
+              Need a tyre fixed in Moss Side? We come to you 24/7 across the M14 and M16 postcodes, from the streets around Alexandra Park and Moss Lane East to Claremont Road and the Princess Road corridor. We fit tyres at the kerb outside your house and repair punctures where it is safe, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-hulme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Hulme</a> and <a href="/mobile-tyre-fitting-rusholme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Rusholme</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function MossSidePage() {
               If it is safe, move off the main road into a side street before calling. We will come to you, check the tyre and repair it where possible or fit a replacement.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby Hulme, Rusholme, Fallowfield and Whalley Range.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-hulme" className="text-[#b70011] font-semibold hover:underline">Hulme</a> to the north, <a href="/mobile-tyre-fitting-rusholme" className="text-[#b70011] font-semibold hover:underline">Rusholme</a> and <a href="/mobile-tyre-fitting-fallowfield" className="text-[#b70011] font-semibold hover:underline">Fallowfield</a> to the east,{' '}
+              <a href="/mobile-tyre-fitting-whalley-range" className="text-[#b70011] font-semibold hover:underline">Whalley Range</a> to the west, and <a href="/mobile-tyre-fitting-old-trafford" className="text-[#b70011] font-semibold hover:underline">Old Trafford</a> and <a href="/mobile-tyre-fitting-firswood" className="text-[#b70011] font-semibold hover:underline">Firswood</a> towards Trafford.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="moss-side" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function MossSidePage() {
           city="Moss Side"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Moss Side?',
-              a: 'Yes. We fit tyres across Moss Side, including on-street parking outside your home, 24 hours a day.',
+              q: 'I have a flat on Princess Road. What should I do?',
+              a: 'Princess Road is busy, so turn into a side street such as Moss Lane East or Claremont Road if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you replace a tyre at my home in Moss Side?',
-              a: 'Yes. Most homes in Moss Side have on-street parking, and we are used to fitting tyres safely at the kerbside outside your house.',
+              q: 'Can you come to Alexandra Park?',
+              a: 'Yes. Tell us which side of Alexandra Park you are parked on, and we will find you.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Moss Side?',
-              a: 'Yes. Our emergency service runs 24/7, so whether you are on Princess Road or outside your home in Moss Side, call us and we will come to you.',
+              q: 'My street has no driveway. Can you still fit the tyre?',
+              a: 'Yes. Most Moss Side homes have on-street parking, and we fit tyres safely at the kerb outside your house.',
             },
             {
-              q: 'Can you repair a punctured tyre in Moss Side?',
-              a: 'Yes. If the puncture is in the central part of the tread and the tyre is otherwise sound, we can repair it at the kerbside.',
+              q: 'Do you cover all of Moss Side (M14 and M16)?',
+              a: 'Yes. We cover the whole of Moss Side, including Moss Lane East, Claremont Road, Alexandra Road and the streets around Alexandra Park.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can fit tyres in staff car parks around Moss Side and the nearby hospitals and universities, with permission from the site.',
+              q: 'Do you cover Moss Lane East?',
+              a: 'Yes. We regularly fit tyres on Moss Lane East and the streets off it, including near the leisure centre.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes, where it is safe. If you are on a busy road such as Princess Road, please move to a side street first if you can.',
+              q: 'Do you also cover Hulme and Rusholme?',
+              a: 'Yes. We cover the neighbouring areas too, including Hulme, Rusholme, Fallowfield and Whalley Range.',
+            },
+            {
+              q: 'Do you fit tyres at night in Moss Side?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late in the evening or before an early shift.',
             },
             {
               q: 'How quickly can you reach me in Moss Side?',
-              a: 'Moss Side is only a short drive from the city centre, so we can usually reach you quickly. Arrival times depend on traffic on Princess Road, and we will give you an estimate when you call.',
+              a: 'It depends on traffic on Princess Road and Moss Lane East. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Moss Side?',
-              a: 'Yes. Whether you are near Alexandra Park, Moss Lane East or Princess Road, call us and we will come to you.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Moss Side?',
-              a: 'Yes. We will come to your car, check whether the tyre can be repaired, and fit a replacement if it cannot.',
-            },
-            {
-              q: 'Can you fit tyres at night in Moss Side?',
-              a: 'Yes. We work through the night, which helps if you find a flat late in the evening or before an early shift.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Moss Side?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Moss Side do you cover?',
-              a: 'We cover all of Moss Side (M14 and M16) plus Hulme, Rusholme, Fallowfield and Whalley Range. Call us with your exact location to confirm.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M14 or M16 postcode.',
             },
           ]}
         />
