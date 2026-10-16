@@ -10,7 +10,8 @@
 
 /** Tier names come from the sheet ("Core", …); any other value is accepted as written. */
 export type AreaTier = 'Core' | (string & {})
-export type YesNo = 'Yes' | 'No'
+/** 'N/A' is used for pages the audit says not to build (folded into another page). */
+export type YesNo = 'Yes' | 'No' | 'N/A'
 
 export interface AreaAuditRow {
   /** Area page slug, without the "mobile-tyre-fitting-" prefix. */
@@ -494,16 +495,172 @@ export const AREA_AUDIT: AreaAuditRow[] = [
       'Done: H1 + meta rewritten; intro names M40, Rochdale Road, Collyhurst Road, Queens Park, Monsall; 10 Collyhurst FAQs (old 20-30 min answer replaced); landmarks card; in-copy sibling links added, generic block removed.',
     status: 'Complete',
   },
+  {
+    slug: 'miles-platting',
+    area: 'Miles Platting',
+    postcode: 'M40',
+    anchors: 'Oldham Road',
+    tier: 'B',
+    adGroupPlan: 'Corridor group: North',
+    flag: '',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'Yes',
+    postcodeRoadsInIntro: 'Yes',
+    uniqueLocalFaq: 'Yes',
+    unverifiedClaimsRemoved: 'Yes',
+    trackingTelChecked: 'Yes',
+    siblingLinks: 'Yes',
+    notes:
+      'Done: H1 + meta rewritten; intro names M40, Oldham Road (A62), Varley Street, Hulme Hall Lane, Rochdale Canal, Philips Park; 10 Miles Platting FAQs (old 20-30 min answer replaced); landmarks card; in-copy sibling links added, generic block removed.',
+    status: 'Complete',
+  },
+  {
+    slug: 'clayton',
+    area: 'Clayton',
+    postcode: 'M11',
+    anchors: 'Ashton New Road',
+    tier: 'B',
+    adGroupPlan: 'Corridor group: East',
+    flag: '',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'Yes',
+    postcodeRoadsInIntro: 'Yes',
+    uniqueLocalFaq: 'Yes',
+    unverifiedClaimsRemoved: 'Yes',
+    trackingTelChecked: 'Yes',
+    siblingLinks: 'Yes',
+    notes:
+      'Done: H1 + meta rewritten; intro names M11, Ashton New Road, North Road, Edge Lane, Clayton Hall, Clayton Vale; 10 Clayton FAQs incl. tram-track safety on Ashton New Road (old 20-30 min answer replaced); landmarks card; in-copy sibling links added, generic block removed.',
+    status: 'Complete',
+  },
+  {
+    slug: 'openshaw',
+    area: 'Openshaw',
+    postcode: 'M11',
+    anchors: 'Ashton Old Road',
+    tier: 'B',
+    adGroupPlan: 'Corridor group: East',
+    flag: '',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'Yes',
+    postcodeRoadsInIntro: 'Yes',
+    uniqueLocalFaq: 'Yes',
+    unverifiedClaimsRemoved: 'Yes',
+    trackingTelChecked: 'Yes',
+    siblingLinks: 'Yes',
+    notes:
+      'Done: H1 + meta rewritten; intro names M11, Ashton Old Road (A635), Alan Turing Way; 10 Openshaw FAQs (old 20-30 min answer replaced); landmarks card; in-copy sibling links added, generic block removed.',
+    status: 'Complete',
+  },
+  {
+    slug: 'beswick',
+    area: 'Beswick',
+    postcode: 'M11',
+    anchors: 'Ashton New Road, Etihad Campus',
+    tier: 'B',
+    adGroupPlan: 'Corridor group: East',
+    flag: 'Likely tiny volume',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'Yes',
+    postcodeRoadsInIntro: 'Yes',
+    uniqueLocalFaq: 'Yes',
+    unverifiedClaimsRemoved: 'Yes',
+    trackingTelChecked: 'Yes',
+    siblingLinks: 'Yes',
+    notes:
+      'Done: H1 + meta rewritten; intro names M11, Etihad Campus, Alan Turing Way, Ashton New Road, Grey Mare Lane (issue #8 copy kept and extended); 10 Beswick FAQs incl. match days, Etihad car parks, tram-track safety; landmarks card; in-copy sibling links replace the generic block.',
+    status: 'Complete',
+  },
+  {
+    slug: 'ardwick',
+    area: 'Ardwick',
+    postcode: 'M12',
+    anchors: 'Hyde Road, Ardwick Green',
+    tier: 'B',
+    adGroupPlan: 'Corridor group: East',
+    flag: '',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'Yes',
+    postcodeRoadsInIntro: 'Yes',
+    uniqueLocalFaq: 'Yes',
+    unverifiedClaimsRemoved: 'Yes',
+    trackingTelChecked: 'Yes',
+    siblingLinks: 'Yes',
+    notes:
+      'Done: H1 + meta rewritten; intro names M12, Hyde Road, Ardwick Green, Downing Street junction, Brunswick, Mancunian Way; 10 Ardwick FAQs (incl. Mancunian Way, O2 Apollo; old 20-30 min answer replaced); leftover internal note removed; landmarks card; in-copy sibling links replace the generic block.',
+    status: 'Complete',
+  },
+  {
+    slug: 'whalley-range',
+    area: 'Whalley Range',
+    postcode: 'M16',
+    anchors: 'Upper Chorlton Road, Wilbraham Road',
+    tier: 'B',
+    adGroupPlan: 'Corridor group: Chester Rd side',
+    flag: '',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'Yes',
+    postcodeRoadsInIntro: 'Yes',
+    uniqueLocalFaq: 'Yes',
+    unverifiedClaimsRemoved: 'Yes',
+    trackingTelChecked: 'Yes',
+    siblingLinks: 'Yes',
+    notes:
+      'Done: H1 + meta rewritten; intro names M16, Upper Chorlton Road, Wilbraham Road, Withington Road, College Road; 10 Whalley Range FAQs (old 20-30 min answer replaced); landmarks card; in-copy sibling links added, generic block removed.',
+    status: 'Complete',
+  },
+  {
+    slug: 'firswood',
+    area: 'Firswood',
+    postcode: 'M16',
+    anchors: 'Seymour Grove, near Old Trafford',
+    tier: 'B',
+    adGroupPlan: 'Corridor group: Chester Rd side',
+    flag: 'Likely tiny volume',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'Yes',
+    postcodeRoadsInIntro: 'Yes',
+    uniqueLocalFaq: 'Yes',
+    unverifiedClaimsRemoved: 'Yes',
+    trackingTelChecked: 'Yes',
+    siblingLinks: 'Yes',
+    notes:
+      'Done: H1 + meta rewritten; intro names M16, Seymour Grove, Firswood Metrolink, Old Trafford, Chester Road; 10 Firswood FAQs incl. match days (old 20-30 min answer replaced); landmarks card; in-copy sibling links added, generic block removed.',
+    status: 'Complete',
+  },
+  {
+    slug: 'mancunian-way-area',
+    area: 'Mancunian Way area',
+    postcode: 'M1/M15',
+    anchors: 'n/a - not a search term',
+    tier: 'C',
+    adGroupPlan: "Don't build: fold into Hulme, Ardwick and a new city-centre page",
+    flag: 'Not a search term',
+    pageStatus: 'Not opened',
+    titleH1MetaFixed: 'N/A',
+    postcodeRoadsInIntro: 'N/A',
+    uniqueLocalFaq: 'N/A',
+    unverifiedClaimsRemoved: 'N/A',
+    trackingTelChecked: 'N/A',
+    siblingLinks: 'N/A',
+    notes:
+      'Folded (owner decision): page removed and /mobile-tyre-fitting-mancunian-way-area now 301-redirects to the Manchester city page, ' +
+      'which already covers the city centre (M1–M4, landmarks, Mancunian Way FAQ). Removed from header menu, service-area listing and sitemap. ' +
+      'Hulme and Ardwick also cover the Mancunian Way in their intros and FAQs. No dedicated city-centre page built (Manchester page serves that intent).',
+    status: 'Complete – folded (301 to Manchester page)',
+  },
 ]
 
 const CHECKS: (keyof AreaAuditRow)[] = [
   'titleH1MetaFixed', 'postcodeRoadsInIntro', 'uniqueLocalFaq', 'unverifiedClaimsRemoved', 'trackingTelChecked', 'siblingLinks',
 ]
 
-/** "Completion %" column: share of the six checklist columns marked Yes. */
+/** "Completion %" column: share of the applicable checklist columns (not 'N/A') marked Yes. */
 export function completion(row: AreaAuditRow): string {
-  const done = CHECKS.filter((k) => row[k] === 'Yes').length
-  return `${Math.round((done / CHECKS.length) * 100)}%`
+  const applicable = CHECKS.filter((k) => row[k] !== 'N/A')
+  if (applicable.length === 0) return 'N/A'
+  const done = applicable.filter((k) => row[k] === 'Yes').length
+  return `${Math.round((done / applicable.length) * 100)}%`
 }
 
 const BY_SLUG = new Map(AREA_AUDIT.map((row) => [row.slug, row]))

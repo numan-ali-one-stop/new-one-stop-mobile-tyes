@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Miles Platting',
   areaServed: 'Miles Platting',
   description:
-    'Need mobile tyre fitting in Miles Platting? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Miles Platting (M40)? 24/7 mobile tyre fitting and puncture repair on Oldham Road and nearby streets, minutes from the city. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-miles-platting')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Miles Platting | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Miles Platting? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Miles Platting (M40)? 24/7 mobile tyre fitting and puncture repair on Oldham Road and nearby streets, minutes from the city. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-miles-platting',
 })
 
@@ -80,11 +79,12 @@ export default function MilesPlattingPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Miles Platting
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Miles Platting
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Miles Platting at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on Oldham Road or a puncture outside your house in Miles Platting? We come to you 24/7 across the M40 postcode, from the A62 and Varley Street to Hulme Hall Lane and the streets by the Rochdale Canal and Philips Park, just minutes from the city centre. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-ancoats" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Ancoats</a> and <a href="/mobile-tyre-fitting-newton-heath" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Newton Heath</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function MilesPlattingPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Miles Platting & Surrounding Areas',
+                'M40: Oldham Road &amp; the Rochdale Canal',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function MilesPlattingPage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-ancoats" className="text-[#b70011] font-semibold hover:underline">Ancoats</a> and <a href="/mobile-tyre-fitting-manchester" className="text-[#b70011] font-semibold hover:underline">Manchester city centre</a> to the south-west, <a href="/mobile-tyre-fitting-collyhurst" className="text-[#b70011] font-semibold hover:underline">Collyhurst</a> to the north-west,{' '}
+              <a href="/mobile-tyre-fitting-newton-heath" className="text-[#b70011] font-semibold hover:underline">Newton Heath</a> to the north-east, and <a href="/mobile-tyre-fitting-beswick" className="text-[#b70011] font-semibold hover:underline">Beswick</a> and <a href="/mobile-tyre-fitting-clayton" className="text-[#b70011] font-semibold hover:underline">Clayton</a> to the south-east.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="miles-platting" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function MilesPlattingPage() {
           city="Miles Platting"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Miles Platting?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Miles Platting.',
+              q: 'I have a flat on Oldham Road. What should I do?',
+              a: 'Oldham Road (A62) is a busy route in and out of the city, so turn into a side street such as Varley Street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you replace a tyre at my home in Miles Platting?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'Do you cover all of Miles Platting (M40)?',
+              a: 'Yes. We cover the whole of Miles Platting, including Varley Street, Hulme Hall Lane and the streets by the Rochdale Canal and Philips Park.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Miles Platting?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'Can you come if I am parked near Philips Park?',
+              a: 'Yes. Tell us which entrance you parked near, and we can wait until you are back at the car.',
             },
             {
-              q: 'Can you repair a punctured tyre in Miles Platting?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'Can you help if I am parked by the Rochdale Canal?',
+              a: 'Yes. Tell us the nearest street or bridge to where you left the car, and we will find you.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Oldham Road?',
-              a: 'Yes. We can attend suitable workplace locations around Oldham Road, Collyhurst and surrounding areas.',
+              q: 'My car is in a parking bay on a newer estate. Can you work there?',
+              a: 'Yes. The newer estates in Miles Platting have wide roads and parking bays, which make mobile fitting straightforward.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'How close are you to Miles Platting?',
+              a: 'Miles Platting is just outside the city centre on the A62, so we can usually reach you quickly once we know where you are.',
+            },
+            {
+              q: 'Do you fit tyres at night in Miles Platting?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late at night or before an early start.',
             },
             {
               q: 'How quickly can you reach me in Miles Platting?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
+              a: 'It depends on traffic on Oldham Road and around the city centre. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Miles Platting?',
-              a: 'Yes. We cover Miles Platting and surrounding M40 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Miles Platting?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Miles Platting do you cover?',
-              a: 'We cover Miles Platting and nearby areas, including Collyhurst, Newton Heath, Ancoats, Harpurhey and Cheetham Hill. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M40 postcode.',
             },
           ]}
         />

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Beswick',
   areaServed: 'Beswick',
   description:
-    'Need mobile tyre fitting in Beswick? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Beswick (M11)? 24/7 mobile tyre fitting and puncture repair on Ashton New Road and around the Etihad Campus. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-beswick')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Beswick | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Beswick? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Beswick (M11)? 24/7 mobile tyre fitting and puncture repair on Ashton New Road and around the Etihad Campus. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-beswick',
 })
 
@@ -113,11 +112,12 @@ export default function BeswickPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Beswick
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Beswick
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Flat tyre after a match at the Etihad or outside your home in Beswick? Our mobile tyre fitters come to you 24/7 with replacement tyres and puncture repair kit.
+              Flat tyre after a match at the Etihad or outside your home in Beswick? We come to you 24/7 across Beswick and the M11 postcode, from the Etihad Campus and Alan Turing Way to the newer estates either side of Ashton New Road and Grey Mare Lane. We repair punctures where it is safe and fit replacement tyres where your car is parked, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-clayton" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Clayton</a> and <a href="/mobile-tyre-fitting-ancoats" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Ancoats</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -541,16 +541,14 @@ export default function BeswickPage() {
               Tell us exactly where you are parked and we will come to you, check the tyre and either repair the puncture or fit a replacement.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby Clayton, Openshaw, Ancoats and Miles Platting.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-ancoats" className="text-[#b70011] font-semibold hover:underline">Ancoats</a> and <a href="/mobile-tyre-fitting-miles-platting" className="text-[#b70011] font-semibold hover:underline">Miles Platting</a> to the north-west, <a href="/mobile-tyre-fitting-clayton" className="text-[#b70011] font-semibold hover:underline">Clayton</a> to the east,{' '}
+              <a href="/mobile-tyre-fitting-openshaw" className="text-[#b70011] font-semibold hover:underline">Openshaw</a> and <a href="/mobile-tyre-fitting-gorton" className="text-[#b70011] font-semibold hover:underline">Gorton</a> to the south, and <a href="/mobile-tyre-fitting-ardwick" className="text-[#b70011] font-semibold hover:underline">Ardwick</a> to the west.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="beswick" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -564,64 +562,44 @@ export default function BeswickPage() {
           city="Beswick"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Beswick?',
-              a: 'Yes. We fit tyres across Beswick at homes, workplaces and car parks around the Etihad Campus, 24 hours a day.',
+              q: 'I came back to a flat tyre after a match at the Etihad. Can you help?',
+              a: 'Yes. Tell us which car park or street you are in, and we will give you an honest arrival estimate, as traffic around the stadium can take a while to clear after a game.',
             },
             {
-              q: 'Can you replace a tyre at my home in Beswick?',
-              a: 'Yes. We fit tyres outside homes across Beswick, including the newer estates around the Etihad Campus.',
+              q: 'I have a flat on Ashton New Road. What should I do?',
+              a: 'Metrolink trams run along Ashton New Road, so never stop on or beside the tram tracks. Turn into a side street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Beswick?',
-              a: 'Yes. Our emergency service runs 24/7, including late at night after matches and concerts at the Etihad.',
+              q: 'Do you cover the Etihad Campus car parks?',
+              a: 'Yes. We can attend the public car parks around the Etihad Campus. Tell us the car park name and roughly where you are parked.',
             },
             {
-              q: 'Can you repair a punctured tyre in Beswick?',
-              a: 'Yes. If the damage is in the central tread area and the tyre is otherwise sound, we can repair the puncture where your car is parked.',
+              q: 'Can you come to the National Cycling Centre or the other Sportcity venues?',
+              a: 'Yes. If you are parked at one of the venues around the Etihad Campus, tell us which car park you used and we will find you.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can fit tyres in staff car parks around the Etihad Campus and nearby business units, with permission from the site.',
+              q: 'Do you cover all of Beswick (M11)?',
+              a: 'Yes. We cover the whole of Beswick, including Alan Turing Way, Grey Mare Lane and the newer estates either side of Ashton New Road.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes, where it is safe. On busy roads like Alan Turing Way or Ashton New Road, please move to a side street first if you can.',
+              q: 'Do you fit tyres on the newer estates?',
+              a: 'Yes. The newer estates in Beswick have wide roads and driveways or parking bays, which make mobile fitting straightforward.',
+            },
+            {
+              q: 'Do you fit tyres late at night after events?',
+              a: 'Yes. We work 24 hours a day, so late finishes after matches and concerts are no problem.',
             },
             {
               q: 'How quickly can you reach me in Beswick?',
-              a: 'Beswick is close to the city centre, so we can usually reach you quickly. On match and event days, traffic around the Etihad can add time, and we will give you an honest estimate when you call.',
+              a: 'It depends on traffic on Ashton New Road and around the Etihad Campus, especially on event days. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Beswick?',
-              a: 'Yes. Whether you are near the Etihad Campus, Alan Turing Way or Grey Mare Lane, call us and we will come to you.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Beswick?',
-              a: 'Yes. Tell us exactly where you are parked and we will bring the equipment and a replacement tyre in case a repair is not possible.',
-            },
-            {
-              q: 'Can you fit tyres at night in Beswick?',
-              a: 'Yes. Late-night event finishes are a common time for flat tyres, and our technicians work through the night.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Beswick?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Beswick do you cover?',
-              a: 'We cover all of Beswick (M11) plus Clayton, Openshaw, Ancoats and Miles Platting. Call us with your exact location to confirm.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M11 postcode.',
             },
           ]}
         />

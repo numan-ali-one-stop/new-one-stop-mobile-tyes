@@ -59,7 +59,7 @@ const TOWN_PAGES = [
   'affetside', 'ainsworth', 'birtle', 'edenfield', 'fishpool', 'greenmount',
   'heap-bridge', 'holcombe', 'simister', 'summerseat', 'unsworth',
   'ancoats', 'ardwick', 'burnage', 'clayton', 'collyhurst', 'firswood', 'gorton',
-  'harpurhey', 'ladybarn', 'levenshulme', 'mancunian-way-area', 'miles-platting',
+  'harpurhey', 'ladybarn', 'levenshulme', 'miles-platting',
   'moston', 'openshaw', 'whalley-range',
 ]
 

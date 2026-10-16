@@ -68,7 +68,6 @@ export const EXTRA_1: Record<string, string> = {
   harpurhey: "Near the market and Rochdale Road, tell us which car park or street you are in. At home, let us know whether there is room beside the car, and send your registration so we can bring the right tyre.",
   ladybarn: "Ladybarn's terraced streets rarely have drives, so tell us where the car is parked and whether there is room beside it. Your registration helps us check the tyre size before we set off.",
   levenshulme: "Stockport Road has bus lanes and heavy traffic, so please turn into a side street before calling. On residential roads, tell us if there is room to work beside the car.",
-  'mancunian-way-area': "If you get a flat on the Mancunian Way, do not stop on it. Leave at the next exit, stop in a side street or car park, and call us with a map pin. We will come to you there.",
   'miles-platting': "If you are on Oldham Road, turn into the estate roads before calling. At home, tell us whether you have a parking bay or driveway, and send your registration if you can.",
   moston: "Tell us your street and whether the car is on a drive or the road. If you have just left the M60, stop on a quiet residential road rather than continuing on the damaged tyre.",
   openshaw: "If you are on Ashton Old Road, turn into a side street before calling. At home, tell us whether there is space beside the car, and send your registration so we can bring the right tyre.",

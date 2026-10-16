@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Whalley Range',
   areaServed: 'Whalley Range',
   description:
-    'Need mobile tyre fitting in Whalley Range? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Whalley Range (M16)? 24/7 mobile tyre fitting and puncture repair on Upper Chorlton Road, Wilbraham Road and nearby. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-whalley-range')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Whalley Range | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Whalley Range? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Whalley Range (M16)? 24/7 mobile tyre fitting and puncture repair on Upper Chorlton Road, Wilbraham Road and nearby. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-whalley-range',
 })
 
@@ -80,11 +79,12 @@ export default function WhalleyRangePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Whalley Range
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Whalley Range
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Whalley Range at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on your drive off Upper Chorlton Road or a puncture on Wilbraham Road? We come to you 24/7 across Whalley Range and the M16 postcode, from the large houses on Withington Road and College Road to the streets towards Alexandra Park and Princess Road. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-chorlton-cum-hardy" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Chorlton-cum-Hardy</a> and <a href="/mobile-tyre-fitting-moss-side" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Moss Side</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function WhalleyRangePage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Whalley Range & Surrounding Areas',
+                'M16: Upper Chorlton Road &amp; Wilbraham Road',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function WhalleyRangePage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-chorlton-cum-hardy" className="text-[#b70011] font-semibold hover:underline">Chorlton-cum-Hardy</a> to the south, <a href="/mobile-tyre-fitting-firswood" className="text-[#b70011] font-semibold hover:underline">Firswood</a> and <a href="/mobile-tyre-fitting-old-trafford" className="text-[#b70011] font-semibold hover:underline">Old Trafford</a> to the west,{' '}
+              <a href="/mobile-tyre-fitting-moss-side" className="text-[#b70011] font-semibold hover:underline">Moss Side</a> and <a href="/mobile-tyre-fitting-hulme" className="text-[#b70011] font-semibold hover:underline">Hulme</a> to the east, and <a href="/mobile-tyre-fitting-stretford" className="text-[#b70011] font-semibold hover:underline">Stretford</a> beyond Chester Road.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="whalley-range" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function WhalleyRangePage() {
           city="Whalley Range"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Whalley Range?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Whalley Range.',
+              q: 'Do you cover Upper Chorlton Road?',
+              a: 'Yes. We regularly fit tyres on Upper Chorlton Road and the residential streets off it.',
             },
             {
-              q: 'Can you replace a tyre at my home in Whalley Range?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'I have a puncture on Wilbraham Road. What should I do?',
+              a: 'Wilbraham Road can be busy, so turn into a side street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Whalley Range?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'Can you fit tyres on my driveway in Whalley Range?',
+              a: 'Yes. Many of the larger houses in Whalley Range have driveways, which are ideal for mobile fitting. If your drive is gated, tell us how to get in.',
             },
             {
-              q: 'Can you repair a punctured tyre in Whalley Range?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'Do you cover Withington Road and College Road?',
+              a: 'Yes. We cover the whole area, including Withington Road, College Road and the streets towards Alexandra Park.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Upper Chorlton Road?',
-              a: 'Yes. We can attend suitable workplace locations around Upper Chorlton Road, Withington Road and surrounding areas.',
+              q: 'I have a flat on Princess Road near Whalley Range. Can you help?',
+              a: 'Yes. Princess Road is a busy dual carriageway, so turn into a quieter street in Whalley Range before stopping, then call us.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'Do you cover all of Whalley Range (M16)?',
+              a: 'Yes. We cover the whole of Whalley Range, from Upper Chorlton Road and Wilbraham Road to Withington Road and the edge of Alexandra Park.',
+            },
+            {
+              q: 'Do you fit tyres at night in Whalley Range?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late at night or before an early start.',
             },
             {
               q: 'How quickly can you reach me in Whalley Range?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
+              a: 'It depends on traffic on Upper Chorlton Road, Wilbraham Road and Princess Road. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Whalley Range?',
-              a: 'Yes. We cover Whalley Range and surrounding M16 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Whalley Range?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Whalley Range do you cover?',
-              a: 'We cover Whalley Range and nearby areas, including Firswood, Moss Side, Chorlton-cum-Hardy, Old Trafford and Hulme. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M16 postcode.',
             },
           ]}
         />

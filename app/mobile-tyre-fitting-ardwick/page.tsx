@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Ardwick',
   areaServed: 'Ardwick',
   description:
-    'Need mobile tyre fitting in Ardwick? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Ardwick (M12)? 24/7 mobile tyre fitting and puncture repair on Hyde Road, around Ardwick Green and the Mancunian Way. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-ardwick')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Ardwick | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Ardwick? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Ardwick (M12)? 24/7 mobile tyre fitting and puncture repair on Hyde Road, around Ardwick Green and the Mancunian Way. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-ardwick',
 })
 
@@ -80,11 +79,12 @@ export default function ArdwickPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Ardwick
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Ardwick
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Get professional mobile tyre fitting in Ardwick at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on Hyde Road or a puncture near Ardwick Green? We come to you 24/7 across Ardwick and the M12 postcode, from Ardwick Green and the Downing Street junction to the streets towards Brunswick and Chorlton-on-Medlock, including drivers coming off the Mancunian Way. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-longsight" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Longsight</a> and <a href="/mobile-tyre-fitting-manchester" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Manchester city centre</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -539,16 +539,14 @@ export default function ArdwickPage() {
               We can attend suitable locations around Ardwick, including homes, workplaces and safe roadside areas. Depending on the tyre condition, we can provide emergency tyre replacement or repair the puncture where it is safe and suitable to do so.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              We also cover nearby areas including Longsight, Gorton, Fallowfield, Ancoats, Beswick and Manchester city centre. The Ardwick service area includes the M12 postcode area, Hyde Road and Ardwick Green.
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-manchester" className="text-[#b70011] font-semibold hover:underline">Manchester city centre</a> and <a href="/mobile-tyre-fitting-ancoats" className="text-[#b70011] font-semibold hover:underline">Ancoats</a> to the north-west, <a href="/mobile-tyre-fitting-beswick" className="text-[#b70011] font-semibold hover:underline">Beswick</a> to the north-east,{' '}
+              <a href="/mobile-tyre-fitting-gorton" className="text-[#b70011] font-semibold hover:underline">Gorton</a> and <a href="/mobile-tyre-fitting-longsight" className="text-[#b70011] font-semibold hover:underline">Longsight</a> to the east, and <a href="/mobile-tyre-fitting-rusholme" className="text-[#b70011] font-semibold hover:underline">Rusholme</a> and <a href="/mobile-tyre-fitting-hulme" className="text-[#b70011] font-semibold hover:underline">Hulme</a> to the south-west.
             </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="ardwick" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -562,64 +560,44 @@ export default function ArdwickPage() {
           city="Ardwick"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Ardwick?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Ardwick at homes, workplaces and suitable roadside locations.',
+              q: 'I have a flat on Hyde Road. What should I do?',
+              a: 'Hyde Road (A57) is busy, so turn into a side street around Ardwick Green if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you replace a tyre at my home in Ardwick?',
-              a: 'Yes. We can provide tyre replacement at home when a tyre needs to be replaced.',
+              q: 'I got a flat on the Mancunian Way. Can you help?',
+              a: 'Yes. There is no hard shoulder on the Mancunian Way, so leave at the next exit, stop in a side street in Ardwick and call us with your location.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Ardwick?',
-              a: 'Yes. Our emergency tyre fitting service is available 24/7 for unexpected tyre problems.',
+              q: 'Do you cover Ardwick Green and the Downing Street junction?',
+              a: 'Yes. We regularly attend Ardwick Green and the streets around the A6 Downing Street junction. Move away from the junction itself before we arrive.',
             },
             {
-              q: 'Can you repair a punctured tyre in Ardwick?',
-              a: 'Yes. We can carry out a puncture repair where the damage is suitable and the tyre can be safely repaired.',
+              q: 'Can you help if I am parked for a gig at the O2 Apollo?',
+              a: 'Yes. Tell us which street or car park you used near Ardwick Green, and we will come to you, including after late finishes.',
             },
             {
-              q: 'Can you fit a tyre at my workplace?',
-              a: 'Yes. We can provide mobile tyre fitting at suitable workplace locations in Ardwick, including areas around Hyde Road and Ardwick Green.',
+              q: 'Do you cover student accommodation near the universities?',
+              a: 'Yes. Many students live around Brunswick and Chorlton-on-Medlock. Tell us the building name and how to get into the car park.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. We can attend suitable roadside locations where it is safe and legal to carry out the work.',
+              q: 'Do you cover all of Ardwick (M12)?',
+              a: 'Yes. We cover the whole of Ardwick, including Ardwick Green, Brunswick and the streets between Hyde Road and the Mancunian Way.',
+            },
+            {
+              q: 'Do you fit tyres at night in Ardwick?',
+              a: 'Yes. We work 24 hours a day, which helps after evening events and late shifts.',
             },
             {
               q: 'How quickly can you reach me in Ardwick?',
-              a: 'Response time depends on your exact location, traffic and technician availability. The Ardwick service page states a typical emergency response of 20–30 minutes.',
+              a: 'It depends on traffic on Hyde Road, the Mancunian Way and the A6. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide 24/7 mobile tyre fitting?',
-              a: 'Yes. Our mobile tyre fitting service is available 24 hours a day, 7 days a week.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a damaged tyre instead of repairing it?',
-              a: 'Yes. If the tyre is unsafe or unsuitable for repair, we can provide a replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Ardwick?',
-              a: 'Yes. If you are located in or around Ardwick, you can contact us for mobile tyre fitting at your location.',
-            },
-            {
-              q: 'Can you help with a flat tyre in Ardwick?',
-              a: 'Yes. We can assess the tyre and provide a suitable repair or replacement where required.',
-            },
-            {
-              q: 'Can you fit tyres at night in Ardwick?',
-              a: 'Yes. Our service operates 24/7, including night-time emergency tyre assistance.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Ardwick?',
-              a: 'Yes. We provide mobile puncture repair where the tyre and damage are suitable for a safe repair.',
-            },
-            {
-              q: 'Can you fit tyres at home without visiting a garage?',
-              a: 'Yes. Our mobile service allows you to have tyres fitted or replaced at a suitable location without travelling to a garage.',
-            },
-            {
-              q: 'What areas near Ardwick do you cover?',
-              a: 'We cover Ardwick and nearby areas including Longsight, Gorton, Fallowfield, Ancoats and Beswick. The wider service area also covers multiple Manchester districts.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M12 postcode.',
             },
           ]}
         />

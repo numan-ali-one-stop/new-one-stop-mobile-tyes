@@ -105,10 +105,6 @@ export const DETAILS_MANCHESTER: Record<string, LocalDetail> = {
     scenarios: "Levenshulme call-outs often come from the busy A6 Stockport Road, from the market area, and from homes on the streets either side.",
     parking: "Stockport Road has bus lanes and heavy traffic, so we work on side streets. Residential roads have kerbside parking.",
   },
-  'mancunian-way-area': {
-    scenarios: "Most calls here come from drivers who got a flat on the elevated Mancunian Way and left at the next exit, plus people parked near the universities and Oxford Road.",
-    parking: "There is no hard shoulder on the Mancunian Way, so never stop on it. Leave at the next exit and stop in a side street or car park.",
-  },
   'miles-platting': {
     scenarios: "In Miles Platting we help residents on the newer estates and drivers heading in and out of the city on Oldham Road.",
     parking: "Estate roads and parking bays give us room to work. On Oldham Road we move you to a quieter street first.",

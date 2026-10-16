@@ -52,6 +52,8 @@ const nextConfig = {
       },
       // Puncture repair page renamed — keep the old URL working and pass on its SEO value.
       { source: '/emergency-puncture-repair', destination: '/puncture-repair-Greater-manchester', permanent: true },
+      // Mancunian Way area folded into the Manchester city page (Area Audit: tier C, "don't build").
+      { source: '/mobile-tyre-fitting-mancunian-way-area', destination: '/mobile-tyre-fitting-manchester', permanent: true },
       // Jump start page renamed — keep the old URL working and pass on its SEO value.
       { source: '/car-battery-jump-start', destination: '/jump-start', permanent: true },
       // These three pages were consolidated into /mobile-tyre-fitting — keep old URLs working.

@@ -51,6 +51,7 @@ export const MANCHESTER: Record<string, LocalArea> = {
     pc: ['M11'],
     roads: ['Alan Turing Way (A6010)', 'Ashton New Road (A662)', 'Grey Mare Lane', 'Ashton Old Road'],
     near: ['Clayton', 'Openshaw', 'Ancoats', 'Miles Platting'],
+    landmarks: ['Etihad Campus', 'Etihad Stadium', 'National Cycling Centre', 'Alan Turing Way', 'Grey Mare Lane'],
     note: "Beswick surrounds the Etihad Campus, so we often help match-day and event drivers here, as well as residents on the new estates either side of Alan Turing Way.",
   },
   fallowfield: {
@@ -134,6 +135,7 @@ export const MANCHESTER: Record<string, LocalArea> = {
     pc: ['M12'],
     roads: ['Hyde Road (A57)', 'Mancunian Way (A57(M))', 'Downing Street (A6)', 'Ardwick Green'],
     near: ['Longsight', 'Beswick', 'Gorton', 'Rusholme'],
+    landmarks: ['Ardwick Green', 'O2 Apollo Manchester', 'Brunswick', 'Downing Street (A6) junction', 'Mancunian Way junction'],
     note: "Ardwick sits where the Mancunian Way meets Hyde Road and the A6, so it is a frequent meeting point for drivers who have picked up a puncture on the way into the city.",
   },
   burnage: {
@@ -147,6 +149,7 @@ export const MANCHESTER: Record<string, LocalArea> = {
     pc: ['M11'],
     roads: ['Ashton New Road (A662)', 'North Road', 'Edge Lane'],
     near: ['Beswick', 'Openshaw', 'Droylsden', 'Newton Heath'],
+    landmarks: ['Clayton Hall', 'Clayton Vale', 'Clayton Hall Metrolink', 'Edge Lane', 'North Road'],
     note: "We cover Clayton, from the homes around Clayton Hall and Clayton Vale to drivers on the Ashton New Road corridor near the Metrolink line.",
   },
   collyhurst: {
@@ -160,6 +163,7 @@ export const MANCHESTER: Record<string, LocalArea> = {
     pc: ['M16'],
     roads: ['Seymour Grove', 'Upper Chorlton Road', 'Chester Road (A56)'],
     near: ['Old Trafford', 'Whalley Range', 'Chorlton-cum-Hardy', 'Stretford'],
+    landmarks: ['Firswood Metrolink', 'Seymour Grove', 'Old Trafford cricket ground (nearby)', 'Old Trafford football stadium (nearby)', 'Chester Road (A56)'],
     note: "Firswood sits between Old Trafford and Chorlton. We fit tyres at homes around the Metrolink stop and help drivers on Seymour Grove and Chester Road.",
   },
   gorton: {
@@ -190,16 +194,11 @@ export const MANCHESTER: Record<string, LocalArea> = {
     landmarks: ['Levenshulme station', 'Levenshulme Market', 'Stockport Road (A6) shops', 'Highfield Country Park'],
     note: "Levenshulme sits along the A6 Stockport Road, one of the busiest routes into the city. We help drivers there and at homes on the streets either side.",
   },
-  'mancunian-way-area': {
-    pc: ['M1', 'M13', 'M15'],
-    roads: ['Mancunian Way (A57(M))', 'Oxford Road (A34)', 'Princess Street', 'Chester Road (A56)'],
-    near: ['Hulme', 'Ardwick', 'Ancoats', 'Manchester'],
-    note: "The elevated Mancunian Way has no hard shoulder. If you get a flat there, leave at the next exit if it is safe to do so and we will meet you in a nearby side street or car park.",
-  },
   'miles-platting': {
     pc: ['M40'],
     roads: ['Oldham Road (A62)', 'Hulme Hall Lane', 'Varley Street'],
     near: ['Ancoats', 'Newton Heath', 'Collyhurst', 'Beswick', 'Clayton'],
+    landmarks: ['Oldham Road (A62)', 'Rochdale Canal', 'Philips Park (edge)', 'Varley Street', 'Hulme Hall Lane'],
     note: "Miles Platting lies on the A62 just outside the city centre. We fit tyres at homes on the newer estates and help drivers heading in and out on Oldham Road.",
   },
   moston: {
@@ -213,12 +212,14 @@ export const MANCHESTER: Record<string, LocalArea> = {
     pc: ['M11'],
     roads: ['Ashton Old Road (A635)', 'Alan Turing Way', 'Fairfield Street'],
     near: ['Gorton', 'Clayton', 'Beswick', 'Droylsden'],
+    landmarks: ['Ashton Old Road (A635)', 'Alan Turing Way (west edge)', 'Etihad Campus (nearby)', 'Fairfield (east edge)'],
     note: "Openshaw sits on the A635 Ashton Old Road between the city and Tameside. We help drivers on that route and fit tyres at homes across the area.",
   },
   'whalley-range': {
     pc: ['M16'],
     roads: ['Withington Road', 'Upper Chorlton Road', 'Wilbraham Road', 'Princess Road'],
     near: ['Chorlton-cum-Hardy', 'Moss Side', 'Firswood', 'Old Trafford', 'Hulme'],
+    landmarks: ['Upper Chorlton Road', 'Wilbraham Road', 'Withington Road', 'College Road', 'Alexandra Park (edge)'],
     note: "Whalley Range has large houses with driveways as well as busy through-roads. We fit tyres on your drive or kerbside, whichever is safer.",
   },
   'wilmslow-road': {

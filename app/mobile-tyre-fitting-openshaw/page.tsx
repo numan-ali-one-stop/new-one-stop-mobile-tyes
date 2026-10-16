@@ -2,7 +2,6 @@ import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
-import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
@@ -16,7 +15,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Openshaw',
   areaServed: 'Openshaw',
   description:
-    'Need mobile tyre fitting in Openshaw? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Openshaw (M11)? 24/7 mobile tyre fitting and puncture repair on Ashton Old Road and the routes into Tameside. Call 07759 708 646.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-openshaw')
@@ -30,7 +29,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Openshaw | 24/7 Emergency & Puncture Repair',
   description:
-    'Need mobile tyre fitting in Openshaw? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+    'Flat tyre or puncture in Openshaw (M11)? 24/7 mobile tyre fitting and puncture repair on Ashton Old Road and the routes into Tameside. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-openshaw',
 })
 
@@ -80,11 +79,12 @@ export default function OpenshawPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting Openshaw
+              24/7 Mobile Tyre Fitting &amp; Puncture Repair in Openshaw
             </h1>
 
             <p className="text-white/80 text-base leading-relaxed mb-6">
-              Need a tyre fitted or replaced without visiting a garage? Get professional mobile tyre fitting in Openshaw at your home, workplace or a suitable roadside location. We provide 24/7 tyre fitting, emergency tyre replacement and puncture repair when you need assistance.
+              Flat tyre on Ashton Old Road or a puncture outside your house in Openshaw? We come to you 24/7 across Openshaw and the M11 postcode, from the A635 between the city and Tameside to the terraced streets either side and the edge of Alan Turing Way. We fit tyres at the kerb where it is safe, and we reach nearby{' '}
+              <a href="/mobile-tyre-fitting-gorton" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Gorton</a> and <a href="/mobile-tyre-fitting-clayton" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Clayton</a> just as quickly.
             </p>
 
             {/* Trust bullets */}
@@ -94,7 +94,7 @@ export default function OpenshawPage() {
                 '24/7 Mobile Tyre Fitting',
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
-                'Openshaw & Surrounding Areas',
+                'M11: Ashton Old Road (A635)',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -548,14 +548,15 @@ export default function OpenshawPage() {
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               For urgent assistance, contact us with your exact location and vehicle details so we can confirm availability and an estimated arrival time.
             </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We also cover the neighbouring areas: <a href="/mobile-tyre-fitting-beswick" className="text-[#b70011] font-semibold hover:underline">Beswick</a> to the west, <a href="/mobile-tyre-fitting-clayton" className="text-[#b70011] font-semibold hover:underline">Clayton</a> to the north, <a href="/mobile-tyre-fitting-gorton" className="text-[#b70011] font-semibold hover:underline">Gorton</a> to the south,{' '}
+              and <a href="/mobile-tyre-fitting-droylsden" className="text-[#b70011] font-semibold hover:underline">Droylsden</a> and <a href="/mobile-tyre-fitting-audenshaw" className="text-[#b70011] font-semibold hover:underline">Audenshaw</a> towards Tameside.
+            </p>
           </div>
         </section>
 
         {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
-
-        {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="openshaw" />
 
         {/* ── SERVICE AREAS MAP ──────────────────────────────── */}
         <ServiceAreasMap />
@@ -569,64 +570,44 @@ export default function OpenshawPage() {
           city="Openshaw"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Openshaw?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting at homes, workplaces and suitable roadside locations throughout Openshaw.',
+              q: 'I have a flat on Ashton Old Road. What should I do?',
+              a: 'Ashton Old Road (A635) is a busy route between the city and Tameside, so turn into a side street if the tyre allows, then send us a map pin.',
             },
             {
-              q: 'Can you replace a tyre at my home in Openshaw?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, removing the need to visit a garage.',
+              q: 'Do you cover all of Openshaw (M11)?',
+              a: 'Yes. We cover the whole of Openshaw, from Ashton Old Road to the terraced streets either side and the edge of Alan Turing Way.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Openshaw?',
-              a: 'Yes. Our emergency tyre fitting service is available 24 hours a day, seven days a week.',
+              q: 'My street is terraced with tight parking. Can you still work?',
+              a: 'Yes. Many Openshaw streets off Ashton Old Road have on-street parking only, and kerbside fitting is normal for us.',
             },
             {
-              q: 'Can you repair a punctured tyre in Openshaw?',
-              a: 'Yes. We inspect the damage and carry out a puncture repair if the tyre meets the relevant safety requirements.',
+              q: 'Do you help drivers heading into Tameside?',
+              a: 'Yes. If you get a flat on the A635 towards Droylsden or Audenshaw, stop in a side street rather than continuing, and call us with your location.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Ashton Old Road?',
-              a: 'Yes. We can attend suitable workplace locations around Ashton Old Road, Clayton and surrounding areas.',
+              q: 'Can you help on match days near the Etihad?',
+              a: 'Yes. Traffic around Alan Turing Way builds up on match and event days, so tell us exactly where you are parked.',
             },
             {
-              q: 'Do you provide roadside tyre fitting?',
-              a: 'Yes. Our technicians can attend roadside locations where it is safe and legal to carry out the required work.',
+              q: 'Do you also cover Gorton and Clayton?',
+              a: 'Yes. We cover the neighbouring areas too, including Gorton, Clayton, Beswick and Droylsden.',
+            },
+            {
+              q: 'Do you fit tyres at night in Openshaw?',
+              a: 'Yes. We work 24 hours a day, which helps if you find a flat late at night or before an early start.',
             },
             {
               q: 'How quickly can you reach me in Openshaw?',
-              a: 'Our advertised emergency response time is typically 20–30 minutes. Actual arrival times depend on traffic, your exact location and technician availability.',
+              a: 'It depends on traffic on Ashton Old Road and Alan Turing Way. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
-              q: 'Do you provide mobile tyre fitting at night?',
-              a: 'Yes. Our 24/7 service is available during the day and night, including weekends and bank holidays.',
+              q: 'Can you repair my puncture instead of replacing the tyre?',
+              a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If your tyre has unsafe damage or is unsuitable for repair, we can supply and fit an appropriate replacement.',
-            },
-            {
-              q: 'Do you provide mobile tyre fitting near me in Openshaw?',
-              a: 'Yes. We cover Openshaw and surrounding M11 locations. Contact us with your postcode to confirm availability.',
-            },
-            {
-              q: 'Can you help if my car has a flat tyre?',
-              a: 'Yes. We can inspect your flat tyre and recommend a suitable repair or replacement based on its condition.',
-            },
-            {
-              q: 'Do you offer different tyre brands and prices?',
-              a: 'Yes. Budget, mid-range and premium tyres are available, depending on your tyre size and current stock.',
-            },
-            {
-              q: 'Do you provide mobile puncture repair in Openshaw?',
-              a: 'Yes. We offer mobile puncture repair when the location and extent of the damage allow a safe repair.',
-            },
-            {
-              q: 'Can you fit more than one tyre during a visit?',
-              a: 'Yes. We can replace a single tyre, a pair or a complete set, depending on your vehicle requirements and tyre availability.',
-            },
-            {
-              q: 'Which areas near Openshaw do you cover?',
-              a: 'We cover Openshaw and nearby areas, including Clayton, Gorton, Beswick, Abbey Hey and West Gorton. Contact us to confirm coverage for your exact location.',
+              q: 'How do I get a quote?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M11 postcode.',
             },
           ]}
         />

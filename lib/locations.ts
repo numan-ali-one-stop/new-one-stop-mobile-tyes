@@ -91,7 +91,6 @@ export const BOROUGHS: Borough[] = [
       { name: 'Harpurhey', slug: 'harpurhey' },
       { name: 'Ladybarn', slug: 'ladybarn' },
       { name: 'Levenshulme', slug: 'levenshulme' },
-      { name: 'Mancunian Way area', slug: 'mancunian-way-area' },
       { name: 'Miles Platting', slug: 'miles-platting' },
       { name: 'Moston', slug: 'moston' },
       { name: 'Openshaw', slug: 'openshaw' },

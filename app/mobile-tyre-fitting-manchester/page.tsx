@@ -128,7 +128,7 @@ export default function ManchesterPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
                 'On-the-Spot Puncture Repair',
-                'Professional Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
                 '24 Hour Tyre Fitting',
                 'Home, Workplace & Roadside Service',
                 'City Centre & M1–M16 Coverage',
@@ -385,13 +385,13 @@ export default function ManchesterPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Manchester
+                Your Mobile Tyre Fitter in Manchester
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
                 Getting a tyre replaced or fitted doesn&apos;t always mean taking your car to a garage. Our <strong>mobile tyre fitting in Manchester</strong> service brings professional tyre fitting directly to your location.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres 247 provides convenient tyre fitting for drivers across Manchester. Whether you need a replacement tyre at home, at work or at a suitable roadside location, our technician can assess your requirements and carry out the fitting where conditions are safe and suitable.
+                As a mobile tyre fitter in Manchester, One Stop Tyres 247 brings the tyres and equipment to drivers right across the city. Whether you need a replacement tyre at home, at work or at a suitable roadside location, our technician can assess your requirements and carry out the fitting where conditions are safe and suitable.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -422,7 +422,7 @@ export default function ManchesterPage() {
 
         {/* ── 5. WHY CHOOSE ─────────────────────────────────── */}
         <WhyChooseGrid
-          heading="Why Choose Our Manchester Mobile Tyre Fitting Service?"
+          heading="Why Choose Our Mobile Tyre Service in Manchester?"
           intro=""
           items={whyChooseManchester}
         />
@@ -508,7 +508,7 @@ export default function ManchesterPage() {
               className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Tyre Fitting Without the Trip to a Garage
+              Mobile Tyres in Manchester, Fitted Where You Are
             </h2>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               Our <strong>mobile tyre fitting service in Manchester</strong> is designed for drivers who want professional tyre fitting without making a trip to a tyre garage.
@@ -517,7 +517,7 @@ export default function ManchesterPage() {
               Whether you&apos;re at home, at your workplace or in another suitable location, we can arrange tyre fitting based on your requirements and location.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              Our service is suitable for drivers who need a replacement tyre, have discovered a damaged tyre or simply prefer the convenience of having their tyres fitted where they are.
+              Our <strong>mobile tyre replacement in Manchester</strong> suits drivers who need a new tyre, have discovered a damaged tyre or simply prefer the convenience of having their tyres fitted where they are.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               We cover every part of the city: <a href="/mobile-tyre-fitting-ancoats" className="text-[#b70011] font-semibold hover:underline">Ancoats</a> and <a href="/mobile-tyre-fitting-ardwick" className="text-[#b70011] font-semibold hover:underline">Ardwick</a> on the edge of the centre,{' '}
@@ -549,8 +549,11 @@ export default function ManchesterPage() {
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               If you have a damaged tyre or need a replacement outside standard garage hours, contact us with your location and vehicle details. We&apos;ll assess your requirements and arrange suitable mobile tyre fitting where possible.
             </p>
-            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               Our service is particularly useful when visiting a garage is inconvenient or you&apos;re unable to drive your vehicle safely to a tyre centre.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              For <strong>emergency tyre fitting in Manchester</strong>, call us whatever the time: a flat tyre in Manchester city centre, a tyre blowout on Princess Parkway or a puncture on the Mancunian Way. If the tyre cannot be repaired safely, we carry out <strong>emergency tyre replacement in Manchester</strong> on the spot, subject to tyre availability.
             </p>
           </div>
         </section>
@@ -614,8 +617,20 @@ export default function ManchesterPage() {
               a: 'Yes. We cover every district of the city, from Didsbury, Chorlton and Withington in the south to Cheetham Hill, Blackley and Harpurhey in the north.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your postcode, and a map pin if you are on the road.',
+              q: 'Do you offer emergency tyre fitting in Manchester?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across the city. We repair the puncture where it is safe to do so, and if the tyre cannot be saved we provide emergency tyre replacement in Manchester on the spot, subject to tyre availability.',
+            },
+            {
+              q: 'I have a flat tyre in Manchester. What should I do?',
+              a: 'If you are driving, slow down gently and stop somewhere safe, away from traffic, with your hazard lights on. Do not keep driving on a flat tyre, as it can damage the wheel. Then call or WhatsApp us with your location and we will come to you to repair or replace the tyre.',
+            },
+            {
+              q: 'What should I do after a tyre blowout in Manchester?',
+              a: 'Hold the steering wheel firmly, ease off the accelerator and let the car slow down before braking gently. Pull over somewhere safe, put your hazard lights on and get everyone away from the traffic. Never change a tyre on a motorway hard shoulder or the Mancunian Way. A blown tyre always needs replacing, so call us and we will fit a new one where it is safe to do so.',
+            },
+            {
+              q: 'How do I book a mobile tyre fitter in Manchester?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your postcode, and a map pin if you are on the road, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />
