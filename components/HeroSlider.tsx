@@ -4,7 +4,7 @@ import { PHONE_TEL } from '@/lib/constants'
 import QuickQuoteForm from '@/components/QuickQuoteForm'
 
 const HERO = {
-  image: '/images/IMG_2098.jpeg',
+  image: '/images/aa1.jpeg',
   badge: 'Same Day Mobile Tyre Replacement',
   heading: '24/7 Mobile Tyre Service & Repair Near You',
   body: 'Need tyre help fast? Our mobile tyre service comes directly to you, wherever you are. We provide tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or a safe roadside location, 24 hours a day, 7 days a week.',

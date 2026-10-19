@@ -381,13 +381,13 @@ export default function FallowfieldPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Fallowfield
+                Your Mobile Tyre Fitter in Fallowfield
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
                 A punctured, damaged or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Fallowfield</strong> service allows you to have your tyres fitted or replaced at a convenient location.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres 247 provides professional mobile tyre fitting across Fallowfield and nearby areas. Whether you&apos;re at home, at work, parked in a suitable location or dealing with a tyre problem at the roadside, our technician can assess your requirements and carry out fitting or replacement where conditions are safe and suitable.
+                As a mobile tyre fitter in Fallowfield, One Stop Tyres 247 provides professional mobile tyre fitting from the student streets off Wilmslow Road to the homes around Platt Fields and nearby areas. Whether you&apos;re at home, at work, parked in a suitable location or dealing with a tyre problem at the roadside, our technician can assess your requirements and carry out fitting or replacement where conditions are safe and suitable.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -513,7 +513,7 @@ export default function FallowfieldPage() {
               We can replace tyres that are severely damaged, worn beyond safe limits or punctured in a way that makes repair unsuitable. Our technician assesses the tyre first and determines whether tyre repair or replacement is the appropriate option.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Whether you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Fallowfield, subject to tyre availability.
+              Whether you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Fallowfield, subject to tyre availability. We carry budget, mid-range and premium mobile tyres in Fallowfield, fitted wherever your car is parked.
             </p>
           </div>
         </section>
@@ -561,7 +561,7 @@ export default function FallowfieldPage() {
           faqs={[
             {
               q: 'Can you fit a tyre on the street outside my student house?',
-              a: 'Yes. Most Fallowfield streets have on-street parking only, so kerbside fitting is what we do every day. We set up safely beside the car, keep the pavement clear and finish quickly.',
+              a: 'Yes. Most Fallowfield streets have on-street parking only, so fitting mobile tyres in Fallowfield at the kerb is what we do every day. We set up safely beside the car, keep the pavement clear and finish quickly.',
             },
             {
               q: 'Do you cover Owens Park and the student halls?',
@@ -572,12 +572,16 @@ export default function FallowfieldPage() {
               a: 'Wilmslow Road has bus lanes and heavy traffic, so turn into the nearest side street if the tyre allows, then send us a map pin.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Fallowfield?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Fallowfield, from Wilmslow Road and the student halls to Platt Fields and Wilbraham Road. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you come to Platt Fields Park or Platt Lane?',
               a: 'Yes. If you are parked by Platt Fields Park or on Platt Lane, tell us roughly where and we will come to you.',
             },
             {
               q: 'Do you cover all of Fallowfield (M14)?',
-              a: 'Yes. We cover the whole M14 area here, including Wilbraham Road, Mauldeth Road, Platt Lane and the streets towards Ladybarn and Victoria Park.',
+              a: 'Yes. We provide tyre fitting across the whole M14 area here, including Wilbraham Road, Mauldeth Road, Platt Lane and the streets towards Ladybarn and Victoria Park.',
             },
             {
               q: 'I am a student on a budget. What tyre options do you have?',
@@ -600,8 +604,8 @@ export default function FallowfieldPage() {
               a: 'Yes. We work 24 hours a day, which helps if you find a flat late at night or before an early lecture or shift.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M14 postcode.',
+              q: 'How do I book a mobile tyre fitter in Fallowfield?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M14 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

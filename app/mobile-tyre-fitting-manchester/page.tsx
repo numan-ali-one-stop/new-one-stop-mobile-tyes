@@ -391,7 +391,7 @@ export default function ManchesterPage() {
                 Getting a tyre replaced or fitted doesn&apos;t always mean taking your car to a garage. Our <strong>mobile tyre fitting in Manchester</strong> service brings professional tyre fitting directly to your location.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                As a mobile tyre fitter in Manchester, One Stop Tyres 247 brings the tyres and equipment to drivers right across the city. Whether you need a replacement tyre at home, at work or at a suitable roadside location, our technician can assess your requirements and carry out the fitting where conditions are safe and suitable.
+                As a mobile tyre fitter in Manchester, One Stop Tyres 247 brings the tyres and equipment to drivers right across the city. Whether you need a replacement tyre at home, at work or at a suitable roadside location, our technician can assess your requirements and carry out the fitting where conditions are safe and suitable. If you have been searching for &quot;mobile tyre fitting near me&quot; or &quot;tyre fitters near me&quot;, there is no garage to find: our technicians work across every part of Manchester, so the nearest available fitter comes to you.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -514,7 +514,7 @@ export default function ManchesterPage() {
               Our <strong>mobile tyre fitting service in Manchester</strong> is designed for drivers who want professional tyre fitting without making a trip to a tyre garage.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-              Whether you&apos;re at home, at your workplace or in another suitable location, we can arrange tyre fitting based on your requirements and location.
+              Our <a href="/home-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">home tyre fitting in Manchester</a> means tyre fitting at home, on your drive or at the kerb outside your house, and we can also come to your workplace or another suitable location.
             </p>
             <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
               Our <strong>mobile tyre replacement in Manchester</strong> suits drivers who need a new tyre, have discovered a damaged tyre or simply prefer the convenience of having their tyres fitted where they are.
@@ -527,6 +527,30 @@ export default function ManchesterPage() {
               <a href="/mobile-tyre-fitting-cheetham-hill" className="text-[#b70011] font-semibold hover:underline">Cheetham Hill</a>, <a href="/mobile-tyre-fitting-blackley" className="text-[#b70011] font-semibold hover:underline">Blackley</a> and <a href="/mobile-tyre-fitting-harpurhey" className="text-[#b70011] font-semibold hover:underline">Harpurhey</a> to the north,{' '}
               <a href="/mobile-tyre-fitting-gorton" className="text-[#b70011] font-semibold hover:underline">Gorton</a>, <a href="/mobile-tyre-fitting-levenshulme" className="text-[#b70011] font-semibold hover:underline">Levenshulme</a> and <a href="/mobile-tyre-fitting-longsight" className="text-[#b70011] font-semibold hover:underline">Longsight</a> to the east, and{' '}
               <a href="/mobile-tyre-fitting-wythenshawe" className="text-[#b70011] font-semibold hover:underline">Wythenshawe</a> and <a href="/mobile-tyre-fitting-northenden" className="text-[#b70011] font-semibold hover:underline">Northenden</a> near the airport.
+            </p>
+          </div>
+        </section>
+
+        {/* ── VEHICLES, PRICE & SPEED ───────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-slate-100">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
+              Every Vehicle, Every Budget
+            </span>
+            <h2
+              className="text-2xl sm:text-4xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Van, EV and Run Flat Tyre Fitting in Manchester
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We fit tyres for cars, SUVs, vans and electric vehicles at your home, workplace or a safe roadside spot. Our <strong>van tyre fitting in Manchester</strong> keeps tradespeople and delivery drivers on the road, with load-rated van tyres fitted on site.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              <strong>EV tyre fitting in Manchester</strong> needs tyres with the right load rating for heavier electric cars, and we fit tyres to suit your vehicle. We also offer <strong>run flat tyre fitting in Manchester</strong> for cars that came with run-flats from the factory. Not sure which you need? Read our <a href="/guides/run-flat-vs-normal-tyres-manchester" className="text-[#b70011] font-semibold hover:underline">run-flat vs normal tyres guide</a>.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Looking for <strong>cheap mobile tyre fitting in Manchester</strong>? We supply budget, mid-range and premium tyres and give you the full price before we start, so you can choose what suits you. <strong>Same day tyre fitting in Manchester</strong> is often possible too, subject to your tyre size being in stock.
             </p>
           </div>
         </section>
@@ -605,16 +629,20 @@ export default function ManchesterPage() {
               a: 'It depends on your location, the time of day and traffic on roads like Princess Parkway and the Mancunian Way. In most of the city we typically reach you within 20 to 30 minutes, and we give you an estimate when you call.',
             },
             {
-              q: 'Do you fit tyres at night in the city centre?',
-              a: 'Yes. We work 24 hours a day, which helps if you find a flat after a late shift, a night out or an early-morning start.',
+              q: 'Do you offer night tyre fitting in Manchester?',
+              a: 'Yes. We work 24 hours a day, so night tyre fitting in Manchester is part of our normal service, whether you find a flat after a late shift, a night out or before an early-morning start.',
             },
             {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot. Sidewall damage means the tyre needs replacing.',
             },
             {
-              q: 'Do you also cover Didsbury, Chorlton and the other suburbs?',
-              a: 'Yes. We cover every district of the city, from Didsbury, Chorlton and Withington in the south to Cheetham Hill, Blackley and Harpurhey in the north.',
+              q: 'Is there mobile tyre fitting near me in Manchester?',
+              a: 'Yes. Wherever you are in Manchester, from the city centre to Didsbury, Chorlton and Withington in the south or Cheetham Hill, Blackley and Harpurhey in the north, our mobile tyre fitters come to you, so the nearest tyre fitting is wherever your car is parked.',
+            },
+            {
+              q: 'Can you do tyre fitting at home in Manchester?',
+              a: 'Yes. Home tyre fitting in Manchester is one of our most popular services. We fit tyres on your drive or at the kerb outside your house, so you do not need to take the car anywhere.',
             },
             {
               q: 'Do you offer emergency tyre fitting in Manchester?',
@@ -627,6 +655,14 @@ export default function ManchesterPage() {
             {
               q: 'What should I do after a tyre blowout in Manchester?',
               a: 'Hold the steering wheel firmly, ease off the accelerator and let the car slow down before braking gently. Pull over somewhere safe, put your hazard lights on and get everyone away from the traffic. Never change a tyre on a motorway hard shoulder or the Mancunian Way. A blown tyre always needs replacing, so call us and we will fit a new one where it is safe to do so.',
+            },
+            {
+              q: 'Do you offer cheap mobile tyre fitting in Manchester?',
+              a: 'We supply budget, mid-range and premium tyres, so there is an option for every budget. We always give you the full price before we start, so you can compare and decide.',
+            },
+            {
+              q: 'Do you offer same day tyre fitting in Manchester?',
+              a: 'Often, yes. If your tyre size is in stock, we can usually fit it the same day. Send us your registration or tyre size and we will confirm availability when you call.',
             },
             {
               q: 'How do I book a mobile tyre fitter in Manchester?',

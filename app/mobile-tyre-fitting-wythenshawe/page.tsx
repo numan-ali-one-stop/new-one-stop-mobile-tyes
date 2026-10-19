@@ -246,11 +246,11 @@ export default function WythenshawePage() {
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
-                Professional Mobile Tyre Fitting in Wythenshawe
+                Your Mobile Tyre Fitter in Wythenshawe
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                 When you need mobile tyre fitting in Wythenshawe, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, our mobile service provides a convenient solution.
-                We provide professional tyre fitting and replacement across Wythenshawe and surrounding areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
+                As a mobile tyre fitter in Wythenshawe, we provide professional tyre fitting and replacement across M22 and M23, helping drivers avoid the need to travel to a garage. We carry budget, mid-range and premium mobile tyres in Wythenshawe, fitted wherever your car is parked. Our service is available 24/7 for planned and emergency tyre requirements.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -465,12 +465,16 @@ export default function WythenshawePage() {
               a: 'Yes. We work 24 hours a day, so you can call us late at night or in the early hours and we will aim to get you moving before your shift starts.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Wythenshawe?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Wythenshawe, from the hospital and the Civic Centre to Princess Parkway and the M56. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you come to the Civic Centre or Wythenshawe Park?',
               a: 'Yes. Tell us which car park you are in at the Civic Centre or Wythenshawe Park, and we will meet you there.',
             },
             {
               q: 'Can you fit tyres on my driveway in Wythenshawe?',
-              a: 'Yes. Most Wythenshawe estates have wide roads and driveways, which make mobile fitting straightforward.',
+              a: 'Yes. Most Wythenshawe estates have wide roads and driveways, which make fitting mobile tyres in Wythenshawe straightforward.',
             },
             {
               q: 'How quickly can you reach me in Wythenshawe?',
@@ -481,8 +485,8 @@ export default function WythenshawePage() {
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M22 or M23 postcode.',
+              q: 'How do I book a mobile tyre fitter in Wythenshawe?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M22 or M23 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]} />
 

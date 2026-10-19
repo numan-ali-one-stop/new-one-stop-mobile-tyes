@@ -5,9 +5,9 @@ import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/sche
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
-  title: 'Emergency Puncture Repair Greater Manchester | 24/7 Mobile',
+  title: 'Mobile Puncture Repair Greater Manchester | 24/7 Emergency',
   description:
-    'Need a tyre puncture repair in Greater Manchester? Get professional puncture repair for cars, slow punctures and emergency tyre problems at a convenient location.',
+    'Need mobile puncture repair in Greater Manchester? 24/7 emergency puncture repair for cars and slow punctures at home, work or the roadside. Call 07759 708 646.',
   path: '/puncture-repair-Greater-manchester',
 })
 

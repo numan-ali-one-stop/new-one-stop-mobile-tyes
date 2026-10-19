@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo'
 import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
-  title: 'Locking Wheel Nut Removal | Specialist Mobile Service',
+  title: 'Locking Wheel Nut Removal Greater Manchester | Mobile Service',
   description:
     'Specialist mobile locking wheel nut removal across Greater Manchester for lost keys, rounded heads and seized fittings.',
   path: '/locking-nut-removal',

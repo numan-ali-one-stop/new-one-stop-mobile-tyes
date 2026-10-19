@@ -381,13 +381,13 @@ export default function CheethamHillPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Cheetham Hill
+                Your Mobile Tyre Fitter in Cheetham Hill
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
                 A punctured, damaged or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Cheetham Hill</strong> service allows you to have your tyres fitted or replaced at a convenient location.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres 247 provides professional mobile tyre fitting across Cheetham Hill and nearby areas. Whether you&apos;re at home, at work, in a suitable car park or stranded at the roadside, our technician can assess your tyre requirements and carry out fitting or replacement where conditions are safe and suitable.
+                As a mobile tyre fitter in Cheetham Hill, One Stop Tyres 247 provides professional mobile tyre fitting from the wholesale district to Crumpsall and nearby areas. Whether you&apos;re at home, at work, in a suitable car park or stranded at the roadside, our technician can assess your tyre requirements and carry out fitting or replacement where conditions are safe and suitable.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -513,7 +513,7 @@ export default function CheethamHillPage() {
               We can replace tyres that are severely damaged, worn beyond safe limits or punctured in a way that makes repair unsuitable. Our technician assesses the tyre first and determines whether tyre repair or replacement is appropriate.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              If you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Cheetham Hill, subject to tyre availability.
+              If you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Cheetham Hill, subject to tyre availability. We carry budget, mid-range and premium mobile tyres in Cheetham Hill, fitted wherever your car is parked.
             </p>
           </div>
         </section>
@@ -560,7 +560,7 @@ export default function CheethamHillPage() {
           faqs={[
             {
               q: 'Do you cover all of Cheetham Hill (M8)?',
-              a: 'Yes. We cover the whole M8 postcode, from the wholesale district up to Crumpsall and the streets around Heaton Park.',
+              a: 'Yes. We provide tyre fitting across the whole M8 postcode, from the wholesale district up to Crumpsall and the streets around Heaton Park.',
             },
             {
               q: 'Can you help at Manchester Fort or the wholesale units?',
@@ -576,7 +576,11 @@ export default function CheethamHillPage() {
             },
             {
               q: 'Can you fit a tyre at my business or warehouse unit?',
-              a: 'Yes. We often help traders in the Cheetham Hill wholesale district and on Queens Road, as long as we have permission to work on the site. Tell us the business name and where the vehicle is parked.',
+              a: 'Yes. We often help traders in the Cheetham Hill wholesale district and on Queens Road, and we fit mobile tyres in Cheetham Hill on site as long as we have permission to work there. Tell us the business name and where the vehicle is parked.',
+            },
+            {
+              q: 'Do you offer emergency tyre fitting in Cheetham Hill?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Cheetham Hill, from Cheetham Hill Road and Manchester Fort to Queens Road and Crumpsall. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
             },
             {
               q: 'Do you help drivers near Heaton Park?',
@@ -595,8 +599,8 @@ export default function CheethamHillPage() {
               a: 'Yes. We work 24 hours a day, including late finishes at the wholesale units and early-morning starts.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M8 postcode.',
+              q: 'How do I book a mobile tyre fitter in Cheetham Hill?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M8 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo'
 import { MAPS_URL } from '@/lib/constants'
 
 export const metadata = buildMetadata({
-  title: 'TPMS Reset & Sensor Diagnostics',
+  title: 'TPMS Reset Greater Manchester | Mobile Sensor Diagnostics',
   description:
     'Professional mobile TPMS reset, diagnostics, sensor programming and replacement services across Greater Manchester.',
   path: '/tpms-reset',

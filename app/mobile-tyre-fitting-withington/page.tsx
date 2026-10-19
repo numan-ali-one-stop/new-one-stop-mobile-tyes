@@ -347,11 +347,11 @@ export default function WithingtonPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Withington
+                Your Mobile Tyre Fitter in Withington
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                 When you need mobile tyre fitting in Withington, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, our mobile service provides a convenient solution.
-                We provide professional tyre fitting and replacement across Withington and surrounding areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
+                As a mobile tyre fitter in Withington, we provide professional tyre fitting and replacement across the M20 postcode, helping drivers avoid the need to travel to a garage. We carry budget, mid-range and premium mobile tyres in Withington, fitted wherever your car is parked. Our service is available 24/7 for planned and emergency tyre requirements.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -572,6 +572,10 @@ export default function WithingtonPage() {
               a: 'Wilmslow Road has bus lanes and heavy traffic, so turn into the nearest side street if the tyre allows, then send us a map pin.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Withington?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Withington, from the village and Burton Road to The Christie and the hospital car parks. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you help hospital staff after a late shift?',
               a: 'Yes. We work through the night, so if you finish a shift at The Christie or Withington Community Hospital to a flat tyre, call us and we will come to you.',
             },
@@ -581,7 +585,7 @@ export default function WithingtonPage() {
             },
             {
               q: 'My street is terraced with no driveway. Can you still fit the tyre?',
-              a: 'Yes. We fit tyres safely at the kerb outside your house and keep the road and pavement clear.',
+              a: 'Yes. We fit mobile tyres in Withington safely at the kerb outside your house and keep the road and pavement clear.',
             },
             {
               q: 'How quickly can you reach me in Withington?',
@@ -596,8 +600,8 @@ export default function WithingtonPage() {
               a: 'Yes. We work 24 hours a day, which helps hospital staff and anyone who finds a flat late at night.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M20 postcode.',
+              q: 'How do I book a mobile tyre fitter in Withington?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M20 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

@@ -381,13 +381,13 @@ export default function DidsburyPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Didsbury
+                Your Mobile Tyre Fitter in Didsbury
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
                 A punctured, damaged or worn tyre can make it difficult or unsafe to drive to a garage. Our <strong>mobile tyre fitting in Didsbury</strong> service allows you to have your tyres fitted or replaced at a convenient location.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres 247 provides professional mobile tyre fitting across Didsbury and nearby areas. Whether you&apos;re at home, at work, parked in a suitable location or dealing with a tyre problem at the roadside, our technician can assess your requirements and carry out fitting or replacement where conditions are safe and suitable.
+                As a mobile tyre fitter in Didsbury, One Stop Tyres 247 provides professional mobile tyre fitting across the village, West and East Didsbury and nearby areas. Whether you&apos;re at home, at work, parked in a suitable location or dealing with a tyre problem at the roadside, our technician can assess your requirements and carry out fitting or replacement where conditions are safe and suitable.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Key Benefits</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -513,7 +513,7 @@ export default function DidsburyPage() {
               We can replace tyres that are severely damaged, worn beyond safe limits or punctured in a way that makes repair unsuitable. Our technician assesses the tyre first and determines whether tyre repair or replacement is the appropriate option.
             </p>
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Whether you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Didsbury, subject to tyre availability.
+              Whether you need one replacement tyre or several tyres fitted, we can arrange mobile tyre replacement at a suitable location in Didsbury, subject to tyre availability. We carry budget, mid-range and premium mobile tyres in Didsbury, fitted wherever your car is parked.
             </p>
           </div>
         </section>
@@ -560,7 +560,7 @@ export default function DidsburyPage() {
           faqs={[
             {
               q: 'Do you cover Didsbury Village, West Didsbury and East Didsbury?',
-              a: 'Yes. We cover the whole M20 postcode, including Didsbury Village, West Didsbury around Burton Road, East Didsbury and Parrs Wood.',
+              a: 'Yes. We provide tyre fitting across the whole M20 postcode, including Didsbury Village, West Didsbury around Burton Road, East Didsbury and Parrs Wood.',
             },
             {
               q: 'Can you fit a tyre on Burton Road or in West Didsbury?',
@@ -575,6 +575,10 @@ export default function DidsburyPage() {
               a: 'Yes. If you are parked near the Didsbury Village or East Didsbury Metrolink stops, tell us roughly where and we can fit the tyre while you are at work.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Didsbury?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Didsbury, from the village and Burton Road to Kingsway and Parrs Wood. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Do you help drivers on Kingsway heading for the M60?',
               a: 'Yes. If you get a flat on Kingsway, turn off into a residential road rather than continuing towards the motorway, and call us with your location.',
             },
@@ -584,7 +588,7 @@ export default function DidsburyPage() {
             },
             {
               q: 'Can you fit tyres on my driveway in Didsbury?',
-              a: 'Yes. Many Didsbury homes have driveways, which are ideal for mobile fitting. If your drive is shared or gated, let us know when you call.',
+              a: 'Yes. Many Didsbury homes have driveways, which are ideal for fitting mobile tyres in Didsbury without you leaving the house. If your drive is shared or gated, let us know when you call.',
             },
             {
               q: 'How quickly can you reach me in Didsbury?',
@@ -599,8 +603,8 @@ export default function DidsburyPage() {
               a: 'Yes. We work 24 hours a day, which helps if you find a flat after an evening out in the village or before an early start.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M20 postcode.',
+              q: 'How do I book a mobile tyre fitter in Didsbury?',
+              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M20 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />
