@@ -607,7 +607,7 @@ export default function OpenshawPage() {
             },
             {
               q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M11 postcode.',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M11 postcode.',
             },
           ]}
         />

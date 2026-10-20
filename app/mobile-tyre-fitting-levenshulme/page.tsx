@@ -348,11 +348,11 @@ export default function LevenshulmePage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Levenshulme
+                Your Mobile Tyre Fitter in Levenshulme
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Levenshulme, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, our mobile technicians can help.
-                We provide tyre fitting, replacement and puncture repair across Levenshulme and surrounding areas, including Stockport Road, Barlow Road and the M19 postcode area.
+                When you need mobile tyre fitting in Levenshulme, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, your mobile tyre fitter in Levenshulme can help.
+                We provide tyre fitting across the M19 postcode, including Stockport Road and Barlow Road, plus replacement and puncture repair in the surrounding areas. We carry budget, mid-range and premium mobile tyres in Levenshulme, fitted wherever your car is parked.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -583,7 +583,7 @@ export default function LevenshulmePage() {
             },
             {
               q: 'My street is terraced with tight parking. Can you still work?',
-              a: 'Yes. Kerbside fitting on terraced streets is normal for us. If there is no safe space beside the car, we will suggest a better spot nearby.',
+              a: 'Yes. We fit mobile tyres in Levenshulme kerbside on terraced streets every day. If there is no safe space beside the car, we will suggest a better spot nearby.',
             },
             {
               q: 'Can you help if I am parked near Levenshulme Market?',
@@ -606,8 +606,12 @@ export default function LevenshulmePage() {
               a: 'Yes. We work 24 hours a day, which helps if you find a flat late in the evening or before an early start.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M19 postcode.',
+              q: 'Do you offer emergency tyre fitting in Levenshulme?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Levenshulme, from Stockport Road and the station to the streets around Highfield Country Park. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
+              q: 'How do I book a mobile tyre fitter in Levenshulme?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M19 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

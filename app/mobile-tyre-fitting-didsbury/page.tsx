@@ -604,7 +604,7 @@ export default function DidsburyPage() {
             },
             {
               q: 'How do I book a mobile tyre fitter in Didsbury?',
-              a: 'Call or WhatsApp 07759 708 646, or use the quick quote form on this page. Send your registration or tyre size and your M20 postcode, and we will send the nearest available mobile tyre fitter to you.',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M20 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

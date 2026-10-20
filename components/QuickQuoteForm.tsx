@@ -15,14 +15,15 @@ interface QuickQuoteFormProps {
 type DataLayerWindow = Window & { dataLayer?: Record<string, unknown>[] }
 
 /**
- * Short quote form: reg or tyre size, postcode, phone. Submitting pushes a `quote_form_submit`
- * event to the dataLayer (set this up as a conversion in GTM) and opens WhatsApp with the details,
- * matching how the site's other enquiry forms deliver leads.
+ * Instant quote form: full name, vehicle registration, tyre size, contact number. Submitting pushes
+ * a `quote_form_submit` event to the dataLayer (set this up as a conversion in GTM) and opens
+ * WhatsApp with the details, matching how the site's other enquiry forms deliver leads.
  */
 export default function QuickQuoteForm({ variant = 'section', area, heading }: QuickQuoteFormProps) {
   const id = useId()
-  const [vehicle, setVehicle] = useState('')
-  const [postcode, setPostcode] = useState('')
+  const [name, setName] = useState('')
+  const [registration, setRegistration] = useState('')
+  const [tyreSize, setTyreSize] = useState('')
   const [phone, setPhone] = useState('')
   const [sent, setSent] = useState(false)
 
@@ -40,8 +41,9 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
 
     const text =
       `New quote request – One Stop Mobile Tyres 24/7\n\n` +
-      `Reg / tyre size: ${vehicle.trim()}\n` +
-      `Postcode: ${postcode.trim().toUpperCase()}\n` +
+      `Name: ${name.trim()}\n` +
+      `Registration: ${registration.trim().toUpperCase()}\n` +
+      `Tyre size: ${tyreSize.trim() || 'Not given'}\n` +
       `Phone: ${phone.trim()}` +
       (area ? `\nPage: ${area}` : '')
     window.open(`https://wa.me/447759708646?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer')
@@ -75,38 +77,51 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
   )
 
   const form = (
-    <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4" aria-label="Get a quick tyre quote">
-      <div className={`grid grid-cols-1 ${isHero ? 'sm:grid-cols-3 gap-3' : 'sm:grid-cols-3 gap-4'}`}>
+    <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4" aria-label="Instant tyre quote">
+      <div className={`grid grid-cols-1 ${isHero ? 'sm:grid-cols-2 gap-3' : 'sm:grid-cols-2 gap-4'}`}>
         <div>
-          <label htmlFor={`${id}-vehicle`} className={label}>Reg or tyre size</label>
+          <label htmlFor={`${id}-name`} className={label}>Full Name</label>
           <input
-            id={`${id}-vehicle`}
-            name="vehicle"
+            id={`${id}-name`}
+            name="name"
+            type="text"
+            required
+            autoComplete="name"
+            placeholder="e.g. John Smith"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className={input}
+          />
+        </div>
+        <div>
+          <label htmlFor={`${id}-registration`} className={label}>Vehicle Registration</label>
+          <input
+            id={`${id}-registration`}
+            name="registration"
             type="text"
             required
             autoComplete="off"
-            placeholder="AB12 CDE or 205/55 R16"
-            value={vehicle}
-            onChange={(e) => setVehicle(e.target.value)}
+            placeholder="e.g. AB12 CDE"
+            value={registration}
+            onChange={(e) => setRegistration(e.target.value)}
             className={input}
           />
         </div>
         <div>
-          <label htmlFor={`${id}-postcode`} className={label}>Postcode</label>
+          <label htmlFor={`${id}-tyre-size`} className={label}>Tyre Size</label>
           <input
-            id={`${id}-postcode`}
-            name="postcode"
+            id={`${id}-tyre-size`}
+            name="tyreSize"
             type="text"
-            required
-            autoComplete="postal-code"
-            placeholder="e.g. OL1 3QH"
-            value={postcode}
-            onChange={(e) => setPostcode(e.target.value)}
+            autoComplete="off"
+            placeholder="e.g. 205/55 R16 (if known)"
+            value={tyreSize}
+            onChange={(e) => setTyreSize(e.target.value)}
             className={input}
           />
         </div>
         <div>
-          <label htmlFor={`${id}-phone`} className={label}>Phone</label>
+          <label htmlFor={`${id}-phone`} className={label}>Contact Number</label>
           <input
             id={`${id}-phone`}
             name="phone"
@@ -146,7 +161,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
         {sent ? confirmation : (
           <>
             <p className="text-white font-bold text-base sm:text-lg mb-3" style={{ fontFamily: 'var(--font-work-sans)' }}>
-              Get a quick quote
+              Instant Quote
             </p>
             {form}
           </>
@@ -159,7 +174,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
     <section className="py-12 sm:py-16 px-4 sm:px-6 bg-white border-t border-slate-100" aria-labelledby={`${id}-title`}>
       <div className="max-w-3xl mx-auto">
         <div className="mb-6 sm:mb-8">
-          <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-2 block">Quick Quote</span>
+          <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-2 block">Instant Quote</span>
           <h2
             id={`${id}-title`}
             className="text-2xl sm:text-[32px] font-bold text-[#0f172a] leading-tight"
@@ -168,7 +183,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
             {heading ?? (area ? `Get a Tyre Quote in ${area}` : 'Get a Tyre Quote')}
           </h2>
           <p className="text-slate-600 mt-3">
-            Send us three details and we&apos;ll come back with a price, or call{' '}
+            Send us your details and we&apos;ll come back with a price, or call{' '}
             <a href={`tel:${PHONE_TEL}`} className="text-[#b70011] font-bold hover:underline">{PHONE}</a> for help right now.
           </p>
         </div>
