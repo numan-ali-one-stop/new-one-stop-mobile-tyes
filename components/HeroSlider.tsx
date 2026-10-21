@@ -53,7 +53,7 @@ export default function HeroSlider() {
 
       {/* ── CONTENT ── */}
       <div
-        className="relative z-10 flex flex-col justify-center px-5 sm:px-10 lg:px-16 xl:px-24 pt-16 pb-16"
+        className="relative z-10 flex flex-col justify-center px-5 sm:px-10 lg:px-16 xl:px-24 pt-16 pb-16 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]"
         style={{ minHeight: 'clamp(600px, 90svh, 820px)' }}
       >
         <div className="w-full max-w-2xl">
@@ -150,7 +150,7 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
       {/* Blurred copy fills the background so the main photo isn't zoomed */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="absolute inset-0 w-full h-full object-cover blur-xl scale-110"
+        className="hidden lg:block absolute inset-0 w-full h-full object-cover blur-xl scale-110"
         src={image}
         alt=""
         aria-hidden="true"
@@ -158,7 +158,7 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="kb absolute inset-x-0 top-[calc(50%-37.5vw)] w-full aspect-[4/3] object-cover [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
+        className="kb absolute inset-0 w-full h-full object-cover object-[65%_center] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:aspect-[4/3] lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
         src={image}
         alt=""
         aria-hidden="true"
@@ -168,7 +168,7 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
         {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })}
       />
       {/* Mobile: even dark overlay so the text stays readable over the photo */}
-      <div className="absolute inset-0 bg-[#0f172a]/60 lg:hidden" />
+      <div className="absolute inset-0 bg-[#0f172a]/55 lg:hidden" />
       {/* Desktop gradient: strong left for text, fades right */}
       <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172a]/85 to-[#0f172a]/35" />
       {/* Bottom fade for controls readability */}
