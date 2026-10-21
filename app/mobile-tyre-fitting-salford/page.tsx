@@ -276,9 +276,6 @@ export default function SalfordPage() {
           { q: 'Can you fit tyres at MediaCity or Salford Quays?', a: 'Absolutely. We attend homes, workplaces and suitable roadside locations across Salford, including MediaCity and Salford Quays, wherever it is safe to park and complete the work.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Salford" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

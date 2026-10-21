@@ -276,9 +276,6 @@ export default function AltrinchamPage() {
           { q: 'Can you fit tyres near Altrincham Market or the town centre?', a: 'Absolutely. We regularly attend Altrincham town centre, including car parks near Altrincham Market and the Metrolink interchange, fitting tyres wherever it is safe to park.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Altrincham" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

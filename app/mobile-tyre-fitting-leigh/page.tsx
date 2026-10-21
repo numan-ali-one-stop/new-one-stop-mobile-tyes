@@ -276,9 +276,6 @@ export default function LeighPage() {
           { q: 'Can you fit tyres near Leigh Market or the town centre?', a: 'Absolutely. We regularly attend Leigh town centre, including car parks near Leigh Market and the Spinning Gate shopping centre, fitting tyres wherever it is safe to park.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Leigh" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

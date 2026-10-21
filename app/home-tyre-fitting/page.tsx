@@ -525,9 +525,6 @@ export default function HomeTyreFittingPage() {
         </div>
       </section>
 
-      {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-      <QuickQuoteForm heading="Get a Home Tyre Fitting Quote" />
-
       {/* ── 8. FINAL CTA (commented out for now — may bring back later) ──
       <section className="py-14 sm:py-20 px-4 sm:px-6 bg-[#0f172a] text-white text-center">
         <h2

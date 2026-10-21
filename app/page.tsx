@@ -8,7 +8,6 @@ export const metadata = buildMetadata({
 })
 
 import BrandCarousel from '@/components/BrandCarousel'
-import QuoteForm from '@/components/QuoteForm'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import HeroSlider from '@/components/HeroSlider'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
@@ -665,54 +664,6 @@ export default function Home() {
 
       {/* ── 7. BRAND LOGOS ────────────────────────────────── */}
       <BrandCarousel />
-
-      {/* ── 8. CONTACT FORM ───────────────────────────────── */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
-          {/* Left */}
-          <div className="w-full lg:w-1/3">
-            <h2
-              className="text-2xl sm:text-4xl text-[#0f172a] mb-4 sm:mb-6 leading-tight font-bold"
-              style={{ fontFamily: 'var(--font-work-sans)' }}
-            >
-              Get a Tyre Service Quote
-            </h2>
-            <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base">
-              Need a tyre service but don&apos;t need emergency assistance? Send us your details and
-              we&apos;ll get back to you with a quote and available fitting options.
-            </p>
-            <div className="space-y-4 sm:space-y-6">
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0">
-                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">location_on</span>
-                </div>
-                <div>
-                  <p className="font-bold text-[#0f172a] text-base">Service Area</p>
-                  <p className="text-sm text-slate-500">
-                    Coverage in a growing number of towns and cities.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0">
-                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">schedule</span>
-                </div>
-                <div>
-                  <p className="font-bold text-[#0f172a] text-base">Hours</p>
-                  <p className="text-sm text-slate-500">Open 24/7 for Emergencies</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Form */}
-          <div className="w-full lg:w-2/3">
-            <div className="bg-slate-50 p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-sm">
-              <QuoteForm />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── 9. MAP + LOCATIONS ────────────────────────────── */}
       <ServiceAreasMap />

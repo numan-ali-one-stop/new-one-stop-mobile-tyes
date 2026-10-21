@@ -304,9 +304,6 @@ export default function PrestwichPage() {
           { q: 'Can I have a tyre fitted on my drive in Prestwich?', a: 'Where there is enough safe working space around the vehicle, having a tyre fitted on your drive can be possible. Tell us about the parking position when booking so we can confirm whether the technician can work there safely.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Prestwich" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

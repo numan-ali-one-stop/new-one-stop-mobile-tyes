@@ -347,11 +347,11 @@ export default function MossSidePage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Moss Side
+                Your Mobile Tyre Fitter in Moss Side
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                Moss Side has lots of terraced housing with on-street parking, so we are used to working kerbside safely and quickly. Whether your car is outside your house on Claremont Road or parked near Moss Lane East, we bring everything to you.
-                Our customers in Moss Side range from families and shift workers to students living near Princess Road. We supply budget, mid-range and premium tyres and give you the price before we start.
+                Moss Side has lots of terraced housing with on-street parking, so we are used to working kerbside safely and quickly. Whether your car is outside your house on Claremont Road or parked near Moss Lane East, your mobile tyre fitter in Moss Side brings everything to you.
+                Our customers in Moss Side range from families and shift workers to students living near Princess Road. We supply budget, mid-range and premium mobile tyres in Moss Side, with tyre fitting across the M14 and M16 postcodes, and give you the price before we start.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -569,7 +569,7 @@ export default function MossSidePage() {
             },
             {
               q: 'My street has no driveway. Can you still fit the tyre?',
-              a: 'Yes. Most Moss Side homes have on-street parking, and we fit tyres safely at the kerb outside your house.',
+              a: 'Yes. Most Moss Side homes have on-street parking, and we fit mobile tyres in Moss Side safely at the kerb outside your house.',
             },
             {
               q: 'Do you cover all of Moss Side (M14 and M16)?',
@@ -592,18 +592,19 @@ export default function MossSidePage() {
               a: 'It depends on traffic on Princess Road and Moss Lane East. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Moss Side?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Moss Side, from Princess Road and Moss Lane East to Claremont Road and the streets around Alexandra Park. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M14 or M16 postcode.',
+              q: 'How do I book a mobile tyre fitter in Moss Side?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M14 or M16 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />
-
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Moss Side" />
 
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

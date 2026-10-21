@@ -297,9 +297,6 @@ export default function FarnworthPage() {
           { q: 'Can you help if I am stranded with a flat tyre?', a: 'Yes. If your vehicle cannot continue safely, send us your exact position and tyre details. We can arrange appropriate flat tyre assistance, whether the situation requires repair or replacement.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Farnworth" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

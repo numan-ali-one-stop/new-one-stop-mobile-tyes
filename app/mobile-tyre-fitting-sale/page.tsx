@@ -276,9 +276,6 @@ export default function SalePage() {
           { q: 'Can you fit tyres near Sale Water Park or the town centre?', a: 'Absolutely. We regularly attend Sale town centre, including car parks near Sale Water Park and the Metrolink stop, fitting tyres wherever it is safe to park.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Sale" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

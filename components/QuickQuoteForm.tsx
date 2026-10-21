@@ -15,7 +15,7 @@ interface QuickQuoteFormProps {
 type DataLayerWindow = Window & { dataLayer?: Record<string, unknown>[] }
 
 /**
- * Instant quote form: full name, vehicle registration, tyre size, contact number. Submitting pushes
+ * Instant quote form: full name, vehicle registration, tyre size, postcode, contact number. Submitting pushes
  * a `quote_form_submit` event to the dataLayer (set this up as a conversion in GTM) and opens
  * WhatsApp with the details, matching how the site's other enquiry forms deliver leads.
  */
@@ -24,6 +24,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
   const [name, setName] = useState('')
   const [registration, setRegistration] = useState('')
   const [tyreSize, setTyreSize] = useState('')
+  const [postcode, setPostcode] = useState('')
   const [phone, setPhone] = useState('')
   const [sent, setSent] = useState(false)
 
@@ -44,6 +45,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
       `Name: ${name.trim()}\n` +
       `Registration: ${registration.trim().toUpperCase()}\n` +
       `Tyre size: ${tyreSize.trim() || 'Not given'}\n` +
+      `Postcode: ${postcode.trim().toUpperCase()}\n` +
       `Phone: ${phone.trim()}` +
       (area ? `\nPage: ${area}` : '')
     window.open(`https://wa.me/447759708646?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer')
@@ -121,6 +123,20 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
           />
         </div>
         <div>
+          <label htmlFor={`${id}-postcode`} className={label}>Postcode</label>
+          <input
+            id={`${id}-postcode`}
+            name="postcode"
+            type="text"
+            required
+            autoComplete="postal-code"
+            placeholder="e.g. M19 2AB"
+            value={postcode}
+            onChange={(e) => setPostcode(e.target.value)}
+            className={input}
+          />
+        </div>
+        <div className="sm:col-span-2">
           <label htmlFor={`${id}-phone`} className={label}>Contact Number</label>
           <input
             id={`${id}-phone`}

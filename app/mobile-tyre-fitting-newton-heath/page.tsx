@@ -347,11 +347,11 @@ export default function NewtonHeathPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Newton Heath
+                Your Mobile Tyre Fitter in Newton Heath
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                The A62 Oldham Road carries heavy traffic through Newton Heath every day, and that is where many of our call-outs start. We also visit plenty of customers at home on the residential streets either side of it.
-                Newton Heath is where Manchester United started out as a railway workers’ team, and it is still a busy working community. We fit budget, mid-range and premium tyres to suit every budget, with the price agreed before we start.
+                The A62 Oldham Road carries heavy traffic through Newton Heath every day, and that is where many of our call-outs start. Your mobile tyre fitter in Newton Heath also visits plenty of customers at home on the residential streets either side of it.
+                Newton Heath is where Manchester United started out as a railway workers’ team, and it is still a busy working community. We fit budget, mid-range and premium mobile tyres in Newton Heath, with tyre fitting across the whole M40 postcode and the price agreed before we start.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -577,7 +577,7 @@ export default function NewtonHeathPage() {
             },
             {
               q: 'My street is terraced with tight parking. Can you still work?',
-              a: 'Yes. Many of the streets off Oldham Road are terraced with tight parking, and kerbside fitting is normal for us. If there is no safe space beside the car, we will suggest a better spot nearby.',
+              a: 'Yes. Many of the streets off Oldham Road are terraced with tight parking, and we fit mobile tyres in Newton Heath at the kerb every day. If there is no safe space beside the car, we will suggest a better spot nearby.',
             },
             {
               q: 'Do you also cover Miles Platting and Failsworth?',
@@ -592,18 +592,19 @@ export default function NewtonHeathPage() {
               a: 'It depends on traffic on Oldham Road and the roads to the M60. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Newton Heath?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Newton Heath, from Oldham Road and the Metrolink stop to Briscoe Lane and Brookdale Park. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M40 postcode.',
+              q: 'How do I book a mobile tyre fitter in Newton Heath?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M40 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />
-
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Newton Heath" />
 
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

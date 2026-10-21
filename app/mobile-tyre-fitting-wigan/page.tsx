@@ -277,9 +277,6 @@ export default function WiganPage() {
           { q: 'Do you cover Standish, Hindley, and Leigh?', a: 'Yes. We cover the entire Wigan borough including Standish, Hindley, Leigh, Orrell, Ashton-in-Makerfield, and all surrounding areas with 24/7 availability.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Wigan" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

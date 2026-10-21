@@ -276,9 +276,6 @@ export default function StretfordPage() {
           { q: 'Can you fit tyres near Stretford Mall or Old Trafford?', a: 'Absolutely. We regularly attend Stretford, including car parks near Stretford Mall and Old Trafford, fitting tyres wherever it is safe to park.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Stretford" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

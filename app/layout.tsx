@@ -26,10 +26,15 @@ export const metadata: Metadata = {
   title: 'One Stop Mobile Tyres 24/7 | Emergency Mobile Tyre Fitting Manchester',
   description:
     'Stranded with a puncture? Our professional technicians reach you fast at home, work, or roadside across Greater Manchester. 24/7 emergency mobile tyre fitting available now.',
+  // Square PNG/ICO icons: Android Chrome (tab switcher) and iOS ignore a WebP-only favicon.
   icons: {
-    icon: [{ url: '/icon.webp', type: 'image/webp' }],
-    apple: '/icon.webp',
-    shortcut: '/icon.webp',
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    shortcut: '/favicon.ico',
   },
   openGraph: {
     title: 'One Stop Mobile Tyres 24/7 | Emergency Mobile Tyre Fitting Manchester',
@@ -62,9 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${workSans.variable} ${inter.variable} bg-[#fcf9f8]`}>
       <head>
-        {/* Site icon */}
-        <link rel="icon" href="/icon.webp" type="image/webp" />
-        <link rel="apple-touch-icon" href="/icon.webp" />
+        {/* Site icons come from `metadata.icons` above and app/manifest.ts. */}
         {/* Hero images are preloaded per-page via fetchPriority="high" on each page's own
             <img> tag — a single blanket preload here would compete with (and often be wrong
             for) whichever hero image the current page actually needs. */}

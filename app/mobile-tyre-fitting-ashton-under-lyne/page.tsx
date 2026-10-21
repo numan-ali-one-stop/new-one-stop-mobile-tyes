@@ -276,9 +276,6 @@ export default function AshtonUnderLynePage() {
           { q: 'Can you fit tyres near Ashton Market or the town centre?', a: 'Absolutely. We regularly attend Ashton town centre, including car parks near the Metrolink terminus, Ashton Market and Cavendish Street, fitting tyres wherever it is safe to park.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Ashton-under-Lyne" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

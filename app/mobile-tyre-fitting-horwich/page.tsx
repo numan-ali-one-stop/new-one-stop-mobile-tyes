@@ -299,9 +299,6 @@ export default function HorwichPage() {
           { q: 'What should I do if I need an emergency tyre replacement near the M61?', a: 'Move the vehicle to the safest available location and contact us with your exact position, registration and tyre size. We can then check stock and arrange the appropriate emergency tyre replacement response.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Horwich" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

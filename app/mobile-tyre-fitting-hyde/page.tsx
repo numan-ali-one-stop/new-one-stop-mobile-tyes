@@ -276,9 +276,6 @@ export default function HydePage() {
           { q: 'Can you fit tyres near Hyde Market or the town centre?', a: 'Absolutely. We regularly attend Hyde town centre, including car parks near Hyde Market and Market Street, fitting tyres wherever it is safe to park.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Hyde" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

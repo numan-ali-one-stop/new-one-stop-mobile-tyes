@@ -347,11 +347,11 @@ export default function NorthendenPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Northenden
+                Your Mobile Tyre Fitter in Northenden
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                If you get tyre trouble on the M60 or M56, leaving at the Northenden junctions and stopping somewhere safe is often the quickest way to get help. We meet drivers in car parks and side streets here every week.
-                Closer to home, we fit tyres on driveways across Northenden village, the streets off Palatine Road and the homes near Wythenshawe Park. Budget, mid-range and premium tyres are all available.
+                If you get tyre trouble on the M60 or M56, leaving at the Northenden junctions and stopping somewhere safe is often the quickest way to get help. Your mobile tyre fitter in Northenden meets drivers in car parks and side streets here every week.
+                Closer to home, we fit tyres on driveways across Northenden village, the streets off Palatine Road and the homes near Wythenshawe Park. Budget, mid-range and premium mobile tyres in Northenden are all available, with tyre fitting across the whole M22 postcode.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -581,7 +581,7 @@ export default function NorthendenPage() {
             },
             {
               q: 'Can you fit tyres on my driveway in Northenden?',
-              a: 'Yes. Many Northenden homes have driveways, which are ideal for mobile fitting.',
+              a: 'Yes. Many Northenden homes have driveways, which are ideal for fitting mobile tyres in Northenden.',
             },
             {
               q: 'Do you fit tyres at night in Northenden?',
@@ -592,18 +592,19 @@ export default function NorthendenPage() {
               a: 'It depends on traffic on Palatine Road, Princess Parkway and the M60. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Northenden?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Northenden, from Palatine Road and Princess Parkway to Sharston and the streets around Wythenshawe Park. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M22 postcode.',
+              q: 'How do I book a mobile tyre fitter in Northenden?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M22 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />
-
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Northenden" />
 
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">

@@ -455,9 +455,6 @@ export default function PunctureRepairGreaterManchesterPage() {
         </div>
       </section>
 
-      {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-      <QuickQuoteForm heading="Get a Puncture Repair Quote" />
-
       {/* ── 8. FINAL CTA ─────────────────────────────────────────────── */}
       <section className="py-14 sm:py-20 px-4 sm:px-6 bg-[#0f172a] text-white text-center">
         <h2

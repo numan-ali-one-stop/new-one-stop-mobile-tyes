@@ -297,9 +297,6 @@ export default function RadcliffePage() {
           { q: 'Can you arrange fast tyre support if I am already stranded?', a: 'Yes. If you cannot continue safely, tell us your exact position and the problem with the tyre. We can check available technicians and arrange the most suitable fast mobile tyre fitting or replacement response.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Radcliffe" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">

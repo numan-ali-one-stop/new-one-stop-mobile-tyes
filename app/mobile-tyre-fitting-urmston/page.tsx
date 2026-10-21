@@ -276,9 +276,6 @@ export default function UrmstonPage() {
           { q: 'Can you fit tyres near Urmston town centre or Cross Street?', a: 'Absolutely. We regularly attend Urmston town centre, including car parks near Cross Street and the Devonshire Road shops, fitting tyres wherever it is safe to park.' },
         ]} />
 
-        {/* ── QUICK QUOTE FORM ─────────────────────────────── */}
-        <QuickQuoteForm area="Urmston" />
-
         {/* ── 8. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
