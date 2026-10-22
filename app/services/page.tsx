@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import HeroMapBackground from '@/components/HeroMapBackground'
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, itemListSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
@@ -86,19 +87,10 @@ export default function ServicesPage() {
       <JsonLd data={_itemListSchema} />
       {/* Hero Section */}
       <section className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[614px] flex items-center overflow-hidden py-16 sm:py-20">
-        <div className="absolute inset-0 bg-secondary/80 mix-blend-multiply z-10" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/images/mobile-tyre-fitting-manchester.webp"
-          alt="One Stop Mobile Tyres 24/7 mobile services van"
-          width={1920}
-          height={614}
-          loading="eager"
-        />
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left">
+        <HeroMapBackground />
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-6 leading-tight max-w-3xl">Our Expert Mobile Services</h1>
-          <p className="font-body-lg text-base lg:text-body-lg text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
+          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
             Professional 24/7 roadside assistance, wherever you are. We bring the garage to you, anywhere, anytime.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start">

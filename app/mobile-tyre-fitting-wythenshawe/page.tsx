@@ -6,9 +6,10 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-wythenshawe',
@@ -58,26 +59,13 @@ export default function WythenshawePage() {
 
         {/* ── 1. HERO */}
         <section className="relative min-h-[100svh] lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
-          <Image
-            src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-            alt="Mobile tyre fitting technician at work in Greater Manchester"
-            fill
-            priority
-            quality={60}
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "linear-gradient(to right, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.75) 100%)",
-            }}
-          />
-          <div className="relative z-10 max-w-2xl py-20">
+          <HeroMapBackground />
+
+          <div className="relative z-10 max-w-2xl py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>
               24/7 Mobile Tyre Fitting &amp; Puncture Repair in Wythenshawe
             </h1>
-            <p className="text-white/80 text-base leading-relaxed mb-6">
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-6">
               Finished a night shift at Wythenshawe Hospital or the airport to find a flat tyre? We come to you 24/7 across the M22 and M23 postcodes, from the hospital car parks and the Civic Centre to homes in Benchill, Sharston and Woodhouse Park, and drivers on Princess Parkway and the M56. We repair punctures where it is safe and fit replacement tyres on the spot, and we cover neighbouring{' '}
               <a href="/mobile-tyre-fitting-baguley" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Baguley</a> and <a href="/mobile-tyre-fitting-northenden" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Northenden</a> too.
             </p>
@@ -88,7 +76,7 @@ export default function WythenshawePage() {
                 'Mobile Puncture Repair',
                 'Home, Work & Roadside Service',
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2.5 text-white/90">
+                <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-400 shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
                   <span className="text-base font-semibold leading-snug">{item}</span>
                 </div>
@@ -107,7 +95,7 @@ export default function WythenshawePage() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Wythenshawe &amp; Greater Manchester</span>
+              <span className="text-white/80 lg:text-white/60 text-xs font-medium">Rated By Drivers Across Wythenshawe &amp; Greater Manchester</span>
             </a>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a href="tel:+447759708646" className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg" style={{ fontFamily: 'var(--font-work-sans)' }}>
@@ -122,9 +110,10 @@ export default function WythenshawePage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" area="Wythenshawe" />
           </div>
         </section>
+
+        <HeroQuoteSection area="Wythenshawe" />
 
         {/* ── 2. REVIEWS */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">

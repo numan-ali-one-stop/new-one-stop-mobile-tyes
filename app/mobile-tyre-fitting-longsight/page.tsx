@@ -6,9 +6,10 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-longsight',
@@ -58,22 +59,9 @@ export default function LongsightPage() {
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
         <section className="relative min-h-[100svh] lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
-          <Image
-            src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-            alt="Mobile tyre fitting technician at work in Greater Manchester"
-            fill
-            priority
-            quality={60}
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "linear-gradient(to right, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.75) 100%)",
-            }}
-          />
-          <div className="relative z-10 max-w-2xl py-20">
+          <HeroMapBackground />
+
+          <div className="relative z-10 max-w-2xl py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
@@ -82,7 +70,7 @@ export default function LongsightPage() {
               24/7 Mobile Tyre Fitting &amp; Puncture Repair in Longsight
             </h1>
 
-            <p className="text-white/80 text-base leading-relaxed mb-6">
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-6">
               Flat tyre on Stockport Road or a puncture on Plymouth Grove? We come to you 24/7 across Longsight and the M12 and M13 postcodes, from the A6 shopping strip and Longsight Market to the streets around Crowcroft Park and Belle Vue, including Dickenson Road and Kirkmanshulme Lane. We fit tyres at the kerb where it is safe, and we reach nearby{' '}
               <a href="/mobile-tyre-fitting-levenshulme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Levenshulme</a> and <a href="/mobile-tyre-fitting-gorton" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Gorton</a> just as quickly.
             </p>
@@ -95,7 +83,7 @@ export default function LongsightPage() {
                 'Emergency Tyre Replacement',
                 'Home, Work & Roadside Service',
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2.5 text-white/90">
+                <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
                     className="material-symbols-outlined text-green-400 shrink-0"
                     style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
@@ -119,7 +107,7 @@ export default function LongsightPage() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Longsight &amp; Greater Manchester</span>
+              <span className="text-white/80 lg:text-white/60 text-xs font-medium">Rated By Drivers Across Longsight &amp; Greater Manchester</span>
             </a>
 
             {/* CTAs */}
@@ -144,9 +132,10 @@ export default function LongsightPage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" area="Longsight" />
           </div>
         </section>
+
+        <HeroQuoteSection area="Longsight" />
 
         {/* ── 2. REVIEWS ────────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -347,11 +336,11 @@ export default function LongsightPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Longsight
+                Your Mobile Tyre Fitter in Longsight
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Longsight, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, our mobile service provides a convenient solution.
-                We provide professional tyre fitting and replacement across Longsight and surrounding areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
+                When you need mobile tyre fitting in Longsight, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, your mobile tyre fitter in Longsight provides a convenient solution.
+                We provide professional tyre fitting and replacement across the M12 and M13 postcodes, from Stockport Road to Plymouth Grove, helping drivers avoid the need to travel to a garage. We carry budget, mid-range and premium mobile tyres in Longsight, and our service is available 24/7 for planned and emergency tyre requirements.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -577,7 +566,7 @@ export default function LongsightPage() {
             },
             {
               q: 'My street is terraced with tight parking. Can you still work?',
-              a: 'Yes. Many Longsight streets have on-street parking only, and kerbside fitting is normal for us.',
+              a: 'Yes. Many Longsight streets have on-street parking only, and we fit mobile tyres in Longsight at the kerb every day.',
             },
             {
               q: 'Do you cover Belle Vue?',
@@ -592,12 +581,16 @@ export default function LongsightPage() {
               a: 'It depends on traffic on Stockport Road and Plymouth Grove. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Longsight?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Longsight, from Stockport Road and Longsight Market to Plymouth Grove and the streets around Crowcroft Park. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M12 or M13 postcode.',
+              q: 'How do I book a mobile tyre fitter in Longsight?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M12 or M13 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

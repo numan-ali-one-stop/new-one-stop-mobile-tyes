@@ -15,6 +15,20 @@ const _breadcrumbSchema = breadcrumbSchema([
 
 const guides = [
   {
+    title: 'Winter Tyres vs All-Season Tyres in the UK: Which Should You Choose?',
+    desc: 'Compare grip, cost and legality on UK roads, find out which tyre suits your driving, and see when a mobile fitter can swap them at your door.',
+    href: '/guides/winter-tyres-vs-all-season-tyres-uk',
+    readTime: '6 min read',
+    published: '22 October 2026',
+  },
+  {
+    title: 'Why Your Tyre Pressure Drops in Cold Weather (and How to Fix It)',
+    desc: 'Why tyre pressure falls when the temperature drops, how often to check it, and what to do when the warning light will not go off.',
+    href: '/guides/tyre-pressure-cold-weather',
+    readTime: '5 min read',
+    published: '22 October 2026',
+  },
+  {
     title: 'Tyre Safety Tips for Drivers: August Weather Guide',
     desc: "Changeable August weather is on the way — how to check your tyres before travelling and avoid a breakdown on wet or dry roads.",
     href: '/guides/tyre-safety-tips-greater-manchester-august-weather-guide',

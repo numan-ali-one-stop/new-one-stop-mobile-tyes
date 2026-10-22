@@ -100,7 +100,7 @@ export default function Footer() {
               { label: 'About Us', href: '/about' },
               { label: 'All Services', href: '/services' },
               { label: 'Service Area', href: '/service-area' },
-              { label: 'Guides', href: '/guides' },
+              { label: 'Blog & Guides', href: '/guides' },
               { label: 'Contact Us', href: '/contact' },
             ].map((link) => (
               <li key={link.href}>

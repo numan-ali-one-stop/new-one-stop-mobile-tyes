@@ -1,8 +1,9 @@
 import JsonLd from '@/components/JsonLd'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: '24/7 Emergency Mobile Tyre Fitting Greater Manchester',
@@ -135,18 +136,10 @@ export default function MobileTyreFittingPage() {
 
       {/* ── 1. HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-          alt="Mobile tyre fitting service"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          width={1600}
-          height={900}
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-[#0f172a]/80" />
+        <HeroMapBackground />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28">
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 font-bold px-3.5 py-1.5 rounded-full mb-6 text-[11px] uppercase tracking-widest border border-red-600/30">
               <span className="relative flex h-2 w-2">
@@ -163,10 +156,10 @@ export default function MobileTyreFittingPage() {
               24/7 Emergency Mobile Tyre Fitting &amp; Puncture Repair
             </h1>
 
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
+            <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
               Flat tyre, puncture or blowout? Our <strong>emergency mobile tyre fitting</strong> service comes to you 24/7, whether you are at the roadside, at home or at work. Our experienced mobile tyre fitters repair punctures where it is safe to do so, replace damaged tyres on the spot and get you back on the road without a trip to the garage.
             </p>
-            <p className="text-slate-400 text-base leading-relaxed mb-8">
+            <p className="text-white/85 lg:text-slate-400 text-base leading-relaxed mb-8">
               As well as emergency call-outs, we offer planned <strong>mobile tyre replacement</strong> at a time that suits you. Every tyre is checked before we start, so you get an honest answer on whether a repair is safe or a replacement is needed.
             </p>
 
@@ -177,7 +170,7 @@ export default function MobileTyreFittingPage() {
                 'Mobile tyre replacement on the spot',
                 'Experienced mobile tyre fitters',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
+                <li key={item} className="flex items-center gap-3 text-white lg:text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
                   {item}
                 </li>
@@ -205,10 +198,11 @@ export default function MobileTyreFittingPage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" />
           </div>
         </div>
       </section>
+
+      <HeroQuoteSection />
 
       {/* ── 2. IMAGE + TEXT ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">

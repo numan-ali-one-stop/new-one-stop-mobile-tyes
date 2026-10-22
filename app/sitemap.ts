@@ -76,6 +76,8 @@ const LEGAL_PAGES = ['/privacy-policy', '/cookie-policy', '/terms']
 
 const GUIDE_PAGES = [
   '/guides',
+  '/guides/tyre-pressure-cold-weather',
+  '/guides/winter-tyres-vs-all-season-tyres-uk',
   '/guides/how-to-tell-if-your-tyre-can-be-repaired-or-needs-replacing',
   '/guides/what-to-do-flat-tyre-m60-manchester-motorway',
   '/guides/run-flat-vs-normal-tyres-manchester',

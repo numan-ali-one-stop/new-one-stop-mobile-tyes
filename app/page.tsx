@@ -10,6 +10,7 @@ export const metadata = buildMetadata({
 import BrandCarousel from '@/components/BrandCarousel'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import HeroSlider from '@/components/HeroSlider'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 
 /* ─── Why-choose feature list item ─────────────────────── */
@@ -293,6 +294,9 @@ export default function Home() {
 
       {/* ── 1. HERO ───────────────────────────────────────── */}
       <HeroSlider />
+
+      {/* ── 1b. INSTANT QUOTE ─────────────────────────────── */}
+      <HeroQuoteSection />
 
       {/* ── 2. REVIEWS ────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">

@@ -1,8 +1,9 @@
 import JsonLd from '@/components/JsonLd'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import { MAPS_URL } from '@/lib/constants'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: 'TPMS Reset Greater Manchester | Mobile Sensor Diagnostics',
@@ -112,18 +113,10 @@ export default function TpmsResetPage() {
 
       {/* ── 1. HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/professional-mobile-tpms-reset-and-sensor-services-at-your-location.jpg"
-          alt="Professional mobile TPMS reset and sensor services at your location"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          width={1600}
-          height={900}
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-[#0f172a]/80" />
+        <HeroMapBackground />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28">
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 font-bold px-3.5 py-1.5 rounded-full mb-6 text-[11px] uppercase tracking-widest border border-red-600/30">
               <span className="relative flex h-2 w-2">
@@ -140,10 +133,10 @@ export default function TpmsResetPage() {
               TPMS Reset &amp; Sensor Diagnostics
             </h1>
 
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
+            <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
               TPMS warning light staying on after checking your tyre pressures or having tyre work completed? <strong>One Stop Mobile Tyres 24/7</strong> provides professional <strong>TPMS reset, diagnostics and sensor services</strong> across our service areas, bringing diagnostic equipment directly to your vehicle.
             </p>
-            <p className="text-slate-400 text-base leading-relaxed mb-8">
+            <p className="text-white/85 lg:text-slate-400 text-base leading-relaxed mb-8">
               Whether your system needs a <strong>TPMS reset</strong>, sensor relearn, sensor programming or replacement of a faulty pressure sensor, our technicians can diagnose the issue and recommend the correct solution before any parts are replaced.
             </p>
 
@@ -156,7 +149,7 @@ export default function TpmsResetPage() {
                 'TPMS Warning Light Diagnosis',
                 '24/7 Local Coverage',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
+                <li key={item} className="flex items-center gap-3 text-white lg:text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
                   {item}
                 </li>
@@ -184,10 +177,11 @@ export default function TpmsResetPage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" />
           </div>
         </div>
       </section>
+
+      <HeroQuoteSection />
 
       {/* ── 2. IMAGE + TEXT ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">

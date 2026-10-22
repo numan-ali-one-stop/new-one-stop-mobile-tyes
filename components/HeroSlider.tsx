@@ -1,10 +1,9 @@
 'use client'
 
 import { PHONE_TEL } from '@/lib/constants'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 
 const HERO = {
-  image: '/images/aa1.jpeg',
+  image: '/images/greater-manchester-mobile-tyre-service-area-map.jpeg',
   badge: 'Same Day Mobile Tyre Replacement',
   heading: '24/7 Mobile Tyre Service & Repair Near You',
   body: 'Need tyre help fast? Our mobile tyre service comes directly to you, wherever you are. We provide tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or a safe roadside location, 24 hours a day, 7 days a week.',
@@ -75,7 +74,7 @@ export default function HeroSlider() {
             </h1>
 
             {/* Body */}
-            <p className="hero-body text-white/75 text-base lg:text-lg leading-relaxed mb-6 max-w-xl">
+            <p className="hero-body text-white/95 lg:text-white/75 text-base lg:text-lg leading-relaxed mb-6 max-w-xl">
               {HERO.body}
             </p>
 
@@ -84,7 +83,7 @@ export default function HeroSlider() {
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">{HERO.listLabel}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
                 {HERO.items.map((item) => (
-                  <div key={item} className="flex items-center gap-2.5 text-white/90">
+                  <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                     <span aria-hidden="true" data-nosnippet
                       className="material-symbols-outlined text-green-400 shrink-0"
                       style={{ fontSize: '18px', fontVariationSettings: "'FILL' 1" }}
@@ -113,7 +112,7 @@ export default function HeroSlider() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/50 text-xs">Rated By Local Drivers</span>
+              <span className="text-white/80 lg:text-white/50 text-xs">Rated By Local Drivers</span>
             </a>
 
             {/* CTAs */}
@@ -136,7 +135,6 @@ export default function HeroSlider() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" />
           </div>
         </div>
 
@@ -158,7 +156,7 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="kb absolute inset-0 w-full h-full object-cover object-[65%_center] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:aspect-[4/3] lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
+        className="kb absolute inset-0 w-full h-full object-cover object-[60%_60%] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:aspect-[4/3] lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
         src={image}
         alt=""
         aria-hidden="true"
@@ -167,8 +165,8 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
         decoding="async"
         {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })}
       />
-      {/* Mobile: even dark overlay so the text stays readable over the photo */}
-      <div className="absolute inset-0 bg-[#0f172a]/55 lg:hidden" />
+      {/* Mobile: strong navy tint so the map stays subtle and the text stays readable */}
+      <div className="absolute inset-0 bg-[#002D62]/85 lg:hidden" />
       {/* Desktop gradient: strong left for text, fades right */}
       <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172a]/85 to-[#0f172a]/35" />
       {/* Bottom fade for controls readability */}

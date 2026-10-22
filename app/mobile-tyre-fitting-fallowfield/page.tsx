@@ -6,9 +6,10 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-fallowfield',
@@ -91,22 +92,9 @@ export default function FallowfieldPage() {
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
         <section className="relative min-h-[100svh] lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
-          <Image
-            src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-            alt="Mobile tyre fitting technician at work in Greater Manchester"
-            fill
-            priority
-            quality={60}
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "linear-gradient(to right, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.75) 100%)",
-            }}
-          />
-          <div className="relative z-10 max-w-2xl py-20">
+          <HeroMapBackground />
+
+          <div className="relative z-10 max-w-2xl py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
@@ -115,7 +103,7 @@ export default function FallowfieldPage() {
               24/7 Mobile Tyre Fitting &amp; Puncture Repair in Fallowfield
             </h1>
 
-            <p className="text-white/80 text-base leading-relaxed mb-6">
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-6">
               Flat tyre outside your student house or a puncture on Wilmslow Road? We come to you 24/7 across Fallowfield and the M14 postcode, from Owens Park and the halls to the family homes around Platt Fields Park, including Wilbraham Road and Platt Lane. We fit tyres safely at the kerb on busy, on-street parking, and we reach nearby{' '}
               <a href="/mobile-tyre-fitting-rusholme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Rusholme</a> and <a href="/mobile-tyre-fitting-withington" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Withington</a> just as quickly.
             </p>
@@ -129,7 +117,7 @@ export default function FallowfieldPage() {
                 'Home, Workplace & Roadside Fitting',
                 'M14: Kerbside Fitting on Student Streets',
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2.5 text-white/90">
+                <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
                     className="material-symbols-outlined text-green-400 shrink-0"
                     style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
@@ -153,7 +141,7 @@ export default function FallowfieldPage() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Fallowfield &amp; Greater Manchester</span>
+              <span className="text-white/80 lg:text-white/60 text-xs font-medium">Rated By Drivers Across Fallowfield &amp; Greater Manchester</span>
             </a>
 
             {/* CTAs */}
@@ -178,9 +166,10 @@ export default function FallowfieldPage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" area="Fallowfield" />
           </div>
         </section>
+
+        <HeroQuoteSection area="Fallowfield" />
 
         {/* ── 2. REVIEWS ────────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">

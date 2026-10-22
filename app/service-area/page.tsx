@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd'
+import HeroMapBackground from '@/components/HeroMapBackground'
 import { breadcrumbSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import { BOROUGHS } from '@/lib/locations'
@@ -194,24 +195,15 @@ export default function ServiceAreaPage() {
       <JsonLd data={_serviceSchema} />
       {/* ── Hero ── */}
       <section className="relative min-h-[400px] sm:min-h-[450px] lg:h-[500px] flex items-center overflow-hidden py-16 sm:py-20">
-        <div className="absolute inset-0 bg-secondary/85 z-10" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="absolute inset-0 w-full h-full object-cover"
-          src="https://ss5vlswhqmiddtca.public.blob.vercel-storage.com/Hero%20section%20image%20for%20one%20stop-airanko-GThUaVjbwZmY4iQO0czB2NrcyiFDuj.webp"
-          alt="One Stop Mobile Tyres 24/7 mobile tyre fitting van on the road"
-          width={1920}
-          height={500}
-          loading="eager"
-        />
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left">
+        <HeroMapBackground />
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <span className="inline-block bg-primary/20 border border-primary/40 text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-4 sm:mb-5">
             Our Coverage
           </span>
           <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-5 text-balance leading-tight max-w-3xl">
             Our Service Area
           </h1>
-          <p className="font-body-lg text-base lg:text-body-lg text-white/90 max-w-2xl mb-6 sm:mb-8 text-pretty leading-relaxed">
+          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-6 sm:mb-8 text-pretty leading-relaxed">
             We cover a growing number of towns, cities and major roads — wherever you
             are, we&apos;ll come to you, 24 hours a day, 7 days a week.
           </p>

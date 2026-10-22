@@ -1,8 +1,9 @@
 import JsonLd from '@/components/JsonLd'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: 'Mobile Puncture Repair Greater Manchester | 24/7 Emergency',
@@ -132,18 +133,10 @@ export default function PunctureRepairGreaterManchesterPage() {
 
       {/* ── 1. HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/fast-and-professional-mobile-tyre-puncture-repair-across-greater-manchester.jpg"
-          alt="Fast and professional mobile tyre puncture repair across Greater Manchester"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          width={1600}
-          height={900}
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-[#0f172a]/80" />
+        <HeroMapBackground />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28">
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 font-bold px-3.5 py-1.5 rounded-full mb-6 text-[11px] uppercase tracking-widest border border-red-600/30">
               <span className="relative flex h-2 w-2">
@@ -160,10 +153,10 @@ export default function PunctureRepairGreaterManchesterPage() {
               24/7 Emergency Puncture Repair Near You
             </h1>
 
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
+            <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
               Got a punctured tyre? Our <strong>Puncture Repair</strong> service helps drivers get back on the road without the need for an unnecessary garage visit. We provide professional tyre puncture repair for suitable punctures across our service areas, with experienced technicians assessing the damage before carrying out any repair.
             </p>
-            <p className="text-slate-400 text-base leading-relaxed mb-8">
+            <p className="text-white/85 lg:text-slate-400 text-base leading-relaxed mb-8">
               Whether you&apos;ve picked up a nail, screw or another object in your tyre, we&apos;ll inspect the tyre and determine whether it can be safely repaired. For urgent situations, <strong>emergency puncture repair</strong> is also available, subject to your location and the condition of the tyre.
             </p>
 
@@ -174,7 +167,7 @@ export default function PunctureRepairGreaterManchesterPage() {
                 'Emergency Puncture Assistance',
                 'Local Coverage',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
+                <li key={item} className="flex items-center gap-3 text-white lg:text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
                   {item}
                 </li>
@@ -202,10 +195,11 @@ export default function PunctureRepairGreaterManchesterPage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" />
           </div>
         </div>
       </section>
+
+      <HeroQuoteSection />
 
       {/* ── 2. IMAGE + TEXT ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">

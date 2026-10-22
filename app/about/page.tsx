@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import JsonLd from '@/components/JsonLd'
 import { aboutPageSchema, breadcrumbSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import { ADDRESS, MAPS_URL } from '@/lib/constants'
+import HeroMapBackground from '@/components/HeroMapBackground'
 
 export const metadata = buildMetadata({
   title: 'About One Stop Mobile Tyres 24/7 | Mobile Tyre Fitters Manchester',
@@ -25,21 +25,9 @@ export default function AboutPage() {
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
         <section className="relative min-h-[520px] lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
-          <Image
-            src="/images/professional-mobile-tyre-services-you-can-rely-on-across-greater-manchester.jpg"
-            alt="Professional mobile tyre services you can rely on across Greater Manchester"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "linear-gradient(to right, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.75) 100%)",
-            }}
-          />
-          <div className="relative z-10 max-w-2xl py-20">
+          <HeroMapBackground />
+
+          <div className="relative z-10 max-w-2xl py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
@@ -47,7 +35,7 @@ export default function AboutPage() {
               About One Stop Mobile Tyres 24/7
             </h1>
 
-            <p className="text-white/80 text-base leading-relaxed mb-6">
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-6">
               Reliable 24/7 mobile tyre fitting and roadside assistance service you can count on, day or night.
             </p>
 

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ADDRESS, MAPS_URL } from '@/lib/constants'
+import HeroMapBackground from '@/components/HeroMapBackground'
 
 export default function ContactPageClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(0)
@@ -48,19 +49,8 @@ export default function ContactPageClient() {
 
         {/* HERO */}
         <section className="relative bg-[#1c1b1b] py-16 sm:py-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="w-full h-full object-cover"
-              src="/images/get-in-touch-for-fast-and-reliable-mobile-tyre-assistance-across-greater-manchester.jpg"
-              alt="Get in touch for fast and reliable mobile tyre assistance across Greater Manchester"
-              width={1920}
-              height={600}
-              loading="eager"
-              decoding="async"
-            />
-          </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-left">
+          <HeroMapBackground />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <h1
               className="text-white mb-4 sm:mb-6 uppercase tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-bold"
               style={{ fontFamily: 'Work Sans, sans-serif' }}
@@ -68,7 +58,7 @@ export default function ContactPageClient() {
               Contact Us
             </h1>
             <p
-              className="text-white/90 max-w-2xl text-base sm:text-lg leading-relaxed"
+              className="text-white lg:text-white/90 max-w-2xl text-base sm:text-lg leading-relaxed"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Get in touch with our team for fast and reliable roadside assistance, wherever

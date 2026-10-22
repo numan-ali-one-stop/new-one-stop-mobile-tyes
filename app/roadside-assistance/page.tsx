@@ -1,8 +1,9 @@
 import JsonLd from '@/components/JsonLd'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: '24/7 Emergency Roadside Assistance | Greater Manchester',
@@ -144,18 +145,10 @@ export default function RoadsideAssistancePage() {
 
       {/* ── 1. HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/24-7-professional-roadside-assistance-across-greater-manchester.jpg"
-          alt="24/7 professional roadside assistance across Greater Manchester"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          width={1600}
-          height={900}
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-[#0f172a]/80" />
+        <HeroMapBackground />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28">
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 font-bold px-3.5 py-1.5 rounded-full mb-6 text-[11px] uppercase tracking-widest border border-red-600/30">
               <span className="relative flex h-2 w-2">
@@ -172,7 +165,7 @@ export default function RoadsideAssistancePage() {
               24/7 Roadside Assistance Near You
             </h1>
 
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+            <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
               When your vehicle breaks down or you face an unexpected problem on the road, our <strong>roadside assistance</strong> service provides professional help at a convenient location across our service areas. We provide <strong>emergency roadside assistance</strong> service for drivers who need reliable support to get back on the road safely.
             </p>
 
@@ -183,7 +176,7 @@ export default function RoadsideAssistancePage() {
                 'Professional Breakdown Assistance',
                 'Local Coverage',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
+                <li key={item} className="flex items-center gap-3 text-white lg:text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
                   {item}
                 </li>
@@ -211,10 +204,11 @@ export default function RoadsideAssistancePage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" />
           </div>
         </div>
       </section>
+
+      <HeroQuoteSection />
 
       {/* ── 2. RELIABLE ROADSIDE ASSISTANCE (IMAGE + TEXT) ─────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">

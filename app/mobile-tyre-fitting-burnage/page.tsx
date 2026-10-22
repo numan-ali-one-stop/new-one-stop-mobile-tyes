@@ -6,9 +6,10 @@ import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-burnage',
@@ -58,22 +59,9 @@ export default function BurnagePage() {
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
         <section className="relative min-h-[100svh] lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
-          <Image
-            src="/images/mobile-tyre-fitting-one-stop-tyres-24-7.webp"
-            alt="Mobile tyre fitting technician at work in Greater Manchester"
-            fill
-            priority
-            quality={60}
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "linear-gradient(to right, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.75) 100%)",
-            }}
-          />
-          <div className="relative z-10 max-w-2xl py-20">
+          <HeroMapBackground />
+
+          <div className="relative z-10 max-w-2xl py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
@@ -82,7 +70,7 @@ export default function BurnagePage() {
               24/7 Mobile Tyre Fitting &amp; Puncture Repair in Burnage
             </h1>
 
-            <p className="text-white/80 text-base leading-relaxed mb-6">
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-6">
               Flat tyre on your drive off Burnage Lane or a puncture on Kingsway? We come to you 24/7 across Burnage and the M19 postcode, from the garden-village streets around Burnage station to Mauldeth Road and Fog Lane Park. We repair punctures where it is safe and fit replacement tyres on the spot, and we reach nearby{' '}
               <a href="/mobile-tyre-fitting-levenshulme" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Levenshulme</a> and <a href="/mobile-tyre-fitting-didsbury" className="text-white font-semibold underline underline-offset-2 hover:text-[#FF4444]">Didsbury</a> just as quickly.
             </p>
@@ -96,7 +84,7 @@ export default function BurnagePage() {
                 'Home, Work & Roadside Service',
                 'M19: Burnage Lane &amp; Kingsway',
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2.5 text-white/90">
+                <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
                     className="material-symbols-outlined text-green-400 shrink-0"
                     style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
@@ -120,7 +108,7 @@ export default function BurnagePage() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/60 text-xs font-medium">Rated By Drivers Across Burnage &amp; Greater Manchester</span>
+              <span className="text-white/80 lg:text-white/60 text-xs font-medium">Rated By Drivers Across Burnage &amp; Greater Manchester</span>
             </a>
 
             {/* CTAs */}
@@ -145,9 +133,10 @@ export default function BurnagePage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" area="Burnage" />
           </div>
         </section>
+
+        <HeroQuoteSection area="Burnage" />
 
         {/* ── 2. REVIEWS ────────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -348,11 +337,11 @@ export default function BurnagePage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Burnage
+                Your Mobile Tyre Fitter in Burnage
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Burnage, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, our mobile technicians can help.
-                We provide tyre fitting, replacement and puncture repair across Burnage and nearby areas, including Burnage Lane, Kingsway and the surrounding M19 postcode area.
+                When you need mobile tyre fitting in Burnage, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, your mobile tyre fitter in Burnage can help.
+                We provide tyre fitting across the M19 postcode, including Burnage Lane and Kingsway, plus replacement and puncture repair in the nearby areas. We carry budget, mid-range and premium mobile tyres in Burnage, fitted wherever your car is parked.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -579,7 +568,7 @@ export default function BurnagePage() {
             },
             {
               q: 'Can you fit tyres on my driveway in Burnage?',
-              a: 'Yes. Many Burnage homes have driveways or quiet streets outside, which are ideal for mobile fitting.',
+              a: 'Yes. Many Burnage homes have driveways or quiet streets outside, which are ideal for fitting mobile tyres in Burnage.',
             },
             {
               q: 'Can you come to Burnage station?',
@@ -602,12 +591,16 @@ export default function BurnagePage() {
               a: 'It depends on traffic on Kingsway and Burnage Lane. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Burnage?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Burnage, from Kingsway and Burnage Lane to Burnage station and the streets around Fog Lane Park. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M19 postcode.',
+              q: 'How do I book a mobile tyre fitter in Burnage?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M19 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

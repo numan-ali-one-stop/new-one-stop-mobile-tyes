@@ -1,8 +1,9 @@
 import JsonLd from '@/components/JsonLd'
-import QuickQuoteForm from '@/components/QuickQuoteForm'
 import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import { MAPS_URL } from '@/lib/constants'
+import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: 'Locking Wheel Nut Removal Greater Manchester | Mobile Service',
@@ -124,19 +125,10 @@ export default function LockingNutRemovalPage() {
 
       {/* ── 1. HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/professional-mobile-locking-wheel-nut-removal-across-greater-manchester.jpg"
-          alt="Professional mobile locking wheel nut removal across Greater Manchester"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          width={1600}
-          height={900}
-          decoding="async"
-          fetchPriority="high"
-        />
-        <div className="absolute inset-0 bg-[#0f172a]/80" />
+        <HeroMapBackground />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28">
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 font-bold px-3.5 py-1.5 rounded-full mb-6 text-[11px] uppercase tracking-widest border border-red-600/30">
               <span className="relative flex h-2 w-2">
@@ -153,10 +145,10 @@ export default function LockingNutRemovalPage() {
               Locking Wheel Nut Removal – Specialist Mobile Service
             </h1>
 
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
+            <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
               Lost your locking wheel nut key, damaged the key or found that the locking nut will not move? <strong>One Stop Mobile Tyres 24/7</strong> provides professional <strong>locking wheel nut removal</strong> across our service areas, using specialist extraction equipment at your location.
             </p>
-            <p className="text-slate-400 text-base leading-relaxed mb-8">
+            <p className="text-white/85 lg:text-slate-400 text-base leading-relaxed mb-8">
               We can assist with lost keys, worn locking nuts, rounded heads and seized fittings. Our technicians assess the wheel and nut first, then use the most appropriate removal method to gain access while taking care around the alloy wheel.
             </p>
 
@@ -169,7 +161,7 @@ export default function LockingNutRemovalPage() {
                 '24/7 Local Coverage',
                 'Clear Pricing Before Work Begins',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white/90 text-sm sm:text-base font-medium">
+                <li key={item} className="flex items-center gap-3 text-white lg:text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
                   {item}
                 </li>
@@ -197,10 +189,11 @@ export default function LockingNutRemovalPage() {
               </a>
             </div>
 
-            <QuickQuoteForm variant="hero" />
           </div>
         </div>
       </section>
+
+      <HeroQuoteSection />
 
       {/* ── 2. IMAGE + TEXT ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">
