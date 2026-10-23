@@ -76,6 +76,8 @@ const LEGAL_PAGES = ['/privacy-policy', '/cookie-policy', '/terms']
 
 const GUIDE_PAGES = [
   '/guides',
+  '/guides/car-wont-start-cold-weather',
+  '/guides/pothole-tyre-damage-claim',
   '/guides/tyre-pressure-cold-weather',
   '/guides/winter-tyres-vs-all-season-tyres-uk',
   '/guides/how-to-tell-if-your-tyre-can-be-repaired-or-needs-replacing',

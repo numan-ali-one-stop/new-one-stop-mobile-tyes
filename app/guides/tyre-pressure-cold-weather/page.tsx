@@ -404,7 +404,8 @@ export default function TyrePressureColdWeatherGuide() {
             rubber touching the road, which lowers grip and can wear the middle of the tread faster.
             Some handbooks list a higher pressure for a fully loaded car or sustained high speeds,
             and you should use that figure only in those situations. Correct pressure also helps
-            tyres cope with rough roads, as we explain in our <strong>pothole tyre damage</strong>{' '}
+            tyres cope with rough roads, as we explain in our{' '}
+            <a href="/guides/pothole-tyre-damage-claim" className={link}>pothole tyre damage</a>{' '}
             guide.
           </p>
 
@@ -435,7 +436,7 @@ export default function TyrePressureColdWeatherGuide() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:+447759708646"
-                className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
+                className="bg-[#dc2626] text-white font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>

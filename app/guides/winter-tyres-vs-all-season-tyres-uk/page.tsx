@@ -343,9 +343,9 @@ export default function WinterVsAllSeasonTyresGuide() {
           <p className="text-slate-600 leading-relaxed mb-6">
             Fit winter tyres when daytime temperatures begin to stay low, usually from October or
             November, and swap back in spring. Do not wait for the first frost: fitters get busy in
-            the first cold snap. Cold snaps also drain batteries, so if your{' '}
-            <a href="/jump-start" className={link}>car won&apos;t start in cold weather</a>, we can
-            help with that too.
+            the first cold snap. Cold snaps also drain batteries, so read our guide on{' '}
+            <a href="/guides/car-wont-start-cold-weather" className={link}>car won&apos;t start in cold weather</a>{' '}
+            too.
           </p>
 
           <H2>Can a mobile fitter swap them at home?</H2>
@@ -403,7 +403,7 @@ export default function WinterVsAllSeasonTyresGuide() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:+447759708646"
-                className="bg-[#FF4444] text-[#121212] font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
+                className="bg-[#dc2626] text-white font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>

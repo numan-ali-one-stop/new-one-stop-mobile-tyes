@@ -87,7 +87,7 @@ export default function PrestwichPage() {
               <span className="text-white/80 lg:text-white/60 text-xs font-medium">Rated By Drivers Across Prestwich &amp; Greater Manchester</span>
             </a>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
-              <a href="tel:+447759708646" className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg" style={{ fontFamily: 'var(--font-work-sans)' }}>
+              <a href="tel:+447759708646" className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
               </a>
@@ -198,7 +198,7 @@ export default function PrestwichPage() {
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">Tyre Problem in Prestwich?</h3>
                 <p className="text-slate-400 text-base">Send us your vehicle registration, tyre size and exact location. We can check suitable tyre options and give you an expected arrival time before dispatch.</p>
               </div>
-              <a href="tel:+447759708646" className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap" style={{ fontFamily: 'var(--font-work-sans)' }}>
+              <a href="tel:+447759708646" className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 07759 708 646
               </a>
             </div>

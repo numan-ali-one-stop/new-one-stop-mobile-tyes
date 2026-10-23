@@ -85,7 +85,7 @@ export default function ServiceAreasMap() {
 
         <a
           href="/service-area"
-          className="mt-6 inline-flex items-center gap-2 bg-[#FF4444] text-[#121212] text-sm font-bold px-5 py-3 rounded-xl hover:bg-red-700 hover:text-white transition-colors self-start"
+          className="mt-6 inline-flex items-center gap-2 bg-[#dc2626] text-white text-sm font-bold px-5 py-3 rounded-xl hover:bg-red-700 hover:text-white transition-colors self-start"
         >
           <span aria-hidden="true" data-nosnippet className="material-symbols-outlined" style={{ fontSize: '16px' }}>map</span>
           View Full Service Area

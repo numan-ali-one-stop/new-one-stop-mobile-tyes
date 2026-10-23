@@ -107,7 +107,7 @@ export default function M62Page() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:+447759708646"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
@@ -288,7 +288,7 @@ export default function M62Page() {
               </div>
               <a
                 href="tel:+447759708646"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
+                className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
@@ -399,7 +399,7 @@ export default function M62Page() {
                 { title: 'Fitting and Final Checks', desc: 'Where replacement is required, the suitable tyre is fitted using professional equipment. Tyre pressure and the fitting are then checked before you continue your journey.' },
               ].map((step, idx) => (
                 <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
-                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                  <div className="bg-[#dc2626] text-white font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
                     {idx + 1}
                   </div>
                   <div>

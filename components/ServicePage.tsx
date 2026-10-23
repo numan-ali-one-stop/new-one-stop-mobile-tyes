@@ -136,7 +136,7 @@ export default function ServicePage({
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-8">
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet
@@ -288,7 +288,7 @@ export default function ServicePage({
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="bg-[#FF4444] text-[#121212] font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
+                className="bg-[#dc2626] text-white font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 {PHONE}
@@ -421,7 +421,7 @@ export default function ServicePage({
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <a
               href={`tel:${PHONE_TEL}`}
-              className="bg-[#FF4444] text-[#121212] font-black px-10 py-4 rounded-xl shadow-lg shadow-red-900/30 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+              className="bg-[#dc2626] text-white font-black px-10 py-4 rounded-xl shadow-lg shadow-red-900/30 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
               <span aria-hidden="true" data-nosnippet

@@ -1,5 +1,6 @@
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, SITE_URL } from '@/lib/schema'
+import { getGuides } from '@/lib/guides'
 
 export const metadata = {
   title: 'Tyre Guides & Advice | One Stop Mobile Tyres 24/7',
@@ -13,57 +14,7 @@ const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Guides', item: `${SITE_URL}/guides` },
 ])
 
-const guides = [
-  {
-    title: 'Winter Tyres vs All-Season Tyres in the UK: Which Should You Choose?',
-    desc: 'Compare grip, cost and legality on UK roads, find out which tyre suits your driving, and see when a mobile fitter can swap them at your door.',
-    href: '/guides/winter-tyres-vs-all-season-tyres-uk',
-    readTime: '6 min read',
-    published: '22 October 2026',
-  },
-  {
-    title: 'Why Your Tyre Pressure Drops in Cold Weather (and How to Fix It)',
-    desc: 'Why tyre pressure falls when the temperature drops, how often to check it, and what to do when the warning light will not go off.',
-    href: '/guides/tyre-pressure-cold-weather',
-    readTime: '5 min read',
-    published: '22 October 2026',
-  },
-  {
-    title: 'Tyre Safety Tips for Drivers: August Weather Guide',
-    desc: "Changeable August weather is on the way — how to check your tyres before travelling and avoid a breakdown on wet or dry roads.",
-    href: '/guides/tyre-safety-tips-greater-manchester-august-weather-guide',
-    readTime: '5 min read',
-    published: '5 August 2026',
-  },
-  {
-    title: 'Met Office Forecast: Mixed August Weather Means Drivers Should Check Their Tyres Now',
-    desc: 'Sunshine, showers and rising temperatures all in the same month — why changeable weather makes this the right time for a tyre check.',
-    href: '/guides/met-office-august-weather-check-your-tyres',
-    readTime: '6 min read',
-    published: '4 August 2026',
-  },
-  {
-    title: 'Run-Flat vs Normal Tyres: What Drivers Need to Know Before Replacing Theirs',
-    desc: 'The real difference between run-flat and normal tyres, whether you can mix them, and what it costs to switch — explained without the jargon.',
-    href: '/guides/run-flat-vs-normal-tyres-manchester',
-    readTime: '7 min read',
-    published: '23 July 2026',
-  },
-  {
-    title: 'What to Do If You Get a Flat Tyre on the M60 (or Any Motorway)',
-    desc: 'A step-by-step safety guide for motorway punctures and blowouts — where to stop, who to call, and how to get moving again without a tow truck.',
-    href: '/guides/what-to-do-flat-tyre-m60-manchester-motorway',
-    readTime: '9 min read',
-    published: '19 July 2026',
-  },
-  {
-    title: 'How to Tell If Your Tyre Can Be Repaired or Needs Replacing',
-    desc: 'A practical, safety-first checklist covering puncture location, size, tread depth and the warning signs that mean a tyre must be replaced.',
-    href: '/guides/how-to-tell-if-your-tyre-can-be-repaired-or-needs-replacing',
-    readTime: '8 min read',
-    published: '19 July 2026',
-  },
-]
+const guides = getGuides()
 
 export default function GuidesIndexPage() {
   return (
@@ -94,8 +45,19 @@ export default function GuidesIndexPage() {
             <a
               key={g.href}
               href={g.href}
-              className="group flex flex-col bg-slate-50 border border-slate-100 rounded-2xl p-5 sm:p-6 hover:border-[#b70011]/30 hover:shadow-md transition-all"
+              className="group flex flex-col sm:flex-row gap-4 sm:gap-6 bg-slate-50 border border-slate-100 rounded-2xl p-5 sm:p-6 hover:border-[#b70011]/30 hover:shadow-md transition-all"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={g.image}
+                alt={g.imageAlt}
+                className="w-full sm:w-56 aspect-[3/2] object-cover rounded-xl flex-shrink-0 self-start"
+                width={600}
+                height={400}
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="flex flex-col">
               <span className="text-xs font-semibold text-slate-400 mb-2">
                 Published {g.published} · {g.readTime}
               </span>
@@ -110,6 +72,7 @@ export default function GuidesIndexPage() {
                 Read guide
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </span>
+              </div>
             </a>
           ))}
         </div>

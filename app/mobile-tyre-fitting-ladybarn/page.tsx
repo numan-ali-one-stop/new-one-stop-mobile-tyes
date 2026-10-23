@@ -115,7 +115,7 @@ export default function LadybarnPage() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:+447759708646"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
@@ -296,7 +296,7 @@ export default function LadybarnPage() {
               </div>
               <a
                 href="tel:+447759708646"
-                className="bg-[#FF4444] text-[#121212] font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
+                className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
                 07759 708 646
@@ -337,11 +337,11 @@ export default function LadybarnPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Ladybarn
+                Your Mobile Tyre Fitter in Ladybarn
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Ladybarn, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, our mobile technicians can help.
-                We provide tyre fitting, replacement and puncture repair across Ladybarn and surrounding areas, including Wilmslow Road, Ladybarn Lane and the M14 postcode area.
+                When you need mobile tyre fitting in Ladybarn, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, your mobile tyre fitter in Ladybarn can help.
+                We provide tyre fitting across the M14 and M20 postcodes, including Wilmslow Road and Ladybarn Lane, plus replacement and puncture repair in the surrounding areas. We carry budget, mid-range and premium mobile tyres in Ladybarn, fitted wherever your car is parked.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -560,7 +560,7 @@ export default function LadybarnPage() {
           faqs={[
             {
               q: 'My terraced street has no driveway. Can you still fit the tyre?',
-              a: 'Yes. Most Ladybarn streets are terraced with on-street parking, so we fit tyres safely at the kerb outside your house.',
+              a: 'Yes. Most Ladybarn streets are terraced with on-street parking, so we fit mobile tyres in Ladybarn safely at the kerb outside your house.',
             },
             {
               q: 'I have a flat on Mauldeth Road. What should I do?',
@@ -591,12 +591,16 @@ export default function LadybarnPage() {
               a: 'It depends on traffic on Mauldeth Road and Wilmslow Road. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Ladybarn?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Ladybarn, from Mauldeth Road and Wilmslow Road to Ladybarn Lane and the streets around Ladybarn Park. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M14 or M20 postcode.',
+              q: 'How do I book a mobile tyre fitter in Ladybarn?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M14 or M20 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

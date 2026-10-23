@@ -42,7 +42,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
           <a
             href="tel:+447759708646"
-            className="inline-flex items-center gap-2.5 bg-[#FF4444] hover:bg-red-700 text-[#121212] hover:text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
+            className="inline-flex items-center gap-2.5 bg-[#dc2626] hover:bg-red-700 text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
             <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
