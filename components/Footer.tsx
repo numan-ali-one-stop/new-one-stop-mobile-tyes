@@ -148,15 +148,8 @@ export default function Footer() {
           </p>
           {isContactPage && (
             <p className="text-slate-600 text-[10px] sm:text-[11px] text-center sm:text-right">
-              Designed &amp; Developed By{' '}
-              <a
-                href="https://linkedo.co.uk"
-                rel="nofollow noopener noreferrer"
-                target="_blank"
-                className="text-slate-400 hover:text-[#FF4444] transition-colors font-semibold"
-              >
-                Linkedo
-              </a>
+              Design &amp; Developed by{' '}
+              <span className="text-slate-400 font-semibold">UPTIME MARKETING</span>
             </p>
           )}
         </div>
