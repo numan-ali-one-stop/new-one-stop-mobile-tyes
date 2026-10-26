@@ -1,49 +1,47 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-tottington',
-  name: 'Mobile Tyre Fitting in Tottington',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Tottington' },
+  alternateName: '24/7 Mobile Tyre Fitting Tottington',
+  areaServed: 'Tottington, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Tottington? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-tottington')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-tottington')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-tottington',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Tottington',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Tottington | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Tottington | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Tottington — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Tottington? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-tottington',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function TottingtonPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -60,18 +58,17 @@ export default function TottingtonPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-6">
-              Emergency Tyre Replacement, Mobile Puncture Repair &amp; Roadside Tyre Assistance Across Tottington. We Come To Your Home, Workplace Or Roadside Location Within 20–30 Minutes.
+              Need mobile tyre fitting in Tottington? Get emergency tyre replacement, mobile puncture repair and roadside tyre assistance at your home, workplace or a safe roadside location. Our service operates 24/7 across covered areas, with typical response times of 20–30 minutes depending on traffic, your location, technician availability and tyre stock.
             </p>
 
             {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Tottington &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Work and Roadside Service',
+                'Covering Tottington and Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -326,39 +323,158 @@ export default function TottingtonPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Tottington
+                Professional Mobile Tyre Fitting in Tottington
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Tottington, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Tottington and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Tottington.
-                If you&apos;re searching for mobile tyre fitting near me in Tottington, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat, punctured or damaged tyre can disrupt your plans and make driving unsafe. One Stop Tyres 247 provides mobile tyre fitting in Tottington, bringing tyre services directly to your vehicle where access and working conditions are safe.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                Whether you need a replacement at home, a tyre fitted at your workplace or help with a roadside puncture, our team can assess your requirements and advise on the available options.
+              </p>
+              <p className="font-bold text-[#0f172a] mb-3">Our services include:</p>
+              <ul className="space-y-3 mb-6">
+                {[
+                  { title: 'Mobile Tyre Replacement', desc: 'Replacement of damaged, worn or unsafe tyres.' },
+                  { title: 'Emergency Puncture Repair', desc: 'On-site repairs when the tyre damage meets the relevant safety requirements.' },
+                  { title: 'Home Tyre Fitting', desc: 'Convenient tyre fitting at your property, subject to suitable access.' },
+                  { title: 'Roadside Tyre Assistance', desc: 'Help when a tyre problem prevents you from continuing your journey safely.' },
+                  { title: 'Premium, Mid-Range and Budget Tyres', desc: 'A range of options depending on your vehicle and tyre availability.' },
+                ].map((item) => (
+                  <li key={item.title} className="flex items-start gap-2.5 text-slate-700">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0 mt-0.5" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                    <span><span className="font-bold text-[#0f172a]">{item.title}:</span> {item.desc}</span>
+                  </li>
+                ))}
               </ul>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                When booking, provide your postcode, vehicle details and tyre size if known. This helps us confirm the appropriate service and give you an accurate quote.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY TOTTINGTON DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Tottington" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Availability', desc: 'Tyre problems can happen at any time. Our mobile tyre service operates 24/7 in covered areas, subject to technician and tyre availability.' },
+            { icon: 'home_repair_service', title: 'Convenient On-Site Fitting', desc: 'We come to your home, workplace or a suitable roadside location, helping you avoid driving to a garage with a damaged tyre.' },
+            { icon: 'sell', title: 'Upfront Pricing', desc: 'We explain the expected cost before work begins. Ask about the tyre, fitting and any applicable call-out charges when requesting your quote.' },
+            { icon: 'engineering', title: 'Professional Tyre Technicians', desc: 'Our technicians assess the tyre and advise whether repair or replacement is appropriate based on its condition and the relevant safety requirements.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: 'We can discuss suitable premium, mid-range and budget tyres, depending on your vehicle specifications and available stock.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Tottington Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call to explain whether you need an emergency tyre replacement, puncture repair or routine tyre fitting.' },
+                { title: 'Share Your Location', desc: 'Provide your Tottington postcode, vehicle make and model, and tyre size if available. Tell us if your vehicle is at home, work or roadside.' },
+                { title: 'Confirm the Quote', desc: 'Our team will discuss the price, tyre availability and estimated arrival time before you confirm the booking.' },
+                { title: 'Tyre Inspection', desc: 'The technician checks the tyre to establish whether a repair is suitable or replacement is required.' },
+                { title: 'On-Site Service', desc: 'Once you approve the work, the technician completes the agreed service at a location where it is safe to do so.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Tottington
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre fitting service covers Tottington and nearby residential and business areas. We can arrange assistance around local streets and routes connecting the area with Bury and Bolton.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">Coverage includes locations around:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Tottington town centre',
+                'Market Street',
+                'Booth Street',
+                'Harwood Road',
+                'Greenmount',
+                'Affetside',
+                'Bury and nearby neighbourhoods',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your vehicle develops a tyre problem while travelling through the area, contact us with your exact location. We will confirm whether a technician can attend and provide an estimated arrival time based on current conditions.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Tottington
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              A puncture, blowout or damaged tyre can leave your vehicle unsafe to drive. Our emergency mobile tyre fitting service helps drivers in Tottington arrange assistance without making an unnecessary journey to a tyre centre.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We can help with:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                { title: 'Emergency Tyre Replacement', desc: 'For tyres that are damaged beyond safe repair.' },
+                { title: 'Mobile Puncture Repair', desc: 'Where the puncture and tyre condition meet the applicable repair requirements.' },
+                { title: 'Jump-Start Assistance', desc: 'Help with a suitable flat-battery problem, subject to availability.' },
+                { title: 'TPMS Checks and Reset', desc: 'Support with tyre pressure monitoring systems where appropriate.' },
+                { title: 'Locking Wheel Nut Removal', desc: 'Assistance using suitable specialist equipment, depending on the vehicle.' },
+                { title: 'Roadside Tyre Assistance', desc: 'Help at accessible locations where work can be carried out safely.' },
+              ].map((item) => (
+                <li key={item.title} className="flex items-start gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0 mt-0.5" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span><span className="font-bold text-[#0f172a]">{item.title}:</span> {item.desc}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre emergency on a busy road, prioritise your safety and follow the appropriate breakdown procedures. Never attempt a tyre change in a live traffic lane or another unsafe position. Contact us with your precise location so we can discuss the assistance available.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -370,35 +486,34 @@ export default function TottingtonPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="tottington" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-tottington"
           city="Tottington"
           faqs={[
-            {
-              q: 'How quickly can you reach me in Tottington?',
-              a: 'Our mobile units are based close by in Bury, meaning we can typically reach Tottington and the surrounding BL8 postcode area, including Market Street and Booth Street, within 20-30 minutes.',
-            },
-            {
-              q: 'What areas around Tottington do you cover?',
-              a: 'Yes. We cover Tottington and the surrounding BL8 postcode area, along with Market Street, Harwood Road and the routes connecting to Bury and Bolton.',
-            },
-            {
-              q: 'Can you repair a puncture instead of replacing my tyre in Tottington?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
-            },
-            {
-              q: 'Can you fit tyres at my workplace near Market Street or Harwood Road?',
-              a: 'Yes. We regularly attend offices and business premises around Market Street and Harwood Road, fitting your tyres while you work.',
-            },
+            { q: 'How quickly can a mobile tyre fitter reach me in Tottington?', a: 'Typical response times in covered areas are around 20–30 minutes. Actual arrival depends on traffic, your postcode, technician availability and the required tyre.' },
+            { q: 'Do you offer 24/7 mobile tyre fitting in Tottington?', a: 'Yes, the service operates 24/7 in covered areas. Contact us to confirm current availability for your location and requirements.' },
+            { q: 'Can you fit a tyre at my home in Tottington?', a: 'Yes. Home tyre fitting can be arranged where there is suitable access and enough safe working space for the technician.' },
+            { q: 'Can you fit tyres at my workplace near Market Street or Harwood Road?', a: 'Yes, subject to access and a suitable working area. Provide the business address and any parking restrictions when booking.' },
+            { q: 'Do you provide emergency tyre replacement in Tottington?', a: 'Yes. We can arrange emergency replacement for damaged or unsafe tyres, subject to suitable tyre stock and technician availability.' },
+            { q: 'Can you repair a puncture instead of replacing the tyre?', a: 'Sometimes. The technician will assess the location and extent of the damage. Repairs are only suitable when the tyre meets the relevant safety requirements, including BS AU 159 where applicable.' },
+            { q: 'Which nearby areas do you cover?', a: 'Coverage includes Tottington and surrounding areas, with connections towards Greenmount, Affetside, Bury and Bolton. Confirm your postcode when booking.' },
+            { q: 'Can I book mobile tyre fitting late at night?', a: 'Yes, emergency service is available 24/7 in covered areas. Call to confirm availability and receive an estimated arrival time.' },
+            { q: 'Do you supply premium and budget tyres?', a: 'We can offer premium, mid-range and budget options, depending on the required tyre size, vehicle specifications and current stock.' },
+            { q: 'How much does mobile tyre fitting in Tottington cost?', a: 'The price depends on the tyre size, selected tyre, work required and location. Request a quote before confirming your booking.' },
+            { q: 'What details should I provide when booking?', a: 'Share your postcode or exact location, vehicle make and model, tyre size if known, and a description of the problem. A tyre photo can also help with the initial assessment.' },
+            { q: 'Can you help if my car has broken down roadside?', a: 'We can attend suitable roadside locations where the technician can work safely. If your vehicle is in a dangerous position or on a live carriageway, follow the appropriate road safety and breakdown procedures first.' },
+            { q: 'Is same-day mobile tyre fitting available?', a: 'Same-day appointments may be available depending on technician schedules, your location and the required tyre. Contact us to check availability.' },
+            { q: 'Can you help with a flat battery as well as a tyre problem?', a: 'Jump-start assistance may be available. Mention the battery issue when booking so the team can confirm whether the service can be provided.' },
+            { q: 'How do I book mobile tyre fitting in Tottington?', a: 'Call 07759 708 646 with your location and vehicle details. Our team can discuss your requirements, provide a quote and confirm an estimated arrival time.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Tottington Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Tottington line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Tottington?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need an emergency tyre replacement, a suitable puncture repair or convenient tyre fitting at home, One Stop Tyres 247 can help you explore the available options. Call 07759 708 646 for a quote and estimated arrival time. We will confirm service coverage, tyre availability and the next steps for your location.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

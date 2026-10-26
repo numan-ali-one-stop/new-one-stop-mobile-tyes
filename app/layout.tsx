@@ -5,8 +5,6 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CookieConsentBanner from '@/components/CookieConsentBanner'
-import JsonLd from '@/components/JsonLd'
-import { localBusinessSchema } from '@/lib/schema'
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -135,8 +133,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             fired from GTM-NKQKPB8S — do not hard-code gtag.js here or they double-fire. */}
       </head>
       <body className="antialiased overflow-x-hidden pb-[60px] sm:pb-0">
-        {/* The business entity (LocalBusiness / AutoRepair) — once per page, every page. */}
-        <JsonLd data={localBusinessSchema()} />
         {/* Google Tag Manager noscript */}
         <noscript>
           <iframe

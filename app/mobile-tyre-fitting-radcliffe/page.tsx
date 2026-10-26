@@ -1,48 +1,47 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
+import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-radcliffe',
-  name: 'Mobile Tyre Fitting in Radcliffe',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Radcliffe' },
+  alternateName: '24/7 Mobile Tyre Fitting Radcliffe',
+  areaServed: 'Radcliffe, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Radcliffe? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
 })
 
-export const metadata = {
-  title: 'Mobile Tyre Fitting Radcliffe | 24/7 Emergency & Puncture Repair',
-  description:
-    'Professional mobile tyre fitting in Radcliffe, with same day and 24/7 emergency assistance available at your location.',
-  alternates: { canonical: 'https://onestoptyres247.co.uk/mobile-tyre-fitting-radcliffe' },
-}
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-radcliffe')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-radcliffe')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-radcliffe',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Radcliffe',
+})
 
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
+export const metadata = buildMetadata({
+  title: 'Mobile Tyre Fitting Radcliffe | 24/7 Tyre Replacement',
+  description:
+    'Need mobile tyre fitting in Radcliffe? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+  path: '/mobile-tyre-fitting-radcliffe',
+})
 
 export default function RadcliffePage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO */}
@@ -51,19 +50,19 @@ export default function RadcliffePage() {
 
           <div className="relative z-10 max-w-2xl py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>
-              Mobile Tyre Fitting Radcliffe – Tyre Help Wherever You Stop
+              24/7 Mobile Tyre Fitting Radcliffe
             </h1>
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-6">
-              A damaged tyre can turn a normal journey through Radcliffe into an unexpected delay. One Stop Mobile Tyres 24/7 brings professional mobile tyre fitting directly to your vehicle, with same day and emergency assistance available across the area.
+              Need a tyre replaced in Radcliffe? Our mobile tyre fitting service brings professional tyre replacement and puncture repair directly to your vehicle, whether you are at home, at work or stranded at a safe roadside location.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Response Across Radcliffe',
-                'Same Day Mobile Tyre Fitting Available',
-                '24/7 Emergency Mobile Tyre Fitting',
-                'Premium, Mid-Range & Budget Tyres',
-                'Card, Cash & Contactless Payments Accepted',
-                'Professional, Fully Insured Mobile Tyre Fitters',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Work and Roadside Service',
+                'Radcliffe and Surrounding Areas Covered',
+                'Premium, Mid-Range and Budget Tyres',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-400 shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
@@ -224,34 +223,147 @@ export default function RadcliffePage() {
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
-                Mobile Tyre Fitting for Radcliffe&apos;s Everyday Roads
+                Professional Mobile Tyre Fitting in Radcliffe
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                Radcliffe has a mixture of town-centre traffic, residential neighbourhoods and routes linking the town with Bury, Bolton and Whitefield. A tyre problem can happen on a short local trip just as easily as during a longer journey. Whether the vehicle is safely parked near the town centre, stopped around Blackburn Street, Church Street West or another accessible location, our aim is to deal with the tyre where the vehicle is rather than asking you to risk driving on it. Our <strong>mobile car tyre fitting</strong> service covers many common vehicle makes and tyre sizes. Before dispatch, we can use your registration or tyre markings to check suitable premium, mid-range and budget options. We also serve surrounding areas including <strong>Ainsworth, Outwood, Close and nearby parts of the Bury borough</strong>, giving drivers access to professional tyre support throughout the day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat or damaged tyre can interrupt your journey and leave you unable to continue safely. One Stop Tyres 247 provides mobile tyre fitting in Radcliffe, bringing professional equipment and suitable replacement tyres directly to your vehicle.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem icon="bolt" title="Same Day Tyre Fitting" desc="Found excessive wear before an important journey? Our same day tyre fitting service is available for many common tyre sizes, helping you deal with the problem without waiting for another day." />
-                <FeatureItem icon="engineering" title="Emergency Mobile Tyre Fitting" desc="A blowout or serious tyre failure may leave the vehicle unsafe to move. Our emergency mobile tyre fitting service is available 24 hours a day for drivers who need urgent assistance across Radcliffe." />
-                <FeatureItem icon="sell" title="Mobile Tyre Replacement Service" desc="When repair is not suitable, our mobile tyre replacement service brings an appropriate replacement to your location and fits it using dedicated mobile equipment." />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                We cover Radcliffe town centre and nearby residential areas, including locations around Blackburn Street, Church Street West, Ainsworth and Outwood. Our service also supports drivers travelling towards Bury, Bolton, Whitefield and other surrounding parts of Greater Manchester.
+              </p>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                Whether you need a replacement tyre at home, have discovered damage in a workplace car park or require emergency assistance, our mobile technicians can help without requiring you to drive to a tyre centre.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Our service operates 24/7 for emergency callouts, with same-day fitting available subject to tyre stock and technician availability.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY CHOOSE US */}
-        <WhyChooseUs
-          city="Radcliffe"
-          image="/images/tyre-fitting-in-emergency.webp"
-          heading="Why Drivers in Radcliffe Call One Stop Mobile Tyres 24/7"
-          responseTitle="A Service Built Around Your Location"
-          responseDesc="You do not need to move an unsafe vehicle simply to reach a tyre centre. Our mobile setup allows the fitting work to come to you, whether you are on a residential street, in a suitable car park or safely stopped elsewhere."
-          callOutTitle="Clear Tyre Choices Before Dispatch"
-          callOutDesc="We can discuss premium, mid-range and budget tyre options before the technician travels. This gives you a clearer idea of the available choices and expected price before work begins."
-          certifiedTitle="Professional Equipment on Every Call-Out"
-          certifiedDesc="Our professional mobile tyre fitters use purpose-built equipment for mobile tyre work. From everyday hatchbacks to larger cars, the goal is safe, accurate fitting and a vehicle that is ready to continue its journey."
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Assistance', desc: 'Tyre problems can happen at any time. Our mobile tyre fitting service operates day and night, including weekends and bank holidays, subject to availability.' },
+            { icon: 'speed', title: 'Fast Local Response', desc: 'Our technicians cover Radcliffe and surrounding Greater Manchester areas. The advertised average response time is around 20–30 minutes, although actual arrival times depend on traffic, your location and current callout demand.' },
+            { icon: 'engineering', title: 'Professional Mobile Technicians', desc: 'Our mobile fitters use professional tyre-fitting equipment and work with a wide range of vehicles and tyre sizes. We aim to provide convenient fitting at a suitable location without an unnecessary garage visit.' },
+            { icon: 'build', title: 'Repair or Replacement', desc: 'Not every puncture requires a new tyre. Where the damage and location meet the relevant safety requirements, our technician can inspect the tyre and carry out a suitable repair. If the tyre is unsafe or beyond repair, we can provide a suitable replacement.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: 'We offer premium, mid-range and budget tyre options, depending on your vehicle, tyre size and availability. Our team can discuss suitable choices before dispatch.' },
+            { icon: 'sell', title: 'Clear Upfront Pricing', desc: 'We explain the available tyre options and costs before proceeding with the work, helping you understand the expected price before the technician arrives.' },
+          ]}
         />
 
-        {/* ── 6. BRAND CAROUSEL */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Radcliffe Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call or WhatsApp us and explain whether you need a tyre replacement, puncture repair or emergency assistance.' },
+                { title: 'Share Your Location and Tyre Details', desc: 'Provide your postcode or exact location, vehicle registration and tyre size if available. A nearby road name or landmark can help the technician locate your vehicle.' },
+                { title: 'Confirm the Quote', desc: 'We will discuss suitable tyre options, explain the cost and confirm an estimated arrival time based on current availability.' },
+                { title: 'Technician Travels to You', desc: 'A mobile tyre technician comes to your location with the equipment and suitable tyre options needed for the job.' },
+                { title: 'Complete the Tyre Work', desc: 'Where safe and appropriate, the technician will repair the puncture or fit the replacement tyre, then carry out relevant checks before completing the job.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Radcliffe
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              If your tyre has a sidewall bulge, severe damage, a blowout or a puncture that cannot be repaired safely, replacement may be necessary. Our mobile tyre replacement service brings suitable tyres directly to your vehicle.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We cover Radcliffe and nearby areas, including:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Radcliffe town centre – mobile tyre assistance for local journeys and residential streets',
+                'Blackburn Street – tyre fitting at suitable, accessible locations nearby',
+                'Church Street West – mobile replacement and puncture assistance',
+                'Ainsworth – support for drivers in the surrounding community',
+                'Outwood – mobile tyre fitting at suitable home, work or roadside locations',
+                'Nearby Bury and Whitefield areas – assistance subject to location and availability',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0 mt-0.5" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Premium, mid-range and budget options are available depending on your vehicle and the required tyre. If you are unsure whether a damaged tyre can be repaired, our technician can inspect it and explain the suitable options.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Radcliffe
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              A tyre failure can happen during a short local trip, on the way to work or while travelling between Radcliffe and nearby towns. Our 24/7 emergency service provides mobile tyre assistance across Radcliffe and surrounding areas.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">Our mobile services include:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Emergency tyre replacement',
+                'Mobile puncture repair where suitable',
+                'Mobile tyre fitting at home or work',
+                'Roadside tyre assistance at a safe, accessible location',
+                'Jump-start assistance for flat batteries',
+                'TPMS checks and resets where required',
+                'Locking wheel nut removal using specialist equipment',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem on a busy road, prioritise your safety. Move away from moving traffic where possible and follow the appropriate breakdown procedures. Work will only be undertaken where the location is safe and suitable for the technician.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -263,34 +375,31 @@ export default function RadcliffePage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="radcliffe" />
 
-        {/* ── 7. FAQ */}
+        {/* ── 10. FAQ */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-radcliffe" city="Radcliffe" faqs={[
-          { q: 'Do you provide 24/7 mobile tyre fitting in Radcliffe?', a: 'Yes. Our 24/7 mobile tyre fitting service operates throughout the day and night, including weekends and bank holidays. Availability depends on the required tyre and the nearest technician.' },
-          { q: 'How quickly can a mobile tyre fitter reach Radcliffe?', a: 'Our usual response target is around 20–30 minutes across Greater Manchester. Traffic, your exact location, tyre availability and current call-out demand can affect the ETA, so we confirm an estimated arrival time when you book.' },
-          { q: 'Can I get same day mobile tyre fitting in Radcliffe?', a: 'Yes. Same day mobile tyre fitting is available for many common tyre sizes. Give us your vehicle registration or tyre size so we can check stock before arranging the call-out.' },
-          { q: 'What does your mobile tyre service cover?', a: 'Our mobile tyre service can include assessing the tyre problem, removing a damaged or worn tyre, supplying an appropriate replacement and professionally fitting it at your location.' },
-          { q: 'Can you provide emergency tyre replacement in Radcliffe?', a: 'Yes. If a tyre is too badly damaged to continue safely, we can arrange emergency tyre replacement and bring a suitable replacement directly to the vehicle.' },
-          { q: 'Do you offer an emergency tyre service at night?', a: 'Yes. Our emergency tyre service operates day and night. If your tyre fails outside normal garage hours, send us your location and tyre details so we can check the fastest available option.' },
-          { q: 'Do you provide mobile car tyre fitting for different makes?', a: 'Yes. Our mobile car tyre fitting service covers many common makes and models. Your registration or complete tyre size helps us identify the correct specification before dispatch.' },
-          { q: 'What happens if my tyre cannot be repaired?', a: 'If the damage is outside a repairable area, the sidewall is affected or the tyre is otherwise unsafe, we will explain the issue and recommend mobile tyre replacement rather than carrying out an unsuitable repair.' },
-          { q: 'Can you help around Radcliffe town centre?', a: 'Yes. We attend suitable locations around Radcliffe town centre, including areas close to Blackburn Street, Church Street West and surrounding streets, provided there is enough safe working space around the vehicle.' },
-          { q: 'Do you provide roadside tyre call-outs?', a: 'Yes. Our roadside tyre call-outs cover accessible roads throughout Radcliffe and nearby areas. Tell us exactly where the vehicle is stopped so we can assess how best to attend.' },
-          { q: 'Can you help drivers around Ainsworth and Outwood?', a: 'Yes. Our coverage extends beyond central Radcliffe into Ainsworth, Outwood and surrounding communities, subject to technician availability.' },
-          { q: 'Can I have a tyre fitted on my drive?', a: 'Where the vehicle is parked with enough safe space for the technician to work, having a tyre fitted on your drive may be possible. Tell us how the vehicle is positioned when booking.' },
-          { q: 'How do I arrange fast mobile tyre fitting in Radcliffe?', a: 'For fast mobile tyre fitting, send us your exact location, registration number and tyre size when you call or WhatsApp. Having these details ready helps us identify the required tyre and dispatch efficiently.' },
-          { q: 'What makes professional tyre fitting important?', a: 'Professional tyre fitting uses suitable equipment to remove and install tyres correctly. It also allows the technician to check the tyre and visible wheel condition while completing the job.' },
-          { q: 'Are your technicians professional mobile tyre fitters?', a: 'Yes. Our professional mobile tyre fitters are equipped for mobile call-outs and work across a wide range of common cars and tyre sizes throughout Greater Manchester.' },
-          { q: 'Do you provide a reliable mobile tyre service in Radcliffe?', a: 'Our reliable mobile tyre service focuses on clear communication, suitable tyre options and professional fitting at your location. We aim to confirm the key details before sending a technician.' },
-          { q: 'Do trusted mobile tyre fitters cover Radcliffe overnight?', a: 'Yes. Our trusted mobile tyre fitters provide scheduled and emergency support across Radcliffe around the clock, subject to technician and tyre availability.' },
-          { q: 'Can you arrange fast tyre support if I am already stranded?', a: 'Yes. If you cannot continue safely, tell us your exact position and the problem with the tyre. We can check available technicians and arrange the most suitable fast mobile tyre fitting or replacement response.' },
+          { q: 'Do you provide 24/7 mobile tyre fitting in Radcliffe?', a: 'Yes. Our mobile tyre fitting service operates 24/7 across Radcliffe, subject to technician and tyre availability.' },
+          { q: 'How quickly can a technician reach me in Radcliffe?', a: 'The advertised average response time is around 20–30 minutes. Actual arrival times depend on your location, traffic conditions and technician availability.' },
+          { q: 'Can I book same-day mobile tyre fitting in Radcliffe?', a: 'Yes. Same-day fitting is available for many common tyre sizes. Availability depends on your tyre requirements, location and current callout demand.' },
+          { q: 'Do you provide emergency tyre replacement in Radcliffe?', a: 'Yes. We provide emergency tyre replacement when a suitable tyre is available and the work can be carried out safely.' },
+          { q: 'Can you repair a punctured tyre at my location?', a: 'Yes. Our technician can inspect the tyre and carry out a repair if the damage is suitable and the location is safe. Otherwise, replacement may be recommended.' },
+          { q: 'Do you offer mobile tyre fitting at home?', a: 'Yes. We can arrange mobile tyre fitting at your home, provided there is enough safe and accessible space around the vehicle.' },
+          { q: 'Can you fit tyres at my workplace?', a: 'Yes. Mobile tyre fitting can be arranged at a suitable workplace or car park, subject to access and availability.' },
+          { q: 'Which areas around Radcliffe do you cover?', a: 'Coverage includes Radcliffe town centre, Ainsworth, Outwood and nearby communities. We also serve surrounding areas such as Bury, Whitefield and Prestwich.' },
+          { q: 'Can you help if my tyre has suffered a blowout?', a: 'Yes. Contact us with your exact location and vehicle details. We can check the availability of a suitable replacement and arrange assistance where it is safe to work.' },
+          { q: 'Do you offer mobile jump-start assistance in Radcliffe?', a: 'Yes. Mobile jump-start assistance is available for suitable flat-battery situations, subject to availability.' },
+          { q: 'Can you reset my tyre pressure monitoring system?', a: 'TPMS checks and resets are available where required and supported by your vehicle and the equipment.' },
+          { q: 'Can you remove locking wheel nuts?', a: 'Yes. Our technicians have specialist equipment for locking wheel nut removal on suitable vehicles. Let us know if the key is missing or damaged when booking.' },
+          { q: 'What tyre brands and price ranges are available?', a: 'We offer premium, mid-range and budget tyre options. Availability depends on your tyre size, vehicle requirements and current stock.' },
+          { q: 'Can you fit a tyre on my driveway in Radcliffe?', a: 'Yes, provided there is enough safe working space around the vehicle. Let us know if your driveway is shared, gated or difficult to access when booking.' },
+          { q: 'How do I book mobile tyre fitting in Radcliffe?', a: 'Call or WhatsApp us with your location, vehicle registration or tyre size, and a description of the problem. We can discuss suitable options, provide a quote and confirm availability.' },
         ]} />
 
-        {/* ── 8. FINAL CTA */}
+        {/* ── 11. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Tyre Trouble in Radcliffe? We Can Come to You</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If your tyre is worn, damaged or suddenly unusable, you do not need to keep driving to find a garage. Call or WhatsApp One Stop Mobile Tyres 24/7 with your vehicle details, tyre size and location. We will check suitable options and arrange a technician to attend you in Radcliffe.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Radcliffe?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance at the roadside, One Stop Tyres 247 can come to you. Contact us today for 24/7 mobile tyre fitting in Radcliffe, tyre replacement and puncture repair. Call now for a quote and availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>

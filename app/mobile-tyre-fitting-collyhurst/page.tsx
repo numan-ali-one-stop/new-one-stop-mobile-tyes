@@ -337,11 +337,11 @@ export default function CollyhurstPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Collyhurst
+                Your Mobile Tyre Fitter in Collyhurst
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Collyhurst, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, our mobile technicians can help.
-                We provide tyre fitting, replacement and puncture repair across Collyhurst and surrounding areas, including Rochdale Road and the M40 postcode area.
+                When you need mobile tyre fitting in Collyhurst, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, your mobile tyre fitter in Collyhurst can help.
+                We provide tyre fitting across the M40 postcode, including Rochdale Road and Collyhurst Road, plus replacement and puncture repair in the surrounding areas. We carry budget, mid-range and premium mobile tyres in Collyhurst, fitted wherever your car is parked.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -576,7 +576,7 @@ export default function CollyhurstPage() {
             },
             {
               q: 'My car is in a parking bay on the estate. Can you work there?',
-              a: 'Yes. Parking bays are usually fine. If space is tight, we will suggest a better spot nearby.',
+              a: 'Yes. Parking bays are usually fine, and we fit mobile tyres in Collyhurst on the estates every week. If space is tight, we will suggest a better spot nearby.',
             },
             {
               q: 'Do you also cover Ancoats and Harpurhey?',
@@ -591,12 +591,16 @@ export default function CollyhurstPage() {
               a: 'It depends on traffic on Rochdale Road and around the city centre. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Collyhurst?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Collyhurst, from Rochdale Road and Collyhurst Road to the streets towards Queens Park and Monsall. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M40 postcode.',
+              q: 'How do I book a mobile tyre fitter in Collyhurst?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M40 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

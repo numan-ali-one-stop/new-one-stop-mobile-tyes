@@ -195,23 +195,28 @@ export function pageOrganizationSchema(slug: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': `${SITE_URL}/#organization`,
     name: BUSINESS_NAME,
-    url: SITE_URL,
+    url: `${SITE_URL}/${slug}`,
     logo: BUSINESS_LOGO_URL,
-    telephone: BUSINESS_PHONE,
-    mainEntityOfPage: `${SITE_URL}/${slug}`,
   }
 }
 
-/** WebSite entity. The site has no search page, so no SearchAction is declared. */
-export function pageWebsiteSchema(_slug?: string) {
+/** WebSite entity for a specific landing page, with a schema-valid SearchAction target. */
+export function pageWebsiteSchema(slug: string) {
+  const url = `${SITE_URL}/${slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${SITE_URL}/#website`,
     name: BUSINESS_NAME,
-    url: SITE_URL,
+    url,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   }
 }
 
@@ -222,24 +227,21 @@ export interface AutomotiveBusinessSchemaOptions {
   addressLocality: string
 }
 
-/**
- * The business as seen from a city/service landing page. It is the same entity as the site-wide
- * LocalBusiness (same @id and real Oldham address) — the page's area goes in `areaServed`, never in
- * the address, because this is a service-area business with no premises in each town.
- */
+/** AutomotiveBusiness entity for a specific city/service landing page. */
 export function automotiveBusinessSchema({ slug, image, addressLocality }: AutomotiveBusinessSchemaOptions) {
+  const url = `${SITE_URL}/${slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'AutomotiveBusiness',
-    '@id': BUSINESS_ID,
     name: BUSINESS_NAME,
     image: image ?? BUSINESS_LOGO_URL,
-    url: SITE_URL,
-    mainEntityOfPage: `${SITE_URL}/${slug}`,
+    url,
     telephone: BUSINESS_PHONE,
-    address: BUSINESS_PROVIDER.address,
-    areaServed: { '@type': 'Place', name: addressLocality },
-    openingHoursSpecification: OPENING_HOURS_SPEC,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality,
+      addressCountry: 'GB',
+    },
   }
 }
 
