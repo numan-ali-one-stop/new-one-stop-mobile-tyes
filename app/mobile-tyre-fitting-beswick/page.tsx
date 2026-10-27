@@ -369,13 +369,13 @@ export default function BeswickPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Beswick
+                Your Mobile Tyre Fitter in Beswick
               </h2>
               <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
-                Beswick has changed a lot, with new homes around the Etihad Campus and Alan Turing Way. On match and event days, traffic builds up quickly, so we often meet customers in car parks or on quieter side streets.
+                Beswick has changed a lot, with new homes around the Etihad Campus and Alan Turing Way. On match and event days, traffic builds up quickly, so your mobile tyre fitter in Beswick often meets customers in car parks or on quieter side streets.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                We help residents, stadium visitors and people working at the sports venues around Sportcity. We supply budget, mid-range and premium tyres and agree the price before we start.
+                We help residents, stadium visitors and people working at the sports venues around Sportcity. We supply budget, mid-range and premium mobile tyres in Beswick, with tyre fitting across the whole M11 postcode, and agree the price before we start.
               </p>
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">Our Key Services</p>
               <ul className="space-y-4 sm:space-y-5">
@@ -572,7 +572,7 @@ export default function BeswickPage() {
             },
             {
               q: 'Do you fit tyres on the newer estates?',
-              a: 'Yes. The newer estates in Beswick have wide roads and driveways or parking bays, which make mobile fitting straightforward.',
+              a: 'Yes. The newer estates in Beswick have wide roads and driveways or parking bays, which make fitting mobile tyres in Beswick straightforward.',
             },
             {
               q: 'Do you fit tyres late at night after events?',
@@ -583,12 +583,16 @@ export default function BeswickPage() {
               a: 'It depends on traffic on Ashton New Road and around the Etihad Campus, especially on event days. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Beswick?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Beswick, from Ashton New Road and the Etihad Campus car parks to Alan Turing Way and Grey Mare Lane. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M11 postcode.',
+              q: 'How do I book a mobile tyre fitter in Beswick?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M11 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

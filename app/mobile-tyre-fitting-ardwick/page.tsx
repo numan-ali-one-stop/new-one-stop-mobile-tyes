@@ -336,11 +336,11 @@ export default function ArdwickPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Ardwick
+                Your Mobile Tyre Fitter in Ardwick
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Ardwick, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, our mobile service provides a convenient solution.
-                We provide professional tyre fitting and replacement across Ardwick and surrounding areas, helping drivers avoid the need to travel to a garage. Our service is available 24/7 for planned and emergency tyre requirements.
+                When you need mobile tyre fitting in Ardwick, One Stop Tyres 247 comes directly to you. Whether you have a puncture at home, a damaged tyre at work or a tyre emergency on the roadside, your mobile tyre fitter in Ardwick provides a convenient solution.
+                We provide professional tyre fitting and replacement across Ardwick, from Hyde Road and Ardwick Green to Brunswick, helping drivers avoid the need to travel to a garage. We carry budget, mid-range and premium mobile tyres in Ardwick, and our service is available 24/7 for planned and emergency tyre requirements.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -566,7 +566,7 @@ export default function ArdwickPage() {
             },
             {
               q: 'Do you cover student accommodation near the universities?',
-              a: 'Yes. Many students live around Brunswick and Chorlton-on-Medlock. Tell us the building name and how to get into the car park.',
+              a: 'Yes. Many students live around Brunswick and Chorlton-on-Medlock, and we fit mobile tyres in Ardwick in student car parks regularly. Tell us the building name and how to get into the car park.',
             },
             {
               q: 'Do you cover all of Ardwick (M12)?',
@@ -581,12 +581,16 @@ export default function ArdwickPage() {
               a: 'It depends on traffic on Hyde Road, the Mancunian Way and the A6. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Ardwick?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Ardwick, from Hyde Road and Ardwick Green to the Downing Street junction and Brunswick. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M12 postcode.',
+              q: 'How do I book a mobile tyre fitter in Ardwick?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M12 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />
