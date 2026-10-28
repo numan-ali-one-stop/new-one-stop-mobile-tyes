@@ -207,3 +207,76 @@
     font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
 }
+
+/* ─── Hero CTA buttons (components/HeroCtaButtons.tsx) ─────────────────────
+   Shine sweep, pulse ring, ringing phone / bouncing WhatsApp icon. */
+.cta-btn { position: relative; overflow: hidden; isolation: isolate; transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease; }
+.cta-btn:hover { transform: translateY(-3px) scale(1.03); }
+.cta-btn:active { transform: translateY(0) scale(0.97); }
+.cta-btn::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+  transform: translateX(-120%); animation: ctaShine 3.2s ease-in-out infinite;
+}
+.cta-btn-wa::before { animation-delay: 1.6s; }
+@keyframes ctaShine {
+  0%, 60% { transform: translateX(-120%); }
+  100%    { transform: translateX(120%); }
+}
+.cta-call { animation: ctaCallPulse 2s ease-out infinite; }
+@keyframes ctaCallPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255,68,68,0.7), 0 10px 25px -5px rgba(127,29,29,0.5); }
+  70%  { box-shadow: 0 0 0 14px rgba(255,68,68,0), 0 10px 25px -5px rgba(127,29,29,0.5); }
+  100% { box-shadow: 0 0 0 0 rgba(255,68,68,0), 0 10px 25px -5px rgba(127,29,29,0.5); }
+}
+.cta-btn-wa { animation: ctaWaPulse 2s 1s ease-out infinite; }
+@keyframes ctaWaPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.65), 0 10px 25px -5px rgba(20,83,45,0.45); }
+  70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0), 0 10px 25px -5px rgba(20,83,45,0.45); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 10px 25px -5px rgba(20,83,45,0.45); }
+}
+.cta-ring { display: inline-block; animation: ctaPhoneRing 2s ease-in-out infinite; transform-origin: 50% 60%; }
+@keyframes ctaPhoneRing {
+  0%, 50%, 100% { transform: rotate(0); }
+  5%, 15%, 25%  { transform: rotate(-16deg); }
+  10%, 20%, 30% { transform: rotate(16deg); }
+}
+.cta-bounce { display: inline-flex; animation: ctaIconBounce 2s 1s ease-in-out infinite; }
+@keyframes ctaIconBounce {
+  0%, 60%, 100% { transform: translateY(0) scale(1); }
+  70% { transform: translateY(-3px) scale(1.12); }
+  80% { transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-btn::before, .cta-call, .cta-btn-wa, .cta-ring, .cta-bounce { animation: none !important; }
+}
+
+/* ─── Hero badge (components/HeroBadge.tsx + homepage hero) ────────────────
+   Pulsing green glow ring, gentle breathing scale, white shine sweep and a green ping dot. */
+.badge-glow, .hero-badge-glow { position: relative; overflow: hidden; isolation: isolate; }
+.badge-glow { animation: badgeGlow 2s 0.7s ease-in-out infinite, badgePulse 2s 0.7s ease-in-out infinite; }
+.badge-glow::after, .hero-badge-glow::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+  transform: translateX(-120%); animation: badgeShine 2.8s 1s ease-in-out infinite;
+}
+@keyframes badgeGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.85), 0 0 14px 0 rgba(37,211,102,0.45); }
+  50%      { box-shadow: 0 0 0 10px rgba(37,211,102,0), 0 0 30px 6px rgba(37,211,102,0.6); }
+}
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+@keyframes badgeShine {
+  0%, 55% { transform: translateX(-120%); }
+  100%    { transform: translateX(120%); }
+}
+.badge-dot-ping { animation: dotPing 1.4s cubic-bezier(0,0,0.2,1) infinite; }
+@keyframes dotPing {
+  0%   { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(3); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge-glow, .badge-glow::after, .hero-badge-glow::after, .badge-dot-ping { animation: none !important; }
+}

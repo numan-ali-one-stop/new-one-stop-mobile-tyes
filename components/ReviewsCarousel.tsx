@@ -136,7 +136,7 @@ export default function ReviewsCarousel({ offset = 0 }: { offset?: number }) {
           <div
             key={`${r.name}-${i}`}
             aria-hidden={i >= REVIEWS.length ? true : undefined}
-            className="shrink-0 w-[85vw] sm:w-[calc((100vw-3rem)/2)] lg:w-[calc((min(80rem,100vw)-2rem-4.5rem)/4)] max-w-[22rem] bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-4"
+            className="shrink-0 w-[85vw] sm:w-[calc((100vw-3rem)/2)] lg:w-[calc((min(80rem,100vw)-2rem-4.5rem)/4)] max-w-[22rem] bg-white p-5 sm:p-6 rounded-2xl shadow-md border border-slate-200 flex flex-col gap-4"
           >
             {/* Stars row */}
             <div className="flex items-center justify-between">

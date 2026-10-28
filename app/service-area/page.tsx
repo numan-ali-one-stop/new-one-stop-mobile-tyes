@@ -1,8 +1,12 @@
 import JsonLd from '@/components/JsonLd'
 import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroCtaButtons from '@/components/HeroCtaButtons'
 import { breadcrumbSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import { BOROUGHS } from '@/lib/locations'
+import GoogleReviewsSection from '@/components/GoogleReviewsSection'
+import ServicesSection from '@/components/ServicesSection'
+import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
   title: 'Service Area | Mobile Tyre Fitting Coverage',
@@ -194,30 +198,17 @@ export default function ServiceAreaPage() {
       <JsonLd data={_breadcrumbSchema} />
       <JsonLd data={_serviceSchema} />
       {/* ── Hero ── */}
-      <section className="relative min-h-[400px] sm:min-h-[450px] lg:h-[500px] flex items-center overflow-hidden py-16 sm:py-20">
+      <section className="relative lg:h-[500px] flex items-center overflow-hidden py-10 sm:py-14 lg:py-20">
         <HeroMapBackground />
         <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
-          <span className="inline-block bg-primary/20 border border-primary/40 text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-4 sm:mb-5">
-            Our Coverage
-          </span>
+          <div><HeroBadge>Our Coverage</HeroBadge></div>
           <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-5 text-balance leading-tight max-w-3xl">
             Our Service Area
           </h1>
-          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-6 sm:mb-8 text-pretty leading-relaxed">
-            We cover a growing number of towns, cities and major roads — wherever you
-            are, we&apos;ll come to you, 24 hours a day, 7 days a week.
+          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-5 sm:mb-8 text-pretty leading-relaxed">
+            24/7 mobile tyre fitting across Greater Manchester, plus a growing number of UK towns, cities and motorways. We come to you.
           </p>
-          <div className="flex flex-wrap items-center justify-start gap-3 sm:gap-4">
-            <a
-              href="tel:+447759708646"
-              className="inline-flex items-center gap-2 bg-primary text-white font-call-to-action text-base lg:text-call-to-action px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg uppercase"
-            >
-              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-                phone_in_talk
-              </span>
-              07759 708 646
-            </a>
-          </div>
+          <HeroCtaButtons />
         </div>
       </section>
 
@@ -358,6 +349,12 @@ export default function ServiceAreaPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviewsSection bg="bg-white" />
+
+      {/* ── Our Services ── */}
+      <ServicesSection cta={false} />
 
       {/* ── "Not sure?" coverage checker CTA ── */}
       <section className="py-12 sm:py-16 lg:py-xl px-4 sm:px-5">

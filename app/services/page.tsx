@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import HeroMapBackground from '@/components/HeroMapBackground'
+import HeroCtaButtons from '@/components/HeroCtaButtons'
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, itemListSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
+import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 
 export const metadata = buildMetadata({
   title: 'Emergency Tyre, Puncture & Roadside Services | One Stop Tyres 24/7',
@@ -86,27 +88,14 @@ export default function ServicesPage() {
       <JsonLd data={_breadcrumbSchema} />
       <JsonLd data={_itemListSchema} />
       {/* Hero Section */}
-      <section className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[614px] flex items-center overflow-hidden py-16 sm:py-20">
+      <section className="relative lg:min-h-[614px] flex items-center overflow-hidden py-10 sm:py-14 lg:py-20">
         <HeroMapBackground />
         <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-6 leading-tight max-w-3xl">Our Expert Mobile Services</h1>
-          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
-            Professional 24/7 roadside assistance, wherever you are. We bring the garage to you, anywhere, anytime.
+          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-5 sm:mb-8 leading-relaxed">
+            24/7 mobile tyre fitting, puncture repair and roadside assistance across Greater Manchester. We bring the garage to you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start">
-            <a
-              className="bg-primary text-on-primary font-call-to-action text-base lg:text-call-to-action px-4 sm:px-lg py-3 sm:py-sm rounded-lg hover:bg-primary/90 transition-all shadow-lg uppercase text-center"
-              href="tel:+447759708646"
-            >
-              EMERGENCY ASSISTANCE
-            </a>
-            <a
-              className="bg-white/10 backdrop-blur-md border-2 border-white text-white font-call-to-action text-base lg:text-call-to-action px-4 sm:px-lg py-3 sm:py-sm rounded-lg hover:bg-white hover:text-secondary transition-all uppercase text-center"
-              href="#services"
-            >
-              VIEW ALL SERVICES
-            </a>
-          </div>
+          <HeroCtaButtons />
         </div>
       </section>
 
@@ -149,6 +138,9 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <GoogleReviewsSection />
 
       {/* Why Choose Us / Trust Section */}
       <section className="bg-surface-container py-12 sm:py-16 lg:py-xl">

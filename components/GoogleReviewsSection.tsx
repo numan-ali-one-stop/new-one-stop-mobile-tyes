@@ -1,9 +1,10 @@
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 
-/** Google reviews block (rating badge + review carousel). Used on the homepage and contact page. */
-export default function GoogleReviewsSection() {
+/** Google reviews block (rating badge + review carousel). Used on the homepage, contact and main service pages.
+ *  `bg` lets a page alternate section backgrounds (e.g. white when a grey section follows). */
+export default function GoogleReviewsSection({ bg = 'bg-slate-50' }: { bg?: string }) {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+    <section className={`py-16 sm:py-24 px-4 sm:px-6 ${bg}`}>
       <div className="max-w-7xl mx-auto">
 
         {/* Section header */}
