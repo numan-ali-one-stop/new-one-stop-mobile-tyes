@@ -58,7 +58,7 @@ export default function WhyChooseUs({
   const heading = headingOverride ?? (locationType === 'road' ? `Why Drivers Choose Us on the ${city}?` : `Why ${city} Drivers Choose Us?`)
   const responseTitle = responseTitleOverride ?? (locationType === 'road' ? `Fast Response on the ${city}` : `Fast Response in ${city}`)
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20 border-y border-slate-100">
+    <section className="bg-slate-50 py-12 sm:py-16 lg:py-20 border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {/* Image */}
         <div className="order-2 lg:order-1">

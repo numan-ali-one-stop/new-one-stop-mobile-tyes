@@ -9,6 +9,8 @@ import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
+import HeroBadge from '@/components/HeroBadge'
+import ServicesSection from '@/components/ServicesSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-m6',
@@ -48,6 +50,9 @@ export default function M6Page() {
 
           <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
+            <div>
+              <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
+            </div>
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-3 sm:mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
@@ -159,6 +164,9 @@ export default function M6Page() {
             </div>
           </div>
         </section>
+
+        {/* ── OUR SERVICES ── */}
+        <ServicesSection bg="bg-white" />
 
         {/* ── 3. SERVICES ───────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -550,11 +558,11 @@ export default function M6Page() {
         <BrandCarousel />
 
         {/* ── HELPFUL GUIDE ─────────────────────────────────── */}
-        <section className="py-8 px-4 sm:px-6 bg-white">
+        <section className="py-8 px-4 sm:px-6 bg-slate-50">
           <div className="max-w-3xl mx-auto">
             <a
               href="/guides/what-to-do-flat-tyre-m60-manchester-motorway"
-              className="group flex items-center justify-between gap-4 bg-slate-50 border border-slate-100 rounded-2xl p-5 sm:p-6 hover:border-[#b70011]/30 hover:shadow-md transition-all"
+              className="group flex items-center justify-between gap-4 bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 hover:border-[#b70011]/30 hover:shadow-md transition-all"
             >
               <div>
                 <span className="text-xs font-bold text-[#b70011] uppercase tracking-widest mb-1 block">Safety Guide</span>

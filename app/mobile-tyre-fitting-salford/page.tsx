@@ -11,6 +11,8 @@ import { serviceSchema } from '@/lib/schema'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
+import HeroBadge from '@/components/HeroBadge'
+import ServicesSection from '@/components/ServicesSection'
 
 const _serviceSchema = serviceSchema({
   slug: 'mobile-tyre-fitting-salford',
@@ -51,6 +53,9 @@ export default function SalfordPage() {
           <HeroMapBackground />
 
           <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+            <div>
+              <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
+            </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-3 sm:mb-4 leading-[1.1] font-black text-balance" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>
               24/7 Mobile Tyre Fitting Salford
             </h1>
@@ -127,6 +132,9 @@ export default function SalfordPage() {
             </div>
           </div>
         </section>
+
+        {/* ── OUR SERVICES ── */}
+        <ServicesSection bg="bg-white" />
 
         {/* ── 3. SERVICES */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">

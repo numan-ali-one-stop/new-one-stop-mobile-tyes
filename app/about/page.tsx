@@ -4,7 +4,10 @@ import { buildMetadata } from '@/lib/seo'
 import { ADDRESS, MAPS_URL } from '@/lib/constants'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
+import HeroRatingBadge from '@/components/HeroRatingBadge'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
+import HeroBadge from '@/components/HeroBadge'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: 'About One Stop Mobile Tyres 24/7 | Mobile Tyre Fitters Manchester',
@@ -30,6 +33,9 @@ export default function AboutPage() {
           <HeroMapBackground />
 
           <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+            <div>
+              <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
+            </div>
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
@@ -41,9 +47,15 @@ export default function AboutPage() {
               Reliable 24/7 mobile tyre fitting, puncture repair and roadside assistance across Greater Manchester, day or night.
             </p>
 
+            {/* Google rating */}
+            <HeroRatingBadge />
+
             <HeroCtaButtons />
           </div>
         </section>
+
+        {/* ── INSTANT QUOTE ── */}
+        <HeroQuoteSection />
 
         {/* ── 2. WHO WE ARE ─────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">

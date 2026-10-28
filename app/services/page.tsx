@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
+import HeroRatingBadge from '@/components/HeroRatingBadge'
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, itemListSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
+import HeroBadge from '@/components/HeroBadge'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: 'Emergency Tyre, Puncture & Roadside Services | One Stop Tyres 24/7',
@@ -91,13 +94,22 @@ export default function ServicesPage() {
       <section className="relative lg:min-h-[614px] flex items-center overflow-hidden py-10 sm:py-14 lg:py-20">
         <HeroMapBackground />
         <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
-          <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-6 leading-tight max-w-3xl">Our Expert Mobile Services</h1>
+          <div>
+            <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1] text-balance max-w-3xl" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>Our Expert Mobile Services</h1>
           <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-5 sm:mb-8 leading-relaxed">
             24/7 mobile tyre fitting, puncture repair and roadside assistance across Greater Manchester. We bring the garage to you.
           </p>
+          {/* Google rating */}
+          <HeroRatingBadge />
+
           <HeroCtaButtons />
         </div>
       </section>
+
+      {/* ── INSTANT QUOTE ── */}
+      <HeroQuoteSection />
 
       {/* Services Grid Section */}
       <section className="py-12 sm:py-16 lg:py-xl px-4 sm:px-5 max-w-7xl mx-auto" id="services">

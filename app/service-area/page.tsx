@@ -1,12 +1,14 @@
 import JsonLd from '@/components/JsonLd'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
+import HeroRatingBadge from '@/components/HeroRatingBadge'
 import { breadcrumbSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import { BOROUGHS } from '@/lib/locations'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
+import HeroQuoteSection from '@/components/HeroQuoteSection'
 
 export const metadata = buildMetadata({
   title: 'Service Area | Mobile Tyre Fitting Coverage',
@@ -202,15 +204,21 @@ export default function ServiceAreaPage() {
         <HeroMapBackground />
         <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div><HeroBadge>Our Coverage</HeroBadge></div>
-          <h1 className="font-h1 text-2xl sm:text-3xl lg:text-h1 text-white mb-4 sm:mb-5 text-balance leading-tight max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1] text-balance max-w-3xl" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>
             Our Service Area
           </h1>
           <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-5 sm:mb-8 text-pretty leading-relaxed">
-            24/7 mobile tyre fitting across Greater Manchester, plus a growing number of UK towns, cities and motorways. We come to you.
+            24/7 mobile tyre fitting across Greater Manchester, plus UK towns, cities and motorways. We come to you.
           </p>
+          {/* Google rating */}
+          <HeroRatingBadge />
+
           <HeroCtaButtons />
         </div>
       </section>
+
+      {/* ── INSTANT QUOTE ── */}
+      <HeroQuoteSection />
 
       {/* ── Trust badges ── */}
       <section className="bg-white border-b border-slate-100 py-4 sm:py-6 px-4 sm:px-5">

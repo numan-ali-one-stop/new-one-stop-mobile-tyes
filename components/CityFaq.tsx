@@ -46,7 +46,7 @@ export default function CityFaq({ city, faqs, canonical, breadcrumbName }: CityF
     <>
       <JsonLd data={_faqSchema} />
       {_breadcrumbSchema && <JsonLd data={_breadcrumbSchema} />}
-      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 bg-slate-50">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8 sm:mb-10 lg:mb-16">
             <span className="text-[#b70011] font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 block">
