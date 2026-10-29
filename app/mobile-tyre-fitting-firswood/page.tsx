@@ -12,7 +12,6 @@ import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
-import ServicesSection from '@/components/ServicesSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-firswood',
@@ -169,9 +168,6 @@ export default function FirswoodPage() {
           </div>
         </section>
 
-        {/* ── OUR SERVICES ── */}
-        <ServicesSection bg="bg-white" />
-
         {/* ── 3. SERVICES ───────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
           <div className="max-w-7xl mx-auto">
@@ -327,11 +323,11 @@ export default function FirswoodPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Professional Mobile Tyre Fitting in Firswood
+                Your Mobile Tyre Fitter in Firswood
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Firswood, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, our mobile technicians can help.
-                We provide tyre fitting, replacement and puncture repair across Firswood and surrounding areas, including Chorlton Road, the M16 postcode area and routes towards Old Trafford.
+                When you need mobile tyre fitting in Firswood, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, a damaged tyre at work or an unexpected roadside emergency, your mobile tyre fitter in Firswood can help.
+                We provide tyre fitting across the M16 postcode, including Chorlton Road and the routes towards Old Trafford, plus replacement and puncture repair in the surrounding areas. We carry budget, mid-range and premium mobile tyres in Firswood, fitted wherever your car is parked.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
                 Our Key Services
@@ -566,7 +562,7 @@ export default function FirswoodPage() {
             },
             {
               q: 'My street has no driveway. Can you still fit the tyre?',
-              a: 'Yes. We fit tyres safely at the kerb outside your house and keep the road and pavement clear.',
+              a: 'Yes. We fit mobile tyres in Firswood safely at the kerb outside your house and keep the road and pavement clear.',
             },
             {
               q: 'Do you cover all of Firswood (M16)?',
@@ -581,12 +577,16 @@ export default function FirswoodPage() {
               a: 'It depends on traffic on Seymour Grove and around Old Trafford, especially on match days. We typically reach you within 20 to 30 minutes and give you an estimate when you call.',
             },
             {
+              q: 'Do you offer emergency tyre fitting in Firswood?',
+              a: 'Yes. Our emergency tyre fitting runs 24 hours a day across Firswood, from Seymour Grove and the Metrolink stop to Old Trafford and the streets towards Chester Road. We repair the puncture where it is safe to do so, or fit a replacement tyre on the spot, subject to availability.',
+            },
+            {
               q: 'Can you repair my puncture instead of replacing the tyre?',
               a: 'Often, yes. If the damage is in the central tread area and the tyre has not been driven on flat, we can repair it on the spot.',
             },
             {
-              q: 'How do I get a quote?',
-              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M16 postcode.',
+              q: 'How do I book a mobile tyre fitter in Firswood?',
+              a: 'Call or WhatsApp 07759 708 646, or use the instant quote form on this page. Send your registration or tyre size and your M16 postcode, and we will send the nearest available mobile tyre fitter to you.',
             },
           ]}
         />

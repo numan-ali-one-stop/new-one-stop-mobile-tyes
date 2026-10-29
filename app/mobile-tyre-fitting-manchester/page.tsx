@@ -12,7 +12,6 @@ import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
-import ServicesSection from '@/components/ServicesSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-manchester',
@@ -31,7 +30,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Manchester | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Manchester | 24/7 Tyre Replacement',
   description:
     'Flat tyre or puncture in Manchester? 24/7 mobile tyre fitting and puncture repair across the city centre and M1–M16 postcodes. Call 07759 708 646.',
   path: '/mobile-tyre-fitting-manchester',
@@ -203,9 +202,6 @@ export default function ManchesterPage() {
             </div>
           </div>
         </section>
-
-        {/* ── OUR SERVICES ── */}
-        <ServicesSection bg="bg-white" />
 
         {/* ── 3. SERVICES ───────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -576,6 +572,10 @@ export default function ManchesterPage() {
             {
               q: 'Can you fit a tyre in a city-centre multi-storey car park?',
               a: 'Yes. We regularly work in multi-storeys around Piccadilly, the Arndale and Deansgate. Tell us the car park name, level and bay, and check the height limit so we can plan access.',
+            },
+            {
+              q: 'Do you offer mobile tyre fitting in Manchester city centre?',
+              a: 'Yes. We cover the whole city centre (M1 to M4), from Piccadilly and the Northern Quarter to Spinningfields, including tyre fitting on Deansgate and in the car parks around it. Tell us the street or car park and we will come to you.',
             },
             {
               q: 'I have a flat on the Mancunian Way. What should I do?',

@@ -12,7 +12,6 @@ import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
-import ServicesSection from '@/components/ServicesSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-ringway',
@@ -167,9 +166,6 @@ export default function RingwayPage() {
             </div>
           </div>
         </section>
-
-        {/* ── OUR SERVICES ── */}
-        <ServicesSection bg="bg-white" />
 
         {/* ── 3. SERVICES ───────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -539,7 +535,7 @@ export default function RingwayPage() {
           city="Ringway"
           faqs={[
             {
-              q: 'Can you work in the Manchester Airport car parks?',
+              q: 'Do you offer mobile tyre fitting at Manchester Airport?',
               a: 'We can attend most public car parks at Manchester Airport. Some barrier, secure or meet-and-greet car parks have their own access rules, so tell us which car park you are in and we will confirm what is possible before we set off. We cannot work in airside or restricted areas.',
             },
             {

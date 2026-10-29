@@ -1,52 +1,49 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
-import ServicesSection from '@/components/ServicesSection'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-fishpool',
-  name: 'Mobile Tyre Fitting Fishpool',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Fishpool' },
+  alternateName: '24/7 Mobile Tyre Fitting Fishpool',
+  areaServed: 'Fishpool, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Fishpool? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-fishpool')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-fishpool')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-fishpool',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Fishpool',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Fishpool | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Fishpool | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Fishpool — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Fishpool? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-fishpool',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function FishpoolPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -66,18 +63,17 @@ export default function FishpoolPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Fishpool. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Fishpool? Emergency tyre replacement, mobile puncture repair and roadside tyre assistance, 24/7.
             </p>
 
             {/* Trust bullets — hidden for now
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Fishpool &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Work and Roadside Tyre Service',
+                'Covering Fishpool and Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -158,9 +154,6 @@ export default function FishpoolPage() {
             </div>
           </div>
         </section>
-
-        {/* ── OUR SERVICES ── */}
-        <ServicesSection bg="bg-white" />
 
         {/* ── 3. SERVICES ───────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -317,39 +310,131 @@ export default function FishpoolPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Fishpool
+                Professional Mobile Tyre Fitting in Fishpool
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Fishpool, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Fishpool and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Fishpool.
-                If you&apos;re searching for mobile tyre fitting near me in Fishpool, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat, punctured or damaged tyre can disrupt your plans at any time. Our mobile tyre fitting service brings professional equipment and suitable replacement tyres directly to your location in Fishpool, helping you avoid an unnecessary trip to a tyre centre.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre fitting for drivers who need a replacement at home, at work or at a safe roadside location. We can help with worn tyres, sudden punctures and tyre damage that makes a vehicle unsafe to drive.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Our technicians can assess whether a puncture is suitable for repair or whether a replacement tyre is needed. Available options depend on your tyre size, vehicle requirements and current stock.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY FISHPOOL DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Fishpool" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            { icon: 'home_repair_service', title: 'Convenient Mobile Tyre Replacement', desc: 'You do not need to arrange a garage visit when a tyre problem occurs. Our mobile service comes to an accessible location where the work can be completed safely.' },
+            { icon: 'bolt', title: 'Emergency Assistance 24/7', desc: 'Tyre problems can happen during early mornings, late evenings or weekends. Our emergency service operates around the clock, subject to technician availability and the required tyre being in stock.' },
+            { icon: 'sell', title: 'Clear Pricing Before Work Begins', desc: 'Tell us your vehicle details, tyre size and location. We can discuss suitable tyre options, the cost of the service and the estimated arrival time before the technician attends.' },
+            { icon: 'engineering', title: 'Professional Tyre Fitting', desc: 'Our technicians use dedicated mobile fitting equipment to remove and fit tyres correctly. They can also check tyre pressure and the tyre pressure monitoring system (TPMS), where applicable.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Fishpool Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call or WhatsApp us and explain whether you have a puncture, a flat tyre or damage requiring replacement.' },
+                { title: 'Share Your Location and Tyre Details', desc: 'Provide your exact location in Fishpool, vehicle registration and tyre size if available. This helps us check the correct replacement options.' },
+                { title: 'Confirm the Service and Price', desc: 'Our team will check technician availability, suitable tyre stock and the estimated arrival time before arranging the call-out.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician attends your location, inspects the tyre and completes the appropriate repair or replacement if the conditions are safe and suitable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Fishpool
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              Drivers in Fishpool may experience tyre problems on residential streets, while commuting or when returning to a parked vehicle. Our mobile tyre replacement service is designed to make getting a suitable tyre fitted more convenient.
+            </p>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              We cover Fishpool and nearby parts of Bury, including locations around Rochdale Road and routes towards Bury town centre and Heap Bridge. We can also check availability for surrounding areas such as Greenmount, Summerseat, Ramsbottom and Edenfield.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Whether you need a replacement before an important journey or have discovered a damaged tyre at home, contact our team with your location and vehicle details. We will confirm the available options for your requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Fishpool
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              A tyre blowout, sidewall damage or a puncture that cannot be repaired may leave your vehicle unsafe to drive. In these situations, emergency mobile tyre fitting can help you get the problem assessed without driving on a damaged tyre.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">Our 24/7 emergency service can assist with:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Emergency tyre replacement for damaged or unsafe tyres',
+                'Mobile puncture repair when the damage is suitable',
+                'Tyre fitting at home or at your workplace',
+                'Roadside tyre assistance at a safe, accessible location',
+                'Jump-start assistance for vehicles with a flat battery',
+                'TPMS checks and resets where applicable',
+                'Locking wheel nut removal using specialist equipment',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              A typical response may be around 20–30 minutes in covered areas, but actual arrival times depend on traffic, your exact location, technician availability and the required tyre being in stock. Please call to confirm the current estimated arrival time.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem on a busy road, prioritise your safety and follow the appropriate breakdown procedures. Do not attempt a tyre change in a live traffic lane or another unsafe location.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -361,35 +446,34 @@ export default function FishpoolPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="fishpool" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-fishpool"
           city="Fishpool"
           faqs={[
-            {
-              q: 'How quickly can you reach me in Fishpool?',
-              a: 'Our mobile units are based close by in Bury, meaning we can typically reach Fishpool and the surrounding BL9 postcode area, including Rochdale Road, within 20-30 minutes.',
-            },
-            {
-              q: 'What areas around Fishpool do you cover?',
-              a: 'Yes. We cover Fishpool and the surrounding BL9 postcode area, along with Rochdale Road and the routes connecting to Bury town centre and Heap Bridge.',
-            },
-            {
-              q: 'Can you repair a puncture instead of replacing my tyre in Fishpool?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
-            },
-            {
-              q: 'Can you fit tyres at my workplace near Rochdale Road or Bury town centre?',
-              a: 'Yes. We regularly attend offices and business premises around Rochdale Road and Bury town centre, fitting your tyres while you work.',
-            },
+            { q: 'Do you provide 24/7 mobile tyre fitting in Fishpool?', a: 'Yes. Our mobile tyre fitting service operates 24 hours a day, seven days a week, subject to technician and tyre availability.' },
+            { q: 'How quickly can a mobile tyre fitter reach Fishpool?', a: 'A typical response time may be around 20–30 minutes in covered areas. Traffic, your exact location, current demand and tyre availability can affect the arrival time, so contact us for an estimate.' },
+            { q: 'Do you offer emergency tyre replacement in Fishpool?', a: 'Yes. We can arrange emergency tyre replacement when a tyre is damaged or unsafe to use. The correct replacement depends on your vehicle, tyre size and available stock.' },
+            { q: 'Can you repair a punctured tyre at my location?', a: 'Yes, if the damage is in a repairable area and meets the relevant safety requirements, including BS AU 159 where applicable. If the tyre cannot be safely repaired, replacement may be necessary.' },
+            { q: 'Can you fit a tyre at my home in Fishpool?', a: 'Yes. We can arrange home tyre fitting where there is sufficient safe and suitable access for the mobile technician and equipment.' },
+            { q: 'Do you provide mobile tyre fitting at workplaces?', a: 'Yes. We can attend suitable workplace locations in Fishpool, subject to access, technician availability and the tyre required.' },
+            { q: 'Which areas near Fishpool do you cover?', a: 'Coverage includes Fishpool and nearby parts of Bury, with service availability also extending to surrounding areas such as Heap Bridge, Greenmount, Summerseat, Ramsbottom and Edenfield. Contact us to confirm your postcode.' },
+            { q: 'Can you replace a tyre that has a sidewall bulge?', a: 'A sidewall bulge can indicate internal tyre damage and may make the tyre unsafe. Do not continue driving on it; contact a technician to assess the situation and arrange replacement if required.' },
+            { q: 'Do you offer budget and premium tyres?', a: 'We can check premium, mid-range and budget tyre options, depending on your tyre size, vehicle requirements and current stock.' },
+            { q: 'Can you help if my car has a flat tyre at the roadside?', a: 'Yes, provided the vehicle is in a safe, accessible location. Share your exact location and explain the problem so our team can confirm the appropriate assistance.' },
+            { q: 'Do you provide mobile tyre fitting at night and on weekends?', a: 'Yes. Our service operates 24/7, including nights and weekends, subject to technician availability and suitable tyre stock.' },
+            { q: 'Can you check my tyre pressure after fitting?', a: 'Yes. The technician can check and adjust tyre pressure as required and inspect or reset the TPMS where applicable.' },
+            { q: 'What information do I need when booking?', a: 'Provide your vehicle registration, tyre size if available, exact location and a brief description of the problem. A photograph of the tyre can also help the team assess your requirements.' },
+            { q: 'How much does mobile tyre fitting in Fishpool cost?', a: 'The cost depends on the tyre size and type, replacement or repair required, location and call-out circumstances. Contact us for a quote before confirming the service.' },
+            { q: 'Can you help if my locking wheel nut key is missing?', a: 'We can check whether specialist locking wheel nut removal is available for your vehicle. Tell us the vehicle details when you call so the team can advise on the options.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Fishpool Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Fishpool line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Fishpool?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you have a flat tyre at home, a puncture before work or an unexpected tyre problem during a journey, contact One Stop Tyres 247 for mobile tyre assistance. Call 07759 708 646 with your location and vehicle details. Our team will check availability, discuss suitable tyre options and provide an estimated arrival time.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

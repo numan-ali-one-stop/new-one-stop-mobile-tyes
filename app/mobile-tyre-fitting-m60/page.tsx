@@ -10,7 +10,6 @@ import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
-import ServicesSection from '@/components/ServicesSection'
 
 const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-m60',
@@ -165,9 +164,6 @@ export default function M60Page() {
             </div>
           </div>
         </section>
-
-        {/* ── OUR SERVICES ── */}
-        <ServicesSection bg="bg-white" />
 
         {/* ── 3. SERVICES ───────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">

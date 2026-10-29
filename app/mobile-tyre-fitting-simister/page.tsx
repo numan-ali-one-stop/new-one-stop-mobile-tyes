@@ -1,52 +1,49 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
-import ServicesSection from '@/components/ServicesSection'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-simister',
-  name: 'Mobile Tyre Fitting Simister',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Simister' },
+  alternateName: '24/7 Mobile Tyre Fitting Simister',
+  areaServed: 'Simister, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Simister? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-simister')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-simister')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-simister',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Simister',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Simister | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Simister | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Simister — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Simister? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-simister',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function SimisterPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -66,18 +63,17 @@ export default function SimisterPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Simister. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Simister? Emergency tyre replacement, mobile puncture repair and roadside tyre assistance, 24/7.
             </p>
 
             {/* Trust bullets — hidden for now
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Simister &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Work and Roadside Service',
+                'Covering Simister and Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -158,9 +154,6 @@ export default function SimisterPage() {
             </div>
           </div>
         </section>
-
-        {/* ── OUR SERVICES ── */}
-        <ServicesSection bg="bg-white" />
 
         {/* ── 3. SERVICES ───────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -317,39 +310,131 @@ export default function SimisterPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Simister
+                Professional Mobile Tyre Fitting in Simister
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Simister, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Simister and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Simister.
-                If you&apos;re searching for mobile tyre fitting near me in Simister, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat or damaged tyre can disrupt your journey and leave your vehicle unsafe to drive. Our mobile tyre fitting service brings professional equipment and suitable replacement tyres directly to your location in Simister, making it easier to get assistance when you need it.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 helps drivers with punctures, worn tyres, blowouts and emergency tyre replacement. Whether your vehicle is parked at home, at your workplace or at a safe roadside location, our team can check the available options for your vehicle.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Our technicians assess whether a tyre can be repaired safely or needs replacing. The appropriate solution depends on the damage, tyre specifications, vehicle requirements and available stock.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY SIMISTER DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Simister" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            { icon: 'home_repair_service', title: 'Convenient Mobile Tyre Replacement', desc: 'Avoid an unnecessary journey to a tyre centre. Our mobile service comes to a suitable location, allowing the technician to complete the required work where access and safety conditions permit.' },
+            { icon: 'bolt', title: '24/7 Emergency Tyre Assistance', desc: 'Tyre problems can happen at any time, including late at night and during weekends. Our emergency service operates around the clock, subject to technician availability and suitable replacement tyre stock.' },
+            { icon: 'sell', title: 'Clear Pricing Before the Call-Out', desc: 'Share your exact location, vehicle details and tyre size with our team. We can discuss suitable tyre options, pricing and the estimated arrival time before confirming the service.' },
+            { icon: 'engineering', title: 'Professional Tyre Fitting and Checks', desc: 'Our technicians use mobile fitting equipment to replace tyres correctly. They can also check tyre pressure and inspect or reset the tyre pressure monitoring system (TPMS), where applicable.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Simister Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call or WhatsApp us and explain whether you have a flat tyre, a puncture or damage that may require replacement.' },
+                { title: 'Share Your Location and Vehicle Details', desc: 'Provide your exact location in Simister, vehicle registration and tyre size if available. This helps us identify suitable replacement options.' },
+                { title: 'Confirm Availability and Pricing', desc: 'Our team checks technician availability and suitable tyre stock, then discusses pricing and the estimated arrival time before arranging the call-out.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician attends your location, assesses the tyre and completes the appropriate repair or replacement if conditions are safe and suitable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Simister
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              Simister is connected to nearby communities through local roads, including Simister Lane and Heywood Old Road. If a tyre becomes damaged while travelling or your vehicle is parked nearby, mobile tyre assistance can help you avoid driving on an unsafe tyre.
+            </p>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              Our service covers Simister and the surrounding M25 postcode area. We can also check availability for nearby locations, including Prestwich, Whitefield, Bury, Radcliffe, Middleton and Rhodes.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Whether you need a replacement at home, at work or at a safe roadside location, contact our team with your postcode and vehicle details. We will confirm service availability and suitable tyre options for your vehicle.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Simister
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              A puncture, blowout or damaged sidewall can make a tyre unsafe to use. Our emergency mobile tyre fitting service helps drivers arrange an assessment and, where necessary, a replacement at a suitable location.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">Our 24/7 mobile service can assist with:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Emergency tyre replacement for damaged or unsafe tyres',
+                'Mobile puncture repair where the damage meets relevant safety requirements',
+                'Home and workplace tyre fitting',
+                'Roadside tyre assistance at a safe, accessible location',
+                'Jump-start assistance for flat batteries',
+                'TPMS checks and resets where applicable',
+                'Locking wheel nut removal using specialist equipment',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              A typical response may be around 20–30 minutes in covered areas. Actual arrival times depend on traffic, your exact location, technician availability and whether the required tyre is in stock. Contact us to confirm the current estimated arrival time.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem on a busy road, prioritise your safety and follow the appropriate breakdown procedures. Never attempt to change a tyre in a live traffic lane or another unsafe location.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -361,35 +446,34 @@ export default function SimisterPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="simister" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-simister"
           city="Simister"
           faqs={[
-            {
-              q: 'How quickly can you reach me in Simister?',
-              a: 'Our mobile units are based close by in Bury, meaning we can typically reach Simister and the surrounding M25 postcode area, including Simister Lane, within 20-30 minutes.',
-            },
-            {
-              q: 'What areas around Simister do you cover?',
-              a: 'Yes. We cover Simister and the surrounding M25 postcode area, along with Simister Lane and the routes connecting to Prestwich and Whitefield.',
-            },
-            {
-              q: 'Can you repair a puncture instead of replacing my tyre in Simister?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
-            },
-            {
-              q: 'Can you fit tyres at my workplace near Simister Lane or Whitefield?',
-              a: 'Yes. We regularly attend offices and business premises around Simister Lane and Whitefield, fitting your tyres while you work.',
-            },
+            { q: 'Do you provide 24/7 mobile tyre fitting in Simister?', a: 'Yes. Our service operates 24 hours a day, seven days a week, subject to technician availability and suitable tyre stock.' },
+            { q: 'How quickly can a mobile tyre fitter reach Simister?', a: 'A typical response may be around 20–30 minutes in covered areas. Traffic, your exact location, current demand and tyre availability can affect arrival times, so contact us for an estimate.' },
+            { q: 'Do you offer emergency tyre replacement in Simister?', a: 'Yes. We can arrange emergency tyre replacement when a tyre is damaged or unsafe to use, subject to suitable replacement tyre availability.' },
+            { q: 'Can you repair a puncture at my location?', a: 'Yes, if the damage is in a repairable area and meets applicable safety requirements, including BS AU 159 where relevant. If a safe repair is not possible, replacement may be necessary.' },
+            { q: 'Can you fit tyres at my home in Simister?', a: 'Yes. We can arrange home tyre fitting where there is suitable access and enough space for the technician to complete the work safely.' },
+            { q: 'Do you provide mobile tyre fitting at workplaces?', a: 'Yes. We can attend suitable workplace locations in Simister, subject to access, technician availability and the tyre required.' },
+            { q: 'Which nearby areas do you cover?', a: 'We cover Simister and nearby areas, including Prestwich, Whitefield, Bury, Radcliffe, Middleton and Rhodes. Contact us with your postcode to confirm availability.' },
+            { q: 'Can you replace a tyre with sidewall damage?', a: 'Yes, we can assess the situation and check replacement options. A sidewall bulge or serious cut may indicate internal damage, so avoid driving on the tyre and arrange professional assistance.' },
+            { q: 'Do you offer budget and premium tyres?', a: 'We can check premium, mid-range and budget tyre options depending on your tyre size, vehicle requirements and current stock.' },
+            { q: 'Can you help if I have a flat tyre at the roadside?', a: 'Yes, provided the vehicle is in a safe, accessible location. Share your exact location and explain the problem so our team can advise on the appropriate assistance.' },
+            { q: 'Is mobile tyre fitting available at night and on weekends?', a: 'Yes. Our service operates 24/7, including nights and weekends, subject to technician availability and suitable tyre stock.' },
+            { q: 'Can you check tyre pressure after fitting?', a: 'Yes. The technician can check and adjust tyre pressure as required and inspect or reset the TPMS where applicable.' },
+            { q: 'What information do I need when booking?', a: 'Provide your vehicle registration, tyre size if available, exact location and a description of the tyre problem. A clear photograph can also help us understand your requirements.' },
+            { q: 'How much does mobile tyre fitting in Simister cost?', a: 'The cost depends on tyre size and type, whether you need a repair or replacement, and the call-out circumstances. Contact us for a quote before confirming the service.' },
+            { q: 'Can you help if my locking wheel nut key is missing?', a: 'We can check whether specialist locking wheel nut removal is available for your vehicle. Share your vehicle details when booking so our team can advise you.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Simister Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Simister line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Simister?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat tyre at home, a puncture before work or unexpected tyre damage during a journey, contact One Stop Tyres 247 for mobile tyre assistance. Call 07759 708 646 with your location and vehicle details. Our team will check availability, discuss suitable tyre options and provide an estimated arrival time.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
