@@ -1,31 +1,41 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
+import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-salford',
-  name: 'Mobile Tyre Fitting in Salford',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Salford' },
+  alternateName: '24/7 Mobile Tyre Fitting Salford',
+  areaServed: 'Salford, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Salford? Get 24/7 emergency tyre replacement and puncture repair at home, work or roadside. Call for a quote.',
 })
 
-export const metadata = {
-  title: 'Mobile Tyre Fitting Salford | 24/7 Emergency & Puncture Repair',
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-salford')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-salford')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-salford',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Salford',
+})
+
+export const metadata = buildMetadata({
+  title: 'Mobile Tyre Fitting Salford | 24/7 Tyre Replacement',
   description:
-    'Mobile tyre fitting in Salford — quick response, reliable same day fitting, every journey.',
-  alternates: { canonical: 'https://onestoptyres247.co.uk/mobile-tyre-fitting-salford' },
-}
+    'Need mobile tyre fitting in Salford? Get 24/7 emergency tyre replacement and puncture repair at home, work or roadside. Call for a quote.',
+  path: '/mobile-tyre-fitting-salford',
+})
 
 function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
   return (
@@ -44,7 +54,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function SalfordPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO */}
@@ -59,17 +72,18 @@ export default function SalfordPage() {
               24/7 Mobile Tyre Fitting Salford
             </h1>
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Salford. We reach you in 20–30 minutes.
+              Flat, punctured or damaged tyre? Our mobile tyre fitting in Salford brings emergency tyre replacement and same-day fitting to you.
             </p>
-{/* Trust bullets — hidden for now
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
+            {/* Trust bullets — hidden for now
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                '20–30 Minute Emergency Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Covering Salford & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Emergency Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Assessment and Repair',
+                'Home and Workplace Tyre Fitting',
+                'Suitable Roadside Assistance',
+                'Premium, Mid-Range and Budget Tyre Options',
+                'Card, Cash and Contactless Payment Options',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-green-400 shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
@@ -77,7 +91,7 @@ export default function SalfordPage() {
                 </div>
               ))}
             </div>
-*/}
+            */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
               <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -138,33 +152,30 @@ export default function SalfordPage() {
             <div className="text-center mb-10 sm:mb-16">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-2 block">What We Do</span>
               <h2 className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}>
-                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Salford
+                Our Mobile Tyre Services
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Salford. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                A flat tyre can disrupt your commute, work schedule or journey home. Our mobile tyre fitting service brings the necessary equipment and suitable replacement tyres to your vehicle, provided the location is safe and accessible.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp', title: 'Mobile Tyre Fitting Salford', desc: 'Mobile tyre fitting at your home, workplace or roadside location anywhere in Salford. Fast response with premium and budget tyre options available.', badge: 'FAST RESPONSE',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp', title: 'Mobile Tyre Fitting', desc: 'Have suitable replacement tyres fitted at your home, workplace or another accessible location in Salford.', badge: 'FAST RESPONSE',
                   href: '/mobile-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Home Tyre Fitting', desc: 'Same day tyre fitting at your home across Salford, without the hassle of visiting a garage.', badge: 'AT YOUR DOOR',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Emergency Tyre Replacement', desc: 'Arrange a replacement if your tyre has suffered a blowout, serious damage or excessive wear.', badge: '24/7 DISPATCH',
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'Professional mobile puncture repair across Salford, carried out on-site where safe and suitable.', badge: 'CERTIFIED REPAIR',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'We assess punctured tyres and carry out repairs where the damage and tyre condition meet the applicable safety requirements.', badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Salford.', badge: '24/7 SERVICE',
+                { img: '/images/tyre-fitting-at-home.webp', title: 'Home Tyre Fitting', desc: 'Arrange tyre replacement at home without needing to travel to a tyre centre.', badge: 'AT YOUR DOOR',
+                  href: '/home-tyre-fitting' },
+                { img: '/images/professional-mobile-tyre-fitting.webp', title: 'Same-Day Tyre Fitting', desc: 'Need a tyre fitted today? Contact us to check technician availability and whether your required tyre is in stock.', badge: 'SUBJECT TO AVAILABILITY',
+                  href: '/mobile-tyre-fitting' },
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump-Start Assistance', desc: 'If your vehicle also has a flat battery, ask about the availability of our jump-start service.', badge: '24/7 SERVICE',
                   href: '/jump-start' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp', title: 'TPMS Reset', desc: 'Tyre pressure monitoring system reset and sensor checks across Salford after every fitting or repair.', badge: 'ALL VEHICLES',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp', title: 'TPMS Checks and Reset', desc: 'Tyre pressure monitoring system checks or resets may be available where applicable after tyre fitting or repair.', badge: 'ALL VEHICLES',
                   href: '/tpms-reset' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Nut Removal', desc: 'Specialist, damage-free locking wheel nut removal across Salford using professional tools.', badge: 'DAMAGE FREE',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp', title: 'Locking Wheel Nut Removal', desc: 'If you have lost your locking wheel nut key, contact us to check whether assistance is available for your vehicle.', badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal' },
-                {
-                  img: '/images/professional-mobile-tyre-fitting.webp',
-                  title: 'Roadside Assistance',
-                  desc: 'Emergency roadside support for tyre and vehicle problems across Salford, wherever you get stranded.',
-                  badge: '24/7 SUPPORT',
-                  href: '/roadside-assistance',
-                },
               ].map((card) => (
                 <a key={card.title} href={card.href} className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]">
                   <div className="relative h-44 sm:h-52 overflow-hidden">
@@ -220,13 +231,13 @@ export default function SalfordPage() {
             <div className="w-full lg:w-1/2">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
-                Expert Mobile Tyre Fitting Service Across Salford
+                Professional Mobile Tyre Fitting in Salford
               </h2>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat tyre can disrupt your commute, work schedule or journey home. Our mobile tyre fitting service brings the necessary equipment and suitable replacement tyres to your vehicle, provided the location is safe and accessible.
+              </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Salford, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Salford and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Salford.
-                If you&apos;re searching for mobile tyre fitting near me in Salford, our fast response team is available day and night.
+                One Stop Tyres 247 helps drivers across Salford arrange mobile tyre fitting, emergency tyre replacement and puncture assessments. Whether your vehicle is parked at home, outside your workplace or at a suitable roadside location, contact our team to check the available options. We cover Salford city centre and surrounding areas, including Eccles, Swinton, Pendlebury, Worsley, Walkden, Irlam, Cadishead, Salford Quays and MediaCityUK. We also assist drivers near suitable locations along the M602 and nearby sections of the M60, subject to safe access and service availability.
               </p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem icon="bolt" title="24/7 Mobile Tyre Fitting" desc="Tyres fitted at your home, workplace or roadside location." />
@@ -238,9 +249,117 @@ export default function SalfordPage() {
         </section>
 
         {/* ── 5. WHY CHOOSE US */}
-        <WhyChooseUs city="Salford" image="/images/tyre-fitting-in-emergency.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Availability', desc: 'Tyre problems can happen at any time. Contact us day or night to check availability for emergency tyre fitting in Salford, including evenings, weekends and bank holidays.' },
+            { icon: 'home_repair_service', title: 'Convenient On-Site Fitting', desc: 'Where the location is suitable, our technicians can attend your home, workplace, car park or a safe roadside position.' },
+            { icon: 'sell', title: 'Clear Pricing Before Work Begins', desc: 'The cost depends on the tyre required, the work involved, your location and the time of service. We explain the available options and confirm the price before proceeding.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: "We can check premium, mid-range and budget tyre options, subject to your vehicle's requirements and current stock." },
+            { icon: 'engineering', title: 'Professional Tyre Assessment', desc: 'Not every puncture requires a replacement. Our technician assesses the damage and determines whether a safe repair is possible or a replacement is necessary.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL */}
+        {/* ── COVERAGE ACROSS SALFORD ────────────────────────── */}
+        <section className="py-10 sm:py-14 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2
+              className="text-xl sm:text-2xl text-[#0f172a] mb-3 font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Coverage Across Salford
+            </h2>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We serve Salford and nearby communities, including Eccles, Swinton, Pendlebury, Worsley, Walkden, Irlam, Cadishead, Salford Quays and MediaCityUK. Contact us with your postcode to confirm coverage and the estimated arrival time.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Salford Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 or 0161 399 5851 and explain the problem with your tyre.' },
+                { title: 'Share Your Vehicle and Location Details', desc: 'Provide your vehicle registration, tyre size if known, and exact location. Tell us whether the tyre is punctured, flat, damaged or completely unusable.' },
+                { title: 'Check Tyre Options and Pricing', desc: 'We check suitable tyre options and availability, explain the cost and provide an estimated arrival time before arranging the visit.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician attends the agreed location and completes the work where it is safe and suitable. Tyre pressure and TPMS checks can be carried out where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Salford
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A tyre with serious sidewall damage, a blowout or excessive wear may need replacing rather than repairing. Our mobile tyre replacement service helps drivers across Salford arrange a suitable replacement without driving to a garage on an unsafe tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We cover Salford city centre, residential streets and nearby areas, including Eccles, Swinton, Pendlebury, Worsley, Walkden, Irlam, Cadishead, Salford Quays and MediaCityUK.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Before arranging a replacement, provide your vehicle registration or tyre size so we can check the correct specification. We can discuss suitable premium, mid-range and budget options, depending on your requirements and current stock.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your tyre has a puncture, our technician will assess whether it can be repaired safely. Repairs are only carried out when the tyre meets the applicable safety requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Salford
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A puncture or blowout can leave you stranded at an inconvenient time. Our 24/7 emergency mobile tyre service helps drivers in Salford check the available options when a tyre problem needs urgent attention.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can attend suitable locations across Salford and nearby areas, subject to technician availability, traffic, tyre stock and safe access. When you call, provide your exact location so we can give you a realistic estimated arrival time.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your vehicle breaks down on the M602, M60 or another busy road, follow the relevant road and motorway safety procedures. Do not attempt to change a tyre on a live carriageway or in an unsafe roadside position. Use the appropriate emergency or breakdown assistance service where necessary. Call 07759 708 646 to discuss your tyre problem and check availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -252,24 +371,46 @@ export default function SalfordPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="salford" />
 
-        {/* ── 7. FAQ */}
+        {/* ── 10. FAQ */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-salford" city="Salford" faqs={[
-          { q: 'How fast can you reach Salford city centre?', a: 'Typically, our nearest technician can be with you in Salford city centre within 20–30 minutes, depending on traffic and your exact location.' },
-          { q: 'Do you cover the M602 and M60 around Salford?', a: 'Yes. We provide 24/7 roadside tyre assistance around Salford, including the M602 and nearby sections of the M60, wherever it is safe to work.' },
-          { q: 'Do you cover Swinton, Pendlebury and Worsley as well?', a: 'Yes, we cover Salford and surrounding areas including Swinton, Pendlebury, Worsley and Eccles, with 24/7 availability.' },
-          { q: 'Can you fit tyres at MediaCity or Salford Quays?', a: 'Absolutely. We attend homes, workplaces and suitable roadside locations across Salford, including MediaCity and Salford Quays, wherever it is safe to park and complete the work.' },
+          { q: 'How much does mobile tyre fitting cost in Salford?', a: 'The price depends on your tyre size, tyre brand, the work required, your location and the time of the call-out. Contact us with your vehicle registration or tyre details for a quote. Confirm the total price before authorising the work.' },
+          { q: 'How quickly can a mobile tyre fitter reach me in Salford?', a: 'The current Salford page gives a typical response estimate of 20–30 minutes. This is not a guaranteed arrival time. Traffic, your exact location, technician availability and tyre stock can affect how quickly assistance arrives. Contact us for an updated estimate before booking.' },
+          { q: 'Can you replace my tyre today?', a: 'Same-day tyre fitting may be available, depending on technician availability and whether a suitable tyre is in stock. Share your vehicle registration or tyre size so we can check the options.' },
+          { q: 'What should I do if I have a flat tyre and no spare?', a: 'Avoid driving on a flat or seriously damaged tyre, as this can damage the wheel and compromise safety. Contact us with your location and vehicle details. We can check whether mobile repair or replacement is available for your vehicle.' },
+          { q: "Can you repair my puncture, or will I need a new tyre?", a: "That depends on the location and extent of the damage and the condition of the tyre. Some punctures can be repaired safely, while sidewall damage and other unsuitable damage may require replacement. Our technician will assess the tyre against the applicable safety requirements before recommending the appropriate option." },
+          { q: 'Do you provide mobile tyre fitting at home or work?', a: 'Yes. We can arrange fitting at your home or workplace where there is suitable access and enough safe working space. Provide the address and parking details when booking so we can confirm suitability.' },
+          { q: 'Are you available at night, on Sundays and on bank holidays?', a: 'Our service operates 24/7 for emergency tyre assistance. Actual attendance depends on technician availability, the tyre required and your location, so contact us to confirm before relying on a specific arrival time.' },
+          { q: 'Can you fit a tyre if I do not know its size?', a: 'You can start by providing your vehicle registration, make and model. If possible, send a clear photo of the tyre markings as well. We can use these details to check the correct specification before arranging the service.' },
+          { q: 'Do I need to buy a tyre before booking your service?', a: 'Not necessarily. Contact us with your vehicle details and we can check whether a suitable replacement is available through our service. We can explain the tyre options and fitting cost before confirming the booking.' },
+          { q: 'Do you offer premium and budget tyres in Salford?', a: "Premium, mid-range and budget options may be available, depending on your vehicle's requirements and current stock. We can explain the available suitable options so you can choose one that fits your needs and budget." },
+          { q: 'Can you help if my tyre goes flat on the M602 or M60?', a: 'Contact us with your exact location and circumstances to check what assistance may be available. If you are on a motorway, follow motorway safety procedures and use the appropriate emergency or breakdown assistance service. Do not attempt a tyre change on a live carriageway or in an unsafe position.' },
+          { q: 'Can you fit tyres at MediaCityUK or Salford Quays?', a: 'Yes. We can attend suitable locations around MediaCityUK and Salford Quays, including accessible workplace and car park locations. Let us know the exact location and any parking restrictions so we can confirm whether the technician can safely carry out the work.' },
+          { q: 'Which areas around Salford do you cover?', a: 'Our coverage includes Eccles, Swinton, Pendlebury, Worsley, Walkden, Irlam, Cadishead, Salford Quays, MediaCityUK and other surrounding districts. Contact us with your postcode to confirm coverage and the estimated arrival time.' },
+          { q: 'What payment methods do you accept?', a: 'The current service page lists card, cash and contactless payments. If you have a preferred payment method, confirm its availability when booking.' },
+          { q: 'What happens if my tyre size is not in stock?', a: "We will check availability based on your vehicle and required tyre specification. If the exact tyre is unavailable, we can explain whether a suitable alternative can be sourced and how this may affect the timing. Any replacement must meet your vehicle's requirements." },
+          { q: 'Can you fit run-flat tyres or tyres with special specifications?', a: 'Availability depends on the vehicle, tyre specification and equipment required. Tell us if you use run-flat tyres or have a particular load index, speed rating or other requirement. We will check whether a suitable tyre and fitting service are available before confirming the booking.' },
+          { q: 'Can you help if I have lost my locking wheel nut key?', a: 'Contact us before booking and explain the situation. Assistance with locking wheel nut removal may be available depending on the vehicle and locking nut. Provide your vehicle make and model so we can check the requirements.' },
+          { q: 'Will you check my tyre pressure after fitting?', a: 'Tyre pressure can be checked after fitting, and TPMS checks or resets may be available where applicable. If a tyre pressure warning remains on after the work, tell the technician so the system can be checked as appropriate.' },
+          { q: 'Can I book a mobile tyre fitter for a specific time?', a: 'You can contact us to discuss a preferred time. Scheduled attendance depends on technician availability, the service area and tyre stock. Confirm the agreed time or arrival window with our team when booking.' },
+          { q: 'What happens if my tyre cannot be repaired?', a: 'If the damage is unsuitable for repair, the technician can explain why and discuss replacement options, subject to suitable stock and your approval. Ask about any applicable call-out or inspection charges before confirming your booking.' },
+          { q: 'Can I drive a short distance with a punctured tyre to meet the fitter?', a: 'It is not advisable to drive on a flat tyre or one with serious damage. This can damage the wheel and compromise vehicle control. If the vehicle is unsafe to move, tell us where it is parked and arrange assistance at a safe, accessible location.' },
+          { q: 'How do I book emergency mobile tyre fitting in Salford?', a: 'Call 07759 708 646 or 0161 399 5851. Provide your location, vehicle registration or tyre size, and a description of the problem. We can check tyre availability, explain the price and give you an estimated arrival time before you confirm the booking.' },
         ]} />
 
-        {/* ── 8. FINAL CTA */}
+        {/* ── 11. FINAL CTA */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Salford Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Salford line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Salford?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you have a flat tyre at home, a puncture at work or an unexpected tyre problem during a journey, our team can help you check the available options. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture assessment across Salford and surrounding areas, subject to availability and safe access. Mobile tyre assistance at home, work or a suitable location — 24 hours a day, 7 days a week.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
+              </a>
+              <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+441613995851">
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                0161 399 5851
               </a>
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="https://wa.me/447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>

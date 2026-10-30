@@ -1,30 +1,39 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-rochdale',
-  name: 'Mobile Tyre Fitting in Rochdale',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Rochdale' },
+  alternateName: '24/7 Mobile Tyre Fitting Rochdale',
+  areaServed: 'Rochdale, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Rochdale? Get 24/7 emergency tyre replacement and puncture repair at home, work or roadside. Call for a quote.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-rochdale')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-rochdale')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-rochdale',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Rochdale',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Rochdale | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Rochdale | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting across Rochdale, with same day and 24/7 emergency tyre assistance delivered directly to your vehicle.',
+    'Need mobile tyre fitting in Rochdale? Get 24/7 emergency tyre replacement and puncture repair at home, work or roadside. Call for a quote.',
   path: '/mobile-tyre-fitting-rochdale',
 })
 
@@ -45,7 +54,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function RochdalePage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -61,23 +73,23 @@ export default function RochdalePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-3 sm:mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Mobile Tyre Fitting Rochdale – 24/7 Help in Emergency
+              24/7 Mobile Tyre Fitting Rochdale
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Mobile tyre fitting across Rochdale, from the town centre to the M62, with same day and emergency tyre help around the clock.
+              Flat, punctured or damaged tyre? Our mobile tyre fitting in Rochdale brings emergency tyre replacement and same-day fitting to you.
             </p>
 
             {/* Trust bullets — hidden for now
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'On-the-Spot Puncture Repair',
-                'Typically 20–30 Min Response Across Rochdale',
-                'Same Day Mobile Tyre Fitting Available',
-                'Emergency Mobile Tyre Fitting 24/7',
-                'Premium, Mid-Range & Budget Tyres',
-                'Card, Cash & Contactless Payments Accepted',
-                'Professional Mobile Tyre Fitters',
+                '24/7 Emergency Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Assessment and Repair',
+                'Home and Workplace Tyre Fitting',
+                'Suitable Roadside Assistance',
+                'Premium, Mid-Range and Budget Tyre Options',
+                'Card, Cash and Contactless Payment Options',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -170,10 +182,10 @@ export default function RochdalePage() {
                 className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                Mobile Tyre Services Across Rochdale
+                Our Mobile Tyre Services
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                From Yorkshire Street and Manchester Road to Kingsway, Queensway and routes towards the M62, tyre trouble can happen anywhere. Our mobile tyre service brings professional fitting equipment and suitable tyre options directly to your vehicle, helping you deal with the problem without driving further on a damaged tyre.
+                A flat tyre can disrupt your commute, work schedule or journey home. Our mobile tyre fitting service brings the necessary equipment and suitable replacement tyres to your vehicle, provided the location is safe and accessible.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -181,51 +193,58 @@ export default function RochdalePage() {
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
                   title: 'Mobile Tyre Fitting',
-                  desc: 'Our mobile tyre fitting service is designed for situations where the tyre needs attention before the vehicle should be driven again. A technician travels to you, removes the worn or damaged tyre and installs a suitable replacement using dedicated mobile equipment.',
+                  desc: 'Have suitable replacement tyres fitted at your home, workplace or another accessible location.',
                   badge: 'MOBILE FITTING WITHOUT MOVING THE CAR',
                   href: '/mobile-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp',
-                  title: 'Mobile Tyre Replacement',
-                  desc: 'Blowouts, deep cuts, sidewall damage and excessive wear can make replacement necessary. Our mobile tyre replacement service brings an appropriate tyre to your location and completes the fitting on-site.',
+                  title: 'Emergency Tyre Replacement',
+                  desc: 'Arrange a replacement if your tyre has suffered a blowout, serious damage or excessive wear.',
                   badge: 'REPLACEMENT FOR UNSAFE TYRES',
                   href: '/home-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
-                  desc: 'If the tyre has suffered a puncture, our technician checks the type and position of the damage before deciding whether repair is suitable. Where it meets the required safety conditions, a professional repair can be carried out.',
+                  title: 'Mobile Puncture Repair',
+                  desc: 'We assess punctured tyres and carry out repairs where the damage and tyre condition meet the applicable safety requirements.',
                   badge: 'ASSESS FIRST, REPAIR WHERE SAFE',
                   href: '/puncture-repair-Greater-manchester',
                 },
                 {
+                  img: '/images/tyre-fitting-at-home.webp',
+                  title: 'Home Tyre Fitting',
+                  desc: 'Arrange tyre replacement at home without needing to travel to a tyre centre.',
+                  badge: 'AT YOUR DOOR',
+                  href: '/home-tyre-fitting',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Same-Day Tyre Fitting',
+                  desc: 'Need a tyre fitted today? Contact us to check technician availability and whether your required tyre is in stock.',
+                  badge: 'SUBJECT TO AVAILABILITY',
+                  href: '/mobile-tyre-fitting',
+                },
+                {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
-                  title: 'Jump Start',
-                  desc: 'Tyres are not the only reason a car becomes stranded. Our technicians can also provide jump-start assistance across Rochdale when a flat battery prevents the vehicle from starting.',
+                  title: 'Jump-Start Assistance',
+                  desc: 'If your vehicle also has a flat battery, ask about the availability of our jump-start service.',
                   badge: 'WHEN THE BATTERY STOPS THE JOURNEY',
                   href: '/jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
-                  title: 'TPMS Reset',
-                  desc: 'If the tyre pressure warning remains active following tyre work, we can check and reset the TPMS where required so the system can continue monitoring tyre pressures correctly.',
+                  title: 'TPMS Checks and Reset',
+                  desc: 'Tyre pressure monitoring system checks or resets may be available where applicable after tyre fitting or repair.',
                   badge: 'TYRE PRESSURE SYSTEM CHECKS',
                   href: '/tpms-reset',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp',
-                  title: 'Locking Nut Removal',
-                  desc: 'A lost key, rounded nut or damaged locking wheel nut can prevent normal tyre removal. Our mobile technicians carry specialist equipment to help remove difficult locking nuts and continue the required wheel work.',
+                  title: 'Locking Wheel Nut Removal',
+                  desc: 'If you have lost your locking wheel nut key, contact us to check whether assistance is available for your vehicle.',
                   badge: 'SPECIALIST LOCKING NUT SUPPORT',
                   href: '/locking-nut-removal',
-                },
-                {
-                  img: '/images/professional-mobile-tyre-fitting.webp',
-                  title: 'Roadside Assistance',
-                  desc: 'Emergency roadside support for tyre and vehicle problems across Rochdale, wherever you get stranded.',
-                  badge: '24/7 SUPPORT',
-                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a
@@ -314,10 +333,13 @@ export default function RochdalePage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Mobile Tyre Fitting for Rochdale&apos;s Town, Business and Commuter Routes
+                Professional Mobile Tyre Fitting in Rochdale
               </h2>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat tyre can disrupt your commute, work schedule or journey home. Our mobile tyre fitting service brings the necessary equipment and suitable replacement tyres to your vehicle, provided the location is safe and accessible.
+              </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                Rochdale has a varied road network. Drivers move between the town centre, residential neighbourhoods, employment areas and routes connecting towards Manchester, Oldham and the Pennines. Major roads such as the A58, A664 and A671 also feed traffic through different parts of the borough. Our mobile car tyre fitting service is designed around that mix. Instead of asking you to travel to a tyre centre with a damaged tyre, we bring the fitting equipment and suitable tyre directly to the vehicle. Coverage includes Rochdale town centre, Kingsway, Queensway, Castleton, Spotland, Belfield and surrounding neighbourhoods, together with suitable locations towards Milnrow and Littleborough. We offer premium, mid-range and budget tyre options for many common vehicles. Providing your registration or tyre size before dispatch helps us check the correct specification and available choices.
+                One Stop Tyres 247 helps drivers across Rochdale arrange mobile tyre fitting, emergency tyre replacement and puncture assessments. Whether your vehicle is parked at home, outside your workplace or at a suitable roadside location, contact our team to check the available options. We cover Rochdale town centre and surrounding areas, including Heywood, Littleborough, Milnrow, Middleton, Newhey, Wardle, Castleton, Whitworth and Norden. Coverage and arrival times depend on your exact location and technician availability.
               </p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
@@ -341,19 +363,117 @@ export default function RochdalePage() {
         </section>
 
         {/* ── 5. WHY ROCHDALE DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs
-          city="Rochdale"
-          image="/images/tyre-fitting-in-emergency.webp"
-          heading="Why Rochdale Drivers Choose One Stop Mobile Tyres 24/7"
-          responseTitle="Useful Across a Wide Road Network"
-          responseDesc="Rochdale journeys range from short local trips to motorway connections and routes towards the Pennines. Our mobile service gives drivers one practical option when tyre trouble interrupts any of them."
-          callOutTitle="Tyre Options Matched to the Vehicle"
-          callOutDesc="Premium is not always necessary, and budget is not always the best fit. We can discuss available premium, mid-range and budget choices based on your tyre size, vehicle and requirements before dispatch."
-          certifiedTitle="Professional Equipment Brought On-Site"
-          certifiedDesc="Our professional mobile tyre fitters use dedicated fitting equipment carried in the service vehicle. This allows worn or damaged tyres to be replaced properly without relying on a temporary solution simply to reach a garage."
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro=""
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Availability', desc: 'Tyre problems can happen at any time. Contact us day or night to check availability for emergency tyre fitting in Rochdale, including evenings, weekends and bank holidays.' },
+            { icon: 'home_repair_service', title: 'Convenient On-Site Fitting', desc: 'Where the location is suitable, our technicians can attend your home, workplace, car park or a safe roadside position.' },
+            { icon: 'sell', title: 'Clear Pricing Before Work Begins', desc: 'The cost depends on the tyre required, the work involved, your location and the time of service. We explain the available options and confirm the price before proceeding.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: "We can check premium, mid-range and budget tyre options, subject to your vehicle's requirements and current stock." },
+            { icon: 'engineering', title: 'Professional Tyre Assessment', desc: 'Not every puncture requires a replacement. Our technician assesses the damage and determines whether a safe repair is possible or a replacement is necessary.' },
+          ]}
         />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── COVERAGE ACROSS ROCHDALE ──────────────────────── */}
+        <section className="py-10 sm:py-14 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2
+              className="text-xl sm:text-2xl text-[#0f172a] mb-3 font-bold"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Coverage Across Rochdale and Nearby Areas
+            </h2>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We serve Rochdale and surrounding communities, including Heywood, Middleton, Milnrow, Littleborough, Newhey, Wardle, Castleton, Whitworth and Norden. Contact us with your postcode to confirm coverage and the estimated arrival time.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Rochdale Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 or 0161 399 5851 and explain the problem with your tyre.' },
+                { title: 'Share Your Vehicle and Location Details', desc: 'Provide your vehicle registration, tyre size if known, and exact location. Tell us whether the tyre is punctured, flat, damaged or completely unusable.' },
+                { title: 'Check Tyre Options and Pricing', desc: 'We check suitable tyre options and availability, explain the cost and provide an estimated arrival time before arranging the visit.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician attends the agreed location and completes the work where it is safe and suitable. Tyre pressure and TPMS checks can be carried out where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Rochdale
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A tyre with serious sidewall damage, a blowout or excessive wear may need replacing rather than repairing. Our mobile tyre replacement service helps drivers across Rochdale arrange a suitable replacement without driving to a garage on an unsafe tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We cover Rochdale town centre and nearby areas, including Heywood, Castleton, Norden, Milnrow, Newhey, Wardle, Littleborough and Whitworth.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Before arranging a replacement, provide your vehicle registration or tyre size so we can check the correct specification. We can discuss suitable premium, mid-range and budget options, depending on your requirements and current stock.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your tyre has a puncture, our technician will assess whether it can be repaired safely. Repairs are only carried out when the tyre meets the applicable safety requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Rochdale
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A puncture or blowout can leave you stranded at an inconvenient time. Our 24/7 emergency mobile tyre service helps drivers in Rochdale check the available options when a tyre problem needs urgent attention.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can attend suitable locations across Rochdale and nearby areas, subject to technician availability, traffic, tyre stock and safe access. When you call, provide your exact location so we can give you a realistic estimated arrival time.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your vehicle breaks down on a motorway or busy road, follow the relevant safety procedures. Do not attempt to change a tyre on a live carriageway or in an unsafe roadside position. Use the appropriate emergency or breakdown assistance service where necessary. Call 07759 708 646 to discuss your tyre problem and check availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -365,47 +485,55 @@ export default function RochdalePage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="rochdale" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-rochdale"
           city="Rochdale"
           faqs={[
-            { q: 'How quickly can you provide mobile tyre fitting in Rochdale?', a: 'Our usual response target across Greater Manchester is around 20–30 minutes. Your exact ETA depends on traffic, the required tyre and the location of the nearest available technician.' },
-            { q: 'Do you provide 24/7 mobile tyre fitting in Rochdale?', a: 'Yes. Our 24/7 mobile tyre fitting service operates throughout the day and night, including weekends and bank holidays, subject to technician and tyre availability.' },
-            { q: 'Can I book same day tyre fitting in Rochdale?', a: 'Yes. Same day tyre fitting is available for many common tyre sizes. Send us your registration or complete tyre size so we can check suitable stock before dispatch.' },
-            { q: 'What does your mobile tyre service include?', a: 'Our mobile tyre service can include assessing the tyre problem, removing the damaged or worn tyre, supplying an appropriate replacement and completing professional fitting at your location.' },
-            { q: 'Can you provide mobile tyre replacement in Rochdale?', a: 'Yes. Where the existing tyre is unsafe, excessively worn or unsuitable for repair, we can provide mobile tyre replacement and fit an appropriate replacement at the vehicle.' },
-            { q: 'What is a mobile tyre replacement service?', a: 'Our mobile tyre replacement service brings the tyre and fitting equipment directly to you. The unusable tyre is removed and the replacement is professionally installed on-site.' },
-            { q: 'Do you offer an emergency tyre service in Rochdale?', a: 'Yes. Our emergency tyre service operates around the clock for tyre failures that leave your vehicle unsafe or unable to continue its journey normally.' },
-            { q: 'Can you provide mobile car tyre fitting for different vehicle makes?', a: 'Yes. Our mobile car tyre fitting service covers many common makes and models. Providing your registration helps us identify the appropriate tyre specification before the technician travels.' },
-            { q: 'Can you help if I get a flat tyre?', a: "Yes. We provide flat tyre assistance throughout Rochdale. Depending on the tyre's condition and type of damage, the technician can determine whether repair or replacement is suitable." },
-            { q: 'Do you provide roadside tyre call-outs across Rochdale?', a: 'Yes. Our roadside tyre call-outs cover suitable roads and stopping locations throughout Rochdale. Share your precise location so we can assess the safest way for the technician to attend.' },
-            { q: 'Can you attend around Kingsway Business Park?', a: 'Yes. We cover suitable locations around Kingsway and the wider eastern Rochdale area. Send us your exact location, vehicle registration and tyre details when arranging assistance.' },
-            { q: 'Do you cover Castleton and Queensway?', a: 'Yes. Our mobile tyre coverage includes Castleton, Queensway and surrounding neighbourhoods, subject to technician and tyre availability.' },
-            { q: 'Can you help around Milnrow and Littleborough?', a: 'Yes. Our coverage extends towards Milnrow and Littleborough, including suitable locations along the connecting road network.' },
-            { q: 'Do you provide tyre assistance near the M62?', a: 'Yes. We cover Rochdale and routes leading towards the M62. If a tyre problem occurs on a motorway, follow motorway safety guidance first and move to a safe location wherever possible before arranging assistance.' },
-            { q: 'Can I have a tyre fitted on my drive?', a: 'Where the vehicle has sufficient safe working room around it, having a tyre fitted on your drive may be possible. Tell us how and where the vehicle is parked when booking.' },
-            { q: 'How do I arrange fast mobile tyre fitting in Rochdale?', a: 'For fast mobile tyre fitting, send us your exact location, vehicle registration and tyre size. Having these details ready helps us identify the required tyre and arrange dispatch more efficiently.' },
-            { q: 'Why is professional tyre fitting important?', a: 'Professional tyre fitting uses suitable machinery and procedures to remove and install tyres correctly. It also allows the technician to check visible tyre and wheel condition while carrying out the work.' },
-            { q: 'Are your technicians professional mobile tyre fitters?', a: 'Yes. Our professional mobile tyre fitters work with a wide range of common vehicles and tyre sizes using specialist equipment designed for mobile fitting.' },
-            { q: 'Do you provide a reliable mobile tyre service in Rochdale?', a: 'Our reliable mobile tyre service focuses on clear communication, suitable tyre choices and professional fitting at the location where your vehicle is safely positioned.' },
-            { q: 'Do trusted mobile tyre fitters cover Rochdale overnight?', a: 'Yes. Our trusted mobile tyre fitters provide emergency assistance during the night as well as throughout the day, subject to technician and tyre availability.' },
-            { q: 'Can you arrange an emergency tyre replacement if my tyre blows out?', a: 'Yes. Send us your location, registration and tyre size. We can check suitable stock and arrange the most appropriate emergency tyre replacement response.' },
+            { q: 'How much does mobile tyre fitting cost in Rochdale?', a: 'The price depends on your tyre size, tyre brand, the work required, your location and the time of the call-out. Contact us with your vehicle registration or tyre details for a quote. Confirm the total price before authorising the work.' },
+            { q: 'How quickly can a mobile tyre fitter reach me in Rochdale?', a: 'The general response target across Greater Manchester is around 20–30 minutes, but this is an estimate, not a guarantee. Traffic, your exact location, tyre availability and the nearest available technician can affect arrival time. Contact us for an updated estimate before booking.' },
+            { q: 'Can you replace my tyre today?', a: 'Same-day tyre fitting may be available, depending on technician availability and whether a suitable tyre is in stock. Share your vehicle registration or tyre size so we can check the options.' },
+            { q: 'What should I do if I have a flat tyre and no spare?', a: 'Avoid driving on a flat or seriously damaged tyre, as this can damage the wheel and compromise safety. Contact us with your location and vehicle details. We can check whether mobile repair or replacement is available for your vehicle.' },
+            { q: "Can you repair my puncture, or will I need a new tyre?", a: "That depends on the location and extent of the damage and the condition of the tyre. Some punctures can be repaired safely, while sidewall damage and other unsuitable damage may require replacement. Our technician will assess the tyre against the applicable safety requirements before recommending the appropriate option." },
+            { q: 'Do you provide mobile tyre fitting at home or work?', a: 'Yes. We can arrange fitting at your home or workplace where there is suitable access and enough safe working space. Provide the address and parking details when booking so we can confirm suitability.' },
+            { q: 'Are you available at night, on Sundays and on bank holidays?', a: 'Our service operates 24/7 for emergency tyre assistance. Actual attendance depends on technician availability, the tyre required and your location, so contact us to confirm before relying on a specific arrival time.' },
+            { q: 'Can you fit a tyre if I do not know its size?', a: 'You can start by providing your vehicle registration, make and model. If possible, send a clear photo of the tyre markings as well. We can use these details to check the correct specification before arranging the service.' },
+            { q: 'Do I need to buy a tyre before booking your service?', a: 'Not necessarily. Contact us with your vehicle details and we can check whether a suitable replacement is available through our service. We can explain the tyre options and fitting cost before confirming the booking.' },
+            { q: 'Do you offer premium and budget tyres in Rochdale?', a: "Premium, mid-range and budget options may be available, depending on your vehicle's requirements and current stock. We can explain the available suitable options so you can choose one that fits your needs and budget." },
+            { q: 'Can you help if my tyre goes flat on the M62?', a: 'Contact us with your exact location and circumstances to check what assistance may be available. If you are on a motorway, follow motorway safety procedures and use the appropriate emergency or breakdown assistance service. Do not attempt a tyre change on a live carriageway or in an unsafe position.' },
+            { q: 'Which areas around Rochdale do you cover?', a: 'Our coverage includes Rochdale and nearby areas such as Heywood, Middleton, Milnrow, Newhey, Littleborough, Wardle, Castleton, Whitworth and Norden. Contact us with your postcode to confirm coverage and the estimated arrival time.' },
+            { q: 'What payment methods do you accept?', a: 'The service lists card, cash and contactless payments. If you have a preferred payment method, confirm its availability when booking.' },
+            { q: 'What happens if my tyre size is not in stock?', a: 'We will check availability based on your vehicle and required tyre specification. If the exact tyre is unavailable, we can explain whether a suitable alternative can be sourced and how this may affect the timing. Any replacement must meet the vehicle’s requirements.' },
+            { q: 'Can you fit run-flat tyres or tyres with special specifications?', a: 'Availability depends on the vehicle, tyre specification and equipment required. Tell us if you use run-flat tyres or have a particular load index, speed rating or other requirement. We will check whether a suitable tyre and fitting service are available before confirming the booking.' },
+            { q: 'Can you help if I have lost my locking wheel nut key?', a: 'Contact us before booking and explain the situation. Assistance with locking wheel nut removal may be available depending on the vehicle and locking nut. Provide your vehicle make and model so we can check the requirements.' },
+            { q: 'Will you check my tyre pressure after fitting?', a: 'Tyre pressure can be checked after fitting, and TPMS checks or resets may be available where applicable. If a tyre pressure warning remains on after the work, tell the technician so the system can be checked as appropriate.' },
+            { q: 'Can I book a mobile tyre fitter for a specific time?', a: 'You can contact us to discuss a preferred time. Scheduled attendance depends on technician availability, the service area and tyre stock. Confirm the agreed time or arrival window with our team when booking.' },
+            { q: 'What information should I have ready when I call?', a: 'Prepare your postcode or exact location, vehicle registration, tyre size if known, and a short description of the problem. Also mention whether your vehicle is at home, at work or roadside. These details help us check the correct tyre, estimate the cost and provide a more useful arrival estimate.' },
+            { q: 'What happens if my tyre cannot be repaired?', a: 'If the damage is unsuitable for repair, the technician can explain why and discuss replacement options, subject to suitable stock and your approval. Ask about any applicable call-out or inspection charges before confirming your booking.' },
+            { q: 'Can I drive a short distance with a punctured tyre to meet the fitter?', a: 'It is not advisable to drive on a flat tyre or one with serious damage. This can damage the wheel and compromise vehicle control. If the vehicle is unsafe to move, tell us where it is parked and arrange assistance at a safe, accessible location.' },
+            { q: 'How do I book emergency mobile tyre fitting in Rochdale?', a: 'Call 07759 708 646 or 0161 399 5851. Provide your location, vehicle registration or tyre size, and a description of the problem. We can check tyre availability, explain the price and give you an estimated arrival time before you confirm the booking.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Rochdale Today?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you have discovered a damaged tyre before setting off or a tyre failure has already interrupted your journey, avoid driving further if the tyre is unsafe. Call or WhatsApp One Stop Mobile Tyres 24/7 with your location, vehicle details and tyre size. We will check suitable options and arrange a technician to come to you in Rochdale.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Rochdale?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you have a flat tyre at home, a puncture at work or an unexpected tyre problem during a journey, our team can help you check the available options. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture assessment across Rochdale and surrounding areas, subject to availability and safe access. Mobile tyre assistance at home, work or a suitable location — 24 hours a day, 7 days a week.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
                 href="tel:+447759708646"
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
-                Call: 07759 708 646
+                07759 708 646
+              </a>
+              <a
+                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
+                href="tel:+441613995851"
+              >
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

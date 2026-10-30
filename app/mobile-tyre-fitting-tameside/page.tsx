@@ -1,30 +1,39 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-tameside',
-  name: 'Mobile Tyre Fitting in Tameside',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Tameside' },
+  alternateName: '24/7 Mobile Tyre Fitting Tameside',
+  areaServed: 'Tameside, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Tameside? Get 24/7 tyre replacement, puncture repair and roadside assistance at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-tameside')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-tameside')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-tameside',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Tameside',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Tameside | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Tameside | 24/7 Tyre Replacement',
   description:
-    'Need mobile tyre fitting in Tameside? Same day fitting and trusted roadside assistance.',
+    'Need mobile tyre fitting in Tameside? Get 24/7 tyre replacement, puncture repair and roadside assistance at home, work or roadside.',
   path: '/mobile-tyre-fitting-tameside',
 })
 
@@ -45,7 +54,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function TamesidePage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -65,18 +77,18 @@ export default function TamesidePage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Tameside. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Tameside? Our mobile tyre fitters come to you for a flat tyre at home, a puncture at work or a damaged tyre.
             </p>
 
             {/* Trust bullets — hidden for now
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Tameside & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Emergency Mobile Tyre Fitting',
+                'Mobile Tyre Replacement At Home, Work Or Roadside',
+                'Puncture Inspection and Repair Where Suitable',
+                'Premium, Mid-Range and Budget Tyre Options',
+                'Mobile Jump-Start Assistance',
+                'TPMS Checks and Locking Wheel Nut Removal',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -169,62 +181,69 @@ export default function TamesidePage() {
                 className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Tameside
+                Our Mobile Tyre Services in Tameside
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Tameside. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                A flat or damaged tyre can interrupt your journey and make driving unsafe. Our mobile tyre fitting service brings tyre assistance directly to you, reducing the need to arrange transport to a garage when your vehicle cannot be driven safely.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
-                  title: 'Mobile Tyre Fitting',
-                  desc: 'Mobile tyre fitting at your home, workplace or roadside location anywhere in Tameside. Fast response with premium and budget tyre options available.',
+                  title: '24/7 Mobile Tyre Fitting',
+                  desc: 'Arrange tyre fitting at your home, workplace or another suitable location across Tameside. Contact our team to confirm availability and the tyre required.',
                   badge: 'FAST RESPONSE',
                   href: '/mobile-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp',
-                  title: 'Home Tyre Fitting',
-                  desc: 'Same day tyre fitting at your home across Tameside, without the hassle of visiting a garage.',
-                  badge: 'AT YOUR DOOR',
+                  title: 'Emergency Tyre Replacement',
+                  desc: 'If your tyre has suffered a blowout or damage that makes it unsafe to repair, we can help arrange a suitable replacement, subject to stock and vehicle specifications.',
+                  badge: '24/7 DISPATCH',
                   href: '/home-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
-                  desc: 'Professional mobile puncture repair across Tameside, carried out on-site where safe and suitable.',
+                  title: 'Mobile Puncture Repair',
+                  desc: 'Our technicians can inspect a punctured tyre and determine whether a repair is appropriate. Repairs are carried out only where the damage and tyre condition meet applicable safety requirements.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
                 },
                 {
+                  img: '/images/tyre-fitting-at-home.webp',
+                  title: 'Home and Workplace Tyre Fitting',
+                  desc: 'Save time by arranging tyre fitting at your property or workplace. The location must have sufficient space and safe access for the technician to carry out the work.',
+                  badge: 'AT YOUR DOOR',
+                  href: '/home-tyre-fitting',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Tyre Assistance',
+                  desc: 'If you experience a tyre problem while travelling through Tameside, contact us with your exact location. We can discuss available assistance and provide an estimated arrival time.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
+                {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
-                  title: 'Jump Start',
-                  desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Tameside.',
+                  title: 'Mobile Jump-Start Assistance',
+                  desc: "If your vehicle will not start because of a flat battery, ask about our mobile jump-start service. Availability depends on your location and the vehicle's requirements.",
                   badge: '24/7 SERVICE',
                   href: '/jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
-                  title: 'TPMS Reset',
-                  desc: 'Tyre pressure monitoring system reset and sensor checks across Tameside after every fitting or repair.',
+                  title: 'TPMS Checks and Resets',
+                  desc: 'Tyre pressure monitoring system checks or resets may be available after tyre fitting or repair, depending on the vehicle and the system fitted.',
                   badge: 'ALL VEHICLES',
                   href: '/tpms-reset',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp',
-                  title: 'Locking Nut Removal',
-                  desc: 'Specialist, damage-free locking wheel nut removal across Tameside using professional tools.',
+                  title: 'Locking Wheel Nut Removal',
+                  desc: 'If you have lost your locking wheel nut key, tell us before booking. Specialist removal may be possible depending on the wheel nut design and vehicle requirements.',
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
-                },
-                {
-                  img: '/images/professional-mobile-tyre-fitting.webp',
-                  title: 'Roadside Assistance',
-                  desc: 'Emergency roadside support for tyre and vehicle problems across Tameside, wherever you get stranded.',
-                  badge: '24/7 SUPPORT',
-                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a
@@ -313,10 +332,13 @@ export default function TamesidePage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Tameside
+                Professional Mobile Tyre Fitting in Tameside
               </h2>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat or damaged tyre can interrupt your journey and make driving unsafe. Our mobile tyre fitting service brings tyre assistance directly to you, reducing the need to arrange transport to a garage when your vehicle cannot be driven safely.
+              </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Tameside, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre. Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Tameside and surrounding areas. We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Tameside. If you&apos;re searching for mobile tyre fitting near me in Tameside, our fast response team is available day and night.
+                One Stop Tyres 247 provides mobile tyre fitting and emergency tyre replacement across Tameside. Whether you are at home in Ashton-under-Lyne, at work in Denton or dealing with a tyre problem near Hyde, our team can discuss your requirements and confirm service availability. We supply and fit suitable replacement tyres, inspect punctures and provide roadside tyre assistance where safe access is available. Our aim is to make the process straightforward, with clear pricing and an estimated arrival time before dispatch.
               </p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem icon="bolt" title="24/7 Mobile Tyre Fitting" desc="Tyres fitted at your home, workplace or roadside location." />
@@ -328,9 +350,152 @@ export default function TamesidePage() {
         </section>
 
         {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
-        <WhyChooseUs city="Tameside" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Tameside Drivers Choose Our Mobile Tyre Fitters"
+          intro="When you have a damaged tyre, you need a service that is convenient, transparent and suitable for your vehicle."
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Availability', desc: 'Tyre problems can happen during the day or overnight. Our service operates 24 hours a day in covered areas, subject to technician availability.' },
+            { icon: 'home_repair_service', title: 'Mobile Assistance at Your Location', desc: 'We can arrange tyre fitting at home, work or a suitable roadside location. This is particularly useful when driving on a damaged tyre would be unsafe.' },
+            { icon: 'sell', title: 'Clear Pricing Before Dispatch', desc: 'The cost depends on your tyre size, chosen tyre, location and the work required. We provide a quote before dispatch so you can understand the expected cost before confirming the booking.' },
+            { icon: 'engineering', title: 'Trained and Insured Technicians', desc: 'Our website states that our technicians are trained and insured. When arranging your booking, share your vehicle details so the team can confirm that the required work can be carried out.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: 'We offer premium and budget tyre options, with availability depending on the required size and current stock. Ask about mid-range options if you want to compare prices.' },
+            { icon: 'build', title: 'Help With More Than Flat Tyres', desc: 'Alongside tyre fitting and replacement, we offer services including puncture repair, jump-start assistance, TPMS checks and locking wheel nut removal, subject to suitability and availability.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Tameside Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Call or WhatsApp Our Team', desc: 'Contact 07759 708 646 and explain whether you have a puncture, flat tyre, blowout or need a planned replacement.' },
+                { title: 'Share Your Location and Vehicle Details', desc: 'Provide your postcode or map pin, vehicle make and model, and tyre size if known. A photograph of the tyre sidewall can help identify the correct size.' },
+                { title: 'Confirm the Quote and Estimated Arrival Time', desc: 'Our team will discuss the available tyre options, expected cost and estimated arrival time. Timing depends on your location, traffic, technician availability and tyre stock.' },
+                { title: 'Have Your Tyre Assessed', desc: 'The technician will inspect the tyre and determine whether repair or replacement is appropriate. If a replacement is needed, the correct tyre must be available and compatible with your vehicle.' },
+                { title: 'Complete the Fitting or Repair', desc: 'Once the work and price have been confirmed, the technician can carry out the agreed service if conditions are safe and suitable. Tyre pressure and TPMS checks can be completed where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Tameside
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A tyre with a sidewall bulge, severe damage, a blowout or an unsuitable puncture may need replacing rather than repairing.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement service in Tameside helps drivers arrange a replacement without needing to take their vehicle to a garage. We can discuss tyre options for your vehicle and confirm availability before the visit.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              When requesting a replacement, provide your tyre size and vehicle details if possible. This helps the team identify a suitable tyre and give you a more accurate quote.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We cover locations throughout Tameside, including Ashton-under-Lyne, Denton, Hyde, Dukinfield, Droylsden, Stalybridge and Mossley.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Puncture Repair in Tameside
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Tyre problems can occur on residential streets, in workplace car parks or while travelling along busy roads. If a tyre is damaged, avoid driving on it if doing so could put you or other road users at risk.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Contact our team and share your exact location. We can discuss the available service, the likely cost and an estimated arrival time before dispatch.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our coverage includes major routes around Tameside, such as the M60, M67, A635 and A57 Hyde Road, subject to safe access and service availability.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              <span className="font-bold text-[#0f172a]">Motorway safety:</span> If you break down on a motorway, follow official motorway breakdown procedures and contact the appropriate assistance service. Do not attempt to change a tyre beside live traffic or in another unsafe location.
+            </p>
+          </div>
+        </section>
+
+        {/* ── MOBILE TYRE FITTING AREAS IN TAMESIDE ─────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight text-center"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Fitting Areas in Tameside
+            </h2>
+            <p className="text-slate-600 mb-8 leading-relaxed text-base sm:text-lg text-center max-w-2xl mx-auto">
+              We provide mobile tyre fitting across Tameside and surrounding neighbourhoods. Contact us with your postcode to confirm coverage and estimated arrival time.
+            </p>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3 mb-8">
+              {[
+                'Ashton-under-Lyne', 'Audenshaw', 'Broadbottom', 'Denton',
+                'Droylsden', 'Dukinfield', 'Hattersley', 'Hollingworth',
+                'Hyde', 'Longdendale', 'Mossley', 'Mottram-in-Longdendale',
+                'Stalybridge', 'Flowery Field', 'Gee Cross', 'Guide Bridge',
+                'Hartshead', 'Hurst', 'Lumb Lane', 'Millbrook',
+                'Newton', 'Stalyhill',
+              ].map((area) => (
+                <li key={area} className="flex items-center gap-2 text-slate-700 text-sm sm:text-base">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '18px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span>{area}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 mb-8 leading-relaxed text-base sm:text-lg text-center">
+              We also cover relevant postcode areas including OL5, OL6, OL7, SK14, SK15, SK16, M34 and M43.
+            </p>
+            <h3
+              className="text-lg sm:text-xl font-bold text-slate-900 mb-3 text-center"
+              style={{ fontFamily: 'var(--font-work-sans)' }}
+            >
+              Mobile Tyre Assistance on the M60 and M67
+            </h3>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg text-center">
+              If you experience tyre trouble while travelling around Tameside, provide your location as accurately as possible. Our listed road coverage includes the M60 (Junctions 23–24), M67, A635 and A57 Hyde Road.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg text-center">
+              For motorway breakdowns, prioritise your safety and follow the relevant motorway procedures. Our team can discuss whether assistance is possible at a safe, accessible location.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -342,27 +507,47 @@ export default function TamesidePage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="tameside" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-tameside"
           city="Tameside"
           faqs={[
-            { q: 'How fast can you reach me in Tameside?', a: 'Our Tameside mobile units are positioned to typically reach Ashton-under-Lyne, Hyde, Stalybridge, Denton, and Dukinfield within 20-30 minutes, depending on traffic.' },
-            { q: 'Do you cover the M67 motorway through Tameside?', a: 'Yes. We provide full emergency tyre coverage on the M67 and all major routes through Tameside including the A57 and A6017, 24 hours a day.' },
-            { q: 'What tyre brands do you stock for Tameside customers?', a: 'We carry all major brands including Michelin, Continental, Bridgestone, Pirelli, Dunlop, and Goodyear, plus mid-range and budget options for every vehicle and budget.' },
-            { q: 'Can you come to my location in Mossley or Longdendale?', a: 'Absolutely. Our coverage extends across the full Tameside borough including Mossley, Droylsden, Audenshaw, and Longdendale Valley.' },
+            { q: 'Do you provide mobile tyre fitting in Tameside 24/7?', a: 'Yes. Our mobile tyre fitting service operates 24 hours a day in covered areas. Contact us to confirm availability and arrange a visit.' },
+            { q: 'How quickly can a mobile tyre fitter reach me in Tameside?', a: 'The website advertises a typical response estimate of around 20–30 minutes. This is not guaranteed; actual arrival time depends on your exact location, traffic, weather, technician availability and the work required. Confirm the estimate when booking.' },
+            { q: 'Do you offer emergency tyre replacement in Tameside?', a: 'Yes. We offer emergency tyre replacement in covered areas, subject to the correct tyre being available and safe access to the vehicle.' },
+            { q: 'Can you fit a tyre at my home?', a: 'Yes. Home tyre fitting can be arranged where there is sufficient space and safe access for the technician to work.' },
+            { q: 'Can you fit tyres at my workplace?', a: 'Yes. We can discuss workplace tyre fitting if the location is accessible and suitable for the work. Share the address and your preferred time when requesting a quote.' },
+            { q: 'Do you provide mobile puncture repair in Tameside?', a: 'Yes. We inspect punctured tyres and can repair them where the damage and tyre condition make a safe repair possible. Some tyres will need replacing instead.' },
+            { q: 'How much does mobile tyre fitting in Tameside cost?', a: 'The price depends on the tyre size, brand, service required and location. Contact us for a quote before confirming your booking.' },
+            { q: 'Can I choose a premium or budget tyre?', a: 'Premium and budget options are listed among our services. Availability depends on your tyre size and current stock. Ask the team about suitable options and prices.' },
+            { q: 'What information should I provide when booking?', a: 'Share your location or postcode, vehicle make and model, tyre size if known, and a brief description of the problem. A photograph of the tyre markings can help identify the correct size.' },
+            { q: 'What if I do not know my tyre size?', a: 'Provide your vehicle details and, if possible, a photograph of the numbers and letters printed on your tyre sidewall. The team can use these details to help identify the required size.' },
+            { q: 'Do you cover Ashton-under-Lyne, Hyde and Denton?', a: 'Yes. Ashton-under-Lyne, Hyde and Denton are among the areas listed in our Tameside coverage. Contact us to confirm availability for your exact postcode.' },
+            { q: 'Can you come to Mossley or Longdendale?', a: 'Yes. Mossley and Longdendale are included in the listed service area. Actual attendance depends on your location and current availability.' },
+            { q: 'Do you provide tyre assistance on the M60 and M67?', a: 'Our listed road coverage includes the M60 and M67 around Tameside. Any attendance depends on safe access and the circumstances of the breakdown. Follow official motorway breakdown procedures and do not attempt repairs beside live traffic.' },
+            { q: 'Can you help if my tyre has a blowout?', a: 'Yes. Contact us with your location and vehicle details. If the tyre cannot be repaired safely, we can discuss replacement options, subject to stock and safe access.' },
+            { q: 'Do you offer mobile jump-start assistance?', a: "Yes. Mobile jump-start assistance is listed among our services. Contact us to confirm availability and explain your vehicle's symptoms." },
+            { q: 'Can you check my TPMS after fitting a tyre?', a: 'TPMS checks or resets are listed among our services. The work required depends on your vehicle and the monitoring system fitted.' },
+            { q: 'Can you remove a locking wheel nut if I have lost the key?', a: 'Locking wheel nut removal is listed as a service. Tell us your vehicle details when booking so the team can confirm whether removal is possible with the available equipment.' },
+            { q: 'Do you accept card and contactless payments?', a: 'The Tameside page lists card, cash and contactless payments. If you have a specific payment requirement, confirm the available options when booking.' },
+            { q: 'Can I arrange same-day mobile tyre fitting?', a: 'Same-day service may be available depending on technician availability, your location and the required tyre. Contact the team to confirm an appointment.' },
+            { q: 'How do I book mobile tyre fitting in Tameside?', a: 'Call or WhatsApp 07759 708 646. Share your postcode or map pin, vehicle details and tyre problem. Our team can discuss pricing, availability and the estimated arrival time.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Tameside Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Tameside line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Tameside Right Now?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat tyre, a puncture or a damaged tyre, contact One Stop Tyres 247 to discuss mobile tyre fitting and emergency tyre replacement across Tameside. Our team can help you check availability, understand your options and arrange a visit to a suitable location. 24/7 mobile tyre assistance across Tameside and surrounding areas, subject to availability and safe access.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
+              </a>
+              <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+441613995851">
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                0161 399 5851
               </a>
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="https://wa.me/447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>

@@ -1,30 +1,39 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-stockport',
-  name: 'Mobile Tyre Fitting in Stockport',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Stockport' },
+  alternateName: '24/7 Mobile Tyre Fitting Stockport',
+  areaServed: 'Stockport, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Stockport? Get 24/7 tyre replacement and puncture repair at home, work or roadside. Call our team for a quote.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-stockport')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-stockport')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-stockport',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Stockport',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Stockport | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Stockport | 24/7 Tyre Replacement',
   description:
-    'Choose mobile tyre fitting in Stockport — trusted tyre fitters near your location, 24/7.',
+    'Need mobile tyre fitting in Stockport? Get 24/7 tyre replacement and puncture repair at home, work or roadside. Call our team for a quote.',
   path: '/mobile-tyre-fitting-stockport',
 })
 
@@ -45,7 +54,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function StockportPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -65,18 +77,18 @@ export default function StockportPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Stockport. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Stockport? Our mobile team comes to you for a flat tyre at home, a puncture at work or a damaged tyre.
             </p>
 
             {/* Trust bullets — hidden for now
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Stockport & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Emergency Mobile Tyre Fitting',
+                'Mobile Tyre Replacement At Home, Work Or Roadside',
+                'Puncture Inspection and Repair Where Suitable',
+                'Premium, Mid-Range and Budget Tyre Options',
+                'Clear Pricing Before Work Begins',
+                'Card, Cash and Contactless Payments Accepted',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -169,62 +181,55 @@ export default function StockportPage() {
                 className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Stockport
+                Our Mobile Tyre Services in Stockport
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Stockport. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                A damaged or flat tyre can disrupt your journey and make driving unsafe. Our mobile tyre fitting service brings tyre assistance directly to you, helping you avoid the inconvenience of travelling to a garage when your vehicle cannot be driven safely.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
-                  title: 'Mobile Tyre Fitting',
-                  desc: 'Mobile tyre fitting at your home, workplace or roadside location anywhere in Stockport. Fast response with premium and budget tyre options available.',
+                  title: '24/7 Mobile Tyre Fitting',
+                  desc: 'Arrange tyre fitting at home, at work or at another suitable location. Contact us to confirm availability and arrange a convenient visit.',
                   badge: 'FAST RESPONSE',
                   href: '/mobile-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp',
-                  title: 'Home Tyre Fitting',
-                  desc: 'Same day tyre fitting at your home across Stockport, without the hassle of visiting a garage.',
-                  badge: 'AT YOUR DOOR',
+                  title: 'Emergency Tyre Replacement',
+                  desc: 'If your tyre is damaged beyond safe repair, we can help arrange a suitable replacement, subject to tyre availability and vehicle requirements.',
+                  badge: '24/7 DISPATCH',
                   href: '/home-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
-                  desc: 'Professional mobile puncture repair across Stockport, carried out on-site where safe and suitable.',
+                  title: 'Mobile Puncture Repair',
+                  desc: 'Our technicians can inspect a punctured tyre and determine whether a repair is safe and appropriate. Tyres with unsuitable damage may need replacing instead.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
                 },
                 {
-                  img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
-                  title: 'Jump Start',
-                  desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Stockport.',
-                  badge: '24/7 SERVICE',
-                  href: '/jump-start',
-                },
-                {
-                  img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
-                  title: 'TPMS Reset',
-                  desc: 'Tyre pressure monitoring system reset and sensor checks across Stockport after every fitting or repair.',
-                  badge: 'ALL VEHICLES',
-                  href: '/tpms-reset',
-                },
-                {
-                  img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp',
-                  title: 'Locking Nut Removal',
-                  desc: 'Specialist, damage-free locking wheel nut removal across Stockport using professional tools.',
-                  badge: 'DAMAGE FREE',
-                  href: '/locking-nut-removal',
+                  img: '/images/tyre-fitting-at-home.webp',
+                  title: 'Home and Workplace Tyre Fitting',
+                  desc: 'Avoid an unnecessary trip to a garage. We can arrange mobile tyre fitting at your property or workplace where there is safe access and sufficient space to carry out the work.',
+                  badge: 'AT YOUR DOOR',
+                  href: '/home-tyre-fitting',
                 },
                 {
                   img: '/images/professional-mobile-tyre-fitting.webp',
-                  title: 'Roadside Assistance',
-                  desc: 'Emergency roadside support for tyre and vehicle problems across Stockport, wherever you get stranded.',
+                  title: 'Roadside Tyre Assistance',
+                  desc: 'If you experience tyre trouble while travelling, contact us with your location. On motorways, follow the relevant breakdown and road-safety procedures rather than attempting a tyre change in a live traffic area.',
                   badge: '24/7 SUPPORT',
                   href: '/roadside-assistance',
+                },
+                {
+                  img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
+                  title: 'Tyre Pressure and TPMS Checks',
+                  desc: 'Where applicable, tyre pressure and the tyre pressure monitoring system (TPMS) can be checked following fitting or repair.',
+                  badge: 'ALL VEHICLES',
+                  href: '/tpms-reset',
                 },
               ].map((card) => (
                 <a
@@ -313,10 +318,13 @@ export default function StockportPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Stockport
+                Professional Mobile Tyre Fitting in Stockport
               </h2>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A damaged or flat tyre can disrupt your journey and make driving unsafe. Our mobile tyre fitting service brings tyre assistance directly to you, helping you avoid the inconvenience of travelling to a garage when your vehicle cannot be driven safely.
+              </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Stockport, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre. Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Stockport and surrounding areas. We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Stockport. If you&apos;re searching for mobile tyre fitting near me in Stockport, our fast response team is available day and night.
+                One Stop Tyres 247 provides mobile tyre fitting and emergency tyre replacement across Stockport, including residential streets, workplaces and accessible roadside locations. We assess the condition of your tyre before recommending the appropriate solution. Whether you need a replacement after a blowout or a puncture inspection, our team can explain the available options and arrange a visit based on your location, tyre requirements and service availability.
               </p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem icon="bolt" title="24/7 Mobile Tyre Fitting" desc="Tyres fitted at your home, workplace or roadside location." />
@@ -328,9 +336,141 @@ export default function StockportPage() {
         </section>
 
         {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
-        <WhyChooseUs city="Stockport" image="/images/mobile-tyre-fitting-manchester.webp" />
+        <WhyChooseGrid
+          heading="Why Stockport Drivers Choose Our Mobile Tyre Service"
+          intro="When choosing a mobile tyre fitter, you need clear information, suitable tyres and a service that fits your circumstances."
+          items={[
+            { icon: 'bolt', title: '24/7 Availability', desc: 'Tyre problems do not always happen during normal garage opening hours. Our service operates around the clock in covered areas, subject to technician availability.' },
+            { icon: 'home_repair_service', title: 'Mobile Assistance at Your Location', desc: 'We can arrange tyre fitting at your home, workplace or a suitable roadside location, so you may not need to take your vehicle to a garage.' },
+            { icon: 'sell', title: 'Clear, Upfront Pricing', desc: 'The cost depends on your tyre size, chosen tyre, location and work required. Ask for a quote before confirming the service so you understand the expected cost.' },
+            { icon: 'build', title: 'Repair or Replacement Advice', desc: 'Not every puncture can be repaired safely. Our technicians can inspect the damage and explain whether a suitable repair or replacement is the better option.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: 'Premium, mid-range and budget tyre options may be available. The right choice depends on your vehicle, tyre specifications and current stock.' },
+            { icon: 'engineering', title: 'Convenient Emergency Support', desc: 'If your vehicle has an unsafe or unusable tyre, contact our team to discuss the problem and confirm whether mobile assistance is available at your location.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Stockport Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 or 0161 399 5851. Explain whether you have a puncture, flat tyre, blowout or need a planned tyre replacement.' },
+                { title: 'Share Your Location and Vehicle Details', desc: 'Provide your postcode or location pin, vehicle make and model, and tyre size if known. A clear photograph of the tyre markings can help the team identify the required size.' },
+                { title: 'Confirm the Quote and Availability', desc: 'Our team will discuss suitable options, pricing and the estimated arrival time. Availability depends on your location, the tyre required and current demand.' },
+                { title: 'Have Your Tyre Assessed and Fitted', desc: 'The technician will inspect the tyre and determine whether repair or replacement is appropriate. If a replacement is needed, the fitting can proceed once a suitable tyre and safe working conditions are confirmed.' },
+                { title: 'Check the Vehicle Before Driving', desc: 'After the work, check that you understand any advice provided by the technician. Tyre pressure and TPMS checks can be carried out where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Stockport
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If your tyre has a sidewall bulge, serious damage, a blowout or a puncture that cannot be repaired safely, replacement may be necessary.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement service in Stockport can help drivers who need a new tyre fitted without making a separate trip to a tyre centre. We can discuss available tyre options and confirm whether the required size is in stock before arranging the visit.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              When contacting us, share your vehicle details and tyre size if possible. This helps the team identify a suitable replacement and provide a more accurate quote.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We can help with tyre replacement at suitable locations across Stockport, including Bramhall, Cheadle, Hazel Grove, Reddish, Marple and nearby neighbourhoods.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Puncture Repair in Stockport
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A flat tyre can happen on your driveway, in a workplace car park or while travelling along a busy road. If your tyre is damaged, avoid driving on it when doing so could put you or other road users at risk.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Contact our team and explain your situation. We will discuss the available assistance, the estimated arrival time and whether a suitable replacement tyre may be required.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our service covers Stockport and nearby areas, including routes around the A6 and M60. Actual attendance depends on the exact location, safe access, traffic, weather, technician availability and the work required.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you break down on a motorway, prioritise your safety and follow the relevant motorway breakdown guidance. Do not attempt repairs beside live traffic.
+            </p>
+          </div>
+        </section>
+
+        {/* ── MOBILE TYRE FITTING AREAS IN STOCKPORT ────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight text-center"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Fitting Areas in Stockport
+            </h2>
+            <p className="text-slate-600 mb-8 leading-relaxed text-base sm:text-lg text-center max-w-2xl mx-auto">
+              We provide mobile tyre fitting across Stockport and a range of surrounding neighbourhoods. Coverage and arrival times should be confirmed for your exact postcode.
+            </p>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3 mb-8">
+              {[
+                'Stockport town centre', 'Bramhall', 'Bredbury', 'Cheadle',
+                'Cheadle Hulme', 'Gatley', 'Hazel Grove', 'Heald Green',
+                'Heaton Chapel', 'Heaton Mersey', 'Heaton Moor', 'Heaton Norris',
+                'High Lane', 'Reddish', 'Romiley', 'Marple',
+                'Marple Bridge', 'Mellor', 'Woodley', 'Adswood',
+                'Brinnington', 'Davenport', 'Edgeley', 'Great Moor',
+                'Offerton', 'Compstall', 'Disley',
+              ].map((area) => (
+                <li key={area} className="flex items-center gap-2 text-slate-700 text-sm sm:text-base">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '18px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span>{area}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg text-center">
+              Not sure whether your location is covered? Call 07759 708 646 with your postcode and our team can confirm availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -342,27 +482,47 @@ export default function StockportPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="stockport" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-stockport"
           city="Stockport"
           faqs={[
-            { q: 'How quickly can you reach me in Stockport?', a: 'Our rapid response teams are stationed across Stockport, enabling us to reach most of the borough including Bramhall, Cheadle, Heaton Moor, and Marple within 20-30 minutes.' },
-            { q: 'Do you cover the A6 and M60 near Stockport?', a: 'Yes. We provide full emergency tyre fitting on the A6, M60, and all major routes through the Stockport metropolitan borough, 24 hours a day.' },
-            { q: 'What tyre brands do you stock for Stockport drivers?', a: 'We stock all premium brands including Michelin, Continental, Bridgestone, Pirelli, Dunlop, and Goodyear, alongside mid-range and budget options for all budgets.' },
-            { q: 'Can you fit tyres at my home in Hazel Grove or Romiley?', a: 'Absolutely. Our home tyre fitting service covers all of Stockport borough including Hazel Grove, Romiley, Bredbury, and Gatley — we come to you at a time that suits.' },
+            { q: 'Do you provide mobile tyre fitting in Stockport 24/7?', a: 'Yes, our mobile tyre fitting service operates 24 hours a day in covered areas. Contact us to confirm technician availability and arrange assistance for your location.' },
+            { q: 'How quickly can a mobile tyre fitter reach me in Stockport?', a: 'The current service page gives a typical response estimate of around 20–30 minutes. This is not guaranteed; actual arrival time depends on your postcode, traffic, weather, technician availability and the work required. Confirm the estimated arrival time when booking.' },
+            { q: 'Can you fit a tyre at my home in Stockport?', a: 'Yes. We can arrange mobile tyre fitting at your home where there is sufficient space and safe access for the technician to work.' },
+            { q: 'Do you offer mobile tyre fitting at workplaces?', a: 'Yes. Workplace tyre fitting can be arranged where the location is accessible and suitable for the work. Provide your workplace address and preferred time when requesting a quote.' },
+            { q: 'Can you replace a flat tyre at the roadside?', a: 'We can discuss roadside tyre assistance where the vehicle is in a safe, accessible location. If you are on a motorway or beside moving traffic, follow official breakdown procedures and do not attempt to change the tyre in an unsafe area.' },
+            { q: 'Can you repair a punctured tyre in Stockport?', a: 'Our technicians can inspect the puncture and determine whether the tyre can be repaired safely. The damage location, size and condition of the tyre affect whether a repair is appropriate.' },
+            { q: 'When does a tyre need to be replaced instead of repaired?', a: 'Replacement may be necessary if the tyre has serious sidewall damage, a bulge, a blowout or damage that cannot be repaired safely. The technician can assess the tyre and explain the available options.' },
+            { q: 'How much does mobile tyre fitting in Stockport cost?', a: 'The cost depends on the tyre size, tyre brand, type of service, location and time of attendance. Contact us for a quote based on your vehicle and requirements before confirming the booking.' },
+            { q: 'Can I choose between premium and budget tyres?', a: 'Premium, mid-range and budget options may be available, depending on your tyre size and current stock. Tell us your preferences when requesting a quote.' },
+            { q: 'What information do I need to book a mobile tyre fitter?', a: 'Provide your location or postcode, vehicle make and model, tyre size if known, and a description of the problem. A photograph of the tyre markings can also help identify the correct replacement.' },
+            { q: 'What if I do not know my tyre size?', a: 'Tell us your vehicle make, model and registration details when you contact the team. If possible, send a photograph of the numbers and letters printed on the tyre sidewall so the required size can be checked.' },
+            { q: 'Can you fit tyres in Bramhall, Cheadle and Hazel Grove?', a: 'These areas are listed within our Stockport coverage. Contact us with your exact postcode to confirm availability and the estimated arrival time.' },
+            { q: 'Do you cover the A6 and M60 around Stockport?', a: 'Our service page lists the A6 and M60 among the routes covered. Attendance depends on your exact location and whether the work can be carried out safely. On motorways, follow the appropriate breakdown and road-safety procedures.' },
+            { q: 'Can you supply a replacement tyre if mine has blown out?', a: 'We can discuss replacement options if your tyre has blown out. The correct tyre must be available and compatible with your vehicle. Share your location and tyre details so the team can confirm what is possible.' },
+            { q: 'Can you help with run-flat tyres?', a: 'Contact us with your vehicle details and the run-flat tyre specifications. Availability and the appropriate fitting procedure depend on the tyre and vehicle requirements, so confirm these details before booking.' },
+            { q: 'Can you help if I have lost my locking wheel nut key?', a: 'Tell us when you book. Locking wheel nut removal may be available, but the technician will need to confirm whether the required tools and procedure are suitable for your vehicle.' },
+            { q: 'Do you accept card and contactless payments?', a: 'The current Stockport service page lists card, cash and contactless payments. Confirm accepted payment options when arranging your booking if you have a specific requirement.' },
+            { q: 'Can I book a tyre fitting for a specific time?', a: 'You can request a preferred time when contacting the team. The available appointment will depend on technician scheduling, your location and the tyre required.' },
+            { q: 'Do you check tyre pressure after fitting?', a: 'Tyre pressure can be checked as part of the fitting process, and TPMS checks may be available where applicable. Ask the technician if your vehicle requires a particular pressure or monitoring-system check.' },
+            { q: 'How do I book emergency mobile tyre fitting in Stockport?', a: 'Call 07759 708 646 or 0161 399 5851. Provide your location, vehicle details and a brief description of the tyre problem. The team can then discuss the quote, availability and estimated arrival time.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Stockport Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Stockport line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Stockport?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">A puncture or damaged tyre does not have to mean an unnecessary trip to a garage. Contact One Stop Tyres 247 for mobile tyre fitting, emergency tyre replacement and puncture assessment across Stockport and nearby areas. Call us to explain your tyre problem, check availability and receive a quote before arranging your visit. Mobile tyre fitting at home, work or a suitable roadside location — available 24/7 in covered areas.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
+              </a>
+              <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+441613995851">
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                0161 399 5851
               </a>
               <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="https://wa.me/447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>

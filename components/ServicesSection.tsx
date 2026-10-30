@@ -54,15 +54,17 @@ const SERVICES = [
 
 /** "Our Services" card grid + call strip. Used on the homepage and the main service pages.
  *  `exclude` hides the card for the page it's rendered on; `cta={false}` drops the call strip
- *  where a final CTA section already follows. */
+ *  where a final CTA section already follows; `heading` overrides the H2. */
 export default function ServicesSection({
   exclude,
   bg = 'bg-slate-50',
   cta = true,
+  heading,
 }: {
   exclude?: string
   bg?: string
   cta?: boolean
+  heading?: string
 }) {
   const cards = SERVICES.filter((card) => card.href !== exclude)
   return (
@@ -77,7 +79,7 @@ export default function ServicesSection({
             className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
           >
-            {exclude ? 'Our Other Tyre Services Near You' : 'Our Tyre Services Near You'}
+            {heading ?? (exclude ? 'Our Other Tyre Services Near You' : 'Our Tyre Services Near You')}
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-base">
             From emergency tyre problems to planned tyre fitting, our mobile team provides practical

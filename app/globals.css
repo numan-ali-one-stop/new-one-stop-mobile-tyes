@@ -280,3 +280,58 @@
 @media (prefers-reduced-motion: reduce) {
   .badge-glow, .badge-glow::after, .hero-badge-glow::after, .badge-dot-ping { animation: none !important; }
 }
+
+/* ─── Hero quote card (components/QuickQuoteForm.tsx, variant="hero") ──────
+   Rotating red gradient border, shimmering title, bouncing bolt icon and a staggered
+   fade-up of the heading, fields and button once the card scrolls into view. */
+@property --quote-angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+.quote-card {
+  position: relative; padding: 2px;
+  background: conic-gradient(from var(--quote-angle), rgba(255,255,255,0.12) 0deg, #FF4444 60deg, #b70011 120deg, rgba(255,255,255,0.12) 180deg, rgba(255,255,255,0.12) 360deg);
+  box-shadow: 0 20px 50px -15px rgba(183,0,17,0.45);
+  animation: quoteBorderSpin 4s linear infinite;
+}
+.quote-card-inner { background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%); }
+@keyframes quoteBorderSpin { to { --quote-angle: 360deg; } }
+.quote-title {
+  background: linear-gradient(90deg, #fff 0%, #fff 40%, #FF6B6B 50%, #fff 60%, #fff 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: quoteTitleShimmer 3.5s ease-in-out infinite;
+}
+@keyframes quoteTitleShimmer {
+  0%   { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+.quote-bolt { animation: ctaCallPulse 2s ease-out infinite, quoteBoltBounce 2s ease-in-out infinite; }
+@keyframes quoteBoltBounce {
+  0%, 60%, 100% { transform: translateY(0) scale(1); }
+  70% { transform: translateY(-4px) scale(1.1); }
+  80% { transform: translateY(0) scale(1); }
+}
+.quote-card:not(.is-visible) .quote-reveal,
+.quote-card:not(.is-visible) form > div > div,
+.quote-card:not(.is-visible) .quote-submit,
+.quote-card:not(.is-visible) form > p { opacity: 0; }
+.quote-card.is-visible .quote-reveal,
+.quote-card.is-visible form > div > div,
+.quote-card.is-visible .quote-submit,
+.quote-card.is-visible form > p { animation: quoteFadeUp .55s cubic-bezier(.2,.7,.3,1) backwards; }
+.quote-card.is-visible form > div > div:nth-child(1) { animation-delay: .15s; }
+.quote-card.is-visible form > div > div:nth-child(2) { animation-delay: .23s; }
+.quote-card.is-visible form > div > div:nth-child(3) { animation-delay: .31s; }
+.quote-card.is-visible form > div > div:nth-child(4) { animation-delay: .39s; }
+.quote-card.is-visible form > div > div:nth-child(5) { animation-delay: .47s; }
+.quote-card.is-visible .quote-submit { animation-delay: .57s; }
+.quote-card.is-visible form > p { animation-delay: .65s; }
+@keyframes quoteFadeUp { from { opacity: 0; transform: translateY(14px); } }
+.quote-card input { transition: box-shadow .2s ease, transform .2s ease; }
+.quote-card input:focus { transform: translateY(-1px); box-shadow: 0 6px 18px -6px rgba(255,68,68,0.6); }
+.quote-submit { box-shadow: 0 10px 25px -8px rgba(183,0,17,0.7); }
+@media (prefers-reduced-motion: reduce) {
+  .quote-card, .quote-title, .quote-bolt { animation: none !important; }
+  .quote-card .quote-reveal,
+  .quote-card form > div > div,
+  .quote-card .quote-submit,
+  .quote-card form > p { opacity: 1 !important; animation: none !important; }
+}

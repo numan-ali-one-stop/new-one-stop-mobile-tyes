@@ -1,8 +1,14 @@
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 
 /** Google reviews block (rating badge + review carousel). Used on the homepage, contact and main service pages.
- *  `bg` lets a page alternate section backgrounds (e.g. white when a grey section follows). */
-export default function GoogleReviewsSection({ bg = 'bg-slate-50' }: { bg?: string }) {
+ *  `bg` lets a page alternate section backgrounds (e.g. white when a grey section follows); `heading` overrides the H2. */
+export default function GoogleReviewsSection({
+  bg = 'bg-slate-50',
+  heading = 'What Our Customers Say About Our Tyre Repair Service',
+}: {
+  bg?: string
+  heading?: string
+}) {
   return (
     <section className={`py-16 sm:py-24 px-4 sm:px-6 ${bg}`}>
       <div className="max-w-7xl mx-auto">
@@ -16,7 +22,7 @@ export default function GoogleReviewsSection({ bg = 'bg-slate-50' }: { bg?: stri
             className="text-2xl sm:text-[32px] font-bold text-[#0f172a] mb-4"
             style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
           >
-            What Our Customers Say About Our Tyre Repair Service
+            {heading}
           </h2>
           {/* Rating badge */}
           <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white border border-slate-200 shadow-sm rounded-full px-5 py-2.5">

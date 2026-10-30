@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState, type FormEvent } from 'react'
+import { useEffect, useId, useRef, useState, type FormEvent } from 'react'
 import { PHONE, PHONE_TEL } from '@/lib/constants'
 
 interface QuickQuoteFormProps {
@@ -27,6 +27,29 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
   const [postcode, setPostcode] = useState('')
   const [phone, setPhone] = useState('')
   const [sent, setSent] = useState(false)
+  const cardRef = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  // Play the hero card's entrance animation when it scrolls into view.
+  useEffect(() => {
+    const el = cardRef.current
+    if (!el) return
+    if (!('IntersectionObserver' in window)) {
+      setVisible(true)
+      return
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -158,14 +181,14 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
         type="submit"
         className={
           isHero
-            ? 'w-full bg-white text-[#0f172a] hover:bg-slate-100 font-black py-3.5 rounded-lg transition-colors text-sm sm:text-base uppercase tracking-wide'
+            ? 'quote-submit cta-btn w-full bg-gradient-to-r from-[#b70011] to-[#FF4444] text-white font-black py-3.5 rounded-lg text-sm sm:text-base uppercase tracking-wide'
             : 'w-full bg-[#b70011] hover:bg-red-700 text-white font-black py-4 rounded-xl shadow-lg transition-colors uppercase tracking-wider text-sm'
         }
         style={{ fontFamily: 'var(--font-work-sans)' }}
       >
         Get My Quote
       </button>
-      <p className={`text-xs ${isHero ? 'text-white/60' : 'text-slate-500'}`}>
+      <p className={`text-xs ${isHero ? 'text-white/60 text-center' : 'text-slate-500'}`}>
         We&apos;ll reply on WhatsApp with a price. No obligation.
       </p>
     </form>
@@ -173,15 +196,26 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
 
   if (isHero) {
     return (
-      <div className="mt-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 sm:p-5">
-        {sent ? confirmation : (
-          <>
-            <p className="text-white font-bold text-base sm:text-lg mb-3" style={{ fontFamily: 'var(--font-work-sans)' }}>
-              Instant Quote
-            </p>
-            {form}
-          </>
-        )}
+      <div ref={cardRef} className={`quote-card mt-6 rounded-2xl ${visible ? 'is-visible' : ''}`}>
+        <div className="quote-card-inner rounded-2xl p-4 sm:p-6">
+          {sent ? confirmation : (
+            <>
+              <div className="quote-reveal text-center mb-4 sm:mb-5">
+                <span className="quote-bolt inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#b70011] text-white mb-3">
+                  <span className="material-symbols-outlined fill-1" aria-hidden="true">bolt</span>
+                </span>
+                <p
+                  className="quote-title text-xl sm:text-2xl font-black leading-tight"
+                  style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+                >
+                  Get Your Instant Quote Now
+                </p>
+                <p className="text-white/70 text-sm mt-1.5">Fill in your details and we&apos;ll send you a price</p>
+              </div>
+              {form}
+            </>
+          )}
+        </div>
       </div>
     )
   }

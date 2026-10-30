@@ -1,30 +1,39 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-trafford',
-  name: 'Mobile Tyre Fitting in Trafford',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Trafford' },
+  alternateName: '24/7 Mobile Tyre Fitting Trafford',
+  areaServed: 'Trafford, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Trafford? Get 24/7 tyre replacement, puncture repair and roadside assistance at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-trafford')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-trafford')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-trafford',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Trafford',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Trafford | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Trafford | 24/7 Tyre Replacement',
   description:
-    'Choose mobile tyre fitting in Trafford — same day fitting, dependable roadside assistance.',
+    'Need mobile tyre fitting in Trafford? Get 24/7 tyre replacement, puncture repair and roadside assistance at home, work or roadside.',
   path: '/mobile-tyre-fitting-trafford',
 })
 
@@ -45,7 +54,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function TraffordPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -65,18 +77,18 @@ export default function TraffordPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Trafford. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Trafford? Our mobile team comes to you for a flat tyre at home, a puncture at work or a damaged tyre.
             </p>
 
             {/* Trust bullets — hidden for now
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Trafford & Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Emergency Mobile Tyre Fitting',
+                'Tyre Replacement At Home, Work Or Roadside',
+                'Puncture Inspection and Repair Where Suitable',
+                'Premium, Mid-Range and Budget Tyre Options',
+                'Mobile Jump-Start Assistance',
+                'TPMS Checks and Locking Wheel Nut Removal',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -169,62 +181,69 @@ export default function TraffordPage() {
                 className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Trafford
+                Our Mobile Tyre Services in Trafford
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across Trafford. We come to your home, workplace or roadside location 24/7 with fast response times and professional service.
+                A flat or damaged tyre can disrupt your journey and make driving unsafe. Our mobile tyre fitting service brings tyre assistance directly to your location, helping you avoid an unnecessary trip to a garage when your vehicle cannot be driven safely.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
-                  title: 'Mobile Tyre Fitting',
-                  desc: 'Mobile tyre fitting at your home, workplace or roadside location anywhere in Trafford. Fast response with premium and budget tyre options available.',
+                  title: '24/7 Mobile Tyre Fitting',
+                  desc: 'Arrange tyre fitting at your home, workplace or another suitable location across Trafford. Contact our team to confirm availability and discuss your tyre requirements.',
                   badge: 'FAST RESPONSE',
                   href: '/mobile-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp',
-                  title: 'Home Tyre Fitting',
-                  desc: 'Same day tyre fitting at your home across Trafford, without the hassle of visiting a garage.',
-                  badge: 'AT YOUR DOOR',
+                  title: 'Emergency Tyre Replacement',
+                  desc: 'If your tyre has suffered a blowout or damage that makes it unsafe to repair, we can help arrange a suitable replacement, subject to stock and vehicle specifications.',
+                  badge: '24/7 DISPATCH',
                   href: '/home-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
-                  desc: 'Professional mobile puncture repair across Trafford, carried out on-site where safe and suitable.',
+                  title: 'Mobile Puncture Repair',
+                  desc: 'Our technicians can inspect a punctured tyre and determine whether it can be repaired safely. If the damage is unsuitable for repair, a replacement may be necessary.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
                 },
                 {
+                  img: '/images/tyre-fitting-at-home.webp',
+                  title: 'Home and Workplace Tyre Fitting',
+                  desc: 'Save time by arranging tyre fitting at your property or workplace. The location must have enough space and safe access for the technician to carry out the work.',
+                  badge: 'AT YOUR DOOR',
+                  href: '/home-tyre-fitting',
+                },
+                {
+                  img: '/images/professional-mobile-tyre-fitting.webp',
+                  title: 'Roadside Tyre Assistance',
+                  desc: 'If you experience tyre trouble while travelling around Trafford, share your exact location with our team. We can discuss available assistance and the estimated arrival time.',
+                  badge: '24/7 SUPPORT',
+                  href: '/roadside-assistance',
+                },
+                {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
-                  title: 'Jump Start',
-                  desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Trafford.',
+                  title: 'Mobile Jump-Start Assistance',
+                  desc: 'If your vehicle will not start because of a flat battery, ask about our mobile jump-start service. Availability depends on your location and vehicle requirements.',
                   badge: '24/7 SERVICE',
                   href: '/jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
-                  title: 'TPMS Reset',
-                  desc: 'Tyre pressure monitoring system reset and sensor checks across Trafford after every fitting or repair.',
+                  title: 'TPMS Checks and Resets',
+                  desc: 'Tyre pressure monitoring system (TPMS) checks or resets may be available after fitting or repair, depending on the vehicle and the system installed.',
                   badge: 'ALL VEHICLES',
                   href: '/tpms-reset',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp',
-                  title: 'Locking Nut Removal',
-                  desc: 'Specialist, damage-free locking wheel nut removal across Trafford using professional tools.',
+                  title: 'Locking Wheel Nut Removal',
+                  desc: 'If you have lost your locking wheel nut key, tell us before booking. Removal may be possible depending on the wheel nut design, vehicle and equipment required.',
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
-                },
-                {
-                  img: '/images/professional-mobile-tyre-fitting.webp',
-                  title: 'Roadside Assistance',
-                  desc: 'Emergency roadside support for tyre and vehicle problems across Trafford, wherever you get stranded.',
-                  badge: '24/7 SUPPORT',
-                  href: '/roadside-assistance',
                 },
               ].map((card) => (
                 <a
@@ -313,13 +332,13 @@ export default function TraffordPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Trafford
+                Professional Mobile Tyre Fitting in Trafford
               </h2>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat or damaged tyre can disrupt your journey and make driving unsafe. Our mobile tyre fitting service brings tyre assistance directly to your location, helping you avoid an unnecessary trip to a garage when your vehicle cannot be driven safely.
+              </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Trafford, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Trafford and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Trafford.
-                If you&apos;re searching for mobile tyre fitting near me in Trafford, our fast response team is available day and night.
+                One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture repair across Trafford. Whether you are at home in Sale, at work in Altrincham or dealing with a tyre problem near the Trafford Centre, our team can discuss your requirements and confirm service availability. We can supply and fit suitable replacement tyres, inspect punctures and provide roadside assistance where safe access is available. Our team will explain the available options and pricing before you confirm the service.
               </p>
               <ul className="space-y-4 sm:space-y-5">
                 <FeatureItem
@@ -343,9 +362,150 @@ export default function TraffordPage() {
         </section>
 
         {/* ── 5. WHY TRAFFORD DRIVERS CHOOSE US ────────────── */}
-        <WhyChooseUs city="Trafford" image="/images/tyre-fitting-at-home.webp" />
+        <WhyChooseGrid
+          heading="Why Trafford Drivers Choose Our Mobile Tyre Service"
+          intro="When you have a damaged tyre, you need convenient assistance, clear pricing and a suitable solution for your vehicle."
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Availability', desc: 'Tyre problems can happen at any time. Our mobile service operates around the clock in covered areas, subject to technician availability.' },
+            { icon: 'home_repair_service', title: 'Assistance at Your Location', desc: 'We can arrange tyre fitting at home, work or a suitable roadside location. This can be particularly useful when driving on a damaged tyre would be unsafe.' },
+            { icon: 'sell', title: 'Clear, Upfront Pricing', desc: 'The cost depends on your tyre size, chosen tyre, location and the work required. Our team will explain the quote before the service is confirmed.' },
+            { icon: 'engineering', title: 'Insured Professional Technicians', desc: 'Our Trafford service page states that technicians are insured. Share your vehicle details when booking so the team can confirm that the required work can be carried out.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: 'Premium, mid-range and budget tyres may be available depending on your tyre size and current stock. Ask the team about suitable options before confirming your booking.' },
+            { icon: 'build', title: 'Additional Vehicle Assistance', desc: 'Alongside tyre fitting and replacement, we offer services including puncture repair, jump-start assistance, TPMS checks and locking wheel nut removal, subject to suitability and availability.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Trafford Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 or 0161 399 5851. Explain whether you have a puncture, flat tyre, blowout or need a planned replacement.' },
+                { title: 'Share Your Location and Vehicle Details', desc: 'Provide your postcode or location pin, vehicle make and model, and tyre size if known. A photograph of the tyre sidewall can help identify the correct size.' },
+                { title: 'Confirm Your Quote and Arrival Estimate', desc: 'Our team will discuss suitable tyre options, pricing and the estimated arrival time. Timing depends on your location, traffic, technician availability and tyre stock.' },
+                { title: 'Have Your Tyre Assessed', desc: 'The technician will inspect the tyre and determine whether repair or replacement is appropriate. If a replacement is required, the correct tyre must be available and compatible with your vehicle.' },
+                { title: 'Complete the Fitting or Repair', desc: 'Once the work and price are agreed, the technician can carry out the service if the location and conditions are safe. Tyre pressure and TPMS checks can be completed where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Trafford
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A tyre with a sidewall bulge, serious damage, a blowout or an unsuitable puncture may need replacing rather than repairing.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement service in Trafford helps drivers arrange a replacement without having to take their vehicle to a garage. We can discuss suitable tyre options and check availability before arranging a visit.
+            </p>
+            <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">
+              When requesting a replacement, provide your vehicle details and tyre size if possible. This helps the team identify a suitable tyre and give you a more accurate quote.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We cover locations throughout Trafford, including:</p>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3">
+              {[
+                'Stretford', 'Altrincham', 'Sale', 'Urmston',
+                'Old Trafford', 'Timperley', 'Bowdon', 'Hale',
+                'Davyhulme', 'Flixton', 'Partington', 'Ashton upon Mersey',
+                'Broadheath', 'Brooklands', 'Sale Moor', 'Carrington',
+              ].map((area) => (
+                <li key={area} className="flex items-center gap-2 text-slate-700 text-sm sm:text-base">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '18px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span>{area}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting Near the Trafford Centre
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A flat tyre near a shopping centre, business park or busy road can leave you stranded and disrupt your plans. If your vehicle cannot be driven safely, contact our team rather than risking further damage.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We provide mobile tyre fitting across Trafford, including the Trafford Centre area and nearby locations such as Stretford, Urmston and Davyhulme. Share your exact location so the team can confirm whether assistance is available and provide an arrival estimate.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our listed road coverage includes the M60, M56, A56 and A57 in the wider Greater Manchester area. Attendance depends on your exact position, traffic and safe access.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              <span className="font-bold text-[#0f172a]">Motorway safety:</span> If you break down on a motorway, follow official breakdown procedures and contact the appropriate assistance service. Do not attempt to change a tyre beside live traffic or in another unsafe location.
+            </p>
+          </div>
+        </section>
+
+        {/* ── MOBILE TYRE FITTING AREAS IN TRAFFORD ─────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight text-center"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Fitting Areas in Trafford
+            </h2>
+            <p className="text-slate-600 mb-8 leading-relaxed text-base sm:text-lg text-center max-w-2xl mx-auto">
+              We provide mobile tyre fitting across Trafford and surrounding neighbourhoods. Contact us with your postcode to confirm coverage and availability.
+            </p>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3 mb-8">
+              {[
+                'Altrincham', 'Ashton upon Mersey', 'Baguley', 'Bowdon',
+                'Broadheath', 'Brooklands', 'Carrington', 'Davyhulme',
+                'Dunham Massey', 'Flixton', 'Hale', 'Old Trafford',
+                'Partington', 'Priory Green', 'Sale', 'Sale Moor',
+                'Stretford', 'Timperley', 'Urmston', 'Urmston Meadows',
+              ].map((area) => (
+                <li key={area} className="flex items-center gap-2 text-slate-700 text-sm sm:text-base">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '18px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span>{area}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg text-center">
+              Mobile tyre assistance around the M60 and A56: if you experience a tyre problem while travelling around Trafford, provide your location as accurately as possible. For motorway breakdowns, prioritise your safety and follow the relevant motorway procedures.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -357,35 +517,41 @@ export default function TraffordPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="trafford" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-trafford"
           city="Trafford"
           faqs={[
-            {
-              q: 'How quickly can you reach me near the Trafford Centre?',
-              a: 'Our strategic location near the M60 allows us to typically reach the Trafford Centre and surrounding areas within 20-30 minutes, depending on traffic. We cover Stretford, Sale, Altrincham, Urmston, and Old Trafford.',
-            },
-            {
-              q: 'Do you cover the M60 and M63 through Trafford?',
-              a: 'Yes. We provide 24/7 emergency tyre fitting on the M60 and all major A-roads through Trafford, including the A56 and A57.',
-            },
-            {
-              q: 'What tyre brands do you stock for Trafford drivers?',
-              a: 'We carry all major premium brands including Michelin, Continental, Bridgestone, Pirelli, and Goodyear, alongside mid-range and budget options to suit every vehicle.',
-            },
-            {
-              q: 'Can you come to my home in Altrincham or Sale?',
-              a: 'Absolutely. Our home tyre fitting service covers the entire Trafford borough. We come to your driveway and fit your tyres while you relax at home.',
-            },
+            { q: 'Do you provide mobile tyre fitting in Trafford 24/7?', a: 'Yes. Our mobile tyre fitting service operates 24 hours a day in covered areas. Contact us to confirm technician availability and arrange a visit.' },
+            { q: 'How quickly can a mobile tyre fitter reach me in Trafford?', a: 'The current page advertises a typical response estimate of around 20–30 minutes. This is not guaranteed; actual arrival time depends on your location, traffic, weather, technician availability and the work required. Confirm the estimate when booking.' },
+            { q: 'Can you provide mobile tyre fitting near the Trafford Centre?', a: 'Yes. The Trafford Centre area is within our stated Trafford coverage. Contact us with your exact location to confirm availability and the estimated arrival time.' },
+            { q: 'Do you offer home tyre fitting in Sale and Altrincham?', a: 'Yes. Our service covers home tyre fitting across Trafford, including Sale and Altrincham, subject to availability and suitable access.' },
+            { q: 'Can you fit tyres at my workplace?', a: 'Yes. We can arrange workplace tyre fitting where there is enough space and safe access for the technician to work. Provide the address and your preferred time when requesting a quote.' },
+            { q: 'Do you offer emergency tyre replacement in Trafford?', a: 'Yes. We provide emergency tyre replacement in covered areas when a suitable tyre is available. The technician will assess the damaged tyre and explain the available options.' },
+            { q: 'Can you repair a punctured tyre at my location?', a: 'Our technicians can inspect a punctured tyre and determine whether repair is safe and appropriate. Tyres with unsuitable damage or unsafe wear may need replacing.' },
+            { q: 'How much does mobile tyre fitting in Trafford cost?', a: 'The price depends on your tyre size, tyre brand, location and the service required. Contact us for a quote before confirming the booking.' },
+            { q: 'Can I choose premium or budget tyres?', a: 'Yes. Premium and budget tyre options are listed among our services, with availability depending on the required size and current stock. Ask the team about suitable options and prices.' },
+            { q: 'What information do I need to book a mobile tyre fitter?', a: 'Provide your postcode or location pin, vehicle make and model, tyre size if known, and a description of the problem. A photograph of the tyre markings can help identify the correct size.' },
+            { q: 'What if I do not know my tyre size?', a: 'Share your vehicle details and, if possible, a photograph of the numbers and letters printed on the tyre sidewall. The team can use these details to help identify the required size.' },
+            { q: 'Do you cover Stretford, Urmston and Old Trafford?', a: 'Yes. Stretford, Urmston and Old Trafford are among the locations listed in our Trafford coverage. Contact us to confirm availability for your exact postcode.' },
+            { q: 'Can you come to Bowdon, Hale or Timperley?', a: 'Yes. Bowdon, Hale and Timperley are included in the listed service area. Actual attendance depends on your location and current availability.' },
+            { q: 'Do you provide tyre assistance around the M60 and A56?', a: 'Our listed coverage includes the M60 and major routes such as the A56. Assistance depends on your exact location and safe access. Follow official motorway breakdown procedures if you are stranded on a motorway.' },
+            { q: 'Can you replace a tyre after a blowout?', a: 'Yes. We can discuss replacement options if your tyre has suffered a blowout. The correct tyre must be available and compatible with your vehicle.' },
+            { q: 'Do you provide mobile jump-start assistance?', a: "Yes. Mobile jump-start assistance is listed among our services. Contact us to confirm availability and explain your vehicle's symptoms." },
+            { q: 'Can you check or reset my TPMS?', a: 'TPMS checks and resets are listed among our services. The work required depends on your vehicle and the monitoring system fitted.' },
+            { q: 'Can you remove a locking wheel nut if I have lost the key?', a: 'Locking wheel nut removal is listed as a service. Tell us your vehicle details when booking so the team can confirm whether removal is possible with the available equipment.' },
+            { q: 'Do you accept card and contactless payments?', a: 'The current Trafford page lists card, cash and contactless payments. If you have a specific payment requirement, confirm the available options when booking.' },
+            { q: 'Can I book a specific time for tyre fitting?', a: 'You can request a preferred time when contacting the team. Appointment availability depends on technician scheduling, your location and the tyre required.' },
+            { q: 'Do you provide same-day mobile tyre fitting?', a: 'Same-day service may be available depending on your location, technician availability and tyre stock. Contact the team to confirm a suitable appointment.' },
+            { q: 'How do I book emergency mobile tyre fitting in Trafford?', a: 'Call 07759 708 646 or 0161 399 5851. Share your location, vehicle details and tyre problem so the team can discuss the quote, availability and estimated arrival time.' },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Trafford Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Trafford line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Trafford?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat tyre, a puncture or a damaged tyre, contact One Stop Tyres 247 to discuss mobile tyre fitting, emergency tyre replacement and puncture repair across Trafford. Our team can help you check availability, understand your options and arrange a visit to a suitable location. 24/7 mobile tyre assistance across Trafford and surrounding areas, subject to availability and safe access.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
@@ -393,6 +559,13 @@ export default function TraffordPage() {
               >
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 07759 708 646
+              </a>
+              <a
+                className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
+                href="tel:+441613995851"
+              >
+                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
+                0161 399 5851
               </a>
               <a
                 className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

@@ -11,9 +11,9 @@ import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: '24/7 Emergency Mobile Tyre Fitting Greater Manchester',
+  title: 'Mobile Tyre Fitting | 24/7 Mobile Tyre Fitters',
   description:
-    'Flat tyre or puncture in Greater Manchester? 24/7 emergency mobile tyre fitting, puncture repair and tyre replacement at the roadside, home or work.',
+    'Need mobile tyre fitting? One Stop Tyres 247 offers professional mobile tyre fitting with 24/7 availability across Greater Manchester.',
   path: '/mobile-tyre-fitting',
 })
 
@@ -31,14 +31,11 @@ const _serviceSchema = serviceSchema({
 })
 
 const faqs = [
-  { q: 'Do you offer 24/7 emergency mobile tyre fitting?', a: 'Yes. Our emergency mobile tyre fitting service runs 24 hours a day, 7 days a week. If a flat, punctured or damaged tyre stops you from continuing your journey, call us and we will send a mobile tyre fitter to you.' },
-  { q: 'I have a flat tyre. Can you come to me?', a: 'Yes. Tell us where you are and what has happened, and our technician will come to your location with the tools and replacement tyres needed. Where it is safe, we can repair or replace the tyre at the roadside, at home or at work.' },
-  { q: 'Can you repair a puncture at the roadside?', a: 'Often, yes. If the puncture is in the central tread area and the tyre is otherwise undamaged, we can carry out a safe puncture repair on the spot. If the damage is in the sidewall or shoulder, or the tyre has been driven on flat, we will recommend a replacement instead.' },
-  { q: 'How quickly can you reach me in an emergency?', a: 'In most of the areas we cover, we aim to reach you within 20 to 30 minutes. The exact arrival time depends on your location, traffic and technician availability, and we will give you an estimate when you call.' },
   { q: 'What is mobile tyre fitting?', a: 'Mobile tyre fitting is a service where a tyre fitter comes to your location to replace and fit tyres on your vehicle, rather than requiring you to visit a tyre centre.' },
   { q: 'Where can mobile tyres be fitted?', a: 'Tyres can usually be fitted at a suitable location such as your home, workplace or another accessible and safe location.' },
   { q: 'How does mobile tyre fitting work?', a: 'You provide your vehicle or tyre details and location. A mobile tyre fitter then brings the required tyres and equipment to complete the fitting at your chosen location.' },
   { q: 'Do you provide mobile tyre replacement?', a: 'Yes. Our mobile tyre replacement service allows you to have worn or damaged tyres replaced without travelling to a tyre centre.' },
+  { q: 'Can you provide emergency mobile tyre fitting?', a: 'Yes. Emergency mobile tyre fitting is available for urgent situations where you need a replacement tyre and cannot continue your journey safely.' },
   { q: 'Do you provide mobile tyre repair?', a: 'Yes. We can inspect a damaged or punctured tyre and determine whether a safe mobile tyre repair is possible. If the tyre cannot be safely repaired, replacement may be recommended.' },
   { q: 'Can you fit tyres to cars, SUVs and vans?', a: 'Yes. Our mobile car tyre fitters can provide tyre fitting for a range of cars, SUVs and vans, subject to tyre availability and vehicle requirements.' },
   { q: 'How long does mobile tyre fitting take?', a: 'The time required depends on the number of tyres being fitted, the vehicle and the work involved. Once we know your requirements, we can give you a better estimate.' },
@@ -55,9 +52,9 @@ const _faqSchema = faqSchema(faqs)
 
 const whyChooseUs = [
   {
-    icon: '🚨',
-    title: '24/7 Emergency Call-Outs',
-    desc: 'Flat tyre or puncture at any hour? We come to you day or night, so you are not left stranded.',
+    icon: '🏠',
+    title: 'Convenient Fitting',
+    desc: 'Get your tyres fitted at a suitable location without visiting a garage.',
   },
   {
     icon: '⚡',
@@ -154,25 +151,25 @@ export default function MobileTyreFittingPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Emergency Mobile Tyre Fitting &amp; Puncture Repair
+              24/7 Emergency Mobile Tyre Fitting
             </h1>
 
             <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
-              Flat tyre, puncture or blowout? Our <strong>emergency mobile tyre fitting</strong> and <strong>mobile tyre replacement</strong> service comes to you 24/7.
+              Need new tyres without visiting a garage? Our <strong>mobile tyre fitters</strong> come to your home, workplace or roadside across Greater Manchester, 24/7.
             </p>
             {/* Extra intro — hidden for now
             <p className="text-white/85 lg:text-slate-400 text-base leading-relaxed mb-8">
-              As well as emergency call-outs, we offer planned <strong>mobile tyre replacement</strong> at a time that suits you. Every tyre is checked before we start, so you get an honest answer on whether a repair is safe or a replacement is needed.
+              From planned <strong>mobile tyre replacement</strong> to emergency mobile tyre fitting, we provide a convenient tyre fitting solution when you need it. Our technicians can also assess tyre problems and provide mobile tyre repair where a safe repair is possible.
             </p>
             */}
 
             {/* Benefits — hidden for now
             <ul className="space-y-2 mb-8">
               {[
-                '24/7 emergency tyre call-outs',
-                'Flat tyre and puncture repair',
-                'Mobile tyre replacement on the spot',
+                'Professional mobile tyre fitting',
                 'Experienced mobile tyre fitters',
+                'Mobile tyre replacement',
+                'Emergency tyre fitting available',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white lg:text-white/90 text-sm sm:text-base font-medium">
                   <span className="text-green-400 text-lg">✓</span>
@@ -194,10 +191,10 @@ export default function MobileTyreFittingPage() {
       <HeroQuoteSection />
 
       {/* ── GOOGLE REVIEWS ── */}
-      <GoogleReviewsSection bg="bg-white" />
+      <GoogleReviewsSection bg="bg-white" heading="What Our Customers Say About Our Mobile Tyre Fitting Service" />
 
       {/* ── OUR SERVICES ── */}
-      <ServicesSection exclude="/mobile-tyre-fitting" />
+      <ServicesSection exclude="/mobile-tyre-fitting" heading="Our Other Mobile Tyre Fitting Services Near You" />
 
       {/* ── 2. IMAGE + TEXT ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">
@@ -223,16 +220,16 @@ export default function MobileTyreFittingPage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Mobile Tyre Fitters That Come to You
+              Mobile Tyre Fitters That Come to You in Greater Manchester
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
-              Our <strong>mobile car tyre fitters</strong>{' '}bring the equipment and expertise needed to fit replacement tyres at a location that works for you. Serving customers across our service areas, our tyre fitting mobile service means you don&apos;t need to take time out to visit a tyre centre.
+              Our <strong>mobile car tyre fitters</strong>{' '}bring the equipment and expertise needed to fit replacement tyres at a location that works for you. Serving customers across Greater Manchester, our tyre fitting mobile service means you don&apos;t need to take time out to visit a tyre centre.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
               We can help with different tyre requirements, from replacing worn tyres to dealing with an unexpected tyre problem. Before fitting, our technician checks the tyre requirements and ensures the replacement is suitable for your vehicle.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              Whether you need a single tyre replaced or a complete set, our <strong>mobile tyre fitters</strong> provide a straightforward and professional service across our service areas.
+              Whether you need a single tyre replaced or a complete set, our <strong>mobile tyre fitters</strong> provide a straightforward and professional service across Greater Manchester.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -250,7 +247,7 @@ export default function MobileTyreFittingPage() {
 
       {/* ── 3. WHY CHOOSE ────────────────────────────────────────────── */}
       <WhyChooseGrid
-        heading="Why Choose Our Mobile Tyre Fitting Service?"
+        heading="Why Choose Our Mobile Tyre Fitting Service in Greater Manchester?"
         intro="Choosing the right tyre fitter means getting professional service, clear communication and a solution that suits your vehicle. Our mobile tyre fitting service is designed to make tyre replacement simple and convenient, with experienced mobile tyre fitters coming to a suitable location."
         items={whyChooseMobileFitting}
       />
