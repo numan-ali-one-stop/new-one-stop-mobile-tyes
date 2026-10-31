@@ -161,10 +161,10 @@ export default function Header() {
             <a
               href={`tel:${PHONE_TEL}`}
               aria-label={`Call ${PHONE}`}
-              className="lg:hidden flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-3 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
+              className="cta-btn cta-call lg:hidden flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-3 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
             </a>
@@ -314,9 +314,9 @@ export default function Header() {
                     <div className="flex items-center gap-2 shrink-0">
                       <a
                         href={`tel:${PHONE_TEL}`}
-                        className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
+                        className="cta-btn cta-call flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
                       >
-                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                        <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                           phone_in_talk
                         </span>
                         {PHONE}
@@ -475,7 +475,7 @@ export default function Header() {
                     </div>
                     <a
                       href="/service-area"
-                      className="flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap shrink-0"
+                      className="cta-btn cta-pulse flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap shrink-0"
                     >
                       <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                         map
@@ -509,10 +509,10 @@ export default function Header() {
             <a
               href={`tel:${PHONE_TEL}`}
               aria-label={`Call ${PHONE}`}
-              className="hidden lg:flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
+              className="cta-btn cta-call hidden lg:flex items-center gap-2 bg-[#b70011] hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all active:scale-95 shadow-md shadow-red-200"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                 phone_in_talk
               </span>
               {PHONE}
@@ -567,10 +567,10 @@ export default function Header() {
             <div className="space-y-2">
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="flex items-center gap-3 bg-[#b70011] hover:bg-red-700 transition-colors rounded-xl px-4 py-3 active:scale-[0.98]"
+                className="cta-btn cta-call flex items-center gap-3 bg-[#b70011] hover:bg-red-700 transition-colors rounded-xl px-4 py-3 active:scale-[0.98]"
               >
                 <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
-                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                     phone_in_talk
                   </span>
                 </div>

@@ -430,7 +430,7 @@ export default function ServiceAreaPage() {
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
               <a
-                className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[180px] lg:min-w-[200px] shrink-0"
+                className="cta-btn cta-call bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[180px] lg:min-w-[200px] shrink-0"
                 href="tel:+447759708646"
               >
                 07759 708 646

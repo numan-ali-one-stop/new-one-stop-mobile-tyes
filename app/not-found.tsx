@@ -26,7 +26,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
           <a
             href="/services"
-            className="bg-[#0f172a] hover:bg-[#1c2a45] text-white font-bold px-6 py-3.5 rounded-xl transition-colors text-base"
+            className="cta-btn cta-pulse bg-[#0f172a] hover:bg-[#1c2a45] text-white font-bold px-6 py-3.5 rounded-xl transition-colors text-base"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
             View Our Services
@@ -42,10 +42,10 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
           <a
             href="tel:+447759708646"
-            className="inline-flex items-center gap-2.5 bg-[#dc2626] hover:bg-red-700 text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
+            className="cta-btn cta-call inline-flex items-center gap-2.5 bg-[#dc2626] hover:bg-red-700 text-white font-black px-8 py-4 rounded-xl shadow-lg transition-all text-lg"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             Emergency? Call 07759 708 646
           </a>
         </div>

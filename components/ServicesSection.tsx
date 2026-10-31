@@ -140,7 +140,7 @@ export default function ServicesSection({
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <a
               href={`tel:${PHONE_TEL}`}
-              className="bg-[#dc2626] text-white font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
+              className="cta-btn cta-call bg-[#dc2626] text-white font-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap w-full sm:w-auto text-center"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
               {PHONE}

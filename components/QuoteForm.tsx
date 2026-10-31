@@ -94,7 +94,7 @@ export default function QuoteForm() {
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="w-full bg-[#0f172a] text-white py-4 sm:py-5 rounded-xl hover:bg-slate-800 shadow-lg transition-all uppercase tracking-wider text-sm font-bold"
+          className="cta-btn cta-pulse w-full bg-[#0f172a] text-white py-4 sm:py-5 rounded-xl hover:bg-slate-800 shadow-lg transition-all uppercase tracking-wider text-sm font-bold"
           style={{ fontFamily: 'var(--font-work-sans)' }}
         >
           Submit Request

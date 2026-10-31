@@ -71,7 +71,7 @@ export default function CookieConsentBanner() {
           <button
             type="button"
             onClick={() => choose('granted')}
-            className="px-4 py-2 rounded-lg text-sm font-bold bg-[#FF4444] hover:bg-red-700 text-white transition-colors"
+            className="cta-btn cta-pulse px-4 py-2 rounded-lg text-sm font-bold bg-[#FF4444] hover:bg-red-700 text-white transition-colors"
           >
             Accept
           </button>

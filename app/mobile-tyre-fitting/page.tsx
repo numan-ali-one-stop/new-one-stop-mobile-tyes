@@ -13,7 +13,7 @@ import HeroBadge from '@/components/HeroBadge'
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting | 24/7 Mobile Tyre Fitters',
   description:
-    'Need mobile tyre fitting? One Stop Tyres 247 offers professional mobile tyre fitting with 24/7 availability across Greater Manchester.',
+    'Need mobile tyre fitting? One Stop Tyres 247 offers professional mobile tyre fitting with 24/7 availability across the UK.',
   path: '/mobile-tyre-fitting',
 })
 
@@ -27,7 +27,7 @@ const _serviceSchema = serviceSchema({
   name: 'Mobile Tyre Fitting',
   serviceType: 'Mobile Tyre Fitting',
   description:
-    '24/7 emergency and planned mobile tyre fitting across Greater Manchester, including flat tyre and puncture call-outs. We supply and fit premium, mid-range and budget tyres for cars, SUVs, vans and light commercial vehicles at your location.',
+    '24/7 emergency and planned mobile tyre fitting across the UK, including flat tyre and puncture call-outs. We supply and fit premium, mid-range and budget tyres for cars, SUVs, vans and light commercial vehicles at your location.',
 })
 
 const faqs = [
@@ -155,7 +155,7 @@ export default function MobileTyreFittingPage() {
             </h1>
 
             <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
-              Need new tyres without visiting a garage? Our <strong>mobile tyre fitters</strong> come to your home, workplace or roadside across Greater Manchester, 24/7.
+              Need new tyres without visiting a garage? Our <strong>mobile tyre fitters</strong> come to your home, workplace or roadside across the UK, 24/7.
             </p>
             {/* Extra intro — hidden for now
             <p className="text-white/85 lg:text-slate-400 text-base leading-relaxed mb-8">
@@ -220,16 +220,16 @@ export default function MobileTyreFittingPage() {
               className="text-2xl sm:text-4xl font-bold text-[#0f172a] mb-5 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Mobile Tyre Fitters That Come to You in Greater Manchester
+              Mobile Tyre Fitters That Come to You
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
-              Our <strong>mobile car tyre fitters</strong>{' '}bring the equipment and expertise needed to fit replacement tyres at a location that works for you. Serving customers across Greater Manchester, our tyre fitting mobile service means you don&apos;t need to take time out to visit a tyre centre.
+              Our <strong>mobile car tyre fitters</strong>{' '}bring the equipment and expertise needed to fit replacement tyres at a location that works for you. Serving customers across the UK, our tyre fitting mobile service means you don&apos;t need to take time out to visit a tyre centre.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-4">
               We can help with different tyre requirements, from replacing worn tyres to dealing with an unexpected tyre problem. Before fitting, our technician checks the tyre requirements and ensures the replacement is suitable for your vehicle.
             </p>
             <p className="text-slate-600 text-base leading-relaxed mb-8">
-              Whether you need a single tyre replaced or a complete set, our <strong>mobile tyre fitters</strong> provide a straightforward and professional service across Greater Manchester.
+              Whether you need a single tyre replaced or a complete set, our <strong>mobile tyre fitters</strong> provide a straightforward and professional service wherever you are.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -247,7 +247,7 @@ export default function MobileTyreFittingPage() {
 
       {/* ── 3. WHY CHOOSE ────────────────────────────────────────────── */}
       <WhyChooseGrid
-        heading="Why Choose Our Mobile Tyre Fitting Service in Greater Manchester?"
+        heading="Why Choose Our Mobile Tyre Fitting Service?"
         intro="Choosing the right tyre fitter means getting professional service, clear communication and a solution that suits your vehicle. Our mobile tyre fitting service is designed to make tyre replacement simple and convenient, with experienced mobile tyre fitters coming to a suitable location."
         items={whyChooseMobileFitting}
       />
@@ -342,18 +342,18 @@ export default function MobileTyreFittingPage() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="tel:+447759708646"
-                className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
+                className="cta-btn cta-call bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
                 07759 708 646
               </a>
               <a
                 href="https://wa.me/447759708646"
-                className="bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-8 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-base sm:text-lg shadow-lg"
+                className="cta-btn cta-btn-wa bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-8 py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all text-base sm:text-lg shadow-lg"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                <svg className="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="cta-bounce w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
                 WhatsApp Us
@@ -429,18 +429,18 @@ export default function MobileTyreFittingPage() {
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <a
             href="tel:+447759708646"
-            className="bg-[#dc2626] text-white font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
+            className="cta-btn cta-call bg-[#dc2626] text-white font-black px-10 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-lg sm:text-xl"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+            <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             07759 708 646
           </a>
           <a
             href="https://wa.me/447759708646"
-            className="bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-10 py-4 rounded-xl flex items-center gap-2.5 transition-all text-lg sm:text-xl shadow-lg"
+            className="cta-btn cta-btn-wa bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black px-10 py-4 rounded-xl flex items-center gap-2.5 transition-all text-lg sm:text-xl shadow-lg"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            <svg className="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="cta-bounce w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
             WhatsApp Us

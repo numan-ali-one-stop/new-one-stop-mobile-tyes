@@ -70,7 +70,7 @@ export default function LatestGuides({ count = 3 }: { count?: number }) {
         <div className="mt-10 sm:mt-12 text-center">
           <a
             href="/guides"
-            className="inline-flex items-center justify-center gap-2 bg-[#0f172a] hover:bg-[#b70011] text-white font-bold px-8 py-4 rounded-xl transition-colors text-base w-full sm:w-auto"
+            className="cta-btn cta-pulse inline-flex items-center justify-center gap-2 bg-[#0f172a] hover:bg-[#b70011] text-white font-bold px-8 py-4 rounded-xl transition-colors text-base w-full sm:w-auto"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
             View All Blogs

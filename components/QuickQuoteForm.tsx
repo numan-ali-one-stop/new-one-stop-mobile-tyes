@@ -182,7 +182,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
         className={
           isHero
             ? 'quote-submit cta-btn w-full bg-gradient-to-r from-[#b70011] to-[#FF4444] text-white font-black py-3.5 rounded-lg text-sm sm:text-base uppercase tracking-wide'
-            : 'w-full bg-[#b70011] hover:bg-red-700 text-white font-black py-4 rounded-xl shadow-lg transition-colors uppercase tracking-wider text-sm'
+            : 'cta-btn cta-pulse w-full bg-[#b70011] hover:bg-red-700 text-white font-black py-4 rounded-xl shadow-lg transition-colors uppercase tracking-wider text-sm'
         }
         style={{ fontFamily: 'var(--font-work-sans)' }}
       >

@@ -1,4 +1,4 @@
-import { LOCAL_AREAS, LOCAL_DETAILS, LOCAL_EXTRA, areaName } from '@/lib/local-areas'
+import { LOCAL_AREAS, LOCAL_DETAILS, LOCAL_EXTRA, areaName, expandPostcodes } from '@/lib/local-areas'
 
 interface LocalAreaInfoProps {
   /** The current page's location slug, e.g. "fallowfield" (no "mobile-tyre-fitting-" prefix). */
@@ -52,13 +52,13 @@ export default function LocalAreaInfo({ currentSlug }: LocalAreaInfoProps) {
         </div>
 
         <div className={`grid grid-cols-1 gap-4 sm:gap-6 ${area.landmarks?.length ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
-          <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6">
+          <div id="postcodes" className="scroll-mt-24 bg-white rounded-2xl border border-slate-200 p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
               <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">markunread_mailbox</span>
-              <h3 className="font-bold text-[#0f172a]">Postcodes we cover</h3>
+              <h3 className="font-bold text-[#0f172a]">All postcodes we cover in {name}</h3>
             </div>
             <div className="flex flex-wrap gap-2">
-              {area.pc.map((pc) => (
+              {expandPostcodes(area.pc).map((pc) => (
                 <span key={pc} className="bg-slate-100 text-[#0f172a] font-semibold text-sm px-3 py-1.5 rounded-lg">
                   {pc}
                 </span>

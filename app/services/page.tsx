@@ -227,7 +227,7 @@ export default function ServicesPage() {
             </div>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
               <a
-                className="bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 lg:px-xl py-3 sm:py-4 lg:py-md rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[200px] lg:min-w-[240px]"
+                className="cta-btn cta-call bg-white text-primary font-h2 text-base sm:text-xl lg:text-h2 px-6 sm:px-10 lg:px-xl py-3 sm:py-4 lg:py-md rounded-xl hover:bg-gray-100 transition-all uppercase shadow-lg text-center w-full sm:w-auto sm:min-w-[200px] lg:min-w-[240px]"
                 href="tel:+447759708646"
               >
                 07759 708 646

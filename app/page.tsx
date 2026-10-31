@@ -7,6 +7,7 @@ export const metadata = buildMetadata({
   path: '/',
 })
 
+import Link from 'next/link'
 import BrandCarousel from '@/components/BrandCarousel'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import HeroSlider from '@/components/HeroSlider'
@@ -324,7 +325,11 @@ export default function Home() {
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-left sm:text-center">
               Whether you&apos;re at home, at work or dealing with a roadside tyre problem, our mobile team
               can assess the issue and provide the right solution where it is safe to do so. We offer 24/7
-              emergency tyre assistance as well as same-day mobile tyre fitting for less urgent
+              emergency tyre assistance as well as same-day{' '}
+              <Link href="/mobile-tyre-fitting" className="text-[#b70011] font-semibold hover:underline">
+                mobile tyre fitting
+              </Link>{' '}
+              for less urgent
               requirements.
             </p>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed text-left sm:text-center">

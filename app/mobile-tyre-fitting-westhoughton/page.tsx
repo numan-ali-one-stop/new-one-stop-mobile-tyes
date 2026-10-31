@@ -11,6 +11,7 @@ import { serviceSchema } from '@/lib/schema'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
+import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
 const _serviceSchema = serviceSchema({
@@ -61,6 +62,8 @@ export default function WesthoughtonPage() {
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
               Mobile tyre fitting across Westhoughton, locally or towards Bolton and Wigan, with same day and emergency support day and night.
             </p>
+
+            <HeroPostcodes slug="westhoughton" />
 {/* Trust bullets — hidden for now
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
@@ -194,7 +197,7 @@ export default function WesthoughtonPage() {
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">Need Tyre Help in Westhoughton?</h3>
                 <p className="text-slate-400 text-base">Call or WhatsApp with your registration, tyre size and exact location. We can check suitable tyre options, confirm pricing and provide an expected arrival time.</p>
               </div>
-              <a href="tel:+447759708646" className="bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap" style={{ fontFamily: 'var(--font-work-sans)' }}>
+              <a href="tel:+447759708646" className="cta-btn cta-call bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl text-xl sm:text-2xl hover:scale-105 transition-transform shadow-lg shadow-red-900/20 whitespace-nowrap" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 07759 708 646
               </a>
             </div>
@@ -290,11 +293,11 @@ export default function WesthoughtonPage() {
             <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Westhoughton Today?</h2>
             <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether your tyre has become unsafe before a local journey or failed while travelling between Bolton and Wigan, you do not need to keep driving on it. Call or WhatsApp One Stop Mobile Tyres 24/7 with your vehicle details, tyre size and location. We will check suitable options and arrange a technician to come to you in Westhoughton.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
-              <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+447759708646">
+              <a className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="tel:+447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-xl sm:text-2xl">phone_in_talk</span>
                 Call: 07759 708 646
               </a>
-              <a className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="https://wa.me/447759708646">
+              <a className="cta-btn cta-btn-wa flex items-center justify-center gap-2 sm:gap-3 bg-[#1c1b1b] hover:bg-slate-800 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl" href="https://wa.me/447759708646">
                 <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#25D366] text-xl sm:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
                 WhatsApp Us
               </a>

@@ -68,6 +68,42 @@ export function areaName(slug: string): string | undefined {
   return NAME_BY_SLUG.get(slug)
 }
 
+const splitPostcode = (pc: string) => {
+  const m = /^([A-Z]+)(\d+)$/.exec(pc)
+  return m ? { prefix: m[1], n: Number(m[2]) } : null
+}
+
+/** Every postcode district in an area's list, with ranges expanded, e.g. ['M1–M3', 'M40'] → ['M1', 'M2', 'M3', 'M40']. */
+export function expandPostcodes(pc: string[]): string[] {
+  return pc.flatMap((entry) => {
+    const [from, to] = entry.split('–').map(splitPostcode)
+    if (!from || !to || from.prefix !== to.prefix) return [entry]
+    return Array.from({ length: to.n - from.n + 1 }, (_, i) => `${from.prefix}${from.n + i}`)
+  })
+}
+
+/** Postcode districts grouped into consecutive runs, e.g. ['M5', 'M6', 'M7', 'M27'] → ['M5–M7', 'M27']. */
+export function postcodeRuns(pc: string[]): string[] {
+  const runs: string[] = []
+  let start: string | undefined
+  let prev: { prefix: string; n: number } | null = null
+  let prevCode = ''
+  for (const code of expandPostcodes(pc)) {
+    const cur = splitPostcode(code)
+    if (start && cur && prev && cur.prefix === prev.prefix && cur.n === prev.n + 1) {
+      prev = cur
+      prevCode = code
+      continue
+    }
+    if (start) runs.push(start === prevCode ? start : `${start}–${prevCode}`)
+    start = code
+    prev = cur
+    prevCode = code
+  }
+  if (start) runs.push(start === prevCode ? start : `${start}–${prevCode}`)
+  return runs
+}
+
 /**
  * Up to `max` linked areas closest to `slug`: its hand-listed neighbours first (in proximity
  * order), topped up from the same borough so there are always at least `min` where possible.

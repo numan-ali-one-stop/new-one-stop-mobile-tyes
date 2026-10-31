@@ -247,8 +247,10 @@
   70% { transform: translateY(-3px) scale(1.12); }
   80% { transform: translateY(0) scale(1); }
 }
+/* Every other button on the site: same shine + hover lift, with a red pulse ring. */
+.cta-pulse { animation: ctaCallPulse 2s ease-out infinite; }
 @media (prefers-reduced-motion: reduce) {
-  .cta-btn::before, .cta-call, .cta-btn-wa, .cta-ring, .cta-bounce { animation: none !important; }
+  .cta-btn::before, .cta-call, .cta-btn-wa, .cta-pulse, .cta-ring, .cta-bounce { animation: none !important; }
 }
 
 /* ─── Hero badge (components/HeroBadge.tsx + homepage hero) ────────────────
