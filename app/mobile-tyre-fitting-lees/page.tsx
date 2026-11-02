@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
@@ -15,17 +15,26 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-lees',
-  name: 'Mobile Tyre Fitting in Lees',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Lees' },
+  alternateName: '24/7 Mobile Tyre Fitting Lees',
+  areaServed: 'Lees, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Lees? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-lees')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-lees')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-lees',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Lees',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Lees | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Lees | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Lees — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Lees? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-lees',
 })
 
@@ -46,7 +55,10 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function LeesPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -66,20 +78,19 @@ export default function LeesPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Lees. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Lees? We provide mobile tyre replacement, emergency puncture repair and roadside tyre assistance at your home, workplace or a safe roadside location. Whether you have a flat tyre or need a replacement, our mobile team can help you arrange a convenient service across Lees and nearby areas.
             </p>
 
             <HeroPostcodes slug="lees" />
 
-            {/* Trust bullets — hidden for now
+            {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Lees &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Workplace and Roadside Tyre Service',
+                'Covering Lees and Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -90,7 +101,6 @@ export default function LeesPage() {
                 </div>
               ))}
             </div>
-            */}
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -316,39 +326,136 @@ export default function LeesPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Lees
+                Professional Mobile Tyre Fitting in Lees
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Lees, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Lees and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Lees.
-                If you&apos;re searching for mobile tyre fitting near me in Lees, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A damaged tyre can interrupt your day, whether you&apos;re travelling along Lees Road, near High Street or heading towards Waterhead. Our mobile tyre fitting service brings tyre replacement and suitable repair services directly to your location, so you may not need to arrange a trip to a garage.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre fitting across Lees and the surrounding OL4 postcode area. We can help with punctures, damaged tyres and replacement requirements at home, work or a safe roadside location, subject to access and availability.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                If you&apos;re unsure whether your tyre can be repaired, contact us with your vehicle details and location. Our technician can assess the damage and advise whether a repair or replacement is appropriate.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY LEES DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Lees" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro="Our mobile service is designed to make tyre care more convenient for drivers in Lees, particularly when a tyre problem makes it difficult or unsafe to continue driving."
+          items={[
+            { icon: 'bolt', title: '24/7 Availability', desc: 'Contact us for emergency tyre assistance at any time, subject to technician availability.' },
+            { icon: 'home_repair_service', title: 'Convenient Fitting', desc: 'Arrange tyre fitting at home, work or a suitable roadside location.' },
+            { icon: 'tire_repair', title: 'Tyre Options', desc: 'Ask about premium, mid-range and budget tyres to suit your vehicle and requirements.' },
+            { icon: 'sell', title: 'Upfront Pricing', desc: 'Request a quote and confirm the cost before the work begins.' },
+            { icon: 'build', title: 'Puncture Assessment', desc: 'We assess tyre damage to determine whether a repair is safe and suitable.' },
+            { icon: 'engineering', title: 'Additional Assistance', desc: 'Ask about TPMS checks, locking wheel nut removal and jump-start assistance.' },
+            { icon: 'home_repair_service', title: 'Professional Service', desc: 'Our technicians aim to provide a practical solution based on your vehicle, tyre specification and location.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Lees Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 and explain whether you need a replacement tyre, puncture assessment or emergency assistance.' },
+                { title: 'Provide Your Vehicle Details', desc: 'Tell us your vehicle make and model, tyre size if available, and your location in Lees. Sharing a location pin can help the technician find you.' },
+                { title: 'Confirm the Quote', desc: 'We will discuss the available tyre options, the cost of the service and an estimated arrival time. Availability depends on your tyre specification and current stock.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician will assess the situation and carry out the agreed work where it is safe and suitable. Tyre pressure and the TPMS can also be checked where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Lees
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Tyres can become damaged by sharp objects, potholes, worn tread or unexpected road hazards. Some punctures can be repaired, but damage to the sidewall, serious cuts or other unsafe conditions may require a replacement.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement in Lees service helps drivers arrange suitable replacement tyres without having to travel to a tyre garage. We can attend your home, workplace or a safe roadside location, depending on access and availability.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We cover Lees and nearby locations, including:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Lees High Street',
+                'Lees Road',
+                'Hey',
+                'Waterhead',
+                'Springhead',
+                'Nearby routes connecting Lees with Oldham and surrounding areas',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              When booking, provide your exact location and tyre size if possible. This helps us check coverage and identify a suitable tyre before arranging the call-out.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Lees
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A sudden puncture or damaged tyre can leave you stranded, especially when you&apos;re away from home or travelling at night. Our emergency mobile tyre fitting service helps drivers in Lees arrange tyre assistance without driving on a tyre that may be unsafe.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Depending on the condition of the tyre, we can assess whether a suitable repair is possible or whether replacement is necessary. Our service accepts emergency enquiries 24/7, subject to technician availability, safe working conditions and the required tyre being available.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A typical response may be around 20–30 minutes in covered areas, but this is an estimate rather than a guaranteed arrival time. Traffic, weather, technician availability, your exact location and tyre stock can affect the response time.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your vehicle develops a tyre problem on a busy road, prioritise your safety. Move to a safe place if possible and follow the appropriate breakdown procedures. Do not attempt a tyre change in a location where traffic or other hazards put you at risk.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -360,35 +467,79 @@ export default function LeesPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="lees" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-lees"
           city="Lees"
           faqs={[
             {
+              q: 'Do you offer mobile tyre fitting in Lees?',
+              a: 'Yes. We provide mobile tyre fitting in Lees, including tyre replacement and puncture assessment at home, work or a suitable roadside location.',
+            },
+            {
+              q: 'Are you available 24/7 in Lees?',
+              a: 'You can contact us for emergency tyre assistance 24 hours a day, seven days a week. The service depends on technician availability, tyre stock and safe access to your location.',
+            },
+            {
               q: 'How quickly can you reach me in Lees?',
-              a: 'Our mobile units are based close by in Oldham, meaning we can typically reach Lees and the surrounding OL4 postcode area, including High Street and Lees Road, within 20-30 minutes.',
+              a: 'A typical response may be around 20-30 minutes in covered areas. Your actual waiting time will depend on traffic, demand, technician availability and your exact location.',
             },
             {
-              q: 'What areas around Lees do you cover?',
-              a: 'Yes. We cover Lees and the surrounding OL4 postcode area, along with High Street, Hey and the routes connecting to Waterhead and Springhead.',
+              q: 'Which areas around Lees do you cover?',
+              a: 'We cover Lees and nearby locations within the OL4 area, including High Street, Lees Road, Hey, Waterhead and Springhead. Contact us to confirm service availability at your address.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Lees?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'Can you fit a tyre at my home in Lees?',
+              a: 'Yes. We can arrange mobile tyre fitting at your home, provided there is enough space and suitable access to carry out the work safely.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Lees Road or Waterhead?',
-              a: 'Yes. We regularly attend offices and business premises around Lees Road and the Waterhead area, fitting your tyres while you work.',
+              q: 'Do you offer mobile tyre fitting at workplaces?',
+              a: 'Yes. We can attend workplaces and business premises in Lees where access is suitable. Provide the address and your vehicle details when requesting a quote.',
+            },
+            {
+              q: 'Can you repair a puncture instead of replacing the tyre?',
+              a: 'In suitable cases, yes. The damage must meet the relevant repair requirements, including BS AU 159 where applicable. Some punctures and other types of tyre damage cannot be repaired safely.',
+            },
+            {
+              q: 'When should I replace a damaged tyre?',
+              a: 'A tyre may need replacing if it has a sidewall bulge, a serious cut, structural damage or a puncture that cannot be repaired safely. A technician can assess the tyre and explain the available options.',
+            },
+            {
+              q: 'What tyre brands and types can you provide?',
+              a: 'You can ask about premium, mid-range and budget tyres. The options available will depend on your vehicle, tyre size, specification and current stock.',
+            },
+            {
+              q: 'How much does mobile tyre fitting in Lees cost?',
+              a: 'The cost depends on your tyre size, the replacement tyre selected, the work required and your location. Contact us for a quote and confirm the price before booking.',
+            },
+            {
+              q: 'Can you help with an emergency tyre replacement at night?',
+              a: 'Yes. You can contact us for emergency tyre replacement at night. The job will depend on technician availability, the required tyre being in stock and a safe place to carry out the work.',
+            },
+            {
+              q: 'Can you fit tyres near Lees Road or Waterhead?',
+              a: 'We cover areas around Lees Road and Waterhead. Share your exact location so we can confirm availability and provide an estimated arrival time.',
+            },
+            {
+              q: 'Can you check the TPMS after fitting a tyre?',
+              a: 'We can check the tyre pressure monitoring system (TPMS) where applicable. Tell us about any warning lights or sensor issues when booking.',
+            },
+            {
+              q: 'Do you provide jump-start assistance in Lees?',
+              a: 'Jump-start assistance may be available for vehicles with a flat battery. Contact us with your location and vehicle details to confirm the service.',
+            },
+            {
+              q: 'How do I book a mobile tyre fitter in Lees?',
+              a: 'Call 07759 708 646 and provide your location, vehicle details and tyre requirements. Our team can discuss the quote, available options and estimated arrival time.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Lees Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Lees line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Lees?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat tyre at home, a puncture at work or a damaged tyre while travelling, contact our team to arrange suitable assistance. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture repair across Lees and nearby areas, subject to technician availability and the tyre required. Call 07759 708 646 to request a quote and check availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

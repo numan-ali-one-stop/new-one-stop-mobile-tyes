@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
@@ -15,38 +15,36 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-failsworth',
-  name: 'Mobile Tyre Fitting in Failsworth',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Failsworth' },
+  alternateName: '24/7 Mobile Tyre Fitting Failsworth',
+  areaServed: 'Failsworth, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Failsworth? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-failsworth')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-failsworth')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-failsworth',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Failsworth',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Failsworth | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Failsworth | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Failsworth — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Failsworth? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-failsworth',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function FailsworthPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -66,20 +64,19 @@ export default function FailsworthPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Failsworth. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Failsworth? We provide emergency tyre replacement, mobile puncture repair and tyre fitting at your home, workplace or a safe roadside location. Our mobile technicians serve Failsworth and nearby areas, helping drivers deal with damaged tyres without travelling to a garage.
             </p>
 
             <HeroPostcodes slug="failsworth" />
 
-            {/* Trust bullets — hidden for now
+            {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Failsworth &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Workplace and Roadside Tyre Service',
+                'Covering Failsworth and Surrounding Areas',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -90,7 +87,6 @@ export default function FailsworthPage() {
                 </div>
               ))}
             </div>
-            */}
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -316,39 +312,135 @@ export default function FailsworthPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Failsworth
+                Professional Mobile Tyre Fitting in Failsworth
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Failsworth, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Failsworth and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Failsworth.
-                If you&apos;re searching for mobile tyre fitting near me in Failsworth, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat or damaged tyre can disrupt your journey, whether you&apos;re commuting along Oldham Road, travelling on Ashton Road West or parked at home in Failsworth. Our mobile tyre fitting service brings the equipment and replacement tyres to your location, subject to availability and safe access.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre replacement, emergency tyre assistance and puncture repair across Failsworth and the surrounding M35 postcode area. We can attend homes, workplaces and suitable roadside locations, helping you avoid the inconvenience of arranging a trip to a traditional tyre garage.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Whether you need a replacement tyre urgently or want to arrange fitting at home, contact our team with your vehicle details, tyre size and location.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY FAILSWORTH DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Failsworth" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro="Our mobile service is designed to make tyre replacement more convenient, particularly when your vehicle cannot be driven safely."
+          items={[
+            { icon: 'bolt', title: '24/7 Assistance', desc: 'Contact us for tyre-related emergencies at any time, subject to technician availability.' },
+            { icon: 'home_repair_service', title: 'Convenient Locations', desc: 'Arrange fitting at home, work or a safe roadside location.' },
+            { icon: 'tire_repair', title: 'Tyre Options', desc: 'Ask about premium, mid-range and budget tyres suitable for your vehicle.' },
+            { icon: 'sell', title: 'Clear Pricing', desc: 'Get a quote before the work begins.' },
+            { icon: 'build', title: 'Puncture Assessment', desc: 'We inspect the damage to determine whether a repair is safe and suitable.' },
+            { icon: 'engineering', title: 'Additional Support', desc: 'Ask about TPMS checks, locking wheel nut removal and jump-start assistance.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Failsworth Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 and explain whether you need a tyre replacement, puncture repair or another service.' },
+                { title: 'Share Your Vehicle and Location Details', desc: 'Provide your vehicle make and model, tyre size if known, and your location in Failsworth. You can also share a location pin to help the technician find you.' },
+                { title: 'Confirm the Quote and Availability', desc: 'We will discuss the available options, pricing and estimated arrival time. Tyre availability depends on the size and specification required.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician will assess the situation and carry out the agreed work where it is safe and suitable. Tyre pressure and the TPMS can also be checked where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Failsworth
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A tyre may need replacing if it has a serious cut, sidewall damage, a bulge or a puncture that cannot be repaired safely. Driving on a damaged tyre can affect vehicle handling and increase safety risks.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement in Failsworth service helps drivers get suitable replacement tyres fitted at an accessible location. We can assist with tyre problems at home, at work or when your vehicle is stopped in a safe place.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We serve drivers across Failsworth, including areas around:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Oldham Road',
+                'Ashton Road West',
+                'Failsworth Pole',
+                'Broadway and nearby roads',
+                'Residential areas within the M35 postcode district',
+                'Routes towards Hollinwood, Newton Heath and Chadderton',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Tell us your exact location when booking so we can confirm coverage and availability.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Failsworth
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A puncture or tyre blowout can leave you unable to continue your journey. Our emergency mobile tyre service helps drivers in Failsworth arrange assistance without having to drive to a garage on a damaged tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can assess the tyre and provide a suitable repair or replacement, depending on the damage, tyre availability and working conditions. Our service operates 24/7, subject to technician availability.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A typical response may be around 20–30 minutes in covered areas, but this is an estimate rather than a guaranteed arrival time. Traffic, your exact location, weather, demand and the required tyre can affect how quickly assistance arrives.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem on a busy road, prioritise your safety. Move to a safe place if possible and follow the appropriate breakdown or emergency procedures. Do not attempt a roadside tyre change in a dangerous location.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -360,35 +452,79 @@ export default function FailsworthPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="failsworth" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-failsworth"
           city="Failsworth"
           faqs={[
             {
-              q: 'How quickly can you reach me in Failsworth?',
-              a: 'Our mobile units are based close by in Oldham, meaning we can typically reach Failsworth and the surrounding M35 postcode area, including Oldham Road and Ashton Road West, within 20-30 minutes.',
+              q: 'Do you offer mobile tyre fitting in Failsworth?',
+              a: 'Yes. We provide mobile tyre fitting, tyre replacement and puncture repair across Failsworth and the surrounding area, subject to availability.',
             },
             {
-              q: 'What areas around Failsworth do you cover?',
-              a: 'Yes. We cover Failsworth and the surrounding M35 postcode area, along with Oldham Road, Millbrook and the routes connecting to Newton Heath and Hollinwood.',
+              q: 'Are you available 24/7 in Failsworth?',
+              a: 'Our service operates 24/7, subject to technician availability. Contact us to confirm whether we can attend at the time you need.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Failsworth?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'How quickly can a mobile tyre fitter reach Failsworth?',
+              a: 'A typical response may be around 20-30 minutes, though this is an estimate rather than a guarantee. Traffic, your exact location and demand can affect arrival time.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Broadway Business Park or Failsworth Pole?',
-              a: 'Yes. We regularly attend offices and business premises around Broadway Business Park and Failsworth Pole, fitting your tyres while you work.',
+              q: 'Which areas of Failsworth do you cover?',
+              a: 'We cover Failsworth and the surrounding M35 postcode area, including Oldham Road, Ashton Road West, Failsworth Pole and nearby routes towards Hollinwood, Newton Heath and Chadderton.',
+            },
+            {
+              q: 'Can you replace a tyre at my home in Failsworth?',
+              a: 'Yes, we can attend your home in Failsworth to replace a damaged or unsafe tyre, subject to safe access and tyre availability.',
+            },
+            {
+              q: 'Can you fit a tyre at my workplace?',
+              a: 'Yes, we can attend your workplace in Failsworth to carry out tyre fitting or replacement, subject to safe access.',
+            },
+            {
+              q: 'Can you repair a punctured tyre in Failsworth?',
+              a: "We assess the damage first. If it's safe and suitable to repair, we'll carry out the repair on-site rather than replace a tyre unnecessarily.",
+            },
+            {
+              q: 'How do I know if my tyre needs replacing?',
+              a: 'A tyre may need replacing if it has a serious cut, sidewall damage, a bulge, or a puncture that cannot be safely repaired. If unsure, our technician can assess it for you.',
+            },
+            {
+              q: 'What types of tyres can you supply?',
+              a: 'We can discuss premium, mid-range and budget tyre options suitable for your vehicle, subject to availability.',
+            },
+            {
+              q: 'How much does mobile tyre fitting in Failsworth cost?',
+              a: "Pricing depends on your vehicle and the tyre required. We'll provide a clear quote before any work begins.",
+            },
+            {
+              q: 'Can you help with an emergency tyre replacement at night?',
+              a: 'Yes, subject to technician availability, we can assist with emergency tyre replacement at night as well as during the day.',
+            },
+            {
+              q: 'Can you fit tyres near Failsworth Pole or Oldham Road?',
+              a: 'Yes, Failsworth Pole and Oldham Road are within our regular coverage area.',
+            },
+            {
+              q: 'Can you check my tyre pressure after fitting?',
+              a: 'Yes, we can check tyre pressure and the TPMS where applicable after fitting.',
+            },
+            {
+              q: 'Do you offer jump-start assistance in Failsworth?',
+              a: 'Yes, ask our team about jump-start assistance alongside your tyre callout, subject to availability.',
+            },
+            {
+              q: 'How do I book mobile tyre fitting in Failsworth?',
+              a: 'Call 07759 708 646 with your vehicle details, tyre size if known and your location in Failsworth to arrange a quote and booking.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Failsworth Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Failsworth line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Failsworth?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you have a puncture at home, a damaged tyre at work or an unexpected tyre problem while travelling, contact our team to arrange suitable assistance. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture repair across Failsworth and nearby areas, subject to service and tyre availability. Call 07759 708 646 to request a quote and confirm availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
