@@ -18,6 +18,9 @@ const nextConfig = {
   devIndicators: false,
   compress: true,
   images: {
+    // Dev only: serve originals directly. Re-encoding the large source photos on demand
+    // uses a lot of memory locally and can take down the dev server. Production is unaffected.
+    unoptimized: process.env.NODE_ENV === 'development',
     // Optimization pipeline is live: next/image resizes and recompresses images
     // from the remote hosts below on the fly, matching each usage's actual
     // display size instead of shipping the original full-resolution file.

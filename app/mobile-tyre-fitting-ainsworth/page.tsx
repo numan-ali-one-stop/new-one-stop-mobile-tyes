@@ -288,8 +288,8 @@ export default function AinsworthPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="relative z-10 rounded-2xl sm:rounded-3xl shadow-2xl border-4 sm:border-8 border-slate-50 w-full object-cover"
-                src="/images/tyre-fitting-in-emergency.webp"
-                alt="Mobile tyre fitting technician"
+                src="/images/247%20Mobile%20Tyre%20Fitting%20Ainsworth.jpg"
+                alt="Mobile tyre fitting van beside a dark SUV with its wheel removed for a new tyre in Ainsworth"
                 width={800}
                 height={600}
                 loading="lazy"

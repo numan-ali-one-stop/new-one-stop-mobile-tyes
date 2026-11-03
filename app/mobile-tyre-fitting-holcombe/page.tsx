@@ -287,9 +287,9 @@ export default function HolcombePage() {
             <div className="w-full lg:w-1/2 relative pb-8 sm:pb-10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                className="relative z-10 rounded-2xl sm:rounded-3xl shadow-2xl border-4 sm:border-8 border-slate-50 w-full object-cover"
-                src="/images/tyre-fitting-in-emergency.webp"
-                alt="Mobile tyre fitting technician"
+                className="relative z-10 rounded-2xl sm:rounded-3xl shadow-2xl border-4 sm:border-8 border-slate-50 w-full aspect-[4/3] object-cover object-[center_52%]"
+                src="/images/247%20Mobile%20Tyre%20Fitting%20Holcombe.jpg"
+                alt="Blue Tesla with its wheel removed for mobile tyre fitting outside a stone house in Holcombe"
                 width={800}
                 height={600}
                 loading="lazy"

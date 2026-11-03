@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
@@ -15,38 +15,36 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-saddleworth',
-  name: 'Mobile Tyre Fitting in Saddleworth',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Saddleworth' },
+  alternateName: '24/7 Mobile Tyre Fitting Saddleworth',
+  areaServed: 'Saddleworth, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Saddleworth? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-saddleworth')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-saddleworth')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-saddleworth',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Saddleworth',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Saddleworth | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Saddleworth | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Saddleworth — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Saddleworth? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-saddleworth',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function SaddleworthPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -66,20 +64,19 @@ export default function SaddleworthPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Saddleworth. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Saddleworth? We provide mobile tyre replacement, emergency puncture repair and roadside tyre assistance at your home, workplace or a safe roadside location. Whether you&apos;re dealing with a flat tyre in Uppermill, a puncture in Greenfield or a damaged tyre on a rural road, our team can help you arrange suitable assistance.
             </p>
 
             <HeroPostcodes slug="saddleworth" />
 
-            {/* Trust bullets — hidden for now
+            {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Saddleworth &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Workplace and Roadside Tyre Service',
+                'Covering Saddleworth and Surrounding Villages',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -90,7 +87,6 @@ export default function SaddleworthPage() {
                 </div>
               ))}
             </div>
-            */}
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -316,39 +312,140 @@ export default function SaddleworthPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Saddleworth
+                Professional Mobile Tyre Fitting in Saddleworth
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Saddleworth, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Saddleworth and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Saddleworth.
-                If you&apos;re searching for mobile tyre fitting near me in Saddleworth, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                Saddleworth includes villages, residential areas and rural routes where reaching a traditional tyre garage may be inconvenient, especially when a tyre is damaged. Our mobile tyre fitting service brings tyre replacement and suitable puncture repair directly to your location, subject to availability and safe access.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre fitting across Saddleworth, including Uppermill, Greenfield, Delph, Dobcross and Diggle. We can help with punctures, damaged tyres and emergency replacements at home, work or a suitable roadside location.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Whether you&apos;re travelling around the villages or need assistance close to Standedge, share your exact location and vehicle details when booking. We can check service availability, discuss suitable tyre options and provide an estimated arrival time.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY SADDLEWORTH DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Saddleworth" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro="Our mobile service is designed to make tyre replacement and repair more convenient for Saddleworth drivers, including those travelling through rural and hillside areas."
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Enquiries', desc: 'Contact us day or night to check availability for urgent tyre assistance.' },
+            { icon: 'home_repair_service', title: 'Village-Wide Coverage', desc: 'Ask about service availability in Uppermill, Greenfield, Delph, Diggle and surrounding villages.' },
+            { icon: 'tire_repair', title: 'Convenient Fitting', desc: 'Arrange tyre fitting at home, work or a suitable roadside location.' },
+            { icon: 'sell', title: 'Tyre Options', desc: 'Ask about premium, mid-range and budget tyres for your vehicle.' },
+            { icon: 'build', title: 'Clear Pricing', desc: 'Request a quote and confirm the cost before the work begins.' },
+            { icon: 'engineering', title: 'Puncture Assessment', desc: 'We assess tyre damage to determine whether a repair is safe and suitable.' },
+            { icon: 'home_repair_service', title: 'Additional Assistance', desc: 'Ask about TPMS checks, locking wheel nut removal and jump-start assistance.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Saddleworth Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 and explain whether you need a replacement tyre, puncture assessment or emergency assistance.' },
+                { title: 'Share Your Exact Location', desc: "Tell us which village you're in, such as Uppermill, Greenfield, Delph or Diggle. A location pin can help the technician identify your position, particularly on rural roads." },
+                { title: 'Provide Your Vehicle Details', desc: 'Share your vehicle make and model, tyre size if known, and details of the tyre problem. We will discuss the available options and provide a quote.' },
+                { title: 'Confirm the Arrival Estimate', desc: 'We will advise whether a technician is available and provide an estimated arrival time based on your location, traffic and current demand.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician will assess the tyre and carry out the agreed work where it is safe and suitable. Tyre pressure and the TPMS can also be checked where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Saddleworth
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Tyres can become damaged by sharp objects, potholes, road debris and general wear. On rural routes, a puncture or damaged tyre can be particularly inconvenient if the nearest suitable garage is some distance away.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement in Saddleworth service helps drivers arrange a replacement at a convenient location. We can assess the damaged tyre and determine whether a repair is appropriate or a replacement is necessary.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We cover Saddleworth and surrounding locations, including:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Uppermill',
+                'Greenfield',
+                'Delph',
+                'Dobcross',
+                'Diggle',
+                'Grasscroft and Lydgate',
+                'Denshaw and Scouthead',
+                'Friezland',
+                'Rural routes around Standedge and Grains Bar, subject to access and availability',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              When booking, provide your exact location and tyre size if possible. This helps us check coverage and whether a suitable replacement tyre is available.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Saddleworth
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A sudden puncture or tyre blowout can leave you stranded, especially when travelling through Saddleworth&apos;s rural villages or less familiar roads. Our emergency mobile tyre fitting service helps drivers arrange assistance without driving on a tyre that may be unsafe.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can assess the tyre and advise whether it can be repaired safely or needs replacing. Emergency enquiries are accepted 24/7, subject to technician availability, safe working conditions and the availability of the required tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Because Saddleworth includes villages and rural routes farther from central Oldham, arrival times can vary. A typical estimated response for locations such as Uppermill, Delph, Dobcross and Diggle may be around 30–45 minutes. This is an estimate, not a guarantee; traffic, weather, road access, demand and tyre availability can affect arrival.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your vehicle develops a tyre problem on a busy road, prioritise your safety. Move to a safe location if possible and follow the appropriate breakdown procedures. Do not attempt to change a tyre where passing traffic or other hazards put you at risk.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -360,35 +457,79 @@ export default function SaddleworthPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="saddleworth" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-saddleworth"
           city="Saddleworth"
           faqs={[
             {
+              q: 'Do you offer mobile tyre fitting in Saddleworth?',
+              a: 'Yes. We provide mobile tyre fitting across Saddleworth, including tyre replacement and puncture assessment at home, work or a suitable roadside location.',
+            },
+            {
+              q: 'Are you available 24/7 in Saddleworth?',
+              a: 'You can contact us for emergency tyre assistance 24 hours a day, seven days a week. Attendance depends on technician availability, tyre stock and safe access to your location.',
+            },
+            {
               q: 'How quickly can you reach me in Saddleworth?',
-              a: "Saddleworth's villages sit a little further out on the OL3 postcode area, so we typically reach Uppermill, Delph, Dobcross and Diggle within 30-45 minutes, with an honest ETA given on the call.",
+              a: 'For villages such as Uppermill, Greenfield, Delph, Dobcross and Diggle, a typical estimated response may be around 30-45 minutes. Actual arrival times depend on your exact location, traffic, road conditions and technician availability.',
             },
             {
-              q: 'Do you cover the rural roads and villages across Saddleworth?',
-              a: 'Yes. We regularly service Uppermill, Greenfield, Delph, Dobcross, Diggle and Denshaw. Our vehicles are equipped for rural and hillside routes in all weather, including the Standedge and Grains Bar areas.',
+              q: 'Which villages in Saddleworth do you cover?',
+              a: 'We cover Uppermill, Greenfield, Delph, Dobcross, Diggle and other surrounding locations, including Grasscroft, Lydgate, Denshaw and Scouthead. Contact us to confirm availability for your exact postcode.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Saddleworth?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'Can you fit a tyre at my home in Saddleworth?',
+              a: 'Yes. We can arrange mobile tyre fitting at your home, provided there is suitable access and enough space to carry out the work safely.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Uppermill or Greenfield?',
-              a: 'Yes. We regularly attend offices and business premises around Uppermill and Greenfield, fitting your tyres while you work.',
+              q: 'Do you offer mobile tyre fitting at workplaces?',
+              a: 'Yes. We can attend suitable workplaces and business premises in Saddleworth, including locations around Uppermill and Greenfield. Share the address when requesting a quote.',
+            },
+            {
+              q: 'Can you repair a punctured tyre in Saddleworth?',
+              a: 'We can assess the puncture to determine whether a repair is safe and suitable. Repairs must meet the relevant requirements, including BS AU 159 where applicable. Some punctures and other types of damage require replacement.',
+            },
+            {
+              q: 'Can you provide assistance on rural roads around Saddleworth?',
+              a: 'We can assess call-outs on rural roads, including routes around Standedge and Grains Bar. Attendance depends on the exact location, safe access, weather conditions and technician availability.',
+            },
+            {
+              q: 'What types of replacement tyres can you supply?',
+              a: 'You can ask about premium, mid-range and budget tyres. Available options depend on your vehicle, tyre size, specification and current stock.',
+            },
+            {
+              q: 'How much does mobile tyre fitting in Saddleworth cost?',
+              a: 'The price depends on the tyre size and type, the work required and your location. Contact us for a quote and confirm the cost before booking.',
+            },
+            {
+              q: 'Can you provide emergency tyre replacement at night?',
+              a: 'Yes. You can contact us for emergency tyre assistance at night. The job depends on technician availability, the required tyre being in stock and a safe place to carry out the work.',
+            },
+            {
+              q: 'Can you fit tyres near Uppermill or Greenfield?',
+              a: 'Yes. We cover locations around Uppermill and Greenfield, subject to availability and safe access. Share your exact location so we can confirm the estimated arrival time.',
+            },
+            {
+              q: 'Can you check my TPMS after fitting a tyre?',
+              a: 'We can check the tyre pressure monitoring system (TPMS) where applicable. Tell us about any warning lights or sensor issues when booking.',
+            },
+            {
+              q: 'Do you offer jump-start assistance in Saddleworth?',
+              a: 'Jump-start assistance may be available if your vehicle has a flat battery. Contact us with your location and vehicle details to confirm availability.',
+            },
+            {
+              q: 'How do I book mobile tyre fitting in Saddleworth?',
+              a: 'Call 07759 708 646 and provide your location, vehicle details and tyre requirements. Our team will discuss the quote, available options and estimated arrival time.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Saddleworth Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Saddleworth line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Saddleworth?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat tyre in Uppermill, a puncture in Greenfield or a damaged tyre on a rural road, contact our team to arrange suitable assistance. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture repair across Saddleworth and nearby villages, subject to technician availability, tyre stock and safe access. Call 07759 708 646 to request a quote and confirm availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

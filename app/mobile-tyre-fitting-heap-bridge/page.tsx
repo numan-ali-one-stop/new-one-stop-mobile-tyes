@@ -291,8 +291,8 @@ export default function HeapBridgePage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="relative z-10 rounded-2xl sm:rounded-3xl shadow-2xl border-4 sm:border-8 border-slate-50 w-full object-cover"
-                src="/images/tyre-fitting-in-emergency.webp"
-                alt="Mobile tyre fitting technician"
+                src="/images/247%20Mobile%20Tyre%20Fitting%20Heap%20Bridge.jpg"
+                alt="White Ford Transit Custom van having a tyre replaced on site in Heap Bridge, Bury"
                 width={800}
                 height={600}
                 loading="lazy"

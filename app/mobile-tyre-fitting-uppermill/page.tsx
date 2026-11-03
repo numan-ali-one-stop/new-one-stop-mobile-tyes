@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
@@ -15,38 +15,36 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-uppermill',
-  name: 'Mobile Tyre Fitting in Uppermill',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Uppermill' },
+  alternateName: '24/7 Mobile Tyre Fitting Uppermill',
+  areaServed: 'Uppermill, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Uppermill? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-uppermill')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-uppermill')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-uppermill',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Uppermill',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Uppermill | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Uppermill | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Uppermill — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Uppermill? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-uppermill',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function UppermillPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
@@ -66,20 +64,19 @@ export default function UppermillPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Uppermill. We reach you in 20–30 minutes.
+              Need mobile tyre fitting in Uppermill? We provide mobile tyre replacement, emergency puncture repair and roadside tyre assistance at your home, workplace or a safe roadside location. Whether you have a flat tyre near Uppermill High Street or a puncture while travelling around Saddleworth, our mobile service helps you arrange convenient assistance.
             </p>
 
             <HeroPostcodes slug="uppermill" />
 
-            {/* Trust bullets — hidden for now
+            {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Uppermill &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Workplace and Roadside Tyre Service',
+                'Covering Uppermill and Surrounding Villages',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -90,7 +87,6 @@ export default function UppermillPage() {
                 </div>
               ))}
             </div>
-            */}
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -316,39 +312,139 @@ export default function UppermillPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Uppermill
+                Professional Mobile Tyre Fitting in Uppermill
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Uppermill, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Uppermill and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Uppermill.
-                If you&apos;re searching for mobile tyre fitting near me in Uppermill, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A damaged tyre can interrupt your plans, particularly if you&apos;re travelling through Uppermill or the surrounding Saddleworth villages. Our mobile tyre fitting service brings tyre replacement and suitable puncture repair directly to your location, helping you avoid the inconvenience of travelling to a garage on a damaged tyre.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre fitting in Uppermill and nearby areas across the OL3 postcode district. Whether your vehicle is parked near the village centre, close to the Huddersfield Narrow Canal or at your workplace, we can check availability and arrange suitable assistance.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Our service covers tyre replacement, puncture assessment and emergency tyre assistance. Contact us with your vehicle details, tyre size and exact location so we can discuss your options and provide an estimated arrival time.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ── 5. WHY UPPERMILL DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Uppermill" image="/images/tyres-fitting-anywhere.webp" />
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro="Our mobile service helps drivers in Uppermill arrange tyre assistance at a convenient location, whether they need an urgent replacement or help with a puncture."
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Enquiries', desc: 'Contact us day or night to check availability for urgent tyre assistance.' },
+            { icon: 'home_repair_service', title: 'Convenient Fitting', desc: 'Arrange tyre fitting at home, work or a suitable roadside location.' },
+            { icon: 'tire_repair', title: 'Tyre Options', desc: 'Ask about premium, mid-range and budget tyres for your vehicle.' },
+            { icon: 'sell', title: 'Clear Pricing', desc: 'Request a quote and confirm the cost before work begins.' },
+            { icon: 'build', title: 'Puncture Assessment', desc: 'We assess the damage to determine whether a repair is safe and suitable.' },
+            { icon: 'engineering', title: 'Additional Assistance', desc: 'Ask about TPMS checks, locking wheel nut removal and jump-start assistance.' },
+            { icon: 'home_repair_service', title: 'Local Coverage', desc: 'We serve Uppermill and surrounding Saddleworth villages, subject to availability and safe access.' },
+          ]}
+        />
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Uppermill Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 and explain whether you need a replacement tyre, puncture assessment or emergency assistance.' },
+                { title: 'Share Your Location', desc: "Tell us where you're in Uppermill, such as near High Street, the canal or a nearby residential road. A location pin can help the technician find you." },
+                { title: 'Provide Your Vehicle Details', desc: 'Share your vehicle make and model, tyre size if known, and details of the problem. We will discuss suitable options and provide a quote.' },
+                { title: 'Confirm Availability and Arrival Time', desc: 'We will check technician availability and whether the required tyre is available. Your estimated arrival time will depend on your location, traffic and current demand.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician will assess the situation and carry out the agreed work where it is safe and suitable. Tyre pressure and the tyre pressure monitoring system (TPMS) can also be checked where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 4 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Uppermill
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Tyres can become damaged by potholes, sharp objects, road debris and general wear. While some punctures can be repaired, sidewall damage, serious cuts and other unsafe conditions may require a replacement tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement in Uppermill service helps drivers arrange a replacement without having to travel to a garage. We can assess the damaged tyre and determine whether a repair is appropriate or a replacement is needed.
+            </p>
+            <p className="font-bold text-[#0f172a] mb-3">We cover Uppermill and nearby locations, including:</p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'Uppermill village centre',
+                'Uppermill High Street',
+                'Residential areas near the Huddersfield Narrow Canal',
+                'Greenfield',
+                'Dobcross',
+                'Diggle',
+                'Grasscroft and Lydgate',
+                'Other surrounding Saddleworth locations, subject to availability',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-slate-700">
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] shrink-0" style={{ fontSize: '20px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                  <span className="font-semibold">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              When booking, provide your exact location and tyre size if possible. This helps us check coverage and whether a suitable replacement tyre is available.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Uppermill
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A sudden puncture or tyre blowout can leave you stranded, particularly when travelling through Saddleworth or along rural roads. Our emergency mobile tyre fitting service helps drivers in Uppermill arrange assistance without driving on a tyre that may be unsafe.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Depending on the tyre&apos;s condition, we can assess whether a repair is suitable or whether replacement is necessary. Emergency enquiries are accepted 24/7, subject to technician availability, safe working conditions and the availability of the required tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              For Uppermill and nearby OL3 locations, an estimated response may be around 25–35 minutes, although this is not guaranteed. Traffic, weather, road access, current demand and your exact location can affect arrival time. Please confirm the current estimate when booking.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your vehicle develops a tyre problem on a busy road, prioritise your safety. Move to a safe location if possible and follow the appropriate breakdown procedures. Do not attempt to change a tyre where passing traffic or other hazards put you at risk.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -360,35 +456,79 @@ export default function UppermillPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="uppermill" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 10. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-uppermill"
           city="Uppermill"
           faqs={[
             {
+              q: 'Do you offer mobile tyre fitting in Uppermill?',
+              a: 'Yes. We provide mobile tyre fitting in Uppermill, including tyre replacement and puncture assessment at home, work or a suitable roadside location.',
+            },
+            {
+              q: 'Are you available 24/7 in Uppermill?',
+              a: 'You can contact us for emergency tyre assistance 24 hours a day, seven days a week. Attendance depends on technician availability, tyre stock and safe access to your location.',
+            },
+            {
               q: 'How quickly can you reach me in Uppermill?',
-              a: 'Our mobile units are based close by in Oldham, meaning we can typically reach Uppermill and the surrounding OL3 postcode area, including the High Street and the Huddersfield Narrow Canal, within 25-35 minutes.',
+              a: 'An estimated response may be around 25-35 minutes for Uppermill and nearby OL3 locations. Actual arrival times depend on traffic, road access, current demand and technician availability.',
             },
             {
-              q: 'Do you cover the rest of Saddleworth around Uppermill?',
-              a: 'Yes. We regularly service Uppermill and the surrounding OL3 postcode area, including Dobcross, Diggle and Greenfield, with vehicles equipped for rural and hillside routes in all weather.',
+              q: 'Which areas around Uppermill do you cover?',
+              a: 'We cover Uppermill village centre, High Street and surrounding areas, with service availability in nearby villages such as Greenfield, Dobcross and Diggle. Contact us to confirm coverage for your exact postcode.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Uppermill?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'Can you fit a tyre at my home in Uppermill?',
+              a: 'Yes. We can arrange mobile tyre fitting at your home, provided there is suitable access and enough space to carry out the work safely.',
             },
             {
-              q: 'Can you fit tyres at my workplace near the High Street or the canal?',
-              a: 'Yes. We regularly attend offices and business premises around Uppermill High Street and the Huddersfield Narrow Canal, fitting your tyres while you work.',
+              q: 'Do you offer mobile tyre fitting at workplaces?',
+              a: 'Yes. We can attend suitable workplaces and business premises in Uppermill. Share the address and your vehicle details when requesting a quote.',
+            },
+            {
+              q: 'Can you repair a punctured tyre in Uppermill?',
+              a: 'We can assess the puncture to determine whether a repair is safe and suitable. Repairs must meet the relevant requirements, including BS AU 159 where applicable. Some punctures and other types of damage require replacement.',
+            },
+            {
+              q: 'Can you provide tyre assistance on rural roads around Uppermill?',
+              a: 'We can check availability for call-outs on rural roads around Uppermill and Saddleworth. Attendance depends on your exact location, safe access, road conditions and technician availability.',
+            },
+            {
+              q: 'What types of replacement tyres can you supply?',
+              a: 'You can ask about premium, mid-range and budget tyres. Available options depend on your vehicle, tyre size, specification and current stock.',
+            },
+            {
+              q: 'How much does mobile tyre fitting in Uppermill cost?',
+              a: 'The cost depends on your tyre size, the replacement tyre selected, the work required and your location. Contact us for a quote and confirm the price before booking.',
+            },
+            {
+              q: 'Can you help with emergency tyre replacement at night?',
+              a: 'Yes. You can contact us for emergency tyre assistance at night. The service depends on technician availability, tyre stock and whether the work can be carried out safely.',
+            },
+            {
+              q: 'Can you fit tyres near Uppermill High Street or the canal?',
+              a: 'We can check availability for locations near Uppermill High Street and the Huddersfield Narrow Canal. Share your exact location so we can confirm access and provide an estimated arrival time.',
+            },
+            {
+              q: 'Can you check my TPMS after fitting a tyre?',
+              a: 'We can check the tyre pressure monitoring system (TPMS) where applicable. Tell us about any warning lights or sensor issues when booking.',
+            },
+            {
+              q: 'Do you offer jump-start assistance in Uppermill?',
+              a: 'Jump-start assistance may be available if your vehicle has a flat battery. Contact us with your location and vehicle details to confirm availability.',
+            },
+            {
+              q: 'How do I book a mobile tyre fitter in Uppermill?',
+              a: 'Call 07759 708 646 and provide your location, vehicle details and tyre requirements. Our team can discuss the quote, available options and estimated arrival time.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Uppermill Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Uppermill line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Uppermill?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat tyre at home, a puncture near the village centre or a damaged tyre while travelling around Saddleworth, contact our team to arrange suitable assistance. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture repair in Uppermill and nearby villages, subject to technician availability, tyre stock and safe access. Call 07759 708 646 to request a quote and confirm availability.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"
