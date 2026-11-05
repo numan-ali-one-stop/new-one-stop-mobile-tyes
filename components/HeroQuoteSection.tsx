@@ -1,7 +1,17 @@
 import QuickQuoteForm from '@/components/QuickQuoteForm'
 
+interface HeroQuoteSectionProps {
+  area?: string
+  heading?: string
+  /** Card copy overrides, see QuickQuoteForm. */
+  title?: string
+  subtitle?: string
+  submitLabel?: string
+  note?: string
+}
+
 /** Instant-quote card in its own section directly below a hero. */
-export default function HeroQuoteSection({ area, heading }: { area?: string; heading?: string }) {
+export default function HeroQuoteSection({ area, heading, title, subtitle, submitLabel, note }: HeroQuoteSectionProps) {
   return (
     <section className="py-10 sm:py-14 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
       <div
@@ -12,7 +22,15 @@ export default function HeroQuoteSection({ area, heading }: { area?: string; hea
         }}
       />
       <div className="max-w-xl mx-auto relative z-10 [&>div]:mt-0">
-        <QuickQuoteForm variant="hero" area={area} heading={heading} />
+        <QuickQuoteForm
+          variant="hero"
+          area={area}
+          heading={heading}
+          cardTitle={title}
+          cardSubtitle={subtitle}
+          submitLabel={submitLabel}
+          note={note}
+        />
       </div>
     </section>
   )

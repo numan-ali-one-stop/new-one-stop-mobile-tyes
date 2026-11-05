@@ -283,6 +283,16 @@
   .badge-glow, .badge-glow::after, .hero-badge-glow::after, .badge-dot-ping { animation: none !important; }
 }
 
+/* ─── Status pill above the H1 (app/emergency-mobile-tyre-fitting/page.tsx) ── */
+.lp-badge { animation: lpBadge 2.5s infinite ease-in-out; }
+@keyframes lpBadge {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.85; transform: scale(1.03); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-badge { animation: none !important; }
+}
+
 /* ─── Hero quote card (components/QuickQuoteForm.tsx, variant="hero") ──────
    Rotating red gradient border, shimmering title, bouncing bolt icon and a staggered
    fade-up of the heading, fields and button once the card scrolls into view. */
@@ -291,8 +301,9 @@
   position: relative; padding: 2px;
   background: conic-gradient(from var(--quote-angle), rgba(255,255,255,0.12) 0deg, #FF4444 60deg, #b70011 120deg, rgba(255,255,255,0.12) 180deg, rgba(255,255,255,0.12) 360deg);
   box-shadow: 0 20px 50px -15px rgba(183,0,17,0.45);
-  animation: quoteBorderSpin 4s linear infinite;
 }
+/* Repaints every frame, so it only starts once the card has scrolled into view. */
+.quote-card.is-visible { animation: quoteBorderSpin 4s linear infinite; }
 .quote-card-inner { background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%); }
 @keyframes quoteBorderSpin { to { --quote-angle: 360deg; } }
 .quote-title {

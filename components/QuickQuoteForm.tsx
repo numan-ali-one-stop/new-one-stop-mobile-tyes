@@ -10,6 +10,14 @@ interface QuickQuoteFormProps {
   area?: string
   /** Overrides the section heading, e.g. "Get a Tyre Quote on the M60". */
   heading?: string
+  /** Hero card heading. When set it renders as an H2, for pages where the card is its own section. */
+  cardTitle?: string
+  /** Hero card line under the heading. */
+  cardSubtitle?: string
+  /** Overrides the submit button text. */
+  submitLabel?: string
+  /** Overrides the small print under the submit button. */
+  note?: string
 }
 
 type DataLayerWindow = Window & { dataLayer?: Record<string, unknown>[] }
@@ -19,7 +27,7 @@ type DataLayerWindow = Window & { dataLayer?: Record<string, unknown>[] }
  * a `quote_form_submit` event to the dataLayer (set this up as a conversion in GTM) and opens
  * WhatsApp with the details, matching how the site's other enquiry forms deliver leads.
  */
-export default function QuickQuoteForm({ variant = 'section', area, heading }: QuickQuoteFormProps) {
+export default function QuickQuoteForm({ variant = 'section', area, heading, cardTitle, cardSubtitle, submitLabel, note }: QuickQuoteFormProps) {
   const id = useId()
   const [name, setName] = useState('')
   const [registration, setRegistration] = useState('')
@@ -168,7 +176,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
             required
             autoComplete="tel"
             inputMode="tel"
-            pattern="[0-9+()\s-]{10,}"
+            pattern="[0-9+\(\)\s\-]{10,}"
             title="Please enter a valid phone number"
             placeholder="07XXX XXXXXX"
             value={phone}
@@ -186,15 +194,16 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
         }
         style={{ fontFamily: 'var(--font-work-sans)' }}
       >
-        Get My Quote
+        {submitLabel ?? 'Get My Quote'}
       </button>
       <p className={`text-xs ${isHero ? 'text-white/60 text-center' : 'text-slate-500'}`}>
-        We&apos;ll reply on WhatsApp with a price. No obligation.
+        {note ?? <>We&apos;ll reply on WhatsApp with a price. No obligation.</>}
       </p>
     </form>
   )
 
   if (isHero) {
+    const CardTitle = cardTitle ? 'h2' : 'p'
     return (
       <div ref={cardRef} className={`quote-card mt-6 rounded-2xl ${visible ? 'is-visible' : ''}`}>
         <div className="quote-card-inner rounded-2xl p-4 sm:p-6">
@@ -204,13 +213,13 @@ export default function QuickQuoteForm({ variant = 'section', area, heading }: Q
                 <span className="quote-bolt inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#b70011] text-white mb-3">
                   <span className="material-symbols-outlined fill-1" aria-hidden="true">bolt</span>
                 </span>
-                <p
+                <CardTitle
                   className="quote-title text-xl sm:text-2xl font-black leading-tight"
                   style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
                 >
-                  Get Your Instant Quote Now
-                </p>
-                <p className="text-white/70 text-sm mt-1.5">Fill in your details and we&apos;ll send you a price</p>
+                  {cardTitle ?? 'Get Your Instant Quote Now'}
+                </CardTitle>
+                <p className="text-white/70 text-sm mt-1.5">{cardSubtitle ?? <>Fill in your details and we&apos;ll send you a price</>}</p>
               </div>
               {form}
             </>

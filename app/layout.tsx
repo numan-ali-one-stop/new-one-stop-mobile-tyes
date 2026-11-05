@@ -221,7 +221,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               (function() {
                 var link = document.createElement('link');
                 link.rel = 'stylesheet';
-                link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block';
+                // Only the FILL axis is variable: the site only uses wght 400 / GRAD 0 / opsz 24,
+                // and requesting every axis makes this font 3.9 MB instead of 450 KB.
+                link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block';
                 link.onload = function() {
                   document.fonts.load('1em "Material Symbols Outlined"').then(function() {
                     document.body.classList.add('icons-ready');
