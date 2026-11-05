@@ -189,8 +189,10 @@ export default function EmergencyMobileTyreFittingPage() {
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative lg:min-h-[640px] flex items-center overflow-hidden">
         <HeroMapBackground />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-10 sm:py-14 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
-          <div className="max-w-2xl">
+        {/* The map's desktop gradient only darkens the left side, so centred text needs an even tint. */}
+        <div className="hidden lg:block absolute inset-0 bg-[#0f172a]/60" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-10 sm:py-14 lg:py-28 text-center [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)]">
+          <div className="max-w-4xl mx-auto">
             <div className="lp-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-semibold mb-5 sm:mb-6 shadow-md">
               <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] shrink-0" />
               Vans Active &amp; Dispatched Near You Now
@@ -201,13 +203,13 @@ export default function EmergencyMobileTyreFittingPage() {
             >
               24/7 Emergency Mobile Tyre Fitting
             </h1>
-            <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
+            <p className="text-white/95 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-6">
               Looking for reliable mobile tyre fitters near you? Rapid 24/7 mobile tyre fitting dispatched to your exact
               location in <strong>20–30 minutes</strong>—covering every city, town, local roadside, and motorway.
             </p>
             <a
               href={`tel:${PHONE_TEL}`}
-              className="cta-btn cta-call bg-[#FF4444] hover:bg-red-700 text-white font-black min-h-14 px-5 sm:px-8 py-3 rounded-2xl w-full sm:w-fit flex items-center justify-center gap-2.5 text-[15px] sm:text-base tracking-wide border border-white/20 [text-shadow:none] mb-5 sm:mb-6"
+              className="cta-btn cta-call bg-[#FF4444] hover:bg-red-700 text-white font-black min-h-14 px-5 sm:px-8 py-3 rounded-2xl w-full sm:w-fit sm:mx-auto flex items-center justify-center gap-2.5 text-center text-[15px] sm:text-base tracking-wide border border-white/20 [text-shadow:none] mb-5 sm:mb-6"
               style={HEADING_FONT}
             >
               <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[22px] leading-none shrink-0" style={FILLED_ICON}>
@@ -215,7 +217,7 @@ export default function EmergencyMobileTyreFittingPage() {
               </span>
               CALL NOW FOR IMMEDIATE DISPATCH
             </a>
-            <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5">
+            <ul className="flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center gap-2.5">
               {trustBadges.map((badge) => {
                 const pill =
                   'inline-flex items-center gap-2 w-fit bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 text-xs sm:text-sm font-semibold'
