@@ -12,3 +12,5 @@ export const MAPS_URL = 'https://maps.app.goo.gl/tqGMogzsNNn8EXjH8'
 export const RESPONSE_TIME = '20–30 minutes'
 export const RATING = '5.0'
 export const REVIEW_COUNT = '1,200+'
+/** Google Ads / SEO landing page: it brings its own header and footer, so the site's hide on this path. */
+export const ADS_LANDING_PATH = '/emergency-mobile-tyre-fitting'

@@ -26,6 +26,14 @@ const services = [
     btnLabel: 'Book Now',
   },
   {
+    href: '/emergency-mobile-tyre-fitting',
+    img: '/images/professional-mobile-tyre-fitting.webp',
+    title: 'Emergency Mobile Tyre Fitting',
+    desc: 'Flat tyre, blowout or roadside damage? Our 24/7 dispatch team sends a fully equipped mobile van to your exact location.',
+    badge: '24/7 Dispatch',
+    btnLabel: 'Book Now',
+  },
+  {
     href: '/home-tyre-fitting',
     img: '/images/home-tyre-fitting.webp',
     title: 'Home Tyre Fitting',

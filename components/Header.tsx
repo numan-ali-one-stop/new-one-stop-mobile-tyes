@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { BOROUGHS } from '@/lib/locations'
-import { EMAIL, PHONE, PHONE_TEL, MAPS_URL } from '@/lib/constants'
+import { EMAIL, ADS_LANDING_PATH, PHONE, PHONE_TEL, MAPS_URL } from '@/lib/constants'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -49,6 +49,12 @@ const serviceLinks = [
     href: '/locking-nut-removal',
     icon: 'lock_open',
     desc: 'Damage-free removal with specialist tools',
+  },
+  {
+    label: 'Emergency Mobile Tyre Fitting',
+    href: ADS_LANDING_PATH,
+    icon: 'car_crash',
+    desc: 'Stranded? Rapid 24/7 dispatch to your location',
   },
 ]
 
@@ -118,6 +124,9 @@ export default function Header() {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
+
+  // The landing page renders its own sticky call header.
+  if (pathname === ADS_LANDING_PATH) return null
 
   return (
     <>
