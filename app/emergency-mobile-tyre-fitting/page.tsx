@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import JsonLd from '@/components/JsonLd'
+import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import { ADS_LANDING_PATH, PHONE, PHONE_TEL } from '@/lib/constants'
 import { breadcrumbSchema, faqSchema, serviceSchema, SITE_URL } from '@/lib/schema'
@@ -12,6 +13,8 @@ import { buildMetadata } from '@/lib/seo'
  */
 
 const SLUG = ADS_LANDING_PATH.slice(1)
+/** Same link as "View all Google reviews" in components/GoogleReviewsSection.tsx. */
+const GOOGLE_REVIEWS_URL = 'https://share.google/bejdYHzU10lFRVv4E'
 const LOGO_URL =
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One-Stop%20Loog-airanko-Qpv1QvladNLpRhg8X3Hs6SzyydzFMq.webp'
 const HEADING_FONT = { fontFamily: 'var(--font-work-sans)' }
@@ -26,7 +29,7 @@ export const metadata = buildMetadata({
 })
 
 const trustBadges = [
-  { icon: 'star', iconClass: 'text-yellow-400', text: '5.0 Stars Throughout (1,200+ Driver Reviews)' },
+  { icon: 'star', iconClass: 'text-yellow-400', text: '5.0 Stars Throughout (1,200+ Driver Reviews)', href: GOOGLE_REVIEWS_URL },
   { icon: 'timer', iconClass: 'text-[#FF4444]', text: '20–30 Minute Rapid Arrival' },
   { icon: 'local_shipping', iconClass: 'text-[#FF4444]', text: '24/7 Nationwide Coverage' },
 ]
@@ -184,16 +187,10 @@ export default function EmergencyMobileTyreFittingPage() {
       </header>
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
-      <section className="relative bg-[#0f172a] border-b border-white/10 overflow-hidden">
-        <div
-          className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
-          }}
-        />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 lg:py-24 text-center">
-          <div className="max-w-4xl mx-auto">
+      <section className="relative lg:min-h-[640px] flex items-center overflow-hidden">
+        <HeroMapBackground />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-10 sm:py-14 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="max-w-2xl">
             <div className="lp-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-semibold mb-5 sm:mb-6 shadow-md">
               <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] shrink-0" />
               Vans Active &amp; Dispatched Near You Now
@@ -204,13 +201,13 @@ export default function EmergencyMobileTyreFittingPage() {
             >
               24/7 Emergency Mobile Tyre Fitting
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+            <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
               Looking for reliable mobile tyre fitters near you? Rapid 24/7 mobile tyre fitting dispatched to your exact
               location in <strong>20–30 minutes</strong>—covering every city, town, local roadside, and motorway.
             </p>
             <a
               href={`tel:${PHONE_TEL}`}
-              className="cta-btn cta-call bg-[#FF4444] hover:bg-red-700 text-white font-black min-h-14 px-5 sm:px-8 py-3 rounded-2xl w-full sm:w-fit sm:mx-auto flex items-center justify-center gap-2.5 text-[15px] sm:text-base tracking-wide border border-white/20 mb-5 sm:mb-6"
+              className="cta-btn cta-call bg-[#FF4444] hover:bg-red-700 text-white font-black min-h-14 px-5 sm:px-8 py-3 rounded-2xl w-full sm:w-fit flex items-center justify-center gap-2.5 text-[15px] sm:text-base tracking-wide border border-white/20 [text-shadow:none] mb-5 sm:mb-6"
               style={HEADING_FONT}
             >
               <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[22px] leading-none shrink-0" style={FILLED_ICON}>
@@ -218,18 +215,30 @@ export default function EmergencyMobileTyreFittingPage() {
               </span>
               CALL NOW FOR IMMEDIATE DISPATCH
             </a>
-            <ul className="flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center gap-2.5">
-              {trustBadges.map((badge) => (
-                <li
-                  key={badge.text}
-                  className="inline-flex items-center gap-2 w-fit bg-white/10 border border-white/20 text-white rounded-full px-4 py-2 text-xs sm:text-sm font-semibold"
-                >
-                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] shrink-0 ${badge.iconClass}`} style={FILLED_ICON}>
-                    {badge.icon}
-                  </span>
-                  {badge.text}
-                </li>
-              ))}
+            <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5">
+              {trustBadges.map((badge) => {
+                const pill =
+                  'inline-flex items-center gap-2 w-fit bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 text-xs sm:text-sm font-semibold'
+                const content = (
+                  <>
+                    <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] shrink-0 ${badge.iconClass}`} style={FILLED_ICON}>
+                      {badge.icon}
+                    </span>
+                    {badge.text}
+                  </>
+                )
+                return (
+                  <li key={badge.text}>
+                    {badge.href ? (
+                      <a href={badge.href} target="_blank" rel="noopener noreferrer" className={`${pill} hover:bg-white/20 transition-colors`}>
+                        {content}
+                      </a>
+                    ) : (
+                      <span className={pill}>{content}</span>
+                    )}
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>
@@ -318,7 +327,16 @@ export default function EmergencyMobileTyreFittingPage() {
             <h2 className="text-2xl sm:text-[32px] font-bold text-[#0f172a] mb-4" style={H2_STYLE}>
               What Our Customers Say
             </h2>
-            <p className="text-slate-600 text-base">5.0 Stars Throughout Across 1,200+ Verified Driver Reviews</p>
+            <p className="text-base">
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#b70011] font-bold underline hover:text-red-700 transition-colors"
+              >
+                5.0 Stars Throughout Across 1,200+ Verified Driver Reviews
+              </a>
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {reviews.map((review) => (
