@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
@@ -15,45 +15,43 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-austerlands',
-  name: 'Mobile Tyre Fitting in Austerlands',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Austerlands' },
+  alternateName: '24/7 Mobile Tyre Fitting Austerlands',
+  areaServed: 'Austerlands, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Austerlands? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-austerlands')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-austerlands')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-austerlands',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Austerlands',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Austerlands | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Austerlands | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Austerlands — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Austerlands? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-austerlands',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function AusterlandsPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
@@ -65,21 +63,24 @@ export default function AusterlandsPage() {
               24/7 Mobile Tyre Fitting Austerlands
             </h1>
 
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-3">
+              Need mobile tyre fitting in Austerlands? We provide 24/7 mobile tyre fitting, emergency tyre replacement and puncture repair at your home, workplace or a safe roadside location. Our mobile technicians come to you, helping you deal with flat, punctured or damaged tyres without the need to drive to a garage.
+            </p>
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Austerlands. We reach you in 20–30 minutes.
+              Whether you&apos;re near Manchester Road, at home in Austerlands or travelling through the surrounding OL4 area, contact our team to check availability and get an estimated arrival time.
             </p>
 
             <HeroPostcodes slug="austerlands" />
 
-            {/* Trust bullets — hidden for now
+            {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Austerlands &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Workplace and Roadside Service',
+                'Premium, Mid-Range and Budget Tyre Options',
+                'Tyre Pressure and TPMS Checks Where Applicable',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -90,7 +91,6 @@ export default function AusterlandsPage() {
                 </div>
               ))}
             </div>
-            */}
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -308,7 +308,7 @@ export default function AusterlandsPage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
                 What You Can Expect
               </span>
@@ -316,39 +316,146 @@ export default function AusterlandsPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Austerlands
+                Professional Mobile Tyre Fitting in Austerlands
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Austerlands, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Austerlands and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Austerlands.
-                If you&apos;re searching for mobile tyre fitting near me in Austerlands, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre fitting in Austerlands for drivers who need a convenient solution to tyre problems. Instead of travelling to a tyre centre, you can arrange for a technician to attend your location and assess the issue.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                We help drivers with punctures, worn tyres, damaged tyres and unexpected tyre failures. Depending on the condition of your tyre, we can carry out a suitable repair or recommend a replacement. We can also check available tyre options and confirm the price before work begins.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Our service covers Austerlands and nearby areas, including locations around Manchester Road and routes connecting towards Lees and Grasscroft. Contact us with your exact location so we can confirm whether a technician is available and provide an estimated arrival time.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY AUSTERLANDS DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Austerlands" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. OUR MOBILE TYRE SERVICES ───────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-5xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-10 sm:mb-12 leading-tight text-center"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Our Mobile Tyre Services
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {[
+                { icon: 'bolt', title: '24/7 Mobile Tyre Fitting', desc: 'Arrange tyre fitting at home, work or another accessible and safe location.' },
+                { icon: 'engineering', title: 'Emergency Tyre Replacement', desc: 'Replace a damaged or unsafe tyre with a suitable alternative, subject to availability.' },
+                { icon: 'sell', title: 'Mobile Puncture Repair', desc: 'Have your tyre inspected for a repair where the damage and tyre condition meet the relevant safety requirements.' },
+              ].map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl shadow-sm p-6 border-l-4 border-[#b70011]">
+                  <div className="w-12 h-12 bg-[#b70011]/10 rounded-lg flex items-center justify-center mb-4">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">{item.icon}</span>
+                  </div>
+                  <h3 className="font-bold text-[#0f172a] text-lg mb-2">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. WHY AUSTERLANDS DRIVERS CHOOSE US ──────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro="A damaged tyre can disrupt your day, especially when you cannot safely continue driving. Our mobile service offers a convenient way to get professional tyre assistance without arranging a trip to a garage."
+          items={[
+            { icon: 'bolt', title: 'Available 24/7', desc: 'Contact us for assistance with urgent tyre problems, including evenings, weekends and bank holidays.' },
+            { icon: 'home_repair_service', title: 'Convenient Locations', desc: 'Arrange service at home, at work or at a suitable roadside location.' },
+            { icon: 'tire_repair', title: 'Tyre Options', desc: 'Ask about premium, mid-range and budget tyres suitable for your vehicle.' },
+            { icon: 'build', title: 'Repair or Replacement Advice', desc: 'Our technician will assess the tyre and explain the available options.' },
+            { icon: 'sell', title: 'Clear Pricing', desc: 'Confirm the quote and any applicable call-out costs before authorising the work.' },
+            { icon: 'engineering', title: 'Additional Support', desc: 'Ask about TPMS checks, locking wheel nut removal and jump-start assistance, subject to availability.' },
+          ]}
+        />
+
+        {/* ── 7. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Austerlands Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 and explain whether you need a tyre repair, replacement or planned fitting. Share your vehicle details and tyre size if available.' },
+                { title: 'Confirm Your Location', desc: 'Provide your address or share your location if you are stranded. Let us know whether the vehicle is at home, at work or on the roadside.' },
+                { title: 'Get a Quote', desc: 'Our team will check your requirements, discuss suitable tyre options and confirm the price and estimated arrival time before arranging the service.' },
+                { title: 'Have Your Tyre Assessed and Fitted', desc: 'The technician will inspect the tyre and determine whether a safe repair is possible. If replacement is required and a suitable tyre is available, the technician can carry out the fitting at your location.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 8. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Austerlands
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If your tyre has a sidewall bulge, severe damage, a major puncture or wear that makes it unsafe, replacement may be the appropriate option. Driving on a damaged or flat tyre can cause further damage and create a safety risk.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Our mobile tyre replacement service helps drivers in Austerlands arrange a suitable replacement without visiting a garage. Tell us your vehicle registration or tyre size so we can check the available options.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              We can discuss premium, mid-range and budget tyres, depending on your vehicle&apos;s requirements and current stock. Where applicable, the technician can also check tyre pressure and the Tyre Pressure Monitoring System (TPMS) after fitting.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Austerlands
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Tyre problems can happen at inconvenient times, including late at night, early in the morning or during a journey. Our 24/7 service allows you to contact us when you need emergency tyre assistance in Austerlands.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can help with flat tyres, punctures, blowouts and damaged tyres. Once you provide your location and vehicle details, our team can explain the available options and confirm whether a technician can attend.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We typically aim to reach locations in our covered areas within around 20–30 minutes, but this is an estimate rather than a guaranteed arrival time. Please confirm the current ETA when booking.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Safety note: If you experience a tyre problem on a busy road, do not attempt a tyre change in live traffic. Follow the relevant breakdown and road-safety guidance, move to a safe place if possible, and contact the appropriate roadside or emergency service if your position is dangerous.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 10. BRAND CAROUSEL ────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -360,35 +467,79 @@ export default function AusterlandsPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="austerlands" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 11. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-austerlands"
           city="Austerlands"
           faqs={[
             {
               q: 'How quickly can you reach me in Austerlands?',
-              a: 'Our mobile units are based close by in Oldham, meaning we can typically reach Austerlands and the surrounding OL4 postcode area, including Manchester Road, within 20-30 minutes.',
+              a: 'We aim to reach covered locations in around 20-30 minutes in typical conditions. Actual arrival times depend on traffic, your precise location, weather and technician availability. Contact us for a current ETA.',
             },
             {
-              q: 'What areas around Austerlands do you cover?',
-              a: 'Yes. We cover Austerlands and the surrounding OL4 postcode area, along with Manchester Road and the routes connecting to Lees and Grasscroft.',
+              q: 'Do you provide 24/7 mobile tyre fitting in Austerlands?',
+              a: 'Yes. You can contact us at any time for mobile tyre fitting and emergency tyre assistance. Service attendance depends on technician availability, your location and the tyre required.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Austerlands?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'Which areas near Austerlands do you cover?',
+              a: 'We cover Austerlands and nearby locations, including areas around Manchester Road and routes towards Lees and Grasscroft. Contact us with your postcode to confirm availability.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Manchester Road or Grasscroft?',
-              a: 'Yes. We regularly attend offices and business premises around Manchester Road and Grasscroft, fitting your tyres while you work.',
+              q: 'Can you replace a damaged tyre at my home?',
+              a: 'Yes. We can arrange mobile tyre replacement at your home where the location is suitable for the work and a compatible replacement tyre is available.',
+            },
+            {
+              q: 'Do you offer mobile puncture repair in Austerlands?',
+              a: 'Yes. Our technician can inspect the puncture and determine whether the tyre can be safely repaired. Repairs are only carried out when the damage, tyre condition and applicable standards allow it.',
+            },
+            {
+              q: 'Is it better to repair or replace a punctured tyre?',
+              a: "It depends on the location and extent of the damage, the tyre's condition and the applicable repair requirements. If the tyre cannot be safely repaired, replacement may be necessary.",
+            },
+            {
+              q: 'Can you fit tyres at my workplace near Manchester Road?',
+              a: 'Yes. We can arrange mobile tyre fitting at a suitable workplace location in the Austerlands area. Share your address and vehicle details so we can confirm access and availability.',
+            },
+            {
+              q: 'Do you provide emergency tyre replacement at night?',
+              a: 'Yes. Our service operates 24/7 for emergency tyre assistance. A suitable replacement tyre and an available technician are required, so please call to confirm your options.',
+            },
+            {
+              q: 'What types of tyres can you supply?',
+              a: 'We can check options across premium, mid-range and budget categories, depending on your vehicle, tyre size and stock availability. We will confirm suitable options and pricing before proceeding.',
+            },
+            {
+              q: 'Can you help if my tyre is completely flat?',
+              a: 'Yes. Contact us with your location and vehicle details. If the vehicle is in an unsafe position, prioritise your safety and do not attempt to change the tyre in live traffic.',
+            },
+            {
+              q: 'Do you offer home tyre fitting in Austerlands?',
+              a: 'Yes. Home tyre fitting can be arranged where there is sufficient safe access and space for the technician to work. Contact us to check availability and pricing.',
+            },
+            {
+              q: 'Can you check my tyre pressure after fitting?',
+              a: 'Yes. Tyre pressure can be checked after fitting. Where applicable, the technician can also check the TPMS and advise if any further attention is needed.',
+            },
+            {
+              q: 'Can you remove a locking wheel nut if I have lost the key?',
+              a: 'Ask our team about locking wheel nut removal. Availability depends on the vehicle, the type of locking nut and the tools required. We will discuss the options before proceeding.',
+            },
+            {
+              q: 'How much does mobile tyre fitting in Austerlands cost?',
+              a: 'The price depends on the tyre size, tyre brand, service required, location and time of attendance. Contact us for a quote and confirm the total cost before authorising the work.',
+            },
+            {
+              q: 'How do I book a mobile tyre fitter in Austerlands?',
+              a: 'Call 07759 708 646 with your vehicle details, tyre size if known, exact location and the type of assistance you need. Our team will check availability, discuss pricing and provide an estimated arrival time.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 12. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Austerlands Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Austerlands line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Austerlands?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">For a puncture, flat tyre or urgent replacement, contact One Stop Tyres 247 to arrange mobile tyre assistance in Austerlands. We can help you check suitable tyre options, confirm service availability and arrange fitting at your home, workplace or another safe and accessible location. Call 07759 708 646 to request a quote and estimated arrival time.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

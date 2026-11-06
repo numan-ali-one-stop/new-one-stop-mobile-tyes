@@ -317,12 +317,12 @@ export default function Home() {
             >
               Reliable Tyre Service When You Need It
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-left sm:text-center">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-center">
               When a damaged or flat tyre leaves you stranded, getting help quickly matters. One Stop
               Mobile Tyres 24/7 provides professional mobile tyre services across our service areas,
               bringing tyre fitting, tyre repair and replacement directly to your location.
             </p>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-left sm:text-center">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-center">
               Whether you&apos;re at home, at work or dealing with a roadside tyre problem, our mobile team
               can assess the issue and provide the right solution where it is safe to do so. We offer 24/7
               emergency tyre assistance as well as same-day{' '}
@@ -332,7 +332,7 @@ export default function Home() {
               for less urgent
               requirements.
             </p>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed text-left sm:text-center">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed text-center">
               Our aim is simple: provide a fast, professional and convenient tyre service without making
               you drive to a garage.
             </p>
@@ -398,7 +398,7 @@ export default function Home() {
           </div>
 
           {/* Content col */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
             <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
               What You Can Expect
             </span>
@@ -423,7 +423,7 @@ export default function Home() {
               is completed professionally, with a TPMS check where applicable, clear pricing and no
               unnecessary hassle.
             </p>
-            <ul className="space-y-4 sm:space-y-5">
+            <ul className="space-y-4 sm:space-y-5 text-left">
               <FeatureItem
                 icon="bolt"
                 title="24/7 Mobile Tyre Fitting"

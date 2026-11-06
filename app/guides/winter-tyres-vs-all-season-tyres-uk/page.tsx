@@ -400,7 +400,7 @@ export default function WinterVsAllSeasonTyresGuide() {
               Tell us your car and tyre size and we&apos;ll quote for a seasonal swap or new tyres,
               fitted on your drive or at work across Greater Manchester.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:justify-center lg:justify-start">
               <a
                 href="tel:+447759708646"
                 className="cta-btn cta-call bg-[#dc2626] text-white font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"

@@ -54,7 +54,7 @@ export default function HeroSlider() {
       <div
         className="relative z-10 flex flex-col justify-center px-5 sm:px-10 lg:px-16 xl:px-24 pt-10 pb-10 sm:pt-14 sm:pb-14 lg:pt-16 lg:pb-16 lg:min-h-[clamp(600px,90svh,820px)] [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]"
       >
-        <div className="w-full max-w-2xl">
+        <div className="w-full max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
 
             {/* Badge */}
             <span className="hero-badge-glow inline-flex items-center gap-2 bg-[#b70011] text-white text-[11px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest px-3.5 sm:px-4 py-2 rounded-full mb-4 sm:mb-5 ring-1 ring-[#25D366]/60 [text-shadow:none]">
@@ -76,14 +76,14 @@ export default function HeroSlider() {
             </h1>
 
             {/* Body */}
-            <p className="hero-body text-white/95 lg:text-white/75 text-base lg:text-lg leading-relaxed mb-5 sm:mb-6 max-w-xl">
+            <p className="hero-body text-white/95 lg:text-white/75 text-base lg:text-lg leading-relaxed mb-5 sm:mb-6 max-w-xl mx-auto lg:mx-0">
               {HERO.body}
             </p>
 
             {/* Checklist — hidden for now
             <div className="hero-list mb-6">
               <p className="text-[#FF4444] text-xs font-bold uppercase tracking-widest mb-3">{HERO.listLabel}</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 w-fit mx-auto lg:mx-0 text-left">
                 {HERO.items.map((item) => (
                   <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                     <span aria-hidden="true" data-nosnippet

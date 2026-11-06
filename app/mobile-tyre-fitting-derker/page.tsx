@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
@@ -15,45 +15,43 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-derker',
-  name: 'Mobile Tyre Fitting in Derker',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Derker' },
+  alternateName: '24/7 Mobile Tyre Fitting Derker',
+  areaServed: 'Derker, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Derker? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-derker')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-derker')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-derker',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Derker',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Derker | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Derker | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Derker — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Derker? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-derker',
 })
-
-function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <li className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-l-4 border-[#b70011]">
-      <div className="w-10 h-10 bg-[#b70011]/10 rounded-lg flex items-center justify-center shrink-0">
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011] font-bold">{icon}</span>
-      </div>
-      <div>
-        <span className="font-bold text-[#0f172a] block">{title}</span>
-        <p className="text-sm text-slate-500">{desc}</p>
-      </div>
-    </li>
-  )
-}
 
 export default function DerkerPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
@@ -65,21 +63,24 @@ export default function DerkerPage() {
               24/7 Mobile Tyre Fitting Derker
             </h1>
 
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-3">
+              Need reliable mobile tyre fitting in Derker? We provide 24/7 mobile tyre fitting, emergency tyre replacement and puncture repair at your home, workplace or a safe roadside location. Whether you have a flat tyre, a sudden puncture or a damaged tyre that needs replacing, our mobile technicians can come to you.
+            </p>
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Derker. We reach you in 20–30 minutes.
+              We cover Derker and surrounding Oldham areas, helping drivers arrange tyre assistance without the need to travel to a garage. From puncture assessments to emergency tyre replacement, we&apos;ll check your requirements, explain the available options and provide an estimated arrival time when you call.
             </p>
 
             <HeroPostcodes slug="derker" />
 
-            {/* Trust bullets — hidden for now
+            {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Derker &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Workplace and Roadside Service',
+                'Coverage Across Derker and Nearby OL1 Areas',
+                'Premium, Mid-Range and Budget Tyre Options, Subject to Availability',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -90,7 +91,6 @@ export default function DerkerPage() {
                 </div>
               ))}
             </div>
-            */}
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -308,7 +308,7 @@ export default function DerkerPage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
                 What You Can Expect
               </span>
@@ -316,39 +316,153 @@ export default function DerkerPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Derker
+                Professional Mobile Tyre Fitting in Derker
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Derker, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Derker and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Derker.
-                If you&apos;re searching for mobile tyre fitting near me in Derker, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A flat or damaged tyre can disrupt your journey, particularly if your vehicle is parked away from home or stranded on the roadside. Our mobile tyre fitting service brings professional equipment and suitable replacement tyres directly to your location, where there is safe access to carry out the work.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 helps drivers in Derker with mobile tyre fitting, emergency replacement and puncture assessments. Whether you need assistance near Derker Metrolink, along Rochdale Road or at a suitable location elsewhere in the area, contact our team to check availability.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Our aim is to make tyre assistance convenient, with clear pricing and an estimated arrival time before the work begins.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY DERKER DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Derker" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. OUR MOBILE TYRE SERVICES ───────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-6xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-10 sm:mb-12 leading-tight text-center"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Our Mobile Tyre Services
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: 'bolt', title: 'Mobile Tyre Fitting', desc: 'Arrange tyre fitting at your home, workplace or another suitable location in Derker.' },
+                { icon: 'engineering', title: 'Emergency Tyre Replacement', desc: "Replace a damaged or unsafe tyre with a suitable alternative, subject to your vehicle's requirements and tyre availability." },
+                { icon: 'sell', title: 'Mobile Puncture Repair', desc: 'We inspect punctured tyres and carry out repairs where the damage meets the applicable safety requirements.' },
+                { icon: 'home_repair_service', title: 'Home Tyre Fitting', desc: 'Have replacement tyres fitted at home without making a separate trip to a garage.' },
+                { icon: 'bolt', title: 'Jump-Start Assistance', desc: 'If your vehicle also has a flat battery, contact us to check availability for jump-start assistance.' },
+                { icon: 'tire_repair', title: 'TPMS Checks and Reset', desc: 'Tyre pressure monitoring system checks or resets may be available where applicable following tyre fitting or repair.' },
+                { icon: 'build', title: 'Locking Wheel Nut Removal', desc: 'Ask about assistance with lost or seized locking wheel nuts using specialist tools.' },
+              ].map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl shadow-sm p-6 border-l-4 border-[#b70011]">
+                  <div className="w-12 h-12 bg-[#b70011]/10 rounded-lg flex items-center justify-center mb-4">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">{item.icon}</span>
+                  </div>
+                  <h3 className="font-bold text-[#0f172a] text-lg mb-2">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. WHY DERKER DRIVERS CHOOSE US ──────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro="When you need a tyre repaired or replaced, you want a convenient service with clear communication and pricing. Our mobile team helps drivers in Derker arrange practical tyre assistance based on their vehicle, tyre condition and location."
+          items={[
+            { icon: 'bolt', title: '24/7 Emergency Availability', desc: 'Tyre problems can happen at any time. Contact us day or night to check availability for emergency tyre fitting and replacement in Derker.' },
+            { icon: 'home_repair_service', title: 'Convenient On-Site Service', desc: 'Our technicians can attend your home, workplace or a suitable roadside location, provided there is safe access and sufficient space to work.' },
+            { icon: 'sell', title: 'Clear, Upfront Pricing', desc: "Share your vehicle details, tyre size and location. We'll discuss the available options and confirm the price before the work begins." },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: 'Premium, mid-range and budget tyres may be available depending on your vehicle, tyre specification and current stock.' },
+            { icon: 'build', title: 'Professional Tyre Assessment', desc: 'We assess damaged tyres to determine whether repair is appropriate. If a tyre cannot be repaired safely, replacement may be recommended.' },
+            { icon: 'engineering', title: 'Local Oldham Coverage', desc: 'We serve Derker and surrounding Oldham areas, including nearby routes towards Chadderton and Oldham town centre. Contact us with your exact location to confirm availability and the estimated arrival time.' },
+          ]}
+        />
+
+        {/* ── 7. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Derker Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 and explain whether you need a replacement tyre, puncture assessment or another tyre-related service.' },
+                { title: 'Share Your Location and Vehicle Details', desc: 'Tell us where you are in Derker and provide your vehicle registration or tyre size, if known. You can also share your location through WhatsApp to help the technician find you.' },
+                { title: 'Confirm the Price and Estimated Arrival', desc: "We'll check the available tyre options, explain the service and confirm the price and estimated arrival time before dispatch." },
+                { title: 'Get Your Tyre Fitted', desc: 'Our technician will attend the agreed location and complete the work where it is safe and suitable to do so. Tyre pressure and TPMS checks can be carried out where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 8. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Derker
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If your tyre has a serious puncture, sidewall damage or excessive wear, replacement may be necessary. Our mobile tyre replacement service helps drivers in Derker arrange a suitable replacement without driving to a garage on an unsafe tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We cover locations around Derker, including the area near Derker Metrolink and Rochdale Road, as well as suitable addresses on routes connecting with Oldham town centre and Chadderton.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Before arranging a replacement, provide your vehicle registration or tyre size so we can check suitable options. Availability depends on the tyre specification required and current stock.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If your tyre appears repairable, our technician will assess the damage first. Repairs are only suitable when the tyre meets the relevant safety requirements; otherwise, replacement may be the safer option.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Derker
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A puncture or blowout can leave you stranded at an inconvenient time. Our 24/7 emergency tyre service helps drivers in Derker arrange assistance when a tyre becomes damaged or unsafe.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can attend suitable locations around Derker and the surrounding OL1 area, subject to technician availability, traffic and safe access. The estimated arrival time depends on your exact location and current road conditions.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If you experience a tyre problem on a busy road, do not attempt to change it beside moving traffic. Follow the appropriate breakdown procedures and move to a safe location if possible.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Call 07759 708 646 to discuss your situation and check the available assistance.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 10. BRAND CAROUSEL ────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -360,35 +474,79 @@ export default function DerkerPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="derker" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 11. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-derker"
           city="Derker"
           faqs={[
             {
-              q: 'How quickly can you reach me in Derker?',
-              a: 'Our mobile units are based close by in Oldham, meaning we can typically reach Derker and the surrounding OL1 postcode area, including Rochdale Road and the Metrolink stop, within 20-30 minutes.',
+              q: 'Do you provide mobile tyre fitting in Derker?',
+              a: 'Yes. We provide mobile tyre fitting in Derker, with service available at your home, workplace or a suitable roadside location, subject to access and availability.',
             },
             {
-              q: 'What areas around Derker do you cover?',
-              a: 'Yes. We cover Derker and the surrounding OL1 postcode area, along with Rochdale Road and the routes connecting to Oldham town centre and Chadderton.',
+              q: 'Are you available 24/7 in Derker?',
+              a: 'Our service operates 24/7 for emergency tyre assistance. Contact us to confirm technician availability and the estimated arrival time for your location.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Derker?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'How quickly can you reach Derker?',
+              a: 'We estimate a typical response time of 20-30 minutes for Derker and the surrounding OL1 area. This is an estimate rather than a guarantee; traffic, weather, technician availability and your exact location can affect arrival time.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Derker Metrolink or Rochdale Road?',
-              a: 'Yes. We regularly attend offices and business premises around Derker Metrolink and Rochdale Road, fitting your tyres while you work.',
+              q: 'Which areas around Derker do you cover?',
+              a: 'We cover Derker and surrounding Oldham areas, including routes towards Chadderton and Oldham town centre. Contact us to confirm coverage for your postcode.',
+            },
+            {
+              q: 'Can you fit tyres near Derker Metrolink?',
+              a: 'Yes. We can attend a suitable location near Derker Metrolink, subject to access and technician availability. Share your exact location when booking.',
+            },
+            {
+              q: 'Can you fit tyres at my workplace near Rochdale Road?',
+              a: 'We can arrange mobile tyre fitting at suitable workplace locations around Rochdale Road and Derker, subject to access, parking arrangements and availability.',
+            },
+            {
+              q: 'Can you replace a damaged tyre in Derker?',
+              a: 'Yes. We provide mobile tyre replacement when a suitable tyre is available for your vehicle. Share your tyre size or vehicle registration so we can check the options.',
+            },
+            {
+              q: 'Can you repair a punctured tyre instead of replacing it?',
+              a: 'In some cases. Our technician will inspect the damage and determine whether the tyre meets the relevant safety requirements, including applicable BS AU 159 guidance. If it is unsafe to repair, replacement may be recommended.',
+            },
+            {
+              q: 'Can I arrange mobile tyre fitting at home?',
+              a: 'Yes. Home tyre fitting can be arranged where there is sufficient safe space and access for the technician to complete the work.',
+            },
+            {
+              q: 'What types of tyres can you supply?',
+              a: 'Premium, mid-range and budget tyre options may be available. The choices depend on your vehicle, required tyre size, specification and current stock.',
+            },
+            {
+              q: 'How much does mobile tyre fitting in Derker cost?',
+              a: 'The price depends on the tyre required, the work involved, your location and the time of service. Contact us for a quote and confirm the price before the work begins.',
+            },
+            {
+              q: 'Can you provide emergency puncture repair at the roadside?',
+              a: 'Yes, where the tyre is suitable for repair and the location is safe. We cannot carry out tyre work in an unsafe position beside moving traffic.',
+            },
+            {
+              q: 'Can you help if my car battery is flat as well?',
+              a: 'Jump-start assistance may be available. Contact us with your location and vehicle details to confirm availability.',
+            },
+            {
+              q: 'What information should I provide when booking?',
+              a: 'Provide your location, vehicle make and model, tyre size if known, and a brief description of the problem. A location pin or photo can also help us understand your situation.',
+            },
+            {
+              q: 'How do I book emergency tyre assistance in Derker?',
+              a: 'Call 07759 708 646 and explain the problem. Share your location and vehicle details so our team can confirm the available service, quote and estimated arrival time.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 12. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Derker Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Derker line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Derker?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat, punctured or damaged tyre, contact our team to discuss mobile tyre fitting in Derker. We can check the available repair or replacement options and arrange a visit where service is available. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture assessment across Derker and surrounding Oldham areas, subject to availability and safe access. Call 07759 708 646 to request a quote and estimated arrival time.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

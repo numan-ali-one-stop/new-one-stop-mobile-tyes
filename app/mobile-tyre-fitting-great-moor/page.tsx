@@ -50,10 +50,10 @@ export default function GreatMoorPage() {
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
@@ -308,7 +308,7 @@ export default function GreatMoorPage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
                 What You Can Expect
               </span>
@@ -324,7 +324,7 @@ export default function GreatMoorPage() {
                 We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Great Moor.
                 If you&apos;re searching for mobile tyre fitting near me in Great Moor, our fast response team is available day and night.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
+              <ul className="space-y-4 sm:space-y-5 text-left">
                 <FeatureItem
                   icon="bolt"
                   title="24/7 Mobile Tyre Fitting"

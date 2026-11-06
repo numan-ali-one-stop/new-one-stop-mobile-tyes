@@ -49,10 +49,10 @@ export default function HorwichPage() {
       <main>
 
         {/* ── 1. HERO */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
             </div>
@@ -220,7 +220,7 @@ export default function HorwichPage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Mobile Tyre Fitting Around Horwich&apos;s Main Travel Routes
@@ -228,7 +228,7 @@ export default function HorwichPage() {
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                 Horwich has a different driving pattern from central Bolton. Local journeys move between the town centre, Middlebrook, Horwich Parkway, Blackrod and the surrounding routes leading towards the M61. That makes mobile tyre support particularly useful when a damaged tyre leaves the vehicle unsafe to continue. Our mobile car tyre fitting service allows the technician to travel to the vehicle rather than asking you to reach a tyre centre first. Mobile fitting equipment is carried on the van, along with access to premium, mid-range and budget tyre options for many common cars. We cover Horwich town centre, areas around Chorley New Road, Lee Lane, Middlebrook, Horwich Parkway and surrounding residential streets, as well as nearby Blackrod, Rivington and Montserrat. Whether a tyre problem appears before a commute, after shopping or during a longer journey through the area, we can arrange the right type of support based on the condition of the tyre.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
+              <ul className="space-y-4 sm:space-y-5 text-left">
                 <FeatureItem icon="bolt" title="Same Day Mobile Tyre Fitting" desc="If you discover a worn or damaged tyre and want it sorted without delaying your plans, our same day mobile tyre fitting service is available for many popular tyre sizes." />
                 <FeatureItem icon="engineering" title="Emergency Mobile Tyre Fitting" desc="A blowout or sudden loss of pressure can make continued driving unsafe. Our emergency mobile tyre fitting service operates around the clock for urgent tyre problems across Horwich." />
                 <FeatureItem icon="sell" title="Mobile Tyre Replacement Service" desc="When the tyre is beyond safe repair, our mobile tyre replacement service supplies an appropriate replacement and professionally fits it at a suitable location." />

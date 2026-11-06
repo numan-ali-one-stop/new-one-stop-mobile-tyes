@@ -23,7 +23,7 @@ export default function LocalAreaInfo({ currentSlug }: LocalAreaInfoProps) {
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#f8fafc] border-t border-slate-100">
       <div className="max-w-6xl mx-auto">
-        <div className="max-w-3xl mb-8 sm:mb-10">
+        <div className="max-w-3xl mx-auto lg:mx-0 mb-8 sm:mb-10 text-center lg:text-left">
           <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-2 block">
             Local Knowledge
           </span>

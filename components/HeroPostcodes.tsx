@@ -10,7 +10,7 @@ export default function HeroPostcodes({ slug }: { slug: string }) {
   const shown = runs.slice(0, MAX_RUNS)
 
   return (
-    <div className="flex flex-wrap items-center gap-2 -mt-2 sm:-mt-3 mb-5 sm:mb-6">
+    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 -mt-2 sm:-mt-3 mb-5 sm:mb-6">
       <span className="flex items-center gap-1.5 text-white lg:text-white/90 text-sm font-semibold">
         <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
           location_on

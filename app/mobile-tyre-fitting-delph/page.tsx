@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import BrandCarousel from '@/components/BrandCarousel'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
-import { serviceSchema } from '@/lib/schema'
+import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
@@ -15,17 +15,26 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
-const _serviceSchema = serviceSchema({
+const _serviceSchema = pageServiceSchema({
   slug: 'mobile-tyre-fitting-delph',
-  name: 'Mobile Tyre Fitting in Delph',
-  serviceType: 'Mobile Tyre Fitting',
-  areaServed: { '@type': 'City', name: 'Delph' },
+  alternateName: '24/7 Mobile Tyre Fitting Delph',
+  areaServed: 'Delph, Greater Manchester',
+  description:
+    'Need mobile tyre fitting in Delph? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
+})
+
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-delph')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-delph')
+const _automotiveBusinessSchema = automotiveBusinessSchema({
+  slug: 'mobile-tyre-fitting-delph',
+  image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
+  addressLocality: 'Delph',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Delph | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Delph | 24/7 Tyre Replacement',
   description:
-    'Professional mobile tyre fitting in Delph — emergency replacement, dependable service.',
+    'Need mobile tyre fitting in Delph? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside.',
   path: '/mobile-tyre-fitting-delph',
 })
 
@@ -46,14 +55,17 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
 export default function DelphPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
-      <JsonLd data={_serviceSchema} />
+      <JsonLd data={_serviceSchema} className="schemantra" />
+      <JsonLd data={_organizationSchema} />
+      <JsonLd data={_websiteSchema} />
+      <JsonLd data={_automotiveBusinessSchema} />
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
@@ -65,21 +77,24 @@ export default function DelphPage() {
               24/7 Mobile Tyre Fitting Delph
             </h1>
 
+            <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-3">
+              Need reliable mobile tyre fitting in Delph? We provide 24/7 mobile tyre fitting, emergency tyre replacement and puncture repair at your home, workplace or a safe roadside location. Whether you have a flat tyre, a sudden puncture or a damaged tyre that needs replacing, our mobile technicians can come to you.
+            </p>
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Delph. We reach you in 20–30 minutes.
+              We cover Delph village and surrounding Saddleworth areas, helping drivers get the tyre assistance they need without having to travel to a garage. Our team can check your requirements, confirm the available options and provide an estimated arrival time when you call.
             </p>
 
             <HeroPostcodes slug="delph" />
 
-            {/* Trust bullets — hidden for now
+            {/* Trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {[
-                'Emergency Tyre Replacement & Puncture Repair',
-                'Typically 20–30 Minute Response',
-                'Mobile Tyre Fitting At Home, Work Or Roadside',
-                'Covering Delph &amp; Surrounding Areas 24/7',
-                'Card, Cash & Contactless Payments Accepted',
-                'Fully Insured Professional Tyre Technicians',
+                '24/7 Mobile Tyre Fitting',
+                'Emergency Tyre Replacement',
+                'Mobile Puncture Repair',
+                'Home, Workplace and Roadside Service',
+                'Coverage Across Delph and Nearby Areas',
+                'Premium, Mid-Range and Budget Tyre Options, Subject to Availability',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-white lg:text-white/90">
                   <span aria-hidden="true" data-nosnippet
@@ -90,7 +105,6 @@ export default function DelphPage() {
                 </div>
               ))}
             </div>
-            */}
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -308,7 +322,7 @@ export default function DelphPage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
                 What You Can Expect
               </span>
@@ -316,39 +330,153 @@ export default function DelphPage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across Delph
+                Professional Mobile Tyre Fitting in Delph
               </h2>
-              <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting in Delph, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Delph and surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Delph.
-                If you&apos;re searching for mobile tyre fitting near me in Delph, our fast response team is available day and night.
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                A damaged or flat tyre can disrupt your day, especially when you are away from home or travelling through the Saddleworth area. Our mobile tyre service brings professional fitting equipment and suitable replacement tyres directly to your location, wherever access and working conditions are safe.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
-                <FeatureItem
-                  icon="bolt"
-                  title="24/7 Mobile Tyre Fitting"
-                  desc="Tyres fitted at your home, workplace or roadside location."
-                />
-                <FeatureItem
-                  icon="engineering"
-                  title="Emergency Tyre Replacement"
-                  desc="Fast replacement of damaged or unsafe tyres across Greater Manchester."
-                />
-                <FeatureItem
-                  icon="sell"
-                  title="Mobile Puncture Repair"
-                  desc="Professional puncture repairs where safe and suitable."
-                />
-              </ul>
+              <p className="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-base sm:text-lg">
+                One Stop Tyres 247 provides mobile tyre fitting for drivers in Delph who need assistance with punctures, worn tyres or unexpected tyre damage. We can assess the condition of your tyre and advise whether a repair or replacement is the appropriate option.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+                Our service is designed to make tyre maintenance and emergency assistance more convenient. Instead of arranging a trip to a garage, you can contact our team and check the available service for your vehicle and location.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── 5. WHY DELPH DRIVERS CHOOSE US ──────────────── */}
-        <WhyChooseUs city="Delph" image="/images/tyres-fitting-anywhere.webp" />
+        {/* ── 5. OUR MOBILE TYRE SERVICES ───────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-6xl mx-auto">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-10 sm:mb-12 leading-tight text-center"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Our Mobile Tyre Services
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: 'bolt', title: 'Mobile Tyre Fitting', desc: 'Have replacement tyres fitted at your home, workplace or another suitable location in Delph.' },
+                { icon: 'engineering', title: 'Emergency Tyre Replacement', desc: 'Replace a damaged or unsafe tyre with a suitable alternative, subject to tyre stock and vehicle requirements.' },
+                { icon: 'sell', title: 'Mobile Puncture Repair', desc: 'We inspect punctured tyres and carry out repairs where the damage meets the applicable safety requirements.' },
+                { icon: 'home_repair_service', title: 'Home Tyre Fitting', desc: 'Arrange tyre replacement at home without needing to visit a tyre centre.' },
+                { icon: 'bolt', title: 'Jump-Start Assistance', desc: 'If your vehicle also has a flat battery, contact us to confirm the availability of our jump-start service.' },
+                { icon: 'tire_repair', title: 'TPMS Checks', desc: 'Tyre pressure monitoring system checks or resets may be available where applicable after fitting or repair.' },
+                { icon: 'build', title: 'Locking Wheel Nut Removal', desc: 'Ask about assistance with lost or seized locking wheel nuts using specialist tools.' },
+              ].map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl shadow-sm p-6 border-l-4 border-[#b70011]">
+                  <div className="w-12 h-12 bg-[#b70011]/10 rounded-lg flex items-center justify-center mb-4">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#b70011]">{item.icon}</span>
+                  </div>
+                  <h3 className="font-bold text-[#0f172a] text-lg mb-2">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. WHY DELPH DRIVERS CHOOSE US ──────────────── */}
+        <WhyChooseGrid
+          heading="Why Choose Our Mobile Tyre Fitting Service?"
+          intro="When you need tyre assistance, you want a service that is convenient, professional and clear about costs. Our mobile team helps Delph drivers find a practical solution based on their tyre condition, vehicle and location."
+          items={[
+            { icon: 'bolt', title: '24/7 Availability', desc: 'Tyre problems can happen at any time. Contact us day or night to check availability for emergency tyre fitting and replacement in Delph.' },
+            { icon: 'home_repair_service', title: 'Convenient On-Site Service', desc: 'Our technicians can attend your home, workplace or a suitable roadside location, depending on access and working conditions.' },
+            { icon: 'sell', title: 'Clear Pricing Before Work Begins', desc: 'Tell us your tyre size, vehicle details and location. We will discuss the available options and confirm the price before proceeding.' },
+            { icon: 'tire_repair', title: 'Tyre Options for Different Budgets', desc: 'Premium, mid-range and budget tyre options may be available, depending on the required size, specification and current stock.' },
+            { icon: 'build', title: 'Professional Tyre Assessment', desc: 'We check whether a damaged tyre can be repaired safely or needs replacement. Repairs are only undertaken when the tyre meets the applicable safety requirements.' },
+            { icon: 'engineering', title: 'Local Area Coverage', desc: 'We cover Delph and surrounding Saddleworth locations, including nearby villages and rural routes. Call to confirm coverage and the estimated arrival time for your exact location.' },
+          ]}
+        />
+
+        {/* ── 7. HOW IT WORKS ───────────────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <span className="text-[#FF4444] font-bold uppercase tracking-widest text-sm mb-2 block">
+                The Process
+              </span>
+              <h2
+                className="text-2xl sm:text-[32px] font-bold text-white mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+              >
+                How Mobile Tyre Fitting in Delph Works
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4 lg:gap-6">
+              {[
+                { title: 'Contact Our Team', desc: 'Call 07759 708 646 and explain whether you need a replacement tyre, puncture assessment or another tyre-related service.' },
+                { title: 'Share Your Vehicle and Location Details', desc: 'Provide your vehicle registration or tyre size, your location in Delph and any information about the damage. A WhatsApp location pin can help identify your position.' },
+                { title: 'Confirm the Service and Price', desc: 'We will check the available tyre options, explain the service and confirm the price and estimated arrival time before dispatch.' },
+                { title: 'Get Your Tyre Fitted', desc: 'The technician will attend the agreed location and complete the work where it is safe and suitable to do so. Tyre pressure and TPMS checks can be carried out where applicable.' },
+              ].map((step, idx) => (
+                <div key={step.title} className="flex sm:flex-col items-start sm:items-center gap-4 sm:text-center relative">
+                  <div className="bg-[#FF4444] text-[#121212] font-black w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-base sm:text-lg mb-1.5">{step.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-600 hidden sm:block absolute top-5 -right-6 lg:-right-8" style={{ fontSize: '24px' }}>trending_flat</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 8. MOBILE TYRE REPLACEMENT ────────────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Mobile Tyre Replacement Across Delph
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              If your tyre has suffered a serious puncture, sidewall damage or excessive wear, replacement may be necessary. Our mobile tyre replacement service helps drivers in Delph arrange a suitable replacement without travelling to a garage on an unsafe tyre.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can assist at suitable locations around Delph village centre, Broad Lane and surrounding roads. We also cover nearby Saddleworth communities, subject to availability and access.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              Before arranging a replacement, provide your tyre size or vehicle registration so the team can check the appropriate options. Tyre availability depends on the vehicle, tyre specification and current stock.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              If a puncture appears repairable, our technician will assess the damage first. A repair is only appropriate when the tyre meets the relevant safety standards; otherwise, replacement may be recommended.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 9. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
+            <h2
+              className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
+              style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
+            >
+              Emergency Mobile Tyre Fitting and Replacement in Delph
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              A flat tyre or blowout can leave you unable to continue your journey. Our 24/7 emergency tyre service is available for drivers in Delph who need help with a damaged tyre, puncture or urgent replacement.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              We can attend suitable locations around the village and nearby rural roads, subject to technician availability, traffic and access conditions. The arrival time will be confirmed when you contact us.
+            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+              For your safety, do not attempt to change a tyre beside moving traffic or in an unsafe roadside position. If you are stranded on a dangerous road, follow the appropriate breakdown and emergency procedures and move to a safe place if possible.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+              Call 07759 708 646 with your location and vehicle details to discuss the available assistance.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 10. BRAND CAROUSEL ────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
@@ -360,35 +488,79 @@ export default function DelphPage() {
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
         <LocalAreaInfo currentSlug="delph" />
 
-        {/* ── 7. FAQ ────────────────────────────────────────── */}
+        {/* ── 11. FAQ ───────────────────────────────────────── */}
         <CityFaq
           canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-delph"
           city="Delph"
           faqs={[
             {
-              q: 'How quickly can you reach me in Delph?',
-              a: 'Our mobile units are based close by in Oldham, meaning we can typically reach Delph and the surrounding OL3 postcode area, including Broad Lane and the village centre, within 25-35 minutes.',
+              q: 'Do you provide mobile tyre fitting in Delph?',
+              a: 'Yes. We provide mobile tyre fitting in Delph, with service available at your home, workplace or a suitable roadside location, subject to access and availability.',
             },
             {
-              q: 'Do you cover the rural roads and villages around Delph?',
-              a: 'Yes. Our vehicles are equipped for rural and hillside routes in all weather, covering Delph and the surrounding OL3 postcode area, including Dobcross and Denshaw.',
+              q: 'Are you available 24/7 in Delph?',
+              a: 'Our service operates 24/7 for emergency tyre assistance. Call to confirm technician availability and the estimated arrival time for your location.',
             },
             {
-              q: 'Can you repair a puncture instead of replacing my tyre in Delph?',
-              a: "Usually, yes. As long as the damage is in a repairable zone and meets British Standard BS AU 159, we'll fix it on-site rather than replace a tyre that's still perfectly safe.",
+              q: 'How quickly can you reach Delph?',
+              a: 'We estimate a response time of around 25-35 minutes for Delph and parts of the surrounding OL3 area. This is an estimate, not a guarantee; traffic, weather, technician availability and your exact location can affect arrival time.',
             },
             {
-              q: 'Can you fit tyres at my workplace near Broad Lane or the village centre?',
-              a: 'Yes. We regularly attend offices and business premises around Broad Lane and the Delph village centre, fitting your tyres while you work.',
+              q: 'Which areas near Delph do you cover?',
+              a: 'We cover Delph and nearby Saddleworth locations, including Dobcross and Denshaw. Contact us to confirm coverage for your postcode or a more rural address.',
+            },
+            {
+              q: 'Can you fit a tyre at my home in Delph?',
+              a: 'Yes. We can arrange home tyre fitting where there is suitable access and enough safe space to carry out the work.',
+            },
+            {
+              q: 'Can you replace a tyre at my workplace?',
+              a: 'Yes. We can attend a suitable workplace location in Delph, subject to access, parking arrangements and technician availability.',
+            },
+            {
+              q: 'Do you offer emergency tyre replacement in Delph?',
+              a: 'Yes. We offer emergency tyre replacement when a suitable tyre is available for your vehicle. Contact us with your tyre size or vehicle registration so we can check the options.',
+            },
+            {
+              q: 'Can you repair a punctured tyre instead of replacing it?',
+              a: 'Sometimes. Our technician will inspect the damage and determine whether the tyre is suitable for repair. The damage must meet the relevant safety requirements, including applicable British Standard BS AU 159 guidance. If it is unsafe to repair, replacement may be recommended.',
+            },
+            {
+              q: 'Do you cover rural roads around Delph?',
+              a: 'We serve Delph and surrounding Saddleworth areas, including rural locations where access is possible. Call with your exact location so we can confirm whether a technician can attend safely.',
+            },
+            {
+              q: 'What types of tyres can you supply?',
+              a: 'Premium, mid-range and budget tyre options may be available. The choices depend on your vehicle, required tyre size, specification and current stock.',
+            },
+            {
+              q: 'How much does mobile tyre fitting in Delph cost?',
+              a: 'The price depends on the tyre required, the work involved, your location and the time of service. Contact us for a quote, and confirm the price before the technician begins work.',
+            },
+            {
+              q: 'Can you provide mobile puncture repair at the roadside?',
+              a: 'Yes, where the location is safe and the tyre is suitable for repair. We cannot carry out work in an unsafe position beside moving traffic.',
+            },
+            {
+              q: 'Can you help if I have a flat battery as well as a flat tyre?',
+              a: 'Jump-start assistance may be available. Contact us with your location and vehicle details to confirm the service and availability.',
+            },
+            {
+              q: 'What information should I provide when booking?',
+              a: 'Tell us your location, vehicle make and model, tyre size if known, and whether the tyre is punctured, damaged or completely flat. Photos may also help us understand the problem.',
+            },
+            {
+              q: 'How do I book emergency tyre assistance in Delph?',
+              a: 'Call 07759 708 646 to explain the issue and share your location. Our team can confirm the available service, price and estimated arrival time.',
             },
           ]}
         />
 
-        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 12. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Delph Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Delph line and get a technician dispatched in minutes.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Delph?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">If you have a flat, punctured or damaged tyre, contact our team for convenient mobile tyre assistance in Delph. We can help you check the available repair or replacement options and arrange a suitable visit. One Stop Tyres 247 provides mobile tyre fitting, emergency tyre replacement and puncture assessment across Delph and surrounding Saddleworth areas, subject to availability and safe access. Call 07759 708 646 to request a quote and estimated arrival time.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

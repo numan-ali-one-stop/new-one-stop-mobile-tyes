@@ -142,7 +142,7 @@ export default function MobileTyreFittingPage() {
 
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-10 sm:py-14 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
             </div>
@@ -212,7 +212,7 @@ export default function MobileTyreFittingPage() {
             />
           </div>
 
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
             <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
               Professional Mobile Tyre Service
             </span>
@@ -320,7 +320,7 @@ export default function MobileTyreFittingPage() {
               decoding="async"
             />
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
             <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
               Mobile Tyre Fitting for Vehicles
             </span>
@@ -339,7 +339,7 @@ export default function MobileTyreFittingPage() {
             <p className="text-slate-600 text-base leading-relaxed mb-6">
               For drivers who need an urgent solution, emergency mobile tyre fitting can also help when a damaged or unusable tyre leaves you unable to continue your journey.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:justify-center lg:justify-start">
               <a
                 href="tel:+447759708646"
                 className="cta-btn cta-call bg-[#dc2626] text-white font-black px-8 py-4 rounded-xl shadow-2xl shadow-red-900/40 flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base sm:text-lg"

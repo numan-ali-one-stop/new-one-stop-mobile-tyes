@@ -337,7 +337,7 @@ export default function MetOfficeAugustWeatherGuide() {
               recovery to a garage, our experienced technicians come directly to your location,
               helping you get back on the road quickly and safely.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:justify-center lg:justify-start">
               <a
                 href="tel:+447759708646"
                 className="cta-btn cta-call bg-[#dc2626] text-white font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"

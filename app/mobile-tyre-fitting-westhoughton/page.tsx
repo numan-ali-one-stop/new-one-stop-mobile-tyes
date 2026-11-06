@@ -49,10 +49,10 @@ export default function WesthoughtonPage() {
       <main>
 
         {/* ── 1. HERO */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
             </div>
@@ -220,7 +220,7 @@ export default function WesthoughtonPage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Mobile Tyre Fitting Between Bolton and Wigan
@@ -228,7 +228,7 @@ export default function WesthoughtonPage() {
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                 Westhoughton sits on an important local route between Bolton and Wigan, with regular traffic moving through the town centre and along Wigan Road, Park Road and surrounding streets. A tyre problem here can affect both local journeys and longer trips across the borough. Our mobile car tyre fitting service is designed to remove the need to drive the vehicle further when a tyre is unsafe. The technician comes to a suitable location with professional equipment and access to premium, mid-range and budget tyre options for many common cars. We cover Westhoughton town centre as well as Chequerbent, Wingates, Daisy Hill and nearby residential areas, plus suitable locations around the A58 and other main routes through the town. Whether you discover a worn tyre before setting off or suffer sudden damage during a journey, we can arrange the right type of assistance based on the condition of the tyre.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
+              <ul className="space-y-4 sm:space-y-5 text-left">
                 <FeatureItem icon="bolt" title="Same Day Mobile Tyre Fitting" desc="If you need the problem sorted before the day is over, our same day mobile tyre fitting service is available for many common tyre sizes." />
                 <FeatureItem icon="engineering" title="Emergency Mobile Tyre Fitting" desc="A sudden blowout or serious loss of pressure can make the vehicle unsafe to continue. Our emergency mobile tyre fitting service operates 24 hours a day across Westhoughton." />
                 <FeatureItem icon="sell" title="Mobile Tyre Replacement Service" desc="When repair is not suitable, our mobile tyre replacement service brings the required replacement and fitting equipment directly to the vehicle." />

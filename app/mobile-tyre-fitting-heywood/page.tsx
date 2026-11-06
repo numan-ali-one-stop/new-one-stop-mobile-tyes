@@ -49,10 +49,10 @@ export default function HeywoodPage() {
       <main>
 
         {/* ── 1. HERO */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
             </div>
@@ -220,7 +220,7 @@ export default function HeywoodPage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">What You Can Expect</span>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold" style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Mobile Tyre Fitting for Heywood&apos;s Local and Connecting Routes
@@ -228,7 +228,7 @@ export default function HeywoodPage() {
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                 Heywood sits between Rochdale, Bury and Middleton, with local traffic moving through the town centre and along routes such as the A58, A6046 and A6047. A tyre problem here can disrupt both everyday local journeys and longer trips across north Greater Manchester. Our mobile car tyre fitting service is designed to deal with the problem where the vehicle is safely positioned. We bring professional mobile equipment and can supply premium, mid-range and budget tyre options for many common cars. Coverage includes Heywood town centre, Bamford, Hopwood, Birch and nearby residential areas, together with suitable locations around York Street, Manchester Street, Church Street and Middleton Road. Whether the tyre has become worn over time or failed suddenly during a journey, we can arrange the most suitable support based on the condition of the tyre.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
+              <ul className="space-y-4 sm:space-y-5 text-left">
                 <FeatureItem icon="bolt" title="Same Day Mobile Tyre Fitting" desc="If you need the tyre sorted before the day is over, our same day mobile tyre fitting service is available for many common tyre sizes." />
                 <FeatureItem icon="engineering" title="Emergency Mobile Tyre Fitting" desc="A blowout or serious loss of pressure can leave the vehicle unsafe to continue. Our emergency mobile tyre fitting service operates day and night throughout Heywood." />
                 <FeatureItem icon="sell" title="Mobile Tyre Replacement Service" desc="When repair is not suitable, our mobile tyre replacement service brings the required replacement and fitting equipment directly to your vehicle." />

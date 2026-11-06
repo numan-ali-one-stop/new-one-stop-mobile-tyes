@@ -9,7 +9,7 @@ const WA_SVG = (
 /** Animated Call Now / WhatsApp Us buttons used in every page hero (styles in globals.css). */
 export default function HeroCtaButtons({ className = '' }: { className?: string }) {
   return (
-    <div className={`grid grid-cols-2 gap-3 sm:flex sm:gap-4 [text-shadow:none] ${className}`}>
+    <div className={`grid grid-cols-2 gap-3 sm:flex sm:justify-center lg:justify-start sm:gap-4 [text-shadow:none] ${className}`}>
       <a
         href={`tel:${PHONE_TEL}`}
         className="cta-btn cta-call bg-[#FF4444] hover:bg-red-700 text-white font-black h-14 px-3 sm:px-8 sm:min-w-[200px] rounded-2xl flex items-center justify-center gap-2 sm:gap-2.5 whitespace-nowrap text-[15px] sm:text-base tracking-wide border border-white/20"

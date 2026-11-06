@@ -62,10 +62,10 @@ export default function RochdalePage() {
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────── */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
 
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
@@ -328,7 +328,7 @@ export default function RochdalePage() {
                 <div className="text-slate-500 text-[11px] font-semibold uppercase tracking-wide">Google Rating</div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-3 block">
                 What You Can Expect
               </span>
@@ -344,7 +344,7 @@ export default function RochdalePage() {
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                 One Stop Tyres 247 helps drivers across Rochdale arrange mobile tyre fitting, emergency tyre replacement and puncture assessments. Whether your vehicle is parked at home, outside your workplace or at a suitable roadside location, contact our team to check the available options. We cover Rochdale town centre and surrounding areas, including Heywood, Littleborough, Milnrow, Middleton, Newhey, Wardle, Castleton, Whitworth and Norden. Coverage and arrival times depend on your exact location and technician availability.
               </p>
-              <ul className="space-y-4 sm:space-y-5">
+              <ul className="space-y-4 sm:space-y-5 text-left">
                 <FeatureItem
                   icon="bolt"
                   title="Same Day Mobile Tyre Fitting"
@@ -433,7 +433,7 @@ export default function RochdalePage() {
 
         {/* ── 7. MOBILE TYRE REPLACEMENT ────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
             <h2
               className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
@@ -457,7 +457,7 @@ export default function RochdalePage() {
 
         {/* ── 8. EMERGENCY MOBILE TYRE FITTING ──────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center lg:text-left">
             <h2
               className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-4 leading-tight"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}

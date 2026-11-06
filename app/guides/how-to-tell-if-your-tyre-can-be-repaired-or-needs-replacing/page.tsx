@@ -332,7 +332,7 @@ export default function TyreRepairOrReplaceGuide() {
               we&apos;ll tell you honestly whether it&apos;s a repair or a replacement job,
               and get a technician to you either way.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:justify-center lg:justify-start">
               <a
                 href="tel:+447759708646"
                 className="cta-btn cta-call bg-[#dc2626] text-white font-black px-6 py-3.5 rounded-xl flex items-center justify-center gap-2.5 hover:bg-red-700 hover:text-white transition-all text-base"
@@ -381,7 +381,7 @@ export default function TyreRepairOrReplaceGuide() {
 
       {/* ── RELATED SERVICES ─────────────────────────────────────── */}
       <section className="py-12 sm:py-16 px-5 sm:px-8 bg-white">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center lg:text-left">
           <h2
             className="text-xl sm:text-2xl font-bold text-[#0f172a] mb-6"
             style={{ fontFamily: 'var(--font-work-sans)' }}

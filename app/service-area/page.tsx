@@ -202,12 +202,12 @@ export default function ServiceAreaPage() {
       {/* ── Hero ── */}
       <section className="relative lg:h-[500px] flex items-center overflow-hidden py-10 sm:py-14 lg:py-20">
         <HeroMapBackground />
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 text-center lg:text-left [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div><HeroBadge>Our Coverage</HeroBadge></div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1] text-balance max-w-3xl" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1] text-balance max-w-3xl mx-auto lg:mx-0" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>
             Our Service Area
           </h1>
-          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mb-5 sm:mb-8 text-pretty leading-relaxed">
+          <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mx-auto lg:mx-0 mb-5 sm:mb-8 text-pretty leading-relaxed">
             24/7 mobile tyre fitting across Greater Manchester, plus UK towns, cities and motorways. We come to you.
           </p>
           {/* Google rating */}
@@ -382,7 +382,7 @@ export default function ServiceAreaPage() {
                 Our dispatch team can confirm coverage for your exact postcode and give you an
                 estimated arrival time in under 60 seconds.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:justify-center lg:justify-start">
                 <a
                   href="tel:+447759708646"
                   className="flex items-center justify-center gap-2 bg-primary text-white font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-primary/90 transition-all shadow-md"
