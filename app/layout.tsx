@@ -63,7 +63,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${workSans.variable} ${inter.variable} bg-[#fcf9f8]`}>
+    // suppressHydrationWarning: the consent script adds `consent-stored` to <html> before React hydrates.
+    <html lang="en" className={`${workSans.variable} ${inter.variable} bg-[#fcf9f8]`} suppressHydrationWarning>
       <head>
         {/* Site icons come from `metadata.icons` above and app/manifest.ts. */}
         {/* Hero images are preloaded per-page via fetchPriority="high" on each page's own
@@ -94,6 +95,7 @@ gtag('consent','default',{
   try {
     var stored = window.localStorage.getItem('cookie-consent');
     if (stored === 'granted' || stored === 'denied') {
+      document.documentElement.classList.add('consent-stored');
       gtag('consent','update',{
         ad_storage:stored,
         ad_user_data:stored,

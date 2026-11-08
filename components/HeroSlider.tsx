@@ -1,7 +1,7 @@
 'use client'
 
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import { HERO_MAP_IMAGE, HERO_MAP_SIZES, HERO_MAP_SRCSET } from '@/components/HeroMapBackground'
+import { BLANK_PIXEL, HERO_MAP_DESKTOP_MEDIA, HERO_MAP_IMAGE } from '@/components/HeroMapBackground'
 
 const HERO = {
   image: HERO_MAP_IMAGE,
@@ -142,19 +142,21 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
         loading="lazy"
         decoding="async"
       />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        className="kb absolute inset-0 w-full h-full object-cover object-[60%_60%] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:aspect-[4/3] lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
-        src={image}
-        srcSet={HERO_MAP_SRCSET}
-        sizes={HERO_MAP_SIZES}
-        alt=""
-        aria-hidden="true"
-        width={1600}
-        height={1067}
-        decoding="async"
-        {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })}
-      />
+      {/* Phones get no map (see HeroMapBackground): the blank pixel keeps the hero text as LCP. */}
+      <picture>
+        <source media={HERO_MAP_DESKTOP_MEDIA} srcSet={image} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="kb absolute inset-0 w-full h-full object-cover object-[60%_60%] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:aspect-[4/3] lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
+          src={BLANK_PIXEL}
+          alt=""
+          aria-hidden="true"
+          width={1600}
+          height={1067}
+          decoding="async"
+          {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })}
+        />
+      </picture>
       {/* Mobile: strong navy tint so the map stays subtle and the text stays readable */}
       <div className="absolute inset-0 bg-[#002D62]/85 lg:hidden" />
       {/* Desktop gradient: strong left for text, fades right */}

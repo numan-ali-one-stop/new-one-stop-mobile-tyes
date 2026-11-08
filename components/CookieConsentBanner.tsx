@@ -23,15 +23,18 @@ function pushConsentUpdate(consent: Consent) {
 }
 
 export default function CookieConsentBanner() {
-  const [visible, setVisible] = useState(false)
+  // Rendered in the server HTML so it paints with the page: mounting it after hydration made
+  // its paragraph a late LCP candidate on pages with short hero text. Returning visitors never
+  // see it because the inline <head> script adds `consent-stored` to <html> (see globals.css).
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     // Stored consent from a prior visit is already re-applied synchronously by the
-    // inline script in <head> (before GTM loads), so we only need to show the
+    // inline script in <head> (before GTM loads), so we only need to keep the
     // banner when there is no stored choice yet.
     const stored = window.localStorage.getItem(STORAGE_KEY)
-    if (stored !== 'granted' && stored !== 'denied') {
-      setVisible(true)
+    if (stored === 'granted' || stored === 'denied') {
+      setVisible(false)
     }
   }, [])
 
@@ -48,7 +51,7 @@ export default function CookieConsentBanner() {
       role="dialog"
       aria-live="polite"
       aria-label="Cookie consent"
-      className="fixed bottom-0 left-0 right-0 z-[70] bg-[#0f172a] text-white px-4 sm:px-6 py-4 sm:py-5 border-t border-white/10 shadow-2xl"
+      className="cookie-banner fixed bottom-0 left-0 right-0 z-[70] bg-[#0f172a] text-white px-4 sm:px-6 py-4 sm:py-5 border-t border-white/10 shadow-2xl"
     >
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
         {/* text-xs on mobile: at text-sm this paragraph out-sizes the hero text and becomes the

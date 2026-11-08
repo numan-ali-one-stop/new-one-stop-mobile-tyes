@@ -348,3 +348,7 @@
   .quote-card .quote-submit,
   .quote-card form > p { opacity: 1 !important; animation: none !important; }
 }
+
+/* Cookie banner is server-rendered (components/CookieConsentBanner.tsx); the inline consent script
+   in <head> adds this class before first paint when a choice is already stored. */
+.consent-stored .cookie-banner { display: none; }
