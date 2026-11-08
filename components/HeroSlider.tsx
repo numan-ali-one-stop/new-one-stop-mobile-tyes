@@ -1,9 +1,10 @@
 'use client'
 
 import HeroCtaButtons from '@/components/HeroCtaButtons'
+import { HERO_MAP_IMAGE, HERO_MAP_SIZES, HERO_MAP_SRCSET } from '@/components/HeroMapBackground'
 
 const HERO = {
-  image: '/images/greater-manchester-mobile-tyre-service-area-map.jpeg',
+  image: HERO_MAP_IMAGE,
   badge: '24/7 Emergency Mobile Tyre Service',
   heading: '24/7 Mobile Tyre Service & Repair Near You',
   body: 'Our 24/7 mobile tyre service offers tyre repair, tyre replacement and emergency tyre fitting at your home, workplace or roadside.',
@@ -138,12 +139,15 @@ function SlideBg({ image, priority }: { image: string; priority?: boolean }) {
         src={image}
         alt=""
         aria-hidden="true"
+        loading="lazy"
         decoding="async"
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className="kb absolute inset-0 w-full h-full object-cover object-[60%_60%] lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-auto lg:aspect-[4/3] lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]"
         src={image}
+        srcSet={HERO_MAP_SRCSET}
+        sizes={HERO_MAP_SIZES}
         alt=""
         aria-hidden="true"
         width={1600}

@@ -223,7 +223,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 link.rel = 'stylesheet';
                 // Only the FILL axis is variable: the site only uses wght 400 / GRAD 0 / opsz 24,
                 // and requesting every axis makes this font 3.9 MB instead of 450 KB.
-                link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block';
+                // icon_names limits the font to the icons the site uses (~450 KB down to a few KB), so it
+                // no longer competes with the hero image. Keep the list alphabetical; a new icon must be
+                // added here or it renders as its plain-text name.
+                link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&icon_names=accessible,add_road,alarm,apartment,arrow_forward,article,battery_alert,block,bolt,build,calendar_month,call,cancel,car_crash,chat,check_circle,chevron_right,close,construction,contact_support,description,directions,directions_car,emergency,emergency_home,engineering,expand_more,fact_check,family_restroom,function,garage,grid_view,help,home,home_pin,home_repair_service,info,input,key,label,link,local_car_wash,local_shipping,location_city,location_on,lock_open,mail,map,markunread_mailbox,menu_book,open_in_new,payments,person,phone,phone_in_talk,pin_drop,public,receipt_long,recycling,road,route,schedule,script,search,sell,settings_input_component,skeleton,speed,star,support_agent,timer,tire_repair,tooltip,trending_flat,update,verified,verified_user,warning&display=block';
                 link.onload = function() {
                   document.fonts.load('1em "Material Symbols Outlined"').then(function() {
                     document.body.classList.add('icons-ready');
