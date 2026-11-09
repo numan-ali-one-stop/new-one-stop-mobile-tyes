@@ -2,6 +2,7 @@ import Image from 'next/image'
 import JsonLd from '@/components/JsonLd'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
+import HowItWorksSteps from '@/components/HowItWorksSteps'
 import { ADS_LANDING_PATH, PHONE, PHONE_TEL } from '@/lib/constants'
 import { breadcrumbSchema, faqSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
@@ -93,21 +94,6 @@ const reviews = [
     initials: 'JT',
     name: 'James T.',
     text: 'Transparent upfront pricing over the phone with no hidden costs. The technician arrived quickly and was very professional. Highly recommend!',
-  },
-]
-
-const steps = [
-  {
-    title: 'Step 1: Contact Our 24/7 Dispatch Team',
-    desc: 'Call us directly or submit your vehicle registration and location for an instant fixed-price quote.',
-  },
-  {
-    title: 'Step 2: Mobile Tyre Van Dispatched',
-    desc: 'Our nearest mobile fitting van is dispatched to your exact location in any city, town, or roadside area.',
-  },
-  {
-    title: 'Step 3: Fitted On-Site & Back Driving',
-    desc: 'Our certified technician fits and inspects your new tyre on-site so you can get back on the road safely.',
   },
 ]
 
@@ -364,42 +350,7 @@ export default function EmergencyMobileTyreFittingPage() {
       </section>
 
       {/* ── HOW IT WORKS ─────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
-        <div
-          className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
-          }}
-        />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-[32px] font-bold" style={H2_STYLE}>
-              3 Simple Steps to Get Back on the Road
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 relative">
-            {steps.map((step, idx) => (
-              <div key={step.title} className="relative text-center lg:text-left">
-                <div aria-hidden="true" className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
-                  <span className="text-white font-black text-xl" style={HEADING_FONT}>
-                    {idx + 1}
-                  </span>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3" style={HEADING_FONT}>
-                  {step.title}
-                </h3>
-                <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
-                {idx < steps.length - 1 && (
-                  <span aria-hidden="true" data-nosnippet className="hidden lg:block absolute top-7 right-0 text-[#FF4444] material-symbols-outlined text-3xl">
-                    trending_flat
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowItWorksSteps heading="4 Simple Steps to Get Back on the Road" />
 
       {/* ── FAQ ──────────────────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -429,20 +380,20 @@ export default function EmergencyMobileTyreFittingPage() {
       </section>
 
       {/* ── COMPLIANCE FOOTER ────────────────────────────────────────── */}
-      <footer className="bg-[#0f172a] text-white py-10 sm:py-12 px-4 sm:px-6">
+      <footer className="bg-[#0f172a] text-white py-4 sm:py-5 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-5">
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-2">
             <strong className="text-white">ONE STOP MOBILE TYRES LTD</strong> — Professional 24/7 Emergency Mobile Tyre
             Replacement Service.
           </p>
-          <nav aria-label="Legal and contact" className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-slate-400 text-sm font-medium mb-6">
+          <nav aria-label="Legal and contact" className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-slate-400 text-xs sm:text-sm font-medium mb-2">
             <a href="/privacy-policy" className="hover:text-[#FF4444] transition-colors">Privacy Policy</a>
             <span aria-hidden="true">|</span>
             <a href="/terms" className="hover:text-[#FF4444] transition-colors">Terms of Service</a>
             <span aria-hidden="true">|</span>
             <a href="/contact" className="hover:text-[#FF4444] transition-colors">Contact Us</a>
           </nav>
-          <div className="pt-6 border-t border-white/5">
+          <div className="pt-2 border-t border-white/5">
             <p className="text-slate-500 text-[11px] sm:text-xs">
               Company Registration: ONE STOP MOBILE TYRES LTD | All Rights Reserved.
             </p>
