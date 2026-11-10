@@ -305,6 +305,17 @@ export const BOROUGHS: Borough[] = [
       { name: 'Worthington', slug: 'worthington' },
     ],
   },
+  {
+    name: 'West Yorkshire',
+    slug: 'west-yorkshire',
+    towns: [
+      { name: 'Huddersfield', slug: 'huddersfield' },
+      { name: 'Bradford', slug: 'bradford' },
+      { name: 'Halifax', slug: 'halifax' },
+      { name: 'Wakefield', slug: 'wakefield' },
+      { name: 'Leeds', slug: 'leeds' },
+    ],
+  },
 ]
 
 /** Every area (borough page + town page) in one flat list, each tagged with its borough name. */

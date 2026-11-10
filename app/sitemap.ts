@@ -68,9 +68,14 @@ const ROAD_PAGES = [
   'm6', 'm60', 'm602', 'm61', 'm56', 'm62', 'm66', 'a627', 'm67', 'a57', 'wilmslow-road',
 ]
 
+// West Yorkshire — its own region hub page plus the city pages within it.
+const WEST_YORKSHIRE_PAGES = [
+  'west-yorkshire', 'huddersfield', 'bradford', 'halifax', 'wakefield', 'leeds',
+]
+
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.
 const NATIONAL_CITY_PAGES = [
-  'leeds', 'leicester', 'bristol', 'milton-keynes', 'coventry', 'edinburgh', 'cardiff', 'solihull', 'basingstoke',
+  'leicester', 'bristol', 'milton-keynes', 'coventry', 'edinburgh', 'cardiff', 'solihull', 'basingstoke',
 ]
 
 const LEGAL_PAGES = ['/privacy-policy', '/cookie-policy', '/terms']
@@ -122,6 +127,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: areaSitemapPriority(slug, 0.7),
     })),
     ...ROAD_PAGES.map((slug) => ({
+      url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+    ...WEST_YORKSHIRE_PAGES.map((slug) => ({
       url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,
       lastModified: LAST_MODIFIED,
       changeFrequency: 'monthly' as const,

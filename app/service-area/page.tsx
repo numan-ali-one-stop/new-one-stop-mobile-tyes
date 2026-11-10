@@ -101,6 +101,18 @@ const boroughAreas = [
   },
 ]
 
+// ── West Yorkshire hub card ────────────────────────────────────────────────────
+const westYorkshireAreas = [
+  {
+    name: 'West Yorkshire',
+    boroughKey: 'West Yorkshire',
+    href: '/mobile-tyre-fitting-west-yorkshire',
+    icon: 'location_city',
+    postcodes: 'HD1 – HD9, BD1 – BD18, HX1 – HX7, WF1 – WF17, LS1 – LS29',
+    desc: 'Mobile tyre fitting across Huddersfield, Bradford, Halifax, Wakefield and Leeds, dispatched the same day.',
+  },
+]
+
 // ── Motorway / road cards ─────────────────────────────────────────────────────
 const motorwayAreas = [
   {
@@ -255,6 +267,80 @@ export default function ServiceAreaPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {boroughAreas.map((area) => {
+            const towns = BOROUGHS.find((b) => b.name === area.boroughKey)?.towns ?? []
+            return (
+              <div
+                key={area.name}
+                className="group flex flex-col bg-white rounded-2xl border-2 border-slate-100 shadow-md hover:shadow-2xl hover:border-primary hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              >
+                <div className="h-1.5 bg-primary" />
+                <a href={area.href} className="flex items-center gap-4 px-5 pt-5 pb-3">
+                  <div className="bg-primary p-3.5 rounded-2xl shrink-0 shadow-md shadow-primary/30">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white text-[28px]">
+                      {area.icon}
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#0f172a] leading-snug" style={{ fontFamily: 'var(--font-work-sans)' }}>
+                      {area.name}
+                    </h3>
+                    <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                      {area.postcodes}
+                    </span>
+                  </div>
+                </a>
+                <a href={area.href} className="px-5 pb-4 block">
+                  <p className="font-body-md text-body-md text-on-surface-variant text-base leading-relaxed">
+                    {area.desc}
+                  </p>
+                </a>
+                {towns.length > 0 && (
+                  <div className="px-5 pb-5">
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">
+                      Also Covering
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {towns.map((town) => (
+                        <a
+                          key={town.slug}
+                          href={`/mobile-tyre-fitting-${town.slug}`}
+                          className="text-xs font-bold text-primary bg-primary/5 hover:bg-primary hover:text-white border-2 border-primary/20 hover:border-primary px-3 py-1.5 rounded-full transition-colors"
+                        >
+                          {town.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                <a
+                  href={area.href}
+                  className="mt-auto bg-primary hover:bg-[#dc2626] text-white px-5 py-3.5 flex items-center justify-between font-bold text-sm uppercase tracking-wide transition-colors"
+                >
+                  View {area.name} Coverage
+                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
+                </a>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* ── West Yorkshire hub ── */}
+      <section className="py-12 sm:py-16 lg:py-xl px-4 sm:px-5 max-w-7xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 text-secondary mb-3 text-balance leading-tight">
+            Also Serving West Yorkshire
+          </h2>
+          <div className="w-16 sm:w-20 h-1 bg-primary mx-auto rounded-full mb-3 sm:mb-4" />
+          <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant max-w-xl mx-auto text-pretty">
+            Outside Greater Manchester, we also cover West Yorkshire on a same-day dispatch basis.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {westYorkshireAreas.map((area) => {
             const towns = BOROUGHS.find((b) => b.name === area.boroughKey)?.towns ?? []
             return (
               <div

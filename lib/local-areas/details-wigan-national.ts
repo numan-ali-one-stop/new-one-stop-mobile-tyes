@@ -140,9 +140,29 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Edinburgh we can help drivers across the city and on the A720 City Bypass and its junctions.",
     parking: "City-centre streets are narrow and busy, so car parks and side streets are best.",
   },
+  'west-yorkshire': {
+    scenarios: "Across West Yorkshire we can help drivers in Huddersfield, Bradford, Halifax, Wakefield and Leeds, and on the M62 and M1 corridors that link them.",
+    parking: "We use car parks and quieter residential streets rather than busy main roads, wherever one is available.",
+  },
   leeds: {
     scenarios: "In Leeds we can help drivers in the city centre and suburbs, on the ring roads and near the M621.",
     parking: "We use car parks and quieter residential streets rather than busy main roads.",
+  },
+  huddersfield: {
+    scenarios: "In Huddersfield we can help drivers in the town centre and surrounding estates, and near the M62 junctions, the A62 and A629.",
+    parking: "We use car parks and quieter residential streets away from the ring road.",
+  },
+  bradford: {
+    scenarios: "In Bradford we can help drivers across the city centre and suburbs, on the Outer Ring Road and near the M606 and M62 Junction 26.",
+    parking: "City-centre streets are busy, so car parks and quieter side streets are usually the safest places to work.",
+  },
+  halifax: {
+    scenarios: "In Halifax we can help drivers in the town centre and surrounding areas, and near M62 Junction 24, the A58 and A629.",
+    parking: "We use car parks and quieter residential streets rather than the main roads into town.",
+  },
+  wakefield: {
+    scenarios: "In Wakefield we can help drivers in the city centre and surrounding areas, on the Outer Ring Road and near M1 Junctions 39 to 42.",
+    parking: "We use car parks and quieter residential streets away from the ring road.",
   },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",
