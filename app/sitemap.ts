@@ -68,9 +68,10 @@ const ROAD_PAGES = [
   'm6', 'm60', 'm602', 'm61', 'm56', 'm62', 'm66', 'a627', 'm67', 'a57', 'wilmslow-road',
 ]
 
-// West Yorkshire — its own region hub page plus the city pages within it.
+// West Yorkshire — its own region hub page plus the city/town pages within it.
 const WEST_YORKSHIRE_PAGES = [
   'west-yorkshire', 'huddersfield', 'bradford', 'halifax', 'wakefield', 'leeds',
+  'brighouse', 'batley', 'dewsbury', 'mirfield', 'morley', 'hebden-bridge',
 ]
 
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.

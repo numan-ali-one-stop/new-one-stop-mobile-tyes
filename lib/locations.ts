@@ -314,6 +314,12 @@ export const BOROUGHS: Borough[] = [
       { name: 'Halifax', slug: 'halifax' },
       { name: 'Wakefield', slug: 'wakefield' },
       { name: 'Leeds', slug: 'leeds' },
+      { name: 'Brighouse', slug: 'brighouse' },
+      { name: 'Batley', slug: 'batley' },
+      { name: 'Dewsbury', slug: 'dewsbury' },
+      { name: 'Mirfield', slug: 'mirfield' },
+      { name: 'Morley', slug: 'morley' },
+      { name: 'Hebden Bridge', slug: 'hebden-bridge' },
     ],
   },
 ]

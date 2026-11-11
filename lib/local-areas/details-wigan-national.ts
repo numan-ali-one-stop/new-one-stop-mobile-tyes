@@ -164,6 +164,30 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Wakefield we can help drivers in the city centre and surrounding areas, on the Outer Ring Road and near M1 Junctions 39 to 42.",
     parking: "We use car parks and quieter residential streets away from the ring road.",
   },
+  brighouse: {
+    scenarios: "In Brighouse we can help drivers in the town centre and surrounding areas, and near M62 Junction 25, the A644 and A641.",
+    parking: "We use car parks and quieter residential streets rather than the main roads into town.",
+  },
+  batley: {
+    scenarios: "In Batley we can help drivers in the town centre and surrounding areas, and near M62 Junction 27, the A652 and A62.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  dewsbury: {
+    scenarios: "In Dewsbury we can help drivers in the town centre and surrounding areas, and near M1 Junction 40, the A644 and A638.",
+    parking: "We use car parks and quieter residential streets rather than the main roads into town.",
+  },
+  mirfield: {
+    scenarios: "In Mirfield we can help drivers in the village centre and surrounding areas, and near the A644, A62 and M62 Junction 25.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  morley: {
+    scenarios: "In Morley we can help drivers in the town centre and surrounding areas, and near M62 Junction 27, the A643 and A650.",
+    parking: "We use car parks and quieter residential streets rather than the main roads into town.",
+  },
+  'hebden-bridge': {
+    scenarios: "In Hebden Bridge we can help drivers in the town centre and the surrounding Calder Valley, on the A646 and A6033.",
+    parking: "The valley roads are narrow, so we use a car park or a safe lay-by rather than stopping on the main road through town.",
+  },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",
     parking: "Retail and residential car parks give us safe space to work.",
