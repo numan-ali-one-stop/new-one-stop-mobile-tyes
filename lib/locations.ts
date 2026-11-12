@@ -1,7 +1,7 @@
-/** Greater Manchester borough structure — maps each live location page to its
- * metropolitan borough, matching the council/postal-area groupings used by
- * the business's own service-area coverage. Only pages that actually exist
- * on the site are listed here. */
+/** Borough/city structure — maps each live location page to its metropolitan
+ * borough (or, outside Greater Manchester, to its main city), matching the
+ * council/postal-area groupings used by the business's own service-area
+ * coverage. Only pages that actually exist on the site are listed here. */
 
 export interface LocationArea {
   name: string
@@ -13,12 +13,15 @@ export interface Borough {
   /** Slug of the borough's own page, or null if there isn't a dedicated borough page. */
   slug: string | null
   towns: LocationArea[]
+  /** Top-level region this borough/city belongs to, e.g. "Greater Manchester", "West Yorkshire". */
+  region: string
 }
 
 export const BOROUGHS: Borough[] = [
   {
     name: 'Bury',
     slug: 'bury',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Prestwich', slug: 'prestwich' },
       { name: 'Radcliffe', slug: 'radcliffe' },
@@ -41,6 +44,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Bolton',
     slug: 'bolton',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Blackrod', slug: 'blackrod' },
       { name: 'Farnworth', slug: 'farnworth' },
@@ -65,6 +69,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Manchester',
     slug: 'manchester',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Blackley', slug: 'blackley' },
       { name: 'Cheetham Hill', slug: 'cheetham-hill' },
@@ -100,6 +105,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Oldham',
     slug: 'oldham',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Chadderton', slug: 'chadderton' },
       { name: 'Failsworth', slug: 'failsworth' },
@@ -130,6 +136,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Rochdale',
     slug: 'rochdale',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Heywood', slug: 'heywood' },
       { name: 'Littleborough', slug: 'littleborough' },
@@ -157,6 +164,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Salford',
     slug: 'salford',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Cadishead', slug: 'cadishead' },
       { name: 'Eccles', slug: 'eccles' },
@@ -188,6 +196,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Stockport',
     slug: 'stockport',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Bramhall', slug: 'bramhall' },
       { name: 'Bredbury', slug: 'bredbury' },
@@ -221,6 +230,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Tameside',
     slug: 'tameside',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Ashton-under-Lyne', slug: 'ashton-under-lyne' },
       { name: 'Audenshaw', slug: 'audenshaw' },
@@ -249,6 +259,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Trafford',
     slug: 'trafford',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Stretford', slug: 'stretford' },
       { name: 'Altrincham', slug: 'altrincham' },
@@ -275,6 +286,7 @@ export const BOROUGHS: Borough[] = [
   {
     name: 'Wigan',
     slug: 'wigan',
+    region: 'Greater Manchester',
     towns: [
       { name: 'Abram', slug: 'abram' },
       { name: 'Ashton-in-Makerfield', slug: 'ashton-in-makerfield' },
@@ -306,23 +318,73 @@ export const BOROUGHS: Borough[] = [
     ],
   },
   {
-    name: 'West Yorkshire',
-    slug: 'west-yorkshire',
+    name: 'Huddersfield',
+    slug: 'huddersfield',
+    region: 'West Yorkshire',
     towns: [
-      { name: 'Huddersfield', slug: 'huddersfield' },
-      { name: 'Bradford', slug: 'bradford' },
-      { name: 'Halifax', slug: 'halifax' },
-      { name: 'Wakefield', slug: 'wakefield' },
-      { name: 'Leeds', slug: 'leeds' },
-      { name: 'Brighouse', slug: 'brighouse' },
       { name: 'Batley', slug: 'batley' },
       { name: 'Dewsbury', slug: 'dewsbury' },
       { name: 'Mirfield', slug: 'mirfield' },
-      { name: 'Morley', slug: 'morley' },
+    ],
+  },
+  {
+    name: 'Bradford',
+    slug: 'bradford',
+    region: 'West Yorkshire',
+    towns: [],
+  },
+  {
+    name: 'Halifax',
+    slug: 'halifax',
+    region: 'West Yorkshire',
+    towns: [
+      { name: 'Brighouse', slug: 'brighouse' },
       { name: 'Hebden Bridge', slug: 'hebden-bridge' },
+      { name: 'Todmorden', slug: 'todmorden' },
+    ],
+  },
+  {
+    name: 'Wakefield',
+    slug: 'wakefield',
+    region: 'West Yorkshire',
+    towns: [
+      { name: 'Pontefract', slug: 'pontefract' },
+      { name: 'Castleford', slug: 'castleford' },
+    ],
+  },
+  {
+    name: 'Leeds',
+    slug: 'leeds',
+    region: 'West Yorkshire',
+    towns: [
+      { name: 'Morley', slug: 'morley' },
+    ],
+  },
+  {
+    name: 'Barnsley',
+    slug: 'barnsley',
+    region: 'South Yorkshire',
+    towns: [
+      { name: 'Stocksbridge', slug: 'stocksbridge' },
     ],
   },
 ]
+
+export interface Region {
+  name: string
+  boroughs: Borough[]
+}
+
+/** Boroughs/cities grouped by their top-level region, in region-first display order. */
+export const REGIONS: Region[] = (() => {
+  const order = ['Greater Manchester', 'West Yorkshire', 'South Yorkshire']
+  const byName = new Map<string, Borough[]>()
+  for (const b of BOROUGHS) {
+    if (!byName.has(b.region)) byName.set(b.region, [])
+    byName.get(b.region)!.push(b)
+  }
+  return order.filter((name) => byName.has(name)).map((name) => ({ name, boroughs: byName.get(name)! }))
+})()
 
 /** Every area (borough page + town page) in one flat list, each tagged with its borough name. */
 export const ALL_AREAS: (LocationArea & { borough: string })[] = BOROUGHS.flatMap((b) => [

@@ -68,11 +68,14 @@ const ROAD_PAGES = [
   'm6', 'm60', 'm602', 'm61', 'm56', 'm62', 'm66', 'a627', 'm67', 'a57', 'wilmslow-road',
 ]
 
-// West Yorkshire — its own region hub page plus the city/town pages within it.
+// West Yorkshire cities and their surrounding towns (no region hub page — each city is its own page).
 const WEST_YORKSHIRE_PAGES = [
-  'west-yorkshire', 'huddersfield', 'bradford', 'halifax', 'wakefield', 'leeds',
-  'brighouse', 'batley', 'dewsbury', 'mirfield', 'morley', 'hebden-bridge',
+  'huddersfield', 'bradford', 'halifax', 'wakefield', 'leeds',
+  'brighouse', 'batley', 'dewsbury', 'mirfield', 'morley', 'hebden-bridge', 'todmorden', 'pontefract', 'castleford',
 ]
+
+// South Yorkshire — Barnsley and its surrounding towns.
+const SOUTH_YORKSHIRE_PAGES = ['barnsley', 'stocksbridge']
 
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.
 const NATIONAL_CITY_PAGES = [
@@ -134,6 +137,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     })),
     ...WEST_YORKSHIRE_PAGES.map((slug) => ({
+      url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+    ...SOUTH_YORKSHIRE_PAGES.map((slug) => ({
       url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,
       lastModified: LAST_MODIFIED,
       changeFrequency: 'monthly' as const,

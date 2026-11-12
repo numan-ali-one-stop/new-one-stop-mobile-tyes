@@ -15,26 +15,26 @@ import HeroPostcodes from '@/components/HeroPostcodes'
 import HeroBadge from '@/components/HeroBadge'
 
 const _serviceSchema = pageServiceSchema({
-  slug: 'mobile-tyre-fitting-west-yorkshire',
-  alternateName: '24/7 Mobile Tyre Fitting West Yorkshire',
-  areaServed: 'West Yorkshire',
+  slug: 'mobile-tyre-fitting-todmorden',
+  alternateName: '24/7 Mobile Tyre Fitting Todmorden',
+  areaServed: 'Todmorden, West Yorkshire',
   description:
-    'Need mobile tyre fitting in West Yorkshire? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside across Huddersfield, Bradford, Halifax, Wakefield and Leeds, dispatched the same day.',
+    'Need mobile tyre fitting in Todmorden? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside, dispatched the same day.',
 })
 
-const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-west-yorkshire')
-const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-west-yorkshire')
+const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-todmorden')
+const _websiteSchema = pageWebsiteSchema('mobile-tyre-fitting-todmorden')
 const _automotiveBusinessSchema = automotiveBusinessSchema({
-  slug: 'mobile-tyre-fitting-west-yorkshire',
+  slug: 'mobile-tyre-fitting-todmorden',
   image: 'https://onestoptyres247.co.uk/images/tyres-fitting-anywhere.webp',
-  addressLocality: 'West Yorkshire',
+  addressLocality: 'Todmorden',
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting West Yorkshire | 24/7 Tyre Replacement',
+  title: 'Mobile Tyre Fitting Todmorden | 24/7 Tyre Replacement',
   description:
-    'Need mobile tyre fitting in West Yorkshire? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside across Huddersfield, Bradford, Halifax, Wakefield and Leeds, dispatched the same day.',
-  path: '/mobile-tyre-fitting-west-yorkshire',
+    'Need mobile tyre fitting in Todmorden? Get 24/7 tyre fitting, emergency tyre replacement and puncture repair at home, work or roadside, dispatched the same day.',
+  path: '/mobile-tyre-fitting-todmorden',
 })
 
 function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
@@ -51,40 +51,7 @@ function FeatureItem({ icon, title, desc }: { icon: string; title: string; desc:
   )
 }
 
-const CITIES = [
-  {
-    name: 'Huddersfield',
-    href: '/mobile-tyre-fitting-huddersfield',
-    postcodes: 'HD1 – HD9',
-    desc: 'Covering the town centre and surrounding areas near the M62 junctions, the A62 and A629.',
-  },
-  {
-    name: 'Bradford',
-    href: '/mobile-tyre-fitting-bradford',
-    postcodes: 'BD1 – BD18',
-    desc: 'Covering the city centre and surrounding areas, the Outer Ring Road and near the M606 and M62 Junction 26.',
-  },
-  {
-    name: 'Halifax',
-    href: '/mobile-tyre-fitting-halifax',
-    postcodes: 'HX1 – HX7',
-    desc: 'Covering the town centre and surrounding areas near M62 Junction 24, the A58 and A629.',
-  },
-  {
-    name: 'Wakefield',
-    href: '/mobile-tyre-fitting-wakefield',
-    postcodes: 'WF1 – WF17',
-    desc: 'Covering the city centre and surrounding areas, the Outer Ring Road and near M1 Junctions 39 to 42.',
-  },
-  {
-    name: 'Leeds',
-    href: '/mobile-tyre-fitting-leeds',
-    postcodes: 'LS1 – LS29',
-    desc: 'Covering the city centre, Headingley and Roundhay, the ring roads and near the M621.',
-  },
-]
-
-export default function WestYorkshirePage() {
+export default function TodmordenPage() {
   return (
     <div className="bg-[#fcf9f8] text-[#1c1b1b] font-body-md">
       <JsonLd data={_serviceSchema} className="schemantra" />
@@ -106,14 +73,14 @@ export default function WestYorkshirePage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white mb-3 sm:mb-4 leading-[1.1] font-black text-balance"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Mobile Tyre Fitting West Yorkshire
+              24/7 Mobile Tyre Fitting Todmorden
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance across West Yorkshire — Huddersfield, Bradford, Halifax, Wakefield and Leeds — with same-day dispatch.
+              Emergency tyre replacement, mobile puncture repair and roadside tyre assistance in Todmorden, with same-day dispatch.
             </p>
 
-            <HeroPostcodes slug="west-yorkshire" />
+            <HeroPostcodes slug="todmorden" />
 
             {/* Google Rating Badge */}
             <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 mb-4">
@@ -129,7 +96,7 @@ export default function WestYorkshirePage() {
                 ))}
               </div>
               <span className="font-bold text-sm">5.0</span>
-              <span className="text-white/80 lg:text-white/60 text-xs font-medium">Rated By Drivers Across West Yorkshire</span>
+              <span className="text-white/80 lg:text-white/60 text-xs font-medium">Rated By Drivers Across Todmorden</span>
             </a>
 
             {/* CTAs */}
@@ -138,7 +105,7 @@ export default function WestYorkshirePage() {
           </div>
         </section>
 
-        <HeroQuoteSection area="West Yorkshire" />
+        <HeroQuoteSection area="Todmorden" />
 
         {/* ── 2. REVIEWS ────────────────────────────────────── */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
@@ -169,7 +136,7 @@ export default function WestYorkshirePage() {
                 <span className="text-xs text-slate-400 font-medium hidden sm:inline">Based on Google Reviews</span>
               </a>
             </div>
-            <ReviewsCarousel offset={124} />
+            <ReviewsCarousel offset={136} />
             <div className="text-center mt-8">
               <a
                 href="https://share.google/bejdYHzU10lFRVv4E"
@@ -195,10 +162,10 @@ export default function WestYorkshirePage() {
                 className="text-2xl sm:text-[32px] font-bold text-slate-900 mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair Across West Yorkshire
+                24/7 Mobile Tyre Fitting &amp; Emergency Tyre Repair In Todmorden
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-base">
-                Mobile tyre fitting, emergency tyre replacement and puncture repair across West Yorkshire. We come to your home, workplace or roadside location 24/7, dispatching the same day.
+                Mobile tyre fitting, emergency tyre replacement and puncture repair across Todmorden. We come to your home, workplace or roadside location 24/7, dispatching the same day.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -206,49 +173,49 @@ export default function WestYorkshirePage() {
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
                   title: 'Mobile Tyre Fitting',
-                  desc: 'Mobile tyre fitting at your home, workplace or roadside location anywhere in West Yorkshire. Fast response with premium and budget tyre options available.',
+                  desc: 'Mobile tyre fitting at your home, workplace or roadside location anywhere in Todmorden. Fast response with premium and budget tyre options available.',
                   badge: 'FAST RESPONSE',
                   href: '/mobile-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp',
                   title: 'Home Tyre Fitting',
-                  desc: 'Same day tyre fitting at your home across West Yorkshire, without the hassle of visiting a garage.',
+                  desc: 'Same day tyre fitting at your home across Todmorden, without the hassle of visiting a garage.',
                   badge: 'AT YOUR DOOR',
                   href: '/home-tyre-fitting',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
                   title: 'Emergency Puncture Repair',
-                  desc: 'Professional mobile puncture repair across West Yorkshire, carried out on-site where safe and suitable.',
+                  desc: 'Professional mobile puncture repair across Todmorden, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',
                   title: 'Jump Start',
-                  desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across West Yorkshire.',
+                  desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Todmorden.',
                   badge: '24/7 SERVICE',
                   href: '/jump-start',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tyre%20pressure%20monitor-airanko-sjz7PL2Pv4N9jlPWtz5Wa1q8XO0FgP.webp',
                   title: 'TPMS Reset',
-                  desc: 'Tyre pressure monitoring system reset and sensor checks across West Yorkshire after every fitting or repair.',
+                  desc: 'Tyre pressure monitoring system reset and sensor checks across Todmorden after every fitting or repair.',
                   badge: 'ALL VEHICLES',
                   href: '/tpms-reset',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Locking%20nut%20removal-airanko%20%281%29-ONBmqaZHMozU0jjrxbPe5J7C4zRQkS.webp',
                   title: 'Locking Nut Removal',
-                  desc: 'Specialist, damage-free locking wheel nut removal across West Yorkshire using professional tools.',
+                  desc: 'Specialist, damage-free locking wheel nut removal across Todmorden using professional tools.',
                   badge: 'DAMAGE FREE',
                   href: '/locking-nut-removal',
                 },
                 {
                   img: '/images/professional-mobile-tyre-fitting.webp',
                   title: 'Roadside Assistance',
-                  desc: 'Emergency roadside support for tyre and vehicle problems across West Yorkshire, wherever you get stranded.',
+                  desc: 'Emergency roadside support for tyre and vehicle problems across Todmorden, wherever you get stranded.',
                   badge: '24/7 SUPPORT',
                   href: '/roadside-assistance',
                 },
@@ -339,13 +306,13 @@ export default function WestYorkshirePage() {
                 className="text-2xl sm:text-4xl lg:text-5xl text-[#0f172a] mb-5 sm:mb-8 leading-tight font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)' }}
               >
-                Expert Mobile Tyre Fitting Service Across West Yorkshire
+                Expert Mobile Tyre Fitting Service Across Todmorden
               </h2>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres provides 24/7 mobile tyre fitting across West Yorkshire, helping drivers get back on the road when they experience a puncture, tyre blowout or damaged tyre.
-                Our mobile tyre experts travel directly to your home, workplace or roadside location in Huddersfield, Bradford, Halifax, Wakefield, Leeds and the surrounding areas.
-                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout the region.
-                If you&apos;re searching for mobile tyre fitting near me in West Yorkshire, our same-day dispatch team is available day and night.
+                One Stop Tyres provides 24/7 mobile tyre fitting in Todmorden, helping drivers get back on the road quickly when they experience a puncture, tyre blowout or damaged tyre.
+                Our mobile tyre experts come directly to your home, workplace or roadside location anywhere in Todmorden and surrounding areas.
+                We supply and fit premium and budget tyres, carry out mobile puncture repairs where safe and suitable, and provide emergency tyre replacement services throughout Todmorden.
+                If you&apos;re searching for mobile tyre fitting near me in Todmorden, our same-day dispatch team is available day and night.
               </p>
               <ul className="space-y-4 sm:space-y-5 text-left">
                 <FeatureItem
@@ -368,92 +335,47 @@ export default function WestYorkshirePage() {
           </div>
         </section>
 
-        {/* ── 5. CITIES WE COVER ────────────────────────────── */}
-        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10 sm:mb-12">
-              <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-2 block">
-                Our Coverage
-              </span>
-              <h2
-                className="text-2xl sm:text-[32px] font-bold text-slate-900 leading-tight"
-                style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
-              >
-                Cities We Cover in West Yorkshire
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-              {CITIES.map((city) => (
-                <a
-                  key={city.name}
-                  href={city.href}
-                  className="group flex flex-col bg-white rounded-2xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-[#b70011] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-                >
-                  <div className="h-1.5 bg-[#b70011]" />
-                  <div className="p-5 sm:p-6 flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-lg sm:text-xl font-extrabold text-[#0f172a]" style={{ fontFamily: 'var(--font-work-sans)' }}>
-                        {city.name}
-                      </h3>
-                      <span className="text-xs font-bold text-[#b70011] bg-[#b70011]/10 px-2 py-0.5 rounded-full shrink-0">
-                        {city.postcodes}
-                      </span>
-                    </div>
-                    <p className="text-slate-600 text-sm leading-relaxed">{city.desc}</p>
-                  </div>
-                  <div className="bg-[#0f172a] group-hover:bg-[#b70011] text-white px-5 py-3 flex items-center justify-between font-bold text-sm uppercase tracking-wide transition-colors">
-                    View {city.name} Coverage
-                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
-                      arrow_forward
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* ── 5. WHY TODMORDEN DRIVERS CHOOSE US ────────────── */}
+        <WhyChooseUs city="Todmorden" image="/images/tyres-fitting-anywhere.webp" responseTitle="Same-Day Dispatch" responseDesc="Directly employed technicians dispatched the same day — at home, work, or roadside." />
 
-        {/* ── 6. WHY WEST YORKSHIRE DRIVERS CHOOSE US ───────── */}
-        <WhyChooseUs city="West Yorkshire" image="/images/tyres-fitting-anywhere.webp" responseTitle="Same-Day Dispatch" responseDesc="Directly employed technicians dispatched the same day — at home, work, or roadside." />
-
-        {/* ── 7. BRAND CAROUSEL ─────────────────────────────── */}
+        {/* ── 6. BRAND CAROUSEL ─────────────────────────────── */}
         <BrandCarousel />
 
         {/* ── NEARBY AREAS ───────────────────────────────────── */}
-        <NearbyAreas currentSlug="west-yorkshire" />
+        <NearbyAreas currentSlug="todmorden" />
 
         {/* ── LOCAL AREA DETAILS ─────────────────────────────── */}
-        <LocalAreaInfo currentSlug="west-yorkshire" />
+        <LocalAreaInfo currentSlug="todmorden" />
 
-        {/* ── 8. FAQ ────────────────────────────────────────── */}
+        {/* ── 7. FAQ ────────────────────────────────────────── */}
         <CityFaq
-          canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-west-yorkshire"
-          city="West Yorkshire"
+          canonical="https://onestoptyres247.co.uk/mobile-tyre-fitting-todmorden"
+          city="Todmorden"
           faqs={[
             {
-              q: 'Which parts of West Yorkshire do you cover?',
-              a: 'We cover Huddersfield, Bradford, Halifax, Wakefield and Leeds, along with the towns and villages around each, on a same-day dispatch basis.',
+              q: 'How quickly can you reach me in Todmorden?',
+              a: 'We are a directly employed team, and for Todmorden we dispatch on a same-day basis rather than a fixed minute count. Call or WhatsApp us your postcode and we will confirm your arrival window.',
             },
             {
-              q: 'How quickly can you reach me in West Yorkshire?',
-              a: 'We are a directly employed team, and across West Yorkshire we dispatch on a same-day basis rather than a fixed minute count. Call or WhatsApp us your postcode and we will confirm your arrival window.',
+              q: 'What areas of Todmorden do you cover?',
+              a: 'We cover Todmorden and the surrounding OL14 postcode area, including the Calder Valley and the routes on the A646 and A6033.',
             },
             {
-              q: 'Can I get same-day tyre fitting booked in West Yorkshire?',
-              a: "In most cases, yes. Tell us your vehicle and tyre size when you call and we'll confirm whether a same-day appointment is available in your area before you commit.",
+              q: 'Can I get same-day tyre fitting booked in Todmorden?',
+              a: "In most cases, yes. Tell us your vehicle and tyre size when you call and we'll confirm whether a same-day Todmorden appointment is available before you commit.",
             },
             {
-              q: 'Can you repair a puncture instead of replacing the tyre?',
+              q: 'Can you repair a puncture in Todmorden instead of replacing the tyre?',
               a: "Often, yes. Our technician inspects the tyre first, and if it can be safely repaired to British Standard BS AU 159 we'll do that instead of selling you a full replacement.",
             },
           ]}
         />
 
-        {/* ── 9. FINAL CTA ──────────────────────────────────── */}
+        {/* ── 8. FINAL CTA ──────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in West Yorkshire Right Now?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated West Yorkshire line and get a technician dispatched the same day.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Tyre Fitted in Todmorden Right Now?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Don&apos;t wait by the roadside. Call our dedicated Todmorden line and get a technician dispatched the same day.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

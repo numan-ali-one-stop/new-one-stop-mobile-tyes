@@ -140,10 +140,6 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Edinburgh we can help drivers across the city and on the A720 City Bypass and its junctions.",
     parking: "City-centre streets are narrow and busy, so car parks and side streets are best.",
   },
-  'west-yorkshire': {
-    scenarios: "Across West Yorkshire we can help drivers in Huddersfield, Bradford, Halifax, Wakefield and Leeds, and on the M62 and M1 corridors that link them.",
-    parking: "We use car parks and quieter residential streets rather than busy main roads, wherever one is available.",
-  },
   leeds: {
     scenarios: "In Leeds we can help drivers in the city centre and suburbs, on the ring roads and near the M621.",
     parking: "We use car parks and quieter residential streets rather than busy main roads.",
@@ -187,6 +183,26 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
   'hebden-bridge': {
     scenarios: "In Hebden Bridge we can help drivers in the town centre and the surrounding Calder Valley, on the A646 and A6033.",
     parking: "The valley roads are narrow, so we use a car park or a safe lay-by rather than stopping on the main road through town.",
+  },
+  todmorden: {
+    scenarios: "In Todmorden we can help drivers in the town centre and the surrounding Calder Valley, on the A646 and A6033.",
+    parking: "The valley roads are narrow, so we use a car park or a safe lay-by rather than stopping on the main road through town.",
+  },
+  pontefract: {
+    scenarios: "In Pontefract we can help drivers in the town centre and surrounding areas, and near M62 Junction 32, the A639 and A645.",
+    parking: "We use car parks and quieter residential streets rather than the main roads into town.",
+  },
+  castleford: {
+    scenarios: "In Castleford we can help drivers in the town centre and surrounding areas, and near M62 Junctions 31 and 32, the A639 and A655.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  stocksbridge: {
+    scenarios: "In Stocksbridge we can help drivers in the town centre and surrounding areas, and near the A616 and A6102.",
+    parking: "We use car parks and quieter residential streets rather than the main road through town.",
+  },
+  barnsley: {
+    scenarios: "In Barnsley we can help drivers in the town centre and surrounding areas, and near M1 Junctions 36 and 37, the A61 and A635.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
   },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",

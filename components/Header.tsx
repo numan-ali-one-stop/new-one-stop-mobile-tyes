@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { BOROUGHS } from '@/lib/locations'
+import { BOROUGHS, REGIONS } from '@/lib/locations'
 import { EMAIL, ADS_LANDING_PATH, PHONE, PHONE_TEL, MAPS_URL } from '@/lib/constants'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -379,70 +379,77 @@ export default function Header() {
                       City Areas — click to see towns
                     </p>
                     <div className="max-h-[320px] overflow-y-auto pr-1 mb-4">
-                      {BOROUGHS.map((borough) => {
-                        const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
-                        const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
-                        const expanded = expandedBoroughs.has(borough.name)
-                        return (
-                          <div key={borough.name} className="mb-0.5">
-                            <div
-                              className={`group flex items-center gap-1 rounded-xl transition-all ${
-                                active ? 'bg-red-50 text-[#b70011]' : 'hover:bg-slate-50 text-slate-700 hover:text-[#b70011]'
-                              }`}
-                            >
-                              {href ? (
-                                <a href={href} className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
-                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${
-                                    active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'
-                                  }`} style={{ fontVariationSettings: "'FILL' 1" }}>
-                                    location_on
-                                  </span>
-                                  <span className="font-semibold text-sm">{borough.name}</span>
-                                </a>
-                              ) : (
-                                <span className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
-                                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
-                                    location_on
-                                  </span>
-                                  <span className="font-semibold text-sm">{borough.name}</span>
-                                </span>
-                              )}
-                              {borough.towns.length > 0 && (
-                                <button
-                                  type="button"
-                                  onClick={() => toggleBorough(borough.name)}
-                                  aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
-                                  aria-expanded={expanded}
-                                  className="p-2 mr-1.5 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
+                      {REGIONS.map((region) => (
+                        <div key={region.name} className="mb-2">
+                          <p className="text-[10px] font-bold uppercase tracking-widest text-[#b70011]/70 px-3 pt-2 pb-1">
+                            {region.name}
+                          </p>
+                          {region.boroughs.map((borough) => {
+                            const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
+                            const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
+                            const expanded = expandedBoroughs.has(borough.name)
+                            return (
+                              <div key={borough.name} className="mb-0.5">
+                                <div
+                                  className={`group flex items-center gap-1 rounded-xl transition-all ${
+                                    active ? 'bg-red-50 text-[#b70011]' : 'hover:bg-slate-50 text-slate-700 hover:text-[#b70011]'
+                                  }`}
                                 >
-                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
-                                    expand_more
-                                  </span>
-                                </button>
-                              )}
-                            </div>
-                            {borough.towns.length > 0 && (
-                              <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
-                                  {borough.towns.map((town) => (
-                                    <a
-                                      key={town.slug}
-                                      href={`/mobile-tyre-fitting-${town.slug}`}
-                                      className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
-                                        isActive(`/mobile-tyre-fitting-${town.slug}`)
-                                          ? 'bg-[#b70011] border-[#b70011] text-white'
-                                          : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
-                                      }`}
-                                    >
-                                      {town.name}
+                                  {href ? (
+                                    <a href={href} className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
+                                      <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${
+                                        active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'
+                                      }`} style={{ fontVariationSettings: "'FILL' 1" }}>
+                                        location_on
+                                      </span>
+                                      <span className="font-semibold text-sm">{borough.name}</span>
                                     </a>
-                                  ))}
+                                  ) : (
+                                    <span className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
+                                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
+                                        location_on
+                                      </span>
+                                      <span className="font-semibold text-sm">{borough.name}</span>
+                                    </span>
+                                  )}
+                                  {borough.towns.length > 0 && (
+                                    <button
+                                      type="button"
+                                      onClick={() => toggleBorough(borough.name)}
+                                      aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
+                                      aria-expanded={expanded}
+                                      className="p-2 mr-1.5 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
+                                    >
+                                      <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+                                        expand_more
+                                      </span>
+                                    </button>
+                                  )}
                                 </div>
+                                {borough.towns.length > 0 && (
+                                  <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
+                                      {borough.towns.map((town) => (
+                                        <a
+                                          key={town.slug}
+                                          href={`/mobile-tyre-fitting-${town.slug}`}
+                                          className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
+                                            isActive(`/mobile-tyre-fitting-${town.slug}`)
+                                              ? 'bg-[#b70011] border-[#b70011] text-white'
+                                              : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
+                                          }`}
+                                        >
+                                          {town.name}
+                                        </a>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
                               </div>
-                            )}
-                          </div>
-                        )
-                      })}
+                            )
+                          })}
+                        </div>
+                      ))}
                     </div>
 
                     {/* Divider */}
@@ -479,7 +486,7 @@ export default function Header() {
                         location_on
                       </span>
                       <p className="text-[12px] text-slate-600 leading-tight">
-                        <span className="font-bold text-slate-800">10 boroughs, 230+ towns &amp; 11 routes</span> covered 24/7
+                        <span className="font-bold text-slate-800">3 regions, 240+ towns &amp; 11 routes</span> covered 24/7
                       </p>
                     </div>
                     <a
@@ -700,76 +707,80 @@ export default function Header() {
                     Full Coverage Map
                   </a>
 
-                  <p className="px-3 pt-1 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                    City Areas — tap to see towns
-                  </p>
-                  {BOROUGHS.map((borough) => {
-                    const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
-                    const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
-                    const expanded = expandedBoroughs.has(borough.name)
-                    return (
-                      <div key={borough.name} className="mb-0.5">
-                        <div
-                          className={`group flex items-center gap-1 rounded-xl transition-all ${
-                            active ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'
-                          }`}
-                        >
-                          {href ? (
-                            <a
-                              href={href}
-                              onClick={() => setMobileOpen(false)}
-                              className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0"
+                  {REGIONS.map((region) => (
+                    <div key={region.name} className="mb-2">
+                      <p className="px-3 pt-1 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-[#b70011]/70">
+                        {region.name}
+                      </p>
+                      {region.boroughs.map((borough) => {
+                        const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
+                        const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
+                        const expanded = expandedBoroughs.has(borough.name)
+                        return (
+                          <div key={borough.name} className="mb-0.5">
+                            <div
+                              className={`group flex items-center gap-1 rounded-xl transition-all ${
+                                active ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'
+                              }`}
                             >
-                              <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
-                                location_on
-                              </span>
-                              <span className="font-semibold text-sm">{borough.name}</span>
-                            </a>
-                          ) : (
-                            <span className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0">
-                              <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
-                                location_on
-                              </span>
-                              <span className="font-semibold text-sm">{borough.name}</span>
-                            </span>
-                          )}
-                          {borough.towns.length > 0 && (
-                            <button
-                              type="button"
-                              onClick={() => toggleBorough(borough.name)}
-                              aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
-                              aria-expanded={expanded}
-                              className="p-2 mr-1 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
-                            >
-                              <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
-                                expand_more
-                              </span>
-                            </button>
-                          )}
-                        </div>
-                        {borough.towns.length > 0 && (
-                          <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                            <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
-                              {borough.towns.map((town) => (
+                              {href ? (
                                 <a
-                                  key={town.slug}
-                                  href={`/mobile-tyre-fitting-${town.slug}`}
+                                  href={href}
                                   onClick={() => setMobileOpen(false)}
-                                  className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
-                                    isActive(`/mobile-tyre-fitting-${town.slug}`)
-                                      ? 'bg-[#b70011] border-[#b70011] text-white'
-                                      : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
-                                  }`}
+                                  className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0"
                                 >
-                                  {town.name}
+                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
+                                    location_on
+                                  </span>
+                                  <span className="font-semibold text-sm">{borough.name}</span>
                                 </a>
-                              ))}
+                              ) : (
+                                <span className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0">
+                                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
+                                    location_on
+                                  </span>
+                                  <span className="font-semibold text-sm">{borough.name}</span>
+                                </span>
+                              )}
+                              {borough.towns.length > 0 && (
+                                <button
+                                  type="button"
+                                  onClick={() => toggleBorough(borough.name)}
+                                  aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
+                                  aria-expanded={expanded}
+                                  className="p-2 mr-1 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
+                                >
+                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+                                    expand_more
+                                  </span>
+                                </button>
+                              )}
                             </div>
+                            {borough.towns.length > 0 && (
+                              <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
+                                  {borough.towns.map((town) => (
+                                    <a
+                                      key={town.slug}
+                                      href={`/mobile-tyre-fitting-${town.slug}`}
+                                      onClick={() => setMobileOpen(false)}
+                                      className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
+                                        isActive(`/mobile-tyre-fitting-${town.slug}`)
+                                          ? 'bg-[#b70011] border-[#b70011] text-white'
+                                          : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
+                                      }`}
+                                    >
+                                      {town.name}
+                                    </a>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
                           </div>
-                        )}
-                      </div>
-                    )
-                  })}
+                        )
+                      })}
+                    </div>
+                  ))}
 
                   <p className="px-3 pt-3 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
                     Motorways &amp; Roads
