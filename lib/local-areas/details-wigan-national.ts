@@ -204,6 +204,26 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Barnsley we can help drivers in the town centre and surrounding areas, and near M1 Junctions 36 and 37, the A61 and A635.",
     parking: "We use car parks and quieter residential streets away from the main roads.",
   },
+  penistone: {
+    scenarios: "In Penistone we can help drivers in the town centre and surrounding areas, and near the A628 and A629.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  elland: {
+    scenarios: "In Elland we can help drivers in the town centre and surrounding areas, and near M62 Junction 24 and the A629.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  pudsey: {
+    scenarios: "In Pudsey we can help drivers in the town centre and surrounding areas, and near M621 Junction 2 and the A647.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  keighley: {
+    scenarios: "In Keighley we can help drivers in the town centre and surrounding areas, and near the A629 and A650.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  bingley: {
+    scenarios: "In Bingley we can help drivers in the town centre and surrounding areas, and near the A650 and A657.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",
     parking: "Retail and residential car parks give us safe space to work.",

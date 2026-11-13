@@ -72,10 +72,11 @@ const ROAD_PAGES = [
 const WEST_YORKSHIRE_PAGES = [
   'huddersfield', 'bradford', 'halifax', 'wakefield', 'leeds',
   'brighouse', 'batley', 'dewsbury', 'mirfield', 'morley', 'hebden-bridge', 'todmorden', 'pontefract', 'castleford',
+  'elland', 'pudsey', 'keighley', 'bingley',
 ]
 
 // South Yorkshire — Barnsley and its surrounding towns.
-const SOUTH_YORKSHIRE_PAGES = ['barnsley', 'stocksbridge']
+const SOUTH_YORKSHIRE_PAGES = ['barnsley', 'stocksbridge', 'penistone']
 
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.
 const NATIONAL_CITY_PAGES = [

@@ -331,7 +331,10 @@ export const BOROUGHS: Borough[] = [
     name: 'Bradford',
     slug: 'bradford',
     region: 'West Yorkshire',
-    towns: [],
+    towns: [
+      { name: 'Keighley', slug: 'keighley' },
+      { name: 'Bingley', slug: 'bingley' },
+    ],
   },
   {
     name: 'Halifax',
@@ -341,6 +344,7 @@ export const BOROUGHS: Borough[] = [
       { name: 'Brighouse', slug: 'brighouse' },
       { name: 'Hebden Bridge', slug: 'hebden-bridge' },
       { name: 'Todmorden', slug: 'todmorden' },
+      { name: 'Elland', slug: 'elland' },
     ],
   },
   {
@@ -358,6 +362,7 @@ export const BOROUGHS: Borough[] = [
     region: 'West Yorkshire',
     towns: [
       { name: 'Morley', slug: 'morley' },
+      { name: 'Pudsey', slug: 'pudsey' },
     ],
   },
   {
@@ -366,6 +371,7 @@ export const BOROUGHS: Borough[] = [
     region: 'South Yorkshire',
     towns: [
       { name: 'Stocksbridge', slug: 'stocksbridge' },
+      { name: 'Penistone', slug: 'penistone' },
     ],
   },
 ]
