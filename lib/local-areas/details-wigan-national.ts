@@ -224,6 +224,14 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Bingley we can help drivers in the town centre and surrounding areas, and near the A650 and A657.",
     parking: "We use car parks and quieter residential streets rather than the main roads through town.",
   },
+  shipley: {
+    scenarios: "In Shipley we can help drivers in the town centre and surrounding areas, and near the A650, A657 and A6038.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  otley: {
+    scenarios: "In Otley we can help drivers in the town centre and surrounding areas, and near the A660 and A659.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",
     parking: "Retail and residential car parks give us safe space to work.",

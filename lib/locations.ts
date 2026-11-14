@@ -334,6 +334,7 @@ export const BOROUGHS: Borough[] = [
     towns: [
       { name: 'Keighley', slug: 'keighley' },
       { name: 'Bingley', slug: 'bingley' },
+      { name: 'Shipley', slug: 'shipley' },
     ],
   },
   {
@@ -363,6 +364,7 @@ export const BOROUGHS: Borough[] = [
     towns: [
       { name: 'Morley', slug: 'morley' },
       { name: 'Pudsey', slug: 'pudsey' },
+      { name: 'Otley', slug: 'otley' },
     ],
   },
   {

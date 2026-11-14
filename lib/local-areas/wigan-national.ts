@@ -218,7 +218,7 @@ export const WIGAN_NATIONAL: Record<string, LocalArea> = {
     name: 'Leeds',
     pc: ['LS1–LS29'],
     roads: ['M621', 'M1 / M62', 'A6110 Outer Ring Road', 'A64'],
-    near: ['Morley', 'Pudsey', 'Bradford', 'Wakefield', 'Huddersfield'],
+    near: ['Morley', 'Pudsey', 'Otley', 'Bradford', 'Wakefield'],
     note: "In Leeds, we can help drivers in the city centre, Headingley and Roundhay, on the ring roads and near the M621. Call us to confirm availability for your location.",
   },
   huddersfield: {
@@ -232,7 +232,7 @@ export const WIGAN_NATIONAL: Record<string, LocalArea> = {
     name: 'Bradford',
     pc: ['BD1–BD18'],
     roads: ['M606', 'M62 Junction 26', 'A650', 'A6177 Outer Ring Road'],
-    near: ['Keighley', 'Bingley', 'Leeds', 'Halifax', 'Shipley'],
+    near: ['Keighley', 'Bingley', 'Shipley', 'Leeds', 'Halifax'],
     note: "In Bradford, we can help drivers across the city centre, on the M606, the Outer Ring Road and near M62 Junction 26. Call us to confirm availability for your location.",
   },
   halifax: {
@@ -360,6 +360,20 @@ export const WIGAN_NATIONAL: Record<string, LocalArea> = {
     roads: ['A650', 'A657'],
     near: ['Bradford', 'Keighley', 'Shipley'],
     note: "In Bingley, we can help drivers in the town centre and near the A650 and A657. Call us to confirm availability for your location.",
+  },
+  shipley: {
+    name: 'Shipley',
+    pc: ['BD17–BD18'],
+    roads: ['A650', 'A657', 'A6038'],
+    near: ['Bradford', 'Bingley', 'Keighley'],
+    note: "In Shipley, we can help drivers in the town centre and near the A650, A657 and A6038. Call us to confirm availability for your location.",
+  },
+  otley: {
+    name: 'Otley',
+    pc: ['LS21'],
+    roads: ['A660', 'A659'],
+    near: ['Leeds', 'Guiseley', 'Ilkley'],
+    note: "In Otley, we can help drivers in the town centre and near the A660 and A659. Call us to confirm availability for your location.",
   },
   leicester: {
     name: 'Leicester',

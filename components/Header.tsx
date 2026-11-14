@@ -72,6 +72,11 @@ const motorwayLinks = [
   { label: 'Wilmslow Road', href: '/mobile-tyre-fitting-wilmslow-road', icon: 'route' },
 ]
 
+const yorkshireMotorwayLinks = [
+  { label: 'M621', href: '/mobile-tyre-fitting-m621', icon: 'route' },
+  { label: 'M18', href: '/mobile-tyre-fitting-m18', icon: 'route' },
+]
+
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function Header() {
@@ -80,6 +85,7 @@ export default function Header() {
   const [areasOpen, setAreasOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<'services' | 'areas' | null>(null)
   const [expandedBoroughs, setExpandedBoroughs] = useState<Set<string>>(new Set())
+  const [expandedRegions, setExpandedRegions] = useState<Set<string>>(new Set())
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
@@ -99,6 +105,15 @@ export default function Header() {
     })
   }
 
+  function toggleRegion(name: string) {
+    setExpandedRegions((prev) => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name)
+      else next.add(name)
+      return next
+    })
+  }
+
   const isServicesActive =
     isActive('/services') || serviceLinks.some((l) => isActive(l.href))
   const isAreasActive =
@@ -106,7 +121,8 @@ export default function Header() {
     BOROUGHS.some(
       (b) => (b.slug && isActive(`/mobile-tyre-fitting-${b.slug}`)) || b.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
     ) ||
-    motorwayLinks.some((l) => isActive(l.href))
+    motorwayLinks.some((l) => isActive(l.href)) ||
+    yorkshireMotorwayLinks.some((l) => isActive(l.href))
 
   // Hover handlers with a small delay to prevent flicker when moving the
   // cursor between the trigger and the panel.
@@ -379,11 +395,28 @@ export default function Header() {
                       City Areas — click to see towns
                     </p>
                     <div className="max-h-[320px] overflow-y-auto pr-1 mb-4">
-                      {REGIONS.map((region) => (
+                      {REGIONS.map((region) => {
+                        const regionExpanded = expandedRegions.has(region.name)
+                        const regionActive = region.boroughs.some((borough) =>
+                          (borough.slug && isActive(`/mobile-tyre-fitting-${borough.slug}`)) ||
+                          borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
+                        )
+                        return (
                         <div key={region.name} className="mb-2">
-                          <p className="text-[10px] font-bold uppercase tracking-widest text-[#b70011]/70 px-3 pt-2 pb-1">
-                            {region.name}
-                          </p>
+                          <button
+                            type="button"
+                            onClick={() => toggleRegion(region.name)}
+                            aria-expanded={regionExpanded}
+                            className={`w-full flex items-center justify-between gap-2 rounded-lg px-3 py-2 mb-1 transition-colors ${
+                              regionActive ? 'bg-red-50 text-[#b70011]' : 'hover:bg-slate-50 text-[#b70011]/70'
+                            }`}
+                          >
+                            <span className="text-[10px] font-bold uppercase tracking-widest">{region.name}</span>
+                            <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${regionExpanded ? 'rotate-180' : ''}`}>
+                              expand_more
+                            </span>
+                          </button>
+                          <div className={`overflow-hidden transition-all duration-300 ${regionExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                           {region.boroughs.map((borough) => {
                             const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
                             const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
@@ -448,8 +481,10 @@ export default function Header() {
                               </div>
                             )
                           })}
+                          </div>
                         </div>
-                      ))}
+                        )
+                      })}
                     </div>
 
                     {/* Divider */}
@@ -457,10 +492,33 @@ export default function Header() {
 
                     {/* Motorways */}
                     <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-1">
-                      Motorways &amp; Roads
+                      Greater Manchester Motorways &amp; Roads
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {motorwayLinks.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-bold transition-all border ${
+                            isActive(link.href)
+                              ? 'bg-[#b70011] border-[#b70011] text-white'
+                              : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
+                          }`}
+                        >
+                          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                            route
+                          </span>
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+
+                    {/* West & South Yorkshire Motorways */}
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-1">
+                      West &amp; South Yorkshire Motorways
                     </p>
                     <div className="flex flex-wrap gap-1.5">
-                      {motorwayLinks.map((link) => (
+                      {yorkshireMotorwayLinks.map((link) => (
                         <a
                           key={link.href}
                           href={link.href}
@@ -486,7 +544,7 @@ export default function Header() {
                         location_on
                       </span>
                       <p className="text-[12px] text-slate-600 leading-tight">
-                        <span className="font-bold text-slate-800">3 regions, 240+ towns &amp; 11 routes</span> covered 24/7
+                        <span className="font-bold text-slate-800">3 regions, 240+ towns &amp; 13 routes</span> covered 24/7
                       </p>
                     </div>
                     <a
@@ -707,11 +765,28 @@ export default function Header() {
                     Full Coverage Map
                   </a>
 
-                  {REGIONS.map((region) => (
+                  {REGIONS.map((region) => {
+                    const regionExpanded = expandedRegions.has(region.name)
+                    const regionActive = region.boroughs.some((borough) =>
+                      (borough.slug && isActive(`/mobile-tyre-fitting-${borough.slug}`)) ||
+                      borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
+                    )
+                    return (
                     <div key={region.name} className="mb-2">
-                      <p className="px-3 pt-1 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-[#b70011]/70">
-                        {region.name}
-                      </p>
+                      <button
+                        type="button"
+                        onClick={() => toggleRegion(region.name)}
+                        aria-expanded={regionExpanded}
+                        className={`w-full flex items-center justify-between gap-2 rounded-lg px-3 py-2 mb-1 transition-colors ${
+                          regionActive ? 'bg-red-50 text-[#b70011]' : 'hover:bg-slate-50 text-[#b70011]/70'
+                        }`}
+                      >
+                        <span className="text-[10px] font-bold uppercase tracking-widest">{region.name}</span>
+                        <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${regionExpanded ? 'rotate-180' : ''}`}>
+                          expand_more
+                        </span>
+                      </button>
+                      <div className={`overflow-hidden transition-all duration-300 ${regionExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                       {region.boroughs.map((borough) => {
                         const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
                         const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
@@ -779,14 +854,37 @@ export default function Header() {
                           </div>
                         )
                       })}
+                      </div>
                     </div>
-                  ))}
+                    )
+                  })}
 
                   <p className="px-3 pt-3 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                    Motorways &amp; Roads
+                    Greater Manchester Motorways &amp; Roads
                   </p>
                   <div className="flex flex-wrap gap-1.5 px-3 pb-2">
                     {motorwayLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold transition-all border ${
+                          isActive(link.href)
+                            ? 'bg-[#b70011] border-[#b70011] text-white'
+                            : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
+                        }`}
+                      >
+                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[12px]" style={{ fontVariationSettings: "'FILL' 1" }}>route</span>
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+
+                  <p className="px-3 pt-3 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    West &amp; South Yorkshire Motorways
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 px-3 pb-2">
+                    {yorkshireMotorwayLinks.map((link) => (
                       <a
                         key={link.href}
                         href={link.href}

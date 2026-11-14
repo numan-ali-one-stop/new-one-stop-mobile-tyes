@@ -12,6 +12,8 @@ const ROAD_PAGES = [
   { name: 'M67', slug: 'm67' },
   { name: 'A57(M)', slug: 'a57' },
   { name: 'Wilmslow Road', slug: 'wilmslow-road' },
+  { name: 'M621', slug: 'm621' },
+  { name: 'M18', slug: 'm18' },
 ]
 
 export default function ServiceAreasMap() {

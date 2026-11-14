@@ -91,7 +91,7 @@ const whyChooseMobileFitting = [
   },
   {
     icon: 'bolt',
-    title: 'Emergency Assistance Available',
+    title: 'Help With Unexpected Tyre Problems',
     desc: 'If you have an unexpected tyre problem, emergency mobile tyre fitting and emergency tyre replacement can help you get back on the road.',
   },
   {
@@ -144,14 +144,14 @@ export default function MobileTyreFittingPage() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-10 sm:py-14 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
             <div>
-              <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
+              <HeroBadge>24/7 Mobile Tyre Fitting Service</HeroBadge>
             </div>
 
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Emergency Mobile Tyre Fitting
+              24/7 Mobile Tyre Fitting
             </h1>
 
             <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
@@ -374,7 +374,7 @@ export default function MobileTyreFittingPage() {
           </div>
           <div className="flex items-center justify-between gap-4 bg-slate-50 border border-slate-100 rounded-2xl p-5 sm:p-6 mb-2">
             <div>
-              <p className="font-bold text-[#0f172a]">Emergency Tyre Replacement</p>
+              <p className="font-bold text-[#0f172a]">Urgent Tyre Replacement</p>
               <p className="text-sm text-slate-500">Get assistance when a tyre needs replacing unexpectedly.</p>
             </div>
           </div>

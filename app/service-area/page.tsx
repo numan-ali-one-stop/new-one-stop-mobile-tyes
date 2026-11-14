@@ -4,11 +4,11 @@ import HeroCtaButtons from '@/components/HeroCtaButtons'
 import HeroRatingBadge from '@/components/HeroRatingBadge'
 import { breadcrumbSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
-import { BOROUGHS } from '@/lib/locations'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
+import ServiceAreaRegions, { type ServiceAreaRegion } from '@/components/ServiceAreaRegions'
 
 export const metadata = buildMetadata({
   title: 'Service Area | Mobile Tyre Fitting Coverage',
@@ -157,6 +157,26 @@ const southYorkshireAreas = [
   },
 ]
 
+// ── West Yorkshire motorway card ────────────────────────────────────────────────
+const westYorkshireMotorwayAreas = [
+  {
+    name: 'M621',
+    href: '/mobile-tyre-fitting-m621',
+    junctions: 'J1 – J7 (Leeds)',
+    desc: 'Leeds inner motorway covered from the M62 Junction 27 interchange through to the approach into Leeds city centre.',
+  },
+]
+
+// ── South Yorkshire motorway card ───────────────────────────────────────────────
+const southYorkshireMotorwayAreas = [
+  {
+    name: 'M18',
+    href: '/mobile-tyre-fitting-m18',
+    junctions: 'J1 – J7 (South Yorkshire)',
+    desc: 'Covered from the M1 interchange near Rotherham through to the A1(M) and M180 near Doncaster.',
+  },
+]
+
 // ── Motorway / road cards ─────────────────────────────────────────────────────
 const motorwayAreas = [
   {
@@ -227,78 +247,44 @@ const motorwayAreas = [
   },
 ]
 
-interface AreaCardData {
-  name: string
-  boroughKey: string
-  href: string
-  icon: string
-  postcodes: string
-  desc: string
-}
-
-/** One borough/city card — hub link, postcode badge, "Also Covering" town chips, and a footer link. */
-function AreaCard({ area }: { area: AreaCardData }) {
-  const towns = BOROUGHS.find((b) => b.name === area.boroughKey)?.towns ?? []
-  return (
-    <div className="group flex flex-col bg-white rounded-2xl border-2 border-slate-100 shadow-md hover:shadow-2xl hover:border-primary hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-      <div className="h-1.5 bg-primary" />
-      <a href={area.href} className="flex items-center gap-4 px-5 pt-5 pb-3">
-        <div className="bg-primary p-3.5 rounded-2xl shrink-0 shadow-md shadow-primary/30">
-          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-white text-[28px]">
-            {area.icon}
-          </span>
-        </div>
-        <div className="min-w-0">
-          <h3 className="text-xl sm:text-2xl font-extrabold text-[#0f172a] leading-snug" style={{ fontFamily: 'var(--font-work-sans)' }}>
-            {area.name}
-          </h3>
-          <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-            {area.postcodes}
-          </span>
-        </div>
-      </a>
-      <a href={area.href} className="px-5 pb-4 block">
-        <p className="font-body-md text-body-md text-on-surface-variant text-base leading-relaxed">
-          {area.desc}
-        </p>
-      </a>
-      {towns.length > 0 && (
-        <div className="px-5 pb-5">
-          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">
-            Also Covering
-          </span>
-          <div className="flex flex-wrap gap-2">
-            {towns.map((town) => (
-              <a
-                key={town.slug}
-                href={`/mobile-tyre-fitting-${town.slug}`}
-                className="text-xs font-bold text-primary bg-primary/5 hover:bg-primary hover:text-white border-2 border-primary/20 hover:border-primary px-3 py-1.5 rounded-full transition-colors"
-              >
-                {town.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-      <a
-        href={area.href}
-        className="mt-auto bg-primary hover:bg-[#dc2626] text-white px-5 py-3.5 flex items-center justify-between font-bold text-sm uppercase tracking-wide transition-colors"
-      >
-        View {area.name} Coverage
-        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
-          arrow_forward
-        </span>
-      </a>
-    </div>
-  )
-}
+// ── Region groupings for the collapsible accordion ──────────────────────────────
+const regions: ServiceAreaRegion[] = [
+  {
+    name: 'Greater Manchester',
+    label: 'Greater Manchester',
+    heading: 'Boroughs We Cover',
+    description: 'Every area we serve gets full coverage, including each surrounding town and village.',
+    areas: boroughAreas,
+    roadsHeading: 'Motorway & Road Coverage',
+    roads: motorwayAreas,
+  },
+  {
+    name: 'West Yorkshire',
+    label: 'West Yorkshire',
+    heading: 'Cities We Cover',
+    description:
+      'Outside Greater Manchester, we also cover West Yorkshire — Leeds, Bradford, Huddersfield, Halifax and Wakefield, plus their surrounding towns — on a same-day dispatch basis.',
+    areas: westYorkshireAreas,
+    roadsHeading: 'Motorway Coverage',
+    roads: westYorkshireMotorwayAreas,
+  },
+  {
+    name: 'South Yorkshire',
+    label: 'South Yorkshire',
+    heading: 'Also Serving Barnsley',
+    description: 'We also cover Barnsley and Stocksbridge in South Yorkshire on a same-day dispatch basis.',
+    areas: southYorkshireAreas,
+    roadsHeading: 'Motorway Coverage',
+    roads: southYorkshireMotorwayAreas,
+  },
+]
 
 // ── Trust badges ──────────────────────────────────────────────────────────────
 const trustBadges = [
   { icon: 'schedule', label: '24/7 Emergency', sub: 'Always on call' },
   { icon: 'bolt', label: '20–30 Min', sub: 'Average arrival' },
   { icon: 'public', label: '3 Regions', sub: 'Fully covered' },
-  { icon: 'route', label: '11 Routes', sub: 'Full roadside cover' },
+  { icon: 'route', label: '13 Routes', sub: 'Full roadside cover' },
 ]
 
 
@@ -362,115 +348,17 @@ export default function ServiceAreaPage() {
         </div>
       </section>
 
-      {/* ── Greater Manchester boroughs ── */}
-      <section className="py-12 sm:py-16 lg:py-xl px-4 sm:px-5 max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-12">
-          <span className="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 block">
-            Greater Manchester
-          </span>
+      {/* ── Regions — collapsed by default, tap a region to reveal its boroughs/towns ── */}
+      <section className="bg-surface-container">
+        <div className="text-center pt-12 sm:pt-16 px-4 sm:px-5 max-w-2xl mx-auto">
           <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 text-secondary mb-3 text-balance leading-tight">
-            Boroughs We Cover
+            Pick a Region to See Coverage
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-primary mx-auto rounded-full mb-3 sm:mb-4" />
-          <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant max-w-xl mx-auto text-pretty">
-            Every area we serve gets full coverage, including each
-            surrounding town and village.
+          <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant text-pretty">
+            Tap a region below to see the boroughs, cities and towns we cover there.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {boroughAreas.map((area) => (
-            <AreaCard key={area.name} area={area} />
-          ))}
-        </div>
-      </section>
-
-      {/* ── West Yorkshire cities ── */}
-      <section className="py-12 sm:py-16 lg:py-xl px-4 sm:px-5 max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-12">
-          <span className="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 block">
-            West Yorkshire
-          </span>
-          <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 text-secondary mb-3 text-balance leading-tight">
-            Cities We Cover
-          </h2>
-          <div className="w-16 sm:w-20 h-1 bg-primary mx-auto rounded-full mb-3 sm:mb-4" />
-          <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant max-w-xl mx-auto text-pretty">
-            Outside Greater Manchester, we also cover West Yorkshire — Leeds, Bradford, Huddersfield, Halifax and
-            Wakefield, plus their surrounding towns — on a same-day dispatch basis.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {westYorkshireAreas.map((area) => (
-            <AreaCard key={area.name} area={area} />
-          ))}
-        </div>
-      </section>
-
-      {/* ── South Yorkshire ── */}
-      <section className="py-12 sm:py-16 lg:py-xl px-4 sm:px-5 max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-12">
-          <span className="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 block">
-            South Yorkshire
-          </span>
-          <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 text-secondary mb-3 text-balance leading-tight">
-            Also Serving Barnsley
-          </h2>
-          <div className="w-16 sm:w-20 h-1 bg-primary mx-auto rounded-full mb-3 sm:mb-4" />
-          <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant max-w-xl mx-auto text-pretty">
-            We also cover Barnsley and Stocksbridge in South Yorkshire on a same-day dispatch basis.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {southYorkshireAreas.map((area) => (
-            <AreaCard key={area.name} area={area} />
-          ))}
-        </div>
-      </section>
-
-      {/* ── Motorway / road coverage ── */}
-      <section className="bg-surface-container py-12 sm:py-16 lg:py-xl px-4 sm:px-5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 text-secondary mb-3 text-balance leading-tight">
-              Motorway &amp; Road Coverage
-            </h2>
-            <div className="w-16 sm:w-20 h-1 bg-primary mx-auto rounded-full mb-3 sm:mb-4" />
-            <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant max-w-xl mx-auto text-pretty">
-              Broken down on a motorway? Our rapid response team covers every major road
-              in the areas we serve, 24/7.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-            {motorwayAreas.map((road) => (
-              <a
-                key={road.name}
-                href={road.href}
-                className="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/30 transition-all p-5 flex flex-col gap-3"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="bg-secondary text-white font-black text-base px-3 py-1 rounded-lg tracking-wide">
-                    {road.name}
-                  </span>
-                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-primary group-hover:translate-x-0.5 transition-transform">
-                    arrow_forward
-                  </span>
-                </div>
-                <div className="flex items-center gap-1.5 text-xs text-on-surface-variant font-semibold">
-                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-sm text-primary">route</span>
-                  {road.junctions}
-                </div>
-                <p className="text-sm text-on-surface-variant leading-relaxed flex-1">{road.desc}</p>
-                <span className="text-xs font-bold text-primary uppercase tracking-wide">
-                  View coverage
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
+        <ServiceAreaRegions regions={regions} />
       </section>
 
       {/* ── Google Reviews ── */}
