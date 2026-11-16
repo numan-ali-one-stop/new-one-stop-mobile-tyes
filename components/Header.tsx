@@ -544,7 +544,7 @@ export default function Header() {
                         location_on
                       </span>
                       <p className="text-[12px] text-slate-600 leading-tight">
-                        <span className="font-bold text-slate-800">3 regions, 240+ towns &amp; 13 routes</span> covered 24/7
+                        <span className="font-bold text-slate-800">4 regions, 255+ towns &amp; 13 routes</span> covered 24/7
                       </p>
                     </div>
                     <a

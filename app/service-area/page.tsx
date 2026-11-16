@@ -13,7 +13,7 @@ import ServiceAreaRegions, { type ServiceAreaRegion } from '@/components/Service
 export const metadata = buildMetadata({
   title: 'Service Area | Mobile Tyre Fitting Coverage',
   description:
-    'Full coverage map: all 10 Greater Manchester boroughs plus 11 motorways and major roads, with same-day dispatch across West Yorkshire and South Yorkshire too.',
+    'Full coverage map: all 10 Greater Manchester boroughs plus 11 motorways and major roads, with same-day dispatch across West Yorkshire, South Yorkshire and Merseyside too.',
   path: '/service-area',
 })
 
@@ -177,6 +177,26 @@ const southYorkshireMotorwayAreas = [
   },
 ]
 
+// ── Merseyside city cards ────────────────────────────────────────────────────
+const merseysideAreas = [
+  {
+    name: 'Liverpool',
+    boroughKey: 'Liverpool',
+    href: '/mobile-tyre-fitting-liverpool',
+    icon: 'location_city',
+    postcodes: 'L1 – L19',
+    desc: 'Covering Liverpool city centre, Anfield, Everton, Toxteth and the surrounding suburbs, near the M62, M57 and the Mersey tunnels, dispatched the same day.',
+  },
+  {
+    name: 'Wirral',
+    boroughKey: 'Wirral',
+    href: '/mobile-tyre-fitting-wirral',
+    icon: 'location_city',
+    postcodes: 'CH41 – CH49, CH60 – CH66',
+    desc: 'Covering Birkenhead, Wallasey, Bebington and the Wirral peninsula towns, near the M53 and the Mersey tunnels, dispatched the same day.',
+  },
+]
+
 // ── Motorway / road cards ─────────────────────────────────────────────────────
 const motorwayAreas = [
   {
@@ -277,13 +297,20 @@ const regions: ServiceAreaRegion[] = [
     roadsHeading: 'Motorway Coverage',
     roads: southYorkshireMotorwayAreas,
   },
+  {
+    name: 'Merseyside',
+    label: 'Merseyside',
+    heading: 'Cities We Cover',
+    description: 'We also cover Merseyside — Liverpool and the Wirral, plus their surrounding towns — on a same-day dispatch basis.',
+    areas: merseysideAreas,
+  },
 ]
 
 // ── Trust badges ──────────────────────────────────────────────────────────────
 const trustBadges = [
   { icon: 'schedule', label: '24/7 Emergency', sub: 'Always on call' },
   { icon: 'bolt', label: '20–30 Min', sub: 'Average arrival' },
-  { icon: 'public', label: '3 Regions', sub: 'Fully covered' },
+  { icon: 'public', label: '4 Regions', sub: 'Fully covered' },
   { icon: 'route', label: '13 Routes', sub: 'Full roadside cover' },
 ]
 

@@ -376,6 +376,33 @@ export const BOROUGHS: Borough[] = [
       { name: 'Penistone', slug: 'penistone' },
     ],
   },
+  {
+    name: 'Liverpool',
+    slug: 'liverpool',
+    region: 'Merseyside',
+    towns: [
+      { name: 'Anfield', slug: 'anfield' },
+      { name: 'Everton', slug: 'everton' },
+      { name: 'Toxteth', slug: 'toxteth' },
+      { name: 'Wavertree', slug: 'wavertree' },
+      { name: 'Aigburth', slug: 'aigburth' },
+      { name: 'Woolton', slug: 'woolton' },
+      { name: 'Walton', slug: 'walton' },
+      { name: 'Kirkdale', slug: 'kirkdale' },
+    ],
+  },
+  {
+    name: 'Wirral',
+    slug: 'wirral',
+    region: 'Merseyside',
+    towns: [
+      { name: 'Birkenhead', slug: 'birkenhead' },
+      { name: 'Wallasey', slug: 'wallasey' },
+      { name: 'Bebington', slug: 'bebington' },
+      { name: 'Hoylake', slug: 'hoylake' },
+      { name: 'West Kirby', slug: 'west-kirby' },
+    ],
+  },
 ]
 
 export interface Region {
@@ -385,7 +412,7 @@ export interface Region {
 
 /** Boroughs/cities grouped by their top-level region, in region-first display order. */
 export const REGIONS: Region[] = (() => {
-  const order = ['Greater Manchester', 'West Yorkshire', 'South Yorkshire']
+  const order = ['Greater Manchester', 'West Yorkshire', 'South Yorkshire', 'Merseyside']
   const byName = new Map<string, Borough[]>()
   for (const b of BOROUGHS) {
     if (!byName.has(b.region)) byName.set(b.region, [])

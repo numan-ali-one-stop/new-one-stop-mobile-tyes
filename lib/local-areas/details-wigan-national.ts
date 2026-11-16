@@ -232,6 +232,66 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Otley we can help drivers in the town centre and surrounding areas, and near the A660 and A659.",
     parking: "We use car parks and quieter residential streets rather than the main roads through town.",
   },
+  liverpool: {
+    scenarios: "In Liverpool we can help drivers across the city centre and inner suburbs, and near the M62, M57 and the Mersey tunnels.",
+    parking: "City-centre streets are busy, so car parks and quieter side streets are usually the safest places to work.",
+  },
+  anfield: {
+    scenarios: "In Anfield we can help drivers around the stadium and the surrounding terraced streets.",
+    parking: "On matchdays parking is restricted, so we use the quieter side streets away from the ground.",
+  },
+  everton: {
+    scenarios: "In Everton we can help drivers in the town centre and surrounding streets, near Scotland Road.",
+    parking: "We use car parks and quieter residential streets away from Scotland Road.",
+  },
+  toxteth: {
+    scenarios: "In Toxteth we can help drivers around Princes Avenue and the surrounding streets.",
+    parking: "We use car parks and quieter residential streets away from Princes Avenue.",
+  },
+  wavertree: {
+    scenarios: "In Wavertree we can help drivers in the town centre and near Edge Lane.",
+    parking: "We use car parks and quieter residential streets away from Edge Lane.",
+  },
+  aigburth: {
+    scenarios: "In Aigburth we can help drivers along Aigburth Road and the surrounding streets.",
+    parking: "We use car parks and quieter residential streets away from Aigburth Road.",
+  },
+  woolton: {
+    scenarios: "In Woolton we can help drivers in the village centre and near Menlove Avenue.",
+    parking: "We use car parks and quieter residential streets away from the village centre.",
+  },
+  walton: {
+    scenarios: "In Walton we can help drivers around County Road and the surrounding streets.",
+    parking: "We use car parks and quieter residential streets away from County Road.",
+  },
+  kirkdale: {
+    scenarios: "In Kirkdale we can help drivers along Stanley Road and near the docks.",
+    parking: "We use car parks and quieter residential streets away from Stanley Road.",
+  },
+  wirral: {
+    scenarios: "In Wirral we can help drivers across Birkenhead, Wallasey and the peninsula towns, and near the M53 and the Mersey tunnels.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  birkenhead: {
+    scenarios: "In Birkenhead we can help drivers in the town centre and surrounding areas, and near M53 Junction 1.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  wallasey: {
+    scenarios: "In Wallasey we can help drivers in the town centre and surrounding areas, and near the A554.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  bebington: {
+    scenarios: "In Bebington we can help drivers in the town centre and surrounding areas, and near M53 Junction 4.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  hoylake: {
+    scenarios: "In Hoylake we can help drivers in the town centre and surrounding areas, and near Meols Drive.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  'west-kirby': {
+    scenarios: "In West Kirby we can help drivers in the town centre and surrounding areas, and near Grange Road.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",
     parking: "Retail and residential car parks give us safe space to work.",

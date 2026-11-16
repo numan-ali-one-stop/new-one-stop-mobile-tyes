@@ -78,6 +78,12 @@ const WEST_YORKSHIRE_PAGES = [
 // South Yorkshire — Barnsley and its surrounding towns.
 const SOUTH_YORKSHIRE_PAGES = ['barnsley', 'stocksbridge', 'penistone', 'm18']
 
+// Merseyside — Liverpool and Wirral and their surrounding towns.
+const MERSEYSIDE_PAGES = [
+  'liverpool', 'anfield', 'everton', 'toxteth', 'wavertree', 'aigburth', 'woolton', 'walton', 'kirkdale',
+  'wirral', 'birkenhead', 'wallasey', 'bebington', 'hoylake', 'west-kirby',
+]
+
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.
 const NATIONAL_CITY_PAGES = [
   'leicester', 'bristol', 'milton-keynes', 'coventry', 'edinburgh', 'cardiff', 'solihull', 'basingstoke',
@@ -144,6 +150,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     })),
     ...SOUTH_YORKSHIRE_PAGES.map((slug) => ({
+      url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+    ...MERSEYSIDE_PAGES.map((slug) => ({
       url: `${SITE_URL}/mobile-tyre-fitting-${slug}`,
       lastModified: LAST_MODIFIED,
       changeFrequency: 'monthly' as const,
