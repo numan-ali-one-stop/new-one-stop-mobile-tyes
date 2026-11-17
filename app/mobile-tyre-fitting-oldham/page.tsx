@@ -20,7 +20,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Oldham',
   areaServed: 'Oldham',
   description:
-    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting and puncture repair across Oldham. We cover Oldham and the surrounding OL1–OL9 areas.',
+    'Need mobile tyre fitting in Oldham? We provide 24/7 emergency tyre replacement and mobile puncture repair at your home, workplace or a safe roadside location across OL1–OL9. Get a clear quote and an estimated arrival time from our team.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-oldham')
@@ -32,9 +32,9 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 })
 
 export const metadata = buildMetadata({
-  title: 'Mobile Tyre Fitting Oldham | 24/7 Emergency & Puncture Repair',
+  title: 'Mobile Tyre Fitting Oldham | 24/7 Tyre Replacement',
   description:
-    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting and puncture repair across Oldham. We cover Oldham and the surrounding OL1–OL9 areas.',
+    'Need mobile tyre fitting in Oldham? We provide 24/7 emergency tyre replacement and mobile puncture repair at your home, workplace or a safe roadside location across OL1–OL9. Get a clear quote and an estimated arrival time from our team.',
   path: '/mobile-tyre-fitting-oldham',
 })
 
@@ -78,7 +78,7 @@ export default function OldhamPage() {
             </h1>
 
             <p className="text-white/95 lg:text-white/80 text-base leading-relaxed mb-5 sm:mb-6">
-              Mobile tyre fitting in Oldham at home, work or roadside, with 24/7 emergency tyre replacement and puncture repair.
+              Need mobile tyre fitting in Oldham? We provide 24/7 emergency tyre replacement and mobile puncture repair at your home, workplace or a safe roadside location. Get a clear quote and an estimated arrival time from our team.
             </p>
 
             <HeroPostcodes slug="oldham" />
@@ -329,12 +329,15 @@ export default function OldhamPage() {
               >
                 Professional Mobile Tyre Fitting in Oldham
               </h2>
+              <p className="text-slate-600 mb-4 leading-relaxed text-base sm:text-lg">
+                A damaged tyre can interrupt your day, whether you are commuting, travelling to work or parked outside your home. Our mobile tyre fitting service brings the necessary tyre assistance directly to your location.
+              </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                When you need mobile tyre fitting in Oldham, One Stop Tyres 247 brings professional tyre fitting directly to your location. Whether you have a flat tyre at home, need new tyres at work or require an emergency tyre change, our mobile technicians can help.
-                We cover OL1–OL9 and surrounding areas, providing tyre fitting, replacement and puncture repair at suitable home, workplace and roadside locations.
+                One Stop Tyres 247 provides mobile tyre fitting across Oldham, including residential streets, workplaces, car parks and suitable roadside locations. Instead of arranging transport to a tyre centre, you can contact our team and discuss having the work carried out where your vehicle is parked.
+                Our technicians can inspect your tyre, identify whether it is suitable for repair and arrange a replacement where necessary. We also help customers who need new tyres fitted as part of planned vehicle maintenance.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
-                Our Key Services
+                Mobile Tyre Services Available in Oldham
               </span>
               <ul className="space-y-4 sm:space-y-5 text-left">
                 <FeatureItem
@@ -364,8 +367,8 @@ export default function OldhamPage() {
 
         {/* ── 5. WHY CHOOSE US ──────────────────────────────── */}
         <WhyChooseGrid
-          heading="Why Choose Our Mobile Tyre Fitting Service?"
-          intro=""
+          heading="Why Choose Our Mobile Tyre Fitting Service in Oldham?"
+          intro="When choosing a mobile tyre fitter, you need more than someone who can bring a tyre to your location. You need clear communication, suitable tyre options and a service that fits your situation."
           items={[
             {
               icon: 'engineering',
@@ -418,37 +421,42 @@ export default function OldhamPage() {
                 className="text-2xl sm:text-[32px] font-bold"
                 style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
               >
-                How Mobile Tyre Fitting in Oldham Works
+                How Does Mobile Tyre Fitting in Oldham Work?
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 sm:gap-4 lg:gap-6 relative">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-x-8 sm:gap-y-10 relative">
               {[
                 {
                   n: '1',
-                  title: 'Contact Us',
-                  desc: 'Call with your location, vehicle registration, tyre size if known and the service you need.',
+                  title: 'Contact Our Team',
+                  desc: 'Call or WhatsApp 07759 708 646. Explain whether you need a new tyre, have a puncture, are dealing with a flat tyre or require emergency assistance.',
                 },
                 {
                   n: '2',
-                  title: 'Get a Quote',
-                  desc: 'We check suitable tyre options and confirm pricing and availability before arranging your fitting.',
+                  title: 'Provide Your Vehicle and Location Details',
+                  desc: 'Share your postcode or location pin, vehicle registration, make and model, and tyre size if known. A photograph of the tyre sidewall can help identify the correct specification.',
                 },
                 {
                   n: '3',
-                  title: 'We Come to You',
-                  desc: 'A mobile tyre fitter travels to your home, workplace or a suitable roadside location in Oldham.',
+                  title: 'Receive Your Quote',
+                  desc: 'Our team will check the available tyre options and explain the expected cost. We can also discuss the estimated arrival time and confirm whether the required service is available.',
                 },
                 {
                   n: '4',
-                  title: 'Tyre Fitting or Replacement',
-                  desc: 'We assess the tyre, carry out a repair where appropriate or professionally fit your replacement tyre.',
+                  title: 'Arrange Your Mobile Fitting',
+                  desc: 'Once you confirm the quote, the team can arrange a visit to your home, workplace or another suitable location. The appointment depends on technician availability, tyre stock and access to the vehicle.',
                 },
                 {
                   n: '5',
-                  title: 'Final Safety Checks',
-                  desc: 'We complete the necessary fitting and tyre-pressure checks before finishing the job.',
+                  title: 'Tyre Inspection and Fitting',
+                  desc: 'The technician will assess the tyre and determine whether repair or replacement is appropriate. If a replacement is required, the suitable tyre can be fitted once availability and the work have been confirmed.',
                 },
-              ].map((step, idx) => (
+                {
+                  n: '6',
+                  title: 'Final Checks',
+                  desc: "After fitting or repair, the technician completes the necessary checks, including tyre pressure checks. TPMS checks or resets can also be carried out where applicable.",
+                },
+              ].map((step) => (
                 <div key={step.n} className="relative text-center lg:text-left">
                   <div className="w-14 h-14 bg-[#FF4444] rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-5 shadow-xl">
                     <span
@@ -465,11 +473,6 @@ export default function OldhamPage() {
                     {step.title}
                   </h3>
                   <p className="text-slate-400 text-base leading-relaxed">{step.desc}</p>
-                  {idx < 4 && (
-                    <span className="hidden lg:block absolute top-7 -right-3 text-[#FF4444] material-symbols-outlined text-3xl">
-                      trending_flat
-                    </span>
-                  )}
                 </div>
               ))}
             </div>
@@ -548,64 +551,76 @@ export default function OldhamPage() {
           city="Oldham"
           faqs={[
             {
-              q: 'Do you provide mobile tyre fitting in Oldham?',
-              a: 'Yes. We provide 24/7 mobile tyre fitting across Oldham, including suitable home, workplace and roadside locations.',
+              q: 'Do you provide mobile tyre fitting in Oldham 24/7?',
+              a: 'Yes. Our mobile tyre fitting service operates 24 hours a day in covered areas, including nights, weekends and bank holidays. Contact us to confirm availability for your location.',
             },
             {
-              q: 'Can you replace a tyre at my home in Oldham?',
-              a: 'Yes. Our mobile technicians can supply and fit replacement tyres at your home, so you do not need to drive to a tyre shop.',
+              q: 'How quickly can a mobile tyre fitter reach me in Oldham?',
+              a: 'Our website advertises a typical response estimate of around 20–30 minutes in covered areas. This is not guaranteed. Actual arrival time depends on your postcode, traffic, weather, technician availability and the work required. We recommend confirming the estimated arrival time when booking.',
+            },
+            {
+              q: 'Do you offer emergency mobile tyre fitting in Oldham?',
+              a: 'Yes. We provide 24/7 emergency mobile tyre assistance for suitable locations across Oldham. Contact us with your exact location and explain whether you have a flat tyre, puncture or blowout.',
+            },
+            {
+              q: 'Can you fit a new tyre at my home in Oldham?',
+              a: 'Yes. We can arrange mobile tyre fitting at your home, provided there is sufficient space and safe access for the technician to work.',
+            },
+            {
+              q: 'Can I get tyres fitted at my workplace?',
+              a: 'Yes. We can arrange mobile tyre fitting at suitable workplace locations, including car parks and business premises. Provide the address and your preferred time when requesting a quote.',
             },
             {
               q: 'How much does mobile tyre fitting in Oldham cost?',
-              a: 'The price depends on your tyre size, specification, tyre choice and the service required. Contact us with your vehicle registration or tyre size for a quote before fitting.',
+              a: 'The price depends on your tyre size, selected brand, location and whether you need a repair or replacement. Contact us with your vehicle registration or tyre size to receive a quote before confirming the service.',
             },
             {
-              q: 'Do you offer emergency tyre fitting in Oldham?',
-              a: 'Yes. Our emergency mobile tyre fitting service operates 24/7 for suitable locations across Oldham.',
+              q: 'Do you provide same-day mobile tyre fitting in Oldham?',
+              a: 'Same-day fitting may be available depending on technician availability, your location and the required tyre being in stock. Contact us to check available appointments.',
             },
             {
-              q: 'Can you repair a punctured tyre at home in Oldham?',
-              a: 'Yes. We can provide puncture repair at home in Oldham where the tyre damage is suitable and the repair can be completed safely.',
+              q: 'Can you repair a punctured tyre at my home?',
+              a: 'Yes. Our mobile technicians can inspect a punctured tyre at your home and determine whether a safe repair is possible. If the damage is unsuitable for repair, a replacement may be required.',
             },
             {
-              q: 'Do you provide on-site tyre fitting in Oldham?',
-              a: 'Yes. Our mobile technicians can fit suitable tyres at your home, workplace or another safe location without requiring a visit to a tyre shop.',
+              q: 'Is it better to repair a puncture or replace the tyre?',
+              a: 'It depends on the location and extent of the damage and the overall condition of the tyre. A suitable puncture may be repaired, but sidewall damage, structural damage or an unsuitable puncture generally requires replacement.',
             },
             {
-              q: 'How quickly can you reach me in Oldham?',
-              a: 'Our average response time across Oldham (OL1–OL9) is around 20–30 minutes. Actual arrival time depends on your exact location, traffic and technician availability.',
+              q: 'What tyre brands do you offer in Oldham?',
+              a: 'We list a range of major tyre brands, including Michelin, Goodyear, Continental, Bridgestone, Pirelli, Dunlop, Hankook and others. Availability depends on the required tyre size and current stock.',
             },
             {
-              q: 'Do you provide 24-hour mobile tyre fitting in Oldham?',
-              a: 'Yes. The service operates 24/7, including nights, weekends and bank holidays.',
+              q: 'Can I choose between budget, mid-range and premium tyres?',
+              a: 'Yes. We provide different tyre options depending on your vehicle requirements, tyre size and availability. Contact us to compare suitable options and prices.',
             },
             {
-              q: 'Can you replace a tyre that cannot be repaired?',
-              a: 'Yes. If a tyre is unsafe or unsuitable for repair, we can provide an appropriate replacement subject to availability.',
+              q: 'What information do I need to book a mobile tyre fitter?',
+              a: 'Ideally, provide your vehicle registration, postcode or location pin, tyre size if known and a description of the problem. This helps us identify the correct tyre and provide a more accurate quote.',
             },
             {
-              q: 'Do you provide mobile tyre fitting near me in Oldham?',
-              a: 'Yes. We cover Oldham and surrounding OL1–OL9 areas. You can provide your postcode when contacting us so we can confirm availability.',
+              q: 'What if I do not know my tyre size?',
+              a: 'You can provide your vehicle registration and make and model. You can also send a photograph of the numbers printed on your tyre sidewall. Our team can use these details to help identify the correct specification.',
             },
             {
-              q: 'Can you help if I have a flat tyre?',
-              a: 'Yes. We can inspect the tyre and determine whether a repair or replacement is the appropriate option.',
+              q: 'Can you replace a tyre after a blowout?',
+              a: 'Yes. We can discuss an emergency replacement if your tyre has suffered a blowout. The correct replacement must be available and compatible with your vehicle.',
             },
             {
-              q: 'Do you offer different tyre brands and price options?',
-              a: 'Yes. Premium, mid-range and budget tyre options are available depending on your vehicle, tyre specification and stock.',
+              q: 'Can you help if I have lost my locking wheel nut key?',
+              a: 'Locking wheel nut removal is among our listed services. Tell us your vehicle make and model when booking so the team can confirm whether the required removal procedure is suitable.',
             },
             {
-              q: 'Can I get same-day tyre replacement in Oldham?',
-              a: 'Yes, subject to tyre availability and technician availability. Contact us with your vehicle registration or tyre size to check suitable options.',
+              q: 'Can you check or reset my TPMS after fitting?',
+              a: "TPMS checks and resets are available where applicable. The work required depends on your vehicle's monitoring system and sensor requirements.",
             },
             {
-              q: 'Can you fit tyres at my workplace in Oldham?',
-              a: 'Yes. We can attend suitable workplace locations and carry out tyre fitting or replacement while you work.',
+              q: 'Do you offer jump-start assistance in Oldham?',
+              a: 'Yes. Mobile jump-start assistance is among our listed services. Contact us with your location and vehicle details to check availability.',
             },
             {
-              q: 'Do you cover areas outside Oldham town centre?',
-              a: 'Yes. Coverage extends across Oldham and surrounding areas, including Chadderton, Failsworth, Royton, Shaw, Hollinwood, Lees and Saddleworth.',
+              q: 'Can I book mobile tyre fitting for a specific time?',
+              a: 'You can request a preferred appointment time. The team will confirm availability based on technician scheduling, your location and the tyre required.',
             },
           ]}
         />
@@ -613,8 +628,10 @@ export default function OldhamPage() {
         {/* ── 11. FINAL CTA ─────────────────────────────────── */}
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#f0edec] relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need Mobile Tyre Fitting in Oldham?</h2>
-            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Whether you need a tyre fitted at home, a replacement at work or emergency assistance at the roadside, One Stop Tyres 247 can come to you. Contact us today for 24/7 mobile tyre fitting in Oldham, tyre replacement and puncture repair. Call now for a quote and availability.</p>
+            <h2 className="font-h2 text-xl sm:text-2xl lg:text-h2 mb-4 sm:mb-5 leading-tight">Need a Mobile Tyre Fitter in Oldham?</h2>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-3">Whether you need a new tyre at home, a puncture repaired at work or emergency tyre replacement while travelling, our mobile team can help you arrange suitable assistance.</p>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-3">Contact One Stop Tyres 247 for 24/7 mobile tyre fitting, puncture repair and emergency tyre replacement across Oldham and nearby areas.</p>
+            <p className="font-body-lg text-base lg:text-lg text-[#5c403c] leading-relaxed mb-6 sm:mb-8">Share your postcode or location pin and vehicle details to receive a quote and check availability — mobile tyre fitting at home, work or a suitable roadside location across Oldham.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mt-4 sm:mt-6">
               <a
                 className="cta-btn cta-call flex items-center justify-center gap-2 sm:gap-3 bg-[#dc2626] hover:bg-[#b70011] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg font-call-to-action text-base transition-all shadow-xl"

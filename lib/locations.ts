@@ -403,6 +403,18 @@ export const BOROUGHS: Borough[] = [
       { name: 'West Kirby', slug: 'west-kirby' },
     ],
   },
+  {
+    name: 'Sefton',
+    slug: 'sefton',
+    region: 'Merseyside',
+    towns: [
+      { name: 'Southport', slug: 'southport' },
+      { name: 'Bootle', slug: 'bootle' },
+      { name: 'Crosby', slug: 'crosby' },
+      { name: 'Formby', slug: 'formby' },
+      { name: 'Maghull', slug: 'maghull' },
+    ],
+  },
 ]
 
 export interface Region {

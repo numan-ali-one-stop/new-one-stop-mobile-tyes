@@ -82,6 +82,7 @@ const SOUTH_YORKSHIRE_PAGES = ['barnsley', 'stocksbridge', 'penistone', 'm18']
 const MERSEYSIDE_PAGES = [
   'liverpool', 'anfield', 'everton', 'toxteth', 'wavertree', 'aigburth', 'woolton', 'walton', 'kirkdale',
   'wirral', 'birkenhead', 'wallasey', 'bebington', 'hoylake', 'west-kirby',
+  'sefton', 'southport', 'bootle', 'crosby', 'formby', 'maghull',
 ]
 
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.

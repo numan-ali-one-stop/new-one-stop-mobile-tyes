@@ -319,8 +319,11 @@ export default function Home() {
               Reliable Tyre Service When You Need It
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-center">
-              When a damaged or flat tyre leaves you stranded, getting help quickly matters. One Stop
-              Mobile Tyres 24/7 provides professional mobile tyre services across our service areas,
+              When a damaged or flat tyre leaves you stranded, getting help quickly matters.{' '}
+              <Link href="/about" className="text-[#b70011] font-semibold hover:underline">
+                One Stop Mobile Tyres 24/7
+              </Link>{' '}
+              provides professional mobile tyre services across our service areas,
               bringing tyre fitting, tyre repair and replacement directly to your location.
             </p>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 text-center">

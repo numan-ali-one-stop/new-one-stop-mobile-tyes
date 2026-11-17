@@ -195,6 +195,14 @@ const merseysideAreas = [
     postcodes: 'CH41 – CH49, CH60 – CH66',
     desc: 'Covering Birkenhead, Wallasey, Bebington and the Wirral peninsula towns, near the M53 and the Mersey tunnels, dispatched the same day.',
   },
+  {
+    name: 'Sefton',
+    boroughKey: 'Sefton',
+    href: '/mobile-tyre-fitting-sefton',
+    icon: 'location_city',
+    postcodes: 'L20 – L23, L29 – L31, L37 – L39, PR8 – PR9',
+    desc: 'Covering Southport, Bootle, Crosby, Formby and Maghull, near the M58 and A565, dispatched the same day.',
+  },
 ]
 
 // ── Motorway / road cards ─────────────────────────────────────────────────────

@@ -292,6 +292,30 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In West Kirby we can help drivers in the town centre and surrounding areas, and near Grange Road.",
     parking: "We use car parks and quieter residential streets away from the main roads.",
   },
+  sefton: {
+    scenarios: "In Sefton we can help drivers across Southport, Bootle, Crosby, Formby and Maghull, and near the M58 and A565.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  southport: {
+    scenarios: "In Southport we can help drivers in the town centre and surrounding areas, and near the A565 and A570.",
+    parking: "We use car parks and quieter residential streets away from the seafront and main roads.",
+  },
+  bootle: {
+    scenarios: "In Bootle we can help drivers in the town centre and surrounding areas, and near Stanley Road and the A5036.",
+    parking: "We use car parks and quieter residential streets away from Stanley Road.",
+  },
+  crosby: {
+    scenarios: "In Crosby we can help drivers in the town centre and surrounding areas, and near the A565 Coast Road.",
+    parking: "We use car parks and quieter residential streets away from the Coast Road.",
+  },
+  formby: {
+    scenarios: "In Formby we can help drivers in the village centre and surrounding areas, and near the A565.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
+  maghull: {
+    scenarios: "In Maghull we can help drivers in the town centre and surrounding areas, and near the A59 and M58 Junction 1.",
+    parking: "We use car parks and quieter residential streets away from the main roads.",
+  },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",
     parking: "Retail and residential car parks give us safe space to work.",
