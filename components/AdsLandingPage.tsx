@@ -4,7 +4,8 @@ import JsonLd from '@/components/JsonLd'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HowItWorksSteps from '@/components/HowItWorksSteps'
-import { PHONE, PHONE_TEL } from '@/lib/constants'
+import HeroTrustBadges, { DEFAULT_TRUST_BADGES, type TrustBadge } from '@/components/HeroTrustBadges'
+import { GOOGLE_REVIEWS_URL, PHONE, PHONE_TEL } from '@/lib/constants'
 import { breadcrumbSchema, faqSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 
 /**
@@ -14,8 +15,6 @@ import { breadcrumbSchema, faqSchema, serviceSchema, SITE_URL } from '@/lib/sche
  * The site's mobile Call / WhatsApp bar and desktop floating buttons still come from the root layout.
  */
 
-/** Same link as "View all Google reviews" in components/GoogleReviewsSection.tsx. */
-const GOOGLE_REVIEWS_URL = 'https://share.google/bejdYHzU10lFRVv4E'
 const LOGO_URL =
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One-Stop%20Loog-airanko-Qpv1QvladNLpRhg8X3Hs6SzyydzFMq.webp'
 const HEADING_FONT = { fontFamily: 'var(--font-work-sans)' }
@@ -55,7 +54,7 @@ export interface AdsLandingPageProps {
   /** Pill above the H1. */
   heroBadge?: string
   ctaLabel?: string
-  trustBadges?: { icon: string; iconClass: string; text: string; href?: string }[]
+  trustBadges?: TrustBadge[]
   /** Sent with quote-form submissions so leads show which landing page they came from. */
   quoteArea: string
   servicesHeading: string
@@ -69,12 +68,6 @@ export interface AdsLandingPageProps {
   schema: { name: string; serviceType: string; description: string }
   footerTagline: string
 }
-
-const DEFAULT_TRUST_BADGES = [
-  { icon: 'star', iconClass: 'text-yellow-400', text: '5.0 Stars Throughout (1,200+ Driver Reviews)', href: GOOGLE_REVIEWS_URL },
-  { icon: 'timer', iconClass: 'text-[#FF4444]', text: '20–30 Minute Rapid Arrival' },
-  { icon: 'local_shipping', iconClass: 'text-[#FF4444]', text: '24/7 Nationwide Coverage' },
-]
 
 export default function AdsLandingPage({
   slug,
@@ -171,43 +164,13 @@ export default function AdsLandingPage({
               </span>
               {ctaLabel}
             </a>
-            <ul className="flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center gap-2.5">
-              {trustBadges.map((badge) => {
-                const pill =
-                  'inline-flex items-center gap-2 w-fit bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 text-xs sm:text-sm font-semibold'
-                const content = (
-                  <>
-                    <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] shrink-0 ${badge.iconClass}`} style={FILLED_ICON}>
-                      {badge.icon}
-                    </span>
-                    {badge.text}
-                  </>
-                )
-                return (
-                  <li key={badge.text}>
-                    {badge.href ? (
-                      <a href={badge.href} target="_blank" rel="noopener noreferrer" className={`${pill} hover:bg-white/20 transition-colors`}>
-                        {content}
-                      </a>
-                    ) : (
-                      <span className={pill}>{content}</span>
-                    )}
-                  </li>
-                )
-              })}
-            </ul>
+            <HeroTrustBadges badges={trustBadges} align="center" />
           </div>
         </div>
       </section>
 
       {/* ── INSTANT QUOTE ────────────────────────────────────────────── */}
-      <HeroQuoteSection
-        area={quoteArea}
-        title="Get a 60-Second Instant Quote"
-        subtitle="Prefer an instant online quote? Fill out the details below for a rapid response."
-        submitLabel="GET INSTANT QUOTE NOW"
-        note="Your details are safe. Zero obligation quote sent in seconds."
-      />
+      <HeroQuoteSection area={quoteArea} />
 
       {/* ── OUR KEY SERVICES ─────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-50">

@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo'
 import { MAPS_URL } from '@/lib/constants'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import ServicesSection from '@/components/ServicesSection'
@@ -161,10 +161,8 @@ export default function TpmsResetPage() {
             </ul>
             */}
 
-            {/* Google rating */}
-            <HeroRatingBadge />
-
             <HeroCtaButtons />
+            <HeroTrustBadges className="mt-5 sm:mt-6" />
 
           </div>
         </div>

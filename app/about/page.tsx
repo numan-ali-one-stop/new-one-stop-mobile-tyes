@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo'
 import { ADDRESS, MAPS_URL } from '@/lib/constants'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import HeroBadge from '@/components/HeroBadge'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
@@ -47,10 +47,8 @@ export default function AboutPage() {
               Reliable 24/7 mobile tyre fitting, puncture repair and roadside assistance across Greater Manchester, day or night.
             </p>
 
-            {/* Google rating */}
-            <HeroRatingBadge />
-
             <HeroCtaButtons />
+            <HeroTrustBadges className="mt-5 sm:mt-6" />
           </div>
         </section>
 

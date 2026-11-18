@@ -1,7 +1,7 @@
 import JsonLd from '@/components/JsonLd'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import { breadcrumbSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
@@ -353,10 +353,8 @@ export default function ServiceAreaPage() {
           <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mx-auto lg:mx-0 mb-5 sm:mb-8 text-pretty leading-relaxed">
             24/7 mobile tyre fitting across Greater Manchester, plus UK towns, cities and motorways. We come to you.
           </p>
-          {/* Google rating */}
-          <HeroRatingBadge />
-
           <HeroCtaButtons />
+          <HeroTrustBadges className="mt-5 sm:mt-6" />
         </div>
       </section>
 

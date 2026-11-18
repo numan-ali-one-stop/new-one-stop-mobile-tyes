@@ -10,6 +10,8 @@ export const ADDRESS = 'Alliance Mill, Willow St, Oldham OL1 3QH, United Kingdom
 /** Google Business Profile pin for the address above — reused everywhere the address is clickable. */
 export const MAPS_URL = 'https://maps.app.goo.gl/tqGMogzsNNn8EXjH8'
 export const RESPONSE_TIME = '20–30 minutes'
+/** Google reviews page — every rating badge on the site links here. */
+export const GOOGLE_REVIEWS_URL = 'https://share.google/bejdYHzU10lFRVv4E'
 export const RATING = '5.0'
 export const REVIEW_COUNT = '1,200+'
 /** 24 Hour Emergency Tyres landing page (URL kept as-is because Google Ads already points at it). */

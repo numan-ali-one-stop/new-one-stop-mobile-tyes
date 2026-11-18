@@ -306,16 +306,7 @@
 .quote-card.is-visible { animation: quoteBorderSpin 4s linear infinite; }
 .quote-card-inner { background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%); }
 @keyframes quoteBorderSpin { to { --quote-angle: 360deg; } }
-.quote-title {
-  background: linear-gradient(90deg, #fff 0%, #fff 40%, #FF6B6B 50%, #fff 60%, #fff 100%);
-  background-size: 250% 100%;
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  animation: quoteTitleShimmer 3.5s ease-in-out infinite;
-}
-@keyframes quoteTitleShimmer {
-  0%   { background-position: 100% 0; }
-  100% { background-position: 0 0; }
-}
+.quote-title { color: #fff; }
 .quote-bolt { animation: ctaCallPulse 2s ease-out infinite, quoteBoltBounce 2s ease-in-out infinite; }
 @keyframes quoteBoltBounce {
   0%, 60%, 100% { transform: translateY(0) scale(1); }
@@ -342,7 +333,7 @@
 .quote-card input:focus { transform: translateY(-1px); box-shadow: 0 6px 18px -6px rgba(255,68,68,0.6); }
 .quote-submit { box-shadow: 0 10px 25px -8px rgba(183,0,17,0.7); }
 @media (prefers-reduced-motion: reduce) {
-  .quote-card, .quote-title, .quote-bolt { animation: none !important; }
+  .quote-card, .quote-bolt { animation: none !important; }
   .quote-card .quote-reveal,
   .quote-card form > div > div,
   .quote-card .quote-submit,

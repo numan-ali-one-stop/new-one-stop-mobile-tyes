@@ -1,5 +1,5 @@
 import AdsLandingPage, { type LandingCard, type LandingFaq, type LandingFeature, type LandingReview } from '@/components/AdsLandingPage'
-import { MOTORWAY_TYRE_REPLACEMENT_PATH } from '@/lib/constants'
+import { GOOGLE_REVIEWS_URL, MOTORWAY_TYRE_REPLACEMENT_PATH } from '@/lib/constants'
 import { buildMetadata } from '@/lib/seo'
 
 /** Google Ads / SEO landing page for "motorway blowout / motorway tyre replacement".
@@ -7,14 +7,14 @@ import { buildMetadata } from '@/lib/seo'
  *  on the hard shoulder or live lanes — we attend once the vehicle is somewhere safe. */
 
 export const metadata = buildMetadata({
-  title: 'Motorway Blowout Tyre Service Near You | 24/7 Replacement',
+  title: 'Motorway Tyre Service Near You | 24/7 Tyre Replacement',
   description:
     'Tyre blowout on the motorway? 24/7 motorway tyre replacement once you are safely off the carriageway — services, junctions or recovery points. Call now.',
   path: MOTORWAY_TYRE_REPLACEMENT_PATH,
 })
 
 const trustBadges = [
-  { icon: 'star', iconClass: 'text-yellow-400', text: '5.0 Stars Throughout (1,200+ Driver Reviews)', href: 'https://share.google/bejdYHzU10lFRVv4E' },
+  { icon: 'star', iconClass: 'text-yellow-400', text: '5.0 Stars Throughout (1,200+ Driver Reviews)', href: GOOGLE_REVIEWS_URL },
   { icon: 'timer', iconClass: 'text-[#FF4444]', text: '20–30 Minute Rapid Arrival' },
   { icon: 'route', iconClass: 'text-[#FF4444]', text: 'M60 · M62 · M6 · M61 · M56 · M66 & More' },
 ]
@@ -116,7 +116,7 @@ export default function MotorwayTyreReplacementPage() {
   return (
     <AdsLandingPage
       slug={MOTORWAY_TYRE_REPLACEMENT_PATH.slice(1)}
-      h1="Motorway Blowout Tyre Service Near You"
+      h1="Motorway Tyre Service Near You"
       heroBadge="Motorway Tyre Fitters Available Now"
       intro={
         <>
@@ -137,12 +137,12 @@ export default function MotorwayTyreReplacementPage() {
       stepsHeading="4 Steps to Get Back on the Motorway"
       faqs={faqs}
       schema={{
-        name: 'Motorway Blowout Tyre Service',
+        name: 'Motorway Tyre Service',
         serviceType: 'Motorway Tyre Replacement',
         description:
           '24/7 motorway blowout tyre replacement. A mobile fitter brings a new tyre and fits it once the vehicle is safely off the carriageway, at services, a junction or a recovery location.',
       }}
-      footerTagline="24/7 Motorway Blowout Tyre Service & Mobile Tyre Fitting."
+      footerTagline="24/7 Motorway Tyre Service & Mobile Tyre Fitting."
     />
   )
 }

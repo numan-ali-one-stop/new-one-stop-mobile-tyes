@@ -4,16 +4,16 @@ import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/sche
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: 'Car Battery Jump Start Service | Greater Manchester',
+  title: '24/7 Car Battery Jump Start Service Near You',
   description:
-    "Need a car battery jump start in Greater Manchester? 24/7 jump start service for flat batteries & vehicles that won't start — call 07759 708 646",
+    "Need a car battery jump start? 24/7 jump start service for flat batteries & vehicles that won't start — call 07759 708 646",
   path: '/jump-start',
 })
 
@@ -27,7 +27,7 @@ const _serviceSchema = serviceSchema({
   name: 'Jump Start Service',
   serviceType: 'Battery Jump Start',
   description:
-    'Professional mobile jump start service across Greater Manchester, bringing suitable jump-start equipment directly to cars, SUVs, vans and light commercial vehicles.',
+    'Professional mobile jump start service, bringing suitable jump-start equipment directly to cars, SUVs, vans and light commercial vehicles.',
 })
 
 const faqs = [
@@ -177,7 +177,7 @@ export default function JumpStartPage() {
             </h1>
 
             <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
-              <strong>Flat battery</strong>? Our 24/7 <strong>jump start service</strong> provides roadside assistance across Greater Manchester to get you moving.
+              <strong>Flat battery</strong>? Our 24/7 <strong>jump start service</strong> provides roadside assistance wherever you are to get you moving.
             </p>
 
             {/* Benefits — hidden for now
@@ -196,10 +196,8 @@ export default function JumpStartPage() {
             </ul>
             */}
 
-            {/* Google rating */}
-            <HeroRatingBadge />
-
             <HeroCtaButtons />
+            <HeroTrustBadges className="mt-5 sm:mt-6" />
 
           </div>
         </div>

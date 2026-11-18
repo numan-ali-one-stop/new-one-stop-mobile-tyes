@@ -4,14 +4,14 @@ import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/sche
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: 'Mobile Puncture Repair Near You | 24/7 Tyre Repair',
+  title: 'Mobile Tyre Repair Near You | 24/7 Puncture Repair',
   description:
     'Mobile puncture repair near you, 24/7. Nails, screws and slow punctures repaired at your home, work or the roadside where safe. Call 07759 708 646.',
   path: '/puncture-repair-Greater-manchester',
@@ -19,12 +19,12 @@ export const metadata = buildMetadata({
 
 const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Home', item: SITE_URL },
-  { name: 'Mobile Puncture Repair', item: `${SITE_URL}/puncture-repair-Greater-manchester` },
+  { name: 'Mobile Tyre Repair', item: `${SITE_URL}/puncture-repair-Greater-manchester` },
 ])
 
 const _serviceSchema = serviceSchema({
   slug: 'puncture-repair-Greater-manchester',
-  name: 'Mobile Puncture Repair',
+  name: 'Mobile Tyre Repair',
   serviceType: 'Mobile Tyre Repair',
   description:
     'Mobile puncture repair across Greater Manchester, 24/7. A mobile technician inspects the damaged tyre and carries out a professional repair at your location where safe and suitable.',
@@ -151,7 +151,7 @@ export default function PunctureRepairGreaterManchesterPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Mobile Puncture Repair Near You
+              Mobile Tyre Repair Near You
             </h1>
 
             <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
@@ -179,10 +179,8 @@ export default function PunctureRepairGreaterManchesterPage() {
             </ul>
             */}
 
-            {/* Google rating */}
-            <HeroRatingBadge />
-
             <HeroCtaButtons />
+            <HeroTrustBadges className="mt-5 sm:mt-6" />
 
           </div>
         </div>

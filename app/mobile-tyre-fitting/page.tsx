@@ -4,7 +4,7 @@ import { breadcrumbSchema, serviceSchema, faqSchema, SITE_URL } from '@/lib/sche
 import { buildMetadata } from '@/lib/seo'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import ServicesSection from '@/components/ServicesSection'
@@ -179,10 +179,8 @@ export default function MobileTyreFittingPage() {
             </ul>
             */}
 
-            {/* Google rating */}
-            <HeroRatingBadge />
-
             <HeroCtaButtons />
+            <HeroTrustBadges className="mt-5 sm:mt-6" />
 
           </div>
         </div>

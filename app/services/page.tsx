@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema, itemListSchema, SITE_URL } from '@/lib/schema'
 import { buildMetadata } from '@/lib/seo'
@@ -125,10 +125,8 @@ export default function ServicesPage() {
           <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mx-auto lg:mx-0 mb-5 sm:mb-8 leading-relaxed">
             24/7 mobile tyre fitting, puncture repair and roadside assistance across Greater Manchester. We bring the garage to you.
           </p>
-          {/* Google rating */}
-          <HeroRatingBadge />
-
           <HeroCtaButtons />
+          <HeroTrustBadges className="mt-5 sm:mt-6" />
         </div>
       </section>
 

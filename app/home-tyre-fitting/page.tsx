@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo'
 import { MAPS_URL } from '@/lib/constants'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import ServicesSection from '@/components/ServicesSection'
@@ -236,7 +236,7 @@ export default function HomeTyreFittingPage() {
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              Home Tyre Fitting Near You
+              24/7 Home Tyre Fitting Near You
             </h1>
 
             <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
@@ -264,10 +264,8 @@ export default function HomeTyreFittingPage() {
             </ul>
             */}
 
-            {/* Google rating */}
-            <HeroRatingBadge />
-
             <HeroCtaButtons />
+            <HeroTrustBadges className="mt-5 sm:mt-6" />
 
           </div>
         </div>

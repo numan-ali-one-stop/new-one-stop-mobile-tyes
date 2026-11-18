@@ -217,7 +217,7 @@ export default function QuickQuoteForm({ variant = 'section', area, heading, car
                   className="quote-title text-xl sm:text-2xl font-black leading-tight"
                   style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.01em' }}
                 >
-                  {cardTitle ?? 'Get Your Instant Quote Now'}
+                  {cardTitle ?? <>Get Your <span className="text-[#FF6B6B]">Instant Quote</span> Now</>}
                 </CardTitle>
                 <p className="text-white/70 text-sm mt-1.5">{cardSubtitle ?? <>Fill in your details and we&apos;ll send you a price</>}</p>
               </div>

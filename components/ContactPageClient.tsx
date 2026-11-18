@@ -6,7 +6,7 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'
 import HeroBadge from '@/components/HeroBadge'
 import HeroCtaButtons from '@/components/HeroCtaButtons'
-import HeroRatingBadge from '@/components/HeroRatingBadge'
+import HeroTrustBadges from '@/components/HeroTrustBadges'
 import ServicesSection from '@/components/ServicesSection'
 
 export default function ContactPageClient() {
@@ -33,10 +33,8 @@ export default function ContactPageClient() {
               Call us now and we will arrange for a recovery technician to come to your location, 24/7.
             </p>
 
-            {/* Google rating */}
-            <HeroRatingBadge />
-
             <HeroCtaButtons />
+            <HeroTrustBadges className="mt-5 sm:mt-6" />
           </div>
         </section>
 
