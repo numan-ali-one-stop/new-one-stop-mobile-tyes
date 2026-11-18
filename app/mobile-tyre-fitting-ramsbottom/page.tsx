@@ -193,7 +193,7 @@ export default function RamsbottomPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
+                  title: 'Mobile Tyre Repair',
                   desc: 'Professional mobile puncture repair across Ramsbottom, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -325,7 +325,7 @@ export default function RamsbottomPage() {
               <ul className="space-y-3 mb-6">
                 {[
                   { title: 'Mobile Tyre Replacement', desc: 'Replacement of damaged, worn or unsafe tyres.' },
-                  { title: 'Emergency Puncture Repair', desc: 'Repairs where the tyre damage meets the relevant safety requirements.' },
+                  { title: 'Mobile Tyre Repair', desc: 'Repairs where the tyre damage meets the relevant safety requirements.' },
                   { title: 'Home Tyre Fitting', desc: 'Convenient fitting at your property, subject to suitable access.' },
                   { title: 'Roadside Tyre Assistance', desc: 'Help when a tyre problem leaves you unable to continue your journey safely.' },
                   { title: 'Premium and Budget Tyres', desc: 'Options to suit different vehicles and budgets, subject to availability.' },

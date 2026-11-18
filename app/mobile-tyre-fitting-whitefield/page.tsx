@@ -193,7 +193,7 @@ export default function WhitefieldPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
+                  title: 'Mobile Tyre Repair',
                   desc: 'Professional mobile puncture repair across Whitefield, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -325,7 +325,7 @@ export default function WhitefieldPage() {
               <ul className="space-y-3 mb-6">
                 {[
                   { title: 'Mobile Tyre Replacement', desc: 'Replacement of damaged, worn or unsafe tyres.' },
-                  { title: 'Emergency Puncture Repair', desc: 'On-site repair where the damage meets the relevant safety requirements.' },
+                  { title: 'Mobile Tyre Repair', desc: 'On-site repair where the damage meets the relevant safety requirements.' },
                   { title: 'Home Tyre Fitting', desc: 'Convenient tyre fitting at your property, subject to suitable access.' },
                   { title: 'Roadside Tyre Assistance', desc: 'Help when a tyre problem prevents you from continuing your journey safely.' },
                   { title: 'Premium, Mid-Range and Budget Tyres', desc: 'Options to suit different vehicles and budgets, subject to availability.' },

@@ -1,14 +1,14 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { ADDRESS, BUSINESS_NAME, ADS_LANDING_PATH, MAPS_URL, PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
+import { ADDRESS, BUSINESS_NAME, ADS_LANDING_PATH, ADS_LANDING_PATHS, MAPS_URL, MOBILE_TYRE_REPLACEMENT_PATH, MOTORWAY_TYRE_REPLACEMENT_PATH, PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
 
 export default function Footer() {
   const pathname = usePathname()
   const isContactPage = pathname === '/contact'
 
   // The landing page renders its own compliance footer.
-  if (pathname === ADS_LANDING_PATH) return null
+  if (ADS_LANDING_PATHS.includes(pathname)) return null
 
   return (
     <footer className="bg-[#0f172a] text-white pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 px-4 sm:px-6">
@@ -75,9 +75,11 @@ export default function Footer() {
           <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-slate-400 text-sm font-medium">
             {[
               { label: 'Mobile Tyre Fitting', href: '/mobile-tyre-fitting' },
-              { label: 'Emergency Mobile Tyre Fitting', href: ADS_LANDING_PATH },
               { label: 'Home Tyre Fitting', href: '/home-tyre-fitting' },
-              { label: 'Emergency Puncture Repair', href: '/puncture-repair-Greater-manchester' },
+              { label: 'Mobile Tyre Repair', href: '/puncture-repair-Greater-manchester' },
+              { label: 'Motorway Tyre Replacement', href: MOTORWAY_TYRE_REPLACEMENT_PATH },
+              { label: '24 Hour Emergency Tyres', href: ADS_LANDING_PATH },
+              { label: 'Mobile Tyre Replacement', href: MOBILE_TYRE_REPLACEMENT_PATH },
               { label: 'Roadside Assistance', href: '/roadside-assistance' },
               { label: 'Jump Start', href: '/jump-start' },
               { label: 'Locking Nut Removal', href: '/locking-nut-removal' },

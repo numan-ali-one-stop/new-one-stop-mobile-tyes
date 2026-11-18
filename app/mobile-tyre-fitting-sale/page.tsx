@@ -153,7 +153,7 @@ export default function SalePage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Home Tyre Fitting', desc: 'Same day tyre fitting at your home across Sale, without the hassle of visiting a garage.', badge: 'AT YOUR DOOR',
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Emergency Puncture Repair', desc: 'Professional mobile puncture repair across Sale, carried out on-site where safe and suitable.', badge: 'CERTIFIED REPAIR',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Tyre Repair', desc: 'Professional mobile puncture repair across Sale, carried out on-site where safe and suitable.', badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp', title: 'Jump Start', desc: 'Flat battery as well as a flat tyre? Our mobile jump start service gets you back on the road in minutes, available 24/7 across Sale.', badge: '24/7 SERVICE',
                   href: '/jump-start' },

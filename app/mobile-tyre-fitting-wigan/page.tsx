@@ -166,7 +166,7 @@ export default function WiganPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Emergency Tyre Replacement', desc: 'If your tyre has suffered a blowout or damage that makes it unsafe to repair, we can help arrange a suitable replacement, subject to stock and vehicle specifications.', badge: '24/7 DISPATCH',
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'Our technicians can inspect a punctured tyre and determine whether a repair is safe and appropriate. If the damage cannot be repaired safely, a replacement may be necessary.', badge: 'CERTIFIED REPAIR',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Tyre Repair', desc: 'Our technicians can inspect a punctured tyre and determine whether a repair is safe and appropriate. If the damage cannot be repaired safely, a replacement may be necessary.', badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: '/images/tyre-fitting-at-home.webp', title: 'Home and Workplace Tyre Fitting', desc: 'Arrange tyre fitting at your property or workplace without making a separate trip to a garage. The location must provide enough space and safe access for the technician to work.', badge: 'AT YOUR DOOR',
                   href: '/home-tyre-fitting' },

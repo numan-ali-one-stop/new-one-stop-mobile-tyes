@@ -194,7 +194,7 @@ export default function BuryPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
+                  title: 'Mobile Tyre Repair',
                   desc: 'Not every puncture requires a new tyre. Where the location and type of damage meet repair standards, our technician can inspect the tyre and carry out a professional repair.',
                   badge: 'REPAIR WHERE SUITABLE',
                   href: '/puncture-repair-Greater-manchester',

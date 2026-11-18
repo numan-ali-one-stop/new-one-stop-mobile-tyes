@@ -209,7 +209,7 @@ export default function BoltonPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Mobile Tyre Repair',
                   desc: 'We inspect punctured tyres and repair them where the damage and tyre condition meet the applicable safety requirements.',
                   badge: 'REPAIR BEFORE REPLACEMENT',
                   href: '/puncture-repair-Greater-manchester',

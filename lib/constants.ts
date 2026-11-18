@@ -12,5 +12,10 @@ export const MAPS_URL = 'https://maps.app.goo.gl/tqGMogzsNNn8EXjH8'
 export const RESPONSE_TIME = '20–30 minutes'
 export const RATING = '5.0'
 export const REVIEW_COUNT = '1,200+'
-/** Google Ads / SEO landing page: it brings its own header and footer, so the site's hide on this path. */
+/** 24 Hour Emergency Tyres landing page (URL kept as-is because Google Ads already points at it). */
 export const ADS_LANDING_PATH = '/emergency-mobile-tyre-fitting'
+export const MOBILE_TYRE_REPLACEMENT_PATH = '/mobile-tyre-replacement'
+export const MOTORWAY_TYRE_REPLACEMENT_PATH = '/motorway-tyre-replacement'
+/** Google Ads / SEO landing pages (components/AdsLandingPage.tsx): they bring their own header and
+ *  footer, so the site's Header and Footer hide on these paths. */
+export const ADS_LANDING_PATHS = [ADS_LANDING_PATH, MOBILE_TYRE_REPLACEMENT_PATH, MOTORWAY_TYRE_REPLACEMENT_PATH]

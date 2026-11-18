@@ -167,7 +167,7 @@ export default function SalfordPage() {
                   href: '/mobile-tyre-fitting' },
                 { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp', title: 'Emergency Tyre Replacement', desc: 'Arrange a replacement if your tyre has suffered a blowout, serious damage or excessive wear.', badge: '24/7 DISPATCH',
                   href: '/home-tyre-fitting' },
-                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Puncture Repair', desc: 'We assess punctured tyres and carry out repairs where the damage and tyre condition meet the applicable safety requirements.', badge: 'CERTIFIED REPAIR',
+                { img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp', title: 'Mobile Tyre Repair', desc: 'We assess punctured tyres and carry out repairs where the damage and tyre condition meet the applicable safety requirements.', badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester' },
                 { img: '/images/tyre-fitting-at-home.webp', title: 'Home Tyre Fitting', desc: 'Arrange tyre replacement at home without needing to travel to a tyre centre.', badge: 'AT YOUR DOOR',
                   href: '/home-tyre-fitting' },

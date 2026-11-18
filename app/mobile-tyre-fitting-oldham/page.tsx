@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import BrandCarousel from '@/components/BrandCarousel'
 import WhyChooseGrid from '@/components/WhyChooseGrid'
 import CityFaq from '@/components/CityFaq'
@@ -20,7 +21,7 @@ const _serviceSchema = pageServiceSchema({
   alternateName: '24/7 Mobile Tyre Fitting Oldham',
   areaServed: 'Oldham',
   description:
-    'Need mobile tyre fitting in Oldham? We provide 24/7 emergency tyre replacement and mobile puncture repair at your home, workplace or a safe roadside location across OL1–OL9. Get a clear quote and an estimated arrival time from our team.',
+    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting and puncture repair across Oldham. We cover Oldham and the Surrounding OL1-OL9 areas.',
 })
 
 const _organizationSchema = pageOrganizationSchema('mobile-tyre-fitting-oldham')
@@ -34,7 +35,7 @@ const _automotiveBusinessSchema = automotiveBusinessSchema({
 export const metadata = buildMetadata({
   title: 'Mobile Tyre Fitting Oldham | 24/7 Tyre Replacement',
   description:
-    'Need mobile tyre fitting in Oldham? We provide 24/7 emergency tyre replacement and mobile puncture repair at your home, workplace or a safe roadside location across OL1–OL9. Get a clear quote and an estimated arrival time from our team.',
+    'Need mobile tyre fitting in Oldham? Get 24/7 tyre fitting and puncture repair across Oldham. We cover Oldham and the Surrounding OL1-OL9 areas.',
   path: '/mobile-tyre-fitting-oldham',
 })
 
@@ -207,7 +208,7 @@ export default function OldhamPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
+                  title: 'Mobile Tyre Repair',
                   desc: 'Where the damage qualifies under British Standard BS AU 159, we carry out a professional plug-and-patch repair on-site — saving you the cost of a full replacement.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',
@@ -333,7 +334,7 @@ export default function OldhamPage() {
                 A damaged tyre can interrupt your day, whether you are commuting, travelling to work or parked outside your home. Our mobile tyre fitting service brings the necessary tyre assistance directly to your location.
               </p>
               <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
-                One Stop Tyres 247 provides mobile tyre fitting across Oldham, including residential streets, workplaces, car parks and suitable roadside locations. Instead of arranging transport to a tyre centre, you can contact our team and discuss having the work carried out where your vehicle is parked.
+                <Link href="/" className="text-[#b70011] font-semibold hover:underline">One Stop Tyres 247</Link> provides mobile tyre fitting across Oldham, including residential streets, workplaces, car parks and suitable roadside locations. Instead of arranging transport to a tyre centre, you can contact our team and discuss having the work carried out where your vehicle is parked.
                 Our technicians can inspect your tyre, identify whether it is suitable for repair and arrange a replacement where necessary. We also help customers who need new tyres fitted as part of planned vehicle maintenance.
               </p>
               <span className="text-[#b70011] font-bold uppercase tracking-widest text-sm mb-4 block">
@@ -603,8 +604,24 @@ export default function OldhamPage() {
               a: 'You can provide your vehicle registration and make and model. You can also send a photograph of the numbers printed on your tyre sidewall. Our team can use these details to help identify the correct specification.',
             },
             {
+              q: 'Do you cover Chadderton, Royton and Shaw?',
+              a: 'Yes. Chadderton, Royton and Shaw are included in our Oldham service coverage. Contact us with your postcode to confirm availability.',
+            },
+            {
+              q: 'Can you provide mobile tyre fitting in Saddleworth?',
+              a: 'Yes. Our listed coverage includes Saddleworth and nearby locations such as Uppermill, Delph, Diggle, Dobcross and Austerlands. Contact us to confirm availability and the estimated arrival time.',
+            },
+            {
+              q: 'Do you cover the M60 and A627(M) near Oldham?',
+              a: 'Our listed road coverage includes M60 Junctions 21–22 and the A627(M). If you experience a breakdown, prioritise your safety and follow the appropriate road or motorway breakdown procedures. Assistance depends on safe access.',
+            },
+            {
               q: 'Can you replace a tyre after a blowout?',
               a: 'Yes. We can discuss an emergency replacement if your tyre has suffered a blowout. The correct replacement must be available and compatible with your vehicle.',
+            },
+            {
+              q: 'Do you provide mobile tyre fitting for cars only?',
+              a: 'Yes. Our mobile tyre fitting service is for cars. Contact us with your vehicle registration, tyre size and location so we can check the correct tyre and service availability.',
             },
             {
               q: 'Can you help if I have lost my locking wheel nut key?',
@@ -621,6 +638,14 @@ export default function OldhamPage() {
             {
               q: 'Can I book mobile tyre fitting for a specific time?',
               a: 'You can request a preferred appointment time. The team will confirm availability based on technician scheduling, your location and the tyre required.',
+            },
+            {
+              q: 'Do you accept card and contactless payments?',
+              a: 'Contact our team when booking to confirm the available payment options for your appointment.',
+            },
+            {
+              q: 'How do I book mobile tyre fitting in Oldham?',
+              a: 'Call or WhatsApp 07759 708 646. Provide your location, vehicle registration, tyre size if known and a description of the problem. Our team can discuss suitable options, pricing and the estimated arrival time.',
             },
           ]}
         />

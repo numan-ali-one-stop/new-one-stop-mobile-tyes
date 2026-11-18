@@ -17,7 +17,7 @@ const SERVICES = [
   },
   {
     img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-    title: 'Emergency Puncture Repair',
+    title: 'Mobile Tyre Repair',
     desc: 'Certified, BS AU 159 compliant plug-and-patch puncture repair, fitted on-site.',
     badge: 'CERTIFIED REPAIR',
     href: '/puncture-repair-Greater-manchester',

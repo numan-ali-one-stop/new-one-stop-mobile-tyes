@@ -199,7 +199,7 @@ export default function M6Page() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Emergency Puncture Repair',
+                  title: 'Mobile Tyre Repair',
                   desc: 'Professional mobile puncture repair on the M6, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',

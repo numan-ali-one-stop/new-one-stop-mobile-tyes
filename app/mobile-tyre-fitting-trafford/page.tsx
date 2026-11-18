@@ -208,7 +208,7 @@ export default function TraffordPage() {
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
-                  title: 'Mobile Puncture Repair',
+                  title: 'Mobile Tyre Repair',
                   desc: 'Our technicians can inspect a punctured tyre and determine whether it can be repaired safely. If the damage is unsuitable for repair, a replacement may be necessary.',
                   badge: 'CERTIFIED REPAIR',
                   href: '/puncture-repair-Greater-manchester',

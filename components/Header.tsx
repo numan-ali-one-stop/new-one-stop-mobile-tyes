@@ -2,11 +2,20 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { BOROUGHS, REGIONS } from '@/lib/locations'
-import { EMAIL, ADS_LANDING_PATH, PHONE, PHONE_TEL, MAPS_URL } from '@/lib/constants'
+import {
+  EMAIL,
+  ADS_LANDING_PATH,
+  ADS_LANDING_PATHS,
+  MOBILE_TYRE_REPLACEMENT_PATH,
+  MOTORWAY_TYRE_REPLACEMENT_PATH,
+  PHONE,
+  PHONE_TEL,
+  MAPS_URL,
+} from '@/lib/constants'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
+// Order set by the owner: the two main services first, then the Google Ads landing pages.
 const serviceLinks = [
   {
     label: 'Mobile Tyre Fitting',
@@ -21,10 +30,28 @@ const serviceLinks = [
     desc: 'Fitted while you work or relax at home',
   },
   {
-    label: 'Puncture Repair',
+    label: 'Mobile Tyre Repair',
     href: '/puncture-repair-Greater-manchester',
     icon: 'construction',
-    desc: 'BS AU 159 compliant plug & patch repair',
+    desc: 'Puncture repair at your location, 24/7',
+  },
+  {
+    label: 'Motorway Tyre Replacement',
+    href: MOTORWAY_TYRE_REPLACEMENT_PATH,
+    icon: 'add_road',
+    desc: 'Blowout on the motorway? New tyre fitted safely',
+  },
+  {
+    label: '24 Hour Emergency Tyres',
+    href: ADS_LANDING_PATH,
+    icon: 'car_crash',
+    desc: 'Flat or blowout? Fitted day or night',
+  },
+  {
+    label: 'Mobile Tyre Replacement',
+    href: MOBILE_TYRE_REPLACEMENT_PATH,
+    icon: 'build',
+    desc: 'New tyres supplied and fitted where you are',
   },
   {
     label: 'Roadside Assistance',
@@ -50,42 +77,30 @@ const serviceLinks = [
     icon: 'lock_open',
     desc: 'Damage-free removal with specialist tools',
   },
-  {
-    label: 'Emergency Mobile Tyre Fitting',
-    href: ADS_LANDING_PATH,
-    icon: 'car_crash',
-    desc: 'Stranded? Rapid 24/7 dispatch to your location',
-  },
 ]
 
-const motorwayLinks = [
-  { label: 'M6', href: '/mobile-tyre-fitting-m6', icon: 'route' },
-  { label: 'M60', href: '/mobile-tyre-fitting-m60', icon: 'route' },
-  { label: 'M602', href: '/mobile-tyre-fitting-m602', icon: 'route' },
-  { label: 'M61', href: '/mobile-tyre-fitting-m61', icon: 'route' },
-  { label: 'M56', href: '/mobile-tyre-fitting-m56', icon: 'route' },
-  { label: 'M62', href: '/mobile-tyre-fitting-m62', icon: 'route' },
-  { label: 'M66', href: '/mobile-tyre-fitting-m66', icon: 'route' },
-  { label: 'A627(M)', href: '/mobile-tyre-fitting-a627', icon: 'route' },
-  { label: 'M67', href: '/mobile-tyre-fitting-m67', icon: 'route' },
-  { label: 'A57(M)', href: '/mobile-tyre-fitting-a57', icon: 'route' },
-  { label: 'Wilmslow Road', href: '/mobile-tyre-fitting-wilmslow-road', icon: 'route' },
+/** Secondary pages listed under the services in "More Services". */
+const moreLinks = [
+  { label: 'All Services', href: '/services', icon: 'grid_view' },
+  { label: 'Service Areas', href: '/service-area', icon: 'map' },
+  { label: 'Guides', href: '/guides', icon: 'menu_book' },
 ]
 
-const yorkshireMotorwayLinks = [
-  { label: 'M621', href: '/mobile-tyre-fitting-m621', icon: 'route' },
-  { label: 'M18', href: '/mobile-tyre-fitting-m18', icon: 'route' },
+/** Top-level links either side of the "More Services" menu. */
+const mainLinks = [
+  { label: 'Mobile Tyre Fitting', href: '/mobile-tyre-fitting', icon: 'tire_repair' },
+  { label: 'Home Tyre Fitting', href: '/home-tyre-fitting', icon: 'home_repair_service' },
 ]
-
-// ─── Component ───────────────────────────────────────────────────────────────
+const endLinks = [
+  { label: 'About', href: '/about', icon: 'info' },
+  { label: 'Contact', href: '/contact', icon: 'contact_support' },
+]
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [areasOpen, setAreasOpen] = useState(false)
-  const [openMenu, setOpenMenu] = useState<'services' | 'areas' | null>(null)
-  const [expandedBoroughs, setExpandedBoroughs] = useState<Set<string>>(new Set())
-  const [expandedRegions, setExpandedRegions] = useState<Set<string>>(new Set())
+  // Desktop "More Services" mega menu / mobile "More Services" accordion
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [moreOpen, setMoreOpen] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
@@ -96,43 +111,37 @@ export default function Header() {
     return pathname === href || pathname.startsWith(href + '/')
   }
 
-  function toggleBorough(name: string) {
-    setExpandedBoroughs((prev) => {
-      const next = new Set(prev)
-      if (next.has(name)) next.delete(name)
-      else next.add(name)
-      return next
-    })
-  }
+  // Main links are highlighted on their own, so they don't also light up "More Services".
+  const isServicesActive = [...serviceLinks, ...moreLinks].some(
+    (l) => isActive(l.href) && !mainLinks.some((m) => m.href === l.href)
+  )
+  const desktopLinkClass = (href: string) =>
+    isActive(href) ? 'text-[#b70011] border-b-2 border-[#b70011] pb-0.5' : 'text-slate-700 hover:text-[#b70011] transition-colors'
 
-  function toggleRegion(name: string) {
-    setExpandedRegions((prev) => {
-      const next = new Set(prev)
-      if (next.has(name)) next.delete(name)
-      else next.add(name)
-      return next
-    })
-  }
-
-  const isServicesActive =
-    isActive('/services') || serviceLinks.some((l) => isActive(l.href))
-  const isAreasActive =
-    isActive('/service-area') ||
-    BOROUGHS.some(
-      (b) => (b.slug && isActive(`/mobile-tyre-fitting-${b.slug}`)) || b.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
-    ) ||
-    motorwayLinks.some((l) => isActive(l.href)) ||
-    yorkshireMotorwayLinks.some((l) => isActive(l.href))
+  const mobileLink = (link: { label: string; href: string; icon: string }) => (
+    <a
+      key={link.href}
+      href={link.href}
+      onClick={() => setMobileOpen(false)}
+      className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive(link.href) ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
+    >
+      <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive(link.href) ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
+        <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive(link.href) ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>{link.icon}</span>
+      </div>
+      <span className="font-semibold text-sm flex-1">{link.label}</span>
+      {isActive(link.href) ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
+    </a>
+  )
 
   // Hover handlers with a small delay to prevent flicker when moving the
   // cursor between the trigger and the panel.
-  function handleMouseEnter(menu: 'services' | 'areas') {
+  function handleMouseEnter() {
     if (closeTimer.current) clearTimeout(closeTimer.current)
-    setOpenMenu(menu)
+    setMenuOpen(true)
   }
 
   function handleMouseLeave() {
-    closeTimer.current = setTimeout(() => setOpenMenu(null), 150)
+    closeTimer.current = setTimeout(() => setMenuOpen(false), 150)
   }
 
   // Lock body scroll when mobile drawer is open
@@ -142,7 +151,7 @@ export default function Header() {
   }, [mobileOpen])
 
   // The landing page renders its own sticky call header.
-  if (pathname === ADS_LANDING_PATH) return null
+  if (ADS_LANDING_PATHS.includes(pathname)) return null
 
   return (
     <>
@@ -232,51 +241,34 @@ export default function Header() {
             className="hidden lg:flex justify-self-center items-center gap-7 text-sm font-semibold whitespace-nowrap"
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            {/* Home */}
-            <a
-              href="/"
-              className={isActive('/') ? 'text-[#b70011] border-b-2 border-[#b70011] pb-0.5' : 'text-slate-700 hover:text-[#b70011] transition-colors'}
-            >
-              Home
-            </a>
+            {mainLinks.map((link) => (
+              <a key={link.href} href={link.href} className={desktopLinkClass(link.href)}>
+                {link.label}
+              </a>
+            ))}
 
-            {/* About */}
-            <a
-              href="/about"
-              className={isActive('/about') ? 'text-[#b70011] border-b-2 border-[#b70011] pb-0.5' : 'text-slate-700 hover:text-[#b70011] transition-colors'}
-            >
-              About Us
-            </a>
-
-            {/* Services trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter('services')}
-              onMouseLeave={handleMouseLeave}
-            >
+            {/* More Services trigger */}
+            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <button
                 className={`flex items-center gap-1 transition-colors ${
-                  isServicesActive || openMenu === 'services'
-                    ? 'text-[#b70011]'
-                    : 'text-slate-700 hover:text-[#b70011]'
+                  isServicesActive || menuOpen ? 'text-[#b70011]' : 'text-slate-700 hover:text-[#b70011]'
                 } ${isServicesActive ? 'border-b-2 border-[#b70011] pb-0.5' : ''}`}
                 aria-haspopup="true"
-                aria-expanded={openMenu === 'services'}
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen((v) => !v)}
               >
-                Services
+                More Services
                 <span aria-hidden="true" data-nosnippet
-                  className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${openMenu === 'services' ? 'rotate-180' : ''}`}
+                  className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${menuOpen ? 'rotate-180' : ''}`}
                 >
                   expand_more
                 </span>
               </button>
 
-              {/* ── Services Mega Menu ──────────────────────────────────── */}
+              {/* ── More Services Mega Menu ─────────────────────────────── */}
               <div
                 className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+16px)] transition-all duration-200 origin-top ${
-                  openMenu === 'services'
-                    ? 'opacity-100 scale-y-100 pointer-events-auto'
-                    : 'opacity-0 scale-y-95 pointer-events-none'
+                  menuOpen ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'
                 }`}
                 style={{ width: '620px' }}
               >
@@ -295,20 +287,14 @@ export default function Header() {
                           key={link.href}
                           href={link.href}
                           className={`group flex items-start gap-3 p-3 rounded-xl transition-all ${
-                            isActive(link.href)
-                              ? 'bg-red-50'
-                              : 'hover:bg-slate-50'
+                            isActive(link.href) ? 'bg-red-50' : 'hover:bg-slate-50'
                           }`}
                         >
                           <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
-                            isActive(link.href)
-                              ? 'bg-[#b70011]/10'
-                              : 'bg-slate-100 group-hover:bg-[#b70011]/10'
+                            isActive(link.href) ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'
                           }`}>
                             <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${
-                              isActive(link.href)
-                                ? 'text-[#b70011]'
-                                : 'text-slate-500 group-hover:text-[#b70011]'
+                              isActive(link.href) ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'
                             }`} style={{ fontVariationSettings: "'FILL' 1" }}>
                               {link.icon}
                             </span>
@@ -328,254 +314,39 @@ export default function Header() {
 
                   {/* Footer bar */}
                   <div className="flex items-center justify-between flex-wrap gap-y-2 gap-x-4 px-5 py-3 bg-slate-50 border-t border-slate-100">
-                    <div className="flex items-center gap-2 min-w-0">
-                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px] text-[#b70011] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
-                        bolt
-                      </span>
-                      <p className="text-[12px] text-slate-600 leading-tight">
-                        <span className="font-bold text-slate-800">Typically 20–30 min</span> response in areas we cover
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <a
-                        href={`tel:${PHONE_TEL}`}
-                        className="cta-btn cta-call flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
-                      >
-                        <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                          phone_in_talk
-                        </span>
-                        {PHONE}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Service Area trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter('areas')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                className={`flex items-center gap-1 transition-colors ${
-                  isAreasActive || openMenu === 'areas'
-                    ? 'text-[#b70011]'
-                    : 'text-slate-700 hover:text-[#b70011]'
-                } ${isAreasActive ? 'border-b-2 border-[#b70011] pb-0.5' : ''}`}
-                aria-haspopup="true"
-                aria-expanded={openMenu === 'areas'}
-              >
-                Service Area
-                <span aria-hidden="true" data-nosnippet
-                  className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${openMenu === 'areas' ? 'rotate-180' : ''}`}
-                >
-                  expand_more
-                </span>
-              </button>
-
-              {/* ── Areas Mega Menu ─────────────────────────────────────── */}
-              <div
-                className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+16px)] transition-all duration-200 origin-top ${
-                  openMenu === 'areas'
-                    ? 'opacity-100 scale-y-100 pointer-events-auto'
-                    : 'opacity-0 scale-y-95 pointer-events-none'
-                }`}
-                style={{ width: '620px' }}
-              >
-                {/* Arrow */}
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-slate-200 rotate-45 z-10" />
-
-                <div className="relative bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-20">
-                  {/* Cities + Motorways */}
-                  <div className="p-5">
-                    {/* Cities */}
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-1">
-                      City Areas — click to see towns
-                    </p>
-                    <div className="max-h-[320px] overflow-y-auto pr-1 mb-4">
-                      {REGIONS.map((region) => {
-                        const regionExpanded = expandedRegions.has(region.name)
-                        const regionActive = region.boroughs.some((borough) =>
-                          (borough.slug && isActive(`/mobile-tyre-fitting-${borough.slug}`)) ||
-                          borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
-                        )
-                        return (
-                        <div key={region.name} className="mb-2">
-                          <button
-                            type="button"
-                            onClick={() => toggleRegion(region.name)}
-                            aria-expanded={regionExpanded}
-                            className={`w-full flex items-center justify-between gap-2 rounded-lg px-3 py-2 mb-1 transition-colors ${
-                              regionActive ? 'bg-red-50 text-[#b70011]' : 'hover:bg-slate-50 text-[#b70011]/70'
-                            }`}
-                          >
-                            <span className="text-[10px] font-bold uppercase tracking-widest">{region.name}</span>
-                            <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${regionExpanded ? 'rotate-180' : ''}`}>
-                              expand_more
-                            </span>
-                          </button>
-                          <div className={`overflow-hidden transition-all duration-300 ${regionExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                          {region.boroughs.map((borough) => {
-                            const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
-                            const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
-                            const expanded = expandedBoroughs.has(borough.name)
-                            return (
-                              <div key={borough.name} className="mb-0.5">
-                                <div
-                                  className={`group flex items-center gap-1 rounded-xl transition-all ${
-                                    active ? 'bg-red-50 text-[#b70011]' : 'hover:bg-slate-50 text-slate-700 hover:text-[#b70011]'
-                                  }`}
-                                >
-                                  {href ? (
-                                    <a href={href} className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
-                                      <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${
-                                        active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'
-                                      }`} style={{ fontVariationSettings: "'FILL' 1" }}>
-                                        location_on
-                                      </span>
-                                      <span className="font-semibold text-sm">{borough.name}</span>
-                                    </a>
-                                  ) : (
-                                    <span className="flex items-center gap-2.5 px-3 py-2.5 flex-1 min-w-0">
-                                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
-                                        location_on
-                                      </span>
-                                      <span className="font-semibold text-sm">{borough.name}</span>
-                                    </span>
-                                  )}
-                                  {borough.towns.length > 0 && (
-                                    <button
-                                      type="button"
-                                      onClick={() => toggleBorough(borough.name)}
-                                      aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
-                                      aria-expanded={expanded}
-                                      className="p-2 mr-1.5 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
-                                    >
-                                      <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
-                                        expand_more
-                                      </span>
-                                    </button>
-                                  )}
-                                </div>
-                                {borough.towns.length > 0 && (
-                                  <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                    <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
-                                      {borough.towns.map((town) => (
-                                        <a
-                                          key={town.slug}
-                                          href={`/mobile-tyre-fitting-${town.slug}`}
-                                          className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
-                                            isActive(`/mobile-tyre-fitting-${town.slug}`)
-                                              ? 'bg-[#b70011] border-[#b70011] text-white'
-                                              : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
-                                          }`}
-                                        >
-                                          {town.name}
-                                        </a>
-                                      ))}
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
-                            )
-                          })}
-                          </div>
-                        </div>
-                        )
-                      })}
-                    </div>
-
-                    {/* Divider */}
-                    <div className="border-t border-slate-100 mb-4" />
-
-                    {/* Motorways */}
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-1">
-                      Greater Manchester Motorways &amp; Roads
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {motorwayLinks.map((link) => (
+                    <div className="flex items-center gap-4">
+                      {moreLinks.map((link) => (
                         <a
                           key={link.href}
                           href={link.href}
-                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-bold transition-all border ${
-                            isActive(link.href)
-                              ? 'bg-[#b70011] border-[#b70011] text-white'
-                              : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
+                          className={`flex items-center gap-1.5 text-[12px] font-bold transition-colors ${
+                            isActive(link.href) ? 'text-[#b70011]' : 'text-slate-600 hover:text-[#b70011]'
                           }`}
                         >
-                          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                            route
-                          </span>
+                          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px]">{link.icon}</span>
                           {link.label}
                         </a>
                       ))}
-                    </div>
-
-                    {/* West & South Yorkshire Motorways */}
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-1">
-                      West &amp; South Yorkshire Motorways
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {yorkshireMotorwayLinks.map((link) => (
-                        <a
-                          key={link.href}
-                          href={link.href}
-                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-bold transition-all border ${
-                            isActive(link.href)
-                              ? 'bg-[#b70011] border-[#b70011] text-white'
-                              : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011] hover:bg-red-50'
-                          }`}
-                        >
-                          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[13px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                            route
-                          </span>
-                          {link.label}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Footer bar */}
-                  <div className="flex items-center justify-between gap-4 px-5 py-3 bg-slate-50 border-t border-slate-100">
-                    <div className="flex items-center gap-2 min-w-0">
-                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px] text-[#b70011] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
-                        location_on
-                      </span>
-                      <p className="text-[12px] text-slate-600 leading-tight">
-                        <span className="font-bold text-slate-800">4 regions, 255+ towns &amp; 13 routes</span> covered 24/7
-                      </p>
                     </div>
                     <a
-                      href="/service-area"
-                      className="cta-btn cta-pulse flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap shrink-0"
+                      href={`tel:${PHONE_TEL}`}
+                      className="cta-btn cta-call flex items-center gap-1.5 bg-[#b70011] hover:bg-red-700 text-white font-bold text-[13px] px-3.5 py-2 rounded-lg transition-all active:scale-95 whitespace-nowrap"
                     >
-                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                        map
+                      <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                        phone_in_talk
                       </span>
-                      Coverage Map
+                      {PHONE}
                     </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Guides */}
-            <a
-              href="/guides"
-              className={isActive('/guides') ? 'text-[#b70011] border-b-2 border-[#b70011] pb-0.5' : 'text-slate-700 hover:text-[#b70011] transition-colors'}
-            >
-              Guides
-            </a>
-
-            {/* Contact */}
-            <a
-              href="/contact"
-              className={isActive('/contact') ? 'text-[#b70011] border-b-2 border-[#b70011] pb-0.5' : 'text-slate-700 hover:text-[#b70011] transition-colors'}
-            >
-              Contact
-            </a>
+            {endLinks.map((link) => (
+              <a key={link.href} href={link.href} className={desktopLinkClass(link.href)}>
+                {link.label}
+              </a>
+            ))}
           </nav>
 
           {/* RIGHT — Mobile: Hamburger | Desktop: Call button */}
@@ -660,37 +431,15 @@ export default function Header() {
           {/* Scrollable Nav */}
           <nav className="flex-1 overflow-y-auto py-3">
 
-            {/* Simple links */}
             <p className="px-5 pt-2 pb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">Menu</p>
 
-            <a
-              href="/"
-              onClick={() => setMobileOpen(false)}
-              className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
-            >
-              <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>home</span>
-              </div>
-              <span className="font-semibold text-sm flex-1">Home</span>
-              {isActive('/') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
-            </a>
+            {mainLinks.map(mobileLink)}
 
-            <a
-              href="/about"
-              onClick={() => setMobileOpen(false)}
-              className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/about') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
-            >
-              <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/about') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/about') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>info</span>
-              </div>
-              <span className="font-semibold text-sm flex-1">About Us</span>
-              {isActive('/about') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
-            </a>
-
-            {/* ── Services Accordion ─────────────────────────────────────── */}
+            {/* ── More Services Accordion ────────────────────────────────── */}
             <div className="mx-2 mb-0.5">
               <button
-                onClick={() => setServicesOpen((v) => !v)}
+                onClick={() => setMoreOpen((v) => !v)}
+                aria-expanded={moreOpen}
                 className={`w-full flex items-center gap-4 px-5 py-3.5 rounded-xl transition-all ${
                   isServicesActive ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'
                 }`}
@@ -698,23 +447,14 @@ export default function Header() {
                 <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isServicesActive ? 'bg-[#b70011]/10' : 'bg-slate-100'}`}>
                   <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isServicesActive ? 'text-[#b70011]' : 'text-slate-500'}`}>build</span>
                 </div>
-                <span className="font-semibold text-sm flex-1 text-left">Services</span>
-                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-transform duration-200 ${servicesOpen ? 'rotate-180 text-[#b70011]' : 'text-slate-400'}`}>
+                <span className="font-semibold text-sm flex-1 text-left">More Services</span>
+                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-transform duration-200 ${moreOpen ? 'rotate-180 text-[#b70011]' : 'text-slate-400'}`}>
                   expand_more
                 </span>
               </button>
 
-              {/* Services sub-links */}
-              <div className={`overflow-hidden transition-all duration-300 ${servicesOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${moreOpen ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="pt-1 pb-2 ml-4 pl-4 border-l-2 border-slate-100 mt-1">
-                  <a
-                    href="/services"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-[#b70011] transition-colors mb-1"
-                  >
-                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[14px]">grid_view</span>
-                    All Services
-                  </a>
                   {serviceLinks.map((link) => (
                     <a
                       key={link.href}
@@ -733,169 +473,17 @@ export default function Header() {
                       {isActive(link.href) && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" />}
                     </a>
                   ))}
-                </div>
-              </div>
-            </div>
-
-            {/* ── Service Area Accordion ─────────────────────────────────── */}
-            <div className="mx-2 mb-0.5">
-              <button
-                onClick={() => setAreasOpen((v) => !v)}
-                className={`w-full flex items-center gap-4 px-5 py-3.5 rounded-xl transition-all ${
-                  isAreasActive ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'
-                }`}
-              >
-                <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isAreasActive ? 'bg-[#b70011]/10' : 'bg-slate-100'}`}>
-                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isAreasActive ? 'text-[#b70011]' : 'text-slate-500'}`}>map</span>
-                </div>
-                <span className="font-semibold text-sm flex-1 text-left">Service Area</span>
-                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-transform duration-200 ${areasOpen ? 'rotate-180 text-[#b70011]' : 'text-slate-400'}`}>
-                  expand_more
-                </span>
-              </button>
-
-              <div className={`overflow-hidden transition-all duration-300 ${areasOpen ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="pt-1 pb-2 ml-4 pl-4 border-l-2 border-slate-100 mt-1">
-                  <a
-                    href="/service-area"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-[#b70011] transition-colors mb-1"
-                  >
-                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[14px]">map</span>
-                    Full Coverage Map
-                  </a>
-
-                  {REGIONS.map((region) => {
-                    const regionExpanded = expandedRegions.has(region.name)
-                    const regionActive = region.boroughs.some((borough) =>
-                      (borough.slug && isActive(`/mobile-tyre-fitting-${borough.slug}`)) ||
-                      borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
-                    )
-                    return (
-                    <div key={region.name} className="mb-2">
-                      <button
-                        type="button"
-                        onClick={() => toggleRegion(region.name)}
-                        aria-expanded={regionExpanded}
-                        className={`w-full flex items-center justify-between gap-2 rounded-lg px-3 py-2 mb-1 transition-colors ${
-                          regionActive ? 'bg-red-50 text-[#b70011]' : 'hover:bg-slate-50 text-[#b70011]/70'
-                        }`}
-                      >
-                        <span className="text-[10px] font-bold uppercase tracking-widest">{region.name}</span>
-                        <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${regionExpanded ? 'rotate-180' : ''}`}>
-                          expand_more
-                        </span>
-                      </button>
-                      <div className={`overflow-hidden transition-all duration-300 ${regionExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                      {region.boroughs.map((borough) => {
-                        const href = borough.slug ? `/mobile-tyre-fitting-${borough.slug}` : undefined
-                        const active = (href && isActive(href)) || borough.towns.some((t) => isActive(`/mobile-tyre-fitting-${t.slug}`))
-                        const expanded = expandedBoroughs.has(borough.name)
-                        return (
-                          <div key={borough.name} className="mb-0.5">
-                            <div
-                              className={`group flex items-center gap-1 rounded-xl transition-all ${
-                                active ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'
-                              }`}
-                            >
-                              {href ? (
-                                <a
-                                  href={href}
-                                  onClick={() => setMobileOpen(false)}
-                                  className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0"
-                                >
-                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[15px] shrink-0 transition-colors ${active ? 'text-[#b70011]' : 'text-slate-400 group-hover:text-[#b70011]'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
-                                    location_on
-                                  </span>
-                                  <span className="font-semibold text-sm">{borough.name}</span>
-                                </a>
-                              ) : (
-                                <span className="flex items-center gap-3 px-3 py-2.5 flex-1 min-w-0">
-                                  <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[15px] shrink-0 text-slate-400" style={{ fontVariationSettings: "'FILL' 1" }}>
-                                    location_on
-                                  </span>
-                                  <span className="font-semibold text-sm">{borough.name}</span>
-                                </span>
-                              )}
-                              {borough.towns.length > 0 && (
-                                <button
-                                  type="button"
-                                  onClick={() => toggleBorough(borough.name)}
-                                  aria-label={`${expanded ? 'Hide' : 'Show'} towns in ${borough.name}`}
-                                  aria-expanded={expanded}
-                                  className="p-2 mr-1 rounded-lg hover:bg-slate-200/60 shrink-0 transition-colors"
-                                >
-                                  <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
-                                    expand_more
-                                  </span>
-                                </button>
-                              )}
-                            </div>
-                            {borough.towns.length > 0 && (
-                              <div className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <div className="flex flex-wrap gap-1.5 pl-8 pr-2 pb-2 pt-1">
-                                  {borough.towns.map((town) => (
-                                    <a
-                                      key={town.slug}
-                                      href={`/mobile-tyre-fitting-${town.slug}`}
-                                      onClick={() => setMobileOpen(false)}
-                                      className={`text-xs font-bold px-2.5 py-1.5 rounded-full border transition-colors ${
-                                        isActive(`/mobile-tyre-fitting-${town.slug}`)
-                                          ? 'bg-[#b70011] border-[#b70011] text-white'
-                                          : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
-                                      }`}
-                                    >
-                                      {town.name}
-                                    </a>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                        )
-                      })}
-                      </div>
-                    </div>
-                    )
-                  })}
-
-                  <p className="px-3 pt-3 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                    Greater Manchester Motorways &amp; Roads
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 px-3 pb-2">
-                    {motorwayLinks.map((link) => (
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 px-3 pt-2">
+                    {moreLinks.map((link) => (
                       <a
                         key={link.href}
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
-                        className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold transition-all border ${
-                          isActive(link.href)
-                            ? 'bg-[#b70011] border-[#b70011] text-white'
-                            : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
+                        className={`flex items-center gap-1.5 py-1.5 text-xs font-bold transition-colors ${
+                          isActive(link.href) ? 'text-[#b70011]' : 'text-slate-500 hover:text-[#b70011]'
                         }`}
                       >
-                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[12px]" style={{ fontVariationSettings: "'FILL' 1" }}>route</span>
-                        {link.label}
-                      </a>
-                    ))}
-                  </div>
-
-                  <p className="px-3 pt-3 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                    West &amp; South Yorkshire Motorways
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 px-3 pb-2">
-                    {yorkshireMotorwayLinks.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setMobileOpen(false)}
-                        className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold transition-all border ${
-                          isActive(link.href)
-                            ? 'bg-[#b70011] border-[#b70011] text-white'
-                            : 'border-slate-200 text-slate-600 hover:border-[#b70011] hover:text-[#b70011]'
-                        }`}
-                      >
-                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[12px]" style={{ fontVariationSettings: "'FILL' 1" }}>route</span>
+                        <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[14px]">{link.icon}</span>
                         {link.label}
                       </a>
                     ))}
@@ -904,31 +492,7 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Guides */}
-            <a
-              href="/guides"
-              onClick={() => setMobileOpen(false)}
-              className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/guides') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
-            >
-              <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/guides') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/guides') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>menu_book</span>
-              </div>
-              <span className="font-semibold text-sm flex-1">Guides</span>
-              {isActive('/guides') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
-            </a>
-
-            {/* Contact */}
-            <a
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className={`group flex items-center gap-4 px-5 py-3.5 mx-2 rounded-xl mb-0.5 transition-all ${isActive('/contact') ? 'bg-red-50 text-[#b70011]' : 'text-slate-700 hover:bg-slate-50 hover:text-[#b70011]'}`}
-            >
-              <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive('/contact') ? 'bg-[#b70011]/10' : 'bg-slate-100 group-hover:bg-[#b70011]/10'}`}>
-                <span aria-hidden="true" data-nosnippet className={`material-symbols-outlined text-[18px] transition-colors ${isActive('/contact') ? 'text-[#b70011]' : 'text-slate-500 group-hover:text-[#b70011]'}`}>contact_support</span>
-              </div>
-              <span className="font-semibold text-sm flex-1">Contact</span>
-              {isActive('/contact') ? <span className="w-1.5 h-1.5 rounded-full bg-[#b70011] shrink-0" /> : <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-[#b70011]/40 transition-colors">chevron_right</span>}
-            </a>
+            {endLinks.map(mobileLink)}
           </nav>
 
           {/* Drawer Footer */}

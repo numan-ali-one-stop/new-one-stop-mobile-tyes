@@ -28,8 +28,8 @@ const services = [
   {
     href: '/emergency-mobile-tyre-fitting',
     img: '/images/professional-mobile-tyre-fitting.webp',
-    title: 'Emergency Mobile Tyre Fitting',
-    desc: 'Flat tyre, blowout or roadside damage? Our 24/7 dispatch team sends a fully equipped mobile van to your exact location.',
+    title: '24 Hour Emergency Tyres',
+    desc: 'Flat tyre, blowout or roadside damage? Our 24 hour dispatch team sends a fully equipped mobile van to your exact location.',
     badge: '24/7 Dispatch',
     btnLabel: 'Book Now',
   },
@@ -44,10 +44,26 @@ const services = [
   {
     href: '/puncture-repair-Greater-manchester',
     img: '/images/tyres-fitting-anywhere.webp',
-    title: 'Emergency Puncture Repair',
+    title: 'Mobile Tyre Repair',
     desc: 'Stuck with a flat? Our rapid response team will arrive quickly to repair your puncture and get you back on the road safely.',
     badge: '24/7 Support',
     btnLabel: 'Book Now',
+  },
+  {
+    href: '/mobile-tyre-replacement',
+    img: '/images/mobile-tyre-fitting-service.webp',
+    title: 'Mobile Tyre Replacement',
+    desc: 'Worn, damaged or illegal tyres? We supply and fit new tyres at your home, workplace or the roadside, from budget to premium brands.',
+    badge: 'Same Day',
+    btnLabel: 'Book Now',
+  },
+  {
+    href: '/motorway-tyre-replacement',
+    img: '/images/tyre-fitting-in-emergency.webp',
+    title: 'Motorway Tyre Replacement',
+    desc: 'Tyre blowout on the motorway? Once you are safely off the carriageway, we bring a new tyre and fit it at services, a junction or your recovery point.',
+    badge: '24/7 Response',
+    btnLabel: 'Get Help Now',
   },
   {
     href: '/roadside-assistance',

@@ -11,23 +11,23 @@ import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: 'Mobile Puncture Repair Greater Manchester | 24/7 Emergency',
+  title: 'Mobile Puncture Repair Near You | 24/7 Tyre Repair',
   description:
-    'Need mobile puncture repair in Greater Manchester? 24/7 emergency puncture repair for cars and slow punctures at home, work or the roadside. Call 07759 708 646.',
+    'Mobile puncture repair near you, 24/7. Nails, screws and slow punctures repaired at your home, work or the roadside where safe. Call 07759 708 646.',
   path: '/puncture-repair-Greater-manchester',
 })
 
 const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Home', item: SITE_URL },
-  { name: 'Emergency Puncture Repair', item: `${SITE_URL}/puncture-repair-Greater-manchester` },
+  { name: 'Mobile Puncture Repair', item: `${SITE_URL}/puncture-repair-Greater-manchester` },
 ])
 
 const _serviceSchema = serviceSchema({
   slug: 'puncture-repair-Greater-manchester',
-  name: 'Emergency Mobile Puncture Repair',
-  serviceType: 'Emergency Puncture Repair',
+  name: 'Mobile Puncture Repair',
+  serviceType: 'Mobile Tyre Repair',
   description:
-    'Emergency puncture repair across Greater Manchester. A mobile technician inspects the damaged tyre and carries out a professional repair at your location where safe and suitable.',
+    'Mobile puncture repair across Greater Manchester, 24/7. A mobile technician inspects the damaged tyre and carries out a professional repair at your location where safe and suitable.',
 })
 
 const faqs = [
@@ -144,18 +144,18 @@ export default function PunctureRepairGreaterManchesterPage() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-10 sm:py-14 lg:py-28 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
           <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
             <div>
-              <HeroBadge>Fast Puncture Repair Assistance</HeroBadge>
+              <HeroBadge>24/7 Mobile Tyre Repair</HeroBadge>
             </div>
 
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1]"
               style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}
             >
-              24/7 Emergency Puncture Repair Near You
+              Mobile Puncture Repair Near You
             </h1>
 
             <p className="text-white/95 lg:text-slate-300 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
-              Nail or screw in your tyre? Our mobile <strong>tyre puncture repair</strong> and 24/7 <strong>emergency puncture repair</strong> come to you.
+              Nail or screw in your tyre? Our <strong>mobile puncture repair</strong> service comes to you 24/7 and repairs the tyre on the spot where it is safe to do so.
             </p>
             {/* Extra intro — hidden for now
             <p className="text-white/85 lg:text-slate-400 text-base leading-relaxed mb-8">
