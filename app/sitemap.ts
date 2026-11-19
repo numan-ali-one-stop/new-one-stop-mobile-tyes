@@ -75,6 +75,8 @@ const WEST_YORKSHIRE_PAGES = [
   'huddersfield', 'bradford', 'halifax', 'wakefield', 'leeds',
   'brighouse', 'batley', 'dewsbury', 'mirfield', 'morley', 'hebden-bridge', 'todmorden', 'pontefract', 'castleford',
   'elland', 'pudsey', 'keighley', 'bingley', 'shipley', 'otley', 'm621',
+  'holmfirth', 'meltham', 'marsden', 'slaithwaite', 'skelmanthorpe',
+  'ilkley', 'haworth', 'queensbury', 'baildon',
 ]
 
 // South Yorkshire — Barnsley and its surrounding towns.

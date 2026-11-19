@@ -325,6 +325,11 @@ export const BOROUGHS: Borough[] = [
       { name: 'Batley', slug: 'batley' },
       { name: 'Dewsbury', slug: 'dewsbury' },
       { name: 'Mirfield', slug: 'mirfield' },
+      { name: 'Holmfirth', slug: 'holmfirth' },
+      { name: 'Meltham', slug: 'meltham' },
+      { name: 'Marsden', slug: 'marsden' },
+      { name: 'Slaithwaite', slug: 'slaithwaite' },
+      { name: 'Skelmanthorpe', slug: 'skelmanthorpe' },
     ],
   },
   {
@@ -335,6 +340,10 @@ export const BOROUGHS: Borough[] = [
       { name: 'Keighley', slug: 'keighley' },
       { name: 'Bingley', slug: 'bingley' },
       { name: 'Shipley', slug: 'shipley' },
+      { name: 'Ilkley', slug: 'ilkley' },
+      { name: 'Haworth', slug: 'haworth' },
+      { name: 'Queensbury', slug: 'queensbury' },
+      { name: 'Baildon', slug: 'baildon' },
     ],
   },
   {

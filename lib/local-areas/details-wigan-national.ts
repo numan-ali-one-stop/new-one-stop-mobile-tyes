@@ -232,6 +232,42 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Otley we can help drivers in the town centre and surrounding areas, and near the A660 and A659.",
     parking: "We use car parks and quieter residential streets rather than the main roads through town.",
   },
+  holmfirth: {
+    scenarios: "In Holmfirth we can help drivers in the town centre and surrounding villages, and near the A6024 and A635.",
+    parking: "We use car parks and quieter residential streets rather than the steep main roads through town.",
+  },
+  meltham: {
+    scenarios: "In Meltham we can help drivers in the village centre and surrounding areas, and near the A616 and A6024.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  marsden: {
+    scenarios: "In Marsden we can help drivers in the village centre and surrounding areas, and near the A62 and M62 Junction 23.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  slaithwaite: {
+    scenarios: "In Slaithwaite we can help drivers in the village centre and surrounding areas, and near the A62 and M62 Junction 23.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  skelmanthorpe: {
+    scenarios: "In Skelmanthorpe we can help drivers in the village centre and surrounding areas, and near the A636 and A635.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  ilkley: {
+    scenarios: "In Ilkley we can help drivers in the town centre and surrounding areas, and near the A65 and A660.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  haworth: {
+    scenarios: "In Haworth we can help drivers in the village centre and surrounding areas, and near the A6033 and A629.",
+    parking: "We use car parks and quieter residential streets rather than the steep cobbled main street.",
+  },
+  queensbury: {
+    scenarios: "In Queensbury we can help drivers in the village centre and surrounding areas, and near the A647 and A629.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  baildon: {
+    scenarios: "In Baildon we can help drivers in the town centre and surrounding areas, and near the A6038 and A650.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
   liverpool: {
     scenarios: "In Liverpool we can help drivers across the city centre and inner suburbs, and near the M62, M57 and the Mersey tunnels.",
     parking: "City-centre streets are busy, so car parks and quieter side streets are usually the safest places to work.",
