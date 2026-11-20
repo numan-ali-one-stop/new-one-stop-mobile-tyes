@@ -243,7 +243,7 @@ export default function ServicePage({
             ].map((card) => (
               <div
                 key={card.title}
-                className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]"
+                className="service-card group bg-white rounded-2xl shadow-sm overflow-hidden border-b-4 border-[#b70011]"
               >
                 <div className="relative h-44 sm:h-52 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -269,11 +269,10 @@ export default function ServicePage({
                     {card.title}
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed mb-3">{card.desc}</p>
-                  <div className="flex items-center justify-end">
-                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
-                      arrow_forward
-                    </span>
-                  </div>
+                  <span className="service-card-btn">
+                    View Service
+                    <span aria-hidden="true" data-nosnippet className="service-card-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+                  </span>
                 </div>
               </div>
             ))}

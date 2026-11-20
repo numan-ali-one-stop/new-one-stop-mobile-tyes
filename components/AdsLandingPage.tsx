@@ -4,14 +4,15 @@ import JsonLd from '@/components/JsonLd'
 import HeroMapBackground from '@/components/HeroMapBackground'
 import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HowItWorksSteps from '@/components/HowItWorksSteps'
+import ReviewsCtas from '@/components/ReviewsCtas'
 import HeroTrustBadges, { DEFAULT_TRUST_BADGES, type TrustBadge } from '@/components/HeroTrustBadges'
 import { GOOGLE_REVIEWS_URL, PHONE, PHONE_TEL } from '@/lib/constants'
 import { breadcrumbSchema, faqSchema, serviceSchema, SITE_URL } from '@/lib/schema'
 
 /**
  * Google Ads / SEO landing page layout, built from the site's own section styles. It has its own
- * sticky call header and compliance footer: the site Header and Footer hide themselves on every
- * path in ADS_LANDING_PATHS (lib/constants.ts), so add new landing pages there too.
+ * sticky call header: the site Header hides itself on every path in ADS_LANDING_PATHS
+ * (lib/constants.ts), so add new landing pages there too. The site Footer shows as on every page.
  * The site's mobile Call / WhatsApp bar and desktop floating buttons still come from the root layout.
  */
 
@@ -25,7 +26,6 @@ export interface LandingCard {
   img: string
   title: string
   desc: string
-  badge: string
 }
 
 export interface LandingFeature {
@@ -66,7 +66,6 @@ export interface AdsLandingPageProps {
   stepsHeading: string
   faqs: LandingFaq[]
   schema: { name: string; serviceType: string; description: string }
-  footerTagline: string
 }
 
 export default function AdsLandingPage({
@@ -86,7 +85,6 @@ export default function AdsLandingPage({
   stepsHeading,
   faqs,
   schema,
-  footerTagline,
 }: AdsLandingPageProps) {
   const _breadcrumbSchema = breadcrumbSchema([
     { name: 'Home', item: SITE_URL },
@@ -183,9 +181,10 @@ export default function AdsLandingPage({
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service) => (
-              <div
+              <a
                 key={service.title}
-                className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]"
+                href={`tel:${PHONE_TEL}`}
+                className="service-card group block bg-white rounded-2xl shadow-sm overflow-hidden border-b-4 border-[#b70011]"
               >
                 <div className="relative h-44 sm:h-52 overflow-hidden">
                   <Image
@@ -202,9 +201,13 @@ export default function AdsLandingPage({
                     {service.title}
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed mb-3">{service.desc}</p>
-                  <p className="text-[#b70011] text-sm font-bold leading-snug">{service.badge}</p>
+                  <span className="service-card-btn">
+                    <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[18px]" style={FILLED_ICON}>call</span>
+                    Call Now
+                    <span aria-hidden="true" data-nosnippet className="service-card-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+                  </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -274,6 +277,7 @@ export default function AdsLandingPage({
               </figure>
             ))}
           </div>
+          <ReviewsCtas />
         </div>
       </section>
 
@@ -306,27 +310,6 @@ export default function AdsLandingPage({
           </div>
         </div>
       </section>
-
-      {/* ── COMPLIANCE FOOTER ────────────────────────────────────────── */}
-      <footer className="bg-[#0f172a] text-white py-4 sm:py-5 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-2">
-            <strong className="text-white">ONE STOP MOBILE TYRES LTD</strong> — {footerTagline}
-          </p>
-          <nav aria-label="Legal and contact" className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-slate-400 text-xs sm:text-sm font-medium mb-2">
-            <a href="/privacy-policy" className="hover:text-[#FF4444] transition-colors">Privacy Policy</a>
-            <span aria-hidden="true">|</span>
-            <a href="/terms" className="hover:text-[#FF4444] transition-colors">Terms of Service</a>
-            <span aria-hidden="true">|</span>
-            <a href="/contact" className="hover:text-[#FF4444] transition-colors">Contact Us</a>
-          </nav>
-          <div className="pt-2 border-t border-white/5">
-            <p className="text-slate-500 text-[11px] sm:text-xs">
-              Company Registration: ONE STOP MOBILE TYRES LTD | All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

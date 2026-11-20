@@ -16,19 +16,16 @@ const services: LandingCard[] = [
     img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
     title: '1. 24 Hour Emergency Tyre Replacement',
     desc: 'Flat tyre, blowout or sidewall damage at 2am? A new tyre is supplied and fitted at your location, 24 hours a day.',
-    badge: 'Immediate response across cities, towns, rural roads and motorway networks.',
   },
   {
     img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puncture%20Repair%20One%20Stop-airanko-sfmhLvDbSYmhoMprTVOHCcIWEgJvHf.webp',
     title: '2. 24 Hour Emergency Puncture Repair',
     desc: 'If the puncture is in a repairable area, we repair it on the spot to British Standard BS AU 159 instead of selling you a new tyre.',
-    badge: 'Honest, repair-first assessment to get you moving at minimum cost.',
   },
   {
     img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp',
     title: '3. Emergency Tyres at Home or Work',
     desc: 'Woken up to a flat on the driveway or found one in the work car park? We fit your emergency tyre where the car is parked.',
-    badge: 'No towing, no waiting around at a garage.',
   },
 ]
 
@@ -131,7 +128,6 @@ export default function EmergencyTyresPage() {
         description:
           '24 hour emergency tyre replacement and puncture repair at the roadside, at home or at work, with fixed upfront quotes confirmed before dispatch.',
       }}
-      footerTagline="24 Hour Emergency Tyres & Mobile Tyre Fitting."
     />
   )
 }

@@ -23,7 +23,8 @@ export interface ServiceAreaRegion {
   name: string
   label: string
   heading: string
-  description: string
+  /** Optional line under the heading (the owner asked for none on the Service Area page). */
+  description?: string
   areas: AreaCardData[]
   roadsHeading?: string
   roads?: RoadCardData[]
@@ -149,9 +150,11 @@ export default function ServiceAreaRegions({ regions }: { regions: ServiceAreaRe
                 <h2 className="font-h2 text-lg sm:text-2xl lg:text-h2 text-secondary text-balance leading-tight">
                   {region.heading}
                 </h2>
-                <p className="font-body-md text-xs sm:text-sm text-on-surface-variant mt-1.5 max-w-xl text-pretty">
-                  {region.description}
-                </p>
+                {region.description && (
+                  <p className="font-body-md text-xs sm:text-sm text-on-surface-variant mt-1.5 max-w-xl text-pretty">
+                    {region.description}
+                  </p>
+                )}
               </div>
               <span
                 aria-hidden="true"

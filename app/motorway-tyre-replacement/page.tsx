@@ -24,19 +24,16 @@ const services: LandingCard[] = [
     img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
     title: '1. Motorway Blowout Tyre Replacement',
     desc: 'A blown or shredded tyre cannot be repaired. We bring a new tyre in your size and fit it once you are safely off the carriageway.',
-    badge: 'Fast dispatch to services, junctions and safe stopping points.',
   },
   {
     img: '/images/tyre-fitting-in-emergency.webp',
     title: '2. Flat Tyre After the Motorway',
     desc: 'Limped off at the next junction or into motorway services on a flat? Tell us exactly where you are and we come straight to you.',
-    badge: 'Send a WhatsApp location pin for the fastest routing.',
   },
   {
     img: '/images/professional-mobile-tyre-fitting.webp',
     title: '3. Tyre Fitting After Recovery',
     desc: 'If your vehicle has been recovered from the motorway to a safe location, we can meet you there and fit the replacement tyre.',
-    badge: 'Get moving again without waiting for a garage to open.',
   },
 ]
 
@@ -142,7 +139,6 @@ export default function MotorwayTyreReplacementPage() {
         description:
           '24/7 motorway blowout tyre replacement. A mobile fitter brings a new tyre and fits it once the vehicle is safely off the carriageway, at services, a junction or a recovery location.',
       }}
-      footerTagline="24/7 Motorway Tyre Service & Mobile Tyre Fitting."
     />
   )
 }

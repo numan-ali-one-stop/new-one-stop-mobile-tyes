@@ -4,6 +4,7 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import CityFaq from '@/components/CityFaq'
 import NearbyAreas from '@/components/NearbyAreas'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
+import ReviewsCtas from '@/components/ReviewsCtas'
 import JsonLd from '@/components/JsonLd'
 import LocalAreaInfo from '@/components/LocalAreaInfo'
 import { pageServiceSchema, pageOrganizationSchema, pageWebsiteSchema, automotiveBusinessSchema } from '@/lib/schema'
@@ -105,7 +106,7 @@ export default function SkelmanthorpePage() {
               >
                 What Our Customers Say
               </h2>
-              <a href="https://maps.app.goo.gl/tqGMogzsNNn8EXjH8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white border border-slate-200 shadow-sm rounded-full px-5 py-2.5">
+              <a href="https://g.page/r/CXV5aVUj79tOEBM/review" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white border border-slate-200 shadow-sm rounded-full px-5 py-2.5">
                 <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-label="Google">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                   <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -122,17 +123,7 @@ export default function SkelmanthorpePage() {
               </a>
             </div>
             <ReviewsCarousel offset={240} />
-            <div className="text-center mt-8">
-              <a
-                href="https://share.google/bejdYHzU10lFRVv4E"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[#b70011] font-bold text-sm hover:underline"
-              >
-                View all Google reviews
-                <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[16px]">open_in_new</span>
-              </a>
-            </div>
+            <ReviewsCtas />
           </div>
         </section>
 
@@ -208,7 +199,7 @@ export default function SkelmanthorpePage() {
                 <a
                   key={card.title}
                   href={card.href}
-                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden border-b-4 border-[#b70011]"
+                  className="service-card group bg-white rounded-2xl shadow-sm overflow-hidden border-b-4 border-[#b70011]"
                 >
                   <div className="relative h-44 sm:h-52 overflow-hidden">
                     <Image
@@ -232,11 +223,10 @@ export default function SkelmanthorpePage() {
                       {card.title}
                     </h3>
                     <p className="text-slate-600 text-base leading-relaxed mb-3">{card.desc}</p>
-                    <div className="flex items-center justify-end">
-                      <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-slate-400 group-hover:text-[#b70011] group-hover:translate-x-1 transition-all">
-                        arrow_forward
-                      </span>
-                    </div>
+                    <span className="service-card-btn">
+                      View Service
+                      <span aria-hidden="true" data-nosnippet className="service-card-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </span>
                   </div>
                 </a>
               ))}

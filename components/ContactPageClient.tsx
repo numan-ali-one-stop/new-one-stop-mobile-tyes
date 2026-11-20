@@ -15,10 +15,10 @@ export default function ContactPageClient() {
       <main className="bg-[#fcf9f8] text-[#1c1b1b]" style={{ fontFamily: 'Inter, sans-serif' }}>
 
         {/* HERO */}
-        <section className="relative lg:min-h-[600px] flex items-center justify-start text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="relative lg:min-h-[600px] flex items-center justify-center lg:justify-start text-center lg:text-left px-4 sm:px-8 lg:px-16 overflow-hidden">
           <HeroMapBackground />
 
-          <div className="relative z-10 w-full max-w-2xl py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
+          <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 py-10 sm:py-14 lg:py-20 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.7)] lg:[text-shadow:none]">
             <div>
               <HeroBadge>24/7 Emergency Mobile Tyre Service</HeroBadge>
             </div>
@@ -70,7 +70,7 @@ export default function ContactPageClient() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white p-6 sm:p-8 rounded-xl border-t-4 border-[#b70011]"
+                className="bg-white p-6 sm:p-8 rounded-xl border-t-4 border-[#b70011] text-center lg:text-left"
                 style={{ boxShadow: '0px 4px 20px rgba(0,45,98,0.05)' }}
               >
                 <div className="text-[#b70011] mb-3 sm:mb-4">

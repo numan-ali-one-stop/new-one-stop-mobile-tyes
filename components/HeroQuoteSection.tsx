@@ -13,7 +13,7 @@ interface HeroQuoteSectionProps {
 /** Instant-quote card in its own section directly below a hero. */
 export default function HeroQuoteSection({ area, heading, title, subtitle, submitLabel, note }: HeroQuoteSectionProps) {
   return (
-    <section className="py-10 sm:py-14 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
+    <section id="quote" className="scroll-mt-24 py-10 sm:py-14 px-4 sm:px-6 bg-[#0f172a] text-white relative overflow-hidden">
       <div
         className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
         style={{

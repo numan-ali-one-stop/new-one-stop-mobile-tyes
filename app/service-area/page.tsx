@@ -280,8 +280,7 @@ const regions: ServiceAreaRegion[] = [
   {
     name: 'Greater Manchester',
     label: 'Greater Manchester',
-    heading: 'Boroughs We Cover',
-    description: 'Every area we serve gets full coverage, including each surrounding town and village.',
+    heading: 'Areas We Cover',
     areas: boroughAreas,
     roadsHeading: 'Motorway & Road Coverage',
     roads: motorwayAreas,
@@ -289,9 +288,7 @@ const regions: ServiceAreaRegion[] = [
   {
     name: 'West Yorkshire',
     label: 'West Yorkshire',
-    heading: 'Cities We Cover',
-    description:
-      'Outside Greater Manchester, we also cover West Yorkshire — Leeds, Bradford, Huddersfield, Halifax and Wakefield, plus their surrounding towns — on a same-day dispatch basis.',
+    heading: 'Areas We Cover',
     areas: westYorkshireAreas,
     roadsHeading: 'Motorway Coverage',
     roads: westYorkshireMotorwayAreas,
@@ -299,8 +296,7 @@ const regions: ServiceAreaRegion[] = [
   {
     name: 'South Yorkshire',
     label: 'South Yorkshire',
-    heading: 'Also Serving Barnsley',
-    description: 'We also cover Barnsley and Stocksbridge in South Yorkshire on a same-day dispatch basis.',
+    heading: 'Areas We Cover',
     areas: southYorkshireAreas,
     roadsHeading: 'Motorway Coverage',
     roads: southYorkshireMotorwayAreas,
@@ -308,8 +304,7 @@ const regions: ServiceAreaRegion[] = [
   {
     name: 'Merseyside',
     label: 'Merseyside',
-    heading: 'Cities We Cover',
-    description: 'We also cover Merseyside — Liverpool and the Wirral, plus their surrounding towns — on a same-day dispatch basis.',
+    heading: 'Areas We Cover',
     areas: merseysideAreas,
   },
 ]

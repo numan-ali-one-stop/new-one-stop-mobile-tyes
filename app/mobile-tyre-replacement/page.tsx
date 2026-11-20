@@ -16,19 +16,16 @@ const services: LandingCard[] = [
     img: '/images/mobile-tyre-fitting-service.webp',
     title: '1. Single or Full Set Replacement',
     desc: 'Replace one damaged tyre, a pair on the same axle or a full set of four — supplied, fitted and balanced at your vehicle.',
-    badge: 'Matched to your size, load and speed rating.',
   },
   {
     img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home%20Tyre%20Fitting%20One%20Stop-airanko-kPAsyn08SjxXwLwCVhxre5zM9jWBTs.webp',
     title: '2. Tyre Replacement at Home or Work',
     desc: 'Worn or illegal tread? Book a mobile tyre replacement on your driveway or in the work car park at a time that suits you.',
-    badge: 'No garage visit, no waiting room.',
   },
   {
     img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emergency%20Tyre%20Fitting%20one%20Stop-airanko-gsjvsGamoet8drKwCMHYr6LH5Ni6ZI.webp',
     title: '3. Same-Day & Urgent Replacement',
     desc: 'Blowout, sidewall bulge or a puncture that cannot be repaired? We replace the tyre wherever you are, 24/7.',
-    badge: 'Rapid dispatch, usually within 20–30 minutes.',
   },
 ]
 
@@ -128,7 +125,6 @@ export default function MobileTyreReplacementPage() {
         description:
           'Mobile tyre replacement at home, at work or at the roadside. New budget, mid-range and premium tyres supplied, fitted and balanced at your location, 24/7.',
       }}
-      footerTagline="Mobile Tyre Replacement & 24/7 Mobile Tyre Fitting."
     />
   )
 }

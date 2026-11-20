@@ -1,14 +1,11 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { ADDRESS, BUSINESS_NAME, ADS_LANDING_PATH, ADS_LANDING_PATHS, MAPS_URL, MOBILE_TYRE_REPLACEMENT_PATH, MOTORWAY_TYRE_REPLACEMENT_PATH, PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
+import { ADDRESS, BUSINESS_NAME, ADS_LANDING_PATH, MAPS_URL, MOBILE_TYRE_REPLACEMENT_PATH, MOTORWAY_TYRE_REPLACEMENT_PATH, PHONE, PHONE_TEL, PHONE_2, PHONE_2_TEL } from '@/lib/constants'
 
 export default function Footer() {
   const pathname = usePathname()
   const isContactPage = pathname === '/contact'
-
-  // The landing page renders its own compliance footer.
-  if (ADS_LANDING_PATHS.includes(pathname)) return null
 
   return (
     <footer className="bg-[#0f172a] text-white pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 px-4 sm:px-6">
@@ -53,7 +50,7 @@ export default function Footer() {
                 info@onestoptyres247.co.uk
               </a>
             </li>
-            <li className="flex items-start justify-center sm:justify-start gap-3">
+            <li className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-1 sm:gap-3">
               <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">location_on</span>
               <a
                 href={MAPS_URL}
@@ -138,7 +135,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <div className="flex items-start justify-center sm:justify-start gap-3 text-slate-400 text-sm">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-1 sm:gap-3 text-slate-400 text-sm text-center sm:text-left">
             <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[#FF4444] text-lg shrink-0">schedule</span>
             <span>Open 24/7 — Emergency Callouts Every Day of the Year</span>
           </div>
