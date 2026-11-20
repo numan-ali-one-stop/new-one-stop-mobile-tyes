@@ -1,29 +1,25 @@
 import { GOOGLE_REVIEWS_URL, PHONE_TEL } from '@/lib/constants'
 
-/** Buttons under every Google reviews carousel: call, book (jumps to the quote form) and the Google review page. */
+const BTN =
+  'cta-btn inline-flex items-center justify-center gap-1.5 text-white font-bold text-sm h-10 px-5 rounded-full tracking-wide'
+const ICON = 'material-symbols-outlined text-[18px] leading-none shrink-0'
+
+/** Small buttons under every Google reviews carousel: call, book (jumps to the quote form) and the Google review page. */
 export default function ReviewsCtas() {
   return (
     <div className="mt-8 flex flex-col items-center gap-4">
-      <div className="w-full sm:w-auto flex flex-col sm:flex-row gap-3 sm:gap-4">
-        <a
-          href={`tel:${PHONE_TEL}`}
-          className="cta-btn cta-call bg-[#FF4444] hover:bg-red-700 text-white font-black min-h-14 px-6 sm:px-8 py-3 rounded-2xl flex items-center justify-center gap-2.5 text-center text-[15px] sm:text-base tracking-wide"
-          style={{ fontFamily: 'var(--font-work-sans)' }}
-        >
-          <span aria-hidden="true" data-nosnippet className="cta-ring material-symbols-outlined text-[22px] leading-none shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
+      <div className="flex items-center justify-center gap-3">
+        <a href={`tel:${PHONE_TEL}`} className={`${BTN} cta-call bg-[#FF4444] hover:bg-red-700`} style={{ fontFamily: 'var(--font-work-sans)' }}>
+          <span aria-hidden="true" data-nosnippet className={`cta-ring ${ICON}`} style={{ fontVariationSettings: "'FILL' 1" }}>
             call
           </span>
-          CALL NOW FOR MOBILE TYRE FITTING
+          Call Now
         </a>
-        <a
-          href="#quote"
-          className="cta-btn bg-[#0f172a] hover:bg-[#1e293b] text-white font-black min-h-14 px-6 sm:px-8 py-3 rounded-2xl flex items-center justify-center gap-2.5 text-[15px] sm:text-base tracking-wide"
-          style={{ fontFamily: 'var(--font-work-sans)' }}
-        >
-          <span aria-hidden="true" data-nosnippet className="material-symbols-outlined text-[22px] leading-none shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
+        <a href="#quote" className={`${BTN} bg-[#0f172a] hover:bg-[#1e293b]`} style={{ fontFamily: 'var(--font-work-sans)' }}>
+          <span aria-hidden="true" data-nosnippet className={ICON} style={{ fontVariationSettings: "'FILL' 1" }}>
             calendar_month
           </span>
-          BOOK NOW
+          Book Now
         </a>
       </div>
       <a
