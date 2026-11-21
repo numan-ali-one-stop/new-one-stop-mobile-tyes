@@ -77,6 +77,8 @@ const WEST_YORKSHIRE_PAGES = [
   'elland', 'pudsey', 'keighley', 'bingley', 'shipley', 'otley', 'm621',
   'holmfirth', 'meltham', 'marsden', 'slaithwaite', 'skelmanthorpe',
   'ilkley', 'haworth', 'queensbury', 'baildon',
+  'sowerby-bridge', 'mytholmroyd', 'ripponden',
+  'normanton', 'featherstone', 'knottingley', 'ossett', 'horbury',
 ]
 
 // South Yorkshire — Barnsley and its surrounding towns.

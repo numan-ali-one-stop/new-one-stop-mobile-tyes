@@ -355,6 +355,9 @@ export const BOROUGHS: Borough[] = [
       { name: 'Hebden Bridge', slug: 'hebden-bridge' },
       { name: 'Todmorden', slug: 'todmorden' },
       { name: 'Elland', slug: 'elland' },
+      { name: 'Sowerby Bridge', slug: 'sowerby-bridge' },
+      { name: 'Mytholmroyd', slug: 'mytholmroyd' },
+      { name: 'Ripponden', slug: 'ripponden' },
     ],
   },
   {
@@ -364,6 +367,11 @@ export const BOROUGHS: Borough[] = [
     towns: [
       { name: 'Pontefract', slug: 'pontefract' },
       { name: 'Castleford', slug: 'castleford' },
+      { name: 'Normanton', slug: 'normanton' },
+      { name: 'Featherstone', slug: 'featherstone' },
+      { name: 'Knottingley', slug: 'knottingley' },
+      { name: 'Ossett', slug: 'ossett' },
+      { name: 'Horbury', slug: 'horbury' },
     ],
   },
   {

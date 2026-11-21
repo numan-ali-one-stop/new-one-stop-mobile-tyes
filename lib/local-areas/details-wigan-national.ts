@@ -268,6 +268,38 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Baildon we can help drivers in the town centre and surrounding areas, and near the A6038 and A650.",
     parking: "We use car parks and quieter residential streets rather than the main roads through town.",
   },
+  'sowerby-bridge': {
+    scenarios: "In Sowerby Bridge we can help drivers in the town centre and surrounding areas, and near the A58 and A646.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  mytholmroyd: {
+    scenarios: "In Mytholmroyd we can help drivers in the village centre and surrounding areas, and near the A646.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  ripponden: {
+    scenarios: "In Ripponden we can help drivers in the village centre and surrounding areas, and near the A58.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  normanton: {
+    scenarios: "In Normanton we can help drivers in the town centre and surrounding areas, and near M62 Junction 31 and the A655.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  featherstone: {
+    scenarios: "In Featherstone we can help drivers in the town centre and surrounding areas, and near the A645 and M62 Junction 32.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  knottingley: {
+    scenarios: "In Knottingley we can help drivers in the town centre and surrounding areas, and near the A1 and M62 Junction 33.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  ossett: {
+    scenarios: "In Ossett we can help drivers in the town centre and surrounding areas, and near the A638 and M1 Junction 40.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  horbury: {
+    scenarios: "In Horbury we can help drivers in the town centre and surrounding areas, and near the A642 and M1 Junction 40.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
   liverpool: {
     scenarios: "In Liverpool we can help drivers across the city centre and inner suburbs, and near the M62, M57 and the Mersey tunnels.",
     parking: "City-centre streets are busy, so car parks and quieter side streets are usually the safest places to work.",
