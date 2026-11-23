@@ -155,6 +155,14 @@ const southYorkshireAreas = [
     postcodes: 'S70 – S75, S36',
     desc: 'Covering Barnsley and Stocksbridge, near M1 Junctions 36 and 37, dispatched the same day.',
   },
+  {
+    name: 'Sheffield',
+    boroughKey: 'Sheffield',
+    href: '/mobile-tyre-fitting-sheffield',
+    icon: 'location_city',
+    postcodes: 'S1 – S36, S18',
+    desc: 'Covering Sheffield city centre, Chapeltown, Hillsborough and Ecclesfield, near the M1 and A61, dispatched the same day.',
+  },
 ]
 
 // ── West Yorkshire motorway card ────────────────────────────────────────────────

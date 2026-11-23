@@ -300,6 +300,46 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Horbury we can help drivers in the town centre and surrounding areas, and near the A642 and M1 Junction 40.",
     parking: "We use car parks and quieter residential streets rather than the main roads through town.",
   },
+  horsforth: {
+    scenarios: "In Horsforth we can help drivers in the town centre and surrounding areas, and near the A65 and the Outer Ring Road.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  yeadon: {
+    scenarios: "In Yeadon we can help drivers in the town centre and surrounding areas, and near the A65 and A658.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  guiseley: {
+    scenarios: "In Guiseley we can help drivers in the town centre and surrounding areas, and near the A65 and A6038.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  wetherby: {
+    scenarios: "In Wetherby we can help drivers in the town centre and surrounding areas, and near A1(M) Junction 46 and the A58.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  garforth: {
+    scenarios: "In Garforth we can help drivers in the town centre and surrounding areas, and near the A642 and M1 Junction 46.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  rothwell: {
+    scenarios: "In Rothwell we can help drivers in the town centre and surrounding areas, and near the A639 and M1 Junction 42.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  chapeltown: {
+    scenarios: "In Chapeltown we can help drivers in the town centre and surrounding areas, and near the A629 and M1 Junction 35.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  hillsborough: {
+    scenarios: "In Hillsborough we can help drivers in the area and surrounding streets, and near the A61 and A6102.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through the area.",
+  },
+  ecclesfield: {
+    scenarios: "In Ecclesfield we can help drivers in the village centre and surrounding areas, and near the A629.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  dronfield: {
+    scenarios: "In Dronfield we can help drivers in the town centre and surrounding areas, and near the A61 and M1 Junction 29.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
   liverpool: {
     scenarios: "In Liverpool we can help drivers across the city centre and inner suburbs, and near the M62, M57 and the Mersey tunnels.",
     parking: "City-centre streets are busy, so car parks and quieter side streets are usually the safest places to work.",

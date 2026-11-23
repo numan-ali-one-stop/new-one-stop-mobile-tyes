@@ -79,10 +79,14 @@ const WEST_YORKSHIRE_PAGES = [
   'ilkley', 'haworth', 'queensbury', 'baildon',
   'sowerby-bridge', 'mytholmroyd', 'ripponden',
   'normanton', 'featherstone', 'knottingley', 'ossett', 'horbury',
+  'horsforth', 'yeadon', 'guiseley', 'wetherby', 'garforth', 'rothwell',
 ]
 
 // South Yorkshire — Barnsley and its surrounding towns.
-const SOUTH_YORKSHIRE_PAGES = ['barnsley', 'stocksbridge', 'penistone', 'm18']
+const SOUTH_YORKSHIRE_PAGES = [
+  'barnsley', 'stocksbridge', 'penistone', 'm18',
+  'sheffield', 'chapeltown', 'hillsborough', 'ecclesfield', 'dronfield',
+]
 
 // Merseyside — Liverpool and Wirral and their surrounding towns.
 const MERSEYSIDE_PAGES = [

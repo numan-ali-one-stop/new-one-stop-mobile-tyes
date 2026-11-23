@@ -382,6 +382,12 @@ export const BOROUGHS: Borough[] = [
       { name: 'Morley', slug: 'morley' },
       { name: 'Pudsey', slug: 'pudsey' },
       { name: 'Otley', slug: 'otley' },
+      { name: 'Horsforth', slug: 'horsforth' },
+      { name: 'Yeadon', slug: 'yeadon' },
+      { name: 'Guiseley', slug: 'guiseley' },
+      { name: 'Wetherby', slug: 'wetherby' },
+      { name: 'Garforth', slug: 'garforth' },
+      { name: 'Rothwell', slug: 'rothwell' },
     ],
   },
   {
@@ -391,6 +397,17 @@ export const BOROUGHS: Borough[] = [
     towns: [
       { name: 'Stocksbridge', slug: 'stocksbridge' },
       { name: 'Penistone', slug: 'penistone' },
+    ],
+  },
+  {
+    name: 'Sheffield',
+    slug: 'sheffield',
+    region: 'South Yorkshire',
+    towns: [
+      { name: 'Chapeltown', slug: 'chapeltown' },
+      { name: 'Hillsborough', slug: 'hillsborough' },
+      { name: 'Ecclesfield', slug: 'ecclesfield' },
+      { name: 'Dronfield', slug: 'dronfield' },
     ],
   },
   {
