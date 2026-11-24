@@ -337,7 +337,7 @@ export default function TyrePressureColdWeatherGuide() {
             the pressure falls. As a rule of thumb, tyre pressure drops by about 1 PSI for every 5
             to 6°C fall in temperature. A tyre that was correct in September can be noticeably low
             by December without any puncture. If you keep topping up the same tyre, book{' '}
-            <a href="/puncture-repair-Greater-manchester" className={link}>emergency puncture repair</a>.
+            <a href="/mobile-tyre-repair" className={link}>emergency puncture repair</a>.
           </p>
 
           <H2>Why does the warning light come on in the morning?</H2>

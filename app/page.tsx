@@ -270,7 +270,7 @@ const servicesBreadcrumbSchema = {
       '@type': 'ListItem',
       position: 3,
       name: 'Professional Tyre Puncture Repair in Greater Manchester',
-      item: 'https://onestoptyres247.co.uk/puncture-repair-Greater-manchester',
+      item: 'https://onestoptyres247.co.uk/mobile-tyre-repair',
     },
     {
       '@type': 'ListItem',

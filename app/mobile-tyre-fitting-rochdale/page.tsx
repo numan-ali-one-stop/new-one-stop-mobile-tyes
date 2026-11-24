@@ -188,7 +188,7 @@ export default function RochdalePage() {
                   title: 'Mobile Tyre Repair',
                   desc: 'We assess punctured tyres and carry out repairs where the damage and tyre condition meet the applicable safety requirements.',
                   badge: 'ASSESS FIRST, REPAIR WHERE SAFE',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: '/images/tyre-fitting-at-home.webp',

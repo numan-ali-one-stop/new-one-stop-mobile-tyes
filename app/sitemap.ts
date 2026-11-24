@@ -10,7 +10,7 @@ const SERVICE_PAGES = [
   '/mobile-tyre-replacement',
   '/motorway-tyre-replacement',
   '/home-tyre-fitting',
-  '/puncture-repair-Greater-manchester',
+  '/mobile-tyre-repair',
   '/roadside-assistance',
   '/jump-start',
   '/tpms-reset',
@@ -86,6 +86,8 @@ const WEST_YORKSHIRE_PAGES = [
 const SOUTH_YORKSHIRE_PAGES = [
   'barnsley', 'stocksbridge', 'penistone', 'm18',
   'sheffield', 'chapeltown', 'hillsborough', 'ecclesfield', 'dronfield',
+  'rotherham', 'maltby', 'wath-upon-dearne', 'swinton-rotherham', 'dinnington', 'thurcroft',
+  'doncaster', 'mexborough', 'conisbrough', 'thorne', 'armthorpe',
 ]
 
 // Merseyside — Liverpool and Wirral and their surrounding towns.
@@ -104,6 +106,7 @@ const LEGAL_PAGES = ['/privacy-policy', '/cookie-policy', '/terms']
 
 const GUIDE_PAGES = [
   '/guides',
+  '/guides/how-much-does-mobile-tyre-fitting-cost-uk',
   '/guides/car-wont-start-cold-weather',
   '/guides/pothole-tyre-damage-claim',
   '/guides/tyre-pressure-cold-weather',

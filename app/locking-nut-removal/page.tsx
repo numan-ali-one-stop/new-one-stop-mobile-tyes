@@ -11,9 +11,9 @@ import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: 'Locking Wheel Nut Removal Greater Manchester | Mobile Service',
+  title: 'Locking Wheel Nut Removal Near You | 24/7 Mobile Service',
   description:
-    'Specialist mobile locking wheel nut removal across Greater Manchester for lost keys, rounded heads and seized fittings.',
+    'Specialist mobile locking wheel nut removal near you for lost keys, rounded heads and seized fittings. Damage-free, 24/7.',
   path: '/locking-nut-removal',
 })
 
@@ -27,7 +27,7 @@ const _serviceSchema = serviceSchema({
   name: 'Locking Nut Removal',
   serviceType: 'Locking Wheel Nut Removal',
   description:
-    'Professional locking wheel nut removal across Greater Manchester using specialist extraction equipment for lost keys, damaged nuts, rounded heads and seized fittings.',
+    'Professional locking wheel nut removal across the UK using specialist extraction equipment for lost keys, damaged nuts, rounded heads and seized fittings.',
 })
 
 const faqs = [

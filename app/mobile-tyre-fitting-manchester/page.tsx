@@ -220,7 +220,7 @@ export default function ManchesterPage() {
                   title: 'Mobile Tyre Repair',
                   desc: 'Professional mobile puncture repair across Manchester, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: '/images/professional-mobile-tyre-fitting.webp',

@@ -14,20 +14,20 @@ export const metadata = buildMetadata({
   title: 'Mobile Tyre Repair Near You | 24/7 Puncture Repair',
   description:
     'Mobile puncture repair near you, 24/7. Nails, screws and slow punctures repaired at your home, work or the roadside where safe. Call 07759 708 646.',
-  path: '/puncture-repair-Greater-manchester',
+  path: '/mobile-tyre-repair',
 })
 
 const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Home', item: SITE_URL },
-  { name: 'Mobile Tyre Repair', item: `${SITE_URL}/puncture-repair-Greater-manchester` },
+  { name: 'Mobile Tyre Repair', item: `${SITE_URL}/mobile-tyre-repair` },
 ])
 
 const _serviceSchema = serviceSchema({
-  slug: 'puncture-repair-Greater-manchester',
+  slug: 'mobile-tyre-repair',
   name: 'Mobile Tyre Repair',
   serviceType: 'Mobile Tyre Repair',
   description:
-    'Mobile puncture repair across Greater Manchester, 24/7. A mobile technician inspects the damaged tyre and carries out a professional repair at your location where safe and suitable.',
+    'Mobile tyre and puncture repair across the UK, 24/7. A mobile technician inspects the damaged tyre and carries out a professional repair at your location where safe and suitable.',
 })
 
 const faqs = [
@@ -129,7 +129,7 @@ const steps = [
   },
 ]
 
-export default function PunctureRepairGreaterManchesterPage() {
+export default function MobileTyreRepairPage() {
   return (
     <div className="text-[#1c1b1b]" style={{ fontFamily: 'var(--font-inter)' }}>
       <JsonLd data={_breadcrumbSchema} />
@@ -192,7 +192,7 @@ export default function PunctureRepairGreaterManchesterPage() {
       <GoogleReviewsSection bg="bg-white" />
 
       {/* ── OUR SERVICES ── */}
-      <ServicesSection exclude="/puncture-repair-Greater-manchester" />
+      <ServicesSection exclude="/mobile-tyre-repair" />
 
       {/* ── 2. IMAGE + TEXT ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">

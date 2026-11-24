@@ -187,7 +187,7 @@ export default function OldhamPage() {
                   title: 'Mobile Tyre Repair',
                   desc: 'Where the damage qualifies under British Standard BS AU 159, we carry out a professional plug-and-patch repair on-site — saving you the cost of a full replacement.',
                   badge: 'CERTIFIED REPAIR',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',

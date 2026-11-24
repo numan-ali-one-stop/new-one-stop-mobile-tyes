@@ -167,7 +167,7 @@ export default function A57Page() {
                   title: 'Mobile Tyre Repair',
                   desc: 'Professional mobile puncture repair on the A57, carried out on-site where safe and suitable.',
                   badge: 'CERTIFIED REPAIR',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/One%20Stop%20Jumpstart%20image-airanko-cXmOrXcdtaIBMNQOMCIOiPj1C290RG.webp',

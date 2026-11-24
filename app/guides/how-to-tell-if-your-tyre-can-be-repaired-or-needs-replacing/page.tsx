@@ -297,7 +297,7 @@ export default function TyreRepairOrReplaceGuide() {
             damage, then fitting a combination plug-and-patch that seals the injury from
             both outside and inside the tyre — a proper repair, not a quick plug from
             outside. Our{' '}
-            <a href="/puncture-repair-Greater-manchester" className="text-[#b70011] font-semibold hover:underline">
+            <a href="/mobile-tyre-repair" className="text-[#b70011] font-semibold hover:underline">
               mobile emergency puncture repair service
             </a>{' '}
             carries out exactly this kind of repair at your home, workplace or the roadside,
@@ -390,7 +390,7 @@ export default function TyreRepairOrReplaceGuide() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <a
-              href="/puncture-repair-Greater-manchester"
+              href="/mobile-tyre-repair"
               className="group flex items-center justify-between bg-slate-50 border border-slate-100 rounded-xl p-5 hover:border-[#b70011]/30 hover:shadow-md transition-all"
             >
               <div>

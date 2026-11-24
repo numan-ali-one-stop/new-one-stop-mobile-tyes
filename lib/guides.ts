@@ -15,6 +15,17 @@ export interface GuideSummary {
 
 const GUIDES: GuideSummary[] = [
   {
+    title: 'How Much Does Mobile Tyre Fitting Cost in the UK?',
+    desc: 'Typical UK prices, what affects the cost, what a quote should include, hidden charges to watch for and how to get an accurate price.',
+    href: '/guides/how-much-does-mobile-tyre-fitting-cost-uk',
+    image: '/images/professional-mobile-tyre-fitting.webp',
+    imageAlt: 'Mobile tyre fitting van with tyre equipment replacing a tyre on a customer car',
+    readTime: '8 min read',
+    date: '2026-11-24',
+    published: '24 November 2026',
+    category: 'Pricing Guide',
+  },
+  {
     title: 'Hit a Pothole? How to Check Your Tyre and Claim for Damage',
     desc: 'The signs a pothole has damaged your tyre, what to do straight away, and how to collect evidence and claim from the council.',
     href: '/guides/pothole-tyre-damage-claim',

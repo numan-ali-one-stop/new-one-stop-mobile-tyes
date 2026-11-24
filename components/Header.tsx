@@ -31,7 +31,7 @@ const serviceLinks = [
   },
   {
     label: 'Mobile Tyre Repair',
-    href: '/puncture-repair-Greater-manchester',
+    href: '/mobile-tyre-repair',
     icon: 'construction',
     desc: 'Puncture repair at your location, 24/7',
   },

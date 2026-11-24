@@ -187,7 +187,7 @@ export default function StockportPage() {
                   title: 'Mobile Tyre Repair',
                   desc: 'Our technicians can inspect a punctured tyre and determine whether a repair is safe and appropriate. Tyres with unsuitable damage may need replacing instead.',
                   badge: 'CERTIFIED REPAIR',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: '/images/tyre-fitting-at-home.webp',

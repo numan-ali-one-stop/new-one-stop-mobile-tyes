@@ -187,7 +187,7 @@ export default function TamesidePage() {
                   title: 'Mobile Tyre Repair',
                   desc: 'Our technicians can inspect a punctured tyre and determine whether a repair is appropriate. Repairs are carried out only where the damage and tyre condition meet applicable safety requirements.',
                   badge: 'CERTIFIED REPAIR',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: '/images/tyre-fitting-at-home.webp',

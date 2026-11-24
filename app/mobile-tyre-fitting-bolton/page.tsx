@@ -188,7 +188,7 @@ export default function BoltonPage() {
                   title: 'Mobile Tyre Repair',
                   desc: 'We inspect punctured tyres and repair them where the damage and tyre condition meet the applicable safety requirements.',
                   badge: 'REPAIR BEFORE REPLACEMENT',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: '/images/tyre-fitting-at-home.webp',

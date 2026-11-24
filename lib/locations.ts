@@ -411,6 +411,29 @@ export const BOROUGHS: Borough[] = [
     ],
   },
   {
+    name: 'Rotherham',
+    slug: 'rotherham',
+    region: 'South Yorkshire',
+    towns: [
+      { name: 'Maltby', slug: 'maltby' },
+      { name: 'Wath-upon-Dearne', slug: 'wath-upon-dearne' },
+      { name: 'Swinton', slug: 'swinton-rotherham' },
+      { name: 'Dinnington', slug: 'dinnington' },
+      { name: 'Thurcroft', slug: 'thurcroft' },
+    ],
+  },
+  {
+    name: 'Doncaster',
+    slug: 'doncaster',
+    region: 'South Yorkshire',
+    towns: [
+      { name: 'Mexborough', slug: 'mexborough' },
+      { name: 'Conisbrough', slug: 'conisbrough' },
+      { name: 'Thorne', slug: 'thorne' },
+      { name: 'Armthorpe', slug: 'armthorpe' },
+    ],
+  },
+  {
     name: 'Liverpool',
     slug: 'liverpool',
     region: 'Merseyside',

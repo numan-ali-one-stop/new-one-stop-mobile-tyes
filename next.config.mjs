@@ -53,8 +53,11 @@ const nextConfig = {
         destination: '/mobile-tyre-fitting-urmston',
         permanent: true,
       },
-      // Puncture repair page renamed — keep the old URL working and pass on its SEO value.
-      { source: '/emergency-puncture-repair', destination: '/puncture-repair-Greater-manchester', permanent: true },
+      // Puncture repair page renamed twice — every old URL 301s straight to the current one (no chains).
+      // Greater Manchester was dropped from the URL so the service page targets the whole UK.
+      { source: '/emergency-puncture-repair', destination: '/mobile-tyre-repair', permanent: true },
+      { source: '/puncture-repair-Greater-manchester', destination: '/mobile-tyre-repair', permanent: true },
+      { source: '/puncture-repair-greater-manchester', destination: '/mobile-tyre-repair', permanent: true },
       // Mancunian Way area folded into the Manchester city page (Area Audit: tier C, "don't build").
       { source: '/mobile-tyre-fitting-mancunian-way-area', destination: '/mobile-tyre-fitting-manchester', permanent: true },
       // Jump start page renamed — keep the old URL working and pass on its SEO value.

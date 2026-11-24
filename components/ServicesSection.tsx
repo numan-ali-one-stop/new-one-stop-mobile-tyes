@@ -20,7 +20,7 @@ const SERVICES = [
     title: 'Mobile Tyre Repair',
     desc: 'Certified, BS AU 159 compliant plug-and-patch puncture repair, fitted on-site.',
     badge: 'CERTIFIED REPAIR',
-    href: '/puncture-repair-Greater-manchester',
+    href: '/mobile-tyre-repair',
   },
   {
     img: '/images/professional-mobile-tyre-fitting.webp',

@@ -192,7 +192,7 @@ const faqs: { q: string; a: ReactNode }[] = [
     a: (
       <>
         If the tyre is flat or bulging, yes. Stop in a safe place and get help with{' '}
-        <a href="/puncture-repair-Greater-manchester" className={link}>emergency puncture repair</a>.
+        <a href="/mobile-tyre-repair" className={link}>emergency puncture repair</a>.
       </>
     ),
   },
@@ -275,7 +275,7 @@ export default function PotholeTyreDamageGuide() {
             pressure loss. A damaged sidewall cannot be repaired and the tyre should be replaced. If
             the pothole damaged your car, you may be able to claim from the authority responsible for
             the road, but you will need evidence. For a puncture or damaged tyre, our{' '}
-            <a href="/puncture-repair-Greater-manchester" className={link}>emergency puncture repair</a>{' '}
+            <a href="/mobile-tyre-repair" className={link}>emergency puncture repair</a>{' '}
             service covers Greater Manchester.
           </QuickAnswer>
 
@@ -285,7 +285,7 @@ export default function PotholeTyreDamageGuide() {
           <H2>What to do straight away</H2>
           <CheckList items={straightAway} />
           <P>
-            Our <a href="/puncture-repair-Greater-manchester" className={link}>emergency puncture repair</a>{' '}
+            Our <a href="/mobile-tyre-repair" className={link}>emergency puncture repair</a>{' '}
             and <a href="/mobile-tyre-fitting" className={link}>mobile tyre fitting</a> teams at One
             Stop Mobile Tyres 24/7 can inspect and replace damaged tyres at your location across
             Greater Manchester. Call <a href="tel:+441613995851" className={link}>0161 399 5851</a>.

@@ -12,9 +12,9 @@ import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: 'Home Tyre Fitting & Tyre Replacement | Greater Manchester',
+  title: 'Home Tyre Fitting Near You | 24/7 Tyre Replacement at Home',
   description:
-    'Book Home Tyre Fitting across Greater Manchester. Get tyre replacement at home, professional fitting and a no-garage-visit service at a time that suits.',
+    'Book home tyre fitting near you, 24/7. Tyre replacement on your driveway, professional fitting and no garage visit, at a time that suits you.',
   path: '/home-tyre-fitting',
 })
 
@@ -28,7 +28,7 @@ const _serviceSchema = serviceSchema({
   name: 'Home Tyre Fitting',
   serviceType: 'Home Tyre Fitting',
   description:
-    'Professional home tyre fitting across Greater Manchester, bringing suitable tyres and specialist fitting and balancing equipment directly to your driveway or another safe space outside your home.',
+    'Professional home tyre fitting across the UK, bringing suitable tyres and specialist fitting and balancing equipment directly to your driveway or another safe space outside your home.',
 })
 
 const faqs = [

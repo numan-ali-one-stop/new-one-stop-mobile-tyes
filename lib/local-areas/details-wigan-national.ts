@@ -340,6 +340,50 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Dronfield we can help drivers in the town centre and surrounding areas, and near the A61 and M1 Junction 29.",
     parking: "We use car parks and quieter residential streets rather than the main roads through town.",
   },
+  rotherham: {
+    scenarios: "In Rotherham we can help drivers in the town centre and surrounding areas, and near M1 Junctions 33 and 34 and the A630.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  maltby: {
+    scenarios: "In Maltby we can help drivers in the town centre and surrounding areas, and near the A631.",
+    parking: "We use car parks and quieter residential streets rather than the main road through town.",
+  },
+  'wath-upon-dearne': {
+    scenarios: "In Wath-upon-Dearne we can help drivers in the town centre and surrounding areas, and near the A633 and M1 Junction 36.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  'swinton-rotherham': {
+    scenarios: "In Swinton we can help drivers in the town centre and surrounding areas, and near the A6195 and M1 Junction 36.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  dinnington: {
+    scenarios: "In Dinnington we can help drivers in the town centre and surrounding areas, and near the A57 and M1 Junction 31.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  thurcroft: {
+    scenarios: "In Thurcroft we can help drivers in the village centre and surrounding areas, and near the A618.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
+  doncaster: {
+    scenarios: "In Doncaster we can help drivers in the town centre and surrounding areas, and near A1(M) Junctions 36 to 39 and the M18.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  mexborough: {
+    scenarios: "In Mexborough we can help drivers in the town centre and surrounding areas, and near the A6023 and A633.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  conisbrough: {
+    scenarios: "In Conisbrough we can help drivers in the town centre and surrounding areas, and near the A630.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  thorne: {
+    scenarios: "In Thorne we can help drivers in the town centre and surrounding areas, and near M18 Junction 6 and the A614.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  armthorpe: {
+    scenarios: "In Armthorpe we can help drivers in the village centre and surrounding areas, and near the A630 and M18 Junction 4.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
   liverpool: {
     scenarios: "In Liverpool we can help drivers across the city centre and inner suburbs, and near the M62, M57 and the Mersey tunnels.",
     parking: "City-centre streets are busy, so car parks and quieter side streets are usually the safest places to work.",

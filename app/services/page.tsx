@@ -42,7 +42,7 @@ const services = [
     btnLabel: 'Learn More',
   },
   {
-    href: '/puncture-repair-Greater-manchester',
+    href: '/mobile-tyre-repair',
     img: '/images/tyres-fitting-anywhere.webp',
     title: 'Mobile Tyre Repair',
     desc: 'Stuck with a flat? Our rapid response team will arrive quickly to repair your puncture and get you back on the road safely.',
@@ -123,7 +123,7 @@ export default function ServicesPage() {
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-black mb-4 sm:mb-5 leading-[1.1] text-balance max-w-3xl mx-auto lg:mx-0" style={{ fontFamily: 'var(--font-work-sans)', letterSpacing: '-0.02em' }}>Our Expert Mobile Services</h1>
           <p className="font-body-lg text-base lg:text-body-lg text-white lg:text-white/90 max-w-2xl mx-auto lg:mx-0 mb-5 sm:mb-8 leading-relaxed">
-            24/7 mobile tyre fitting, puncture repair and roadside assistance across Greater Manchester. We bring the garage to you.
+            24/7 mobile tyre fitting, puncture repair and roadside assistance across the UK. We bring the garage to you.
           </p>
           <HeroCtaButtons />
           <HeroTrustBadges className="mt-5 sm:mt-6" />

@@ -11,9 +11,9 @@ import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: '24/7 Emergency Roadside Assistance | Greater Manchester',
+  title: '24/7 Emergency Roadside Assistance Near You',
   description:
-    'Need roadside assistance in Greater Manchester? Get 24/7 emergency roadside support for tyre and vehicle problems across Manchester and surrounding areas.',
+    'Need roadside assistance near you? Get 24/7 emergency roadside support for tyre and vehicle problems at the roadside, at home or at work, across the UK.',
   path: '/roadside-assistance',
 })
 
@@ -27,7 +27,7 @@ const _serviceSchema = serviceSchema({
   name: 'Roadside Assistance',
   serviceType: 'Roadside Assistance',
   description:
-    'Need roadside assistance in Greater Manchester? Get 24/7 emergency roadside support for tyre and vehicle problems across Manchester and surrounding areas.',
+    'Need roadside assistance near you? Get 24/7 emergency roadside support for tyre and vehicle problems at the roadside, at home or at work, across the UK.',
 })
 
 const faqs = [
@@ -208,7 +208,7 @@ export default function RoadsideAssistancePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/professional-roadside-assistance-wherever-you-need-help-across-greater-manchester.jpg"
-              alt="Professional roadside assistance wherever you need help across Greater Manchester"
+              alt="Professional roadside assistance wherever you need help across the UK"
               className="w-full rounded-2xl sm:rounded-3xl shadow-2xl object-cover"
               width={800}
               height={600}

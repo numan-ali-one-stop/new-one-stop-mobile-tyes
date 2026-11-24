@@ -77,7 +77,7 @@ export interface ServiceSchemaOptions {
   name: string
   description?: string
   serviceType?: string
-  /** Defaults to AdministrativeArea "Greater Manchester" for region-wide service pages. */
+  /** Defaults to Country "United Kingdom" for the main service pages. */
   areaServed?: AreaServedEntry | readonly AreaServedEntry[]
   /** e.g. '££' — omitted by default. */
   priceRange?: string
@@ -94,7 +94,7 @@ export function serviceSchema({ slug, name, description, serviceType, areaServed
     ...(description ? { description } : {}),
     ...(priceRange ? { priceRange } : {}),
     provider: BUSINESS_PROVIDER,
-    areaServed: areaServed ?? { '@type': 'AdministrativeArea', name: 'Greater Manchester' },
+    areaServed: areaServed ?? { '@type': 'Country', name: 'United Kingdom' },
     availableChannel: {
       '@type': 'ServiceChannel',
       availableLanguage: 'en-GB',

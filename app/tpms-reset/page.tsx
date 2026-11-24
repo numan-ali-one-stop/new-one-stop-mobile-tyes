@@ -11,9 +11,9 @@ import ServicesSection from '@/components/ServicesSection'
 import HeroBadge from '@/components/HeroBadge'
 
 export const metadata = buildMetadata({
-  title: 'TPMS Reset Greater Manchester | Mobile Sensor Diagnostics',
+  title: 'TPMS Reset Near You | Mobile Sensor Diagnostics 24/7',
   description:
-    'Professional mobile TPMS reset, diagnostics, sensor programming and replacement services across Greater Manchester.',
+    'Professional mobile TPMS reset, diagnostics, sensor programming and replacement services near you, at your home, work or the roadside.',
   path: '/tpms-reset',
 })
 
@@ -27,7 +27,7 @@ const _serviceSchema = serviceSchema({
   name: 'TPMS Reset',
   serviceType: 'TPMS Reset',
   description:
-    'Professional TPMS reset, diagnostics and sensor services across Greater Manchester, including sensor relearn, programming and faulty pressure sensor replacement.',
+    'Professional TPMS reset, diagnostics and sensor services across the UK, including sensor relearn, programming and faulty pressure sensor replacement.',
 })
 
 const faqs = [

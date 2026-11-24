@@ -73,7 +73,7 @@ export default function Footer() {
             {[
               { label: 'Mobile Tyre Fitting', href: '/mobile-tyre-fitting' },
               { label: 'Home Tyre Fitting', href: '/home-tyre-fitting' },
-              { label: 'Mobile Tyre Repair', href: '/puncture-repair-Greater-manchester' },
+              { label: 'Mobile Tyre Repair', href: '/mobile-tyre-repair' },
               { label: 'Motorway Tyre Replacement', href: MOTORWAY_TYRE_REPLACEMENT_PATH },
               { label: '24 Hour Emergency Tyres', href: ADS_LANDING_PATH },
               { label: 'Mobile Tyre Replacement', href: MOBILE_TYRE_REPLACEMENT_PATH },

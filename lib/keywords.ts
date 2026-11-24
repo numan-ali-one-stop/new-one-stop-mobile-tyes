@@ -252,7 +252,7 @@ export const KEYWORDS: KeywordRow[] = [
     presence: 'Strong',
     sheetPresence: 'n/a',
     targetPage: 'Puncture page (not this page)',
-    targetPath: '/puncture-repair-Greater-manchester',
+    targetPath: '/mobile-tyre-repair',
     notes: 'Targets the Puncture page. Title now Mobile Puncture Repair Greater Manchester and meta leads with mobile puncture repair; phrase already used 5 times in visible copy. No city name added to visible copy (owner rule for core pages).',
   },
   {

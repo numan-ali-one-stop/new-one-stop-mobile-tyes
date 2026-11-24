@@ -163,6 +163,22 @@ const southYorkshireAreas = [
     postcodes: 'S1 – S36, S18',
     desc: 'Covering Sheffield city centre, Chapeltown, Hillsborough and Ecclesfield, near the M1 and A61, dispatched the same day.',
   },
+  {
+    name: 'Rotherham',
+    boroughKey: 'Rotherham',
+    href: '/mobile-tyre-fitting-rotherham',
+    icon: 'location_city',
+    postcodes: 'S60 – S66',
+    desc: 'Covering Rotherham, Maltby, Wath-upon-Dearne, Swinton, Dinnington and Thurcroft, near M1 Junctions 33 to 36, dispatched the same day.',
+  },
+  {
+    name: 'Doncaster',
+    boroughKey: 'Doncaster',
+    href: '/mobile-tyre-fitting-doncaster',
+    icon: 'location_city',
+    postcodes: 'DN1 – DN12',
+    desc: 'Covering Doncaster, Mexborough, Conisbrough, Thorne and Armthorpe, near the A1(M) and M18, dispatched the same day.',
+  },
 ]
 
 // ── West Yorkshire motorway card ────────────────────────────────────────────────

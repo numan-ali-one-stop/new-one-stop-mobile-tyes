@@ -187,7 +187,7 @@ export default function TraffordPage() {
                   title: 'Mobile Tyre Repair',
                   desc: 'Our technicians can inspect a punctured tyre and determine whether it can be repaired safely. If the damage is unsuitable for repair, a replacement may be necessary.',
                   badge: 'CERTIFIED REPAIR',
-                  href: '/puncture-repair-Greater-manchester',
+                  href: '/mobile-tyre-repair',
                 },
                 {
                   img: '/images/tyre-fitting-at-home.webp',
