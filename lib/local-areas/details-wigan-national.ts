@@ -208,6 +208,26 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Penistone we can help drivers in the town centre and surrounding areas, and near the A628 and A629.",
     parking: "We use car parks and quieter residential streets rather than the main roads through town.",
   },
+  wombwell: {
+    scenarios: "In Wombwell we can help drivers in the town centre and surrounding areas, and near the A633 and M1 Junction 36.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  hoyland: {
+    scenarios: "In Hoyland we can help drivers in the town centre and surrounding areas, and near the A6135.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  royston: {
+    scenarios: "In Royston we can help drivers in the town centre and surrounding areas, and near the A628 and A633.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  cudworth: {
+    scenarios: "In Cudworth we can help drivers in the town centre and surrounding areas, and near the A628.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  goldthorpe: {
+    scenarios: "In Goldthorpe we can help drivers in the village centre and surrounding areas, and near the A635.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
   elland: {
     scenarios: "In Elland we can help drivers in the town centre and surrounding areas, and near M62 Junction 24 and the A629.",
     parking: "We use car parks and quieter residential streets away from the main roads.",

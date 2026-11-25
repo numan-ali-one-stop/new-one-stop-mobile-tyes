@@ -397,6 +397,11 @@ export const BOROUGHS: Borough[] = [
     towns: [
       { name: 'Stocksbridge', slug: 'stocksbridge' },
       { name: 'Penistone', slug: 'penistone' },
+      { name: 'Wombwell', slug: 'wombwell' },
+      { name: 'Hoyland', slug: 'hoyland' },
+      { name: 'Royston', slug: 'royston' },
+      { name: 'Cudworth', slug: 'cudworth' },
+      { name: 'Goldthorpe', slug: 'goldthorpe' },
     ],
   },
   {

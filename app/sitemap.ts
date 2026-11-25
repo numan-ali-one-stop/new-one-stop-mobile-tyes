@@ -85,6 +85,7 @@ const WEST_YORKSHIRE_PAGES = [
 // South Yorkshire — Barnsley and its surrounding towns.
 const SOUTH_YORKSHIRE_PAGES = [
   'barnsley', 'stocksbridge', 'penistone', 'm18',
+  'wombwell', 'hoyland', 'royston', 'cudworth', 'goldthorpe',
   'sheffield', 'chapeltown', 'hillsborough', 'ecclesfield', 'dronfield',
   'rotherham', 'maltby', 'wath-upon-dearne', 'swinton-rotherham', 'dinnington', 'thurcroft',
   'doncaster', 'mexborough', 'conisbrough', 'thorne', 'armthorpe',
