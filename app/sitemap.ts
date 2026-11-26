@@ -107,6 +107,7 @@ const LEGAL_PAGES = ['/privacy-policy', '/cookie-policy', '/terms']
 
 const GUIDE_PAGES = [
   '/guides',
+  '/guides/how-does-mobile-tyre-replacement-work',
   '/guides/how-much-does-mobile-tyre-fitting-cost-uk',
   '/guides/car-wont-start-cold-weather',
   '/guides/pothole-tyre-damage-claim',

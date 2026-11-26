@@ -15,6 +15,17 @@ export interface GuideSummary {
 
 const GUIDES: GuideSummary[] = [
   {
+    title: 'How Does Mobile Tyre Replacement Work? A Step-by-Step Guide',
+    desc: 'Each step of a mobile tyre replacement, what to have ready before the fitter arrives, and when a mobile fitter or a garage is the right choice.',
+    href: '/guides/how-does-mobile-tyre-replacement-work',
+    image: '/images/home-tyre-fitting.webp',
+    imageAlt: "Mobile tyre fitting van on a customer's driveway during a tyre replacement",
+    readTime: '7 min read',
+    date: '2026-11-26',
+    published: '26 November 2026',
+    category: 'How It Works',
+  },
+  {
     title: 'How Much Does Mobile Tyre Fitting Cost in the UK?',
     desc: 'Typical UK prices, what affects the cost, what a quote should include, hidden charges to watch for and how to get an accurate price.',
     href: '/guides/how-much-does-mobile-tyre-fitting-cost-uk',
