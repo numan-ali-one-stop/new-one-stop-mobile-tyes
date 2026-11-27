@@ -477,6 +477,17 @@ export const BOROUGHS: Borough[] = [
       { name: 'Maghull', slug: 'maghull' },
     ],
   },
+  {
+    name: 'Knowsley',
+    slug: 'knowsley',
+    region: 'Merseyside',
+    towns: [
+      { name: 'Huyton', slug: 'huyton' },
+      { name: 'Kirkby', slug: 'kirkby' },
+      { name: 'Prescot', slug: 'prescot' },
+      { name: 'Whiston', slug: 'whiston' },
+    ],
+  },
 ]
 
 export interface Region {

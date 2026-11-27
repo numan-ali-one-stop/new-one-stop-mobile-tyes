@@ -1,11 +1,12 @@
 /* ─── Shared "Why Choose" grid section — centred heading, CTA row, 6-item icon grid ─── */
 
+import type { ReactNode } from 'react'
 import { PHONE, PHONE_TEL } from '@/lib/constants'
 
 interface WhyChooseGridItem {
   icon: string
   title: string
-  desc: string
+  desc: ReactNode
 }
 
 interface WhyChooseGridProps {

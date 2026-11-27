@@ -227,6 +227,14 @@ const merseysideAreas = [
     postcodes: 'L20 – L23, L29 – L31, L37 – L39, PR8 – PR9',
     desc: 'Covering Southport, Bootle, Crosby, Formby and Maghull, near the M58 and A565, dispatched the same day.',
   },
+  {
+    name: 'Knowsley',
+    boroughKey: 'Knowsley',
+    href: '/mobile-tyre-fitting-knowsley',
+    icon: 'location_city',
+    postcodes: 'L32 – L36',
+    desc: 'Covering Huyton, Kirkby, Prescot and Whiston, near the M57 and M62, dispatched the same day.',
+  },
 ]
 
 // ── Motorway / road cards ─────────────────────────────────────────────────────

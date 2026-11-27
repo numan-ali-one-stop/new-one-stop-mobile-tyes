@@ -14,9 +14,11 @@ const _breadcrumbSchema = breadcrumbSchema([
   { name: 'Guides', item: `${SITE_URL}/guides` },
 ])
 
-const guides = getGuides()
+// Rebuild hourly so scheduled guides (future `date` in lib/guides.ts) appear on their day.
+export const revalidate = 3600
 
 export default function GuidesIndexPage() {
+  const guides = getGuides()
   return (
     <div className="text-[#1c1b1b]" style={{ fontFamily: 'var(--font-inter)' }}>
       <JsonLd data={_breadcrumbSchema} />

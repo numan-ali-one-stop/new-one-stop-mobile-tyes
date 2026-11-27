@@ -369,7 +369,7 @@ export default function MilesPlattingPage() {
             {
               icon: 'pin_drop',
               title: 'Local Miles Platting Coverage',
-              desc: 'Our mobile service covers Miles Platting and nearby areas, including Oldham Road, Collyhurst, Newton Heath and Ancoats.',
+              desc: <>Our mobile service covers Miles Platting and nearby areas, including <a href="/mobile-tyre-fitting-oldham" className="text-[#b70011] font-semibold hover:underline">Oldham Road</a>, Collyhurst, Newton Heath and Ancoats.</>,
             },
           ]}
         />

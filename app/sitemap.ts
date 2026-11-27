@@ -1,6 +1,10 @@
 import type { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/schema'
 import { areaSitemapPriority } from '@/lib/area-audit'
+import { getGuides } from '@/lib/guides'
+
+// Rebuild hourly so scheduled guides are listed on their day.
+export const revalidate = 3600
 
 const LAST_MODIFIED = '2026-08-05'
 
@@ -96,6 +100,7 @@ const MERSEYSIDE_PAGES = [
   'liverpool', 'anfield', 'everton', 'toxteth', 'wavertree', 'aigburth', 'woolton', 'walton', 'kirkdale',
   'wirral', 'birkenhead', 'wallasey', 'bebington', 'hoylake', 'west-kirby',
   'sefton', 'southport', 'bootle', 'crosby', 'formby', 'maghull',
+  'knowsley', 'huyton', 'kirkby', 'prescot', 'whiston',
 ]
 
 // National coverage — outside Greater Manchester, served on a same-day dispatch basis.
@@ -183,7 +188,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),
-    ...GUIDE_PAGES.map((path) => ({
+    // Published guides from lib/guides.ts are added too, so scheduled posts appear on their day.
+    ...[...new Set([...GUIDE_PAGES, ...getGuides().map((g) => g.href)])].map((path) => ({
       url: `${SITE_URL}${path}`,
       lastModified: LAST_MODIFIED,
       changeFrequency: 'monthly' as const,

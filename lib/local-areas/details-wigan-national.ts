@@ -488,6 +488,26 @@ export const DETAILS_WIGAN_NATIONAL: Record<string, LocalDetail> = {
     scenarios: "In Maghull we can help drivers in the town centre and surrounding areas, and near the A59 and M58 Junction 1.",
     parking: "We use car parks and quieter residential streets away from the main roads.",
   },
+  knowsley: {
+    scenarios: "In Knowsley we can help drivers across the borough and surrounding areas, and near the M57 and M62.",
+    parking: "We use car parks and quieter residential streets rather than the main roads.",
+  },
+  huyton: {
+    scenarios: "In Huyton we can help drivers in the town centre and surrounding areas, and near M62 Junction 5 and the A5080.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  kirkby: {
+    scenarios: "In Kirkby we can help drivers in the town centre and surrounding areas, and near M57 Junction 7 and the A506.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  prescot: {
+    scenarios: "In Prescot we can help drivers in the town centre and surrounding areas, and near M57 Junction 2 and the A57.",
+    parking: "We use car parks and quieter residential streets rather than the main roads through town.",
+  },
+  whiston: {
+    scenarios: "In Whiston we can help drivers in the village centre and surrounding areas, and near M62 Junction 7 and the A57.",
+    parking: "We use car parks and quieter residential streets rather than the main road through the village.",
+  },
   leicester: {
     scenarios: "In Leicester we can help drivers across the city, on the outer ring road and near M1 Junction 21.",
     parking: "Retail and residential car parks give us safe space to work.",

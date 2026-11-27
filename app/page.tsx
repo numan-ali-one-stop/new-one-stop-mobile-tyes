@@ -15,6 +15,9 @@ import HeroQuoteSection from '@/components/HeroQuoteSection'
 import HowItWorksSteps from '@/components/HowItWorksSteps'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import LatestGuides from '@/components/LatestGuides'
+
+// Rebuild hourly so the Latest Blogs section picks up scheduled guides on their day.
+export const revalidate = 3600
 import ServicesSection from '@/components/ServicesSection'
 
 /* ─── Why-choose feature list item ─────────────────────── */

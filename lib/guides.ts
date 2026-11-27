@@ -1,5 +1,7 @@
 // Single source for the blog / guides listings (the /guides index and the homepage section).
-// Add new posts here; they are shown newest first by `date`.
+// Add new posts here; they are shown newest first by `date`. A future `date` schedules the post:
+// it stays hidden until that day (UK time). Its page must also call isPublished() — see
+// app/guides/how-does-home-tyre-fitting-work/page.tsx.
 
 export interface GuideSummary {
   title: string
@@ -14,6 +16,17 @@ export interface GuideSummary {
 }
 
 const GUIDES: GuideSummary[] = [
+  {
+    title: 'Home Tyre Fitting in the UK: Preparation and What to Expect',
+    desc: 'How to prepare your driveway or parking space, what to have ready and what to expect when a mobile tyre fitter comes to your home.',
+    href: '/guides/how-does-home-tyre-fitting-work',
+    image: '/images/home-tyre-fitting-driveway-preparation.webp',
+    imageAlt: 'Car raised on a jack on a home driveway with a mobile tyre fitting van parked behind',
+    readTime: '9 min read',
+    date: '2026-11-28',
+    published: '28 November 2026',
+    category: 'Home Fitting',
+  },
   {
     title: 'How Does Mobile Tyre Replacement Work? A Step-by-Step Guide',
     desc: 'Each step of a mobile tyre replacement, what to have ready before the fitter arrives, and when a mobile fitter or a garage is the right choice.',
@@ -137,7 +150,22 @@ const GUIDES: GuideSummary[] = [
   },
 ]
 
-/** All guides, newest first. */
+/** Today's date in the UK as yyyy-mm-dd. */
+export function ukToday(): string {
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' })
+}
+
+/** A guide dated in the future is scheduled: hidden until that day starts in the UK. */
+export function isPublished(date: string): boolean {
+  return date <= ukToday()
+}
+
+/** Published guides, newest first. Call at request/render time, not at module level. */
 export function getGuides(): GuideSummary[] {
-  return [...GUIDES].sort((a, b) => b.date.localeCompare(a.date))
+  return GUIDES.filter((g) => isPublished(g.date)).sort((a, b) => b.date.localeCompare(a.date))
+}
+
+/** Every guide including scheduled ones, e.g. for building the sitemap. */
+export function getAllGuides(): GuideSummary[] {
+  return [...GUIDES]
 }
